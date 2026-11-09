@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UrbanWind-AgentBench · WindPilot — Does a completed simulation run mean a usable urban wind result?</title>
+<meta name="description" content="UrbanWind-AgentBench: 200 urban wind CFD tasks with recomputable two-layer scoring, and WindPilot, an execution framework that ties reported metrics to raw solver evidence.">
+<meta property="og:title" content="UrbanWind-AgentBench · WindPilot">
+<meta property="og:description" content="Does a completed simulation run mean a usable urban wind result for AI agents?">
+<meta property="og:image" content="assets/fig/graphical_abstract.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/sections.css">
+<link rel="stylesheet" href="assets/sections2.css">
+<script>try{const t=localStorage.getItem("uw-theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}if(/[?&]static/.test(location.search))document.documentElement.classList.add("static");</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="UrbanWind-AgentBench home"><span class="brand-mark" aria-hidden="true"></span><span>UrbanWind<span class="brand-dim">-AgentBench</span></span></a>
+  <nav aria-label="Sections">
+    <a href="#finding">Finding</a><a href="#benchmark">Benchmark</a><a href="#scoring">Scoring</a>
+    <a href="#windpilot">WindPilot</a><a href="#results">Results</a><a href="#traces">Traces</a><a href="#cite">Cite</a>
+    <span class="nav-ink" aria-hidden="true"></span>
+  </nav>
+  <button class="theme" id="theme" aria-label="Toggle dark mode"><span></span></button>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <canvas id="wind" aria-hidden="true"></canvas>
+  <div class="hero-veil" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <p class="kicker reveal">UrbanWind-AgentBench · WindPilot</p>
+    <h1 class="reveal">Does a completed simulation run mean a <em>usable</em> urban wind result for AI agents?</h1>
+    <p class="lede reveal">A benchmark of 200 urban wind CFD tasks with recomputable two-layer scoring, and an execution framework that ties every reported metric back to raw solver evidence.</p>
+    <p class="authors reveal"><!-- TODO: author names and affiliations -->Authors and affiliations · Manuscript under review</p>
+    <div class="cta reveal">
+      <a class="btn primary" href="#results">See the results <span aria-hidden="true">→</span></a>
+      <a class="btn" href="#" aria-disabled="true" data-soon>Paper <small>soon</small></a>
+      <a class="btn" href="#" aria-disabled="true" data-soon>Code &amp; tasks <small>soon</small></a>
+      <a class="btn" href="#video">Video <small>soon</small></a>
+    </div>
+  </div>
+  <p class="hero-note mono">Live field · task-061 · OpenFOAM v2412 · iteration 400 · z = 0.44 m</p>
+  <a class="scroll-cue" href="#finding" aria-label="Scroll to the key finding"><span></span></a>
+</section>
+
+<section class="stats" aria-label="Benchmark at a glance">
+  <div class="wrap stats-row">
+    <div><b class="mono" data-count="200">0</b><span>tasks</span></div>
+    <div><b class="mono" data-count="367">0</b><span>cases</span></div>
+    <div><b class="mono" data-count="10">0</b><span>engineering families</span></div>
+    <div><b class="mono" data-count="227">0</b><span>planned solver runs</span></div>
+    <div><b class="mono" data-count="30">0</b><span>tasks with independent references</span></div>
+  </div>
+</section>
+<section class="sec" id="finding">
+  <div class="wrap">
+    <p class="eyebrow">01 · Key finding</p>
+    <h2 class="reveal">A finished run is not a usable result.</h2>
+    <div class="finding-grid">
+      <div class="finding-copy reveal">
+        <p class="big">On 30 OpenFOAM tasks with independent references, the base agent reached the full structural score on <b class="mono">28</b> tasks, yet delivered metrics that could be recomputed from raw outputs on only <b class="mono hl-base">6</b>.</p>
+        <p>With the same model name and budget, WindPilot raised that to <b class="mono hl-wp">17</b>. The deliverables looked complete in both cases; the difference is whether the reported numbers trace back to actual solves and samples.</p>
+        <div class="legend"><span class="sw sw-base"></span>score ≤ 60 · structure only <span class="sw sw-num"></span>score &gt; 60 · numerical credit</div>
+      </div>
+      <figure class="card dots-card reveal" aria-label="Score bands of 30 tasks for each condition">
+        <div class="dots-row"><span class="dots-label">Base agent</span><div class="dots" id="dots-base"></div><span class="dots-n mono"><b>6</b>/30</span></div>
+        <div class="dots-row"><span class="dots-label">WindPilot</span><div class="dots" id="dots-wp"></div><span class="dots-n mono"><b>17</b>/30</span></div>
+        <figcaption>Each dot is one task, sorted by score band (&lt;60, =60, 60–80, 80–99, 100). Data from the paper's Fig. 8.</figcaption>
+      </figure>
+    </div>
+    <details class="abstract reveal">
+      <summary>Read the abstract</summary>
+      <p>AI agents based on large language models (LLMs) can now configure and run computational fluid dynamics (CFD) solvers, but a completed run does not ensure that delivered metrics can be recomputed from raw outputs. This gap was examined for urban wind simulation, where multi-case comparisons must hold non-target conditions fixed and reported values must be traceable to raw samples. UrbanWind-AgentBench, comprising 200 tasks and 367 cases in 10 engineering task families, was constructed. Public task contracts specify variable factors, fixed conditions, numerical thresholds and deliverable requirements, and two-layer scoring separates a structural score for deliverables, run provenance and raw evidence from a numerical score obtained by independent recomputation against references. WindPilot was then proposed as an execution framework that incorporates contract parsing, execution provenance, deterministic verification and bounded acceptance review into the LLM execution loop. On 30 OpenFOAM tasks with independent references, at least the structural maximum of 60 points was reached by a base agent on 28 tasks, but numerical credit was obtained on only 6. With the same model name and budget, WindPilot increased the number of tasks with numerical credit to 17, full-score tasks from 0 to 3 and the mean task score from 62.5 to 72.5. Mean action steps fell from 130.4 to 104.9, and mean token consumption decreased by 12.9%. The mean gain for atmospheric boundary layer (ABL) tasks was 18.5 points. A completed simulation run is therefore not sufficient for a usable urban wind result; usability depends on checks that tie reported metrics to raw evidence during execution.</p>
+    </details>
+  </div>
+</section>
+
+<section class="sec alt" id="benchmark">
+  <div class="wrap">
+    <p class="eyebrow">02 · UrbanWind-AgentBench</p>
+    <h2 class="reveal">Ten engineering families, from evidence auditing to design decisions.</h2>
+    <p class="sub reveal">Each family has 20 tasks. Every engineering stage — materials, geometry, meshing, boundaries, solution and interpretation — has an explicit entry point, and outputs continue to inform later stages.</p>
+    <figure class="card fig reveal"><button class="zoom" data-src="assets/fig/fig1_overview.webp" aria-label="Enlarge Fig. 1"><img src="assets/fig/fig1_overview.webp" alt="Overview of UrbanWind-AgentBench: tasks with instructions, public contracts, inputs and scorers; cases inside tasks; isolated agent execution; post-execution scoring." loading="lazy"></button><figcaption>Fig. 1 · Overview of UrbanWind-AgentBench.</figcaption></figure>
+    <div class="families" id="families"></div>
+    <div class="bench-grid">
+      <figure class="card reveal"><h3>All 200 tasks</h3><p class="note">Coloured by family. Outlined tiles are the 30 OpenFOAM tasks with independent references used in the evaluation. Hover for details.</p><div class="mosaic" id="mosaic"></div><p class="mosaic-tip mono" id="mosaic-tip">task —</p></figure>
+      <div class="bench-side">
+        <figure class="card reveal"><h3>Initial state</h3><div id="init-chart"></div><figcaption>How much workflow work remains when the agent starts.</figcaption></figure>
+        <figure class="card reveal"><h3>Geometry source</h3><div id="geo-chart"></div></figure>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="sec" id="scoring">
+  <div class="wrap">
+    <p class="eyebrow">03 · Contracts &amp; two-layer scoring</p>
+    <h2 class="reveal">Public contracts make constraints checkable. Hidden references make numbers count.</h2>
+    <div class="contract-grid">
+      <div class="ccard reveal"><span class="cnum mono">A</span><h3>Variable factors</h3><p>Define the comparison, e.g. three aerodynamic roughness lengths in task-093.</p></div>
+      <div class="ccard reveal"><span class="cnum mono">B</span><h3>Fixed conditions</h3><p>Preserve comparability: inlet speed, direction, mesh and turbulence model stay unchanged.</p></div>
+      <div class="ccard reveal"><span class="cnum mono">C</span><h3>Numerical thresholds</h3><p>Public checks, e.g. wind-speed drift ≤ 5% and TKE drift ≤ 2% over six 60 s windows (task-087).</p></div>
+      <div class="ccard reveal"><span class="cnum mono">D</span><h3>Deliverable formats</h3><p>Six common files plus task-specific arrays, so results can be read programmatically.</p></div>
+    </div>
+    <div class="files reveal" aria-label="Six common deliverable files">
+      <code>design.json</code><code>case_definition.json</code><code>run_manifest.json</code><code>metrics.json</code><code>evidence_manifest.json</code><code>decision.md</code>
+    </div>
+    <figure class="card fig reveal"><button class="zoom" data-src="assets/fig/fig4_contract.webp" aria-label="Enlarge Fig. 4"><img src="assets/fig/fig4_contract.webp" alt="Example task contract for task-093, a roughness-sensitive urban LES with three cases." loading="lazy"></button><figcaption>Fig. 4 · Example task contract (task-093, roughness-sensitive urban LES). The central marker shows a contract mismatch.</figcaption></figure>
+
+    <div class="score-card card reveal">
+      <div class="score-head">
+        <h3>Task score = structural (≤ 60) + numerical (≤ 40)</h3>
+        <div class="tabs" role="tablist" aria-label="Numerical scorer example">
+          <button role="tab" aria-selected="true" data-ex="062">task-062 · profile law</button>
+          <button role="tab" aria-selected="false" data-ex="093">task-093 · urban LES</button>
+          <button role="tab" aria-selected="false" data-ex="041">task-041 · mesh</button>
+        </div>
+      </div>
+      <div class="score-bar" id="score-bar"></div>
+      <div class="score-legend" id="score-legend"></div>
+      <p class="note">A score of 60 means complete deliverables with zero numerical credit. Only when reported values can be recomputed from raw data does a task exceed 60. Numerical references are uploaded to the scoring environment after the agent finishes, so they are never visible during execution.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="windpilot">
+  <div class="wrap">
+    <p class="eyebrow">04 · WindPilot</p>
+    <h2 class="reveal">An execution framework around the LLM, not a new model.</h2>
+    <p class="sub reveal">A harness is the program around the LLM that decides what the model sees, which tools it calls, when checks occur and when execution stops. WindPilot organises four checks outside the model so that feedback points to actual configurations and deliverable files.</p>
+    <div class="pipeline" id="pipeline"></div>
+    <figure class="card fig reveal"><button class="zoom" data-src="assets/fig/fig6_windpilot.webp" aria-label="Enlarge Fig. 6"><img src="assets/fig/fig6_windpilot.webp" alt="WindPilot architecture: contract parsing, execution provenance, deterministic verification and bounded acceptance review around the LLM loop." loading="lazy"></button><figcaption>Fig. 6 · WindPilot architecture. A completion declaration starts delivery checks; their errors and review issues return to the agent.</figcaption></figure>
+    <details class="card setup reveal">
+      <summary>Runtime environment and budget</summary>
+      <table>
+        <tr><th>Compute</th><td>AMD EPYC 7B12 · 128 physical cores · 16 cores per task · OpenFOAM v2412 + MPICH</td></tr>
+        <tr><th>Model</th><td>DeepSeek-V4.1-Flash · official API · default sampling (execution and acceptance review)</td></tr>
+        <tr><th>Budget</th><td>≤ 150 action steps · last 15 rounds kept · 5 h + 2× historical solver time · 300 s foreground limit</td></tr>
+        <tr><th>Review</th><td>Delivery checks from step 90 · ≤ 2 review calls per task · evidence view ≤ 96 KiB</td></tr>
+        <tr><th>Runs</th><td>One run per task per condition · independent scoring ≤ 900 s, outside the agent budget</td></tr>
+      </table>
+    </details>
+  </div>
+</section>
+<section class="sec" id="results">
+  <div class="wrap">
+    <p class="eyebrow">05 · Results</p>
+    <h2 class="reveal">Same model name, same budget, more recomputable results.</h2>
+    <p class="sub reveal">30 OpenFOAM tasks with independent references (13 ABL, 16 RANS/LES, 1 meshing). One run per task per condition; the base agent and WindPilot use the same model name.</p>
+    <div class="kpis" id="kpis"></div>
+    <div class="card chart-card reveal">
+      <div class="tabs" role="tablist" aria-label="Result charts" id="chart-tabs">
+        <button role="tab" aria-selected="true" data-chart="ecdf">Score distribution</button>
+        <button role="tab" aria-selected="false" data-chart="forest">Paired difference</button>
+        <button role="tab" aria-selected="false" data-chart="abl">ABL tasks</button>
+        <button role="tab" aria-selected="false" data-chart="steps">Action steps</button>
+        <button role="tab" aria-selected="false" data-chart="stages">Configurations</button>
+      </div>
+      <div class="chart" id="chart" role="img"></div>
+      <p class="note" id="chart-note"></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="traces">
+  <div class="wrap">
+    <p class="eyebrow">06 · Agent traces</p>
+    <h2 class="reveal">Feedback that points to files, not vibes.</h2>
+    <p class="sub reveal">A replay of the recorded WindPilot run on task-061 (neutral log-law inlet around a D×D×4D building). Commands and outputs are taken from the trace and trimmed for length.</p>
+    <div class="trace card reveal">
+      <div class="trace-side">
+        <ol class="trace-steps" id="trace-steps"></ol>
+        <div class="trace-ctl">
+          <button class="btn sm" id="trace-prev" aria-label="Previous step">←</button>
+          <button class="btn sm primary" id="trace-play" aria-label="Play">Play</button>
+          <button class="btn sm" id="trace-next" aria-label="Next step">→</button>
+        </div>
+      </div>
+      <div class="term" aria-live="polite">
+        <div class="term-bar"><i></i><i></i><i></i><span class="mono">agent@urbanwind-sandbox:/home/user/Desktop</span><span class="mono term-step" id="term-step">step 1 / 102</span></div>
+        <pre class="term-body mono" id="term"></pre>
+      </div>
+    </div>
+    <div class="case-grid">
+      <article class="card case reveal"><span class="tag">task-094 · 60 → 85</span><h3>Thermally forced urban LES</h3><p>Review found a ground heat-flux boundary inconsistent with the contract. The agent adjusted near-wall boundaries, reran all three cases, rebound run records and supplied the post-processing script, statistical window and hashes before submitting at step 130.</p><button class="link zoom" data-src="assets/fig/fig12_task094.webp">View the execution trace (Fig. 12) →</button></article>
+      <article class="card case reveal"><span class="tag">task-068 · 30 → 90</span><h3>Wind-direction rotation</h3><p>A budget-triggered check at step 91 found velocity arrays of shape 52×3 instead of the raw 20×52×3 — the time axis was lost. After re-exporting from raw samples, all nine checks passed at step 99 and stayed clean at steps 116 and 120.</p></article>
+      <article class="card case reveal"><span class="tag">95 verification events</span><h3>What the checks caught</h3><p>101 deduplicated errors in 10 tasks: 62 missing or unreadable files, 15 raw-data mismatches, 14 stale hashes, 7 incomplete decision notes. 97 (96.0%) were absent from final verification. Programmatic checks took 20.8 s per task on average.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="video">
+  <div class="wrap">
+    <p class="eyebrow">07 · Video</p>
+    <div class="video-card card reveal"><div class="video-ph"><span class="play" aria-hidden="true"></span><p>Demo video coming soon</p></div></div>
+  </div>
+</section>
+
+<section class="sec alt" id="cite">
+  <div class="wrap">
+    <p class="eyebrow">08 · Citation</p>
+    <h2 class="reveal">Cite this work</h2>
+    <div class="bib card reveal"><button class="btn sm copy" id="copy-bib">Copy</button><pre class="mono" id="bib">@article{urbanwind_agentbench_2026,
+  title   = {Does a completed simulation run mean a usable urban wind result for AI agents?},
+  author  = {TODO},
+  journal = {Under review},
+  year    = {2026}
+}</pre></div>
+  </div>
+</section>
+</main>
+
+<footer class="foot"><div class="wrap foot-row"><span>UrbanWind-AgentBench · WindPilot</span><span class="mono">Flow field in the header: real OpenFOAM output from the recorded task-061 run.</span></div></footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Figure viewer" hidden><button class="lb-close" aria-label="Close">×</button><img alt=""></div>
+<script src="assets/data.js"></script>
+<script src="assets/hero.js"></script>
+<script src="assets/charts.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/trace.js"></script>
+</body>
+</html>
