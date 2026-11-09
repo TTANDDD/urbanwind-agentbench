@@ -22,6 +22,11 @@
     links.forEach((a, i) => a.classList.toggle("on", i === cur));
     if (cur >= 0) { const a = links[cur]; ink.style.left = a.offsetLeft + 12 + "px"; ink.style.width = a.offsetWidth - 24 + "px"; ink.style.opacity = 1; } else ink.style.opacity = 0;
   }
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+  if (!location.hash) scrollTo(0, 0);
+  document.addEventListener("click", e => { const a = e.target.closest('a[href^="#"]'); if (!a || a.hasAttribute("data-soon")) return;
+    const id = a.getAttribute("href"); if (id.length < 2) return; const t = id === "#top" ? document.body : document.querySelector(id); if (!t) return;
+    e.preventDefault(); id === "#top" ? scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" }) : t.scrollIntoView({ behavior: reduce ? "auto" : "smooth" }); });
   addEventListener("scroll", onScroll, { passive: true }); onScroll();
 
   /* theme */

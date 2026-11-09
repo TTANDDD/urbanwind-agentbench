@@ -73,6 +73,8 @@
 /* lightbox */
 .lightbox{position:fixed;inset:0;z-index:100;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);display:grid;place-items:center;padding:4vw;
   opacity:0;transition:opacity .35s var(--ease)}
+.lightbox[hidden]{display:none}
+.lightbox:not(.open){pointer-events:none}
 .lightbox.open{opacity:1}
 .lightbox img{max-width:100%;max-height:88vh;border-radius:12px;box-shadow:var(--shadow);background:#fff;transform:scale(.97);transition:transform .45s var(--ease)}
 .lightbox.open img{transform:none}

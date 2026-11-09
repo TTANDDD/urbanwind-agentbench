@@ -22,7 +22,9 @@
   function show(i) {
     cur = (i + steps.length) % steps.length; const s = steps[cur];
     list.querySelectorAll("button").forEach((b, j) => b.classList.toggle("on", j === cur));
-    list.children[cur].scrollIntoView({ block: "nearest", behavior: A.reduce ? "auto" : "smooth" });
+    const li = list.children[cur], top = li.offsetTop - list.offsetTop, bot = top + li.offsetHeight;
+    if (top < list.scrollTop) list.scrollTo({ top, behavior: A.reduce ? "auto" : "smooth" });
+    else if (bot > list.scrollTop + list.clientHeight) list.scrollTo({ top: bot - list.clientHeight, behavior: A.reduce ? "auto" : "smooth" });
     lab.textContent = `step ${s.step} / 102 · ${s.stage}`;
     let html = "", n = 0; const line = (cls, t) => html += `<span class="ln ${cls}" style="animation-delay:${Math.min(n++ * 35, 1400)}ms">${t}</span>\n`;
     s.segs.forEach(([k, v]) => v.forEach((t, j) => {
