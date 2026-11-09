@@ -47,6 +47,13 @@
   lb.addEventListener("click", e => { if (e.target !== img) close(); });
   addEventListener("keydown", e => { if (e.key === "Escape" && !lb.hidden) close(); });
 
+  /* overview video: custom play button, hide once playing */
+  const vid = $("#demo"), vbtn = $("#demo-play"), vcard = vid && vid.closest(".video-card");
+  if (vid) { vbtn.addEventListener("click", () => { vid.play(); vid.focus(); });
+    vid.addEventListener("play", () => vcard.classList.add("playing"));
+    vid.addEventListener("pause", () => { if (vid.currentTime < 0.1 || vid.ended) vcard.classList.remove("playing"); });
+    vid.addEventListener("ended", () => vcard.classList.remove("playing")); }
+
   /* soon links + copy */
   document.querySelectorAll("[data-soon]").forEach(a => a.addEventListener("click", e => e.preventDefault()));
   $("#copy-bib").addEventListener("click", async e => { try { await navigator.clipboard.writeText($("#bib").textContent); e.target.textContent = "Copied"; } catch (x) { e.target.textContent = "Select & copy"; }

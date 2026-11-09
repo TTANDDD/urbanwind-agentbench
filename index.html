@@ -22,7 +22,7 @@
 <header class="nav" id="nav">
   <a class="brand" href="#top" aria-label="UrbanWind-AgentBench home"><span class="brand-mark" aria-hidden="true"></span><span>UrbanWind<span class="brand-dim">-AgentBench</span></span></a>
   <nav aria-label="Sections">
-    <a href="#finding">Finding</a><a href="#benchmark">Benchmark</a><a href="#scoring">Scoring</a>
+    <a href="#video">Video</a><a href="#finding">Finding</a><a href="#benchmark">Benchmark</a><a href="#scoring">Scoring</a>
     <a href="#windpilot">WindPilot</a><a href="#results">Results</a><a href="#traces">Traces</a><a href="#cite">Cite</a>
     <span class="nav-ink" aria-hidden="true"></span>
   </nav>
@@ -39,10 +39,10 @@
     <p class="lede reveal">A benchmark of 200 urban wind CFD tasks with recomputable two-layer scoring, and an execution framework that ties every reported metric back to raw solver evidence.</p>
     <p class="authors reveal"><!-- TODO: author names and affiliations -->Authors and affiliations · Manuscript under review</p>
     <div class="cta reveal">
-      <a class="btn primary" href="#results">See the results <span aria-hidden="true">→</span></a>
+      <a class="btn primary" href="#video"><span class="pl" aria-hidden="true"></span>Watch the 84 s video</a>
+      <a class="btn" href="#results">See the results <span aria-hidden="true">→</span></a>
       <a class="btn" href="#" aria-disabled="true" data-soon>Paper <small>soon</small></a>
       <a class="btn" href="#" aria-disabled="true" data-soon>Code &amp; tasks <small>soon</small></a>
-      <a class="btn" href="#video">Video <small>soon</small></a>
     </div>
   </div>
   <p class="hero-note mono">Live field · task-061 · OpenFOAM v2412 · iteration 400 · z = 0.44 m</p>
@@ -58,6 +58,24 @@
     <div><b class="mono" data-count="30">0</b><span>tasks with independent references</span></div>
   </div>
 </section>
+<section class="sec watch" id="video" aria-labelledby="video-title">
+  <div class="wrap">
+    <div class="watch-head reveal">
+      <p class="eyebrow">Watch · 1 min 24 s</p>
+      <h2 id="video-title">WindPilot in 84 seconds</h2>
+      <p class="sub">The benchmark, the execution framework and a replay of a real run on task-061. Captions are in Chinese.</p>
+    </div>
+    <figure class="video-card card reveal">
+      <video id="demo" controls preload="metadata" playsinline poster="assets/video/poster.webp" aria-describedby="video-note">
+        <source src="assets/video/windpilot_overview.mp4" type="video/mp4">
+        Your browser cannot play this video. <a href="assets/video/windpilot_overview.mp4">Download the MP4</a>.
+      </video>
+      <button class="video-play" id="demo-play" aria-label="Play the overview video"><span aria-hidden="true"></span></button>
+    </figure>
+    <p class="note" id="video-note">Terminal output, flow fields and scores in the video come from recorded runs; the replay is trimmed and sped up.</p>
+  </div>
+</section>
+
 <section class="sec" id="finding">
   <div class="wrap">
     <p class="eyebrow">01 · Key finding</p>
@@ -194,16 +212,9 @@
   </div>
 </section>
 
-<section class="sec" id="video">
-  <div class="wrap">
-    <p class="eyebrow">07 · Video</p>
-    <div class="video-card card reveal"><div class="video-ph"><span class="play" aria-hidden="true"></span><p>Demo video coming soon</p></div></div>
-  </div>
-</section>
-
 <section class="sec alt" id="cite">
   <div class="wrap">
-    <p class="eyebrow">08 · Citation</p>
+    <p class="eyebrow">07 · Citation</p>
     <h2 class="reveal">Cite this work</h2>
     <div class="bib card reveal"><button class="btn sm copy" id="copy-bib">Copy</button><pre class="mono" id="bib">@article{urbanwind_agentbench_2026,
   title   = {Does a completed simulation run mean a usable urban wind result for AI agents?},
