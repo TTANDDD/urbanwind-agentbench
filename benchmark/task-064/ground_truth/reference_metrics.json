@@ -1,0 +1,22 @@
+{
+  "experimental_claim": false,
+  "metric_formula": "mean_{r in stable,neutral,unstable}(sqrt(sum_i(dz_i*(Ux_r(i,400)-U_target_r(z_i))^2)/sum_i(dz_i))/1.2)",
+  "per_case_normalized_rmse": {
+    "neutral": 1.9407648455114036e-12,
+    "stable": 2.368140617296867e-12,
+    "unstable": 2.211243683004172e-12
+  },
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-064",
+  "truth_type": "verified_openfoam_numerical_reference",
+  "units": {
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction",
+    "monin_obukhov_profile_nmae": "fraction"
+  },
+  "values": {
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0,
+    "monin_obukhov_profile_nmae": 2.1733830486041476e-12
+  }
+}

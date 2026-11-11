@@ -1,0 +1,159 @@
+{
+  "cases": [
+    {
+      "case_id": "task-180-case-001",
+      "execution_role": "provided_data_or_tool_execution",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "在硬约束通过后按冻结权重排序情景并保留单指标结果。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "情景A"
+      },
+      "metrics": [
+        "ranking_kendall_tau",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "kendall_tau(predicted_ranking,reference_ranking)",
+        "id": "ranking_kendall_tau",
+        "name_zh": "多情景排序Kendall相关",
+        "unit": "1"
+      },
+      "purpose": "多情景综合排序：执行变体 情景A，围绕在硬约束通过后按冻结权重排序情景并保留单指标结果。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "pyvista"
+      ],
+      "task_id": "urbanwind-task-180",
+      "variant": "情景A"
+    },
+    {
+      "case_id": "task-180-case-002",
+      "execution_role": "provided_data_or_tool_execution",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "在硬约束通过后按冻结权重排序情景并保留单指标结果。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "情景B"
+      },
+      "metrics": [
+        "ranking_kendall_tau",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "kendall_tau(predicted_ranking,reference_ranking)",
+        "id": "ranking_kendall_tau",
+        "name_zh": "多情景排序Kendall相关",
+        "unit": "1"
+      },
+      "purpose": "多情景综合排序：执行变体 情景B，围绕在硬约束通过后按冻结权重排序情景并保留单指标结果。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "pyvista"
+      ],
+      "task_id": "urbanwind-task-180",
+      "variant": "情景B"
+    },
+    {
+      "case_id": "task-180-case-003",
+      "execution_role": "provided_data_or_tool_execution",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "在硬约束通过后按冻结权重排序情景并保留单指标结果。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "情景C"
+      },
+      "metrics": [
+        "ranking_kendall_tau",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "kendall_tau(predicted_ranking,reference_ranking)",
+        "id": "ranking_kendall_tau",
+        "name_zh": "多情景排序Kendall相关",
+        "unit": "1"
+      },
+      "purpose": "多情景综合排序：执行变体 情景C，围绕在硬约束通过后按冻结权重排序情景并保留单指标结果。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "pyvista"
+      ],
+      "task_id": "urbanwind-task-180",
+      "variant": "情景C"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "lite",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 3,
+  "required_solver_runs": 0,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-180"
+}

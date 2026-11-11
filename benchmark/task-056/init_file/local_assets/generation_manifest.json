@@ -1,0 +1,162 @@
+{
+  "anchor_name": "程序化本地城市子域",
+  "answer_free": true,
+  "data_origin": "deterministic_local_generation",
+  "experimental_claim": false,
+  "files": [
+    {
+      "bytes": 5397,
+      "path": "case_plan.json",
+      "sha256": "a0288a3cd980a70f7eee0237d38e1737e6ae106ffbe6260e0441b30e25326fe3"
+    },
+    {
+      "bytes": 237,
+      "path": "contract_evaluator.py",
+      "sha256": "6c1bb60a3e30a5dc5e186d6048643460bbf198644d45dd2c2ce0773bed7be535"
+    },
+    {
+      "bytes": 2052,
+      "path": "input_manifest.json",
+      "sha256": "6c61e0ed2e817afaaa09c663f1e7d1e59e7dad0441ebb26fa849094c5b19886d"
+    },
+    {
+      "bytes": 827,
+      "path": "local_assets/case_control_contract.json",
+      "sha256": "62a872501e3a89f132a1d9683e748cff922497a550326f23011b1d82bbc1e454"
+    },
+    {
+      "bytes": 660,
+      "path": "local_assets/case_matrix.csv",
+      "sha256": "1a8ed68d5440e6db401143e263e4cb8d1e2b74930a2f4d7d2753bb4d34acba36"
+    },
+    {
+      "bytes": 10650,
+      "path": "local_assets/city_geometry.geojson",
+      "sha256": "ab4447221d016e6d003f2823e56a5cb0c699c4a489b6428eaf7edee599286070"
+    },
+    {
+      "bytes": 405,
+      "path": "local_assets/fault_manifest.json",
+      "sha256": "787c6a870be9474a2866171b663499ab9fdf9e8b3208582c043e63afc1dab588"
+    },
+    {
+      "bytes": 1178,
+      "path": "local_assets/input_role_manifest.json",
+      "sha256": "fba77c703cee1d121b55fc23658a172144b118f73bde3a77123daecc86870b5d"
+    },
+    {
+      "bytes": 585,
+      "path": "local_assets/openfoam_base/0/k",
+      "sha256": "5787e69b87115ca5cc9c2ff23810577e4165034064bb690927c802c790bf586b"
+    },
+    {
+      "bytes": 562,
+      "path": "local_assets/openfoam_base/0/nut",
+      "sha256": "178112f008ac829251115d1a04b9c7516a043dca2646101d5da53b7082cd3fd4"
+    },
+    {
+      "bytes": 581,
+      "path": "local_assets/openfoam_base/0/omega",
+      "sha256": "05f328f4993eb179069c82a1ebc6939f82b3d21219db9f1b93b950f5c5ba210f"
+    },
+    {
+      "bytes": 387,
+      "path": "local_assets/openfoam_base/0/p",
+      "sha256": "2a76073be958e27a869b3c523859ba11ba190a7c0afb98c0899bcb6809d5ed2f"
+    },
+    {
+      "bytes": 445,
+      "path": "local_assets/openfoam_base/0/U",
+      "sha256": "86575e5d9e54c04009291239a11c454a32c960480ee1afd3b813a5a45379fe45"
+    },
+    {
+      "bytes": 110,
+      "path": "local_assets/openfoam_base/constant/dynamicMeshDict",
+      "sha256": "f98846b953910be0d7b9bd8d234b0c75c87fb1022f570d1b781438529cf083f7"
+    },
+    {
+      "bytes": 140,
+      "path": "local_assets/openfoam_base/constant/transportProperties",
+      "sha256": "da8978b65f70e9b4510a0c52153df95fbf2b1463308dd652592e656b3e5c1886"
+    },
+    {
+      "bytes": 166,
+      "path": "local_assets/openfoam_base/constant/turbulenceProperties",
+      "sha256": "6df384d904139243910d0b7d485ad2168c0166ffe09c511cc0f2f9cc4c12098c"
+    },
+    {
+      "bytes": 77573,
+      "path": "local_assets/openfoam_base/system/blockMeshDict",
+      "sha256": "213fef3218a033f0d6f6a31e775366f01c972a1b4fd275c2381aeffdd94a08ec"
+    },
+    {
+      "bytes": 391,
+      "path": "local_assets/openfoam_base/system/controlDict",
+      "sha256": "88ae8eb9091cda3e2bedbefaab5ba7a3bf9375eba33452050a155e3e7c8d066b"
+    },
+    {
+      "bytes": 489,
+      "path": "local_assets/openfoam_base/system/fvSchemes",
+      "sha256": "4a8a02fc4673fd79ad7ecce6334ec8b089d2ed6080777d2571a74e64bb0055c1"
+    },
+    {
+      "bytes": 944,
+      "path": "local_assets/openfoam_base/system/fvSolution",
+      "sha256": "15a5d7407574c1090d0982551dba6c833aaaf9b10db5b56e9e04318968ad6407"
+    },
+    {
+      "bytes": 376,
+      "path": "local_assets/openfoam_base/system/meshQualityDict",
+      "sha256": "8f35beeef67c99848724970f59d38afd4f2c700c58619459592014aa95d49124"
+    },
+    {
+      "bytes": 444,
+      "path": "local_assets/runtime_contract.json",
+      "sha256": "ffd4c6f2d6dfd234edd6f73b15adc85ce1c4389af02229e148fa102e0c84811e"
+    },
+    {
+      "bytes": 569,
+      "path": "local_assets/source_inventory.json",
+      "sha256": "4792cd5ccaa5d493df9248499e5f7c285602e3e60b5a1b7cdf4b6ff0c50c4d43"
+    },
+    {
+      "bytes": 1263,
+      "path": "local_assets/task_input_values.json",
+      "sha256": "6eb9885e06d91375787ccf9833a6ed3e4d1d89fc0b1f6e8210a57781936fb465"
+    },
+    {
+      "bytes": 949,
+      "path": "README_INPUT.md",
+      "sha256": "6e8842fc7ed608fdec16bcad62b6a15e0bc8aa865c704051a5bb414a654f2524"
+    },
+    {
+      "bytes": 2785,
+      "path": "reporting_contract.json",
+      "sha256": "b1fe37c44bbba7a2fa61edf2a6180d35a2c3ce827356a98cecc186c03f9a4f95"
+    },
+    {
+      "bytes": 2932,
+      "path": "submission_schema.json",
+      "sha256": "a5d2e5bd15615c4629b825d2526b7d2c62f2d4f2153c067f6dd6ecface2a9a3e"
+    },
+    {
+      "bytes": 27249,
+      "path": "task056_v54_contract.json",
+      "sha256": "c7ea9c7da030e4c8640dcc52fe5b35eaabd56617f25ba56974cd7d3fcc113edf"
+    },
+    {
+      "bytes": 8090,
+      "path": "task_spec.json",
+      "sha256": "3d222a0b5856f62226a9075b2d1d67e831df1cc0f23137f0edaf53b5adb5d6fc"
+    }
+  ],
+  "generator_version": "task056-v54-public-contract-integration-v1",
+  "implementation_source_sha256": {
+    "prepare_task056_final_public_staging_v1.py": "3f8a1664c1eec1428e191766b3ed099fc7889ed7308f12126862e8cb9fd51e27",
+    "prepare_task056_final_public_staging_v2.py": "1971815a90fe065952171bc9db8a23b238ec3055d4e94510b415749dd52bac2b"
+  },
+  "integration_source_sha256": {
+    "materialize_task056_v54_reference_v1.py": "0d6654cbd201158a8e7c23415b8b034096fb53a973db82786784a51a23156270"
+  },
+  "task_id": "urbanwind-task-056"
+}

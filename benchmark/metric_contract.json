@@ -1,0 +1,1513 @@
+{
+  "comparability_note": "The implemented precheck is capped at 60 and is not a physical benchmark or leaderboard score.",
+  "planned_release_metric": {
+    "formula": "0.10*artifact + 0.20*execution + 0.20*numerical + 0.25*physical + 0.15*external_validation + 0.10*decision",
+    "name": "UrbanWind Agent Composite Score",
+    "status": "not_implemented"
+  },
+  "primary_metric": {
+    "aggregation_order": "artifact checks -> run checks -> metric/decision checks -> capped sum",
+    "checkpoint_selection_rule": "not applicable",
+    "direction": "higher",
+    "ensemble_rule": "not applicable",
+    "formula": "min(60, 15*artifact_presence + 10*parseability + 15*run_provenance + 10*raw_evidence + 5*metric_traceability + 5*decision_trace)",
+    "implementation_path": "evaluator_framework/contract_evaluator.py",
+    "implementation_sha256": "c92d50c4a72c9dec322459d8151dec89e7a79000214ad82f2a2438ce716167df",
+    "independent_test_path": "evaluator_framework/tests/test_contract_evaluator.py",
+    "independent_test_sha256": "172c86664d78efe7d5e4cc40d2947574d257534a384dfae30845ab286666a307",
+    "independent_test_status": "passed",
+    "masks": "none; this evaluator does not inspect physical fields",
+    "name": "UrbanWind scaffold contract precheck",
+    "normalization": "component checks mapped to a structural score capped at 60",
+    "prediction_units": "points",
+    "split": "not applicable to structural precheck",
+    "target_units": "points",
+    "uncertainty_convention": "not applicable",
+    "weighting": "fixed component weights in evaluator source",
+    "zero_denominator": "empty required list is invalid"
+  },
+  "schema_version": "1.0",
+  "secondary_metrics": [
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "correct_required_fields / required_fields",
+      "id": "required_field_accuracy",
+      "name_zh": "必需字段抽取准确率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "sqrt(mean(||inverse(transform(p))-p||^2))",
+      "id": "coordinate_roundtrip_rmse_m",
+      "name_zh": "坐标往返转换RMSE",
+      "unit": "m"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "abs(Re_computed-Re_reference)/Re_reference",
+      "id": "reynolds_number_relative_error",
+      "name_zh": "雷诺数相对误差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max(abs(extent_reported_D-extent_contract_D))",
+      "id": "domain_extent_max_error_D",
+      "name_zh": "计算域边界最大误差",
+      "unit": "D"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "verified_sampling_fields / required_sampling_fields",
+      "id": "sampling_contract_coverage",
+      "name_zh": "采样位置合同覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "correct_array_parameters / required_array_parameters",
+      "id": "array_parameter_extraction_accuracy",
+      "name_zh": "阵列参数抽取准确率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "correctly_flagged_missing / known_missing_parameters",
+      "id": "missing_parameter_detection_recall",
+      "name_zh": "缺失参数识别召回率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "sqrt(mean(||aligned_points-reference_points||^2))/H",
+      "id": "alignment_control_point_rmse_H",
+      "name_zh": "本地多保真控制点配准RMSE",
+      "unit": "H"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "assets_with_source_version_license_redistribution / assets",
+      "id": "license_field_coverage",
+      "name_zh": "许可字段覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "verified_sha256_assets / required_assets",
+      "id": "asset_hash_coverage",
+      "name_zh": "资产哈希覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "verified_paper_code_data_evaluator_layers / required_layers",
+      "id": "openness_layer_coverage",
+      "name_zh": "开放性分层核验覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "verified_crs_datum_fields / required_crs_datum_fields",
+      "id": "crs_datum_field_coverage",
+      "name_zh": "CRS与垂直基准字段覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "correct_truth_layer_labels / audited_assets",
+      "id": "truth_layer_classification_accuracy",
+      "name_zh": "真值层级分类准确率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "quantities_with_unit_symbol_definition / required_quantities",
+      "id": "unit_symbol_coverage",
+      "name_zh": "单位与符号覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "cases_with_spinup_window_cadence / cases",
+      "id": "window_definition_coverage",
+      "name_zh": "统计窗口定义覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "|train_groups∩dev_groups|+|train_groups∩test_groups|+|dev_groups∩test_groups|",
+      "id": "split_group_overlap_count",
+      "name_zh": "数据划分组交集数量",
+      "unit": "groups"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "count(dependent_geometry_pairs_across_splits)",
+      "id": "leakage_pair_count",
+      "name_zh": "跨几何泄漏对数量",
+      "unit": "pairs"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "pinned_executables_and_images / required_runtime_assets",
+      "id": "runtime_hash_coverage",
+      "name_zh": "运行时版本与哈希覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "metrics_with_formula_unit_mask_weight_aggregation / metrics",
+      "id": "metric_contract_field_coverage",
+      "name_zh": "指标合同字段覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "implemented_independent_gates / required_gates",
+      "id": "acceptance_gate_coverage",
+      "name_zh": "验收门禁覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "count(invalid_geometry_after_repair)",
+      "id": "invalid_geometry_count_after",
+      "name_zh": "修复后无效几何数量",
+      "unit": "features"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "buildings_with_verified_height / buildings",
+      "id": "verified_height_coverage_fraction",
+      "name_zh": "经核验建筑高度覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "sqrt(mean(||transformed_control-reference_control||^2))",
+      "id": "crs_control_point_rmse_m",
+      "name_zh": "CRS控制点RMSE",
+      "unit": "m"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "area(unresolved_building_overlaps)",
+      "id": "overlap_area_remaining_m2",
+      "name_zh": "消解后残余重叠面积",
+      "unit": "m2"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "2*precision*recall/(precision+recall)",
+      "id": "feature_filter_f1",
+      "name_zh": "微小构件过滤F1",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "2*precision*recall/(precision+recall)",
+      "id": "courtyard_topology_f1",
+      "name_zh": "庭院孔洞拓扑F1",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "sqrt(mean((dem_processed-dem_reference)^2))",
+      "id": "dem_reference_rmse_m",
+      "name_zh": "DEM参考高程RMSE",
+      "unit": "m"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "sqrt(mean((building_base-terrain)^2))",
+      "id": "building_terrain_gap_rmse_m",
+      "name_zh": "建筑地形贴合间隙RMSE",
+      "unit": "m"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "F1(predicted_corridor_edges,reference_edges)",
+      "id": "corridor_graph_connectivity_f1",
+      "name_zh": "候选廊道连通性F1",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "correct_z0_class_mappings / audited_zones",
+      "id": "roughness_mapping_accuracy",
+      "name_zh": "粗糙度类别映射准确率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "zones_with_sourced_thermal_properties / zones",
+      "id": "thermal_property_source_coverage",
+      "name_zh": "热力属性来源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "abs(volume_model-volume_reference)/volume_reference",
+      "id": "canopy_volume_relative_error",
+      "name_zh": "树冠体积相对误差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max(abs(measured_dimensions-contract_dimensions))",
+      "id": "geometry_dimension_max_error_m",
+      "name_zh": "规范几何最大尺寸误差",
+      "unit": "m"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max(relative_error(H,spacing,index_positions))",
+      "id": "array_geometry_parameter_error",
+      "name_zh": "阵列几何参数误差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hausdorff_distance(converted_surface,local_reference_surface)",
+      "id": "public_cad_surface_hausdorff_distance_m",
+      "name_zh": "本地CAD表面Hausdorff距离",
+      "unit": "m"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hausdorff_distance(rebuilt_surface,local_reference_surface)",
+      "id": "local_dispersion_surface_hausdorff_distance_m",
+      "name_zh": "本地扩散算例表面Hausdorff距离",
+      "unit": "m"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_upstream_lateral_top_downstream_margins / required_margins",
+      "id": "boundary_margin_pass_fraction",
+      "name_zh": "子域边界裕度通过率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "sqrt(mean(||inverse_rotate(rotate(p))-p||^2))",
+      "id": "rotation_roundtrip_rmse_m",
+      "name_zh": "多风向旋转回投影RMSE",
+      "unit": "m"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "weighted_mean(abs(U_simplified-U_reference))/U_reference_scale",
+      "id": "simplification_wind_field_nmae",
+      "name_zh": "几何简化风场NMAE",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_licensed_versioned_inputs / required_inputs",
+      "id": "input_manifest_coverage",
+      "name_zh": "城市输入清单覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "count(block_connectivity_and_patch_errors)",
+      "id": "block_connectivity_error_count",
+      "name_zh": "block连接错误数量",
+      "unit": "errors"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "linear_percentile_95(unweighted Euclidean distance of each final building-patch face vertex-mean centre to the union of the 12 visible STL triangles); no face exclusion",
+      "id": "surface_conformance_p95_m",
+      "name_zh": "表面贴合距离P95",
+      "unit": "m"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "wall_faces_with_yplus_in_target / wall_faces",
+      "id": "yplus_target_coverage",
+      "name_zh": "目标y+覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "sum(exact cell-box intersection volume with visible wake ROI for cells satisfying all visible dx/dy/dz and anisotropy limits)/analytic wake ROI volume; raw Cartesian topology must tile fluid domain without gaps or overlaps",
+      "id": "wake_refinement_coverage",
+      "name_zh": "尾流加密区覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "h_j=(3009.2/N_j)^(1/3), r_cm=h_coarse/h_medium, r_mf=h_medium/h_fine; refinement_ratio_consistency=1-abs(r_cm-r_mf)/max(r_cm,r_mf), with N_j counted from independently validated raw polyMesh; identical grids and nonuniform directional refinement fail separate hard gates",
+      "id": "refinement_ratio_consistency",
+      "name_zh": "三层网格加密比一致性",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "sum over both x and y cyclic patch pairs of faces on either side without exactly one translated four-vertex match within 1e-8 m, matching area within 1e-8 relative and opposite unit normal within 1e-8; reciprocal cyclic declarations, complete planes, all 16 solids and mesh quality are independent mandatory gates",
+      "id": "periodic_face_mismatch_count",
+      "name_zh": "周期面对不匹配数量",
+      "unit": "faces"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "sum_i volume(raw_axis_aligned_cell_i intersect union(public canyon, roof and intersection boxes)) * I(dx_i,dy_i,dz_i <= stage directional limits) / 51.0 m3; the union is counted once; raw topology must tile the complete 457.6 m3 fluid domain exactly once with all 16 solids excluded; no centre-count approximation",
+      "id": "street_canyon_resolution_coverage",
+      "name_zh": "街谷目标分辨率覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "core_volume_at_target_resolution / core_volume",
+      "id": "urban_core_resolution_coverage",
+      "name_zh": "城市核心区分辨率覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max(cell_non_orthogonality)",
+      "id": "max_non_orthogonality_deg",
+      "name_zh": "最大非正交角",
+      "unit": "deg"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "canopy_volume_in_declared_cell_zone / canopy_volume",
+      "id": "canopy_region_cell_coverage",
+      "name_zh": "多孔冠层单元覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max(adjacent_cell_length_ratio)",
+      "id": "max_adjacent_cell_size_ratio",
+      "name_zh": "最大相邻单元尺寸比",
+      "unit": "1"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "distance(last_building,outlet)/D",
+      "id": "outlet_buffer_length_D",
+      "name_zh": "出口缓冲区长度",
+      "unit": "D"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "min(distance(buildings,top_and_side_boundaries))/D",
+      "id": "minimum_boundary_margin_D",
+      "name_zh": "最小边界裕度",
+      "unit": "D"
+    },
+    {
+      "aggregation": "per_method_mapping_within_one_comparison_case",
+      "formula": "(max(cells_per_rank)-mean(cells_per_rank))/mean(cells_per_rank)",
+      "id": "cell_load_imbalance_ratio",
+      "name_zh": "并行单元负载不均衡率",
+      "unit": "fraction",
+      "value_schema": {
+        "scotch": "finite number",
+        "simple": "finite number"
+      }
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "count of internal faces with S_f dot (geometric_neighbour_centre-geometric_owner_centre) <= 0, recomputed from raw submitted instance; target 0; preservation, cell closure, report and complete native gates are mandatory conjunctive checks",
+      "id": "remaining_internal_face_orientation_defect_count",
+      "name_zh": "修复后内部面朝向错误数量",
+      "unit": "faces"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "abs(bounding_box_size-contract_size)/contract_size",
+      "id": "geometry_scale_relative_error",
+      "name_zh": "几何尺度相对误差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "count(open_or_nonmanifold_edges_after_repair)",
+      "id": "open_edge_count_after",
+      "name_zh": "修复后开放边数量",
+      "unit": "edges"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "abs(voxel_volume-surface_volume)/surface_volume",
+      "id": "palm_voxel_volume_relative_error",
+      "name_zh": "PALM体素化体积相对误差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "abs(memory_predicted-memory_measured)/memory_measured",
+      "id": "memory_prediction_relative_error",
+      "name_zh": "网格内存预测相对误差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "Fs*abs((f_fine-f_medium)/f_fine)/(r^p-1)*100",
+      "id": "fine_grid_gci_percent",
+      "name_zh": "细网格GCI",
+      "unit": "%"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "log(abs((f_coarse-f_medium)/(f_medium-f_fine)))/log(r)",
+      "id": "observed_order_of_accuracy",
+      "name_zh": "观测收敛阶",
+      "unit": "1"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "sqrt(sum_i(dz_i*(Ux_i-Ulog(z_i))^2)/sum_i(dz_i)); Ulog(z)=Uref*ln((z-d+z0)/z0)/ln((Zref-d+z0)/z0)",
+      "id": "inlet_profile_rmse_ms",
+      "name_zh": "入口剖面RMSE",
+      "unit": "m/s"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "0.5*(mean_{p:z=1.4375,i=340,360,380,400}|Ux_power(i,p)-Ux_log(i,p)|+mean_{p:z=4.375,i=340,360,380,400}|Ux_power(i,p)-Ux_log(i,p)|)/1.2",
+      "id": "profile_model_response_difference",
+      "name_zh": "幂律与对数律响应差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max(abs(R_faulty_reported-R_faulty_visible),R_repaired); R=max_pairwise_abs(z0_inlet,z0_wall,z0_map)/max(max(z0_inlet,z0_wall,z0_map),1e-6)",
+      "id": "roughness_consistency_residual",
+      "name_zh": "粗糙度一致性残差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "mean_{r in stable,neutral,unstable}(sqrt(sum_i(dz_i*(Ux_r(i,400)-U_target_r(z_i))^2)/sum_i(dz_i))/1.2)",
+      "id": "monin_obukhov_profile_nmae",
+      "name_zh": "Monin-Obukhov稳定度剖面NMAE",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "mean_{p in 16 inlet probes,c in Ux Uy Uz,b in 5 bands} abs(F_realized[p,c,b]-F_target[p,c,b]); F is normalized one-sided PSD energy over 30<t<=90 s at dt=0.2 s",
+      "id": "inflow_spectral_band_error",
+      "name_zh": "入口谱频带误差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "100*abs(flux_mapped-flux_source)/abs(flux_source)",
+      "id": "mapped_mass_flux_error_percent",
+      "name_zh": "前驱场映射质量通量误差",
+      "unit": "%"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max_nontarget_autocorrelation_peak",
+      "id": "recycling_periodicity_peak",
+      "name_zh": "回收入口非物理周期峰值",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max(E_roundtrip_visible,E_solver_inlet,E_inverse_projected_inlet); E_roundtrip_visible=max(relative_error(R^T(Ru),u),relative_error(R^T(Rq),q),relative_error(R^T(RTR^T)R,T)); E_solver_inlet=weighted_RMSE(U_probe_solver-U_target_solver)/1.2; E_inverse_projected_inlet=weighted_RMSE(R^T U_probe_solver-U_target_geo)/1.2",
+      "id": "vector_tensor_roundtrip_error",
+      "name_zh": "风向矢量张量与求解器入口联合误差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max(range_b(mean_{i in {340,360,380,400},p in pedestrian_layer} Ux[b,i,p]),range_b(mean_{i in {340,360,380,400},p in roof_layer} Ux[b,i,p]))/1.2; b in {slip,symmetryPlane,fixedShearStress}",
+      "id": "top_boundary_response_spread",
+      "name_zh": "顶部边界响应离散度",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max(range_b(mean_{i in {340,360,380,400},p in center_wake} Ux[b,i,p]),range_b(mean_{i in {340,360,380,400},p in side_corridor} Ux[b,i,p]))/1.2; b in {symmetryPlane,cyclic,freestream}",
+      "id": "side_boundary_response_spread",
+      "name_zh": "侧边界响应离散度",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "sum_f(A_f*I((U_f dot n_f)<0))/sum_f(A_f) on the repaired case at iteration 400; outlet faces, outward normals n_f and areas A_f are reconstructed from constant/polyMesh, and U_f is read from the raw 400/U outlet boundary values",
+      "id": "outlet_reverse_flow_fraction",
+      "name_zh": "出口回流面积比例",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "sum_j(A_j*I(patch_geometry_j matches source_zone_j and abs(z0_OpenFOAM_j-z0_source_j)<=1e-12))/sum_j(A_j)",
+      "id": "roughness_zone_mapping_accuracy",
+      "name_zh": "粗糙度分区映射准确率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "normalized_range(target_observables_across_wall_treatments)",
+      "id": "wall_treatment_response_spread",
+      "name_zh": "壁面处理响应离散度",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "sum_z(A_z*mean_{t in {0,60,120,180}s}(abs(q_OpenFOAM(z,t)-q_contract(z,t))))/sum_z(A_z); z in {heatWest,heatCenter,heatEast}",
+      "id": "heat_flux_boundary_error",
+      "name_zh": "地表热通量边界误差",
+      "unit": "W/m2"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "sqrt(mean_t((areaMean(T_building_patch,t)-linear_interp(impute_linear(T_source),t))^2))",
+      "id": "surface_temperature_alignment_rmse_K",
+      "name_zh": "表面温度时间对齐RMSE",
+      "unit": "K"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max(RMSE(theta_input-theta_target)/1K,RMSE(p_input-p_hydrostatic_target)/100Pa,RMSE(p_rgh_input-(p_input-rho_input*g_dot_x))/100Pa); theta_input=T_input*(100000Pa/p_input)^(R/Cp), rho_input=p_input/(R*T_input)",
+      "id": "hydrostatic_initialization_residual",
+      "name_zh": "位温静力初始化残差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "weighted_mean(abs(profile_OF-profile_PALM))/reference_scale",
+      "id": "cross_solver_profile_mapping_nmae",
+      "name_zh": "OpenFOAM-PALM入口互译NMAE",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max(mean_abs(Ux_mean_B-Ux_mean_C)/1.2,mean_abs(Ux_variance_B-Ux_variance_C)/1.44,0.5*sum(abs(normalized_PSD_band_B-normalized_PSD_band_C)),abs(Tint_B-Tint_C)/max(abs(Tint_C),0.2)) over frozen 300-360 s and 360-420 s blocks",
+      "id": "precursor_block_mean_drift",
+      "name_zh": "前驱场统计块漂移",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "100*abs(sum(phi_inlet)+sum(phi_outlet))/max(abs(sum(phi_inlet)),1e-12); phi is the raw oriented volumetric face flux from 400/phi and all other boundaries are frozen impermeable with zero sources",
+      "id": "mass_flux_mismatch_percent",
+      "name_zh": "入口出口质量通量不平衡率",
+      "unit": "%"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "valid_unique_combinations / required_combinations",
+      "id": "design_matrix_coverage",
+      "name_zh": "来流工况矩阵覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "weighted_mean(abs(U_RANS-U_local_reference))/U_reference",
+      "id": "rans_local_reference_velocity_nmae",
+      "name_zh": "RANS-本地数值参考速度NMAE",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "weighted_mean(abs(U_LES-U_local_reference))/U_reference",
+      "id": "les_local_reference_velocity_nmae",
+      "name_zh": "LES-本地数值参考速度NMAE",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "weighted_mean(abs(turbulence_LES-turbulence_local_reference))/turbulence_reference_scale",
+      "id": "les_local_reference_turbulence_nmae",
+      "name_zh": "LES-本地数值参考脉动统计NMAE",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "mean_models(weighted_mean_observables(abs(Q_model-Q_reference))/reference_scale)",
+      "id": "sgs_reference_observable_nmae",
+      "name_zh": "SGS模型参考观测量NMAE",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "normalized_range(target_observables_across_three_SGS_models)",
+      "id": "sgs_target_observable_spread",
+      "name_zh": "SGS模型目标量离散度",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "reference_error(selected_model)-min(reference_error(WALE,Smagorinsky,dynamic_SGS))",
+      "id": "sgs_selected_model_regret",
+      "name_zh": "SGS模型选择后悔值",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "0.5*(mean_j(range_dt(Ux_j))/1.2 + mean_j(range_dt(k_resolved_j))/1.44); 64 frozen fluid probes; t=180-300 s",
+      "id": "timestep_observable_spread",
+      "name_zh": "时间步关键量离散度",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "normalized_range(target_observables_across_schemes)",
+      "id": "scheme_observable_spread",
+      "name_zh": "离散格式关键量离散度",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "convergence_quality / normalized_runtime_cost",
+      "id": "solver_setting_cost_convergence_score",
+      "name_zh": "求解器设置收敛成本得分",
+      "unit": "1"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "earliest 60s-block start with all subsequent adjacent 60s drifts U<=0.05 and k<=0.02 over 64 probes; blocks 60-420 s",
+      "id": "stationarity_onset_detected_s",
+      "name_zh": "检测出的统计起始时刻",
+      "unit": "s"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "verified_products/6 for probes_{U,p}, pedestrianPlane_{U,p}@z=1m, wakePlane_{U,p}@x=2m; probes t=60-420s and planes at 60s intervals",
+      "id": "sampling_location_coverage",
+      "name_zh": "探针切面位置覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "mean_59(abs(Ux_CFD(coord)-Ux_synthetic(coord)))/1.2; exact (x,y,z) join of 59 fluid observations, t=300-420 s",
+      "id": "local_reference_comparison_nmae",
+      "name_zh": "单体建筑本地合成参考流向速度NMAE",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "mean_i(abs(Ux_RANS_i-Ux_local_i))/1.2 over 96 frozen probe points",
+      "id": "array_rans_profile_nmae",
+      "name_zh": "阵列RANS剖面NMAE",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "0.5*(mean_i(abs(Ux_i-Ux_local_i))/1.2 + mean_i(abs(kres_i-kres_local_i))/1.44) over 96 frozen probes",
+      "id": "array_les_turbulence_nmae",
+      "name_zh": "阵列LES本地合成参考统计NMAE",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "mean_direction(mean_probe(Ux*cos(theta)+Uy*sin(theta), t=120-180s))/1.2, theta={0,22.5,45}deg",
+      "id": "wind_direction_weighted_probe_speed_ratio",
+      "name_zh": "多风向加权探针流向速度比",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "OLS_slope(mean_i(Ux_i/1.2) versus ln(z0/1m)) across z0={0.002,0.02,0.2}m with 96 equal-weight probes",
+      "id": "roughness_sensitivity_slope",
+      "name_zh": "粗糙度敏感性斜率",
+      "unit": "1"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max_forced_cases(abs((vertical_exchange_forced-vertical_exchange_neutral)/max(abs(vertical_exchange_neutral),0.01)))",
+      "id": "thermal_exchange_response",
+      "name_zh": "热力强迫交换响应",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "mean(abs(exchange_stable-exchange_neutral),abs(exchange_unstable-exchange_neutral))/max(abs(exchange_neutral),0.01)",
+      "id": "les_stability_exchange_response",
+      "name_zh": "城市LES稳定度交换响应",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max_cases(100*abs(source-outflow-storage)/max(abs(source),eps))",
+      "id": "scalar_mass_balance_error_percent",
+      "name_zh": "被动标量质量闭合误差",
+      "unit": "%"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "present_required_fields_times / required_fields_times",
+      "id": "procedural_city_field_completeness",
+      "name_zh": "程序化城市原始场完整率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max_pairs(0.5*(mean_64(abs(Ux_a-Ux_b))/1.2 + mean_64(abs(k_a-k_b))/1.44)); t=300-420 s",
+      "id": "decomposition_reproducibility_error",
+      "name_zh": "并行分解复现误差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max_restart(max(NMAE(mean_U_vector_360_420)/1.2,NMAE(resolved_TKE_360_420)/1.44,NMAE(mean_p_360_420)/1.44)) versus continuous run",
+      "id": "restart_continuity_error",
+      "name_zh": "重启拼接连续性误差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max(relative_difference(metrics_across_versions))",
+      "id": "cross_version_metric_delta",
+      "name_zh": "OpenFOAM跨版本指标差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_required_dimensions_variables_attributes / required_checks",
+      "id": "static_driver_schema_pass_fraction",
+      "name_zh": "PALM静态驱动Schema通过率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "weighted_mean(abs(height_voxel-height_source))",
+      "id": "building_height_voxel_error_m",
+      "name_zh": "建筑高度体素化误差",
+      "unit": "m"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "correct_surface_classes / audited_cells",
+      "id": "surface_class_mapping_accuracy",
+      "name_zh": "地表类别映射准确率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "abs(integral(LAD_model)-LAI_target)/LAI_target",
+      "id": "lad_vertical_integral_error",
+      "name_zh": "LAD垂直积分误差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "valid_sourced_soil_layer_parameters / required_parameters",
+      "id": "soil_parameter_coverage",
+      "name_zh": "土壤热参数覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "normalized_flux_mismatch(parent_to_child_boundary)",
+      "id": "nest_boundary_exchange_mismatch",
+      "name_zh": "嵌套边界交换不匹配",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "1-normalized_drift(preregistered_precursor_monitors)",
+      "id": "palm_precursor_stationarity_score",
+      "name_zh": "PALM前驱平稳性得分",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "weighted_mean_regimes(abs(response_model-response_reference))/reference_scale",
+      "id": "palm_stability_response_nmae",
+      "name_zh": "PALM稳定度响应NMAE",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "slope(target_observable versus imposed_heat_flux)",
+      "id": "palm_heat_flux_response_slope",
+      "name_zh": "PALM热通量响应斜率",
+      "unit": "1"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "100*abs(inputs-outputs-storage)/max(abs(inputs),eps)",
+      "id": "palm_energy_closure_percent",
+      "name_zh": "PALM能量闭合误差",
+      "unit": "%"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "weighted_mean_directions(abs(field_model-field_reference))/reference_scale",
+      "id": "palm_wind_direction_field_nmae",
+      "name_zh": "PALM多风向场NMAE",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "abs(onset_detected-onset_reference)",
+      "id": "palm_spinup_onset_error_s",
+      "name_zh": "PALM自旋结束时刻误差",
+      "unit": "s"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "present_variables_times_coordinates_units / required_output_fields",
+      "id": "palm_output_contract_coverage",
+      "name_zh": "PALM输出合同覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max(normalized_jump(outputs_and_statistics_at_restart))",
+      "id": "palm_restart_continuity_error",
+      "name_zh": "PALM重启连续性误差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_dimension_coordinate_unit_nan_time_checks / required_checks",
+      "id": "netcdf_contract_pass_fraction",
+      "name_zh": "NetCDF合同通过率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "normalized_slope(target_observable versus resistance_parameter)",
+      "id": "canopy_resistance_response",
+      "name_zh": "冠层阻力响应",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "abs(storage_release+sensible+latent+radiative_terms)",
+      "id": "nocturnal_heat_balance_residual",
+      "name_zh": "夜间热平衡残差",
+      "unit": "W/m2"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "weighted_mean(abs(field_OF-field_PALM))/reference_scale",
+      "id": "openfoam_palm_field_nmae",
+      "name_zh": "OpenFOAM-PALM同域场NMAE",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "sqrt(mean(||reprojected_control-reference_control||^2))",
+      "id": "palm_gis_reprojection_rmse_m",
+      "name_zh": "PALM到GIS回投影RMSE",
+      "unit": "m"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_evidence_input_run_numerical_physical_gis_gates / required_gates",
+      "id": "palm_end_to_end_gate_pass_fraction",
+      "name_zh": "PALM全流程门禁通过率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "(imbalance_before-imbalance_after)/imbalance_before",
+      "id": "leak_mass_imbalance_reduction",
+      "name_zh": "泄漏质量不平衡降低率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max_nonortho_before-max_nonortho_after",
+      "id": "nonorthogonality_reduction_deg",
+      "name_zh": "最大非正交角降低量",
+      "unit": "deg"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "count(cell_volume<=0 after_repair)",
+      "id": "negative_volume_count_after",
+      "name_zh": "修复后负体积数量",
+      "unit": "cells"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "count(mesh_dictionary_patch_mismatches_after)",
+      "id": "patch_contract_mismatch_count",
+      "name_zh": "修复后Patch合同错配数",
+      "unit": "patches"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "abs(size_after-size_contract)/size_contract",
+      "id": "scale_error_after",
+      "name_zh": "修复后尺度相对误差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "abs(reference_height_applied-reference_height_contract)",
+      "id": "inlet_height_offset_after_m",
+      "name_zh": "修复后入口高度偏移",
+      "unit": "m"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max(relative_mismatch(z0_inlet,z0_wall,z0_map))",
+      "id": "roughness_residual_after",
+      "name_zh": "修复后粗糙度一致性残差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "1 if repaired_run_has_finite_pressure_and_convergence else 0",
+      "id": "pressure_divergence_removed",
+      "name_zh": "压力发散消除标志",
+      "unit": "boolean"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "count(Co>declared_limit after_repair)",
+      "id": "courant_violation_count_after",
+      "name_zh": "修复后CFL超限次数",
+      "unit": "events"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max(relative_error(repaired_parameters,contract_parameters))",
+      "id": "sgs_parameter_error_after",
+      "name_zh": "修复后SGS参数误差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "min(distance(geometry,boundaries))/D",
+      "id": "domain_margin_after_D",
+      "name_zh": "修复后最小域边界裕度",
+      "unit": "D"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "(reverse_fraction_before-reverse_fraction_after)/reverse_fraction_before",
+      "id": "reverse_flow_reduction",
+      "name_zh": "出口回流比例降低率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "100*abs(inlet-outlet-sources)/max(abs(inlet),eps)",
+      "id": "mass_balance_error_after_percent",
+      "name_zh": "修复后质量闭合误差",
+      "unit": "%"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "confidence_interval_width/reference_scale",
+      "id": "stationarity_ci_width_after",
+      "name_zh": "延长后统计区间宽度",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "valid_sampling_objects / required_sampling_objects",
+      "id": "sampling_object_coverage_after",
+      "name_zh": "修复后采样对象覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "count(missing_required_processor_time_fields)",
+      "id": "missing_processor_file_count_after",
+      "name_zh": "修复后并行文件缺失数",
+      "unit": "files"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "count(dimension_coordinate_shape_mismatches)",
+      "id": "static_driver_dimension_mismatch_count",
+      "name_zh": "修复后静态驱动维度错配数",
+      "unit": "errors"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "count(NaN_or_Inf_in_required_outputs)",
+      "id": "nonfinite_value_count_after",
+      "name_zh": "修复后非有限值数量",
+      "unit": "values"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max(abs(expected_time_step-observed_time_step_at_join))",
+      "id": "restart_time_gap_after_s",
+      "name_zh": "修复后重启时间轴间隙",
+      "unit": "s"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "sqrt(mean(||roundtrip_coordinates-reference_coordinates||^2))",
+      "id": "cross_software_coordinate_roundtrip_error_m",
+      "name_zh": "跨软件坐标往返误差",
+      "unit": "m"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "sqrt(mean(||registered_control-reference_control||^2))",
+      "id": "local_observation_registration_rmse_m",
+      "name_zh": "本地合成观测坐标配准RMSE",
+      "unit": "m"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "abs(integral(interpolated)-integral(source))/abs(integral(source))",
+      "id": "interpolation_conservation_error",
+      "name_zh": "插值守恒误差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "weighted_mean(abs(U_model-U_reference))/U_reference_scale",
+      "id": "velocity_profile_nmae",
+      "name_zh": "平均速度剖面NMAE",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "weighted_mean_components(abs(R_model-R_reference))/reference_scale",
+      "id": "reynolds_stress_component_nmae",
+      "name_zh": "雷诺应力分量NMAE",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "abs(Lr_model-Lr_reference)/D",
+      "id": "reattachment_length_error_D",
+      "name_zh": "再附着长度误差",
+      "unit": "D"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "abs(St_model-St_reference)/St_reference",
+      "id": "strouhal_relative_error",
+      "name_zh": "Strouhal数相对误差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "peak_power/local_background_power",
+      "id": "spectral_peak_prominence",
+      "name_zh": "谱峰显著性",
+      "unit": "1"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "weighted_mean(abs(deficit_model-deficit_reference))/reference_scale",
+      "id": "wake_recovery_curve_nmae",
+      "name_zh": "尾流恢复曲线NMAE",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "weighted_mean(abs(profile_model-profile_reference))/reference_scale",
+      "id": "vertical_profile_nmae",
+      "name_zh": "阵列垂直剖面NMAE",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "weighted_mean(abs(D_model-D_reference))/reference_scale",
+      "id": "dispersive_stress_nmae",
+      "name_zh": "色散应力NMAE",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "weighted_mean(abs(TKE_model-TKE_reference))/reference_scale",
+      "id": "tke_component_nmae",
+      "name_zh": "TKE分量一致NMAE",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "independent_groups_with_reference_inside_interval / independent_groups",
+      "id": "propagated_interval_coverage",
+      "name_zh": "测量不确定度传播覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "independent_groups_with_truth_inside_bootstrap_CI / independent_groups",
+      "id": "bootstrap_ci_coverage",
+      "name_zh": "Bootstrap区间覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "Fs*abs((f_fine-f_medium)/f_fine)/(r^p-1)*100",
+      "id": "gci_fine_percent",
+      "name_zh": "细网格GCI",
+      "unit": "%"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "N/(1+2*sum_positive_autocorrelations)",
+      "id": "effective_sample_size",
+      "name_zh": "有效独立样本数",
+      "unit": "samples"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "mean_band(abs(log(E_model)-log(E_reference)))",
+      "id": "spectral_band_log_error",
+      "name_zh": "能谱频带对数误差",
+      "unit": "1"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "abs(fitted_slope-reference_slope)",
+      "id": "inertial_slope_error",
+      "name_zh": "惯性区间斜率误差",
+      "unit": "1"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "abs(L_model-L_reference)/L_reference",
+      "id": "integral_length_scale_relative_error",
+      "name_zh": "积分尺度相对误差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "abs(sum(control_volume_momentum_terms))/reference_flux",
+      "id": "momentum_budget_closure_error",
+      "name_zh": "动量收支闭合残差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "100*abs(sum(signed_boundary_fluxes)+sources)/inlet_flux",
+      "id": "global_mass_flux_mismatch_percent",
+      "name_zh": "全域质量通量不平衡率",
+      "unit": "%"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "weighted_mean(abs(field_OF-field_PALM))/reference_scale",
+      "id": "cross_solver_validation_nmae",
+      "name_zh": "OpenFOAM-PALM交叉验证NMAE",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "abs(total_difference-sum(paired_factor_effects))/reference_scale",
+      "id": "controlled_factor_attribution_residual",
+      "name_zh": "受控因素归因残差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "area_weighted_mean(abs(U_map-U_reference))/U_reference_scale",
+      "id": "pedestrian_speed_map_nmae",
+      "name_zh": "行人高度风速图NMAE",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "area(intersection(predicted,reference))/area(union(predicted,reference))",
+      "id": "low_wind_component_iou",
+      "name_zh": "低风速连通区IoU",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "F1(predicted_corridor_edges,reference_corridor_edges)",
+      "id": "corridor_network_f1",
+      "name_zh": "通风廊道网络F1",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "weighted_mean(abs(proxy_model-proxy_reference))/reference_scale",
+      "id": "residence_proxy_nmae",
+      "name_zh": "滞留代理NMAE",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "abs(flux_model-flux_reference)/reference_flux",
+      "id": "roof_exchange_flux_error",
+      "name_zh": "冠层顶交换通量误差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "distance(vortex_center_model,vortex_center_reference)/H",
+      "id": "vortex_center_distance_H",
+      "name_zh": "街谷主涡中心偏差",
+      "unit": "H"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "abs(delta_model-delta_reference)/H",
+      "id": "shear_layer_thickness_error_H",
+      "name_zh": "屋顶剪切层厚度误差",
+      "unit": "H"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "abs(P_exceed_model-P_exceed_reference)",
+      "id": "comfort_exceedance_probability_error",
+      "name_zh": "风舒适超限概率误差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "evaluated_required_climate_bins / required_climate_bins",
+      "id": "comfort_standard_case_coverage",
+      "name_zh": "舒适标准工况覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "area_weighted_mean(abs(G_model-G_reference))/G_reference_scale",
+      "id": "gust_factor_map_nmae",
+      "name_zh": "阵风因子地图NMAE",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "population_weighted_mean(abs(C_model-C_reference))/C_reference_scale",
+      "id": "exposure_proxy_nmae",
+      "name_zh": "污染暴露代理NMAE",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "area_weighted_mean(abs(Q_model-Q_reference))/Q_reference_scale",
+      "id": "surface_heat_load_nmae",
+      "name_zh": "表面热负荷NMAE",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "sqrt(weighted_mean((UTCI_model-UTCI_reference)^2))",
+      "id": "utci_rmse_K",
+      "name_zh": "UTCI均方根误差",
+      "unit": "K"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "present_Ta_RH_wind_MRT_fields / required_fields",
+      "id": "thermal_input_completeness",
+      "name_zh": "热应激输入完整率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "mean(abs(edge_flux_model-edge_flux_reference))/reference_scale",
+      "id": "ventilation_graph_edge_weight_nmae",
+      "name_zh": "通风网络边权NMAE",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "objective_best_reference-objective_selected",
+      "id": "robust_scenario_regret",
+      "name_zh": "多风向情景后悔值",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "area_weighted_mean(CRPS(predicted_distribution,reference))",
+      "id": "spatial_uncertainty_crps",
+      "name_zh": "空间不确定性CRPS",
+      "unit": "field_unit"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "utility_optimal_reference-utility_selected",
+      "id": "sensor_design_regret",
+      "name_zh": "传感器布点后悔值",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "mean(abs(effect_estimated-effect_reference))/reference_scale",
+      "id": "paired_effect_attribution_error",
+      "name_zh": "热点配对归因误差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "plots_with_unit_crs_slice_color_hash / required_plots",
+      "id": "visualization_contract_coverage",
+      "name_zh": "可视化合同覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "sqrt(mean(||roundtrip_control-reference_control||^2))",
+      "id": "gis_layer_roundtrip_rmse_m",
+      "name_zh": "GIS风险图层往返RMSE",
+      "unit": "m"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "kendall_tau(predicted_ranking,reference_ranking)",
+      "id": "ranking_kendall_tau",
+      "name_zh": "多情景排序Kendall相关",
+      "unit": "1"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "objective_best_candidate-objective_selected_candidate",
+      "id": "orientation_screening_regret",
+      "name_zh": "朝向候选筛选后悔值",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "objective_best_candidate-objective_selected_candidate",
+      "id": "spacing_screening_regret",
+      "name_zh": "间距候选筛选后悔值",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "objective_best_candidate-objective_selected_candidate",
+      "id": "height_gradient_screening_regret",
+      "name_zh": "高度梯度候选筛选后悔值",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "objective_best_candidate-objective_selected_candidate",
+      "id": "porosity_screening_regret",
+      "name_zh": "孔隙率候选筛选后悔值",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "objective_best_candidate-objective_selected_candidate",
+      "id": "corridor_width_screening_regret",
+      "name_zh": "廊道宽度候选筛选后悔值",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "objective_best_candidate-objective_selected_candidate",
+      "id": "setback_screening_regret",
+      "name_zh": "退界候选筛选后悔值",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "objective_best_candidate-objective_selected_candidate",
+      "id": "podium_screening_regret",
+      "name_zh": "裙房候选筛选后悔值",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "objective_best_candidate-objective_selected_candidate",
+      "id": "roof_form_screening_regret",
+      "name_zh": "屋顶形态筛选后悔值",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "objective_best_candidate-objective_selected_candidate",
+      "id": "opening_screening_regret",
+      "name_zh": "架空开口筛选后悔值",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "objective_best_candidate-objective_selected_candidate",
+      "id": "tree_configuration_screening_regret",
+      "name_zh": "树木配置筛选后悔值",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "utility_best_candidate-utility_selected_candidate",
+      "id": "albedo_ventilation_tradeoff_regret",
+      "name_zh": "反照率-通风权衡后悔值",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "utility_best_candidate-utility_selected_candidate",
+      "id": "heat_source_screening_regret",
+      "name_zh": "人为热源布局筛选后悔值",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "robust_objective_best-robust_objective_selected",
+      "id": "robust_wind_direction_regret",
+      "name_zh": "多风向稳健设计后悔值",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "robust_objective_best-robust_objective_selected",
+      "id": "robust_stability_regret",
+      "name_zh": "稳定度稳健设计后悔值",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "abs(HV_selected-HV_reference)/HV_reference",
+      "id": "pareto_front_hypervolume_error",
+      "name_zh": "Pareto前沿超体积误差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "F1(predicted_nondominated_set,reference_set)",
+      "id": "pareto_dominance_f1",
+      "name_zh": "Pareto支配关系F1",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "true_high_value_upgrades / selected_upgrades",
+      "id": "multifidelity_selection_precision",
+      "name_zh": "多保真升级选择精确率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "weighted_mean(abs(calibrated_low_fidelity-high_fidelity))/reference_scale",
+      "id": "cross_solver_calibration_error",
+      "name_zh": "跨求解器校准误差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "utility_optimal_batch-utility_selected_batch",
+      "id": "batch_acquisition_regret",
+      "name_zh": "主动学习批次采集后悔值",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "correct_accept_reject_decisions / audited_candidates",
+      "id": "high_fidelity_acceptance_accuracy",
+      "name_zh": "高保真方案验收准确率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_gis_mesh_run_validation_risk_decision_gates / required_gates",
+      "id": "end_to_end_gate_pass_fraction",
+      "name_zh": "端到端门禁通过率",
+      "unit": "fraction"
+    }
+  ]
+}

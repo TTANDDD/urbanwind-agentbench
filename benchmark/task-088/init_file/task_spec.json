@@ -1,0 +1,177 @@
+{
+  "acceptance_contract": {
+    "hard_gate_precedence": true,
+    "primary_metric_formula": "verified_products/6 for probes_{U,p}, pedestrianPlane_{U,p}@z=1m, wakePlane_{U,p}@x=2m; probes t=60-420s and planes at 60s intervals",
+    "primary_metric_id": "sampling_location_coverage",
+    "required_case_ids": [
+      "task-088-case-001"
+    ],
+    "required_solver_runs": 1
+  },
+  "answer_free": true,
+  "case_anchor": {
+    "id": "SB4_LOCAL",
+    "known": {
+      "D_m": 1.0,
+      "H_over_D": 4.0,
+      "Re_D": 12000.0,
+      "Re_H": 48000.0,
+      "U_ref_m_s": 1.2,
+      "domain_D": {
+        "x": [
+          -4.0,
+          23.0
+        ],
+        "y": [
+          -6.2,
+          6.2
+        ],
+        "z": [
+          0.0,
+          9.0
+        ]
+      },
+      "nu_m2_s": 0.0001,
+      "truth_type": "synthetic_or_numerical_reference"
+    },
+    "missing": [],
+    "name": "D x D x 4D单体建筑本地数值基准",
+    "references": [
+      "USER_SB4_SPEC",
+      "LOCAL_GENERATOR"
+    ],
+    "status": "local_generator_ready"
+  },
+  "category": "cfd_execution",
+  "compute_track": "cfd",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision_rule": "先拒绝任何执行、数值、单位、守恒或外部证据门禁失败的案例，再依据冻结指标比较；不得用文字报告替代原始证据。",
+  "difficulty": "advanced",
+  "engineering_focus": "按随任务生成的参考测点和切面配置探针、平面与采样频率，并检查I/O完整性。",
+  "evaluator_status": "task_specific_numeric_array_check",
+  "evidence_requirements": [
+    "exact commands and working directories",
+    "software names, versions, executable paths and SHA256 when available",
+    "timezone-aware start/end times and exit codes",
+    "SHA256-addressed input, log and raw-output files",
+    "coordinate system, units, masks, statistical windows and aggregation order"
+  ],
+  "init_type": "engineering_data_and_model",
+  "limitations": [
+    "The visible sampling contract specifies objects/locations/times but no hidden numerical answers.",
+    "The hidden reference contains OpenFOAM numerical sampling signatures, not experimental or DNS truth.",
+    "A frozen distributable runtime remains required for release."
+  ],
+  "local_generator_version": "urbanwind-local-assets-v3",
+  "materialization_status": "local_inputs_generated",
+  "metrics": [
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "verified_products/6 for probes_{U,p}, pedestrianPlane_{U,p}@z=1m, wakePlane_{U,p}@x=2m; probes t=60-420s and planes at 60s intervals",
+      "id": "sampling_location_coverage",
+      "name_zh": "探针切面位置覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    }
+  ],
+  "physical_checks": [
+    {
+      "id": "evidence_is_raw_and_hashed",
+      "requirement": "所有进入指标的原始输入、日志和输出均在manifest中登记SHA256。"
+    },
+    {
+      "id": "units_and_coordinates_declared",
+      "requirement": "所有比较对象声明单位、坐标系、归一化和掩膜。"
+    },
+    {
+      "id": "track_specific_physics",
+      "requirement": "每个要求工况必须有真实OpenFOAM日志与原始场，并达到声明终止时间。"
+    },
+    {
+      "id": "task_specific_primary_metric",
+      "requirement": "按local_assets/sampling_contract.json逐个验证6类原始采样产品并重算主指标“探针切面位置覆盖率（sampling_location_coverage）”：verified_products/6 for probes_{U,p}, pedestrianPlane_{U,p}@z=1m, wakePlane_{U,p}@x=2m; probes t=60-420s and planes at 60s intervals。"
+    }
+  ],
+  "professional_difficulty": "D5",
+  "reference_status": "openfoam_numerical_reference_generated",
+  "release_status": "reference_ready_not_release_valid",
+  "required_artifacts": [
+    {
+      "format": "json",
+      "path": "design.json",
+      "role": "task design and assumptions"
+    },
+    {
+      "format": "json",
+      "path": "simulation_metrics.json",
+      "role": "track-specific result"
+    },
+    {
+      "format": "json",
+      "path": "run_manifest.json",
+      "role": "tool and solver provenance"
+    },
+    {
+      "format": "json",
+      "path": "metrics.json",
+      "role": "reported metrics with units"
+    },
+    {
+      "format": "json",
+      "path": "evidence_manifest.json",
+      "role": "SHA256-addressed raw evidence"
+    },
+    {
+      "format": "markdown",
+      "path": "decision.md",
+      "role": "bounded engineering conclusion"
+    },
+    {
+      "format": "json",
+      "path": "sampling_manifest.json",
+      "role": "六类OpenFOAM原始探针/平面采样文件的产品、场、时刻、相对路径和SHA256登记"
+    }
+  ],
+  "required_cases": 1,
+  "required_inputs": [
+    "随任务本地生成的OpenFOAM起始案例",
+    "本地OpenFOAM运行版本记录合同",
+    "本地合成数值参考（仅作固定比较输入，不是PIV或实验真值）"
+  ],
+  "required_solver_runs": 1,
+  "schema_version": "1.0",
+  "scientific_question": "智能体能否在不伪造证据的前提下完成“单体建筑探针与平面输出”，并把工具执行、数值质量、物理依据和工程结论连成可复算闭环？",
+  "software_chain": [
+    "python",
+    "openfoam",
+    "paraview"
+  ],
+  "task_id": "urbanwind-task-088",
+  "task_mode": "comparative_simulation",
+  "task_number": 88,
+  "title": "单体建筑探针与平面输出",
+  "track": "openfoam_rans_les_execution",
+  "track_name": "OpenFOAM RANS与LES执行",
+  "workflow": {
+    "configure": "围绕D x D x 4D单体建筑本地数值基准生成案例计划和软件配置，并保持单位、坐标和版本可追踪。",
+    "decide": "给出带适用边界的工程结论；关键证据缺失时明确停止或降级声明。",
+    "evidence": "读取任务输入与来源登记，显式列出已知、假设、缺失和许可边界。",
+    "execute": "执行1个要求案例，其中1个案例必须产生真实CFD/LES求解器证据。",
+    "postprocess": "从原始文件重算声明指标，保存脚本、命令、日志、单位、时间窗和哈希。",
+    "preprocess": "按随任务生成的参考测点和切面配置探针、平面与采样频率，并检查I/O完整性。",
+    "validate": "依次通过文件、执行、数值、物理、外部证据和工程约束门禁。"
+  }
+}

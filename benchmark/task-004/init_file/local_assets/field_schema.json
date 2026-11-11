@@ -1,0 +1,10 @@
+{
+  "required": [
+    "case_id",
+    "source",
+    "unit",
+    "coordinate_system",
+    "value"
+  ],
+  "task_id": "urbanwind-task-004"
+}

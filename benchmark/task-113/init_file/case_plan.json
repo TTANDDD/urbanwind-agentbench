@@ -1,0 +1,64 @@
+{
+  "cases": [
+    {
+      "case_id": "task-113-case-001",
+      "execution_role": "provided_data_or_tool_execution",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "配置平均、剖面、切片和时间序列输出且控制存储成本。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "统计输出合同检查"
+      },
+      "metrics": [
+        "palm_output_contract_coverage",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "present_variables_times_coordinates_units / required_output_fields",
+        "id": "palm_output_contract_coverage",
+        "name_zh": "PALM输出合同覆盖率",
+        "unit": "fraction"
+      },
+      "purpose": "PALM统计输出配置：执行变体 统计输出合同检查，围绕配置平均、剖面、切片和时间序列输出且控制存储成本。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-113",
+      "variant": "统计输出合同检查"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "lite",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 1,
+  "required_solver_runs": 0,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-113"
+}

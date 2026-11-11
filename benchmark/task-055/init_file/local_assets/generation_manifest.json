@@ -1,0 +1,124 @@
+{
+  "generator_version": "urbanwind-local-assets-v3",
+  "data_origin": "deterministic_local_generation",
+  "experimental_claim": false,
+  "answer_free": true,
+  "files": [
+    {
+      "path": "case/constant/polyMesh/boundary",
+      "bytes": 1951,
+      "sha256": "a23ba1e5957da1ae707638d997ef32a18921372672eec64afe75620442a5e4e5"
+    },
+    {
+      "path": "case/constant/polyMesh/faces",
+      "bytes": 12246466,
+      "sha256": "740f9947b1d910149f3f6c66032ca012022eb963ed7fe2e68ba701dd6c6cab27"
+    },
+    {
+      "path": "case/constant/polyMesh/neighbour",
+      "bytes": 2592961,
+      "sha256": "a12601833cbe72d648db02833e55c943aa93f1779f3d6d65e60b059d0ac2194a"
+    },
+    {
+      "path": "case/constant/polyMesh/owner",
+      "bytes": 2704383,
+      "sha256": "bb8082d1f00abcd521cf3533751a5a34284b992be9cd2711930fbda22882b0f9"
+    },
+    {
+      "path": "case/constant/polyMesh/points",
+      "bytes": 2307758,
+      "sha256": "eb4d39696754eeb6f457ade9836f2080bb4418953f1050fa1fa2e0a0b3d40003"
+    },
+    {
+      "path": "case/system/controlDict",
+      "bytes": 253,
+      "sha256": "14b0cf53b3e932a618dfd13a22c9ab347dde98ca8c4a65f63f3843a0b8aabde1"
+    },
+    {
+      "path": "case/system/fvSchemes",
+      "bytes": 289,
+      "sha256": "5a641332533c2cf42dff5845297b53766e1d5fda90581788f4ee057fa83e2a79"
+    },
+    {
+      "path": "case/system/fvSolution",
+      "bytes": 85,
+      "sha256": "98c9a4c0a73fde9e4b9de3764a1b23db6553cdf48c03450bb04dd5948c4e2e25"
+    },
+    {
+      "path": "case/system/meshQualityDict",
+      "bytes": 370,
+      "sha256": "6c8f8f1e3da10939126c7b68d398f2c7f184927d8e8d35aa5288111e9e786032"
+    },
+    {
+      "path": "case_plan.json",
+      "bytes": 2650,
+      "sha256": "23024af8dc58b56b723a68b41ca35ab9772f17660ca19fe912b22d3cb71804db"
+    },
+    {
+      "path": "contract_evaluator.py",
+      "bytes": 234,
+      "sha256": "5f1171a1aa30cc276ea66b776d40665318014bc87fe40293cede9e849af1f54a"
+    },
+    {
+      "path": "instance.json",
+      "bytes": 698,
+      "sha256": "a2e599de2ae8d10c78bc37e7e71c5bccb64a06d56632a5f18f403f8741554dfb"
+    },
+    {
+      "path": "local_assets/case_control_contract.json",
+      "bytes": 642,
+      "sha256": "56d616023ab29209d3c5a1f90c65079967748c8e73b4c47baff800269920d9e2"
+    },
+    {
+      "path": "local_assets/case_matrix.csv",
+      "bytes": 433,
+      "sha256": "2c44b47e0d8d4d2d95a0284d034cc10757d362b43ad54ec386412db4c355f1a8"
+    },
+    {
+      "path": "local_assets/input_role_manifest.json",
+      "bytes": 1107,
+      "sha256": "b8390f7466b1b2d3256813ceef7f98f8653c59cc333cd7c192ffbd6bcfb45bff"
+    },
+    {
+      "path": "local_assets/task_input_values.json",
+      "bytes": 1065,
+      "sha256": "ae53045f5cdcf476f6c48f1945f2eddefca309246060c48eb946f5dc73c095b7"
+    },
+    {
+      "path": "quality_thresholds.json",
+      "bytes": 361,
+      "sha256": "36f3b3e2ba2c22c5687d09463e1fad4158509859bdfd423c6f10b995cfe6bc9e"
+    },
+    {
+      "path": "README_INPUT.md",
+      "bytes": 665,
+      "sha256": "cc27b8713b7434efa3a628f9758e3de6f418a5ead1dcafde8b33c7e99b008022"
+    },
+    {
+      "path": "repair_contract.json",
+      "bytes": 2876,
+      "sha256": "d6c45275a7ffd45dfd03f6f3d603f2540fade6a43faff227a6ad89b2c9b8969d"
+    },
+    {
+      "path": "reporting_contract.json",
+      "bytes": 2288,
+      "sha256": "63996c4bbcf937e7397d5930170efa21c905e1b4650898acaa0a6daac9e38919"
+    },
+    {
+      "path": "submission_schema.json",
+      "bytes": 3398,
+      "sha256": "e8aba89371c87246879a814489f5ba4c6bd36af364598a33f11adc1cc65bcace"
+    },
+    {
+      "path": "TASK.md",
+      "bytes": 2430,
+      "sha256": "7088ea18e0461871111058d8ee2a18a1b47e4d3eb984d470796189c6f882210f"
+    },
+    {
+      "path": "task_spec.json",
+      "bytes": 6940,
+      "sha256": "199676f4ba427304a390ce629c1b25acb1d01408bf0a71577f9d159eebe877aa"
+    }
+  ],
+  "scope": "Only frozen public v53 scientific input; neutral case/control metadata; no v52 constructor or output."
+}

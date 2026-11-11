@@ -1,0 +1,38 @@
+{
+  "all_required_roles_materialized": true,
+  "generator_version": "task056-v54-public-contract-integration-v1",
+  "required_external_inputs": [],
+  "roles": [
+    {
+      "label": "米制16栋城市与唯一尺度故障字典",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/city_geometry.geojson",
+        "local_assets/openfoam_base/system/blockMeshDict"
+      ],
+      "role_id": "input-001"
+    },
+    {
+      "label": "冻结网格质量与尺度/雷诺数/有限CFD合同",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "task056_v54_contract.json",
+        "local_assets/openfoam_base/system/meshQualityDict"
+      ],
+      "role_id": "input-002"
+    },
+    {
+      "label": "固定物理数值输入与数据型提交规范",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "submission_schema.json",
+        "local_assets/openfoam_base/0/U",
+        "local_assets/openfoam_base/constant/transportProperties",
+        "local_assets/case_control_contract.json"
+      ],
+      "role_id": "input-003"
+    }
+  ],
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-056"
+}

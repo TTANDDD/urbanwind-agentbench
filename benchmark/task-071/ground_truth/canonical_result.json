@@ -1,0 +1,16 @@
+{
+  "case_ids": [
+    "task-071-case-001",
+    "task-071-case-002"
+  ],
+  "claim_boundary": "One deterministic outlet-fault diagnosis plus one repaired OpenFOAM numerical reference; not experimental truth.",
+  "faulty_solver_run_count": 0,
+  "primary_metric": {
+    "id": "outlet_reverse_flow_fraction",
+    "unit": "fraction",
+    "value": 0.0
+  },
+  "repaired_solver_run_count": 1,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-071"
+}

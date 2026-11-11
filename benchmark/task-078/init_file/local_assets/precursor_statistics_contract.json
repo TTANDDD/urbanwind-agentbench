@@ -1,0 +1,152 @@
+{
+  "case_id": "task-078-case-001",
+  "design_prior": {
+    "observed_components": {
+      "integral_scale_drift": 0.0239985520662875,
+      "mean_drift": 0.025487962398794528,
+      "spectrum_drift": 0.04404082305043775,
+      "variance_drift": 0.009621793696812982
+    },
+    "source": "accepted task-087 v20 raw U probes, inspected before any task-078 run",
+    "use": "threshold design only; not task-078 GT and not copied as task-078 output"
+  },
+  "execution_role": "real_solver_run",
+  "frozen_gates": {
+    "integral_time_scale_range_s": [
+      0.1,
+      30.0
+    ],
+    "max_abs_cumulative_continuity": 0.01,
+    "max_courant": 1.0,
+    "max_primary_metric": 0.1,
+    "min_mean_block_variance_m2_s2": 0.005,
+    "required_cell_count": 365488,
+    "required_final_time_s": 420.0,
+    "required_mean_fields": [
+      "UMean",
+      "UPrime2Mean"
+    ],
+    "required_probe_count": 64,
+    "required_samples_per_block": 300,
+    "sampling_interval_abs_tolerance_s": 1e-08
+  },
+  "hidden_boundary": "Visible formula, probe coordinates, windows, bands, shapes and gates only; hidden accepted raw arrays are not supplied.",
+  "metric_components": {
+    "aggregation": "maximum of the four components",
+    "integral_scale_drift": "abs(Tint_B-Tint_C)/max(abs(Tint_C),0.2)",
+    "mean_drift": "mean(abs(mean_B-mean_C))/1.2",
+    "spectrum_drift": "0.5*sum(abs(normalized_band_energy_B-normalized_band_energy_C))",
+    "variance_drift": "mean(abs(variance_B-variance_C))/1.44"
+  },
+  "path_policy": "relative paths under submission root, unique and SHA-256 matched",
+  "primary_metric": {
+    "aggregation": "per_case_then_task",
+    "formula": "max(mean_abs(Ux_mean_B-Ux_mean_C)/1.2,mean_abs(Ux_variance_B-Ux_variance_C)/1.44,0.5*sum(abs(normalized_PSD_band_B-normalized_PSD_band_C)),abs(Tint_B-Tint_C)/max(abs(Tint_C),0.2)) over frozen 300-360 s and 360-420 s blocks",
+    "id": "precursor_block_mean_drift",
+    "name_zh": "前驱场统计块漂移",
+    "unit": "fraction"
+  },
+  "raw_observation": {
+    "comparison_blocks_s": [
+      [
+        300.0,
+        360.0
+      ],
+      [
+        360.0,
+        420.0
+      ]
+    ],
+    "component": "Ux",
+    "field": "U",
+    "probe_count": 64,
+    "probe_table": "local_assets/precursor_probe_points.csv",
+    "samples_per_block": 300,
+    "sampling_interval_s": 0.2
+  },
+  "required_manifest": "precursor_evidence_manifest.json",
+  "required_raw_evidence_per_case": [
+    "raw_u_probes",
+    "solver_log",
+    "checkMesh_log",
+    "resolved_config",
+    "run_analysis",
+    "field_UMean",
+    "field_UPrime2Mean"
+  ],
+  "required_result": "precursor_results.json",
+  "result_contract": {
+    "block_count": 2,
+    "path": "precursor_results.json",
+    "probe_count": 64,
+    "psd_band_count": 5,
+    "samples_per_block": 300,
+    "sampling_interval_s": 0.2
+  },
+  "schema_version": "1.0",
+  "software_chain": [
+    "python",
+    "openfoam"
+  ],
+  "solver": {
+    "application": "pimpleFoam",
+    "convection_scheme": "limitedLinearV 1",
+    "cpu_affinity": "64-79",
+    "dt_s": 0.02,
+    "end_time_s": 420.0,
+    "mpi_ranks": 16,
+    "openfoam_version": "OpenCFD-v2412",
+    "statistics_start_s": 60.0,
+    "turbulence_model": "WALE"
+  },
+  "source_domain": {
+    "description": "D x D x 4D单体建筑尾流源域，作为后续入口映射的本地数值前驱候选",
+    "domain_m": [
+      [
+        -4.0,
+        23.0
+      ],
+      [
+        -6.2,
+        6.2
+      ],
+      [
+        0.0,
+        9.0
+      ]
+    ],
+    "geometry": "365488-cell conformal single-building domain",
+    "truth_type": "local_openfoam_numerical_source_domain_not_classical_periodic_precursor"
+  },
+  "statistics": {
+    "integral_time_scale": "per-probe dt*(sum autocorrelation through the last positive lag - 0.5), then equal mean over probes",
+    "mean": "population mean of Ux at each probe",
+    "normalized_psd_bands_hz": [
+      [
+        0.0,
+        0.1
+      ],
+      [
+        0.1,
+        0.25
+      ],
+      [
+        0.25,
+        0.5
+      ],
+      [
+        0.5,
+        1.0
+      ],
+      [
+        1.0,
+        2.500000001
+      ]
+    ],
+    "psd": "mean over probes of each probe's demeaned one-sided DFT band energy divided by its total positive-frequency energy",
+    "variance": "population variance of Ux at each probe"
+  },
+  "task_gate": "The one fresh task-078 run must pass every mesh, execution, Courant, continuity, mean-field, raw-probe, variability and four-statistic block gate together.",
+  "task_id": "urbanwind-task-078",
+  "truth_boundary": "Local single-building wake-source OpenFOAM numerical stationarity reference only; not a classical periodic atmospheric precursor and not experimental/PIV/DNS/wind-tunnel/field truth."
+}

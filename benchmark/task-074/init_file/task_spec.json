@@ -1,0 +1,165 @@
+{
+  "acceptance_contract": {
+    "hard_gate_precedence": true,
+    "primary_metric_formula": "sum_z(A_z*mean_{t in {0,60,120,180}s}(abs(q_OpenFOAM(z,t)-q_contract(z,t))))/sum_z(A_z); z in {heatWest,heatCenter,heatEast}",
+    "primary_metric_id": "heat_flux_boundary_error",
+    "required_case_ids": [
+      "task-074-case-001"
+    ],
+    "required_solver_case_ids": [
+      "task-074-case-001"
+    ],
+    "required_solver_runs": 1
+  },
+  "answer_free": true,
+  "case_anchor": {
+    "id": "PROCEDURAL_CITY",
+    "known": {
+      "geographic_claim": false,
+      "geometry": "deterministic_parameterized_city",
+      "truth_type": "synthetic_or_numerical_reference"
+    },
+    "missing": [],
+    "name": "程序化本地城市子域",
+    "references": [
+      "LOCAL_GENERATOR"
+    ],
+    "status": "local_generator_ready"
+  },
+  "category": "boundary_condition_design",
+  "compute_track": "cfd",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision_rule": "先拒绝任何执行、数值、单位、守恒或外部证据门禁失败的案例，再依据冻结指标比较；不得用文字报告替代原始证据。",
+  "difficulty": "advanced",
+  "engineering_focus": "将本地程序化城市地面划分为三个可复算区域，设置冻结的时变显热通量表，并用真实buoyantPimpleFoam运行验证边界可执行性、单位、符号和数值门禁。",
+  "evaluator_status": "task_specific_zoned_heat_flux_raw_evidence_check",
+  "evidence_requirements": [
+    "exact commands and working directories",
+    "software names, versions, executable paths and SHA256 when available",
+    "timezone-aware start/end times and exit codes",
+    "SHA256-addressed input, log and raw-output files",
+    "coordinate system, units, masks, statistical windows and aggregation order"
+  ],
+  "init_type": "engineering_data_and_model",
+  "limitations": [
+    "Visible zones, schedules, formulas, probes, shapes and gates are supplied; hidden numerical arrays are not.",
+    "Reference is local synthetic configuration plus OpenFOAM numerical output, not measured urban heat flux or experimental truth.",
+    "A frozen distributable runtime remains required for release."
+  ],
+  "local_generator_version": "urbanwind-local-assets-v3",
+  "materialization_status": "local_inputs_generated",
+  "metrics": [
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "sum_z(A_z*mean_{t in {0,60,120,180}s}(abs(q_OpenFOAM(z,t)-q_contract(z,t))))/sum_z(A_z); z in {heatWest,heatCenter,heatEast}",
+      "id": "heat_flux_boundary_error",
+      "name_zh": "地表热通量边界误差",
+      "unit": "W/m2"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    }
+  ],
+  "physical_checks": [
+    {
+      "id": "evidence_is_raw_and_hashed",
+      "requirement": "所有进入指标的原始输入、日志和输出均在manifest中登记SHA256。"
+    },
+    {
+      "id": "units_and_coordinates_declared",
+      "requirement": "所有比较对象声明单位、坐标系、归一化和掩膜。"
+    },
+    {
+      "id": "track_specific_physics",
+      "requirement": "入口、地面、顶部、侧面和出口必须满足质量、粗糙度与稳定度一致性。"
+    },
+    {
+      "id": "task_specific_primary_metric",
+      "requirement": "从原始0/T热通量表和polyMesh面几何独立重算面积加权时变热通量边界误差。"
+    }
+  ],
+  "professional_difficulty": "D4",
+  "reference_status": "openfoam_numerical_reference_generated",
+  "release_status": "reference_ready_not_release_valid",
+  "required_artifacts": [
+    {
+      "format": "json",
+      "path": "design.json",
+      "role": "task design and assumptions"
+    },
+    {
+      "format": "json",
+      "path": "boundary_contract.json",
+      "role": "track-specific result"
+    },
+    {
+      "format": "json",
+      "path": "run_manifest.json",
+      "role": "tool and solver provenance"
+    },
+    {
+      "format": "json",
+      "path": "metrics.json",
+      "role": "reported metrics with units"
+    },
+    {
+      "format": "json",
+      "path": "evidence_manifest.json",
+      "role": "SHA256-addressed raw evidence"
+    },
+    {
+      "format": "markdown",
+      "path": "decision.md",
+      "role": "bounded engineering conclusion"
+    },
+    {
+      "format": "json",
+      "path": "heat_flux_evidence_manifest.json",
+      "role": "SHA256-linked raw zoned heat-flux OpenFOAM evidence"
+    },
+    {
+      "format": "json",
+      "path": "heat_flux_results.json",
+      "role": "raw-evidence-derived geometry, thermal and probe arrays"
+    }
+  ],
+  "required_cases": 1,
+  "required_inputs": [
+    "本地程序化城市网格与已审计速度初始化",
+    "三分区几何、面积与时变显热通量表",
+    "冻结温度、速度探针和数值门禁"
+  ],
+  "required_solver_runs": 1,
+  "schema_version": "1.0",
+  "scientific_question": "智能体能否在不伪造证据的前提下完成“地表热通量边界”，并把工具执行、数值质量、物理依据和工程结论连成可复算闭环？",
+  "software_chain": [
+    "python",
+    "openfoam"
+  ],
+  "task_id": "urbanwind-task-074",
+  "task_mode": "configure_and_verify",
+  "task_number": 74,
+  "title": "地表热通量边界",
+  "track": "abl_and_boundary_conditions",
+  "track_name": "大气边界层与边界条件",
+  "workflow": {
+    "configure": "围绕程序化本地城市子域生成案例计划和软件配置，并保持单位、坐标和版本可追踪。",
+    "decide": "给出带适用边界的工程结论；关键证据缺失时明确停止或降级声明。",
+    "evidence": "读取任务输入与来源登记，显式列出已知、假设、缺失和许可边界。",
+    "execute": "从随包blockMeshDict本地重建141952-cell网格，执行一次180 s、16-rank OpenFOAM v2412 buoyantPimpleFoam真实数值验证。",
+    "postprocess": "从原始文件重算声明指标，保存脚本、命令、日志、单位、时间窗和哈希。",
+    "preprocess": "按面心x坐标把原ground划分为heatWest、heatCenter和heatEast，并为各区配置冻结的线性时变显热通量表。",
+    "validate": "依次通过文件、执行、数值、物理、外部证据和工程约束门禁。"
+  }
+}

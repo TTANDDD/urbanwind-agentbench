@@ -1,0 +1,34 @@
+{
+  "archive_key": "raw_case_archive",
+  "case_id": "task-065-case-001",
+  "numeric_recomputation_tolerance": {
+    "absolute": 1e-08,
+    "relative": 1e-08
+  },
+  "path_policy": "unique SHA256-matched relative archive path under submission root; no links or path escapes",
+  "raw_members": [
+    "constant/boundaryData/inlet/points",
+    "451 boundaryData U slices from 0 to 90 s",
+    "synthetic_inflow_contract.json",
+    "synthetic_inflow_probe_points.csv",
+    "synthetic_inflow_target_probe_series.csv",
+    "synthetic_inflow_target_statistics.json",
+    "synthetic_inflow_generation_manifest.json",
+    "postProcessing/inletProbes/0/U",
+    "postProcessing/downstreamProbes/0/U",
+    "0/U",
+    "system/controlDict",
+    "resolved_config.json",
+    "log.pimpleFoam",
+    "log.checkMesh",
+    "run_commands.json",
+    "command.*.json",
+    "run_analysis.json",
+    "final 90 s UMean and UPrime2Mean"
+  ],
+  "required_manifest": "synthetic_inflow_evidence_manifest.json",
+  "required_result": "synthetic_inflow_results.json",
+  "task_id": "urbanwind-task-065",
+  "truth_boundary": "Local fixed-seed synthetic inlet plus matched OpenFOAM numerical response, not experimental or measured turbulence truth.",
+  "visible_scientific_contract": "local_assets/synthetic_inflow_contract.json"
+}

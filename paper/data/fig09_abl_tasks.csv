@@ -1,0 +1,14 @@
+task,name,base,windpilot
+task-061,Neutral log-law inlet,60.0,100.0
+task-062,Profile-law check,60.0,88.7388
+task-063,Roughness repair,60.0,72.0
+task-064,Monin–Obukhov inlet,60.0,100.0
+task-068,Wind-direction rotation,30.0,90.0
+task-069,Top boundary,60.0,79.4368
+task-071,Outlet repair,60.0,60.0
+task-072,GIS roughness mapping,45.0,60.0
+task-074,Surface heat flux,60.0,60.0
+task-075,Surface temperature,60.0,80.0
+task-076,Potential temperature,60.0,65.0
+task-078,Precursor inflow,60.0,60.0
+task-079,Mass-flux balance,60.0,60.0

@@ -1,0 +1,11 @@
+family,software
+Evidence & case definition,container_runtime;document_reader;gdal;geopandas;python;qgis
+GIS & geometry,gdal;geopandas;gmsh;openfoam;python;pyvista;qgis
+Mesh & numerics,gmsh;netcdf;openfoam;palm_csd;python
+ABL & boundary conditions,gdal;netcdf;openfoam;palm;python
+OpenFOAM RANS/LES,openfoam;paraview;python
+PALM urban microclimate,gdal;geopandas;netcdf;openfoam;palm;palm_csd;python;pyvista;qgis
+Diagnosis & repair,netcdf;openfoam;palm;python;qgis
+Validation & uncertainty,netcdf;openfoam;palm;pandas;python;pyvista;scipy
+Flow diagnostics & risk,geopandas;networkx;python;pyvista;qgis
+Optimization & decision,netcdf;openfoam;palm;pandas;pymoo;python;pyvista;qgis;scikit-learn

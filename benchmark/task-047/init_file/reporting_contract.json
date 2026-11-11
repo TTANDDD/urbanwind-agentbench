@@ -1,0 +1,679 @@
+{
+  "current_evaluator_boundary": "Only structural precheck is implemented and capped at 60/100.",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision": "decision.md",
+  "decision_required_terms": [
+    "证据",
+    "限制",
+    "结论"
+  ],
+  "evidence_manifest": "evidence_manifest.json",
+  "expected_case_ids": [
+    "task-047-case-001"
+  ],
+  "expected_solver_case_ids": [],
+  "full_directory": "street_mesh_case/full",
+  "metric_contracts": [
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "sum_i volume(raw_axis_aligned_cell_i intersect union(public canyon, roof and intersection boxes)) * I(dx_i,dy_i,dz_i <= stage directional limits) / 51.0 m3; the union is counted once; raw topology must tile the complete 457.6 m3 fluid domain exactly once with all 16 solids excluded; no centre-count approximation",
+      "id": "street_canyon_resolution_coverage",
+      "name_zh": "街谷目标分辨率覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    }
+  ],
+  "metric_ids": [
+    "street_canyon_resolution_coverage",
+    "evidence_provenance_fraction",
+    "hard_gate_pass_fraction"
+  ],
+  "metrics": "metrics.json",
+  "qualification_directory": "street_mesh_case/qualification",
+  "required_external_inputs": [],
+  "required_inputs": [
+    "随任务本地生成的几何与网格目标",
+    "冻结网格质量门槛",
+    "待实际工具执行的网格日志"
+  ],
+  "required_solver_runs": 0,
+  "run_manifest": "run_manifest.json",
+  "schema_version": "1.0",
+  "score_layers": {
+    "artifact_and_schema": 10,
+    "engineering_decision": 10,
+    "external_validation": 15,
+    "numerical_quality": 20,
+    "physical_fidelity": 25,
+    "real_tool_execution": 20
+  },
+  "street_mesh_geometry_contract": {
+    "case_id": "task-047-case-001",
+    "flow_solver_runs": 0,
+    "full": {
+      "outside_coarse_dz_min_m": 0.45,
+      "roi_resolution_max_m": [
+        0.25,
+        0.25,
+        0.125
+      ],
+      "upper_z_target_m": 0.5
+    },
+    "gates": {
+      "archive_budget_bytes": 300000000,
+      "area_relative_error_max": 1e-08,
+      "aspect_ratio_max": 10.0,
+      "atomic_grid_voxels_max": 2000000,
+      "cells_max": 150000,
+      "cells_min": 1000,
+      "coordinate_error_m": 1e-08,
+      "max_nonorthogonality_deg": 1.0,
+      "max_skewness": 1.0,
+      "normal_error_max": 1e-08,
+      "outside_coarse_volume_fraction_min": 0.8,
+      "raw_box_volume_relative_error_max": 1e-09,
+      "roi_coverage_min": 0.99999999,
+      "volume_relative_error_max": 1e-08
+    },
+    "geometry": {
+      "building_area_m2": 80.0,
+      "centres_xy_m": [
+        [
+          0.75,
+          1
+        ],
+        [
+          2.75,
+          1
+        ],
+        [
+          4.75,
+          1
+        ],
+        [
+          6.75,
+          1
+        ],
+        [
+          1.25,
+          3
+        ],
+        [
+          3.25,
+          3
+        ],
+        [
+          5.25,
+          3
+        ],
+        [
+          7.25,
+          3
+        ],
+        [
+          0.75,
+          5
+        ],
+        [
+          2.75,
+          5
+        ],
+        [
+          4.75,
+          5
+        ],
+        [
+          6.75,
+          5
+        ],
+        [
+          1.25,
+          7
+        ],
+        [
+          3.25,
+          7
+        ],
+        [
+          5.25,
+          7
+        ],
+        [
+          7.25,
+          7
+        ]
+      ],
+      "cube_bounds_m": [
+        [
+          [
+            0.25,
+            1.25
+          ],
+          [
+            0.5,
+            1.5
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        [
+          [
+            2.25,
+            3.25
+          ],
+          [
+            0.5,
+            1.5
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        [
+          [
+            4.25,
+            5.25
+          ],
+          [
+            0.5,
+            1.5
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        [
+          [
+            6.25,
+            7.25
+          ],
+          [
+            0.5,
+            1.5
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        [
+          [
+            0.75,
+            1.75
+          ],
+          [
+            2.5,
+            3.5
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        [
+          [
+            2.75,
+            3.75
+          ],
+          [
+            2.5,
+            3.5
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        [
+          [
+            4.75,
+            5.75
+          ],
+          [
+            2.5,
+            3.5
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        [
+          [
+            6.75,
+            7.75
+          ],
+          [
+            2.5,
+            3.5
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        [
+          [
+            0.25,
+            1.25
+          ],
+          [
+            4.5,
+            5.5
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        [
+          [
+            2.25,
+            3.25
+          ],
+          [
+            4.5,
+            5.5
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        [
+          [
+            4.25,
+            5.25
+          ],
+          [
+            4.5,
+            5.5
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        [
+          [
+            6.25,
+            7.25
+          ],
+          [
+            4.5,
+            5.5
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        [
+          [
+            0.75,
+            1.75
+          ],
+          [
+            6.5,
+            7.5
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        [
+          [
+            2.75,
+            3.75
+          ],
+          [
+            6.5,
+            7.5
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        [
+          [
+            4.75,
+            5.75
+          ],
+          [
+            6.5,
+            7.5
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        [
+          [
+            6.75,
+            7.75
+          ],
+          [
+            6.5,
+            7.5
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      ],
+      "cube_count": 16,
+      "cube_height_m": 1.0,
+      "domain_bounds_m": [
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          7.4
+        ]
+      ],
+      "fluid_volume_m3": 457.6,
+      "ground_area_m2": 48.0,
+      "row_offset_m": 0.5
+    },
+    "legal_alternatives": "Any legal integer counts or conformal axis-aligned layout meeting all public constraints; no GT count, cell ID, connectivity numbering or byte equality is required.",
+    "measurement": "Reconstruct every cell from raw points/faces/owner/neighbour. Split public overlapping ROIs into disjoint boxes before summing exact intersections. Outside coarsening is the volume outside the ROI with dz >= the stage minimum divided by 457.6-51.0 m3, not cell counts.",
+    "metric": {
+      "formula": "sum_i volume(raw_axis_aligned_cell_i intersect union(public canyon, roof and intersection boxes)) * I(dx_i,dy_i,dz_i <= stage directional limits) / 51.0 m3; the union is counted once; raw topology must tile the complete 457.6 m3 fluid domain exactly once with all 16 solids excluded; no centre-count approximation",
+      "id": "street_canyon_resolution_coverage",
+      "name_zh": "街谷目标分辨率覆盖率",
+      "unit": "fraction"
+    },
+    "mpi_ranks": 16,
+    "patches": {
+      "building": {
+        "area_m2": 80.0,
+        "type": "wall"
+      },
+      "ground": {
+        "area_m2": 48.0,
+        "axis": 2,
+        "normal_sign": -1,
+        "position_m": 0.0,
+        "type": "wall"
+      },
+      "top": {
+        "area_m2": 64.0,
+        "axis": 2,
+        "normal_sign": 1,
+        "position_m": 7.4,
+        "type": "symmetryPlane"
+      },
+      "xHigh": {
+        "area_m2": 59.2,
+        "axis": 0,
+        "normal_sign": 1,
+        "position_m": 8.0,
+        "type": "patch"
+      },
+      "xLow": {
+        "area_m2": 59.2,
+        "axis": 0,
+        "normal_sign": -1,
+        "position_m": 0.0,
+        "type": "patch"
+      },
+      "yHigh": {
+        "area_m2": 59.2,
+        "axis": 1,
+        "normal_sign": 1,
+        "position_m": 8.0,
+        "type": "symmetryPlane"
+      },
+      "yLow": {
+        "area_m2": 59.2,
+        "axis": 1,
+        "normal_sign": -1,
+        "position_m": 0.0,
+        "type": "symmetryPlane"
+      }
+    },
+    "physical_cpus": "80-95",
+    "qualification": {
+      "outside_coarse_dz_min_m": 0.5,
+      "roi_resolution_max_m": [
+        0.5,
+        0.5,
+        0.25
+      ],
+      "upper_z_target_m": 0.6
+    },
+    "roi": {
+      "canyon_boxes_m": [
+        [
+          [
+            0.25,
+            7.75
+          ],
+          [
+            1.5,
+            2.5
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        [
+          [
+            0.25,
+            7.75
+          ],
+          [
+            3.5,
+            4.5
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        [
+          [
+            0.25,
+            7.75
+          ],
+          [
+            5.5,
+            6.5
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      ],
+      "interpretation": "Three inter-row canyon corridors, a near-roof layer and nine connecting intersection boxes; overlaps are counted exactly once. All boxes are fluid-only.",
+      "intersection_boxes_m": [
+        [
+          [
+            1.75,
+            2.25
+          ],
+          [
+            1.25,
+            2.75
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        [
+          [
+            1.75,
+            2.25
+          ],
+          [
+            3.25,
+            4.75
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        [
+          [
+            1.75,
+            2.25
+          ],
+          [
+            5.25,
+            6.75
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        [
+          [
+            3.75,
+            4.25
+          ],
+          [
+            1.25,
+            2.75
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        [
+          [
+            3.75,
+            4.25
+          ],
+          [
+            3.25,
+            4.75
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        [
+          [
+            3.75,
+            4.25
+          ],
+          [
+            5.25,
+            6.75
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        [
+          [
+            5.75,
+            6.25
+          ],
+          [
+            1.25,
+            2.75
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        [
+          [
+            5.75,
+            6.25
+          ],
+          [
+            3.25,
+            4.75
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        [
+          [
+            5.75,
+            6.25
+          ],
+          [
+            5.25,
+            6.75
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      ],
+      "roof_boxes_m": [
+        [
+          [
+            0.25,
+            7.75
+          ],
+          [
+            0.5,
+            7.5
+          ],
+          [
+            1.0,
+            1.5
+          ]
+        ]
+      ],
+      "union_volume_m3": 51.0
+    },
+    "schema_version": "1.0",
+    "software": "OpenCFD-v2412",
+    "task_id": "urbanwind-task-047",
+    "tolerance": "Round coordinates to 1e-10 m only for the atomic partition proof. All intersections, areas and scales use raw coordinates. Directional comparisons allow 1e-9 relative roundoff.",
+    "tool_sequence": [
+      "blockMesh",
+      "checkMesh",
+      "decomposePar",
+      "checkMesh.parallel"
+    ],
+    "topology": "Conformal axis-aligned six-quadrilateral-face hexahedra; entire raw domain partition must be exact. Nonperiodic mesh only; no flow fields are supplied or solved.",
+    "truth_boundary": "Local synthetic array mesh-tool capability only; not periodic coupling, CFD/LES, yplus, wind accuracy, experimental truth or an accepted retry of task046."
+  },
+  "task_id": "urbanwind-task-047",
+  "tool_result_directory": "street_mesh_case"
+}

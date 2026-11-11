@@ -1,0 +1,240 @@
+{
+  "case_ids": [
+    "task-054-case-001"
+  ],
+  "decision_policy": "Report BOTH methods; compare load and communication tradeoffs with evidence. No required winner or post-hoc imbalance ceiling.",
+  "flow_solver_runs": 0,
+  "freeze_disclosure": "Primary formula, two methods and four ranks were frozen before September04 tools. Expanded addressing, reporting, safe replay and deployment gates are added after viewing that candidate, before agent evaluation.",
+  "geometry": {
+    "building_boxes_xy_height_m": [
+      [
+        0.5,
+        1.5,
+        0.5,
+        1.5,
+        1.5
+      ],
+      [
+        2.5,
+        3.5,
+        0.5,
+        1.5,
+        1.75
+      ],
+      [
+        4.5,
+        5.5,
+        0.5,
+        1.5,
+        1.0
+      ],
+      [
+        6.5,
+        7.5,
+        0.5,
+        1.5,
+        1.25
+      ],
+      [
+        1.0,
+        2.0,
+        2.5,
+        3.5,
+        1.75
+      ],
+      [
+        3.0,
+        4.0,
+        2.5,
+        3.5,
+        1.0
+      ],
+      [
+        5.0,
+        6.0,
+        2.5,
+        3.5,
+        1.25
+      ],
+      [
+        7.0,
+        8.0,
+        2.5,
+        3.5,
+        1.5
+      ],
+      [
+        0.5,
+        1.5,
+        4.5,
+        5.5,
+        1.0
+      ],
+      [
+        2.5,
+        3.5,
+        4.5,
+        5.5,
+        1.25
+      ],
+      [
+        4.5,
+        5.5,
+        4.5,
+        5.5,
+        1.5
+      ],
+      [
+        6.5,
+        7.5,
+        4.5,
+        5.5,
+        1.75
+      ],
+      [
+        1.0,
+        2.0,
+        6.5,
+        7.5,
+        1.25
+      ],
+      [
+        3.0,
+        4.0,
+        6.5,
+        7.5,
+        1.5
+      ],
+      [
+        5.0,
+        6.0,
+        6.5,
+        7.5,
+        1.75
+      ],
+      [
+        7.0,
+        8.0,
+        6.5,
+        7.5,
+        1.0
+      ]
+    ],
+    "cell_count": 141952,
+    "cell_edge_m": 0.25,
+    "coordinate_system": "local_cartesian_m_not_geographic",
+    "domain_bounds_m": [
+      [
+        -4.0,
+        16.0
+      ],
+      [
+        -4.0,
+        12.0
+      ],
+      [
+        0.0,
+        7.0
+      ]
+    ],
+    "fluid_volume_m3": 2218.0,
+    "solid_volume_m3": 22.0
+  },
+  "hard_gates": {
+    "all_addressing_and_reciprocal_interfaces": true,
+    "all_cells_assigned_exactly_once": true,
+    "area_tolerance_m2": 1e-08,
+    "cell_count": 141952,
+    "coordinate_tolerance_m": 1e-08,
+    "load_imbalance_threshold": null,
+    "numeric_metric_tolerance": 1e-08,
+    "raw_mesh_bytes_max": 134217728,
+    "relative_volume_tolerance": 1e-08,
+    "serial_full_checkMesh": "Mesh OK and no Failed checks",
+    "uniform_resolution_m": 0.25
+  },
+  "method_policy": "simple: any positive integer n with product 4 and positive finite delta; scotch: method scotch. Same serial mesh in both methods. Partition identity and hidden metric equality are never required.",
+  "methods": [
+    "simple",
+    "scotch"
+  ],
+  "mpi_ranks": 4,
+  "original_tool_sequence": [
+    "blockMesh",
+    "checkMesh",
+    "decomposePar"
+  ],
+  "patches": {
+    "building": {
+      "area": 104.0,
+      "type": "wall"
+    },
+    "ground": {
+      "area": 304.0,
+      "axis": 2,
+      "normal": -1,
+      "position": 0.0,
+      "type": "wall"
+    },
+    "inlet": {
+      "area": 112.0,
+      "axis": 0,
+      "normal": -1,
+      "position": -4.0,
+      "type": "patch"
+    },
+    "outlet": {
+      "area": 112.0,
+      "axis": 0,
+      "normal": 1,
+      "position": 16.0,
+      "type": "patch"
+    },
+    "sideHigh": {
+      "area": 140.0,
+      "axis": 1,
+      "normal": 1,
+      "position": 12.0,
+      "type": "symmetryPlane"
+    },
+    "sideLow": {
+      "area": 140.0,
+      "axis": 1,
+      "normal": -1,
+      "position": -4.0,
+      "type": "symmetryPlane"
+    },
+    "top": {
+      "area": 320.0,
+      "axis": 2,
+      "normal": 1,
+      "position": 7.0,
+      "type": "symmetryPlane"
+    }
+  },
+  "primary_metric": {
+    "aggregation": "per_method_mapping_within_one_comparison_case",
+    "formula": "(max(cells_per_rank)-mean(cells_per_rank))/mean(cells_per_rank)",
+    "id": "cell_load_imbalance_ratio",
+    "unit": "fraction",
+    "value_schema": {
+      "scotch": "finite number",
+      "simple": "finite number"
+    }
+  },
+  "replay_policy": "Isolated safe submitted dictionaries; actual pinned v2412 tools and packaged MPI, four ranks. Fresh parallel check is a post-run/pre-agent supplemental gate, not a claim about the September04 logs.",
+  "replay_tool_sequence": [
+    "blockMesh",
+    "checkMesh",
+    "decomposePar",
+    "checkMesh.parallel"
+  ],
+  "schema_version": "1.0",
+  "secondary_metrics": {
+    "communication_face_imbalance": "(max(communication_faces_per_rank)-mean(communication_faces_per_rank))/mean(communication_faces_per_rank)",
+    "unique_processor_faces": "count unique serial internal faces whose owner and neighbour belong to different ranks"
+  },
+  "software": "OpenCFD-v2412",
+  "task_id": "urbanwind-task-054",
+  "truth_boundary": "Local synthetic city and genuine OpenFOAM mesh partition tool reference only; no CFD/LES, communication timing, runtime speedup, experimental or real-city validation."
+}

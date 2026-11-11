@@ -1,0 +1,63 @@
+{
+  "cases": [
+    {
+      "case_id": "task-004-case-001",
+      "execution_role": "provided_data_or_tool_execution",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "SB4_LOCAL",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "复核入口、出口、侧面、顶部和建筑边界相对D的位置及其几何闭合性。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "单体建筑计算域边界审计-目标案例"
+      },
+      "metrics": [
+        "domain_extent_max_error_D",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "max(abs(extent_reported_D-extent_contract_D))",
+        "id": "domain_extent_max_error_D",
+        "name_zh": "计算域边界最大误差",
+        "unit": "D"
+      },
+      "purpose": "单体建筑计算域边界审计：执行变体 单体建筑计算域边界审计-目标案例，围绕复核入口、出口、侧面、顶部和建筑边界相对D的位置及其几何闭合性。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "document_reader"
+      ],
+      "task_id": "urbanwind-task-004",
+      "variant": "单体建筑计算域边界审计-目标案例"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "lite",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 1,
+  "required_solver_runs": 0,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-004"
+}

@@ -1,0 +1,45 @@
+{
+  "experimental_claim": false,
+  "host": "5070-server",
+  "independent_archive_audit": "validation/openfoam-task098-three-case-audit-v1.json",
+  "independent_archive_audit_sha256": "0310dc4de70b6c9bd83a1ea7dc51703778e0ab93d8bfb605958b3d5d08d5f512",
+  "openfoam_version": "v2412",
+  "runtime_environment": "/home/abc/urbanwind-agentbench-runtime-v0.1/envs/openfoam-2412",
+  "schema_version": "1.0",
+  "source_runs": [
+    {
+      "case_id": "task-098-case-001",
+      "method": "simple",
+      "mpi_ranks": 16,
+      "source_archive": "validation/openfoam-batch-20260915-v20-late-window/results/task098-simple-late/reference_candidate.tar.gz",
+      "source_archive_sha256": "8ef0691243496855afe10febedb0888228cc293020b5c8df64c7eb87cd6672b9",
+      "source_batch": "openfoam-batch-20260915-v20-late-window",
+      "source_job": "task098-simple-late",
+      "source_status_sha256": "403c2685154dc1ce057d0548a06152a00700fb2e294551d72d75d8ff80ca306b",
+      "variant": "simple分解"
+    },
+    {
+      "case_id": "task-098-case-002",
+      "method": "scotch",
+      "mpi_ranks": 16,
+      "source_archive": "validation/openfoam-batch-20260915-v20-late-window/results/task098-scotch-late/reference_candidate.tar.gz",
+      "source_archive_sha256": "79bb2084f4f824d35272aad704626456c21b3a6b7cd45dd639f001418750bae2",
+      "source_batch": "openfoam-batch-20260915-v20-late-window",
+      "source_job": "task098-scotch-late",
+      "source_status_sha256": "0794a9f3e8663e12d1534571e29662b4e119b8d3fbdfc7f4edaabe349715e1ad",
+      "variant": "scotch分解"
+    },
+    {
+      "case_id": "task-098-case-003",
+      "method": "hierarchical",
+      "mpi_ranks": 16,
+      "source_archive": "validation/openfoam-batch-20260915-v20-late-window/results/task098-hierarchical-late/reference_candidate.tar.gz",
+      "source_archive_sha256": "d1fc788fd0a14e4cca92c53c1b8d2703bf54e05e1b6e88a5fef3b4e74ed93263",
+      "source_batch": "openfoam-batch-20260915-v20-late-window",
+      "source_job": "task098-hierarchical-late",
+      "source_status_sha256": "85e14ba886949ad293d294ac63fdd0cfc75da592b49bf0c343d4fa138f2fce2b",
+      "variant": "hierarchical分解"
+    }
+  ],
+  "task_id": "urbanwind-task-098"
+}

@@ -1,0 +1,170 @@
+{
+  "case_ids": [
+    "task-071-case-001",
+    "task-071-case-002"
+  ],
+  "cases": [
+    {
+      "case_id": "task-071-case-001",
+      "execution_role": "provided_data_or_tool_execution",
+      "outlet_U_type": "zeroGradient",
+      "outlet_p_type": "fixedValue",
+      "outlet_x_D": 2.0,
+      "solver_launch_authorized": false,
+      "variant_key": "faulty"
+    },
+    {
+      "case_id": "task-071-case-002",
+      "execution_role": "real_solver_run",
+      "outlet_U_type": "inletOutlet",
+      "outlet_p_type": "fixedValue",
+      "outlet_x_D": 23.0,
+      "solver_launch_authorized": true,
+      "variant_key": "repaired"
+    }
+  ],
+  "controlled_repair_bundle": "move outlet from x=2D to the frozen x=23D domain boundary and replace zeroGradient U with inletOutlet while retaining p fixedValue",
+  "cpu_affinity": "64-79",
+  "execution_policy": "The faulty case is deterministically rejected by visible preflight and must not run a solver; only the repaired case performs one real solver run.",
+  "fault_definition": {
+    "faulty_outlet_U_type": "zeroGradient",
+    "faulty_outlet_x_D": 2.0,
+    "minimum_allowed_outlet_x_D": 15.0,
+    "preflight_rule": "reject before solver when outlet_x_D<15 or U outlet is not inletOutlet",
+    "required_repaired_outlet_U_type": "inletOutlet",
+    "required_repaired_outlet_p_type": "fixedValue",
+    "scope_note": "15D is a frozen benchmark gate for this local case, not a universal urban-CFD recommendation."
+  },
+  "frozen_across_solver_run": [
+    "building geometry and the repaired 365488-cell mesh",
+    "neutral log-law inlet with Uref=1.2 m/s, Zref=4 m and z0=0.01 m",
+    "k and omega inlet profiles",
+    "ground, building, top and side boundary conditions",
+    "kOmegaSST, upwind convection and SIMPLE settings",
+    "400 iterations and 52 inlet profile probes",
+    "outlet-face metric reconstructed from raw 400/U and constant/polyMesh"
+  ],
+  "frozen_gates": {
+    "expected_outlet_area_m2": 111.6,
+    "faulty_preflight_must_reject": true,
+    "faulty_solver_runs_required": 0,
+    "max_abs_cumulative_continuity": 0.01,
+    "max_inlet_U_rmse_m_s": 1e-06,
+    "max_inlet_k_rmse_m2_s2": 1e-06,
+    "max_inlet_omega_rmse_s_1": 1e-05,
+    "max_last20_initial_residual_full": 0.0001,
+    "max_outlet_reverse_flow_fraction": 0.01,
+    "outlet_area_abs_tolerance_m2": 1e-08,
+    "required_cell_count": 365488,
+    "required_final_iteration": 400,
+    "required_outlet_face_count": 3224,
+    "required_solver_runs": 1
+  },
+  "full_iterations": 400,
+  "geometry": {
+    "D_m": 1.0,
+    "description": "365488-cell conformal D x D x 4D single-building domain",
+    "domain_m": [
+      [
+        -4.0,
+        23.0
+      ],
+      [
+        -6.2,
+        6.2
+      ],
+      [
+        0.0,
+        9.0
+      ]
+    ],
+    "expected_outlet_area_m2": 111.6,
+    "expected_outlet_face_count": 3224
+  },
+  "hidden_boundary": "Visible fault rule, repaired configuration, formulas, target profiles, shapes and gates only; no hidden repaired outlet arrays.",
+  "metric_reconstruction": {
+    "aggregation": "sum(reverse face areas)/sum(all outlet face areas)",
+    "face_is_reverse": "dot(U_f,n_f)<0",
+    "mesh_files": [
+      "constant/polyMesh/points",
+      "constant/polyMesh/faces",
+      "constant/polyMesh/boundary"
+    ],
+    "outward_normal": "unit vector in the orientation of each OpenFOAM outlet boundary face area vector",
+    "velocity_file": "400/U"
+  },
+  "mpi_ranks": 16,
+  "outlet_case_csv": "local_assets/outlet_cases.csv",
+  "outlet_face_count": 3224,
+  "path_policy": "relative paths under submission root, unique and SHA-256 matched",
+  "primary_metric": {
+    "aggregation": "per_case_then_task",
+    "formula": "sum_f(A_f*I((U_f dot n_f)<0))/sum_f(A_f) on the repaired case at iteration 400; outlet faces, outward normals n_f and areas A_f are reconstructed from constant/polyMesh, and U_f is read from the raw 400/U outlet boundary values",
+    "id": "outlet_reverse_flow_fraction",
+    "name_zh": "出口回流面积比例",
+    "unit": "fraction"
+  },
+  "profile_parameters": {
+    "Cmu": 0.09,
+    "Uref_m_s": 1.2,
+    "Zref_m": 4.0,
+    "displacement_height_m": 0.0,
+    "kappa": 0.41,
+    "u_star_m_s": 0.0820826103015287,
+    "z0_m": 0.01
+  },
+  "profile_sample_count": 52,
+  "profile_sample_iterations": [
+    20,
+    40,
+    60,
+    80,
+    100,
+    120,
+    140,
+    160,
+    180,
+    200,
+    220,
+    240,
+    260,
+    280,
+    300,
+    320,
+    340,
+    360,
+    380,
+    400
+  ],
+  "profile_target_csv": "local_assets/outlet_profile_targets.csv",
+  "required_manifest": "outlet_evidence_manifest.json",
+  "required_raw_evidence": {
+    "task-071-case-001": [
+      "outlet_configuration",
+      "preflight_diagnosis"
+    ],
+    "task-071-case-002": [
+      "outlet_configuration",
+      "probe_U",
+      "probe_k",
+      "probe_omega",
+      "solver_log",
+      "checkMesh_log",
+      "field_U0",
+      "field_p0",
+      "field_U400",
+      "mesh_points",
+      "mesh_faces",
+      "mesh_boundary",
+      "controlDict"
+    ]
+  },
+  "required_result": "outlet_results.json",
+  "schema_version": "1.0",
+  "smoke_iterations": 20,
+  "solver": "OpenCFD-v2412 simpleFoam",
+  "task_gate": "The faulty configuration must be rejected before solver launch and the sole repaired solver run must pass every frozen gate; no successful subset may be selected.",
+  "task_id": "urbanwind-task-071",
+  "truth_boundary": "OpenFOAM outlet diagnosis and repaired numerical reference only; not experimental/PIV/DNS/wind-tunnel/field truth and not a universal outlet-placement rule.",
+  "turbulence_model": "kOmegaSST"
+}

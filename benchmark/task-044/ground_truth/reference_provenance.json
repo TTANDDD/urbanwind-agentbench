@@ -1,0 +1,68 @@
+{
+  "accepted_counts_are_not_required_answers": true,
+  "artifacts": [
+    {
+      "bytes": 9878174,
+      "path": "task044-v47-raw.tar.gz",
+      "sha256": "afb503925b5494bba8703db7ae5d53be18f6dafa696da2d2c8114424ba181924"
+    },
+    {
+      "bytes": 10370,
+      "path": "blockMesh.log",
+      "sha256": "b8c582e01b50f5a1a6a0cf40db52acd3c38ffcf5bfe946d80ce59c6457a4d857"
+    },
+    {
+      "bytes": 4904,
+      "path": "checkMesh.log",
+      "sha256": "1b6a561a58c1834f065b6151f88e6f44dfc64d15df99afdd63725f8bca89a72a"
+    }
+  ],
+  "claim_boundary": "Local geometric mesh-tool reference only. No velocity solution, wake accuracy, yplus, experimental or atmospheric truth is claimed.",
+  "deployment_tests": {
+    "path": "deployment_tests.json",
+    "sha256": "1a65d851c78eac0ac1687d0bbcca6b666dfee0e320bdb097aca40e92924fbf76"
+  },
+  "evaluator_sha256": "b699713f2c149b95ada7fcfbe3bccc0a4b5d2a65d331be4e69c62b7adb3ed3d7",
+  "evaluator_tests": {
+    "path": "evaluator_tests.json",
+    "sha256": "4e93933183488f56c7654ff7afebd71046557064a0c67e534c9d84a50d080d33"
+  },
+  "experimental_claim": false,
+  "flow_solver_runs": 0,
+  "frozen_protocol": "validation/openfoam-task044-v47-prelaunch-protocol.json",
+  "helper_sha256": {
+    "task042_raw_mesh.py": "403eea866ef10495a5c89cb7b97400cee9e2955e9cda0fceebed76c977a3891a",
+    "task044_mesh_geometry.py": "7e1917f876c0b70083cfd6d85f093542d3dcca1d59dddad0671905a6a24b52fe",
+    "task044_mesh_inputs.py": "344267ca547a6c45ff40015fb058ccd1b4f5f03820096d03cf205c4e4c54144a"
+  },
+  "host": "5070-server",
+  "independent_audit": {
+    "path": "independent_audit.json",
+    "sha256": "f169724122dae0ed512d67cceeb597d64a87afd4f9dc147699b7c87e9f612657"
+  },
+  "openfoam_version": "v2412",
+  "scientific_contract_sha256": "47c4d792fb4f83cefd332ce9c48c80f77a472186706aac97bb8bb463ee596395",
+  "software": {
+    "paths": {
+      "blockMesh": {
+        "path": "/home/abc/urbanwind-agentbench-runtime-v0.1/envs/openfoam-2412/bin/blockMesh",
+        "sha256": "61929db77c637f0b394b7aef85b0f5ab42af8185a72c234270e4a03e2a13257b"
+      },
+      "checkMesh": {
+        "path": "/home/abc/urbanwind-agentbench-runtime-v0.1/envs/openfoam-2412/bin/checkMesh",
+        "sha256": "bce0922fb3d1d9178c710df108f4c62646572ca02f2bb76e18a658dfbdbfd712"
+      },
+      "decomposePar": {
+        "path": "/home/abc/urbanwind-agentbench-runtime-v0.1/envs/openfoam-2412/bin/decomposePar",
+        "sha256": "f512a7d2e236dbc0d537896d5d63da53b88ea7fb1f6355a89ab60444d9c7b9bf"
+      },
+      "mpiexec": {
+        "path": "/home/abc/urbanwind-agentbench-runtime-v0.1/envs/openfoam-2412/bin/mpiexec",
+        "sha256": "67737881b1bfbc001b2503a4a1d16e9174b5916326ef1d6fd97cb196292cfccf"
+      }
+    },
+    "version": "v2412"
+  },
+  "task_id": "urbanwind-task-044",
+  "truth_type": "verified_openfoam_tool_reference"
+}

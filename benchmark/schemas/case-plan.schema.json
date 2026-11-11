@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "cases": {
+      "minItems": 1,
+      "type": "array"
+    }
+  },
+  "required": [
+    "task_id",
+    "required_cases",
+    "required_solver_runs",
+    "cases",
+    "comparison_contract"
+  ],
+  "title": "UrbanWind-AgentBench case plan",
+  "type": "object"
+}

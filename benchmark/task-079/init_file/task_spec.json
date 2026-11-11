@@ -1,0 +1,181 @@
+{
+  "acceptance_contract": {
+    "hard_gate_precedence": true,
+    "primary_metric_formula": "100*abs(sum(phi_inlet)+sum(phi_outlet))/max(abs(sum(phi_inlet)),1e-12); phi is the raw oriented volumetric face flux from 400/phi and all other boundaries are frozen impermeable with zero sources",
+    "primary_metric_id": "mass_flux_mismatch_percent",
+    "required_case_ids": [
+      "task-079-case-001"
+    ],
+    "required_solver_runs": 1
+  },
+  "answer_free": true,
+  "case_anchor": {
+    "id": "SB4_LOCAL",
+    "known": {
+      "D_m": 1.0,
+      "H_over_D": 4.0,
+      "Re_D": 12000.0,
+      "Re_H": 48000.0,
+      "U_ref_m_s": 1.2,
+      "domain_D": {
+        "x": [
+          -4.0,
+          23.0
+        ],
+        "y": [
+          -6.2,
+          6.2
+        ],
+        "z": [
+          0.0,
+          9.0
+        ]
+      },
+      "nu_m2_s": 0.0001,
+      "truth_type": "synthetic_or_numerical_reference"
+    },
+    "missing": [],
+    "name": "D x D x 4D单体建筑本地数值基准",
+    "references": [
+      "USER_SB4_SPEC",
+      "LOCAL_GENERATOR"
+    ],
+    "status": "local_generator_ready"
+  },
+  "category": "boundary_condition_design",
+  "compute_track": "cfd",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision_rule": "先拒绝任何执行、数值、单位、守恒或外部证据门禁失败的案例，再依据冻结指标比较；不得用文字报告替代原始证据。",
+  "difficulty": "advanced",
+  "engineering_focus": "在真实simpleFoam运行中，从原始400/phi入口与出口边界面通量独立复算全域质量闭合，并定位边界设置或数值收敛导致的不平衡。",
+  "evaluator_status": "task_specific_mass_flux_raw_phi_check",
+  "evidence_requirements": [
+    "exact commands and working directories",
+    "software names, versions, executable paths and SHA256 when available",
+    "timezone-aware start/end times and exit codes",
+    "SHA256-addressed input, log and raw-output files",
+    "coordinate system, units, masks, statistical windows and aggregation order"
+  ],
+  "init_type": "incomplete_template",
+  "limitations": [
+    "Visible formula, inlet profiles, shapes and gates are supplied; hidden final phi arrays are not.",
+    "Reference is one local incompressible OpenFOAM numerical run, not experimental or compressible mass-flow truth.",
+    "A frozen distributable runtime remains required for release."
+  ],
+  "local_generator_version": "urbanwind-local-assets-v3",
+  "materialization_status": "local_inputs_generated",
+  "metrics": [
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "100*abs(sum(phi_inlet)+sum(phi_outlet))/max(abs(sum(phi_inlet)),1e-12); phi is the raw oriented volumetric face flux from 400/phi and all other boundaries are frozen impermeable with zero sources",
+      "id": "mass_flux_mismatch_percent",
+      "name_zh": "入口出口质量通量不平衡率",
+      "unit": "%"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    }
+  ],
+  "physical_checks": [
+    {
+      "id": "evidence_is_raw_and_hashed",
+      "requirement": "所有进入指标的原始输入、日志和输出均在manifest中登记SHA256。"
+    },
+    {
+      "id": "units_and_coordinates_declared",
+      "requirement": "所有比较对象声明单位、坐标系、归一化和掩膜。"
+    },
+    {
+      "id": "track_specific_physics",
+      "requirement": "入口、地面、顶部、侧面和出口必须满足质量、粗糙度与稳定度一致性。"
+    },
+    {
+      "id": "task_specific_primary_metric",
+      "requirement": "必须从原始400/phi入口与出口boundaryField逐面求和重算主指标；不得使用报告自填总量代替原始面通量。"
+    }
+  ],
+  "professional_difficulty": "D4",
+  "reference_status": "openfoam_numerical_reference_generated",
+  "release_status": "reference_ready_not_release_valid",
+  "required_artifacts": [
+    {
+      "format": "json",
+      "path": "design.json",
+      "role": "task design and assumptions"
+    },
+    {
+      "format": "json",
+      "path": "boundary_contract.json",
+      "role": "track-specific result"
+    },
+    {
+      "format": "json",
+      "path": "run_manifest.json",
+      "role": "tool and solver provenance"
+    },
+    {
+      "format": "json",
+      "path": "metrics.json",
+      "role": "reported metrics with units"
+    },
+    {
+      "format": "json",
+      "path": "evidence_manifest.json",
+      "role": "SHA256-addressed raw evidence"
+    },
+    {
+      "format": "markdown",
+      "path": "decision.md",
+      "role": "bounded engineering conclusion"
+    },
+    {
+      "format": "json",
+      "path": "mass_flux_evidence_manifest.json",
+      "role": "SHA256-linked raw OpenFOAM mass-flux evidence"
+    },
+    {
+      "format": "json",
+      "path": "mass_flux_results.json",
+      "role": "raw-phi-derived flux sums and numerical diagnostics"
+    }
+  ],
+  "required_cases": 1,
+  "required_inputs": [
+    "本地可重建365488单元单体建筑OpenFOAM算例",
+    "可见中性对数律U/k/omega入口剖面与入口出口patch合同",
+    "冻结400/phi原始面通量复算、求解收敛和质量闭合门禁"
+  ],
+  "required_solver_runs": 1,
+  "schema_version": "1.0",
+  "scientific_question": "智能体能否在不伪造证据的前提下完成“入口出口质量守恒”，并把工具执行、数值质量、物理依据和工程结论连成可复算闭环？",
+  "software_chain": [
+    "python",
+    "openfoam"
+  ],
+  "task_id": "urbanwind-task-079",
+  "task_mode": "configure_and_verify",
+  "task_number": 79,
+  "title": "入口出口质量守恒",
+  "track": "abl_and_boundary_conditions",
+  "track_name": "大气边界层与边界条件",
+  "workflow": {
+    "configure": "围绕D x D x 4D单体建筑本地数值基准生成案例计划和软件配置，并保持单位、坐标和版本可追踪。",
+    "decide": "给出带适用边界的工程结论；关键证据缺失时明确停止或降级声明。",
+    "evidence": "读取任务输入与来源登记，显式列出已知、假设、缺失和许可边界。",
+    "execute": "真实执行一次365488单元、16-rank、400迭代OpenFOAM v2412 simpleFoam，并保存最终phi场。",
+    "postprocess": "直接读取400/phi中全部入口和出口面通量，按OpenFOAM外法向符号求和并计算冻结质量通量不平衡率。",
+    "preprocess": "配置冻结中性对数律U/k/omega入口、inletOutlet出口和无体积源的单体建筑计算域。",
+    "validate": "依次通过文件、执行、数值、物理、外部证据和工程约束门禁。"
+  }
+}

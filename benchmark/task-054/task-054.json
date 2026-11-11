@@ -1,0 +1,97 @@
+{
+  "benchmark_metadata": {
+    "case_anchor": "PROCEDURAL_CITY",
+    "category": "mesh_generation",
+    "compute_track": "lite",
+    "data_origin_policy": "local_generation_or_optional_one_click_public",
+    "difficulty": "intermediate",
+    "evaluator_status": "task_specific_openfoam_reexecution_check",
+    "init_type": "engineering_data_and_model",
+    "materialization_status": "local_inputs_generated",
+    "professional_difficulty": "D3",
+    "reference_status": "openfoam_tool_reference_generated",
+    "release_status": "reference_ready_not_release_valid",
+    "required_cases": 1,
+    "required_solver_runs": 0,
+    "simulation_status": "not_run",
+    "task_id": "urbanwind-task-054",
+    "task_mode": "configure_and_verify",
+    "track": "mesh_and_numerics"
+  },
+  "config": [
+    {
+      "parameters": {
+        "files": [
+          {
+            "local_path": "task-054/init_file/init_file.tar.gz",
+            "path": "/home/user/Desktop/init_file.tar.gz"
+          }
+        ]
+      },
+      "type": "upload_file"
+    },
+    {
+      "parameters": {
+        "command": "bash -c \"set -e; tar -xzf '/home/user/Desktop/init_file.tar.gz' -C '/home/user/Desktop'; rm -f '/home/user/Desktop/init_file.tar.gz'\"",
+        "shell": true
+      },
+      "type": "launch"
+    }
+  ],
+  "evaluator": {
+    "expected": {},
+    "func": "openfoam_partition_constraint_reexecution_score",
+    "metric": {
+      "direction": "maximize",
+      "name": "UrbanWind raw city partition constraints and reexecution",
+      "not_for_leaderboard": true,
+      "scale": "0-100"
+    },
+    "postconfig": [
+      {
+        "parameters": {
+          "files": [
+            {
+              "local_path": "task-054/eval.py",
+              "path": "/home/user/Desktop/eval.py"
+            },
+            {
+              "local_path": "task-054/task054_partition_inputs.py",
+              "path": "/home/user/Desktop/task054_partition_inputs.py"
+            },
+            {
+              "local_path": "task-054/task054_raw_partition.py",
+              "path": "/home/user/Desktop/task054_raw_partition.py"
+            },
+            {
+              "local_path": "task-054/task042_raw_mesh.py",
+              "path": "/home/user/Desktop/task042_raw_mesh.py"
+            },
+            {
+              "local_path": "task-054/contract_evaluator.py",
+              "path": "/home/user/Desktop/contract_evaluator.py"
+            }
+          ]
+        },
+        "type": "upload_file"
+      }
+    ],
+    "result": {
+      "command": "python3 /home/user/Desktop/eval.py",
+      "shell": true,
+      "type": "vm_command_line"
+    }
+  },
+  "fixed_ip": false,
+  "id": "c-urbanwind-task-054-ubuntu",
+  "instruction": "你正在完成 UrbanWind-AgentBench task-054：城市网格分区与负载均衡。\n读取 local_assets/city_geometry.geojson 与 local_assets/openfoam_base/partition_contract.json。城市域x[-4,16]、y[-4,12]、z[0,7]m，16栋矩形建筑不同高度；固定共形.25m串行网格141952单元、流体2218m3。随包只有几何、生成器、字典和两方法模板，没有已完成分区或隐藏答案。\n这是1个工具比较case（task-054-case-001），包含simple/scotch两个四核子运行，0次CFD/LES求解。用相同串行网格分别真实执行blockMesh、checkMesh -allGeometry -allTopology、decomposePar，保留五个串行polyMesh文件、四个processor的原始网格和cell/face/point/boundaryProcAddressing、系统字典、commands.json和原始日志。simple可选任意乘积为4的正整数n，scotch必须真实使用对应方法；不同合法分配不要求和隐藏GT编号一致。\n从各核cellProcAddressing数量计算(max-mean)/mean，metrics.json的cell_load_imbalance_ratio必须是{simple:数值,scotch:数值}，单位fraction，不只报告有利方法。从真实processor patch重算每核通信面数、通信面不均衡与唯一跨核面数；点、面、单元、边界映射必须完整一致，每个串行单元恰好一次、通信面逐面对向互逆。两个方法完整checkMesh都必须Mesh OK且无Failed。没有额外负载不均衡上限，也不强制哪个方法更优；分析单元负载与通信开销的权衡，不把面数当实际通信时间或加速比。\n结果保存在/home/user/Desktop，严格按case_plan.json和reporting_contract.json提交design.json、mesh_metrics.json、run_manifest.json、metrics.json、evidence_manifest.json、decision.md。run_manifest是一行比较case，内部method_subruns关联两个真实工具目录、命令和证据；所有证据登记哈希、版本、时区明确的起止时间及返回码。mesh_metrics保留每方法单元/通信面计数与重算值。decision.md包含“证据”“限制”“结论”。最小软件链python/openfoam，计算赛道lite。\n正式评价需隔离实际复跑安全提交字典并执行四核parallel checkMesh，不采用自报日志或逐字GT相等判定。本任务只评测本地合成城市的网格分区工具能力，不验证流场、现实城市或实验真值。旧合成mesh CSV不是网格或工具执行证据。当前已有原始工具参考及真实隔离复跑评价器，reference-ready但非release-valid。\n\n严格遵循 reporting_contract.tool_submission_contract：commands.json使用name/argv/start_utc/end_utc/exit_code/log_sha256；日志名为log.<name>，每条命令日志属于该方法原始证据并登记哈希。两个method_subruns各声明method、mpi_ranks=4、tool_case_directory和commands；唯一比较run声明provided_data_or_tool_execution、solver_runs=0，关联完整证据并集和命令。mesh_metrics.methods包含各方法cells_per_rank、communication_faces_per_rank、cell_load_imbalance_ratio、communication_face_imbalance、unique_processor_faces。\n",
+  "possibility_of_env_change": "medium",
+  "proxy": false,
+  "related_apps": [
+    "python",
+    "openfoam"
+  ],
+  "snapshot": "urbanwind-multisoftware-v1",
+  "source": "UrbanWind-AgentBench local scaffold with source registry",
+  "trajectory": "trajectories/"
+}

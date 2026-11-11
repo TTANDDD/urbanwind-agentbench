@@ -1,0 +1,382 @@
+{
+  "case_ids": [
+    "task-062-case-001",
+    "task-062-case-002"
+  ],
+  "cases": [
+    {
+      "case_id": "task-062-case-001",
+      "inlet_U_type": "fixedProfile csvFile",
+      "variant": "幂律入口",
+      "variant_key": "power"
+    },
+    {
+      "case_id": "task-062-case-002",
+      "inlet_U_type": "atmBoundaryLayerInletVelocity",
+      "variant": "对数律入口",
+      "variant_key": "log"
+    }
+  ],
+  "controlled_factor": "inlet U profile law only: power law versus neutral logarithmic law",
+  "cpu_affinity": {
+    "task-062-case-001": "64-79",
+    "task-062-case-002": "80-95"
+  },
+  "frozen_across_cases": [
+    "geometry and mesh",
+    "reference speed and height",
+    "k and omega inlet profiles",
+    "wall/top/side/outlet boundary conditions",
+    "kOmegaSST model",
+    "upwind convection",
+    "SIMPLE settings",
+    "400 iterations",
+    "probe points and aggregation"
+  ],
+  "frozen_gates": {
+    "finite_profiles_and_response": true,
+    "finite_solver_log": true,
+    "max_abs_cumulative_continuity": 0.01,
+    "max_inlet_U_rmse_m_s": 1e-06,
+    "max_inlet_k_rmse_m2_s2": 1e-06,
+    "max_inlet_omega_rmse_s_1": 1e-05,
+    "max_last20_initial_residual_full": 0.0001,
+    "required_cell_count": 365488,
+    "required_final_iteration": 400,
+    "response_velocity_range_m_s": [
+      -3.0,
+      3.0
+    ]
+  },
+  "full_iterations": 400,
+  "geometry": "365488-cell conformal D x D x 4D single-building domain",
+  "hidden_boundary": "Visible cases, formula, targets, probe coordinates, shapes and gates only; no hidden response arrays.",
+  "log_profile_implementation": "atmBoundaryLayerInletVelocity with the visible neutral log-law parameters",
+  "mpi_ranks_per_case": 16,
+  "path_policy": "relative paths under submission root, unique and SHA-256 matched",
+  "power_profile_implementation": "fixedProfile csvFile linear interpolation of the visible 52-level power-law table",
+  "primary_metric": {
+    "aggregation": "per_case_then_task",
+    "formula": "0.5*(mean_{p:z=1.4375,i=340,360,380,400}|Ux_power(i,p)-Ux_log(i,p)|+mean_{p:z=4.375,i=340,360,380,400}|Ux_power(i,p)-Ux_log(i,p)|)/1.2",
+    "id": "profile_model_response_difference",
+    "name_zh": "幂律与对数律响应差",
+    "unit": "fraction"
+  },
+  "profile_parameters": {
+    "Cmu": 0.09,
+    "Uref_m_s": 1.2,
+    "Zref_m": 4.0,
+    "displacement_height_m": 0.0,
+    "kappa": 0.41,
+    "power_alpha": 0.22,
+    "u_star_m_s": 0.0820826103015287,
+    "z0_m": 0.01
+  },
+  "profile_samples": 52,
+  "profile_target_csv": "local_assets/profile_law_targets.csv",
+  "required_manifest": "profile_law_evidence_manifest.json",
+  "required_raw_evidence_per_case": [
+    "probe_U",
+    "probe_k",
+    "probe_omega",
+    "response_U",
+    "solver_log",
+    "checkMesh_log",
+    "field_U",
+    "controlDict"
+  ],
+  "response_groups": {
+    "pedestrian_layer": {
+      "count": 24,
+      "z_m": 1.4375
+    },
+    "roof_layer": {
+      "count": 24,
+      "z_m": 4.375
+    }
+  },
+  "response_iterations": [
+    340,
+    360,
+    380,
+    400
+  ],
+  "response_points_m": [
+    [
+      0.75,
+      -1.0,
+      1.4375
+    ],
+    [
+      0.75,
+      0.0,
+      1.4375
+    ],
+    [
+      0.75,
+      1.0,
+      1.4375
+    ],
+    [
+      1.25,
+      -1.0,
+      1.4375
+    ],
+    [
+      1.25,
+      0.0,
+      1.4375
+    ],
+    [
+      1.25,
+      1.0,
+      1.4375
+    ],
+    [
+      2.0,
+      -1.0,
+      1.4375
+    ],
+    [
+      2.0,
+      0.0,
+      1.4375
+    ],
+    [
+      2.0,
+      1.0,
+      1.4375
+    ],
+    [
+      3.0,
+      -1.0,
+      1.4375
+    ],
+    [
+      3.0,
+      0.0,
+      1.4375
+    ],
+    [
+      3.0,
+      1.0,
+      1.4375
+    ],
+    [
+      4.0,
+      -1.0,
+      1.4375
+    ],
+    [
+      4.0,
+      0.0,
+      1.4375
+    ],
+    [
+      4.0,
+      1.0,
+      1.4375
+    ],
+    [
+      6.0,
+      -1.0,
+      1.4375
+    ],
+    [
+      6.0,
+      0.0,
+      1.4375
+    ],
+    [
+      6.0,
+      1.0,
+      1.4375
+    ],
+    [
+      8.0,
+      -1.0,
+      1.4375
+    ],
+    [
+      8.0,
+      0.0,
+      1.4375
+    ],
+    [
+      8.0,
+      1.0,
+      1.4375
+    ],
+    [
+      12.0,
+      -1.0,
+      1.4375
+    ],
+    [
+      12.0,
+      0.0,
+      1.4375
+    ],
+    [
+      12.0,
+      1.0,
+      1.4375
+    ],
+    [
+      0.75,
+      -1.0,
+      4.375
+    ],
+    [
+      0.75,
+      0.0,
+      4.375
+    ],
+    [
+      0.75,
+      1.0,
+      4.375
+    ],
+    [
+      1.25,
+      -1.0,
+      4.375
+    ],
+    [
+      1.25,
+      0.0,
+      4.375
+    ],
+    [
+      1.25,
+      1.0,
+      4.375
+    ],
+    [
+      2.0,
+      -1.0,
+      4.375
+    ],
+    [
+      2.0,
+      0.0,
+      4.375
+    ],
+    [
+      2.0,
+      1.0,
+      4.375
+    ],
+    [
+      3.0,
+      -1.0,
+      4.375
+    ],
+    [
+      3.0,
+      0.0,
+      4.375
+    ],
+    [
+      3.0,
+      1.0,
+      4.375
+    ],
+    [
+      4.0,
+      -1.0,
+      4.375
+    ],
+    [
+      4.0,
+      0.0,
+      4.375
+    ],
+    [
+      4.0,
+      1.0,
+      4.375
+    ],
+    [
+      6.0,
+      -1.0,
+      4.375
+    ],
+    [
+      6.0,
+      0.0,
+      4.375
+    ],
+    [
+      6.0,
+      1.0,
+      4.375
+    ],
+    [
+      8.0,
+      -1.0,
+      4.375
+    ],
+    [
+      8.0,
+      0.0,
+      4.375
+    ],
+    [
+      8.0,
+      1.0,
+      4.375
+    ],
+    [
+      12.0,
+      -1.0,
+      4.375
+    ],
+    [
+      12.0,
+      0.0,
+      4.375
+    ],
+    [
+      12.0,
+      1.0,
+      4.375
+    ]
+  ],
+  "response_probe_count": 48,
+  "response_probe_csv": "local_assets/profile_response_probes.csv",
+  "response_sample_count": 20,
+  "response_sample_iterations": [
+    20,
+    40,
+    60,
+    80,
+    100,
+    120,
+    140,
+    160,
+    180,
+    200,
+    220,
+    240,
+    260,
+    280,
+    300,
+    320,
+    340,
+    360,
+    380,
+    400
+  ],
+  "schema_version": "1.0",
+  "smoke_iterations": 20,
+  "solver": "OpenCFD-v2412 simpleFoam",
+  "task_gate": "Both cases must pass all frozen full-run gates; no successful-subset selection or post-hoc threshold relaxation.",
+  "task_id": "urbanwind-task-062",
+  "truth_boundary": "Matched OpenFOAM numerical comparison only; not PIV, DNS, wind-tunnel, field or experimental truth.",
+  "turbulence_model": "kOmegaSST",
+  "variants": [
+    "幂律入口",
+    "对数律入口"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "experimental_claim": false,
+  "host": "5070-server",
+  "independent_audit": "validation/openfoam-task095-v30-independent-audit-v1.json",
+  "independent_audit_sha256": "bd5ef0f06c3d94c2f293109c847b3d4ac5a40551364b2e7781f120fffe2898fb",
+  "openfoam_version": "OpenCFD-v2412",
+  "runtime_environment": "/home/abc/urbanwind-agentbench-runtime-v0.1/envs/openfoam-2412",
+  "schema_version": "1.0",
+  "source_initialization": {
+    "task": "urbanwind-task-092",
+    "truth_boundary": "audited numerical U/nut initialization only"
+  },
+  "source_runs": [
+    {
+      "case_id": "task-095-case-001",
+      "ground_heat_flux_w_m2": -50.0,
+      "source_archive": "validation/openfoam-batch-20260921-v30-task095-stability/results/task095-stable/reference_candidate.tar.gz",
+      "source_archive_sha256": "0d60d6e07938d7aeb9d7e8b9181332548a9aab37d93bb2653c4fee1f2210aa21",
+      "source_batch": "openfoam-batch-20260921-v30-task095-stability",
+      "source_job": "task095-stable",
+      "source_status_sha256": "4b077bfad93f743183060f17f08bba090f4ee252b29bcfb93d94066faf43dff0",
+      "stability_regime": "stable",
+      "variant": "稳定"
+    },
+    {
+      "case_id": "task-095-case-002",
+      "ground_heat_flux_w_m2": 0.0,
+      "source_archive": "validation/openfoam-batch-20260921-v30-task095-stability/results/task095-neutral/reference_candidate.tar.gz",
+      "source_archive_sha256": "a026b2dc3d78065b24f3408f06a82e63d288d440a0cf39166696d39f243e64ec",
+      "source_batch": "openfoam-batch-20260921-v30-task095-stability",
+      "source_job": "task095-neutral",
+      "source_status_sha256": "a1f37c1f19bc95c045a230449bf9b4de459ffa81b7be1f010cbbc0d0269d0874",
+      "stability_regime": "neutral",
+      "variant": "中性"
+    },
+    {
+      "case_id": "task-095-case-003",
+      "ground_heat_flux_w_m2": 50.0,
+      "source_archive": "validation/openfoam-batch-20260921-v30-task095-stability/results/task095-unstable/reference_candidate.tar.gz",
+      "source_archive_sha256": "517ab2d84182ff6816f4fc5ed492d6aa63fa9a3937ddf781e0498f8473cd2fef",
+      "source_batch": "openfoam-batch-20260921-v30-task095-stability",
+      "source_job": "task095-unstable",
+      "source_status_sha256": "7e5a26e6b27444f127e67e17f90695cb2398873663535f9cfc332a4954df35c7",
+      "stability_regime": "unstable",
+      "variant": "不稳定"
+    }
+  ],
+  "task_id": "urbanwind-task-095"
+}

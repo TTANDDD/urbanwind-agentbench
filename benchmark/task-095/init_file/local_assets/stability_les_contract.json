@@ -1,0 +1,217 @@
+{
+  "ambient_temperature_k": 300.0,
+  "cases": [
+    {
+      "case_id": "task-095-case-001",
+      "forcing_interpretation": "surface cooling / stable",
+      "ground_heat_flux_w_m2": -50.0,
+      "stability_regime": "stable",
+      "variant": "稳定"
+    },
+    {
+      "case_id": "task-095-case-002",
+      "forcing_interpretation": "zero heat flux / neutral",
+      "ground_heat_flux_w_m2": 0.0,
+      "stability_regime": "neutral",
+      "variant": "中性"
+    },
+    {
+      "case_id": "task-095-case-003",
+      "forcing_interpretation": "surface heating / unstable",
+      "ground_heat_flux_w_m2": 50.0,
+      "stability_regime": "unstable",
+      "variant": "不稳定"
+    }
+  ],
+  "delta_t_s": 0.015,
+  "end_time_s": 60.0,
+  "frozen_gates": {
+    "max_abs_cumulative_continuity": 0.0001,
+    "max_courant": 1.0,
+    "mean_temperature_half_window_drift_k": 0.5,
+    "mean_temperature_range_k": [
+      250.0,
+      350.0
+    ],
+    "required_cell_count": 141952,
+    "required_mean_fields": [
+      "UMean",
+      "UPrime2Mean",
+      "TMean",
+      "TPrime2Mean"
+    ],
+    "vertical_exchange_half_window_drift_m_s": 0.05
+  },
+  "geometry": "same 141952-cell 16-building procedural city for all cases",
+  "gravity_m_s2": [
+    0.0,
+    0.0,
+    -9.81
+  ],
+  "hidden_boundary": "Visible physics, cases, probes, formula, shapes and gates only; no hidden probe arrays.",
+  "path_policy": "relative paths under submission root, unique and SHA-256 matched",
+  "primary_metric": {
+    "aggregation": "per_case_then_task",
+    "formula": "mean(abs(exchange_stable-exchange_neutral),abs(exchange_unstable-exchange_neutral))/max(abs(exchange_neutral),0.01)",
+    "id": "les_stability_exchange_response",
+    "name_zh": "城市LES稳定度交换响应",
+    "unit": "fraction"
+  },
+  "primary_metric_denominator_floor_m_s": 0.01,
+  "probe_count": 24,
+  "probe_definition": "24 common z=4 m probes; exchange=mean(max(Uz,0))",
+  "probe_points_m": [
+    [
+      -2.0,
+      0.0,
+      4.0
+    ],
+    [
+      -2.0,
+      2.0,
+      4.0
+    ],
+    [
+      -2.0,
+      4.0,
+      4.0
+    ],
+    [
+      -2.0,
+      6.0,
+      4.0
+    ],
+    [
+      0.0,
+      0.0,
+      4.0
+    ],
+    [
+      0.0,
+      2.0,
+      4.0
+    ],
+    [
+      0.0,
+      4.0,
+      4.0
+    ],
+    [
+      0.0,
+      6.0,
+      4.0
+    ],
+    [
+      2.0,
+      0.0,
+      4.0
+    ],
+    [
+      2.0,
+      2.0,
+      4.0
+    ],
+    [
+      2.0,
+      4.0,
+      4.0
+    ],
+    [
+      2.0,
+      6.0,
+      4.0
+    ],
+    [
+      4.0,
+      0.0,
+      4.0
+    ],
+    [
+      4.0,
+      2.0,
+      4.0
+    ],
+    [
+      4.0,
+      4.0,
+      4.0
+    ],
+    [
+      4.0,
+      6.0,
+      4.0
+    ],
+    [
+      6.0,
+      0.0,
+      4.0
+    ],
+    [
+      6.0,
+      2.0,
+      4.0
+    ],
+    [
+      6.0,
+      4.0,
+      4.0
+    ],
+    [
+      6.0,
+      6.0,
+      4.0
+    ],
+    [
+      8.0,
+      0.0,
+      4.0
+    ],
+    [
+      8.0,
+      2.0,
+      4.0
+    ],
+    [
+      8.0,
+      4.0,
+      4.0
+    ],
+    [
+      8.0,
+      6.0,
+      4.0
+    ]
+  ],
+  "required_manifest": "stability_les_evidence_manifest.json",
+  "required_raw_evidence_per_case": [
+    "probe_U",
+    "probe_T",
+    "solver_log",
+    "checkMesh_log",
+    "controlDict",
+    "initial_T"
+  ],
+  "sample_count": 300,
+  "schema_version": "1.0",
+  "single_factor": "Only ground externalWallHeatFluxTemperature q changes across -50/0/+50 W/m2; all geometry, mesh, initial U/nut, thermodynamics, numerics, duration, probes, ranks and gates remain fixed.",
+  "solver": "OpenCFD-v2412 buoyantPimpleFoam",
+  "source_initialization": "same audited task-092 180 s WALE LES U/nut numerical field",
+  "stationarity_windows_s": [
+    [
+      20.0,
+      40.0
+    ],
+    [
+      40.0,
+      60.0
+    ]
+  ],
+  "statistics_window_s": [
+    20.0,
+    60.0
+  ],
+  "task_gate": "All three cases must pass; no subset promotion and no post-hoc threshold relaxation.",
+  "task_id": "urbanwind-task-095",
+  "truth_boundary": "Local OpenFOAM numerical stability-regime comparison; not PIV, DNS, wind-tunnel, field or experimental truth.",
+  "turbulence": "WALE wall-modelled LES"
+}

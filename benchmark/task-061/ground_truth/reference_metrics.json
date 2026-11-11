@@ -1,0 +1,22 @@
+{
+  "diagnostic_metrics": {
+    "inlet_k_rmse_m2_s2": 8.756884106730922e-15,
+    "inlet_omega_rmse_s_1": 1.0393524470871513e-12,
+    "inlet_profile_rmse_ms": 2.3289178146136844e-12
+  },
+  "experimental_claim": false,
+  "metric_formula": "sqrt(sum_i(dz_i*(Ux_i-Ulog(z_i))^2)/sum_i(dz_i)); Ulog(z)=Uref*ln((z-d+z0)/z0)/ln((Zref-d+z0)/z0)",
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-061",
+  "truth_type": "verified_openfoam_numerical_reference",
+  "units": {
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction",
+    "inlet_profile_rmse_ms": "m/s"
+  },
+  "values": {
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0,
+    "inlet_profile_rmse_ms": 2.3289178146136844e-12
+  }
+}

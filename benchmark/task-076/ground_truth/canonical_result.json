@@ -1,0 +1,15 @@
+{
+  "case_ids": [
+    "task-076-case-001"
+  ],
+  "cell_count": 141952,
+  "claim_boundary": "Local analytic potential-temperature/hydrostatic initialization plus OpenFOAM numerical reference; not sounding or experimental truth.",
+  "primary_metric": {
+    "id": "hydrostatic_initialization_residual",
+    "unit": "fraction",
+    "value": 4.2598042581779045e-10
+  },
+  "sample_count": 150,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-076"
+}

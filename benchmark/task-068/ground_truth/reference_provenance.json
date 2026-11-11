@@ -1,0 +1,16 @@
+{
+  "experimental_claim": false,
+  "host": "5070-server",
+  "independent_audit": "validation/openfoam-task068-v35c-independent-audit-v1.json",
+  "independent_audit_sha256": "ac325fccc3b68e291d508ae73dc72a29781d30d9dd5c55e796881f0f929a9f8b",
+  "openfoam_version": "OpenCFD-v2412",
+  "schema_version": "1.0",
+  "source_run": {
+    "case_id": "task-068-case-001",
+    "source_archive": "validation/openfoam-batch-20260925-v35c-task068-coordinate-transform/results/task068-rotated-inlet/reference_candidate.tar.gz",
+    "source_archive_sha256": "37f523b21fb3b06cdad00bc7b316ee19b59422c42ee4ab5d5b0789df48693e8a",
+    "source_batch": "openfoam-batch-20260925-v35c-task068-coordinate-transform",
+    "source_status_sha256": "38744fdcb4bc9b6ddf6847bbd5a1f078296bf24fb3927f6829cdfedd2461b954"
+  },
+  "task_id": "urbanwind-task-068"
+}

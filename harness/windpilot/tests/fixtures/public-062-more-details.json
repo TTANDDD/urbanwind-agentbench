@@ -1,0 +1,56 @@
+{
+  "task-062": [
+    {
+      "manifest": "profile_law_evidence_manifest.json",
+      "case": "task-062-case-001",
+      "roles": [
+        "case_id",
+        "variant_key",
+        "variant",
+        "probe_U",
+        "probe_k",
+        "probe_omega",
+        "response_U",
+        "solver_log",
+        "checkMesh_log",
+        "field_U",
+        "controlDict",
+        "probe_U_cell_interior_diagnostic"
+      ],
+      "field_U": {
+        "path": "cases/task-062-case-001/0/U",
+        "text": "FoamFile{format ascii; class volVectorField; object U;}\ndimensions      [0 1 -1 0 0 0 0];\ninternalField   uniform (1.2 0 0);\nboundaryField\n{\n    inlet\n    {\n        type            fixedProfile;\n        profile         csvFile;\n        profileCoeffs\n        {\n            nHeaderLine         0;\n            refColumn           0;\n            componentColumns    (1 2 3);\n            separator           \",\";\n            mergeSeparators     no;\n            file                \"/home/user/Desktop/profiles/inletPowerUProfile.csv\";\n            outOfBounds         clamp;\n            interpolationScheme  linear;\n        }\n        direction       (0 0 1);\n        origin          0;\n        value           uniform (0 0 0);\n    }\n    outlet     { type zeroGradient; }\n    sideLow    { type symmetryPlane; }\n    sideHigh   { type symmetryPlane; }\n    ground     { type noSlip; }\n    top        { type symmetryPlane; }\n    building   { type noSlip; }\n}\n"
+      },
+      "controlDict": {
+        "path": "cases/task-062-case-001/system/controlDict",
+        "text": "FoamFile{format ascii; class dictionary; object controlDict;}\napplication     simpleFoam;\nstartFrom       startTime;\nstartTime       0;\nstopAt          endTime;\nendTime         400;\ndeltaT          1;\nwriteControl    timeStep;\nwriteInterval   100;\npurgeWrite      0;\nwriteFormat     ascii;\nwritePrecision  10;\nwriteCompression off;\ntimeFormat      general;\ntimePrecision   6;\nrunTimeModifiable true;\nfunctions\n{\n    inletProbes\n    {\n        type            probes;\n        libs            (fieldFunctionObjects);\n        fields          (U k omega);\n        probeLocations  ( (-4.000000 0.062500 0.062500) (-4.000000 0.062500 0.187500) (-4.000000 0.062500 0.312500) (-4.000000 0.062500 0.437500) (-4.000000 0.062500 0.562500) (-4.000000 0.062500 0.687500) (-4.000000 0.062500 0.812500) (-4.000000 0.062500 0.937500) (-4.000000 0.062500 1.062500) (-4.000000 0.062500 1.187500) (-4.000000 0.062500 1.312500) (-4.000000 0.062500 1.437500) (-4.000000 0.062500 1.562500) (-4.000000 0.062500 1.687500) (-4.000000 0.062500 1.812500) (-4.000000 0.062500 1.937500) (-4.000000 0.062500 2.062500) (-4.000000 0.062500 2.187500) (-4.000000 0.062500 2.312500) (-4.000000 0.062500 2.437500) (-4.000000 0.062500 2.562500) (-4.000000 0.062500 2.687500) (-4.000000 0.062500 2.812500) (-4.000000 0.062500 2.937500) (-4.000000 0.062500 3.062500) (-4.000000 0.062500 3.187500) (-4.000000 0.062500 3.312500) (-4.000000 0.062500 3.437500) (-4.000000 0.062500 3.562500) (-4.000000 0.062500 3.687500) (-4.000000 0.062500 3.812500) (-4.000000 0.062500 3.937500) (-4.000000 0.062500 4.125000) (-4.000000 0.062500 4.375000) (-4.000000 0.062500 4.625000) (-4.000000 0.062500 4.875000) (-4.000000 0.062500 5.125000) (-4.000000 0.062500 5.375000) (-4.000000 0.062500 5.625000) (-4.000000 0.062500 5.875000) (-4.000000 0.062500 6.125000) (-4.000000 0.062500 6.375000) (-4.000000 0.062500 6.625000) (-4.000000 0.062500 6.875000) (-4.000000 0.062500 7.125000) (-4.000000 0.062500 7.375000) (-4.000000 0.062500 7.625000) (-4.000000 0.062500 7.875000) (-4.000000 0.062500 8.125000) (-4.000000 0.062500 8.375000) (-4.000000 0.062500 8.625000) (-4.000000 0.062500 8.875000) );\n        writeControl    timeStep;\n        writeInterval   20;\n        interpolationScheme cellPoint;\n    }\n    responseProbes\n    {\n        type            probes;\n        libs            (fieldFunctionObjects);\n        fields          (U);\n        probeLocations  ( (0.75 -1 1.4375) (0.75 0 1.4375) (0.75 1 1.4375) (1.25 -1 1.4375) (1.25 0 1.4375) (1.25 1 1.4375) (2 -1 1.4375) (2 0 1.4375) (2 1 1.4375) (3 -1 1.4375) (3 0 1.4375) (3 1 1.4375) (4 -1 1.4375) (4 0 1.4375) (4 1 1.4375) (6 -1 1.4375) (6 0 1.4375) (6 1 1.4375) (8 -1 1.4375) (8 0 1.4375) (8 1 1.4375) (12 -1 1.4375) (12 0 1.4375) (12 1 1.4375) (0.75 -1 4.375) (0.75 0 4.375) (0.75 1 4.375) (1.25 -1 4.375) (1.25 0 4.375) (1.25 1 4.375) (2 -1 4.375) (2 0 4.375) (2 1 4.375) (3 -1 4.375) (3 0 4.375) (3 1 4.375) (4 -1 4.375) (4 0 4.375) (4 1 4.375) (6 -1 4.375) (6 0 4.375) (6 1 4.375) (8 -1 4.375) (8 0 4.375) (8 1 4.375) (12 -1 4.375) (12 0 4.375) (12 1 4.375) );\n        writeControl    timeStep;\n        writeInterval   20;\n        interpolationScheme cellPoint;\n    }\n}\n"
+      }
+    },
+    {
+      "manifest": "profile_law_evidence_manifest.json",
+      "case": "task-062-case-002",
+      "roles": [
+        "case_id",
+        "variant_key",
+        "variant",
+        "probe_U",
+        "probe_k",
+        "probe_omega",
+        "response_U",
+        "solver_log",
+        "checkMesh_log",
+        "field_U",
+        "controlDict",
+        "probe_U_cell_interior_diagnostic"
+      ],
+      "field_U": {
+        "path": "cases/task-062-case-002/0/U",
+        "text": "FoamFile{format ascii; class volVectorField; object U;}\ndimensions      [0 1 -1 0 0 0 0];\ninternalField   uniform (1.2 0 0);\nboundaryField\n{\n    inlet\n    {\n        type            atmBoundaryLayerInletVelocity;\n        kappa           0.41;\n        Cmu             0.09;\n        flowDir         (1 0 0);\n        zDir            (0 0 1);\n        Uref            1.2;\n        Zref            4.0;\n        z0              uniform 0.01;\n        d               uniform 0.0;\n        value           uniform (0 0 0);\n    }\n    outlet     { type zeroGradient; }\n    sideLow    { type symmetryPlane; }\n    sideHigh   { type symmetryPlane; }\n    ground     { type noSlip; }\n    top        { type symmetryPlane; }\n    building   { type noSlip; }\n}\n"
+      },
+      "controlDict": {
+        "path": "cases/task-062-case-002/system/controlDict",
+        "text": "FoamFile{format ascii; class dictionary; object controlDict;}\napplication     simpleFoam;\nstartFrom       startTime;\nstartTime       0;\nstopAt          endTime;\nendTime         400;\ndeltaT          1;\nwriteControl    timeStep;\nwriteInterval   100;\npurgeWrite      0;\nwriteFormat     ascii;\nwritePrecision  10;\nwriteCompression off;\ntimeFormat      general;\ntimePrecision   6;\nrunTimeModifiable true;\nfunctions\n{\n    inletProbes\n    {\n        type            probes;\n        libs            (fieldFunctionObjects);\n        fields          (U k omega);\n        probeLocations  ( (-4.000000 0.062500 0.062500) (-4.000000 0.062500 0.187500) (-4.000000 0.062500 0.312500) (-4.000000 0.062500 0.437500) (-4.000000 0.062500 0.562500) (-4.000000 0.062500 0.687500) (-4.000000 0.062500 0.812500) (-4.000000 0.062500 0.937500) (-4.000000 0.062500 1.062500) (-4.000000 0.062500 1.187500) (-4.000000 0.062500 1.312500) (-4.000000 0.062500 1.437500) (-4.000000 0.062500 1.562500) (-4.000000 0.062500 1.687500) (-4.000000 0.062500 1.812500) (-4.000000 0.062500 1.937500) (-4.000000 0.062500 2.062500) (-4.000000 0.062500 2.187500) (-4.000000 0.062500 2.312500) (-4.000000 0.062500 2.437500) (-4.000000 0.062500 2.562500) (-4.000000 0.062500 2.687500) (-4.000000 0.062500 2.812500) (-4.000000 0.062500 2.937500) (-4.000000 0.062500 3.062500) (-4.000000 0.062500 3.187500) (-4.000000 0.062500 3.312500) (-4.000000 0.062500 3.437500) (-4.000000 0.062500 3.562500) (-4.000000 0.062500 3.687500) (-4.000000 0.062500 3.812500) (-4.000000 0.062500 3.937500) (-4.000000 0.062500 4.125000) (-4.000000 0.062500 4.375000) (-4.000000 0.062500 4.625000) (-4.000000 0.062500 4.875000) (-4.000000 0.062500 5.125000) (-4.000000 0.062500 5.375000) (-4.000000 0.062500 5.625000) (-4.000000 0.062500 5.875000) (-4.000000 0.062500 6.125000) (-4.000000 0.062500 6.375000) (-4.000000 0.062500 6.625000) (-4.000000 0.062500 6.875000) (-4.000000 0.062500 7.125000) (-4.000000 0.062500 7.375000) (-4.000000 0.062500 7.625000) (-4.000000 0.062500 7.875000) (-4.000000 0.062500 8.125000) (-4.000000 0.062500 8.375000) (-4.000000 0.062500 8.625000) (-4.000000 0.062500 8.875000) );\n        writeControl    timeStep;\n        writeInterval   20;\n        interpolationScheme cellPoint;\n    }\n    responseProbes\n    {\n        type            probes;\n        libs            (fieldFunctionObjects);\n        fields          (U);\n        probeLocations  ( (0.75 -1 1.4375) (0.75 0 1.4375) (0.75 1 1.4375) (1.25 -1 1.4375) (1.25 0 1.4375) (1.25 1 1.4375) (2 -1 1.4375) (2 0 1.4375) (2 1 1.4375) (3 -1 1.4375) (3 0 1.4375) (3 1 1.4375) (4 -1 1.4375) (4 0 1.4375) (4 1 1.4375) (6 -1 1.4375) (6 0 1.4375) (6 1 1.4375) (8 -1 1.4375) (8 0 1.4375) (8 1 1.4375) (12 -1 1.4375) (12 0 1.4375) (12 1 1.4375) (0.75 -1 4.375) (0.75 0 4.375) (0.75 1 4.375) (1.25 -1 4.375) (1.25 0 4.375) (1.25 1 4.375) (2 -1 4.375) (2 0 4.375) (2 1 4.375) (3 -1 4.375) (3 0 4.375) (3 1 4.375) (4 -1 4.375) (4 0 4.375) (4 1 4.375) (6 -1 4.375) (6 0 4.375) (6 1 4.375) (8 -1 4.375) (8 0 4.375) (8 1 4.375) (12 -1 4.375) (12 0 4.375) (12 1 4.375) );\n        writeControl    timeStep;\n        writeInterval   20;\n        interpolationScheme cellPoint;\n    }\n}\n"
+      }
+    }
+  ]
+}

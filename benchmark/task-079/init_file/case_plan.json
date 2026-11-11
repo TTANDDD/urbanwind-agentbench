@@ -1,0 +1,65 @@
+{
+  "cases": [
+    {
+      "case_id": "task-079-case-001",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "SB4_LOCAL",
+        "anchor_state": "local_generator_ready",
+        "controlled_factor": "inlet_outlet_mass_flux_closure",
+        "data_origin": "deterministic_local_generation",
+        "focus": "逐时计算体积和质量流率差并定位边界设置或网格问题。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "入口出口质量守恒-参考工况",
+        "variant_key": "single_building_no_source_raw_phi_closure"
+      },
+      "metrics": [
+        "mass_flux_mismatch_percent",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "100*abs(sum(phi_inlet)+sum(phi_outlet))/max(abs(sum(phi_inlet)),1e-12); phi is the raw oriented volumetric face flux from 400/phi and all other boundaries are frozen impermeable with zero sources",
+        "id": "mass_flux_mismatch_percent",
+        "name_zh": "入口出口质量通量不平衡率",
+        "unit": "%"
+      },
+      "purpose": "执行冻结simpleFoam算例，从原始400/phi逐面复算入口与出口通量闭合并验证全部数值门禁。",
+      "reference_status": "verified_openfoam_numerical_reference_generated",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-079",
+      "variant": "无源单体建筑入口-出口原始phi质量闭合验证"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "cfd",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 1,
+  "required_solver_runs": 1,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-079"
+}

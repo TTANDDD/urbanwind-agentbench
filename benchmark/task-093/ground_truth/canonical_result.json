@@ -1,0 +1,15 @@
+{
+  "case_ids": [
+    "task-093-case-001",
+    "task-093-case-002",
+    "task-093-case-003"
+  ],
+  "claim_boundary": "Frozen OpenFOAM numerical reference; not experimental truth.",
+  "primary_metric": {
+    "id": "roughness_sensitivity_slope",
+    "unit": "1",
+    "value": -0.0016021670707668774
+  },
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-093"
+}

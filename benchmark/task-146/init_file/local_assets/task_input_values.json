@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "等时间间隔速度时序",
+      "role_id": "input-001",
+      "seed": 202609044601,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.42484491,
+        0.23616547,
+        0.67712137,
+        0.36923069,
+        0.42522269,
+        0.99915224,
+        0.81544177,
+        0.94348433,
+        0.47613159,
+        0.57468121,
+        0.30512862,
+        0.49770002,
+        0.39300206,
+        0.13298925,
+        0.33111973,
+        0.92164407
+      ]
+    },
+    {
+      "label": "冻结窗函数与频带",
+      "role_id": "input-002",
+      "seed": 202609044602,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.19337142,
+        0.38300824,
+        0.55970087,
+        0.15354463,
+        0.63567881,
+        0.88493111,
+        0.8138884,
+        0.69062953,
+        0.30918271,
+        0.70798399,
+        0.93281795,
+        0.63847742,
+        0.48458452,
+        0.2869011,
+        0.41417175,
+        0.31193655
+      ]
+    },
+    {
+      "label": "参考主频或Strouhal数及不确定度",
+      "role_id": "input-003",
+      "seed": 202609044603,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.98679553,
+        0.70218961,
+        0.38178792,
+        0.20681683,
+        0.8063889,
+        0.30770803,
+        0.6086189,
+        0.33094995,
+        0.59586142,
+        0.88159863,
+        0.11238052,
+        0.6930991,
+        0.7639812,
+        0.23620605,
+        0.8833433,
+        0.63181801
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-146"
+}

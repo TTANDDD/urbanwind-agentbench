@@ -1,0 +1,452 @@
+{
+  "current_evaluator_boundary": "Only structural precheck is implemented and capped at 60/100.",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision": "decision.md",
+  "decision_required_terms": [
+    "证据",
+    "限制",
+    "结论"
+  ],
+  "evidence_manifest": "evidence_manifest.json",
+  "expected_case_ids": [
+    "task-046-case-001"
+  ],
+  "expected_solver_case_ids": [],
+  "metric_contracts": [
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "sum over both x and y cyclic patch pairs of faces on either side without exactly one translated four-vertex match within 1e-8 m, matching area within 1e-8 relative and opposite unit normal within 1e-8; reciprocal cyclic declarations, complete planes, all 16 solids and mesh quality are independent mandatory gates",
+      "id": "periodic_face_mismatch_count",
+      "name_zh": "周期面对不匹配数量",
+      "unit": "faces"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    }
+  ],
+  "metric_ids": [
+    "periodic_face_mismatch_count",
+    "evidence_provenance_fraction",
+    "hard_gate_pass_fraction"
+  ],
+  "metrics": "metrics.json",
+  "periodic_mesh_geometry_contract": {
+    "case_id": "task-046-case-001",
+    "flow_solver_runs": 0,
+    "full": {
+      "resolution_max_m": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    "gates": {
+      "area_relative_error_max": 1e-08,
+      "aspect_ratio_max": 10.0,
+      "atomic_grid_voxels_max": 2000000,
+      "cells_max": 200000,
+      "cells_min": 1000,
+      "coordinate_error_m": 1e-08,
+      "max_nonorthogonality_deg": 1.0,
+      "max_skewness": 1.0,
+      "normal_error_max": 1e-08,
+      "raw_box_volume_relative_error_max": 1e-09,
+      "volume_relative_error_max": 1e-08
+    },
+    "geometry": {
+      "building_area_m2": 80.0,
+      "centres_xy_m": [
+        [
+          0.75,
+          1
+        ],
+        [
+          2.75,
+          1
+        ],
+        [
+          4.75,
+          1
+        ],
+        [
+          6.75,
+          1
+        ],
+        [
+          1.25,
+          3
+        ],
+        [
+          3.25,
+          3
+        ],
+        [
+          5.25,
+          3
+        ],
+        [
+          7.25,
+          3
+        ],
+        [
+          0.75,
+          5
+        ],
+        [
+          2.75,
+          5
+        ],
+        [
+          4.75,
+          5
+        ],
+        [
+          6.75,
+          5
+        ],
+        [
+          1.25,
+          7
+        ],
+        [
+          3.25,
+          7
+        ],
+        [
+          5.25,
+          7
+        ],
+        [
+          7.25,
+          7
+        ]
+      ],
+      "cube_bounds_m": [
+        [
+          [
+            0.25,
+            1.25
+          ],
+          [
+            0.5,
+            1.5
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            2.25,
+            3.25
+          ],
+          [
+            0.5,
+            1.5
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            4.25,
+            5.25
+          ],
+          [
+            0.5,
+            1.5
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            6.25,
+            7.25
+          ],
+          [
+            0.5,
+            1.5
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0.75,
+            1.75
+          ],
+          [
+            2.5,
+            3.5
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            2.75,
+            3.75
+          ],
+          [
+            2.5,
+            3.5
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            4.75,
+            5.75
+          ],
+          [
+            2.5,
+            3.5
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            6.75,
+            7.75
+          ],
+          [
+            2.5,
+            3.5
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0.25,
+            1.25
+          ],
+          [
+            4.5,
+            5.5
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            2.25,
+            3.25
+          ],
+          [
+            4.5,
+            5.5
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            4.25,
+            5.25
+          ],
+          [
+            4.5,
+            5.5
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            6.25,
+            7.25
+          ],
+          [
+            4.5,
+            5.5
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0.75,
+            1.75
+          ],
+          [
+            6.5,
+            7.5
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            2.75,
+            3.75
+          ],
+          [
+            6.5,
+            7.5
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            4.75,
+            5.75
+          ],
+          [
+            6.5,
+            7.5
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            6.75,
+            7.75
+          ],
+          [
+            6.5,
+            7.5
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      ],
+      "cube_count": 16,
+      "cube_height_m": 1.0,
+      "domain_bounds_m": [
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          7.4
+        ]
+      ],
+      "fluid_volume_m3": 457.6,
+      "ground_area_m2": 48.0,
+      "row_offset_m": 0.5
+    },
+    "legal_alternatives": "Other integer resolutions and conformal block layouts satisfying all public constraints are valid; no reference cell count, ID or byte equality is required.",
+    "measurement": "Use all raw face vertices, oriented area vectors and owner/neighbour topology. Pair in both directions with a translated vertex bijection, not only a face centre. Missing planes, wrong neighbours, duplicate pairing, wrong geometry or quality are hard rejection regardless of mismatch metric.",
+    "metric": {
+      "formula": "sum over both x and y cyclic patch pairs of faces on either side without exactly one translated four-vertex match within 1e-8 m, matching area within 1e-8 relative and opposite unit normal within 1e-8; reciprocal cyclic declarations, complete planes, all 16 solids and mesh quality are independent mandatory gates",
+      "id": "periodic_face_mismatch_count",
+      "name_zh": "周期面对不匹配数量",
+      "unit": "faces"
+    },
+    "mpi_ranks": 16,
+    "periodic": [
+      {
+        "axis": 0,
+        "high": "xHigh",
+        "low": "xLow",
+        "translation_m": [
+          8.0,
+          0,
+          0
+        ]
+      },
+      {
+        "axis": 1,
+        "high": "yHigh",
+        "low": "yLow",
+        "translation_m": [
+          0,
+          8.0,
+          0
+        ]
+      }
+    ],
+    "physical_cpus": "80-95",
+    "qualification": {
+      "resolution_max_m": [
+        0.5,
+        0.5,
+        0.4
+      ]
+    },
+    "schema_version": "1.0",
+    "software": "OpenCFD-v2412",
+    "task_id": "urbanwind-task-046",
+    "tolerance": "Atomic plane indexing rounds coordinates to 1e-10m only for partition proof. All geometric distances/areas and periodic pairing use raw coordinates. Resolution comparisons allow relative 1e-9.",
+    "tool_sequence": [
+      "blockMesh",
+      "checkMesh",
+      "decomposePar",
+      "checkMesh.parallel"
+    ],
+    "topology": "Conformal axis-aligned six-quadrilateral-face hexahedra; raw cell boxes must tile the entire fluid domain exactly once and exclude each of the 16 visible solids.",
+    "truth_boundary": "Local periodic array mesh-tool reference only; not a periodic precursor flow, CFD/LES prediction, yplus claim or experimental truth."
+  },
+  "required_external_inputs": [],
+  "required_inputs": [
+    "随任务本地生成的几何与网格目标",
+    "冻结网格质量门槛",
+    "待实际工具执行的网格日志"
+  ],
+  "required_solver_runs": 0,
+  "run_manifest": "run_manifest.json",
+  "schema_version": "1.0",
+  "score_layers": {
+    "artifact_and_schema": 10,
+    "engineering_decision": 10,
+    "external_validation": 15,
+    "numerical_quality": 20,
+    "physical_fidelity": 25,
+    "real_tool_execution": 20
+  },
+  "task_id": "urbanwind-task-046",
+  "tool_result_directory": "periodic_mesh_case"
+}

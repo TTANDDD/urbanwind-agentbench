@@ -1,0 +1,2 @@
+case_id,variant,seed,wind_direction_deg,reference_speed_m_s,stability,surface_heat_flux_w_m2,sgs_model,time_step_s,convection_scheme,pressure_velocity_coupling,roughness_length_m,source_configuration,decomposition_method,restart_segments,software_variant,controlled_factor,controlled_level
+task-079-case-001,无源单体建筑入口-出口原始phi质量闭合验证,202609037900,0.0,1.2,neutral,0.0,,,,,,no_sources_inlet_fixedProfile_outlet_inletOutlet,,,,inlet_outlet_mass_flux_closure,raw_400_phi_inlet_outlet_face_sums

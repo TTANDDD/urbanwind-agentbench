@@ -1,0 +1,13 @@
+{
+  "answer_included": false,
+  "expected_agent_action": "diagnose and repair without changing unrelated settings",
+  "fault_family": "inlet_reference_height_offset",
+  "fault_seed": 202609030126,
+  "injected": true,
+  "observed_fault_parameters": {
+    "applied_reference_height_m": 3.0,
+    "contract_reference_height_m": 4.0
+  },
+  "target_file": "local_assets/boundary_profile.csv",
+  "task_id": "urbanwind-task-126"
+}

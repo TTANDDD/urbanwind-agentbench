@@ -1,0 +1,13 @@
+{
+  "case_ids": [
+    "task-065-case-001"
+  ],
+  "claim_boundary": "Reference-ready synthetic-inflow numerical replay only; release remains blocked.",
+  "primary_metric": {
+    "id": "inflow_spectral_band_error",
+    "unit": "fraction",
+    "value": 0.011679746554594974
+  },
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-065"
+}

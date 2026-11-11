@@ -1,0 +1,38 @@
+{
+  "all_required_roles_materialized": true,
+  "generator_version": "urbanwind-local-assets-v3",
+  "required_external_inputs": [],
+  "roles": [
+    {
+      "label": "随任务本地生成的入口/边界参数",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/synthetic_inflow_contract.json",
+        "local_assets/synthetic_inflow_probe_points.csv",
+        "local_assets/generate_synthetic_inflow.py"
+      ],
+      "role_id": "input-001"
+    },
+    {
+      "label": "本地目标剖面或守恒参考",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/synthetic_inflow_contract.json",
+        "local_assets/synthetic_inflow_probe_points.csv",
+        "local_assets/reference_spectrum.csv"
+      ],
+      "role_id": "input-002"
+    },
+    {
+      "label": "本地程序化计算域",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/openfoam_base/system/blockMeshDict",
+        "local_assets/city_geometry.geojson"
+      ],
+      "role_id": "input-003"
+    }
+  ],
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-065"
+}

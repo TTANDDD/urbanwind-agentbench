@@ -1,0 +1,215 @@
+{
+  "cases": [
+    {
+      "case_id": "task-197-case-001",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "LOCAL_MULTI",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "对两个冻结设计分别执行OpenFOAM与PALM配对工况，量化跨求解器偏差后选择满足门禁的方案。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "设计A-OpenFOAM"
+      },
+      "metrics": [
+        "cross_solver_calibration_error",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "weighted_mean(abs(calibrated_low_fidelity-high_fidelity))/reference_scale",
+        "id": "cross_solver_calibration_error",
+        "name_zh": "跨求解器校准误差",
+        "unit": "fraction"
+      },
+      "purpose": "OpenFOAM与PALM多保真方案选择：执行变体 设计A-OpenFOAM，围绕对两个冻结设计分别执行OpenFOAM与PALM配对工况，量化跨求解器偏差后选择满足门禁的方案。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-197",
+      "variant": "设计A-OpenFOAM"
+    },
+    {
+      "case_id": "task-197-case-002",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "LOCAL_MULTI",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "对两个冻结设计分别执行OpenFOAM与PALM配对工况，量化跨求解器偏差后选择满足门禁的方案。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "设计A-PALM"
+      },
+      "metrics": [
+        "cross_solver_calibration_error",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "weighted_mean(abs(calibrated_low_fidelity-high_fidelity))/reference_scale",
+        "id": "cross_solver_calibration_error",
+        "name_zh": "跨求解器校准误差",
+        "unit": "fraction"
+      },
+      "purpose": "OpenFOAM与PALM多保真方案选择：执行变体 设计A-PALM，围绕对两个冻结设计分别执行OpenFOAM与PALM配对工况，量化跨求解器偏差后选择满足门禁的方案。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-197",
+      "variant": "设计A-PALM"
+    },
+    {
+      "case_id": "task-197-case-003",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "LOCAL_MULTI",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "对两个冻结设计分别执行OpenFOAM与PALM配对工况，量化跨求解器偏差后选择满足门禁的方案。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "设计B-OpenFOAM"
+      },
+      "metrics": [
+        "cross_solver_calibration_error",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "weighted_mean(abs(calibrated_low_fidelity-high_fidelity))/reference_scale",
+        "id": "cross_solver_calibration_error",
+        "name_zh": "跨求解器校准误差",
+        "unit": "fraction"
+      },
+      "purpose": "OpenFOAM与PALM多保真方案选择：执行变体 设计B-OpenFOAM，围绕对两个冻结设计分别执行OpenFOAM与PALM配对工况，量化跨求解器偏差后选择满足门禁的方案。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-197",
+      "variant": "设计B-OpenFOAM"
+    },
+    {
+      "case_id": "task-197-case-004",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "LOCAL_MULTI",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "对两个冻结设计分别执行OpenFOAM与PALM配对工况，量化跨求解器偏差后选择满足门禁的方案。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "设计B-PALM"
+      },
+      "metrics": [
+        "cross_solver_calibration_error",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "weighted_mean(abs(calibrated_low_fidelity-high_fidelity))/reference_scale",
+        "id": "cross_solver_calibration_error",
+        "name_zh": "跨求解器校准误差",
+        "unit": "fraction"
+      },
+      "purpose": "OpenFOAM与PALM多保真方案选择：执行变体 设计B-PALM，围绕对两个冻结设计分别执行OpenFOAM与PALM配对工况，量化跨求解器偏差后选择满足门禁的方案。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-197",
+      "variant": "设计B-PALM"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "heavy",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 4,
+  "required_solver_runs": 4,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-197"
+}

@@ -1,0 +1,12 @@
+{
+  "answer_included": false,
+  "expected_agent_action": "diagnose and repair without changing unrelated settings",
+  "fault_family": "incomplete_parallel_reconstruction",
+  "fault_seed": 202609030136,
+  "injected": true,
+  "observed_fault_parameters": {
+    "missing_processor_time": "processor3/10/U"
+  },
+  "target_file": "local_assets/task_input_values.json",
+  "task_id": "urbanwind-task-136"
+}

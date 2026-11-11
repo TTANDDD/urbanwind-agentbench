@@ -1,0 +1,7 @@
+FoamFile { version 2.0; format ascii; class dictionary; object controlDict; }
+application pimpleFoam;
+startFrom startTime; startTime 0; stopAt endTime; endTime 50;
+deltaT 0.01; adjustTimeStep false; writeControl timeStep; writeInterval 100;
+purgeWrite 0; writeFormat ascii; writePrecision 12; writeCompression off;
+timeFormat general; timePrecision 12; runTimeModifiable false;
+functions {}

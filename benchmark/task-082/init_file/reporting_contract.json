@@ -1,0 +1,98 @@
+{
+  "current_evaluator_boundary": "Task-specific numerical-array and metric-recomputation check installed; experimental truth and frozen release runtime are not claimed.",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision": "decision.md",
+  "decision_required_terms": [
+    "证据",
+    "限制",
+    "结论"
+  ],
+  "evidence_manifest": "evidence_manifest.json",
+  "expected_case_ids": [
+    "task-082-case-001"
+  ],
+  "expected_solver_case_ids": [
+    "task-082-case-001"
+  ],
+  "metric_contracts": [
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "weighted_mean(abs(U_LES-U_local_reference))/U_reference",
+      "id": "les_local_reference_velocity_nmae",
+      "name_zh": "LES-本地数值参考速度NMAE",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "weighted_mean(abs(turbulence_LES-turbulence_local_reference))/turbulence_reference_scale",
+      "id": "les_local_reference_turbulence_nmae",
+      "name_zh": "LES-本地数值参考脉动统计NMAE",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    }
+  ],
+  "metric_ids": [
+    "les_local_reference_velocity_nmae",
+    "les_local_reference_turbulence_nmae",
+    "evidence_provenance_fraction",
+    "hard_gate_pass_fraction"
+  ],
+  "metrics": "metrics.json",
+  "required_external_inputs": [],
+  "required_inputs": [
+    "本地生成的OpenFOAM LES起始案例",
+    "本地入口剖面和湍流输入",
+    "本地数值参考的平均速度与脉动统计",
+    "冻结坐标、掩膜、采样频率和统计窗口"
+  ],
+  "required_solver_runs": 1,
+  "run_manifest": "run_manifest.json",
+  "schema_version": "1.0",
+  "score_layers": {
+    "artifact_and_schema": 10,
+    "engineering_decision": 10,
+    "external_validation": 15,
+    "numerical_quality": 20,
+    "physical_fidelity": 25,
+    "real_tool_execution": 20
+  },
+  "simulation_result_contract": {
+    "case_results": {
+      "array_length": 64,
+      "exact_case_ids": [
+        "task-082-case-001"
+      ],
+      "minimum_sample_count": 300,
+      "required_fields": [
+        "case_id",
+        "variant",
+        "window_s",
+        "sample_count",
+        "mean_Ux_m_s",
+        "resolved_tke_m2_s2",
+        "all_run_gates_pass"
+      ],
+      "units": {
+        "mean_Ux_m_s": "m/s",
+        "resolved_tke_m2_s2": "m2/s2"
+      }
+    },
+    "path": "simulation_metrics.json",
+    "selected_case_id_required": false,
+    "task_id": "urbanwind-task-082"
+  },
+  "task_id": "urbanwind-task-082"
+}

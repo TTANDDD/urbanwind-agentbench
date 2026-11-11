@@ -1,0 +1,67 @@
+{
+  "current_evaluator_boundary": "Task-specific raw neutral-ABL profile evaluator is installed; it verifies one numerical reference and is not release validation.",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision": "decision.md",
+  "decision_required_terms": [
+    "证据",
+    "限制",
+    "结论"
+  ],
+  "evidence_manifest": "evidence_manifest.json",
+  "expected_case_ids": [
+    "task-061-case-001"
+  ],
+  "expected_solver_case_ids": [
+    "task-061-case-001"
+  ],
+  "inlet_profile_results": "inlet_profile_results.json",
+  "metric_contracts": [
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "sqrt(sum_i(dz_i*(Ux_i-Ulog(z_i))^2)/sum_i(dz_i)); Ulog(z)=Uref*ln((z-d+z0)/z0)/ln((Zref-d+z0)/z0)",
+      "id": "inlet_profile_rmse_ms",
+      "name_zh": "入口剖面RMSE",
+      "unit": "m/s"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    }
+  ],
+  "metric_ids": [
+    "inlet_profile_rmse_ms",
+    "evidence_provenance_fraction",
+    "hard_gate_pass_fraction"
+  ],
+  "metrics": "metrics.json",
+  "neutral_abl_evidence_manifest": "neutral_abl_evidence_manifest.json",
+  "neutral_abl_input_contract": "local_assets/neutral_abl_contract.json",
+  "required_external_inputs": [],
+  "required_inputs": [
+    "随任务本地生成的入口/边界参数",
+    "本地目标剖面或守恒参考",
+    "本地程序化计算域"
+  ],
+  "required_solver_runs": 1,
+  "run_manifest": "run_manifest.json",
+  "schema_version": "1.0",
+  "score_layers": {
+    "artifact_and_schema": 10,
+    "engineering_decision": 10,
+    "external_validation": 15,
+    "numerical_quality": 20,
+    "physical_fidelity": 25,
+    "real_tool_execution": 20
+  },
+  "task_id": "urbanwind-task-061"
+}

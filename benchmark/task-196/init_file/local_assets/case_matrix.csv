@@ -1,0 +1,7 @@
+case_id,variant,seed,wind_direction_deg,reference_speed_m_s,stability,surface_heat_flux_w_m2,sgs_model,time_step_s,convection_scheme,pressure_velocity_coupling,roughness_length_m,source_configuration,decomposition_method,restart_segments,software_variant,controlled_factor,controlled_level
+task-196-case-001,RANS候选1,202609049600,0.0,1.2,neutral,0.0,,,,,,,,,RANS,fidelity_and_candidate,RANS候选1
+task-196-case-002,RANS候选2,202609049600,0.0,1.2,neutral,0.0,,,,,,,,,RANS,fidelity_and_candidate,RANS候选2
+task-196-case-003,RANS候选3,202609049600,0.0,1.2,neutral,0.0,,,,,,,,,RANS,fidelity_and_candidate,RANS候选3
+task-196-case-004,RANS候选4,202609049600,0.0,1.2,neutral,0.0,,,,,,,,,RANS,fidelity_and_candidate,RANS候选4
+task-196-case-005,LES复核1,202609049600,0.0,1.2,neutral,0.0,,,,,,,,,LES,fidelity_and_candidate,LES复核1
+task-196-case-006,LES复核2,202609049600,0.0,1.2,neutral,0.0,,,,,,,,,LES,fidelity_and_candidate,LES复核2

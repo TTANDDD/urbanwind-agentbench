@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "足够长的原始时间序列",
+      "role_id": "input-001",
+      "seed": 202609045401,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.1438204,
+        0.8930618,
+        0.61182226,
+        0.91903722,
+        0.79313741,
+        0.81379213,
+        0.39316772,
+        0.85666088,
+        0.92854915,
+        0.09767936,
+        0.59119275,
+        0.47916459,
+        0.66734028,
+        0.47052407,
+        0.09919166,
+        0.62683126
+      ]
+    },
+    {
+      "label": "冻结块长度规则",
+      "role_id": "input-002",
+      "seed": 202609045402,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.11265858,
+        0.73157889,
+        0.43559517,
+        0.05797229,
+        0.33768682,
+        0.51445975,
+        0.78803353,
+        0.43956787,
+        0.39389239,
+        0.70569857,
+        0.41373729,
+        0.7114995,
+        0.55700052,
+        0.45899769,
+        0.66320969,
+        0.56242205
+      ]
+    },
+    {
+      "label": "参考稳定窗口",
+      "role_id": "input-003",
+      "seed": 202609045403,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.60386708,
+        0.40707058,
+        0.86675156,
+        0.77701972,
+        0.71028612,
+        0.41123715,
+        0.68037735,
+        0.17322962,
+        0.97262283,
+        0.37588946,
+        0.97409555,
+        0.2144075,
+        0.48555611,
+        0.36530104,
+        0.47561301,
+        0.3498784
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-154"
+}

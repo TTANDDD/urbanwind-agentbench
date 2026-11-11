@@ -1,0 +1,25 @@
+{
+  "answer_included": false,
+  "expected_agent_action": "diagnose and repair without changing unrelated settings",
+  "fault_family": "terrain_voids",
+  "fault_seed": 202609030027,
+  "injected": true,
+  "observed_fault_parameters": {
+    "void_cells": [
+      [
+        10,
+        10
+      ],
+      [
+        15,
+        10
+      ],
+      [
+        10,
+        15
+      ]
+    ]
+  },
+  "target_file": "local_assets/terrain_and_surface.csv",
+  "task_id": "urbanwind-task-027"
+}

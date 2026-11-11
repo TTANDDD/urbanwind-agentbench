@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "控制体压力/速度/雷诺应力/壁面项",
+      "role_id": "input-001",
+      "seed": 202609045701,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.39578015,
+        0.93329772,
+        0.7549068,
+        0.2265626,
+        0.3358517,
+        0.88345935,
+        0.2308785,
+        0.6746308,
+        0.12031989,
+        0.84962019,
+        0.11372935,
+        0.55548558,
+        0.81410944,
+        0.63751448,
+        0.56333363,
+        0.83648679
+      ]
+    },
+    {
+      "label": "统一法向和体积分权重",
+      "role_id": "input-002",
+      "seed": 202609045702,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.71999607,
+        0.6853401,
+        0.59892625,
+        0.56680337,
+        0.16726864,
+        0.59828719,
+        0.86763194,
+        0.59649434,
+        0.30959364,
+        0.52904882,
+        0.19719187,
+        0.39452817,
+        0.43769737,
+        0.54551987,
+        0.55648097,
+        0.23163714
+      ]
+    },
+    {
+      "label": "参考动量收支",
+      "role_id": "input-003",
+      "seed": 202609045703,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.8016377,
+        0.61418326,
+        0.82073026,
+        0.69128038,
+        0.53331697,
+        0.5907291,
+        0.37443234,
+        0.81048245,
+        0.08479673,
+        0.54804348,
+        0.07347154,
+        0.70174713,
+        0.7616193,
+        0.57874783,
+        0.05316693,
+        0.46416557
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-157"
+}

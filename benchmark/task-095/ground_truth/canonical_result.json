@@ -1,0 +1,19 @@
+{
+  "case_ids": [
+    "task-095-case-001",
+    "task-095-case-002",
+    "task-095-case-003"
+  ],
+  "claim_boundary": "Three-case OpenFOAM stability-regime city-LES numerical reference; not experimental truth.",
+  "primary_metric": {
+    "id": "les_stability_exchange_response",
+    "unit": "fraction",
+    "value": 0.003000238973978266
+  },
+  "schema_version": "1.0",
+  "signed_regime_responses": {
+    "stable": 0.003200678146327582,
+    "unstable": 0.0027997998016289494
+  },
+  "task_id": "urbanwind-task-095"
+}

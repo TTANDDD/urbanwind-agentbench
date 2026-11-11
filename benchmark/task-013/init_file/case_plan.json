@@ -1,0 +1,63 @@
+{
+  "cases": [
+    {
+      "case_id": "task-013-case-001",
+      "execution_role": "provided_data_or_tool_execution",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "LOCAL_MULTI",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "把PIV/风洞实测、DNS数值参考、RANS/LES结果和工程代理指标分层登记。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "实验真值与数值参考分层-目标案例"
+      },
+      "metrics": [
+        "truth_layer_classification_accuracy",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "correct_truth_layer_labels / audited_assets",
+        "id": "truth_layer_classification_accuracy",
+        "name_zh": "真值层级分类准确率",
+        "unit": "fraction"
+      },
+      "purpose": "实验真值与数值参考分层：执行变体 实验真值与数值参考分层-目标案例，围绕把PIV/风洞实测、DNS数值参考、RANS/LES结果和工程代理指标分层登记。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "document_reader"
+      ],
+      "task_id": "urbanwind-task-013",
+      "variant": "实验真值与数值参考分层-目标案例"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "lite",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 1,
+  "required_solver_runs": 0,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-013"
+}

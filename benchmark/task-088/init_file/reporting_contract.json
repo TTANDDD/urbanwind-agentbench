@@ -1,0 +1,460 @@
+{
+  "current_evaluator_boundary": "Six model-visible raw probe/plane products are parsed, hash checked and compared to hidden OpenFOAM numerical signatures; no experimental truth or frozen release runtime is claimed.",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision": "decision.md",
+  "decision_required_terms": [
+    "证据",
+    "限制",
+    "结论"
+  ],
+  "evidence_manifest": "evidence_manifest.json",
+  "expected_case_ids": [
+    "task-088-case-001"
+  ],
+  "expected_solver_case_ids": [
+    "task-088-case-001"
+  ],
+  "metric_contracts": [
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "verified_products/6 for probes_{U,p}, pedestrianPlane_{U,p}@z=1m, wakePlane_{U,p}@x=2m; probes t=60-420s and planes at 60s intervals",
+      "id": "sampling_location_coverage",
+      "name_zh": "探针切面位置覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    }
+  ],
+  "metric_ids": [
+    "sampling_location_coverage",
+    "evidence_provenance_fraction",
+    "hard_gate_pass_fraction"
+  ],
+  "metrics": "metrics.json",
+  "required_external_inputs": [],
+  "required_inputs": [
+    "随任务本地生成的OpenFOAM起始案例",
+    "本地OpenFOAM运行版本记录合同",
+    "本地合成数值参考（仅作固定比较输入，不是PIV或实验真值）"
+  ],
+  "required_solver_runs": 1,
+  "run_manifest": "run_manifest.json",
+  "sampling_result_contract": {
+    "manifest_path": "sampling_manifest.json",
+    "manifest_product_contract": {
+      "plane_output": {
+        "required_fields": [
+          "time_s",
+          "path",
+          "sha256"
+        ]
+      },
+      "plane_product": {
+        "required_fields": [
+          "product_id",
+          "kind",
+          "plane",
+          "field",
+          "outputs"
+        ]
+      },
+      "probe_product": {
+        "required_fields": [
+          "product_id",
+          "kind",
+          "field",
+          "path",
+          "sha256"
+        ]
+      }
+    },
+    "metric_formula": "verified_required_sampling_products / 6",
+    "minimum_probe_samples": 1800,
+    "plane_times_s": [
+      60.0,
+      120.0,
+      180.0,
+      240.0,
+      300.0,
+      360.0,
+      420.0
+    ],
+    "planes": {
+      "pedestrianPlane": {
+        "minimum_rows": 1000,
+        "type": "cuttingPlane",
+        "z_m": 1.0
+      },
+      "wakePlane": {
+        "minimum_rows": 1000,
+        "type": "cuttingPlane",
+        "x_m": 2.0
+      }
+    },
+    "probe_count": 64,
+    "probe_points_m": [
+      [
+        -2.0,
+        0.5,
+        1.0
+      ],
+      [
+        -1.75,
+        0.5,
+        1.0
+      ],
+      [
+        -1.5,
+        0.5,
+        1.0
+      ],
+      [
+        -1.25,
+        0.5,
+        1.0
+      ],
+      [
+        -1.0,
+        0.5,
+        1.0
+      ],
+      [
+        -0.75,
+        0.5,
+        1.0
+      ],
+      [
+        0.75,
+        0.5,
+        1.0
+      ],
+      [
+        1.0,
+        0.5,
+        1.0
+      ],
+      [
+        1.25,
+        0.5,
+        1.0
+      ],
+      [
+        1.5,
+        0.5,
+        1.0
+      ],
+      [
+        1.75,
+        0.5,
+        1.0
+      ],
+      [
+        2.0,
+        0.5,
+        1.0
+      ],
+      [
+        2.25,
+        0.5,
+        1.0
+      ],
+      [
+        2.5,
+        0.5,
+        1.0
+      ],
+      [
+        2.75,
+        0.5,
+        1.0
+      ],
+      [
+        3.0,
+        0.5,
+        1.0
+      ],
+      [
+        3.25,
+        0.5,
+        1.0
+      ],
+      [
+        3.5,
+        0.5,
+        1.0
+      ],
+      [
+        3.75,
+        0.5,
+        1.0
+      ],
+      [
+        4.0,
+        0.5,
+        1.0
+      ],
+      [
+        4.25,
+        0.5,
+        1.0
+      ],
+      [
+        4.5,
+        0.5,
+        1.0
+      ],
+      [
+        4.75,
+        0.5,
+        1.0
+      ],
+      [
+        5.0,
+        0.5,
+        1.0
+      ],
+      [
+        5.25,
+        0.5,
+        1.0
+      ],
+      [
+        5.5,
+        0.5,
+        1.0
+      ],
+      [
+        5.75,
+        0.5,
+        1.0
+      ],
+      [
+        6.0,
+        0.5,
+        1.0
+      ],
+      [
+        6.25,
+        0.5,
+        1.0
+      ],
+      [
+        6.5,
+        0.5,
+        1.0
+      ],
+      [
+        6.75,
+        0.5,
+        1.0
+      ],
+      [
+        7.0,
+        0.5,
+        1.0
+      ],
+      [
+        7.25,
+        0.5,
+        1.0
+      ],
+      [
+        7.5,
+        0.5,
+        1.0
+      ],
+      [
+        7.75,
+        0.5,
+        1.0
+      ],
+      [
+        8.0,
+        0.5,
+        1.0
+      ],
+      [
+        8.25,
+        0.5,
+        1.0
+      ],
+      [
+        8.5,
+        0.5,
+        1.0
+      ],
+      [
+        8.75,
+        0.5,
+        1.0
+      ],
+      [
+        9.0,
+        0.5,
+        1.0
+      ],
+      [
+        9.25,
+        0.5,
+        1.0
+      ],
+      [
+        9.5,
+        0.5,
+        1.0
+      ],
+      [
+        9.75,
+        0.5,
+        1.0
+      ],
+      [
+        10.0,
+        0.5,
+        1.0
+      ],
+      [
+        10.25,
+        0.5,
+        1.0
+      ],
+      [
+        10.5,
+        0.5,
+        1.0
+      ],
+      [
+        10.75,
+        0.5,
+        1.0
+      ],
+      [
+        11.0,
+        0.5,
+        1.0
+      ],
+      [
+        11.25,
+        0.5,
+        1.0
+      ],
+      [
+        11.5,
+        0.5,
+        1.0
+      ],
+      [
+        11.75,
+        0.5,
+        1.0
+      ],
+      [
+        12.0,
+        0.5,
+        1.0
+      ],
+      [
+        12.25,
+        0.5,
+        1.0
+      ],
+      [
+        12.5,
+        0.5,
+        1.0
+      ],
+      [
+        12.75,
+        0.5,
+        1.0
+      ],
+      [
+        13.0,
+        0.5,
+        1.0
+      ],
+      [
+        13.25,
+        0.5,
+        1.0
+      ],
+      [
+        13.5,
+        0.5,
+        1.0
+      ],
+      [
+        13.75,
+        0.5,
+        1.0
+      ],
+      [
+        1.0,
+        0.0,
+        1.0
+      ],
+      [
+        2.0,
+        0.0,
+        1.0
+      ],
+      [
+        4.0,
+        0.0,
+        1.0
+      ],
+      [
+        8.0,
+        0.0,
+        1.0
+      ],
+      [
+        12.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "probe_window_s": [
+      60.0,
+      420.0
+    ],
+    "raw_file_policy": "All paths must be relative to the submission root, unique, SHA-256 matched and parseable as OpenFOAM raw sampling output.",
+    "required_fields": [
+      "U",
+      "p"
+    ],
+    "required_product_ids": [
+      "probes_U",
+      "probes_p",
+      "pedestrianPlane_U",
+      "pedestrianPlane_p",
+      "wakePlane_U",
+      "wakePlane_p"
+    ],
+    "schema_version": "1.0",
+    "task_id": "urbanwind-task-088",
+    "truth_boundary": "This visible contract defines locations/fields/times only and contains no hidden numerical answer."
+  },
+  "schema_version": "1.0",
+  "score_layers": {
+    "artifact_and_schema": 10,
+    "engineering_decision": 10,
+    "external_validation": 15,
+    "numerical_quality": 20,
+    "physical_fidelity": 25,
+    "real_tool_execution": 20
+  },
+  "task_id": "urbanwind-task-088"
+}

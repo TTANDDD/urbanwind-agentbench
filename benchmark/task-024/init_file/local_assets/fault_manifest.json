@@ -1,0 +1,15 @@
+{
+  "answer_included": false,
+  "expected_agent_action": "diagnose and repair without changing unrelated settings",
+  "fault_family": "overlapping_buildings",
+  "fault_seed": 202609030024,
+  "injected": true,
+  "observed_fault_parameters": {
+    "features": [
+      "b-00-00",
+      "b-00-01"
+    ]
+  },
+  "target_file": "local_assets/city_geometry.geojson",
+  "task_id": "urbanwind-task-024"
+}

@@ -1,0 +1,27 @@
+{
+  "experimental_claim": false,
+  "group_absolute_difference_m_s": {
+    "pedestrian_layer": 0.012496202749744787,
+    "roof_layer": 0.0059840580615208245
+  },
+  "metric_formula": "0.5*(mean_{p:z=1.4375,i=340,360,380,400}|Ux_power(i,p)-Ux_log(i,p)|+mean_{p:z=4.375,i=340,360,380,400}|Ux_power(i,p)-Ux_log(i,p)|)/1.2",
+  "response_iterations": [
+    340,
+    360,
+    380,
+    400
+  ],
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-062",
+  "truth_type": "verified_openfoam_numerical_reference",
+  "units": {
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction",
+    "profile_model_response_difference": "fraction"
+  },
+  "values": {
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0,
+    "profile_model_response_difference": 0.007700108671360672
+  }
+}

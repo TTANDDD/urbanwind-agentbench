@@ -1,0 +1,12 @@
+{
+  "answer_included": false,
+  "expected_agent_action": "diagnose and repair without changing unrelated settings",
+  "fault_family": "mesh_hole_leak",
+  "fault_seed": 202609030121,
+  "injected": true,
+  "observed_fault_parameters": {
+    "symptom": "open_surface_leak"
+  },
+  "target_file": "local_assets/openfoam_base/constant/triSurface/building.stl",
+  "task_id": "urbanwind-task-121"
+}

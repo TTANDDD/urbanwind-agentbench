@@ -1,0 +1,36 @@
+{
+  "all_required_roles_materialized": true,
+  "generator_version": "urbanwind-local-assets-v3",
+  "required_external_inputs": [],
+  "roles": [
+    {
+      "label": "本地生成的流场或多物理场",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/model_field.csv",
+        "local_assets/reference_field.csv",
+        "local_assets/reference_diagnostics.json"
+      ],
+      "role_id": "input-001"
+    },
+    {
+      "label": "本地空间掩膜与权重",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/mask_and_weights.csv"
+      ],
+      "role_id": "input-002"
+    },
+    {
+      "label": "冻结参考诊断结果",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/reference_diagnostics.json",
+        "local_assets/task_input_values.json"
+      ],
+      "role_id": "input-003"
+    }
+  ],
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-178"
+}

@@ -1,0 +1,115 @@
+{
+  "actual_alternative_representation_qualified": true,
+  "actual_current_full7_native_calls": 7,
+  "actual_historical_owned_CFD_total": 2,
+  "agent_performance_claimed": false,
+  "all_current_native_calls_closed": true,
+  "all_original_failures_and_archives_preserved": true,
+  "artifacts": [
+    {
+      "bytes": 1563312280,
+      "path": "task056-v54-owned-runtime-raw.tar.gz",
+      "sha256": "ee33ab23e18e785deb4b0838da5e42b4509872232e6b175e4eee9d61d8ca37b4"
+    },
+    {
+      "bytes": 72357,
+      "path": "blockMesh.log",
+      "sha256": "98d434fad296568e33646d79cca473689e37c5eafe9a3110a53cac53a7fb93b1"
+    },
+    {
+      "bytes": 5222,
+      "path": "checkMesh.log",
+      "sha256": "7ef9ca551a8b13f3669ae198f3438ad4a89de4c6463488a88894c08f19035199"
+    },
+    {
+      "bytes": 20612143,
+      "path": "pimpleFoam.log",
+      "sha256": "72050381b8d1d11359531e61032652b1ee831cc9e629ea5a2f7421dfd885c676"
+    },
+    {
+      "bytes": 84751,
+      "path": "faulty-blockMesh.log",
+      "sha256": "df48b26a548211052e2d9a8d66d4b3656ac924998624b977a4021fcde760b060"
+    },
+    {
+      "bytes": 4740,
+      "path": "faulty-full.log",
+      "sha256": "36a7f77b0db719d4671625251395e656dadea9faff39838fbfcb313442928f74"
+    },
+    {
+      "bytes": 5452,
+      "path": "faulty-quality.log",
+      "sha256": "39a9f0e87c9dbf1368592aed1d8530965bd7baa997fa22f803623d708473415a"
+    },
+    {
+      "bytes": 4510,
+      "path": "repaired-full.log",
+      "sha256": "78dd88a29bb1e8a814982194e6ab60db271657371453454d61452052aebd5fb3"
+    }
+  ],
+  "claim_boundary": "Synthetic16-building city SI scale/unit repair tool reference with mandatory auxiliary50s conservative transient SST; not experimental/real-city/LES/stationary/grid-independent flow truth.",
+  "current_job_id": "720e72911e5bc186982217dd1d85f648dc2f13802577194055082e77280a92d0",
+  "evaluator_sha256": "a02c05f3a884dcd922afff4e9427fbc912e706fe4dd3b0ab026d56869895be22",
+  "evidence_links": {
+    "current_full7_raw": {
+      "path": "validation/task056-full7-current-entry-qualification-20261016-1923-v1/receipt.json",
+      "sha256": "9a255f434d74e6357eee40118fee7d15dbb4b31e87dadb0ef5776e19c9be7073",
+      "status": "PASS_CURRENT_ACTUAL_FULL7_ENTRY_ALL_RAW_DIAGNOSTIC_NOT_INSTALLED_SCORE"
+    },
+    "current_full7_result": {
+      "path": "validation/task056-full7-current-entry-qualification-20261016-1923-v1/full-result.json",
+      "sha256": "66ef299e414bd8752c66fd499c8bba0a9a5a6f06875915b4c30ed6857c09c25d",
+      "status": "PASS_FULL7_CANDIDATE_RAW_DIAGNOSTIC_NOT_INSTALLED_SCORE"
+    },
+    "exact_installation": {
+      "path": "validation/task056-full7-exact-installed-entry-20261017-v1/receipt.json",
+      "sha256": "414067dce769029d226f593cbadee656f21e6f0f093e9839e24c2c402e4e43eb",
+      "status": "PASS_EXACT_INSTALLED_TRUSTED_HOST_FULL7_POSITIVE_AND_REFUSALS_NOT_REFERENCE"
+    },
+    "full_entry_refusals": {
+      "path": "validation/task056-full7-full-entry-refusals-20261017-v2/receipt.json",
+      "sha256": "14c9a6dbd789aa32404f6c63077dae441bd076afb13534b7e464a3ea6e773834",
+      "status": "PASS_ACTUAL_FULL7_FULL_ENTRY_REFUSALS_NO_SCORE"
+    },
+    "owned_archive": {
+      "path": "validation/task056-full7-owned-archive-verification-20261017-v2/receipt.json",
+      "sha256": "6c99ee27ee94ad35b012d0a29fb0c2c768e15dc988383a748a41618b61affd8e",
+      "status": "PASS_REMOTE_LOCAL_DUAL_SHA_EVERY_MEMBER_DECODE_INCLUDING_NEW_FULL7_NOT_REFERENCE"
+    },
+    "prospective_full7_freeze": {
+      "path": "validation/task056-full7-frozen-profile-20261016-1446-v1/bundle-agent-full7-v1/freeze.json",
+      "sha256": "ff40b1fd77cce77dda26fcf65c25c231ac66dbebb91fdc26dd1abdd36ef36e0b"
+    },
+    "public_staging": {
+      "path": "validation/task056-final-public-staging-20261017-v2/receipt.json",
+      "sha256": "25ea72a96f521e24781024fbd211e0065f667254159326949815ddd8ede8977f",
+      "status": "PASS_PUBLIC_V54_FORMAT_COMPLETE_TWO_IDENTICAL_BUILDS_ALL_MEMBERS_STAGED_NOT_MATERIALIZED"
+    },
+    "science_decision": {
+      "path": "validation/task056-scientific-decision-20261016-v1.json",
+      "sha256": "393c5b0b8d1d78567e7233503fc24dad12dc60a5fa52fc0be53a9d6f5877617d",
+      "status": "SCIENTIFIC_DEFINITION_RESOLVED_ENGINEERING_FREEZE_REQUIRED"
+    }
+  },
+  "execution_boundary": "Protected host separately freezes/registers/executes all7 for every new submitted snapshot; this exact installed slot grades only its closed current job. Future submissions cannot use an owner capsule or choose private evidence/expected SHA. No automatic VM execution is claimed.",
+  "experimental_claim": false,
+  "flow_solver_runs": 1,
+  "hidden_ID_or_canonical_dictionary_byte_matching": false,
+  "judge_manifest_sha256": "4eb1ab21787224269b74a2e966ce575a0d6ddc1b911b627ee571225b8c65704f",
+  "qualification_extra_CFD_runs": 1,
+  "qualified_fixture_scores": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    100
+  ],
+  "release_blockers": [
+    "frozen_distributable_runtime_and_portable_hidden_harness_pending"
+  ],
+  "scientific_contract": "task056-v54-city-scale-repair",
+  "scientific_thresholds_unchanged": true,
+  "task_id": "urbanwind-task-056",
+  "truth_type": "verified_openfoam_tool_reference"
+}

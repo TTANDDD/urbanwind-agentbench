@@ -1,0 +1,12 @@
+{
+  "answer_included": false,
+  "expected_agent_action": "diagnose and repair without changing unrelated settings",
+  "fault_family": "self_intersecting_polygon",
+  "fault_seed": 202609030021,
+  "injected": true,
+  "observed_fault_parameters": {
+    "feature": "b-00-00"
+  },
+  "target_file": "local_assets/city_geometry.geojson",
+  "task_id": "urbanwind-task-021"
+}

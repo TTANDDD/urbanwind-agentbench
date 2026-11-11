@@ -1,0 +1,158 @@
+{
+  "diagnostic_metrics": {
+    "max_abs_cumulative_continuity": 3.25446039733e-05,
+    "max_courant": 0.893903566253,
+    "temperature_drift_k": 0.0007068666390068756,
+    "vertical_exchange_drift_m_s": 0.002693600496831464
+  },
+  "experimental_claim": false,
+  "metric_formula": "sum_z(A_z*mean_{t in {0,60,120,180}s}(abs(q_OpenFOAM(z,t)-q_contract(z,t))))/sum_z(A_z); z in {heatWest,heatCenter,heatEast}",
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-074",
+  "total_ground_area_m2": 304.0,
+  "truth_type": "verified_openfoam_numerical_reference",
+  "units": {
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction",
+    "heat_flux_boundary_error": "W/m2"
+  },
+  "values": {
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0,
+    "heat_flux_boundary_error": 0.0
+  },
+  "zone_results": [
+    {
+      "area_m2": 92.0,
+      "area_ok": true,
+      "centroid_ok": true,
+      "expected_q_table": [
+        [
+          0.0,
+          20.0
+        ],
+        [
+          60.0,
+          40.0
+        ],
+        [
+          120.0,
+          80.0
+        ],
+        [
+          180.0,
+          40.0
+        ]
+      ],
+      "face_count": 1472,
+      "patch_name": "heatWest",
+      "q_table": [
+        [
+          0.0,
+          20.0
+        ],
+        [
+          60.0,
+          40.0
+        ],
+        [
+          120.0,
+          80.0
+        ],
+        [
+          180.0,
+          40.0
+        ]
+      ],
+      "schedule_mean_abs_error_w_m2": 0.0
+    },
+    {
+      "area_m2": 56.0,
+      "area_ok": true,
+      "centroid_ok": true,
+      "expected_q_table": [
+        [
+          0.0,
+          40.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          120.0,
+          150.0
+        ],
+        [
+          180.0,
+          75.0
+        ]
+      ],
+      "face_count": 896,
+      "patch_name": "heatCenter",
+      "q_table": [
+        [
+          0.0,
+          40.0
+        ],
+        [
+          60.0,
+          75.0
+        ],
+        [
+          120.0,
+          150.0
+        ],
+        [
+          180.0,
+          75.0
+        ]
+      ],
+      "schedule_mean_abs_error_w_m2": 0.0
+    },
+    {
+      "area_m2": 156.0,
+      "area_ok": true,
+      "centroid_ok": true,
+      "expected_q_table": [
+        [
+          0.0,
+          10.0
+        ],
+        [
+          60.0,
+          25.0
+        ],
+        [
+          120.0,
+          50.0
+        ],
+        [
+          180.0,
+          25.0
+        ]
+      ],
+      "face_count": 2496,
+      "patch_name": "heatEast",
+      "q_table": [
+        [
+          0.0,
+          10.0
+        ],
+        [
+          60.0,
+          25.0
+        ],
+        [
+          120.0,
+          50.0
+        ],
+        [
+          180.0,
+          25.0
+        ]
+      ],
+      "schedule_mean_abs_error_w_m2": 0.0
+    }
+  ]
+}

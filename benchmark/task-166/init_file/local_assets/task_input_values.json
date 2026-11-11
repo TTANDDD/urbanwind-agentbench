@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "三维或二维街谷速度场",
+      "role_id": "input-001",
+      "seed": 202609046601,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.86084877,
+        0.90341783,
+        0.83494802,
+        0.82456231,
+        0.10924993,
+        0.70204042,
+        0.48264732,
+        0.27407478,
+        0.95892251,
+        0.48688212,
+        0.10342394,
+        0.34388261,
+        0.82764599,
+        0.85873949,
+        0.64183429,
+        0.75777308
+      ]
+    },
+    {
+      "label": "冻结涡识别规则",
+      "role_id": "input-002",
+      "seed": 202609046602,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.19847798,
+        0.77534653,
+        0.14710563,
+        0.21683907,
+        0.61198649,
+        0.93564643,
+        0.07566364,
+        0.98573511,
+        0.33524605,
+        0.61023602,
+        0.53543063,
+        0.25672609,
+        0.09909113,
+        0.62364435,
+        0.46747143,
+        0.83372108
+      ]
+    },
+    {
+      "label": "参考涡心、旋向和尺度",
+      "role_id": "input-003",
+      "seed": 202609046603,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.11585649,
+        0.22721423,
+        0.35849407,
+        0.081675,
+        0.08474951,
+        0.26542152,
+        0.09173344,
+        0.71841555,
+        0.35676549,
+        0.52211219,
+        0.09196759,
+        0.53230537,
+        0.61682222,
+        0.71977492,
+        0.3009802,
+        0.2885447
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-166"
+}

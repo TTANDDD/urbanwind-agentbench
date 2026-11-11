@@ -1,0 +1,66 @@
+{
+  "cases": [
+    {
+      "case_id": "task-072-case-001",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "controlled_factor": "spatial_roughness_zone_mapping",
+        "data_origin": "deterministic_local_generation",
+        "focus": "将GIS粗糙度分区转换为OpenFOAM或PALM边界输入。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "地表粗糙度空间映射-参考工况",
+        "variant_key": "three_zone_local_gis_mapping"
+      },
+      "metrics": [
+        "roughness_zone_mapping_accuracy",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "sum_j(A_j*I(patch_geometry_j matches source_zone_j and abs(z0_OpenFOAM_j-z0_source_j)<=1e-12))/sum_j(A_j)",
+        "id": "roughness_zone_mapping_accuracy",
+        "name_zh": "粗糙度分区映射准确率",
+        "unit": "fraction"
+      },
+      "purpose": "将三类本地GeoJSON z0分区映射为roughnessWest/Center/East壁面patch，执行一次真实simpleFoam，并从原始网格与0/nut重算映射准确率。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "gdal",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-072",
+      "variant": "本地三分区粗糙度映射与真实求解验证"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "cfd",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 1,
+  "required_solver_runs": 1,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-072"
+}

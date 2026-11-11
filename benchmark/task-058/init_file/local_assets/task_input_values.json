@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "封闭城市表面或体网格",
+      "role_id": "input-001",
+      "seed": 202609035801,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.17046745,
+        0.18559336,
+        0.23987981,
+        0.54335468,
+        0.57851667,
+        0.43895754,
+        0.94245412,
+        0.7005062,
+        0.60864613,
+        0.71294038,
+        0.49425843,
+        0.48017088,
+        0.89969127,
+        0.20728387,
+        0.55396356,
+        0.95683395
+      ]
+    },
+    {
+      "label": "PALM目标dx/dy/dz与坐标原点",
+      "role_id": "input-002",
+      "seed": 202609035802,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.859408,
+        0.6437176,
+        0.68706798,
+        0.63295534,
+        0.07975231,
+        0.77112314,
+        0.0958725,
+        0.0608539,
+        0.19020913,
+        0.11619146,
+        0.58378839,
+        0.72515261,
+        0.89137726,
+        0.9722212,
+        0.10210473,
+        0.70054675
+      ]
+    },
+    {
+      "label": "palm_csd/NetCDF变量合同",
+      "role_id": "input-003",
+      "seed": 202609035803,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.48819833,
+        0.68506566,
+        0.91561936,
+        0.75459448,
+        0.88454065,
+        0.27947928,
+        0.97729054,
+        0.73964872,
+        0.39536664,
+        0.41900512,
+        0.4896307,
+        0.99334823,
+        0.68682679,
+        0.59340566,
+        0.84742587,
+        0.6844582
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-058"
+}

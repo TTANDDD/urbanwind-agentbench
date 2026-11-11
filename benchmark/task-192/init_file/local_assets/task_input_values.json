@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "三个热源布局候选",
+      "role_id": "input-001",
+      "seed": 202609049201,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.20229668,
+        0.29339799,
+        0.07564213,
+        0.16282697,
+        0.39453905,
+        0.05444786,
+        0.50515407,
+        0.64149307,
+        0.22145614,
+        0.77818208,
+        0.18847401,
+        0.47173017,
+        0.95367564,
+        0.8697922,
+        0.84295327,
+        0.34352942
+      ]
+    },
+    {
+      "label": "热源强度与时序",
+      "role_id": "input-002",
+      "seed": 202609049202,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.74252404,
+        0.54491111,
+        0.71381182,
+        0.2712129,
+        0.77048814,
+        0.41297386,
+        0.63380769,
+        0.8936506,
+        0.24347768,
+        0.92652666,
+        0.6925941,
+        0.77091428,
+        0.62331104,
+        0.84361703,
+        0.39990547,
+        0.05162721
+      ]
+    },
+    {
+      "label": "热环境硬约束",
+      "role_id": "input-003",
+      "seed": 202609049203,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.41728824,
+        0.1073964,
+        0.22202659,
+        0.84580569,
+        0.42201343,
+        0.41387766,
+        0.37643309,
+        0.68051612,
+        0.59344214,
+        0.43867705,
+        0.49191705,
+        0.53775322,
+        0.91186023,
+        0.8559957,
+        0.96614082,
+        0.26223747
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-192"
+}

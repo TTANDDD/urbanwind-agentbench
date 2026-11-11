@@ -1,0 +1,25 @@
+{
+  "diagnostic_metrics": {
+    "E_inverse_projected_inlet": 1.9407703263035674e-12,
+    "E_roundtrip_visible": 1.8420808481262962e-16,
+    "E_solver_inlet": 1.9407613532185802e-12,
+    "inlet_k_rmse_m2_s2": 8.756884106730922e-15,
+    "inlet_omega_rmse_s_1": 1.0393524470871513e-12,
+    "vector_tensor_roundtrip_error": 1.9407703263035674e-12
+  },
+  "experimental_claim": false,
+  "metric_formula": "max(E_roundtrip_visible,E_solver_inlet,E_inverse_projected_inlet); E_roundtrip_visible=max(relative_error(R^T(Ru),u),relative_error(R^T(Rq),q),relative_error(R^T(RTR^T)R,T)); E_solver_inlet=weighted_RMSE(U_probe_solver-U_target_solver)/1.2; E_inverse_projected_inlet=weighted_RMSE(R^T U_probe_solver-U_target_geo)/1.2",
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-068",
+  "truth_type": "verified_openfoam_numerical_reference",
+  "units": {
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction",
+    "vector_tensor_roundtrip_error": "fraction"
+  },
+  "values": {
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0,
+    "vector_tensor_roundtrip_error": 1.9407703263035674e-12
+  }
+}

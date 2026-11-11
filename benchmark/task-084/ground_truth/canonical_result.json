@@ -1,0 +1,15 @@
+{
+  "case_ids": [
+    "task-084-case-001",
+    "task-084-case-002",
+    "task-084-case-003"
+  ],
+  "claim_boundary": "Frozen OpenFOAM numerical reference; not PIV, DNS or experimental truth.",
+  "primary_metric": {
+    "id": "timestep_observable_spread",
+    "unit": "fraction",
+    "value": 0.02793853613242923
+  },
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-084"
+}

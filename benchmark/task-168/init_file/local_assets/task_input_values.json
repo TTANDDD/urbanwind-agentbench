@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "冻结的风舒适/安全标准版本",
+      "role_id": "input-001",
+      "seed": 202609046801,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.96099841,
+        0.8177406,
+        0.19125271,
+        0.93963749,
+        0.77100668,
+        0.89277531,
+        0.08721545,
+        0.826883,
+        0.98113413,
+        0.25998437,
+        0.82476392,
+        0.88318003,
+        0.39966756,
+        0.49817136,
+        0.50671161,
+        0.42849327
+      ]
+    },
+    {
+      "label": "风气候联合分布与方向权重",
+      "role_id": "input-002",
+      "seed": 202609046802,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.19821257,
+        0.7361575,
+        0.62787366,
+        0.37788351,
+        0.43845907,
+        0.51677049,
+        0.29801795,
+        0.83086305,
+        0.85929161,
+        0.58137009,
+        0.17875576,
+        0.97158752,
+        0.63482073,
+        0.74642424,
+        0.75904721,
+        0.06865922
+      ]
+    },
+    {
+      "label": "行人高度、平均时窗和超限规则",
+      "role_id": "input-003",
+      "seed": 202609046803,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.86895061,
+        0.84681507,
+        0.29045032,
+        0.77025979,
+        0.16702971,
+        0.71434643,
+        0.94478407,
+        0.87126423,
+        0.68172448,
+        0.59010964,
+        0.92547839,
+        0.15132928,
+        0.38728806,
+        0.73713569,
+        0.13145298,
+        0.64721595
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-168"
+}

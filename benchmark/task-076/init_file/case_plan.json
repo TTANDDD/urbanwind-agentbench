@@ -1,0 +1,65 @@
+{
+  "cases": [
+    {
+      "case_id": "task-076-case-001",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "controlled_factor": "potential_temperature_hydrostatic_initialization",
+        "data_origin": "deterministic_local_generation",
+        "focus": "构建混合层、逆温层和自由大气位温梯度并验证静力一致性。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "位温初始剖面-参考工况",
+        "variant_key": "three_layer_theta_hydrostatic_city_initialization"
+      },
+      "metrics": [
+        "hydrostatic_initialization_residual",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "max(RMSE(theta_input-theta_target)/1K,RMSE(p_input-p_hydrostatic_target)/100Pa,RMSE(p_rgh_input-(p_input-rho_input*g_dot_x))/100Pa); theta_input=T_input*(100000Pa/p_input)^(R/Cp), rho_input=p_input/(R*T_input)",
+        "id": "hydrostatic_initialization_residual",
+        "name_zh": "位温静力初始化残差",
+        "unit": "fraction"
+      },
+      "purpose": "按可见三段式位温剖面生成全网格T、p、p_rgh，复算静力闭合残差并真实运行buoyantPimpleFoam验证数值可执行性。",
+      "reference_status": "verified_openfoam_numerical_reference_generated",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-076",
+      "variant": "三段式位温与静力一致初始场真实求解验证"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "cfd",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 1,
+  "required_solver_runs": 1,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-076"
+}

@@ -1,0 +1,14 @@
+{
+  "case_ids": [
+    "task-041-case-001"
+  ],
+  "claim_boundary": "verified OpenFOAM mesh-tool output; not experimental flow truth",
+  "primary_metric": {
+    "id": "block_connectivity_error_count",
+    "unit": "errors",
+    "value": 0.0
+  },
+  "result_role": "mesh_metrics.json",
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-041"
+}

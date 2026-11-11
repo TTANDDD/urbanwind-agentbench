@@ -1,0 +1,117 @@
+{
+  "cases": [
+    {
+      "case_id": "task-071-case-001",
+      "execution_role": "provided_data_or_tool_execution",
+      "fault_role": "faulty_input_preflight_rejection",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "SB4_LOCAL",
+        "anchor_state": "local_generator_ready",
+        "controlled_factor": "outlet_repair_bundle",
+        "data_origin": "deterministic_local_generation",
+        "focus": "设置出口和缓冲区以降低回流，同时保留回流诊断而非掩盖问题。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "故障输入",
+        "variant_key": "faulty"
+      },
+      "metrics": [
+        "outlet_reverse_flow_fraction",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "sum_f(A_f*I((U_f dot n_f)<0))/sum_f(A_f) on the repaired case at iteration 400; outlet faces, outward normals n_f and areas A_f are reconstructed from constant/polyMesh, and U_f is read from the raw 400/U outlet boundary values",
+        "id": "outlet_reverse_flow_fraction",
+        "name_zh": "出口回流面积比例",
+        "unit": "fraction"
+      },
+      "purpose": "压力出口回流防护：检查可见故障配置并在求解前拒绝。",
+      "reference_status": "verified_openfoam_diagnostic_reference_generated",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-071",
+      "variant": "故障配置预检"
+    },
+    {
+      "case_id": "task-071-case-002",
+      "execution_role": "real_solver_run",
+      "fault_role": "verified_repair_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "SB4_LOCAL",
+        "anchor_state": "local_generator_ready",
+        "controlled_factor": "outlet_repair_bundle",
+        "data_origin": "deterministic_local_generation",
+        "focus": "设置出口和缓冲区以降低回流，同时保留回流诊断而非掩盖问题。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "修复后验证",
+        "variant_key": "repaired"
+      },
+      "metrics": [
+        "outlet_reverse_flow_fraction",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "sum_f(A_f*I((U_f dot n_f)<0))/sum_f(A_f) on the repaired case at iteration 400; outlet faces, outward normals n_f and areas A_f are reconstructed from constant/polyMesh, and U_f is read from the raw 400/U outlet boundary values",
+        "id": "outlet_reverse_flow_fraction",
+        "name_zh": "出口回流面积比例",
+        "unit": "fraction"
+      },
+      "purpose": "压力出口回流防护：真实验证x=23D且U采用inletOutlet的修复配置，并从原始出口面值重算回流面积比例。",
+      "reference_status": "verified_openfoam_numerical_reference_generated",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-071",
+      "variant": "修复后真实验证"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "cfd",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 2,
+  "required_solver_runs": 1,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-071"
+}

@@ -1,0 +1,10 @@
+case_id,variant,seed,wind_direction_deg,reference_speed_m_s,stability,surface_heat_flux_w_m2,sgs_model,time_step_s,convection_scheme,pressure_velocity_coupling,roughness_length_m,source_configuration,decomposition_method,restart_segments,software_variant,controlled_factor,controlled_level
+task-182-case-001,间距候选A-风向0度,202609048200,0.0,1.2,neutral,0.0,,,,,,,,,,spacing_and_wind_direction,间距候选A-风向0度
+task-182-case-002,间距候选A-风向22.5度,202609048200,22.5,1.2,neutral,0.0,,,,,,,,,,spacing_and_wind_direction,间距候选A-风向22.5度
+task-182-case-003,间距候选A-风向45度,202609048200,45.0,1.2,neutral,0.0,,,,,,,,,,spacing_and_wind_direction,间距候选A-风向45度
+task-182-case-004,间距候选B-风向0度,202609048200,0.0,1.2,neutral,0.0,,,,,,,,,,spacing_and_wind_direction,间距候选B-风向0度
+task-182-case-005,间距候选B-风向22.5度,202609048200,22.5,1.2,neutral,0.0,,,,,,,,,,spacing_and_wind_direction,间距候选B-风向22.5度
+task-182-case-006,间距候选B-风向45度,202609048200,45.0,1.2,neutral,0.0,,,,,,,,,,spacing_and_wind_direction,间距候选B-风向45度
+task-182-case-007,间距候选C-风向0度,202609048200,0.0,1.2,neutral,0.0,,,,,,,,,,spacing_and_wind_direction,间距候选C-风向0度
+task-182-case-008,间距候选C-风向22.5度,202609048200,22.5,1.2,neutral,0.0,,,,,,,,,,spacing_and_wind_direction,间距候选C-风向22.5度
+task-182-case-009,间距候选C-风向45度,202609048200,45.0,1.2,neutral,0.0,,,,,,,,,,spacing_and_wind_direction,间距候选C-风向45度

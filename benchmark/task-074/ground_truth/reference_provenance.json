@@ -1,0 +1,25 @@
+{
+  "experimental_claim": false,
+  "host": "5070-server",
+  "independent_audit": "validation/openfoam-task074-v40-independent-audit-v1.json",
+  "independent_audit_sha256": "e35e85fc590f6f11e3a6a7fbf185720ce027b69f105317e42aacf3d21100e69c",
+  "schema_version": "1.0",
+  "software": {
+    "name": "OpenFOAM",
+    "solver": "buoyantPimpleFoam",
+    "version": "OpenCFD-v2412"
+  },
+  "source_runs": [
+    {
+      "case_id": "task-074-case-001",
+      "source_archive": "validation/openfoam-batch-20260928-v40-task074-zoned-time-heat-flux/results/task074-three-zone-time-heat-flux/reference_candidate.tar.gz",
+      "source_archive_sha256": "833259ac93557589b6a58e518fec66b12e2c89db8e2780cca798d60b58ae962f",
+      "source_batch": "openfoam-batch-20260928-v40-task074-zoned-time-heat-flux",
+      "source_job": "task074-three-zone-time-heat-flux",
+      "source_status_sha256": "be49e55252f04c5c30831f3af09188d4b8a8b292b76d3c61c4ac32eef39976a4",
+      "variant": "三分区时变显热通量",
+      "variant_key": "three_zone_time_varying_heat_flux"
+    }
+  ],
+  "task_id": "urbanwind-task-074"
+}

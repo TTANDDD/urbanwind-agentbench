@@ -1,0 +1,81 @@
+{
+  "benchmark_metadata": {
+    "case_anchor": "SB4_LOCAL",
+    "category": "physical_validation",
+    "compute_track": "lite",
+    "data_origin_policy": "local_generation_or_optional_one_click_public",
+    "difficulty": "advanced",
+    "init_type": "engineering_data_and_model",
+    "materialization_status": "local_inputs_generated",
+    "professional_difficulty": "D4",
+    "reference_status": "local_reference_generated",
+    "release_status": "scaffold_only",
+    "required_cases": 1,
+    "required_solver_runs": 0,
+    "simulation_status": "not_run",
+    "task_id": "urbanwind-task-153",
+    "task_mode": "physical_validation",
+    "track": "validation_and_uncertainty"
+  },
+  "config": [
+    {
+      "parameters": {
+        "files": [
+          {
+            "local_path": "task-153/init_file/init_file.tar.gz",
+            "path": "/home/user/Desktop/init_file.tar.gz"
+          }
+        ]
+      },
+      "type": "upload_file"
+    },
+    {
+      "parameters": {
+        "command": "bash -c \"set -e; tar -xzf '/home/user/Desktop/init_file.tar.gz' -C '/home/user/Desktop'; rm -f '/home/user/Desktop/init_file.tar.gz'\"",
+        "shell": true
+      },
+      "type": "launch"
+    }
+  ],
+  "evaluator": {
+    "expected": {},
+    "func": "local_reference_metric_score",
+    "metric": {
+      "direction": "maximize",
+      "name": "UrbanWind local reference metric check",
+      "not_for_leaderboard": true,
+      "scale": "0-85"
+    },
+    "postconfig": [
+      {
+        "parameters": {
+          "files": [
+            {
+              "local_path": "task-153/eval.py",
+              "path": "/home/user/Desktop/eval.py"
+            }
+          ]
+        },
+        "type": "upload_file"
+      }
+    ],
+    "result": {
+      "command": "python3 /home/user/Desktop/eval.py",
+      "shell": true,
+      "type": "vm_command_line"
+    }
+  },
+  "fixed_ip": false,
+  "id": "c-urbanwind-task-153-ubuntu",
+  "instruction": "你正在完成 UrbanWind-AgentBench task-153：网格收敛指数GCI。\n\n科学问题：智能体能否在不伪造证据的前提下完成“网格收敛指数GCI”，并把工具执行、数值质量、物理依据和工程结论连成可复算闭环？\n\n必须完成全流程：\n1. 证据与设计：读取任务输入与来源登记，显式列出已知、假设、缺失和许可边界。 用三层网格和一致指标计算GCI并检查单调收敛假设。\n2. 配置与执行：围绕D x D x 4D单体建筑本地数值基准生成案例计划和软件配置，并保持单位、坐标和版本可追踪。 执行1个数据或工具案例；本任务不要求新跑CFD/LES，但所有数据处理工具必须真实执行并留痕。 不得伪造工具或求解器输出。\n3. 后处理与验证：从原始文件重算声明指标，保存脚本、命令、日志、单位、时间窗和哈希。 依次通过文件、执行、数值、物理、外部证据和工程约束门禁。\n4. 工程决策：给出带适用边界的工程结论；关键证据缺失时明确停止或降级声明。\n5. 严格执行 `/home/user/Desktop/case_plan.json` 和 `/home/user/Desktop/reporting_contract.json`，保留每个案例的原始输入、日志和输出。\n6. 生成任务合同要求的全部产物到 `/home/user/Desktop`。最小软件链：python, scipy, pandas；计算赛道：lite。\n7. 初始化输入已由项目生成器在本地物化；不得把合成或数值输入表述为实验测量。当前隐藏GT仍是scaffold-only，预检评价器不代表数值正确、物理正确或工程最优。\n",
+  "possibility_of_env_change": "medium",
+  "proxy": false,
+  "related_apps": [
+    "python",
+    "scipy",
+    "pandas"
+  ],
+  "snapshot": "urbanwind-multisoftware-v1",
+  "source": "UrbanWind-AgentBench local scaffold with source registry",
+  "trajectory": "trajectories/"
+}

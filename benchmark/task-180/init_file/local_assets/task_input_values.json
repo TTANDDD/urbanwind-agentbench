@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "冻结情景集合",
+      "role_id": "input-001",
+      "seed": 202609048001,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.11495202,
+        0.11418897,
+        0.43220014,
+        0.70924972,
+        0.11409252,
+        0.58480647,
+        0.51475437,
+        0.20056441,
+        0.96415237,
+        0.50947699,
+        0.64835447,
+        0.7495203,
+        0.57632516,
+        0.69282437,
+        0.78414623,
+        0.78784282
+      ]
+    },
+    {
+      "label": "指标权重和硬约束",
+      "role_id": "input-002",
+      "seed": 202609048002,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.06477631,
+        0.42255781,
+        0.4552326,
+        0.70411843,
+        0.36195637,
+        0.70253109,
+        0.97281326,
+        0.57167144,
+        0.38454932,
+        0.60307359,
+        0.1210199,
+        0.40262341,
+        0.73037566,
+        0.92514374,
+        0.35196277,
+        0.49046426
+      ]
+    },
+    {
+      "label": "并列规则与敏感性方案",
+      "role_id": "input-003",
+      "seed": 202609048003,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.81242616,
+        0.68016103,
+        0.07899998,
+        0.38374324,
+        0.26642324,
+        0.96769241,
+        0.88286278,
+        0.81022149,
+        0.38873276,
+        0.49549689,
+        0.76780496,
+        0.42552859,
+        0.32924588,
+        0.0859619,
+        0.08025116,
+        0.13658627
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-180"
+}

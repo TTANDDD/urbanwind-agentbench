@@ -1,0 +1,29 @@
+{
+  "cell_count": 141952,
+  "diagnostic_metrics": {
+    "max_abs_cumulative_continuity": 2.31910296606e-06,
+    "max_courant": 0.142369720491,
+    "p_rgh_closure_rmse_pa": 4.259804258177904e-08,
+    "pressure_rmse_pa": 2.9834978149075365e-08,
+    "temperature_drift_k": 0.0012260919920663582,
+    "theta_rmse_k": 2.3683943469526464e-10,
+    "vertical_exchange_drift_m_s": 0.002132679838239268
+  },
+  "experimental_claim": false,
+  "metric_formula": "max(RMSE(theta_input-theta_target)/1K,RMSE(p_input-p_hydrostatic_target)/100Pa,RMSE(p_rgh_input-(p_input-rho_input*g_dot_x))/100Pa); theta_input=T_input*(100000Pa/p_input)^(R/Cp), rho_input=p_input/(R*T_input)",
+  "probe_count": 24,
+  "sample_count": 150,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-076",
+  "truth_type": "verified_openfoam_numerical_reference",
+  "units": {
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction",
+    "hydrostatic_initialization_residual": "fraction"
+  },
+  "values": {
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0,
+    "hydrostatic_initialization_residual": 4.2598042581779045e-10
+  }
+}

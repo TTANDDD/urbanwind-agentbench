@@ -1,0 +1,18 @@
+{
+  "experimental_claim": false,
+  "metric_definition": "The primary metric is the fraction of ten visible required (time role, field) pairs whose files exist, match their submitted SHA-256, and have the required OpenFOAM class/object header.",
+  "required_field_time_pair_count": 10,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-097",
+  "truth_type": "verified_openfoam_numerical_reference",
+  "units": {
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction",
+    "procedural_city_field_completeness": "fraction"
+  },
+  "values": {
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0,
+    "procedural_city_field_completeness": 1.0
+  }
+}

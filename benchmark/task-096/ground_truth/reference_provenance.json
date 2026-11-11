@@ -1,0 +1,59 @@
+{
+  "experimental_claim": false,
+  "host": "5070-server",
+  "independent_audit": "validation/openfoam-task096-v27d-independent-audit-v2.json",
+  "independent_audit_sha256": "b9a8ba6f1fb5061ca3b66646b55491784b641941e6e65f1eb951593391537b88",
+  "openfoam_version": "v2412",
+  "runtime_environment": "/home/abc/urbanwind-agentbench-runtime-v0.1/envs/openfoam-2412",
+  "schema_version": "1.0",
+  "source_background": {
+    "archive": "validation/openfoam-batch-20260916-v21-wind-directions/results/task092-wind-0/reference_candidate.tar.gz",
+    "archive_sha256": "fcc0f0b5b01e90c7cfe1b7d0d1e642cde41691833ab533c409698e6413bc707f",
+    "task": "urbanwind-task-092"
+  },
+  "source_runs": [
+    {
+      "case_id": "task-096-case-001",
+      "source_archive": "validation/openfoam-batch-20260918-v27d-task096-scalar/results/task096-source-a/reference_candidate.tar.gz",
+      "source_archive_sha256": "ef4ea7bf61b155c6866bf71285591235c7d54159ef0fe916d2c77156c19a155c",
+      "source_batch": "openfoam-batch-20260918-v27d-task096-scalar",
+      "source_center_m": [
+        2.0,
+        2.0,
+        0.25
+      ],
+      "source_job": "task096-source-a",
+      "source_status_sha256": "e62c72f17e4a616eacf1714a41b56feaa8a51f7cdc6f4843553d3e4856077c80",
+      "variant": "源项A"
+    },
+    {
+      "case_id": "task-096-case-002",
+      "source_archive": "validation/openfoam-batch-20260918-v27d-task096-scalar/results/task096-source-b/reference_candidate.tar.gz",
+      "source_archive_sha256": "b7320b2b32f6e539ddca7f7fbc3b2dc7a03d2e93185ceaeee398a767f5803176",
+      "source_batch": "openfoam-batch-20260918-v27d-task096-scalar",
+      "source_center_m": [
+        4.0,
+        4.0,
+        0.25
+      ],
+      "source_job": "task096-source-b",
+      "source_status_sha256": "7a5adb53e376d1d031708289392eb27984e2599cf58732ee98b7bfbf58c6112e",
+      "variant": "源项B"
+    },
+    {
+      "case_id": "task-096-case-003",
+      "source_archive": "validation/openfoam-batch-20260918-v27d-task096-scalar/results/task096-source-c/reference_candidate.tar.gz",
+      "source_archive_sha256": "945bf70f9c8da68289fc91ed496cbaccf56534d9ce0d714affc5df4b37812703",
+      "source_batch": "openfoam-batch-20260918-v27d-task096-scalar",
+      "source_center_m": [
+        6.0,
+        6.0,
+        0.25
+      ],
+      "source_job": "task096-source-c",
+      "source_status_sha256": "2a48fd8c5ff718d91ed4fd9b2d506d22985700d1ce454fb13f9335c155b3ed84",
+      "variant": "源项C"
+    }
+  ],
+  "task_id": "urbanwind-task-096"
+}

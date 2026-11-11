@@ -1,0 +1,19 @@
+{
+  "candidate_runtime_label": "urbanwind-candidate-runtime",
+  "note": "All target-profile and mesh inputs are bundled; OpenCFD v2412 is required only for the real numerical execution.",
+  "reference_runtime_label": "urbanwind-reference-runtime",
+  "required_software": [
+    "python",
+    "openfoam"
+  ],
+  "runtime_image_status": "to_be_pinned_before_reference_generation",
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-076",
+  "version_record_fields": [
+    "name",
+    "version",
+    "executable_path",
+    "sha256",
+    "container_digest"
+  ]
+}

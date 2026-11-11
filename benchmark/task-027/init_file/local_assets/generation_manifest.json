@@ -1,0 +1,126 @@
+{
+  "anchor_name": "程序化本地城市子域",
+  "answer_free": true,
+  "data_origin": "deterministic_local_generation",
+  "experimental_claim": false,
+  "files": [
+    {
+      "bytes": 757,
+      "path": "local_assets/active_learning_data.csv",
+      "sha256": "35e24f0ec148cd759ecacb17f56d558f8cffe60ec58ffea6aec19e6a1e36e6bc"
+    },
+    {
+      "bytes": 668,
+      "path": "local_assets/case_control_contract.json",
+      "sha256": "2f76dad3c16961dfaca90d4fe6a9a074f7a93a12c425d57dd8aea11c7e947d76"
+    },
+    {
+      "bytes": 514,
+      "path": "local_assets/case_matrix.csv",
+      "sha256": "f5acdf462baadd5e07d65675ffec81b114cd722a34577559ed80022cbdf23d83"
+    },
+    {
+      "bytes": 10650,
+      "path": "local_assets/city_geometry.geojson",
+      "sha256": "da08a86973b31e43d5ebcbec89f15f466a4c8684a729d2c57295d03e7117dae8"
+    },
+    {
+      "bytes": 485,
+      "path": "local_assets/control_points.csv",
+      "sha256": "a9cb67b8417539338f3301aa2d9fc01eb89f073b04d1188a46773095326775bd"
+    },
+    {
+      "bytes": 502,
+      "path": "local_assets/fault_manifest.json",
+      "sha256": "b960c8d667d978f8493100465d7e8c397ab58c9da76084969b8bb4c6d2672612"
+    },
+    {
+      "bytes": 975,
+      "path": "local_assets/input_role_manifest.json",
+      "sha256": "be18dd07d3390f309f88fdec1a26d216a7d48972ae2aab2c985bec52a96e2db6"
+    },
+    {
+      "bytes": 1611,
+      "path": "local_assets/mask_and_weights.csv",
+      "sha256": "79996ec74e326ed02de419544b96e96a5f51553a977de9d654ad7f5ee79ff2f8"
+    },
+    {
+      "bytes": 219,
+      "path": "local_assets/mesh_levels.csv",
+      "sha256": "4e1983e708650b1827e6ff4964e4b23c53a8f0778ed2bcb8c791458791a15925"
+    },
+    {
+      "bytes": 205,
+      "path": "local_assets/mesh_solution_series.csv",
+      "sha256": "99ca6612106330dd13a7d1f2ffb686129d74e06f9cc0a155a1ded2fa2b215f04"
+    },
+    {
+      "bytes": 12597,
+      "path": "local_assets/model_field.csv",
+      "sha256": "0b814570074a581683e62b37069076d528774c52f627afe6faac648d7b840ccf"
+    },
+    {
+      "bytes": 318,
+      "path": "local_assets/optional_public_metadata.json",
+      "sha256": "ba2e422a3ac9c0e98c3ce1f41584d33c6e047bbe78f5885e9dd2390efbdfd01a"
+    },
+    {
+      "bytes": 751,
+      "path": "local_assets/reference_diagnostics.json",
+      "sha256": "b54e512fd38e6cf0b9aef496e2095fb80af869983456c57d385c708c7740a102"
+    },
+    {
+      "bytes": 11970,
+      "path": "local_assets/reference_field.csv",
+      "sha256": "a956a0ee94a812b10b1d769a2adc8bdb66ffc076d04e2634d5d41d8cf27dc0ff"
+    },
+    {
+      "bytes": 6273,
+      "path": "local_assets/reference_spectrum.csv",
+      "sha256": "99a8ba1e107740022af409b0f063bc459ae5c6741f8f66499682c93b2a97e34c"
+    },
+    {
+      "bytes": 580,
+      "path": "local_assets/runtime_contract.json",
+      "sha256": "ed79666cf8d3cb58eb8600c6cebd7c6b55298bd921a1ec51576f7c938bc84f67"
+    },
+    {
+      "bytes": 716,
+      "path": "local_assets/source_inventory.json",
+      "sha256": "8b82c702a585393a8f09ca98beebd85d226e2a17b586208dafff62080f4e1332"
+    },
+    {
+      "bytes": 1884,
+      "path": "local_assets/task_input_values.json",
+      "sha256": "d745f46a7a9b01f7823407311516d08a97b572b292502b373fc2d24808d840be"
+    },
+    {
+      "bytes": 2767,
+      "path": "local_assets/terrain_and_surface.csv",
+      "sha256": "fd5ed7a9df4db80fcabfb58e1df5d2558da788690210244037d888db144cc90b"
+    },
+    {
+      "bytes": 45815,
+      "path": "local_assets/velocity_timeseries.csv",
+      "sha256": "fd69ac6e11632694bab0f81531deee8d31b8008019c7dd5a2dc7a3185b894b31"
+    },
+    {
+      "bytes": 1052,
+      "path": "local_assets/wind_climate.csv",
+      "sha256": "dd1ce50c23312ac6f0bd2fd9614b17181de7b01385e995f1162f52205e4d83d0"
+    }
+  ],
+  "generator_version": "urbanwind-local-assets-v3",
+  "optional_public_data": [
+    {
+      "mode": "optional_one_click_download",
+      "name": "AIJ UWE Case A",
+      "record_url": "https://zenodo.org/records/15050148",
+      "required_for_task": false
+    }
+  ],
+  "schema_version": "1.0",
+  "seed": 202609030027,
+  "task_id": "urbanwind-task-027",
+  "task_number": 27
+}

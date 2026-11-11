@@ -1,0 +1,233 @@
+{
+  "current_evaluator_boundary": "Parses the visible analytic profile, raw 0/C, 0/T, 0/p and 0/p_rgh fields, solver probes, logs, configuration and mean fields; compares hidden OpenFOAM numerical arrays without claiming atmospheric or experimental truth.",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision": "decision.md",
+  "decision_required_terms": [
+    "证据",
+    "限制",
+    "结论"
+  ],
+  "evidence_manifest": "evidence_manifest.json",
+  "expected_case_ids": [
+    "task-076-case-001"
+  ],
+  "expected_solver_case_ids": [
+    "task-076-case-001"
+  ],
+  "metric_contracts": [
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max(RMSE(theta_input-theta_target)/1K,RMSE(p_input-p_hydrostatic_target)/100Pa,RMSE(p_rgh_input-(p_input-rho_input*g_dot_x))/100Pa); theta_input=T_input*(100000Pa/p_input)^(R/Cp), rho_input=p_input/(R*T_input)",
+      "id": "hydrostatic_initialization_residual",
+      "name_zh": "位温静力初始化残差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    }
+  ],
+  "metric_ids": [
+    "hydrostatic_initialization_residual",
+    "evidence_provenance_fraction",
+    "hard_gate_pass_fraction"
+  ],
+  "metrics": "metrics.json",
+  "potential_temperature_initialization_contract": "local_assets/potential_temperature_initialization_contract.json",
+  "potential_temperature_result_contract": {
+    "case_id": "task-076-case-001",
+    "execution_role": "real_solver_run",
+    "frozen_gates": {
+      "max_abs_cumulative_continuity": 0.0001,
+      "max_courant": 1.0,
+      "max_initialization_residual": 1e-08,
+      "required_cell_count": 141952,
+      "required_final_time_s": 30.0,
+      "required_mean_fields": [
+        "UMean",
+        "UPrime2Mean",
+        "TMean",
+        "TPrime2Mean"
+      ],
+      "required_response_probe_count": 24,
+      "required_solver_runs": 1,
+      "temperature_range_k": [
+        250.0,
+        350.0
+      ]
+    },
+    "hidden_boundary": "Visible analytic profile, mapping formulas, shapes and gates only; no hidden solver response arrays.",
+    "hydrostatic_mapping": {
+      "density_formula": "rho(z)=p(z)/(R*T(z))",
+      "exner_formula": "Pi(z)=1-g/Cp*integral_0^z(1/theta(s))ds",
+      "field_generation": "blockMesh; postProcess -func writeCellCentres -time 0; deterministic Python mapping of every cell and patch-face centre",
+      "p_rgh_formula": "p_rgh=p-rho*(g_vector dot cellCentre)",
+      "pressure_formula": "p(z)=p0*Pi(z)^(Cp/R)",
+      "temperature_formula": "T(z)=theta(z)*Pi(z)"
+    },
+    "metric_reconstruction": {
+      "aggregation": "compute all three full-cell RMSE terms first, normalize by their frozen scales, then take the maximum",
+      "formula": "max(RMSE(theta_input-theta_target)/1K,RMSE(p_input-p_hydrostatic_target)/100Pa,RMSE(p_rgh_input-(p_input-rho_input*g_dot_x))/100Pa); theta_input=T_input*(100000Pa/p_input)^(R/Cp), rho_input=p_input/(R*T_input)",
+      "scales": {
+        "p_rgh_pa": 100.0,
+        "pressure_pa": 100.0,
+        "theta_k": 1.0
+      },
+      "source": "raw generated 0/C, 0/T, 0/p and 0/p_rgh internal fields"
+    },
+    "path_policy": "relative paths under submission root, unique and SHA-256 matched",
+    "potential_temperature_profile": {
+      "definition": "theta=T*(p0/p)^(R/Cp)",
+      "domain_z_m": [
+        0.0,
+        7.0
+      ],
+      "free_atmosphere": {
+        "gradient_k_m": 0.02,
+        "z_m": [
+          3.0,
+          7.0
+        ]
+      },
+      "inversion_layer": {
+        "gradient_k_m": 2.0,
+        "z_m": [
+          2.0,
+          3.0
+        ]
+      },
+      "mixed_layer": {
+        "theta_k": 300.0,
+        "z_m": [
+          0.0,
+          2.0
+        ]
+      },
+      "visible_table": "local_assets/potential_temperature_profile.csv"
+    },
+    "primary_metric": {
+      "aggregation": "per_case_then_task",
+      "formula": "max(RMSE(theta_input-theta_target)/1K,RMSE(p_input-p_hydrostatic_target)/100Pa,RMSE(p_rgh_input-(p_input-rho_input*g_dot_x))/100Pa); theta_input=T_input*(100000Pa/p_input)^(R/Cp), rho_input=p_input/(R*T_input)",
+      "id": "hydrostatic_initialization_residual",
+      "name_zh": "位温静力初始化残差",
+      "unit": "fraction"
+    },
+    "required_manifest": "potential_temperature_evidence_manifest.json",
+    "required_raw_evidence_per_case": [
+      "profile_csv",
+      "field_C0",
+      "field_T0",
+      "field_p0",
+      "field_p_rgh0",
+      "probe_U",
+      "probe_T",
+      "solver_log",
+      "checkMesh_log",
+      "controlDict",
+      "turbulenceProperties",
+      "thermophysicalProperties",
+      "gravity",
+      "mean_UMean",
+      "mean_UPrime2Mean",
+      "mean_TMean",
+      "mean_TPrime2Mean",
+      "run_commands"
+    ],
+    "required_result": "potential_temperature_results.json",
+    "response_probes": "local_assets/thermodynamic_response_probes.csv",
+    "result_contract": {
+      "path": "potential_temperature_results.json",
+      "probe_T_shape": [
+        150,
+        24
+      ],
+      "probe_U_shape": [
+        150,
+        24,
+        3
+      ],
+      "time_shape": [
+        150
+      ]
+    },
+    "schema_version": "1.0",
+    "software_chain": [
+      "python",
+      "openfoam"
+    ],
+    "solver": {
+      "application": "buoyantPimpleFoam",
+      "delta_t_s": 0.015,
+      "full_end_s": 30.0,
+      "gravity_vector_m_s2": [
+        0.0,
+        0.0,
+        -9.81
+      ],
+      "mpi_ranks": 16,
+      "openfoam_version": "OpenCFD-v2412",
+      "smoke_end_s": 0.15,
+      "statistics_start_s": 10.0,
+      "turbulence_model": "WALE"
+    },
+    "source_initialization": {
+      "file_sha256": {
+        "0/U": "1a2f187e62672ab37d35c1f92f58094c1d2256a4ae9ef896375d86dc4c6fa12b",
+        "0/nut": "4974f18ec749a3711c1ffaee5d9e96c20bce5f8ad9516e5643e7cffe4c8a832e",
+        "constant/transportProperties": "1146aa084b034003b8b6ea2f5dee6fb8ff32f91663f42acbfdd758531f018f63",
+        "constant/turbulenceProperties": "fb6024412da49f02f674cb66d6e3ccb71f25ee0dc281585bccf09bfed1f354fa",
+        "system/blockMeshDict": "029a00106455fd021dfefa44291973a59380ad69049c240ca7c462c8a26abb2c"
+      },
+      "files": [
+        "system/blockMeshDict",
+        "0/U",
+        "0/nut",
+        "constant/transportProperties",
+        "constant/turbulenceProperties"
+      ],
+      "origin_task": "urbanwind-task-075 accepted local procedural-city base",
+      "path": "local_assets/openfoam_city_base",
+      "truth_type": "bundled_locally_rebuildable_mesh_and_analytic_zero_time_fields"
+    },
+    "task_gate": "The visible target profile, analytic hydrostatic mapping, all raw initial cell fields and the sole real solver run must pass together; no post-hoc formula or gate changes.",
+    "task_id": "urbanwind-task-076",
+    "thermodynamic_constants": {
+      "cp_j_kg_k": 1000.0,
+      "gravity_m_s2": 9.81,
+      "kappa_R_over_Cp": 0.287697668448209,
+      "molar_mass_kg_kmol": 28.9,
+      "reference_pressure_pa": 100000.0,
+      "specific_gas_constant_j_kg_k": 287.697668448209,
+      "universal_gas_constant_j_kmol_k": 8314.46261815324
+    },
+    "truth_boundary": "Local analytic potential-temperature/hydrostatic initialization and OpenFOAM numerical-execution reference only; not atmospheric sounding, experiment, PIV, DNS, wind-tunnel or field truth, and not release-valid."
+  },
+  "required_external_inputs": [],
+  "required_inputs": [
+    "本地程序化141952单元城市网格与解析速度初始化",
+    "可见三段式位温目标剖面及静力积分常数",
+    "冻结初始场生成、原始场复算和真实求解门禁"
+  ],
+  "required_solver_runs": 1,
+  "run_manifest": "run_manifest.json",
+  "schema_version": "1.0",
+  "score_layers": {
+    "artifact_and_schema": 10,
+    "engineering_decision": 10,
+    "external_validation": 15,
+    "numerical_quality": 20,
+    "physical_fidelity": 25,
+    "real_tool_execution": 20
+  },
+  "task_id": "urbanwind-task-076"
+}

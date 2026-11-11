@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-055",
+  "required_inputs": [
+    "冻结的带单内部面朝向故障原始城市polyMesh",
+    "公开最小修复与几何守恒合同",
+    "完整原生质量阈值和数据型提交格式"
+  ],
+  "required_external_inputs": [],
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "metric_ids": [
+    "remaining_internal_face_orientation_defect_count",
+    "evidence_provenance_fraction",
+    "hard_gate_pass_fraction"
+  ],
+  "metric_contracts": [
+    {
+      "id": "remaining_internal_face_orientation_defect_count",
+      "name_zh": "修复后内部面朝向错误数量",
+      "unit": "faces",
+      "formula": "count of internal faces with S_f dot (geometric_neighbour_centre-geometric_owner_centre) <= 0, recomputed from raw submitted instance; target 0; preservation, cell closure, report and complete native gates are mandatory conjunctive checks",
+      "aggregation": "per_case_then_task"
+    },
+    {
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "aggregation": "per_case_then_task"
+    },
+    {
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "aggregation": "per_case_then_task"
+    }
+  ],
+  "repair_contract": "repair_contract.json",
+  "submission_schema": "submission_schema.json",
+  "expected_case_ids": [
+    "task-055-case-001"
+  ],
+  "expected_solver_case_ids": [],
+  "required_solver_runs": 0,
+  "case_run_contract": "One case contains before_full, after_full and after_complete; preserve all actual log/set/command provenance; zero CFD.",
+  "current_evaluator_boundary": "Qualified trusted-host data-only native judge. Operator supplies a unique prospectively authorized request and bound private runtime; not an agent-VM script or portable release.",
+  "decision": "decision.md",
+  "decision_required_terms": [
+    "证据",
+    "限制",
+    "结论"
+  ],
+  "all_acceptance_gates_conjunctive": true,
+  "submission_directory": "/home/user/Desktop/submission"
+}

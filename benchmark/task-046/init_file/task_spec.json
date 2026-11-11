@@ -1,0 +1,163 @@
+{
+  "acceptance_contract": {
+    "hard_gate_precedence": true,
+    "primary_metric_formula": "sum over both x and y cyclic patch pairs of faces on either side without exactly one translated four-vertex match within 1e-8 m, matching area within 1e-8 relative and opposite unit normal within 1e-8; reciprocal cyclic declarations, complete planes, all 16 solids and mesh quality are independent mandatory gates",
+    "primary_metric_id": "periodic_face_mismatch_count",
+    "required_case_ids": [
+      "task-046-case-001"
+    ],
+    "required_solver_runs": 0
+  },
+  "answer_free": true,
+  "case_anchor": {
+    "id": "CUBE_LOCAL",
+    "known": {
+      "H_m": 1.0,
+      "building_width_m": 1.0,
+      "domain_H": {
+        "x": 8.0,
+        "y": 8.0,
+        "z": 7.4
+      },
+      "gap_m": 1.0,
+      "layout": "4_by_4_staggered",
+      "row_offset_H": 0.5,
+      "truth_type": "synthetic_or_numerical_reference"
+    },
+    "missing": [],
+    "name": "4 x 4程序化错列立方体阵列",
+    "references": [
+      "LOCAL_GENERATOR"
+    ],
+    "status": "local_generator_ready"
+  },
+  "category": "mesh_generation",
+  "compute_track": "lite",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision_rule": "先拒绝任何执行、数值、单位、守恒或外部证据门禁失败的案例，再依据冻结指标比较；不得用文字报告替代原始证据。",
+  "difficulty": "intermediate",
+  "engineering_focus": "构建与阵列周期性一致的网格并检查相对面拓扑和节点对应。",
+  "evaluator_status": "contract_precheck_only",
+  "evidence_requirements": [
+    "exact commands and working directories",
+    "software names, versions, executable paths and SHA256 when available",
+    "timezone-aware start/end times and exit codes",
+    "SHA256-addressed input, log and raw-output files",
+    "coordinate system, units, masks, statistical windows and aggregation order"
+  ],
+  "init_type": "incomplete_template",
+  "limitations": [
+    "Deterministic local init assets are included, but they are not experimental measurements or hidden answers.",
+    "No real OpenFOAM or PALM reference run is included yet.",
+    "No task-specific hidden numerical ground truth or physical tolerance is installed.",
+    "Optional one-click public data may enhance validation but is never required for task execution.",
+    "Local periodic array mesh-tool reference only; not a periodic precursor flow, CFD/LES prediction, yplus claim or experimental truth."
+  ],
+  "local_generator_version": "urbanwind-local-assets-v3",
+  "materialization_status": "local_inputs_generated",
+  "metrics": [
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "sum over both x and y cyclic patch pairs of faces on either side without exactly one translated four-vertex match within 1e-8 m, matching area within 1e-8 relative and opposite unit normal within 1e-8; reciprocal cyclic declarations, complete planes, all 16 solids and mesh quality are independent mandatory gates",
+      "id": "periodic_face_mismatch_count",
+      "name_zh": "周期面对不匹配数量",
+      "unit": "faces"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    }
+  ],
+  "periodic_mesh_contract": "local_assets/openfoam_base/periodic_mesh_contract.json",
+  "physical_checks": [
+    {
+      "id": "evidence_is_raw_and_hashed",
+      "requirement": "所有进入指标的原始输入、日志和输出均在manifest中登记SHA256。"
+    },
+    {
+      "id": "units_and_coordinates_declared",
+      "requirement": "所有比较对象声明单位、坐标系、归一化和掩膜。"
+    },
+    {
+      "id": "track_specific_physics",
+      "requirement": "网格必须通过checkMesh类质量门禁且保留单元级问题位置。"
+    },
+    {
+      "id": "task_specific_primary_metric",
+      "requirement": "从原始面全部四顶点、面积和法向重算双向周期配对不匹配数；四周期平面完整性、16栋实体排除、80个暴露单位面、体积与质量为独立硬门禁。"
+    }
+  ],
+  "professional_difficulty": "D3",
+  "reference_status": "not_generated",
+  "release_status": "scaffold_only",
+  "required_artifacts": [
+    {
+      "format": "json",
+      "path": "design.json",
+      "role": "task design and assumptions"
+    },
+    {
+      "format": "json",
+      "path": "mesh_metrics.json",
+      "role": "track-specific result"
+    },
+    {
+      "format": "json",
+      "path": "run_manifest.json",
+      "role": "tool and solver provenance"
+    },
+    {
+      "format": "json",
+      "path": "metrics.json",
+      "role": "reported metrics with units"
+    },
+    {
+      "format": "json",
+      "path": "evidence_manifest.json",
+      "role": "SHA256-addressed raw evidence"
+    },
+    {
+      "format": "markdown",
+      "path": "decision.md",
+      "role": "bounded engineering conclusion"
+    }
+  ],
+  "required_cases": 1,
+  "required_inputs": [
+    "随任务本地生成的几何与网格目标",
+    "冻结网格质量门槛",
+    "待实际工具执行的网格日志"
+  ],
+  "required_solver_runs": 0,
+  "schema_version": "1.0",
+  "scientific_question": "智能体能否在不伪造证据的前提下完成“错列阵列周期网格”，并把工具执行、数值质量、物理依据和工程结论连成可复算闭环？",
+  "software_chain": [
+    "python",
+    "openfoam"
+  ],
+  "task_id": "urbanwind-task-046",
+  "task_mode": "configure_and_verify",
+  "task_number": 46,
+  "title": "错列阵列周期网格",
+  "track": "mesh_and_numerics",
+  "track_name": "网格与数值离散",
+  "workflow": {
+    "configure": "围绕4 x 4程序化错列立方体阵列生成案例计划和软件配置，并保持单位、坐标和版本可追踪。",
+    "decide": "给出带适用边界的工程结论；关键证据缺失时明确停止或降级声明。",
+    "evidence": "读取任务输入与来源登记，显式列出已知、假设、缺失和许可边界。",
+    "execute": "执行1个数据或工具案例；本任务不要求新跑CFD/LES，但所有数据处理工具必须真实执行并留痕。",
+    "postprocess": "从原始文件重算声明指标，保存脚本、命令、日志、单位、时间窗和哈希。",
+    "preprocess": "构建与阵列周期性一致的网格并检查相对面拓扑和节点对应。",
+    "validate": "依次通过文件、执行、数值、物理、外部证据和工程约束门禁。"
+  }
+}

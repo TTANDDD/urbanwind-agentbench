@@ -1,0 +1,111 @@
+{
+  "background_flow": {
+    "source": "frozen audited task-092 0-degree OpenFOAM WALE numerical field",
+    "truth_boundary": "numerical background only; not PIV, DNS, experiment, or field observation"
+  },
+  "cases": [
+    {
+      "case_id": "task-096-case-001",
+      "source_center_m": [
+        2.0,
+        2.0,
+        0.25
+      ],
+      "variant": "源项A"
+    },
+    {
+      "case_id": "task-096-case-002",
+      "source_center_m": [
+        4.0,
+        4.0,
+        0.25
+      ],
+      "variant": "源项B"
+    },
+    {
+      "case_id": "task-096-case-003",
+      "source_center_m": [
+        6.0,
+        6.0,
+        0.25
+      ],
+      "variant": "源项C"
+    }
+  ],
+  "convection_scheme": "Gauss upwind",
+  "delta_t_s": 0.02,
+  "diffusivity_m2_s": 0.01,
+  "end_time_s": 20.0,
+  "hidden_boundary": "Visible physics, coordinates, formula, thresholds and shapes only; no hidden time-series answers.",
+  "mass_balance_limit_percent": 2.0,
+  "mpi_ranks": 16,
+  "openfoam_reference_version": "v2412",
+  "path_policy": "relative paths under submission root, unique and SHA-256 matched",
+  "primary_metric": {
+    "aggregation": "per_case_then_task",
+    "formula": "max_cases(100*abs(source-outflow-storage)/max(abs(source),eps))",
+    "id": "scalar_mass_balance_error_percent",
+    "name_zh": "被动标量质量闭合误差",
+    "unit": "%"
+  },
+  "probe_count": 8,
+  "probe_points_m": [
+    [
+      2,
+      2,
+      0.25
+    ],
+    [
+      2,
+      2,
+      1
+    ],
+    [
+      4,
+      4,
+      0.25
+    ],
+    [
+      4,
+      4,
+      1
+    ],
+    [
+      6,
+      6,
+      0.25
+    ],
+    [
+      6,
+      6,
+      1
+    ],
+    [
+      10,
+      4,
+      1
+    ],
+    [
+      14,
+      4,
+      1
+    ]
+  ],
+  "required_manifest": "scalar_evidence_manifest.json",
+  "required_raw_evidence_per_case": [
+    "storage",
+    "outlet_flux",
+    "probe_T",
+    "solver_log",
+    "topoSet_log",
+    "checkMesh_log"
+  ],
+  "sample_count": 200,
+  "sample_interval_s": 0.1,
+  "schema_version": "1.0",
+  "solver": "scalarTransportFoam",
+  "source_cell_count": 8,
+  "source_rate_scalar_m3_s": 0.01,
+  "source_volume_m3": 0.125,
+  "task_id": "urbanwind-task-096"
+}

@@ -1,0 +1,20 @@
+{
+  "case_ids": [
+    "task-064-case-001",
+    "task-064-case-002",
+    "task-064-case-003"
+  ],
+  "claim_boundary": "Prescribed three-case Monin-Obukhov momentum-profile OpenFOAM numerical reference; not coupled thermal stability or experimental truth.",
+  "per_case_normalized_rmse": {
+    "neutral": 1.9407648455114036e-12,
+    "stable": 2.368140617296867e-12,
+    "unstable": 2.211243683004172e-12
+  },
+  "primary_metric": {
+    "id": "monin_obukhov_profile_nmae",
+    "unit": "fraction",
+    "value": 2.1733830486041476e-12
+  },
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-064"
+}

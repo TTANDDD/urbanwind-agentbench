@@ -1,0 +1,63 @@
+{
+  "cases": [
+    {
+      "case_id": "task-087-case-001",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "SB4_LOCAL",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "依据六个连续60秒窗口的64点风速和湍动能统计，按冻结漂移门限确定最早持续平稳的统计开始点。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "长时序自旋与统计"
+      },
+      "metrics": [
+        "stationarity_onset_detected_s",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "earliest 60s-block start with all subsequent adjacent 60s drifts U<=0.05 and k<=0.02 over 64 probes; blocks 60-420 s",
+        "id": "stationarity_onset_detected_s",
+        "name_zh": "检测出的统计起始时刻",
+        "unit": "s"
+      },
+      "purpose": "瞬态自旋与统计启动：执行变体 长时序自旋与统计，围绕依据六个连续60秒窗口的64点风速和湍动能统计，按冻结漂移门限确定最早持续平稳的统计开始点。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-087",
+      "variant": "长时序自旋与统计"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "cfd",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 1,
+  "required_solver_runs": 1,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-087"
+}

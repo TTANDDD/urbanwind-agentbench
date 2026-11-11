@@ -1,0 +1,141 @@
+{
+  "case_ids": [
+    "task-064-case-001",
+    "task-064-case-002",
+    "task-064-case-003"
+  ],
+  "cases": [
+    {
+      "case_id": "task-064-case-001",
+      "inlet_U_type": "fixedProfile csvFile",
+      "obukhov_length_m": 50.0,
+      "variant": "稳定",
+      "variant_key": "stable"
+    },
+    {
+      "case_id": "task-064-case-002",
+      "inlet_U_type": "fixedProfile csvFile",
+      "obukhov_length_m": null,
+      "variant": "中性",
+      "variant_key": "neutral"
+    },
+    {
+      "case_id": "task-064-case-003",
+      "inlet_U_type": "fixedProfile csvFile",
+      "obukhov_length_m": -50.0,
+      "variant": "不稳定",
+      "variant_key": "unstable"
+    }
+  ],
+  "controlled_factor": "prescribed Monin-Obukhov momentum-profile regime only: stable, neutral, unstable",
+  "cpu_affinity": {
+    "task-064-case-001": "64-79",
+    "task-064-case-002": "80-95",
+    "task-064-case-003": "96-111"
+  },
+  "frozen_across_cases": [
+    "geometry and mesh",
+    "Uref and Zref",
+    "z0",
+    "k and omega inlet profiles",
+    "wall/top/side/outlet boundaries",
+    "kOmegaSST model",
+    "upwind convection",
+    "SIMPLE settings",
+    "400 iterations",
+    "52 inlet probe levels and weighting"
+  ],
+  "frozen_gates": {
+    "finite_profiles": true,
+    "finite_solver_log": true,
+    "max_abs_cumulative_continuity": 0.01,
+    "max_inlet_U_rmse_m_s": 1e-06,
+    "max_inlet_k_rmse_m2_s2": 1e-06,
+    "max_inlet_omega_rmse_s_1": 1e-05,
+    "max_last20_initial_residual_full": 0.0001,
+    "required_cell_count": 365488,
+    "required_final_iteration": 400
+  },
+  "full_iterations": 400,
+  "geometry": "365488-cell conformal D x D x 4D single-building domain",
+  "hidden_boundary": "Visible cases, formulas, target profiles, probe coordinates, array shapes and gates only; no hidden numerical time series.",
+  "implementation": "fixedProfile csvFile linear interpolation of the visible 52-level U target for each regime",
+  "mpi_ranks_per_case": 16,
+  "path_policy": "relative paths under submission root, unique and SHA-256 matched",
+  "primary_metric": {
+    "aggregation": "per_case_then_task",
+    "formula": "mean_{r in stable,neutral,unstable}(sqrt(sum_i(dz_i*(Ux_r(i,400)-U_target_r(z_i))^2)/sum_i(dz_i))/1.2)",
+    "id": "monin_obukhov_profile_nmae",
+    "name_zh": "Monin-Obukhov稳定度剖面NMAE",
+    "unit": "fraction"
+  },
+  "profile_parameters": {
+    "Cmu": 0.09,
+    "Uref_m_s": 1.2,
+    "Zref_m": 4.0,
+    "kappa": 0.41,
+    "normalized_profile": "U(z)=Uref*F(z,L)/F(Zref,L); F=ln((z+z0)/z0)-psi_m((z+z0)/L)+psi_m(z0/L)",
+    "obukhov_length_m": {
+      "neutral": null,
+      "stable": 50.0,
+      "unstable": -50.0
+    },
+    "stable_psi_m": "-5*zeta",
+    "u_star_neutral_m_s": 0.0820826103015287,
+    "unstable_psi_m": "2*ln((1+x)/2)+ln((1+x^2)/2)-2*atan(x)+pi/2; x=(1-16*zeta)^(1/4)",
+    "z0_m": 0.01
+  },
+  "profile_sample_count": 52,
+  "profile_sample_iterations": [
+    20,
+    40,
+    60,
+    80,
+    100,
+    120,
+    140,
+    160,
+    180,
+    200,
+    220,
+    240,
+    260,
+    280,
+    300,
+    320,
+    340,
+    360,
+    380,
+    400
+  ],
+  "profile_samples": 52,
+  "profile_target_csv": "local_assets/monin_obukhov_profiles.csv",
+  "regimes": [
+    "stable",
+    "neutral",
+    "unstable"
+  ],
+  "required_manifest": "monin_obukhov_evidence_manifest.json",
+  "required_raw_evidence_per_case": [
+    "probe_U",
+    "probe_k",
+    "probe_omega",
+    "solver_log",
+    "checkMesh_log",
+    "field_U",
+    "profile_csv",
+    "controlDict"
+  ],
+  "schema_version": "1.0",
+  "smoke_iterations": 20,
+  "solver": "OpenCFD-v2412 simpleFoam",
+  "task_gate": "All three cases must pass every frozen full-run gate; no successful-subset selection or post-hoc threshold relaxation.",
+  "task_id": "urbanwind-task-064",
+  "truth_boundary": "Prescribed Monin-Obukhov momentum-profile OpenFOAM numerical reproduction only; not a coupled thermal surface-layer simulation and not PIV, DNS, wind-tunnel, field or experimental truth.",
+  "turbulence_model": "kOmegaSST",
+  "variants": [
+    "稳定",
+    "中性",
+    "不稳定"
+  ]
+}

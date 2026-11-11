@@ -1,0 +1,162 @@
+{
+  "cases": [
+    {
+      "case_id": "task-060-case-001",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "SB4_LOCAL",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "汇总网格配置、checkMesh日志、统计位置、成本和GCI所需输出。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "粗网格解"
+      },
+      "metrics": [
+        "fine_grid_gci_percent",
+        "observed_order_of_accuracy",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "Fs*abs((f_fine-f_medium)/f_fine)/(r^p-1)*100",
+        "id": "fine_grid_gci_percent",
+        "name_zh": "细网格GCI",
+        "unit": "%"
+      },
+      "purpose": "网格收敛证据包：执行变体 粗网格解，围绕汇总网格配置、checkMesh日志、统计位置、成本和GCI所需输出。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-060",
+      "variant": "粗网格解"
+    },
+    {
+      "case_id": "task-060-case-002",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "SB4_LOCAL",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "汇总网格配置、checkMesh日志、统计位置、成本和GCI所需输出。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "中网格解"
+      },
+      "metrics": [
+        "fine_grid_gci_percent",
+        "observed_order_of_accuracy",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "Fs*abs((f_fine-f_medium)/f_fine)/(r^p-1)*100",
+        "id": "fine_grid_gci_percent",
+        "name_zh": "细网格GCI",
+        "unit": "%"
+      },
+      "purpose": "网格收敛证据包：执行变体 中网格解，围绕汇总网格配置、checkMesh日志、统计位置、成本和GCI所需输出。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-060",
+      "variant": "中网格解"
+    },
+    {
+      "case_id": "task-060-case-003",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "SB4_LOCAL",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "汇总网格配置、checkMesh日志、统计位置、成本和GCI所需输出。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "细网格解"
+      },
+      "metrics": [
+        "fine_grid_gci_percent",
+        "observed_order_of_accuracy",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "Fs*abs((f_fine-f_medium)/f_fine)/(r^p-1)*100",
+        "id": "fine_grid_gci_percent",
+        "name_zh": "细网格GCI",
+        "unit": "%"
+      },
+      "purpose": "网格收敛证据包：执行变体 细网格解，围绕汇总网格配置、checkMesh日志、统计位置、成本和GCI所需输出。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-060",
+      "variant": "细网格解"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "cfd",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 3,
+  "required_solver_runs": 3,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-060"
+}

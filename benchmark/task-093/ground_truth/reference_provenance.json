@@ -1,0 +1,39 @@
+{
+  "experimental_claim": false,
+  "host": "5070-server (reported hostname abc)",
+  "independent_archive_audit": "validation/openfoam-tasks091-093-archive-independent-audit-v1.json",
+  "independent_archive_audit_sha256": "fa591fda8f73e1824219bdd38f5530f40d10f885b9667ba1b17e879ef45411f6",
+  "openfoam_version": "v2412",
+  "runtime_environment": "/home/abc/urbanwind-agentbench-runtime-v0.1/envs/openfoam-2412",
+  "schema_version": "1.0",
+  "source_runs": [
+    {
+      "case_id": "task-093-case-001",
+      "source_archive": "validation/openfoam-batch-20260914-v17/results/task093-roughness-low/reference_candidate.tar.gz",
+      "source_archive_sha256": "3db8d4170fed3fa55bc789805cbfc281ed1987189fd121bd6d07aa3fbbd6d526",
+      "source_job": "task093-roughness-low",
+      "source_status": "validation/openfoam-batch-20260914-v17/results/task093-roughness-low/status.json",
+      "source_status_sha256": "bd95adb11cc1fc5a1e8a07df9b885764be41a793ac1262938d80f94f7fdb7b2d",
+      "variant": "低粗糙度"
+    },
+    {
+      "case_id": "task-093-case-002",
+      "source_archive": "validation/openfoam-batch-20260914-v17/results/task093-roughness-reference/reference_candidate.tar.gz",
+      "source_archive_sha256": "7287a836db36909edb3bdec44e8240622389c2339db807c98df66bc60165b465",
+      "source_job": "task093-roughness-reference",
+      "source_status": "validation/openfoam-batch-20260914-v17/results/task093-roughness-reference/status.json",
+      "source_status_sha256": "bfb09ac1cd124da32994c3d57842d3af0d9fbef9351b099ccff682c16abcb6a9",
+      "variant": "参考粗糙度"
+    },
+    {
+      "case_id": "task-093-case-003",
+      "source_archive": "validation/openfoam-batch-20260914-v17/results/task093-roughness-high/reference_candidate.tar.gz",
+      "source_archive_sha256": "108c2dbdd94255d0d4091896efe7894784de403a2c82aaff9acd935ef1f9a6a7",
+      "source_job": "task093-roughness-high",
+      "source_status": "validation/openfoam-batch-20260914-v17/results/task093-roughness-high/status.json",
+      "source_status_sha256": "611f58514507782645d707f96571c25382150d048950ec83a3a63fe18534a8d1",
+      "variant": "高粗糙度"
+    }
+  ],
+  "task_id": "urbanwind-task-093"
+}

@@ -1,0 +1,13 @@
+{
+  "case_ids": [
+    "task-087-case-001"
+  ],
+  "claim_boundary": "Frozen OpenFOAM numerical onset; not PIV, DNS or experimental truth.",
+  "primary_metric": {
+    "id": "stationarity_onset_detected_s",
+    "unit": "s",
+    "value": 180.0
+  },
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-087"
+}

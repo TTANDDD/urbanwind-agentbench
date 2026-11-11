@@ -1,0 +1,614 @@
+{
+  "current_evaluator_boundary": "Parses three raw direction runs, recomputes 120-180 s arrays and the visible metric, and compares hidden OpenFOAM numerical arrays; no experimental truth or frozen runtime claim.",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision": "decision.md",
+  "decision_required_terms": [
+    "证据",
+    "限制",
+    "结论"
+  ],
+  "evidence_manifest": "evidence_manifest.json",
+  "expected_case_ids": [
+    "task-092-case-001",
+    "task-092-case-002",
+    "task-092-case-003"
+  ],
+  "expected_solver_case_ids": [
+    "task-092-case-001",
+    "task-092-case-002",
+    "task-092-case-003"
+  ],
+  "metric_contracts": [
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "mean_direction(mean_probe(Ux*cos(theta)+Uy*sin(theta), t=120-180s))/1.2, theta={0,22.5,45}deg",
+      "id": "wind_direction_weighted_probe_speed_ratio",
+      "name_zh": "多风向加权探针流向速度比",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    }
+  ],
+  "metric_ids": [
+    "wind_direction_weighted_probe_speed_ratio",
+    "evidence_provenance_fraction",
+    "hard_gate_pass_fraction"
+  ],
+  "metrics": "metrics.json",
+  "multi_direction_result_contract": {
+    "cases": [
+      {
+        "case_id": "task-092-case-001",
+        "variant": "风向0度",
+        "wind_direction_degrees": 0.0
+      },
+      {
+        "case_id": "task-092-case-002",
+        "variant": "风向22.5度",
+        "wind_direction_degrees": 22.5
+      },
+      {
+        "case_id": "task-092-case-003",
+        "variant": "风向45度",
+        "wind_direction_degrees": 45.0
+      }
+    ],
+    "minimum_samples": 300,
+    "path_policy": "relative paths under submission root, unique and SHA-256 matched",
+    "primary_metric": {
+      "aggregation": "per_case_then_task",
+      "formula": "mean_direction(mean_probe(Ux*cos(theta)+Uy*sin(theta), t=120-180s))/1.2, theta={0,22.5,45}deg",
+      "id": "wind_direction_weighted_probe_speed_ratio",
+      "name_zh": "多风向加权探针流向速度比",
+      "unit": "fraction"
+    },
+    "probe_count": 96,
+    "probe_points_m": [
+      [
+        -2.0,
+        0.0,
+        0.5
+      ],
+      [
+        -2.0,
+        0.0,
+        1.0
+      ],
+      [
+        -2.0,
+        0.0,
+        2.0
+      ],
+      [
+        -2.0,
+        0.0,
+        4.0
+      ],
+      [
+        -2.0,
+        2.0,
+        0.5
+      ],
+      [
+        -2.0,
+        2.0,
+        1.0
+      ],
+      [
+        -2.0,
+        2.0,
+        2.0
+      ],
+      [
+        -2.0,
+        2.0,
+        4.0
+      ],
+      [
+        -2.0,
+        4.0,
+        0.5
+      ],
+      [
+        -2.0,
+        4.0,
+        1.0
+      ],
+      [
+        -2.0,
+        4.0,
+        2.0
+      ],
+      [
+        -2.0,
+        4.0,
+        4.0
+      ],
+      [
+        -2.0,
+        6.0,
+        0.5
+      ],
+      [
+        -2.0,
+        6.0,
+        1.0
+      ],
+      [
+        -2.0,
+        6.0,
+        2.0
+      ],
+      [
+        -2.0,
+        6.0,
+        4.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.5
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ],
+      [
+        0.0,
+        0.0,
+        2.0
+      ],
+      [
+        0.0,
+        0.0,
+        4.0
+      ],
+      [
+        0.0,
+        2.0,
+        0.5
+      ],
+      [
+        0.0,
+        2.0,
+        1.0
+      ],
+      [
+        0.0,
+        2.0,
+        2.0
+      ],
+      [
+        0.0,
+        2.0,
+        4.0
+      ],
+      [
+        0.0,
+        4.0,
+        0.5
+      ],
+      [
+        0.0,
+        4.0,
+        1.0
+      ],
+      [
+        0.0,
+        4.0,
+        2.0
+      ],
+      [
+        0.0,
+        4.0,
+        4.0
+      ],
+      [
+        0.0,
+        6.0,
+        0.5
+      ],
+      [
+        0.0,
+        6.0,
+        1.0
+      ],
+      [
+        0.0,
+        6.0,
+        2.0
+      ],
+      [
+        0.0,
+        6.0,
+        4.0
+      ],
+      [
+        2.0,
+        0.0,
+        0.5
+      ],
+      [
+        2.0,
+        0.0,
+        1.0
+      ],
+      [
+        2.0,
+        0.0,
+        2.0
+      ],
+      [
+        2.0,
+        0.0,
+        4.0
+      ],
+      [
+        2.0,
+        2.0,
+        0.5
+      ],
+      [
+        2.0,
+        2.0,
+        1.0
+      ],
+      [
+        2.0,
+        2.0,
+        2.0
+      ],
+      [
+        2.0,
+        2.0,
+        4.0
+      ],
+      [
+        2.0,
+        4.0,
+        0.5
+      ],
+      [
+        2.0,
+        4.0,
+        1.0
+      ],
+      [
+        2.0,
+        4.0,
+        2.0
+      ],
+      [
+        2.0,
+        4.0,
+        4.0
+      ],
+      [
+        2.0,
+        6.0,
+        0.5
+      ],
+      [
+        2.0,
+        6.0,
+        1.0
+      ],
+      [
+        2.0,
+        6.0,
+        2.0
+      ],
+      [
+        2.0,
+        6.0,
+        4.0
+      ],
+      [
+        4.0,
+        0.0,
+        0.5
+      ],
+      [
+        4.0,
+        0.0,
+        1.0
+      ],
+      [
+        4.0,
+        0.0,
+        2.0
+      ],
+      [
+        4.0,
+        0.0,
+        4.0
+      ],
+      [
+        4.0,
+        2.0,
+        0.5
+      ],
+      [
+        4.0,
+        2.0,
+        1.0
+      ],
+      [
+        4.0,
+        2.0,
+        2.0
+      ],
+      [
+        4.0,
+        2.0,
+        4.0
+      ],
+      [
+        4.0,
+        4.0,
+        0.5
+      ],
+      [
+        4.0,
+        4.0,
+        1.0
+      ],
+      [
+        4.0,
+        4.0,
+        2.0
+      ],
+      [
+        4.0,
+        4.0,
+        4.0
+      ],
+      [
+        4.0,
+        6.0,
+        0.5
+      ],
+      [
+        4.0,
+        6.0,
+        1.0
+      ],
+      [
+        4.0,
+        6.0,
+        2.0
+      ],
+      [
+        4.0,
+        6.0,
+        4.0
+      ],
+      [
+        6.0,
+        0.0,
+        0.5
+      ],
+      [
+        6.0,
+        0.0,
+        1.0
+      ],
+      [
+        6.0,
+        0.0,
+        2.0
+      ],
+      [
+        6.0,
+        0.0,
+        4.0
+      ],
+      [
+        6.0,
+        2.0,
+        0.5
+      ],
+      [
+        6.0,
+        2.0,
+        1.0
+      ],
+      [
+        6.0,
+        2.0,
+        2.0
+      ],
+      [
+        6.0,
+        2.0,
+        4.0
+      ],
+      [
+        6.0,
+        4.0,
+        0.5
+      ],
+      [
+        6.0,
+        4.0,
+        1.0
+      ],
+      [
+        6.0,
+        4.0,
+        2.0
+      ],
+      [
+        6.0,
+        4.0,
+        4.0
+      ],
+      [
+        6.0,
+        6.0,
+        0.5
+      ],
+      [
+        6.0,
+        6.0,
+        1.0
+      ],
+      [
+        6.0,
+        6.0,
+        2.0
+      ],
+      [
+        6.0,
+        6.0,
+        4.0
+      ],
+      [
+        8.0,
+        0.0,
+        0.5
+      ],
+      [
+        8.0,
+        0.0,
+        1.0
+      ],
+      [
+        8.0,
+        0.0,
+        2.0
+      ],
+      [
+        8.0,
+        0.0,
+        4.0
+      ],
+      [
+        8.0,
+        2.0,
+        0.5
+      ],
+      [
+        8.0,
+        2.0,
+        1.0
+      ],
+      [
+        8.0,
+        2.0,
+        2.0
+      ],
+      [
+        8.0,
+        2.0,
+        4.0
+      ],
+      [
+        8.0,
+        4.0,
+        0.5
+      ],
+      [
+        8.0,
+        4.0,
+        1.0
+      ],
+      [
+        8.0,
+        4.0,
+        2.0
+      ],
+      [
+        8.0,
+        4.0,
+        4.0
+      ],
+      [
+        8.0,
+        6.0,
+        0.5
+      ],
+      [
+        8.0,
+        6.0,
+        1.0
+      ],
+      [
+        8.0,
+        6.0,
+        2.0
+      ],
+      [
+        8.0,
+        6.0,
+        4.0
+      ]
+    ],
+    "reference_speed_m_s": 1.2,
+    "required_manifest": "directional_evidence_manifest.json",
+    "required_raw_evidence_per_case": [
+      "probe_U",
+      "solver_log",
+      "checkMesh_log"
+    ],
+    "schema_version": "1.0",
+    "simulation_metrics": {
+      "array_shapes": {
+        "mean_U_m_s": [
+          96,
+          3
+        ],
+        "resolved_tke_m2_s2": [
+          96
+        ]
+      },
+      "path": "simulation_metrics.json",
+      "required_case_fields": [
+        "case_id",
+        "wind_direction_degrees",
+        "sample_count",
+        "mean_U_m_s",
+        "resolved_tke_m2_s2"
+      ],
+      "root_key": "case_results"
+    },
+    "statistical_window_s": [
+      120.0,
+      180.0
+    ],
+    "streamwise_projection": "Ux*cos(theta)+Uy*sin(theta)",
+    "task_id": "urbanwind-task-092",
+    "truth_boundary": "Visible geometry, directions, probes and formula only; no hidden numerical answers."
+  },
+  "required_external_inputs": [],
+  "required_inputs": [
+    "随任务本地生成的OpenFOAM起始案例",
+    "本地OpenFOAM运行版本记录合同",
+    "本地合成数值参考（仅作固定比较输入，不是PIV或实验真值）"
+  ],
+  "required_solver_runs": 3,
+  "run_manifest": "run_manifest.json",
+  "schema_version": "1.0",
+  "score_layers": {
+    "artifact_and_schema": 10,
+    "engineering_decision": 10,
+    "external_validation": 15,
+    "numerical_quality": 20,
+    "physical_fidelity": 25,
+    "real_tool_execution": 20
+  },
+  "task_id": "urbanwind-task-092"
+}

@@ -1,0 +1,75 @@
+{
+  "benchmark_metadata": {
+    "case_anchor": "PROCEDURAL_CITY",
+    "category": "mesh_generation",
+    "compute_track": "lite",
+    "data_origin_policy": "local_generation_or_optional_one_click_public",
+    "difficulty": "intermediate",
+    "init_type": "incomplete_template",
+    "materialization_status": "local_inputs_generated",
+    "professional_difficulty": "D3",
+    "reference_status": "openfoam_tool_reference_generated",
+    "release_status": "reference_ready_not_release_valid",
+    "required_cases": 1,
+    "required_solver_runs": 0,
+    "simulation_status": "real_checkMesh_only_no_CFD",
+    "task_id": "urbanwind-task-055",
+    "task_mode": "configure_and_verify",
+    "track": "mesh_and_numerics"
+  },
+  "config": [
+    {
+      "parameters": {
+        "files": [
+          {
+            "local_path": "task-055/init_file/init_file.tar.gz",
+            "path": "/home/user/Desktop/init_file.tar.gz"
+          }
+        ]
+      },
+      "type": "upload_file"
+    },
+    {
+      "parameters": {
+        "command": "bash -c \"set -e; tar -xzf '/home/user/Desktop/init_file.tar.gz' -C '/home/user/Desktop'; rm -f '/home/user/Desktop/init_file.tar.gz'\"",
+        "shell": true
+      },
+      "type": "launch"
+    }
+  ],
+  "evaluator": {
+    "func": "task_specific_openfoam_reexecution_check",
+    "metric": {
+      "name": "remaining_internal_face_orientation_defect_count",
+      "direction": "minimize",
+      "unit": "faces",
+      "acceptance_target": 0,
+      "score_scale": "0-100",
+      "conjunctive_hard_gates": true
+    },
+    "expected": {},
+    "postconfig": [],
+    "result": {
+      "type": "trusted_host_operator_entry",
+      "entry": "task-055/eval.py",
+      "isolated_python_required": true,
+      "submission": "retrieved /home/user/Desktop/submission only, passed explicitly via --submission",
+      "request_id": "unique_prospectively_registered_owner_request",
+      "binding": "private operator binding; never agent supplied",
+      "shell": false
+    },
+    "release_boundary": "Current local trusted-host installed entry qualified. VM-side packaging/frozen portable runtime is pending and not silently treated as runnable."
+  },
+  "fixed_ip": false,
+  "id": "c-urbanwind-task-055-ubuntu",
+  "instruction": "你正在完成UrbanWind task-055 v53：checkMesh自动门禁——导入城市网格的内部面朝向诊断与最小修复。读取TASK.md、repair_contract.json、quality_thresholds.json和submission_schema.json。只修改faces的循环方向/起点，其他四个原始文件及实体、连接、边界保持不变。定位故障并从原始几何计算S/R/Q/D、单位和最小修复报告；保留before_full、after_full、after_complete三组真实原生命令、完整日志和实际写出的集合。缺陷必须REJECT、修复必须完整ACCEPT；返回码0本身不是通过，超时/FatalError/缺失截断证据STOP。0CFD/LES。按submission_schema.json提交纯数据repair_report.json、decision.md、五个repaired原始文件及三组证据，不提交可执行脚本或字典。评价由独立可信host入口读取数据并真实复跑；允许循环起点等价，不匹配隐藏GT编号/字节。它仅为本地合成网格工具参考，不是现实/实验真值，尚非release-valid。全部纯数据结果交付到/home/user/Desktop/submission；该目录不得包含输入包、可执行脚本或其他杂项。可信host评价时显式把此目录作为--submission参数。",
+  "possibility_of_env_change": "medium",
+  "proxy": false,
+  "related_apps": [
+    "python",
+    "openfoam"
+  ],
+  "snapshot": "urbanwind-multisoftware-v1",
+  "source": "UrbanWind-AgentBench v53 qualified local tool reference; host-bound hidden evaluator, not portable release",
+  "trajectory": "trajectories/"
+}

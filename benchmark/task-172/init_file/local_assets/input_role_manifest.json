@@ -1,0 +1,36 @@
+{
+  "all_required_roles_materialized": true,
+  "generator_version": "urbanwind-local-assets-v3",
+  "required_external_inputs": [],
+  "roles": [
+    {
+      "label": "气温、相对湿度、风速和平均辐射温度",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/model_field.csv",
+        "local_assets/reference_field.csv",
+        "local_assets/reference_diagnostics.json"
+      ],
+      "role_id": "input-001"
+    },
+    {
+      "label": "冻结UTCI算法版本",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/reference_diagnostics.json",
+        "local_assets/task_input_values.json"
+      ],
+      "role_id": "input-002"
+    },
+    {
+      "label": "行人位置与时段掩膜",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/mask_and_weights.csv"
+      ],
+      "role_id": "input-003"
+    }
+  ],
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-172"
+}

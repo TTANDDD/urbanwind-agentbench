@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "随任务本地生成的PALM驱动输入",
+      "role_id": "input-001",
+      "seed": 202609040601,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.88721546,
+        0.70026576,
+        0.11186704,
+        0.62171402,
+        0.65312634,
+        0.91448362,
+        0.14924191,
+        0.51354437,
+        0.0702775,
+        0.93398919,
+        0.21141296,
+        0.82595529,
+        0.72301323,
+        0.68414622,
+        0.78408894,
+        0.22118753
+      ]
+    },
+    {
+      "label": "本地PALM运行版本记录合同",
+      "role_id": "input-002",
+      "seed": 202609040602,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.43097632,
+        0.18872534,
+        0.842022,
+        0.05629564,
+        0.30760369,
+        0.98697774,
+        0.17131001,
+        0.32657902,
+        0.17551052,
+        0.28252494,
+        0.93614595,
+        0.72060277,
+        0.64728577,
+        0.28206148,
+        0.72895605,
+        0.84156346
+      ]
+    },
+    {
+      "label": "本地NetCDF变量合同",
+      "role_id": "input-003",
+      "seed": 202609040603,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.54188782,
+        0.526833,
+        0.28165512,
+        0.36030341,
+        0.11692989,
+        0.14904956,
+        0.05926319,
+        0.1951012,
+        0.74226545,
+        0.25688215,
+        0.09925817,
+        0.27471108,
+        0.38895804,
+        0.60387589,
+        0.37827454,
+        0.51791989
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-106"
+}

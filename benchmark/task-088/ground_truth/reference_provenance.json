@@ -1,0 +1,21 @@
+{
+  "experimental_claim": false,
+  "host": "5070-server",
+  "independent_sampling_audit": "validation/openfoam-task088-sampling-audit-v1.json",
+  "independent_sampling_audit_sha256": "f4b2b72a04a2fe18c3a42f6419e58510ffd6bd5a727d6dc8bf705e920fadc6f7",
+  "openfoam_version": "v2412",
+  "runtime_environment": "/home/abc/urbanwind-agentbench-runtime-v0.1/envs/openfoam-2412",
+  "schema_version": "1.0",
+  "source_runs": [
+    {
+      "case_id": "task-088-case-001",
+      "source_archive": "validation/openfoam-batch-20260915-v20-late-window/results/task088-sampling-late/reference_candidate.tar.gz",
+      "source_archive_sha256": "af7e3e89086ad4c08d0c5c19f746629f9999f765901ee6f34d47d3e2c8b1f1c0",
+      "source_batch": "openfoam-batch-20260915-v20-late-window",
+      "source_job": "task088-sampling-late",
+      "source_status_sha256": "c7738e4c18f66e23748bda2ae8ebbccc2ad758f93fcbdf940c834274cc248aed",
+      "variant": "采样配置短运行"
+    }
+  ],
+  "task_id": "urbanwind-task-088"
+}

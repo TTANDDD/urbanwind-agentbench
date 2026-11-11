@@ -1,0 +1,162 @@
+{
+  "cases": [
+    {
+      "case_id": "task-120-case-001",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "在随任务程序化城市上从本地几何、静态驱动、PALM运行、统计到风险图完成闭环。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "风向0度PALM运行"
+      },
+      "metrics": [
+        "palm_end_to_end_gate_pass_fraction",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "passed_evidence_input_run_numerical_physical_gis_gates / required_gates",
+        "id": "palm_end_to_end_gate_pass_fraction",
+        "name_zh": "PALM全流程门禁通过率",
+        "unit": "fraction"
+      },
+      "purpose": "程序化城市PALM全流程：执行变体 风向0度PALM运行，围绕在随任务程序化城市上从本地几何、静态驱动、PALM运行、统计到风险图完成闭环。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-120",
+      "variant": "风向0度PALM运行"
+    },
+    {
+      "case_id": "task-120-case-002",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "在随任务程序化城市上从本地几何、静态驱动、PALM运行、统计到风险图完成闭环。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "风向22.5度PALM运行"
+      },
+      "metrics": [
+        "palm_end_to_end_gate_pass_fraction",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "passed_evidence_input_run_numerical_physical_gis_gates / required_gates",
+        "id": "palm_end_to_end_gate_pass_fraction",
+        "name_zh": "PALM全流程门禁通过率",
+        "unit": "fraction"
+      },
+      "purpose": "程序化城市PALM全流程：执行变体 风向22.5度PALM运行，围绕在随任务程序化城市上从本地几何、静态驱动、PALM运行、统计到风险图完成闭环。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-120",
+      "variant": "风向22.5度PALM运行"
+    },
+    {
+      "case_id": "task-120-case-003",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "在随任务程序化城市上从本地几何、静态驱动、PALM运行、统计到风险图完成闭环。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "风向45度PALM运行"
+      },
+      "metrics": [
+        "palm_end_to_end_gate_pass_fraction",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "passed_evidence_input_run_numerical_physical_gis_gates / required_gates",
+        "id": "palm_end_to_end_gate_pass_fraction",
+        "name_zh": "PALM全流程门禁通过率",
+        "unit": "fraction"
+      },
+      "purpose": "程序化城市PALM全流程：执行变体 风向45度PALM运行，围绕在随任务程序化城市上从本地几何、静态驱动、PALM运行、统计到风险图完成闭环。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-120",
+      "variant": "风向45度PALM运行"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "cfd",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 3,
+  "required_solver_runs": 3,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-120"
+}

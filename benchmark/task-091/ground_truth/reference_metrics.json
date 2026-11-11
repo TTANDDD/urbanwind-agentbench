@@ -1,0 +1,22 @@
+{
+  "diagnostics": {
+    "point_count": 96,
+    "visible_local_reference": "local_assets/array_reference_observations.csv",
+    "visible_local_reference_sha256": "b77e630e32c25dd9a0d4e7d480c87349f980251a15906fa40aafb9f0def61976"
+  },
+  "experimental_claim": false,
+  "metric_formula": "0.5*(mean_i(abs(Ux_i-Ux_local_i))/1.2 + mean_i(abs(kres_i-kres_local_i))/1.44) over 96 frozen probes",
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-091",
+  "truth_type": "verified_openfoam_numerical_reference",
+  "units": {
+    "array_les_turbulence_nmae": "fraction",
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction"
+  },
+  "values": {
+    "array_les_turbulence_nmae": 0.1678069381680752,
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0
+  }
+}

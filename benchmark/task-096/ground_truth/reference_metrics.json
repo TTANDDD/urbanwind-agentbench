@@ -1,0 +1,23 @@
+{
+  "acceptance_limit_percent": 2.0,
+  "experimental_claim": false,
+  "metric_formula": "max_cases(100*abs(source-outflow-storage)/max(abs(source),eps))",
+  "per_case_values": {
+    "task-096-case-001": 0.017108096948451057,
+    "task-096-case-002": 0.013633001375037979,
+    "task-096-case-003": 0.019881175504596338
+  },
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-096",
+  "truth_type": "verified_openfoam_numerical_reference",
+  "units": {
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction",
+    "scalar_mass_balance_error_percent": "%"
+  },
+  "values": {
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0,
+    "scalar_mass_balance_error_percent": 0.019881175504596338
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "case_id": "task-044-case-001",
+  "flow_solver_runs": 0,
+  "full": {
+    "dy_over_dx_min": 1.8,
+    "dz_over_dx_min": 1.8,
+    "resolution_max_m": [
+      0.125,
+      0.25,
+      0.25
+    ]
+  },
+  "gates": {
+    "area_relative_error_max": 1e-08,
+    "aspect_ratio_max": 10,
+    "atomic_grid_voxels_max": 2000000,
+    "axis_cartesian_relative_error_max": 1e-09,
+    "cells_max": 200000,
+    "cells_min": 1000,
+    "max_nonorthogonality_deg": 1,
+    "max_skewness": 1,
+    "outside_coarse_dx_min_m": 0.4,
+    "outside_coarse_volume_fraction_min": 0.7,
+    "patch_absolute_error_m": 1e-08,
+    "volume_relative_error_max": 1e-08,
+    "wake_coverage_min": 0.99999999
+  },
+  "geometry": {
+    "building_bounds_m": [
+      [
+        -0.5,
+        0.5
+      ],
+      [
+        -0.5,
+        0.5
+      ],
+      [
+        0,
+        4
+      ]
+    ],
+    "building_exposed_areas_m2": {
+      "roof": 1,
+      "x_high": 4,
+      "x_low": 4,
+      "y_high": 4,
+      "y_low": 4
+    },
+    "domain_bounds_m": [
+      [
+        -4,
+        23
+      ],
+      [
+        -6.2,
+        6.2
+      ],
+      [
+        0,
+        9
+      ]
+    ],
+    "fluid_volume_m3": 3009.2,
+    "wake_roi_m": [
+      [
+        0.5,
+        8.5
+      ],
+      [
+        -1.5,
+        1.5
+      ],
+      [
+        0,
+        6
+      ]
+    ],
+    "wake_volume_m3": 144.0
+  },
+  "legal_alternatives": "Different count/layout choices satisfying all public constraints are valid; byte-identical meshes, cell IDs and reference cell counts are not required.",
+  "measurement": "Cell bounds from all owner/neighbour face vertices; verify actual volume against bbox volume, then exact intersection products. Atomic interval occupancy must be 1 outside solid and 0 inside, not merely match global volume. Only atomic plane indexing rounds coordinates to 1e-10 m to reconcile ASCII roundoff; intersection volumes use raw coordinates.",
+  "metric": {
+    "formula": "sum(exact cell-box intersection volume with visible wake ROI for cells satisfying all visible dx/dy/dz and anisotropy limits)/analytic wake ROI volume; raw Cartesian topology must tile fluid domain without gaps or overlaps",
+    "id": "wake_refinement_coverage",
+    "name_zh": "尾流加密区覆盖率",
+    "unit": "fraction"
+  },
+  "mpi_ranks": 16,
+  "physical_cpus": "64-79",
+  "qualification": {
+    "dy_over_dx_min": 1.8,
+    "dz_over_dx_min": 1.8,
+    "resolution_max_m": [
+      0.25,
+      0.5,
+      0.5
+    ]
+  },
+  "schema_version": "1.0",
+  "software": "OpenCFD-v2412",
+  "task_id": "urbanwind-task-044",
+  "tolerance": "Resolution and ratio comparisons use relative tolerance 1e-9; metric remains exact summed overlap volume/144.",
+  "tool_sequence": [
+    "blockMesh",
+    "checkMesh",
+    "decomposePar",
+    "checkMesh.parallel"
+  ],
+  "topology": "Conformal axis-aligned rectangular hexahedra, six planar quadrilateral faces per cell; exact raw box partition proof required.",
+  "truth_boundary": "Local geometric mesh-tool reference only. No velocity solution, wake accuracy, yplus, experimental or atmospheric truth is claimed."
+}

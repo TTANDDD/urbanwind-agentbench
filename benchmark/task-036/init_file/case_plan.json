@@ -1,0 +1,63 @@
+{
+  "cases": [
+    {
+      "case_id": "task-036-case-001",
+      "execution_role": "provided_data_or_tool_execution",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "LOCAL_DISPERSION",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "依据本地程序化阵列扩散几何重建模型，并用体积、投影面积和控制点交叉核对。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "本地扩散案例几何重建与比对-目标案例"
+      },
+      "metrics": [
+        "local_dispersion_surface_hausdorff_distance_m",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "hausdorff_distance(rebuilt_surface,local_reference_surface)",
+        "id": "local_dispersion_surface_hausdorff_distance_m",
+        "name_zh": "本地扩散算例表面Hausdorff距离",
+        "unit": "m"
+      },
+      "purpose": "本地扩散案例几何重建与比对：执行变体 本地扩散案例几何重建与比对-目标案例，围绕依据本地程序化阵列扩散几何重建模型，并用体积、投影面积和控制点交叉核对。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "gmsh"
+      ],
+      "task_id": "urbanwind-task-036",
+      "variant": "本地扩散案例几何重建与比对-目标案例"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "lite",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 1,
+  "required_solver_runs": 0,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-036"
+}

@@ -1,0 +1,111 @@
+{
+  "cases": [
+    {
+      "case_id": "task-085-case-001",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "SB4_LOCAL",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "在网格、时间步、SGS模型、入口条件、求解器容差和统计窗口完全一致时，只改变对流离散格式，比较有界中心与耗散格式对本地参考尾流恢复和脉动的影响。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "有界高阶格式（limitedLinearV 1）"
+      },
+      "metrics": [
+        "scheme_observable_spread",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "normalized_range(target_observables_across_schemes)",
+        "id": "scheme_observable_spread",
+        "name_zh": "离散格式关键量离散度",
+        "unit": "fraction"
+      },
+      "purpose": "对流格式敏感性：执行变体 有界高阶格式（limitedLinearV 1），围绕在网格、时间步、SGS模型、入口条件、求解器容差和统计窗口完全一致时，只改变速度对流离散格式，比较limitedLinearV 1有界高阶格式与一阶迎风格式对本地参考尾流恢复和脉动的影响。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-085",
+      "variant": "有界高阶格式（limitedLinearV 1）"
+    },
+    {
+      "case_id": "task-085-case-002",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "SB4_LOCAL",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "在网格、时间步、SGS模型、入口条件、求解器容差和统计窗口完全一致时，只改变对流离散格式，比较有界中心与耗散格式对本地参考尾流恢复和脉动的影响。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "一阶迎风耗散格式"
+      },
+      "metrics": [
+        "scheme_observable_spread",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "normalized_range(target_observables_across_schemes)",
+        "id": "scheme_observable_spread",
+        "name_zh": "离散格式关键量离散度",
+        "unit": "fraction"
+      },
+      "purpose": "对流格式敏感性：执行变体 一阶迎风耗散格式，围绕在网格、时间步、SGS模型、入口条件、求解器容差和统计窗口完全一致时，只改变速度对流离散格式，比较limitedLinearV 1有界高阶格式与一阶迎风格式对本地参考尾流恢复和脉动的影响。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-085",
+      "variant": "一阶迎风耗散格式"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "cfd",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 2,
+  "required_solver_runs": 2,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-085"
+}

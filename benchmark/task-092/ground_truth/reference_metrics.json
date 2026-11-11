@@ -1,0 +1,17 @@
+{
+  "experimental_claim": false,
+  "metric_formula": "mean_direction(mean_probe(Ux*cos(theta)+Uy*sin(theta), t=120-180s))/1.2, theta={0,22.5,45}deg",
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-092",
+  "truth_type": "verified_openfoam_numerical_reference",
+  "units": {
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction",
+    "wind_direction_weighted_probe_speed_ratio": "fraction"
+  },
+  "values": {
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0,
+    "wind_direction_weighted_probe_speed_ratio": 0.8490570177440098
+  }
+}

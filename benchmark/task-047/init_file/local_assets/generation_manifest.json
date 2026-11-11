@@ -1,0 +1,162 @@
+{
+  "anchor_name": "4 x 4程序化错列立方体阵列",
+  "answer_free": true,
+  "data_origin": "deterministic_local_generation",
+  "experimental_claim": false,
+  "files": [
+    {
+      "bytes": 757,
+      "path": "local_assets/active_learning_data.csv",
+      "sha256": "35e24f0ec148cd759ecacb17f56d558f8cffe60ec58ffea6aec19e6a1e36e6bc"
+    },
+    {
+      "bytes": 642,
+      "path": "local_assets/case_control_contract.json",
+      "sha256": "dad6ae63c76bd940b9c5d88e1ab796bdea6493acddbfdebe292149e06e913c47"
+    },
+    {
+      "bytes": 451,
+      "path": "local_assets/case_matrix.csv",
+      "sha256": "5c9c08463c7505d2c79a1fc2aef7a2712679a955a91c4b0ffc217e0ca3f03c8f"
+    },
+    {
+      "bytes": 10594,
+      "path": "local_assets/city_geometry.geojson",
+      "sha256": "7ec8352c09c2ddb10accf2f70d0e65a578842a327bb99bee9480dc53c482be56"
+    },
+    {
+      "bytes": 485,
+      "path": "local_assets/control_points.csv",
+      "sha256": "a9cb67b8417539338f3301aa2d9fc01eb89f073b04d1188a46773095326775bd"
+    },
+    {
+      "bytes": 9787,
+      "path": "local_assets/generate_street_mesh_template.py",
+      "sha256": "9573ba32c4a21a9762312227eb0be51877ed042b897484932dbf74e53f93a1c9"
+    },
+    {
+      "bytes": 1048,
+      "path": "local_assets/input_role_manifest.json",
+      "sha256": "2c92564c0ddcc71bb5e2e70bdd975f42e56e1723d3264da5540dd727e3c3ee85"
+    },
+    {
+      "bytes": 1611,
+      "path": "local_assets/mask_and_weights.csv",
+      "sha256": "79996ec74e326ed02de419544b96e96a5f51553a977de9d654ad7f5ee79ff2f8"
+    },
+    {
+      "bytes": 219,
+      "path": "local_assets/mesh_levels.csv",
+      "sha256": "4e1983e708650b1827e6ff4964e4b23c53a8f0778ed2bcb8c791458791a15925"
+    },
+    {
+      "bytes": 205,
+      "path": "local_assets/mesh_solution_series.csv",
+      "sha256": "99ca6612106330dd13a7d1f2ffb686129d74e06f9cc0a155a1ded2fa2b215f04"
+    },
+    {
+      "bytes": 12597,
+      "path": "local_assets/model_field.csv",
+      "sha256": "0b814570074a581683e62b37069076d528774c52f627afe6faac648d7b840ccf"
+    },
+    {
+      "bytes": 113,
+      "path": "local_assets/openfoam_base/mesh_counts.json",
+      "sha256": "77f7d2412c9bad47a84635c0d75aab76a5391ad0fb286e0a8844533e6ea3ebd6"
+    },
+    {
+      "bytes": 10403,
+      "path": "local_assets/openfoam_base/street_mesh_contract.json",
+      "sha256": "d77ed9129ab8910b257053f806dd4da45ee1e8b7c0fe5298f410c1884f8426e1"
+    },
+    {
+      "bytes": 78543,
+      "path": "local_assets/openfoam_base/system/blockMeshDict",
+      "sha256": "51463813d80400321f24160d92b6dde00abda07e82020184ef7c793e1c8c6213"
+    },
+    {
+      "bytes": 294,
+      "path": "local_assets/openfoam_base/system/controlDict",
+      "sha256": "bc0a714fcf97220b70441b892c6594d34f5be4f97ac76d9bd1eba66b26d19f38"
+    },
+    {
+      "bytes": 118,
+      "path": "local_assets/openfoam_base/system/decomposeParDict",
+      "sha256": "a530fa166efe20ca453c03553cbd620b775904c4e75c6199386fc91a28e14b3a"
+    },
+    {
+      "bytes": 289,
+      "path": "local_assets/openfoam_base/system/fvSchemes",
+      "sha256": "3da0876a6f54b7c82db227e78b157f8ad2d941a546878eb5a01c59698efb090b"
+    },
+    {
+      "bytes": 85,
+      "path": "local_assets/openfoam_base/system/fvSolution",
+      "sha256": "98c9a4c0a73fde9e4b9de3764a1b23db6553cdf48c03450bb04dd5948c4e2e25"
+    },
+    {
+      "bytes": 318,
+      "path": "local_assets/optional_public_metadata.json",
+      "sha256": "ba2e422a3ac9c0e98c3ce1f41584d33c6e047bbe78f5885e9dd2390efbdfd01a"
+    },
+    {
+      "bytes": 751,
+      "path": "local_assets/reference_diagnostics.json",
+      "sha256": "9f50fea906984b9a4221be787792c5d64c369a502a3f7465f8ce9d0facfa0172"
+    },
+    {
+      "bytes": 11970,
+      "path": "local_assets/reference_field.csv",
+      "sha256": "a956a0ee94a812b10b1d769a2adc8bdb66ffc076d04e2634d5d41d8cf27dc0ff"
+    },
+    {
+      "bytes": 6273,
+      "path": "local_assets/reference_spectrum.csv",
+      "sha256": "99a8ba1e107740022af409b0f063bc459ae5c6741f8f66499682c93b2a97e34c"
+    },
+    {
+      "bytes": 553,
+      "path": "local_assets/runtime_contract.json",
+      "sha256": "77162931222838485153ec7b03ba2f00278ce3b0b71c5d34fe5a159b5ba8797f"
+    },
+    {
+      "bytes": 716,
+      "path": "local_assets/source_inventory.json",
+      "sha256": "3a54866c5408b2bd8cea55c6d1a24cc8fb9b426c02647ebbded8e594de538702"
+    },
+    {
+      "bytes": 679,
+      "path": "local_assets/street_mesh_execution_plan.json",
+      "sha256": "a920c653835d819a7ea47810cb64cfebc521704f74af790eea8763b6b6a9a538"
+    },
+    {
+      "bytes": 1901,
+      "path": "local_assets/task_input_values.json",
+      "sha256": "4419df3ba078c1fb3767c7e31a518936109e4b144d75341565a5ca808b44c08a"
+    },
+    {
+      "bytes": 45815,
+      "path": "local_assets/velocity_timeseries.csv",
+      "sha256": "fd69ac6e11632694bab0f81531deee8d31b8008019c7dd5a2dc7a3185b894b31"
+    },
+    {
+      "bytes": 1052,
+      "path": "local_assets/wind_climate.csv",
+      "sha256": "dd1ce50c23312ac6f0bd2fd9614b17181de7b01385e995f1162f52205e4d83d0"
+    }
+  ],
+  "generator_version": "urbanwind-local-assets-v3",
+  "optional_public_data": [
+    {
+      "mode": "optional_one_click_download",
+      "name": "AIJ UWE Case A",
+      "record_url": "https://zenodo.org/records/15050148",
+      "required_for_task": false
+    }
+  ],
+  "schema_version": "1.0",
+  "seed": 202609030047,
+  "specialized_contract": "task047-street-roof-intersection-v1",
+  "task_id": "urbanwind-task-047",
+  "task_number": 47
+}

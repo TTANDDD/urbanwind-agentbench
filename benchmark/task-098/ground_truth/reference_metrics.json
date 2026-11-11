@@ -1,0 +1,18 @@
+{
+  "experimental_claim": false,
+  "metric_formula": "max_pairs(0.5*(mean_64(abs(Ux_a-Ux_b))/1.2 + mean_64(abs(k_a-k_b))/1.44)); t=300-420 s",
+  "metric_freeze_boundary": "Exact observables and normalization frozen after raw candidate runs but before any agent evaluation.",
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-098",
+  "truth_type": "verified_openfoam_numerical_reference",
+  "units": {
+    "decomposition_reproducibility_error": "fraction",
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction"
+  },
+  "values": {
+    "decomposition_reproducibility_error": 0.012008469342969202,
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0
+  }
+}

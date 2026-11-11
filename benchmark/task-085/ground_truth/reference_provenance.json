@@ -1,0 +1,31 @@
+{
+  "collection_manifest": "validation/openfoam_collection_manifest_20260914.json",
+  "experimental_claim": false,
+  "host": "5070-server (reported hostname abc)",
+  "independent_archive_audit": "validation/openfoam-reference-archive-independent-audit-v1.json",
+  "independent_archive_audit_sha256": "728308db4085095dd1a8665399c927e232945c68853476e7a65f1373be7db822",
+  "openfoam_version": "v2412",
+  "runtime_environment": "/home/abc/urbanwind-agentbench-runtime-v0.1/envs/openfoam-2412",
+  "schema_version": "1.0",
+  "source_runs": [
+    {
+      "case_id": "task-085-case-001",
+      "source_archive": "validation/openfoam-batch-20260904-v3/results/les-wale/reference_candidate.tar.gz",
+      "source_archive_sha256": "d88d583a9873379975714f60eafa95ab918ea6841058027a4c206bc5a95e5f4d",
+      "source_job": "les-wale",
+      "source_status": "validation/openfoam-batch-20260904-v3/results/les-wale/status.json",
+      "source_status_sha256": "0888f39978ebdc2ef70ca24a06332cefaba8dd3281cb7389a7f83e6ae57a6ac4",
+      "variant": "有界高阶格式（limitedLinearV 1）"
+    },
+    {
+      "case_id": "task-085-case-002",
+      "source_archive": "validation/openfoam-batch-20260904-v3/results/les-upwind/reference_candidate.tar.gz",
+      "source_archive_sha256": "17495c56a7950c69f7eb0a2b8c119c950974bff8d52f6b957c52b6a87604fc59",
+      "source_job": "les-upwind",
+      "source_status": "validation/openfoam-batch-20260904-v3/results/les-upwind/status.json",
+      "source_status_sha256": "8debe573de46187dcefacc0150eab453247676c17a678136b55a5fcd2d71f6d7",
+      "variant": "一阶迎风耗散格式"
+    }
+  ],
+  "task_id": "urbanwind-task-085"
+}

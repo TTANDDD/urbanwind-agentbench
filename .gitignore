@@ -1,0 +1,14 @@
+.claude/
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+*.key
+*.pem
+credentials*
+runs/
+build/
+runtime-tools/ls
+runtime-tools/manifest.json
+runtime-tools/cpu_affinity_bridge

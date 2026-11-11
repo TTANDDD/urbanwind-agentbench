@@ -1,0 +1,36 @@
+{
+  "all_required_roles_materialized": true,
+  "generator_version": "urbanwind-local-assets-v3",
+  "required_external_inputs": [],
+  "roles": [
+    {
+      "label": "冻结节点/边定义",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/reference_diagnostics.json",
+        "local_assets/task_input_values.json"
+      ],
+      "role_id": "input-001"
+    },
+    {
+      "label": "街区交换通量",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/city_geometry.geojson",
+        "local_assets/terrain_and_surface.csv"
+      ],
+      "role_id": "input-002"
+    },
+    {
+      "label": "参考图结构与边权",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/reference_diagnostics.json",
+        "local_assets/task_input_values.json"
+      ],
+      "role_id": "input-003"
+    }
+  ],
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-173"
+}

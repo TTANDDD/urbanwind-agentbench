@@ -1,0 +1,18 @@
+{
+  "case_ids": [
+    "task-062-case-001",
+    "task-062-case-002"
+  ],
+  "claim_boundary": "Matched two-case OpenFOAM inlet profile-law numerical reference; not experimental truth.",
+  "group_absolute_difference_m_s": {
+    "pedestrian_layer": 0.012496202749744787,
+    "roof_layer": 0.0059840580615208245
+  },
+  "primary_metric": {
+    "id": "profile_model_response_difference",
+    "unit": "fraction",
+    "value": 0.007700108671360672
+  },
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-062"
+}

@@ -1,0 +1,102 @@
+{
+  "task_id": "urbanwind-task-055",
+  "scientific_contract": "v53",
+  "truth_type": "verified_openfoam_tool_reference",
+  "experimental_claim": false,
+  "flow_solver_runs": 0,
+  "evaluator_sha256": "f78d2eda8120107e770c72dd8c218d78bebf5e4d4d7d1cd8d2802afe52a59f94",
+  "artifacts": [
+    {
+      "path": "task055-v53-original-native.tar.gz",
+      "bytes": 93825742,
+      "sha256": "623bb525ed12f5e07ffae0809f9b207cd2073d2c6e605748854b5ba46b2bb6b2"
+    },
+    {
+      "path": "task055-v53-evaluator-raw.tar.gz",
+      "bytes": 72069182,
+      "sha256": "f61e2183ffab5d42a49a0c6943413b8c96feb77fd8fb123aa6936277af32ed72"
+    },
+    {
+      "path": "task055-v53-formal-runtime-raw.tar.gz",
+      "bytes": 163379035,
+      "sha256": "d4cd92d8a57c92e10e44e869a6ed7e64a5b8abb88bdc51bf81a5bbc62c5640df"
+    },
+    {
+      "path": "before_full.log",
+      "bytes": 5261,
+      "sha256": "3f590520b102a4a8c20d601b3765c4e82eac812587a0ffb2337c3a26af0f5319"
+    },
+    {
+      "path": "checkMesh.log",
+      "bytes": 4729,
+      "sha256": "80607731f9361997f035b6e13bde910062976be1be1e04d178be7d22959096b9"
+    },
+    {
+      "path": "after_complete.log",
+      "bytes": 4525,
+      "sha256": "88d7c23e29987513d7aab364cd2848757d33983dd91c0115b6674c4caa2ea852"
+    }
+  ],
+  "evidence_links": {
+    "exact_installation": {
+      "path": "validation/task055-v53-installed-entry-resume-20261016-v2/qualification-receipt.json",
+      "sha256": "d1100f280bace54b155239c033400a60ee32ce602009d4ae048a543792bfdaee",
+      "status": "PASS_EXACT_INSTALLED_ENTRY_THREE_REAL_TOOL_PHASES"
+    },
+    "three_candidates": {
+      "path": "validation/task055-v53-candidate-evidence-closure-20261016-v1.json",
+      "sha256": "242fe4a912d2ebdccb0eb454237f374f5c9459b7832e4d2eb7ed25ca7e23236e",
+      "status": "THREE_OWNER_CANDIDATES_RAW_AUDIT_AND_ARCHIVE_PASS_FORMAL_INTERFACE_PENDING"
+    },
+    "formal_independent_raw": {
+      "path": "validation/task055-v53-independent-formal-raw-20261016-v1.json",
+      "sha256": "4e8c3977b9582886381bbec5fe07bf7346dd44b8e42f11dee8078819dfe88c5b",
+      "status": "PASS_INSTALLED_ENTRY_RAW_AUDIT_NOT_REFERENCE_ACCEPTANCE"
+    },
+    "formal_archive": {
+      "path": "validation/task055-v53-formal-runtime-raw-archive-20261016-v2/receipt.json",
+      "sha256": "a555af3a02a3c4004be50a20a79ed3ea0ff33acd8f2ffd9493f66d47c17de1d4",
+      "status": "PASS_REMOTE_LOCAL_SHA_AND_ALL_DECODED_MEMBERS"
+    },
+    "alternative_independent_raw": {
+      "path": "validation/task055-v53-independent-alternative-raw-20261016-v1.json",
+      "sha256": "83d6f719a601cb13c9b470ac98b212317147beed808df9dad88d2eb2e336916b",
+      "status": "PASS_ALTERNATIVE_RAW_AUDITS_NOT_REFERENCE_ACCEPTANCE"
+    },
+    "evaluator_archive_verification": {
+      "path": "validation/task055-v53-evaluator-raw-archive-verification-20261016-v1/receipt.json",
+      "sha256": "5d7b69600fbbbdd91274d90e383f23762b9981add9cec1d08161c42afb7aa5d0",
+      "status": "PASS_REMOTE_LOCAL_SHA_AND_ALL_DECODED_MEMBERS"
+    },
+    "full_entry_negatives": {
+      "path": "validation/task055-v53-full-entry-negatives-20261016-v1/receipt.json",
+      "sha256": "5627accb1967ac5b64a3f52533b0a1e21acb553aa24b0fb314e8d2d5fef8c5bd"
+    },
+    "science_preregistration": {
+      "path": "validation/task055-v53-orientation-preregistration-20261016-v1.json",
+      "sha256": "bd8cb19ea18df2ce0ac5645328fb0889d7d969acf968877bfdfd8d4bfebfe262",
+      "status": "PROSPECTIVE_DESIGN_OFFLINE_INPUT_BUILD_ONLY_NO_NATIVE_RESULT"
+    },
+    "continuation_freeze": {
+      "path": "validation/task055-v53-formal-continuation-freeze-20261016-v2/execution-freeze.json",
+      "sha256": "1d400ace3d1565461657d7db0fbc54eaa047511c201f361cfae39922505fb157",
+      "status": "READY_ONE_OWNER_INVOCATION_THREE_REMAINING_CALLS_NOT_EXECUTED"
+    }
+  },
+  "claim_boundary": "Imported synthetic city internal-face winding diagnosis and minimal repair only; geometric conservation diagnostic U=(1,0,0), not solved flow, LES, real-city or experimental truth.",
+  "release_blockers": [
+    "frozen_distributable_runtime_and_portable_hidden_harness_pending"
+  ],
+  "execution_boundary": "Actual trusted-host installed entry qualified, single owner bound runtime and per-request operator provisioning. OSWorld VM-side packaged evaluator is not claimed.",
+  "v52_negative_retained": true,
+  "v52_negative_reused_as_v53": false,
+  "new_blockMesh_claimed": false,
+  "actual_formal_checkMesh_calls": 3,
+  "candidate_qualification_actual_calls": 15,
+  "candidate_validation_scores": [
+    100,
+    100,
+    100
+  ],
+  "agent_scores_claimed": false
+}

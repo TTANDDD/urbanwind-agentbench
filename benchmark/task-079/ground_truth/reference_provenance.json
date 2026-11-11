@@ -1,0 +1,25 @@
+{
+  "experimental_claim": false,
+  "host": "5070-server",
+  "independent_audit": "validation/openfoam-task079-v43d-independent-audit-v1.json",
+  "independent_audit_sha256": "c1858e32f95546dcad8bcdbf4e5de4186b40a13d13d1c3f7b46112ba8ebae56c",
+  "schema_version": "1.0",
+  "software": {
+    "name": "OpenFOAM",
+    "solver": "simpleFoam",
+    "version": "OpenCFD-v2412"
+  },
+  "source_runs": [
+    {
+      "case_id": "task-079-case-001",
+      "source_archive": "validation/openfoam-batch-20261001-v43d-task079-mass-flux/results/task079-mass-flux/reference_candidate.tar.gz",
+      "source_archive_sha256": "bf8d223f36d77f9f3f57cabfe5dc11fe515d1a2665fbc8153ff8b4dc17a4b887",
+      "source_batch": "openfoam-batch-20261001-v43d-task079-mass-flux",
+      "source_job": "task079-mass-flux",
+      "source_status_sha256": "8637492addb67d34cd5cb08bed3c47a17f4491b34cbf883520a69d5013e7d318",
+      "variant": "无源单体建筑入口-出口原始phi质量闭合验证",
+      "variant_key": "single_building_no_source_raw_phi_closure"
+    }
+  ],
+  "task_id": "urbanwind-task-079"
+}

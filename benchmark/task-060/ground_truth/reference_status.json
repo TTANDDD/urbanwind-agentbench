@@ -1,0 +1,65 @@
+{
+  "blockers": [
+    "pinned runtime image",
+    "real local reference executions or frozen numerical arrays",
+    "task-specific hidden evaluator"
+  ],
+  "claim_boundary": "This directory is not release-valid benchmark ground truth.",
+  "data_acquisition_blockers": [],
+  "evaluator_status": "contract_precheck_only",
+  "expected_ground_truth": {
+    "case_ids": [
+      "task-060-case-001",
+      "task-060-case-002",
+      "task-060-case-003"
+    ],
+    "hidden_tolerances_status": "pending_task_specific_evaluator",
+    "input_roles": [
+      "粗中细三层网格",
+      "三层匹配的本地数值解",
+      "共同目标物理量与加密比"
+    ],
+    "metric_contracts": [
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "Fs*abs((f_fine-f_medium)/f_fine)/(r^p-1)*100",
+        "id": "fine_grid_gci_percent",
+        "name_zh": "细网格GCI",
+        "unit": "%"
+      },
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "log(abs((f_coarse-f_medium)/(f_medium-f_fine)))/log(r)",
+        "id": "observed_order_of_accuracy",
+        "name_zh": "观测收敛阶",
+        "unit": "1"
+      },
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "hashed_source_linked_evidence / required_evidence",
+        "id": "evidence_provenance_fraction",
+        "name_zh": "证据溯源覆盖率",
+        "unit": "fraction"
+      },
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "passed_hard_gates / required_hard_gates",
+        "id": "hard_gate_pass_fraction",
+        "name_zh": "硬门禁通过率",
+        "unit": "fraction"
+      }
+    ],
+    "reference_values_status": "pending_real_local_execution"
+  },
+  "reference_status": "not_generated",
+  "release_status": "scaffold_only",
+  "required_reference_artifacts": [
+    "locally generated source inputs with generation manifest: 粗中细三层网格; 三层匹配的本地数值解; 共同目标物理量与加密比",
+    "real tool and solver run manifests",
+    "raw fields, logs and post-processing arrays",
+    "recomputed task metrics: fine_grid_gci_percent; observed_order_of_accuracy; evidence_provenance_fraction; hard_gate_pass_fraction",
+    "positive and adversarial evaluator tests"
+  ],
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-060"
+}

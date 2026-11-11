@@ -1,0 +1,13 @@
+{
+  "answer_included": false,
+  "expected_agent_action": "diagnose and repair without changing unrelated settings",
+  "fault_family": "palm_nonfinite_output",
+  "fault_seed": 202609030138,
+  "injected": true,
+  "observed_fault_parameters": {
+    "nonfinite_variable": "temperature",
+    "sample": 17
+  },
+  "target_file": "local_assets/reference_field.csv",
+  "task_id": "urbanwind-task-138"
+}

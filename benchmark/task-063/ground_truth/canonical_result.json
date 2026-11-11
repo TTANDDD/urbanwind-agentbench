@@ -1,0 +1,16 @@
+{
+  "case_ids": [
+    "task-063-case-001",
+    "task-063-case-002"
+  ],
+  "claim_boundary": "One deterministic z0 diagnosis plus one repaired OpenFOAM numerical reference; not experimental truth.",
+  "faulty_solver_run_count": 0,
+  "primary_metric": {
+    "id": "roughness_consistency_residual",
+    "unit": "fraction",
+    "value": 0.0
+  },
+  "repaired_solver_run_count": 1,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-063"
+}

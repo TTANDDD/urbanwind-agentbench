@@ -1,0 +1,42 @@
+{
+  "experimental_claim": false,
+  "host": "5070-server",
+  "independent_archive_audit": "validation/openfoam-task084-archive-independent-audit-v1.json",
+  "independent_archive_audit_sha256": "4715185a0acb24f401118fc5cf08658b1b6157666612712f387ce66e68f47715",
+  "openfoam_version": "v2412",
+  "runtime_environment": "/home/abc/urbanwind-agentbench-runtime-v0.1/envs/openfoam-2412",
+  "schema_version": "1.0",
+  "source_runs": [
+    {
+      "case_id": "task-084-case-001",
+      "dt_s": 0.04,
+      "source_archive": "validation/openfoam-batch-20260915-v19-aligned/results/task084-dt-large-aligned/reference_candidate.tar.gz",
+      "source_archive_sha256": "689d8ae2c30970c9c37ef54a30242df27fcc85d8cb3f6eac7323af93150679ff",
+      "source_batch": "openfoam-batch-20260915-v19-aligned",
+      "source_job": "task084-dt-large-aligned",
+      "source_status_sha256": "cf9133e6d42b3040990019038a377a20ad2b1f2ab0cbf1b6311cc67684617af4",
+      "variant": "大时间步"
+    },
+    {
+      "case_id": "task-084-case-002",
+      "dt_s": 0.02,
+      "source_archive": "validation/openfoam-batch-20260915-v19-aligned/results/task084-reference-aligned/reference_candidate.tar.gz",
+      "source_archive_sha256": "555022864075e02047f770990e93b506d677d302249d4f0cda829fea4c9cf0f8",
+      "source_batch": "openfoam-batch-20260915-v19-aligned",
+      "source_job": "task084-reference-aligned",
+      "source_status_sha256": "83b0070d6646a0d85d358b75bba145442ffd6b833f68bf6d8259543dbea44e5c",
+      "variant": "参考时间步"
+    },
+    {
+      "case_id": "task-084-case-003",
+      "dt_s": 0.01,
+      "source_archive": "validation/openfoam-batch-20260914-v16/results/task084-dt-small-extended/reference_candidate.tar.gz",
+      "source_archive_sha256": "1ab45dcc056acf24259b559bb53f63581ad8b9e342af57b274be07fd6f2bef8a",
+      "source_batch": "openfoam-batch-20260914-v16",
+      "source_job": "task084-dt-small-extended",
+      "source_status_sha256": "0645142dac4844edb26c0be69541195aff328f50c1ed031a0398061eaa7a9922",
+      "variant": "小时间步"
+    }
+  ],
+  "task_id": "urbanwind-task-084"
+}

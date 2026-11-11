@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "本地确定性注入的故障输入",
+      "role_id": "input-001",
+      "seed": 202609042201,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.60061638,
+        0.36256698,
+        0.22176609,
+        0.26151471,
+        0.39695976,
+        0.55132099,
+        0.96468907,
+        0.53014323,
+        0.22187621,
+        0.68810781,
+        0.53911533,
+        0.90366142,
+        0.11635788,
+        0.74537069,
+        0.82309463,
+        0.93944141
+      ]
+    },
+    {
+      "label": "本地非目标设置清单",
+      "role_id": "input-002",
+      "seed": 202609042202,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.12825842,
+        0.4449532,
+        0.45504328,
+        0.21790249,
+        0.69327072,
+        0.33926817,
+        0.30341456,
+        0.74014183,
+        0.10156902,
+        0.13994323,
+        0.61449243,
+        0.21212824,
+        0.10224054,
+        0.61486754,
+        0.73529498,
+        0.90332402
+      ]
+    },
+    {
+      "label": "冻结修复验收门槛",
+      "role_id": "input-003",
+      "seed": 202609042203,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.45040593,
+        0.19268687,
+        0.73721228,
+        0.81810147,
+        0.96682439,
+        0.63731015,
+        0.87777063,
+        0.63068007,
+        0.83297038,
+        0.4469386,
+        0.44122438,
+        0.30489015,
+        0.19645176,
+        0.85402358,
+        0.41745523,
+        0.80063144
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-122"
+}

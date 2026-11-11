@@ -1,0 +1,360 @@
+{
+  "case_id": "task-061-case-001",
+  "convection_scheme": "upwind",
+  "frozen_gates": {
+    "finite_inlet_profiles": true,
+    "finite_solver_log": true,
+    "max_abs_cumulative_continuity": 0.01,
+    "max_inlet_U_rmse_m_s": 1e-06,
+    "max_inlet_k_rmse_m2_s2": 1e-06,
+    "max_inlet_omega_rmse_s_1": 1e-05,
+    "required_boundary_condition_types": [
+      "atmBoundaryLayerInletVelocity",
+      "atmBoundaryLayerInletK",
+      "atmBoundaryLayerInletOmega",
+      "atmNutkWallFunction"
+    ],
+    "required_cell_count": 365488,
+    "required_final_iteration": 400
+  },
+  "full_iterations": 400,
+  "geometry": "365488-cell conformal D x D x 4D single-building domain",
+  "hidden_boundary": "Visible target profile, formula, shapes and gates only; no hidden numerical probe arrays.",
+  "mpi_ranks": 16,
+  "path_policy": "relative paths under submission root, unique and SHA-256 matched",
+  "primary_metric": {
+    "aggregation": "per_case_then_task",
+    "formula": "sqrt(sum_i(dz_i*(Ux_i-Ulog(z_i))^2)/sum_i(dz_i)); Ulog(z)=Uref*ln((z-d+z0)/z0)/ln((Zref-d+z0)/z0)",
+    "id": "inlet_profile_rmse_ms",
+    "name_zh": "入口剖面RMSE",
+    "unit": "m/s"
+  },
+  "profile_iteration_count": 20,
+  "profile_iterations": [
+    20,
+    40,
+    60,
+    80,
+    100,
+    120,
+    140,
+    160,
+    180,
+    200,
+    220,
+    240,
+    260,
+    280,
+    300,
+    320,
+    340,
+    360,
+    380,
+    400
+  ],
+  "profile_parameters": {
+    "Cmu": 0.09,
+    "Uref_m_s": 1.2,
+    "Zref_m": 4.0,
+    "displacement_height_m": 0.0,
+    "kappa": 0.41,
+    "u_star_m_s": 0.0820826103015287,
+    "z0_m": 0.01
+  },
+  "profile_points_m": [
+    [
+      -4.0,
+      0.0625,
+      0.0625
+    ],
+    [
+      -4.0,
+      0.0625,
+      0.1875
+    ],
+    [
+      -4.0,
+      0.0625,
+      0.3125
+    ],
+    [
+      -4.0,
+      0.0625,
+      0.4375
+    ],
+    [
+      -4.0,
+      0.0625,
+      0.5625
+    ],
+    [
+      -4.0,
+      0.0625,
+      0.6875
+    ],
+    [
+      -4.0,
+      0.0625,
+      0.8125
+    ],
+    [
+      -4.0,
+      0.0625,
+      0.9375
+    ],
+    [
+      -4.0,
+      0.0625,
+      1.0625
+    ],
+    [
+      -4.0,
+      0.0625,
+      1.1875
+    ],
+    [
+      -4.0,
+      0.0625,
+      1.3125
+    ],
+    [
+      -4.0,
+      0.0625,
+      1.4375
+    ],
+    [
+      -4.0,
+      0.0625,
+      1.5625
+    ],
+    [
+      -4.0,
+      0.0625,
+      1.6875
+    ],
+    [
+      -4.0,
+      0.0625,
+      1.8125
+    ],
+    [
+      -4.0,
+      0.0625,
+      1.9375
+    ],
+    [
+      -4.0,
+      0.0625,
+      2.0625
+    ],
+    [
+      -4.0,
+      0.0625,
+      2.1875
+    ],
+    [
+      -4.0,
+      0.0625,
+      2.3125
+    ],
+    [
+      -4.0,
+      0.0625,
+      2.4375
+    ],
+    [
+      -4.0,
+      0.0625,
+      2.5625
+    ],
+    [
+      -4.0,
+      0.0625,
+      2.6875
+    ],
+    [
+      -4.0,
+      0.0625,
+      2.8125
+    ],
+    [
+      -4.0,
+      0.0625,
+      2.9375
+    ],
+    [
+      -4.0,
+      0.0625,
+      3.0625
+    ],
+    [
+      -4.0,
+      0.0625,
+      3.1875
+    ],
+    [
+      -4.0,
+      0.0625,
+      3.3125
+    ],
+    [
+      -4.0,
+      0.0625,
+      3.4375
+    ],
+    [
+      -4.0,
+      0.0625,
+      3.5625
+    ],
+    [
+      -4.0,
+      0.0625,
+      3.6875
+    ],
+    [
+      -4.0,
+      0.0625,
+      3.8125
+    ],
+    [
+      -4.0,
+      0.0625,
+      3.9375
+    ],
+    [
+      -4.0,
+      0.0625,
+      4.125
+    ],
+    [
+      -4.0,
+      0.0625,
+      4.375
+    ],
+    [
+      -4.0,
+      0.0625,
+      4.625
+    ],
+    [
+      -4.0,
+      0.0625,
+      4.875
+    ],
+    [
+      -4.0,
+      0.0625,
+      5.125
+    ],
+    [
+      -4.0,
+      0.0625,
+      5.375
+    ],
+    [
+      -4.0,
+      0.0625,
+      5.625
+    ],
+    [
+      -4.0,
+      0.0625,
+      5.875
+    ],
+    [
+      -4.0,
+      0.0625,
+      6.125
+    ],
+    [
+      -4.0,
+      0.0625,
+      6.375
+    ],
+    [
+      -4.0,
+      0.0625,
+      6.625
+    ],
+    [
+      -4.0,
+      0.0625,
+      6.875
+    ],
+    [
+      -4.0,
+      0.0625,
+      7.125
+    ],
+    [
+      -4.0,
+      0.0625,
+      7.375
+    ],
+    [
+      -4.0,
+      0.0625,
+      7.625
+    ],
+    [
+      -4.0,
+      0.0625,
+      7.875
+    ],
+    [
+      -4.0,
+      0.0625,
+      8.125
+    ],
+    [
+      -4.0,
+      0.0625,
+      8.375
+    ],
+    [
+      -4.0,
+      0.0625,
+      8.625
+    ],
+    [
+      -4.0,
+      0.0625,
+      8.875
+    ]
+  ],
+  "profile_sample_count": 52,
+  "profile_samples": 52,
+  "profile_source": "local_assets/boundary_profile.csv",
+  "raw_observables": [
+    "inlet patchProbes U",
+    "inlet patchProbes k",
+    "inlet patchProbes omega",
+    "simpleFoam log"
+  ],
+  "required_manifest": "neutral_abl_evidence_manifest.json",
+  "required_raw_evidence": [
+    "probe_U",
+    "probe_k",
+    "probe_omega",
+    "solver_log",
+    "checkMesh_log",
+    "field_U",
+    "field_k",
+    "field_omega",
+    "field_nut",
+    "field_p",
+    "blockMeshDict",
+    "controlDict"
+  ],
+  "required_result": "inlet_profile_results.json",
+  "schema_version": "1.0",
+  "single_case_reason": "The task verifies one fully specified neutral inlet, not a parameter comparison.",
+  "smoke_iterations": 20,
+  "solver": "OpenCFD-v2412 simpleFoam",
+  "task_gate": "The single full case must pass every frozen gate; no post-hoc threshold relaxation.",
+  "task_id": "urbanwind-task-061",
+  "truth_boundary": "Local OpenFOAM numerical verification of a neutral logarithmic inlet; not PIV, DNS, wind-tunnel, field or experimental truth.",
+  "turbulence_model": "kOmegaSST",
+  "weight_definition": "layer_thickness_m; 32 x 0.125 m layers below 4 m and 20 x 0.25 m layers from 4-9 m"
+}

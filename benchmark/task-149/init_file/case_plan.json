@@ -1,0 +1,64 @@
+{
+  "cases": [
+    {
+      "case_id": "task-149-case-001",
+      "execution_role": "provided_data_or_tool_execution",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "CUBE_LOCAL",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "计算时间平均空间偏差产生的色散应力并核对定义。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "色散应力验证-目标案例"
+      },
+      "metrics": [
+        "dispersive_stress_nmae",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "weighted_mean(abs(D_model-D_reference))/reference_scale",
+        "id": "dispersive_stress_nmae",
+        "name_zh": "色散应力NMAE",
+        "unit": "fraction"
+      },
+      "purpose": "色散应力验证：执行变体 色散应力验证-目标案例，围绕计算时间平均空间偏差产生的色散应力并核对定义。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "scipy",
+        "pandas"
+      ],
+      "task_id": "urbanwind-task-149",
+      "variant": "色散应力验证-目标案例"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "lite",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 1,
+  "required_solver_runs": 0,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-149"
+}

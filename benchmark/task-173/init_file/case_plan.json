@@ -1,0 +1,64 @@
+{
+  "cases": [
+    {
+      "case_id": "task-173-case-001",
+      "execution_role": "provided_data_or_tool_execution",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "把开敞空间与交换通量构造成有向网络并分析瓶颈。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "街区通风网络-目标案例"
+      },
+      "metrics": [
+        "ventilation_graph_edge_weight_nmae",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "mean(abs(edge_flux_model-edge_flux_reference))/reference_scale",
+        "id": "ventilation_graph_edge_weight_nmae",
+        "name_zh": "通风网络边权NMAE",
+        "unit": "fraction"
+      },
+      "purpose": "街区通风网络：执行变体 街区通风网络-目标案例，围绕把开敞空间与交换通量构造成有向网络并分析瓶颈。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "networkx",
+        "pyvista"
+      ],
+      "task_id": "urbanwind-task-173",
+      "variant": "街区通风网络-目标案例"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "lite",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 1,
+  "required_solver_runs": 0,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-173"
+}

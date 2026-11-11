@@ -1,0 +1,67 @@
+{
+  "coordinate_transform_evidence_manifest": "coordinate_transform_evidence_manifest.json",
+  "coordinate_transform_input_contract": "local_assets/coordinate_transform_contract.json",
+  "coordinate_transform_results": "coordinate_transform_results.json",
+  "current_evaluator_boundary": "Task-specific raw coordinate-transform/OpenFOAM inlet evaluator is installed; it is not release validation.",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision": "decision.md",
+  "decision_required_terms": [
+    "证据",
+    "限制",
+    "结论"
+  ],
+  "evidence_manifest": "evidence_manifest.json",
+  "expected_case_ids": [
+    "task-068-case-001"
+  ],
+  "expected_solver_case_ids": [
+    "task-068-case-001"
+  ],
+  "metric_contracts": [
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max(E_roundtrip_visible,E_solver_inlet,E_inverse_projected_inlet); E_roundtrip_visible=max(relative_error(R^T(Ru),u),relative_error(R^T(Rq),q),relative_error(R^T(RTR^T)R,T)); E_solver_inlet=weighted_RMSE(U_probe_solver-U_target_solver)/1.2; E_inverse_projected_inlet=weighted_RMSE(R^T U_probe_solver-U_target_geo)/1.2",
+      "id": "vector_tensor_roundtrip_error",
+      "name_zh": "风向矢量张量与求解器入口联合误差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    }
+  ],
+  "metric_ids": [
+    "vector_tensor_roundtrip_error",
+    "evidence_provenance_fraction",
+    "hard_gate_pass_fraction"
+  ],
+  "metrics": "metrics.json",
+  "required_external_inputs": [],
+  "required_inputs": [
+    "随任务本地生成的入口/边界参数",
+    "本地目标剖面或守恒参考",
+    "本地程序化计算域"
+  ],
+  "required_solver_runs": 1,
+  "run_manifest": "run_manifest.json",
+  "schema_version": "1.0",
+  "score_layers": {
+    "artifact_and_schema": 10,
+    "engineering_decision": 10,
+    "external_validation": 15,
+    "numerical_quality": 20,
+    "physical_fidelity": 25,
+    "real_tool_execution": 20
+  },
+  "task_id": "urbanwind-task-068"
+}

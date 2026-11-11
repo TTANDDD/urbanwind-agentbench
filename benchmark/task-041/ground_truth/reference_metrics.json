@@ -1,0 +1,29 @@
+{
+  "diagnostics": {
+    "cell_count": 25240,
+    "checkMesh_status": "Mesh OK",
+    "fluid_mesh_volume_m3": 3009.2,
+    "required_patches": [
+      "inlet",
+      "outlet",
+      "sideLow",
+      "sideHigh",
+      "ground",
+      "top",
+      "building"
+    ]
+  },
+  "experimental_claim": false,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-041",
+  "tolerances": {
+    "block_connectivity_error_count": 0.0
+  },
+  "truth_type": "verified_openfoam_tool_reference",
+  "units": {
+    "block_connectivity_error_count": "errors"
+  },
+  "values": {
+    "block_connectivity_error_count": 0.0
+  }
+}

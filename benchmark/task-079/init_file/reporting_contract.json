@@ -1,0 +1,213 @@
+{
+  "current_evaluator_boundary": "Parses raw 400/phi, inlet profile probes, solver and mesh logs, configuration and frozen dictionaries; compares hidden OpenFOAM numerical arrays without claiming experimental or compressible-flow truth.",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision": "decision.md",
+  "decision_required_terms": [
+    "证据",
+    "限制",
+    "结论"
+  ],
+  "evidence_manifest": "evidence_manifest.json",
+  "expected_case_ids": [
+    "task-079-case-001"
+  ],
+  "expected_solver_case_ids": [
+    "task-079-case-001"
+  ],
+  "mass_flux_closure_contract": "local_assets/mass_flux_closure_contract.json",
+  "mass_flux_result_contract": {
+    "boundary_contract": {
+      "ground_and_building": "impermeable no-slip walls",
+      "inlet_U": "fixed profile",
+      "outlet_U": "inletOutlet",
+      "outlet_p": "fixedValue",
+      "sides_and_top": "impermeable symmetry/slip family",
+      "volumetric_sources_m3_s": 0.0
+    },
+    "case_id": "task-079-case-001",
+    "execution_role": "real_solver_run",
+    "frozen_gates": {
+      "area_abs_tolerance_m2": 1e-08,
+      "max_abs_cumulative_continuity": 0.01,
+      "max_inlet_U_rmse_m_s": 1e-06,
+      "max_inlet_k_rmse_m2_s2": 1e-06,
+      "max_inlet_omega_rmse_s_1": 1e-05,
+      "max_last20_initial_residual_full": 0.0001,
+      "max_mass_flux_mismatch_percent": 0.001,
+      "require_no_sources": true,
+      "require_nonzero_inlet_and_outlet_flux": true,
+      "required_cell_count": 365488,
+      "required_final_iteration": 400,
+      "required_inlet_face_count": 3224,
+      "required_outlet_face_count": 3224,
+      "required_solver_runs": 1
+    },
+    "geometry": {
+      "D_m": 1.0,
+      "description": "365488-cell conformal D x D x 4D single-building domain",
+      "domain_m": [
+        [
+          -4.0,
+          23.0
+        ],
+        [
+          -6.2,
+          6.2
+        ],
+        [
+          0.0,
+          9.0
+        ]
+      ],
+      "expected_inlet_area_m2": 111.6,
+      "expected_inlet_face_count": 3224,
+      "expected_outlet_area_m2": 111.6,
+      "expected_outlet_face_count": 3224
+    },
+    "hidden_boundary": "Visible formula, profile targets, shapes and gates only; no hidden final phi arrays.",
+    "inlet_profile": {
+      "Uref_m_s": 1.2,
+      "Zref_m": 4.0,
+      "kappa": 0.41,
+      "sample_count": 52,
+      "table": "local_assets/mass_flux_profile_targets.csv",
+      "type": "neutral_log_law",
+      "u_star_m_s": 0.0820826103015287,
+      "z0_m": 0.01
+    },
+    "metric_reconstruction": {
+      "aggregation": "sum every raw inlet face phi and every raw outlet face phi before taking the absolute closure residual",
+      "density_note": "simpleFoam is incompressible constant-density; the normalized volumetric-flux mismatch equals the normalized mass-flux mismatch",
+      "formula": "100*abs(sum(phi_inlet)+sum(phi_outlet))/max(abs(sum(phi_inlet)),1e-12); phi is the raw oriented volumetric face flux from 400/phi and all other boundaries are frozen impermeable with zero sources",
+      "orientation": "OpenFOAM boundary phi is outward-oriented; inlet is negative and outlet is positive",
+      "source": "raw final 400/phi boundaryField values for inlet and outlet"
+    },
+    "path_policy": "relative paths under submission root, unique and SHA-256 matched",
+    "primary_metric": {
+      "aggregation": "per_case_then_task",
+      "formula": "100*abs(sum(phi_inlet)+sum(phi_outlet))/max(abs(sum(phi_inlet)),1e-12); phi is the raw oriented volumetric face flux from 400/phi and all other boundaries are frozen impermeable with zero sources",
+      "id": "mass_flux_mismatch_percent",
+      "name_zh": "入口出口质量通量不平衡率",
+      "unit": "%"
+    },
+    "required_manifest": "mass_flux_evidence_manifest.json",
+    "required_raw_evidence_per_case": [
+      "profile_csv",
+      "probe_U",
+      "probe_k",
+      "probe_omega",
+      "field_phi400",
+      "solver_log",
+      "checkMesh_log",
+      "field_U0",
+      "field_p0",
+      "controlDict",
+      "fvSchemes",
+      "fvSolution",
+      "turbulenceProperties",
+      "resolved_config",
+      "run_analysis",
+      "run_commands"
+    ],
+    "required_result": "mass_flux_results.json",
+    "result_contract": {
+      "inlet_phi_shape": [
+        3224
+      ],
+      "outlet_phi_shape": [
+        3224
+      ],
+      "path": "mass_flux_results.json",
+      "profile_U_shape": [
+        20,
+        52,
+        3
+      ],
+      "profile_k_shape": [
+        20,
+        52
+      ],
+      "profile_omega_shape": [
+        20,
+        52
+      ]
+    },
+    "schema_version": "1.0",
+    "software_chain": [
+      "python",
+      "openfoam"
+    ],
+    "solver": {
+      "application": "simpleFoam",
+      "convection_scheme": "upwind",
+      "cpu_affinity": "64-79",
+      "full_iterations": 400,
+      "mpi_ranks": 16,
+      "openfoam_version": "OpenCFD-v2412",
+      "smoke_iterations": 20,
+      "turbulence_model": "kOmegaSST"
+    },
+    "source_initialization": {
+      "files": [
+        "system/blockMeshDict",
+        "0/U",
+        "0/p",
+        "constant/transportProperties",
+        "constant/turbulenceProperties",
+        "constant/triSurface/building.stl"
+      ],
+      "path": "local_assets/openfoam_base",
+      "truth_type": "bundled_locally_rebuildable_openfoam_template"
+    },
+    "task_gate": "The sole fresh OpenFOAM run must pass every mesh, execution, residual, inlet-profile, raw-phi and mass-closure gate together; no post-hoc metric or threshold changes.",
+    "task_id": "urbanwind-task-079",
+    "truth_boundary": "Local OpenFOAM incompressible numerical mass-flux closure reference only; not experimental/PIV/DNS/wind-tunnel/field truth and not a compressible-density validation."
+  },
+  "metric_contracts": [
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "100*abs(sum(phi_inlet)+sum(phi_outlet))/max(abs(sum(phi_inlet)),1e-12); phi is the raw oriented volumetric face flux from 400/phi and all other boundaries are frozen impermeable with zero sources",
+      "id": "mass_flux_mismatch_percent",
+      "name_zh": "入口出口质量通量不平衡率",
+      "unit": "%"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    }
+  ],
+  "metric_ids": [
+    "mass_flux_mismatch_percent",
+    "evidence_provenance_fraction",
+    "hard_gate_pass_fraction"
+  ],
+  "metrics": "metrics.json",
+  "required_external_inputs": [],
+  "required_inputs": [
+    "本地可重建365488单元单体建筑OpenFOAM算例",
+    "可见中性对数律U/k/omega入口剖面与入口出口patch合同",
+    "冻结400/phi原始面通量复算、求解收敛和质量闭合门禁"
+  ],
+  "required_solver_runs": 1,
+  "run_manifest": "run_manifest.json",
+  "schema_version": "1.0",
+  "score_layers": {
+    "artifact_and_schema": 10,
+    "engineering_decision": 10,
+    "external_validation": 15,
+    "numerical_quality": 20,
+    "physical_fidelity": 25,
+    "real_tool_execution": 20
+  },
+  "task_id": "urbanwind-task-079"
+}

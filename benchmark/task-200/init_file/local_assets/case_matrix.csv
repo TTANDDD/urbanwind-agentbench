@@ -1,0 +1,13 @@
+case_id,variant,seed,wind_direction_deg,reference_speed_m_s,stability,surface_heat_flux_w_m2,sgs_model,time_step_s,convection_scheme,pressure_velocity_coupling,roughness_length_m,source_configuration,decomposition_method,restart_segments,software_variant,controlled_factor,controlled_level
+task-200-case-001,基准方案-OpenFOAM风向0度,202609050000,0.0,1.2,neutral,0.0,,,,,,,,,OpenFOAM,design_software_and_forcing,基准方案-OpenFOAM风向0度
+task-200-case-002,基准方案-OpenFOAM风向22.5度,202609050000,22.5,1.2,neutral,0.0,,,,,,,,,OpenFOAM,design_software_and_forcing,基准方案-OpenFOAM风向22.5度
+task-200-case-003,基准方案-OpenFOAM风向45度,202609050000,45.0,1.2,neutral,0.0,,,,,,,,,OpenFOAM,design_software_and_forcing,基准方案-OpenFOAM风向45度
+task-200-case-004,基准方案-PALM中性,202609050000,0.0,1.2,neutral,0.0,,,,,,,,,PALM,design_software_and_forcing,基准方案-PALM中性
+task-200-case-005,基准方案-PALM不稳定,202609050000,0.0,1.2,unstable,0.0,,,,,,,,,PALM,design_software_and_forcing,基准方案-PALM不稳定
+task-200-case-006,基准方案-PALM热强迫,202609050000,0.0,1.2,neutral,150.0,,,,,,,,,PALM,design_software_and_forcing,基准方案-PALM热强迫
+task-200-case-007,更新方案-OpenFOAM风向0度,202609050000,0.0,1.2,neutral,0.0,,,,,,,,,OpenFOAM,design_software_and_forcing,更新方案-OpenFOAM风向0度
+task-200-case-008,更新方案-OpenFOAM风向22.5度,202609050000,22.5,1.2,neutral,0.0,,,,,,,,,OpenFOAM,design_software_and_forcing,更新方案-OpenFOAM风向22.5度
+task-200-case-009,更新方案-OpenFOAM风向45度,202609050000,45.0,1.2,neutral,0.0,,,,,,,,,OpenFOAM,design_software_and_forcing,更新方案-OpenFOAM风向45度
+task-200-case-010,更新方案-PALM中性,202609050000,0.0,1.2,neutral,0.0,,,,,,,,,PALM,design_software_and_forcing,更新方案-PALM中性
+task-200-case-011,更新方案-PALM不稳定,202609050000,0.0,1.2,unstable,0.0,,,,,,,,,PALM,design_software_and_forcing,更新方案-PALM不稳定
+task-200-case-012,更新方案-PALM热强迫,202609050000,0.0,1.2,neutral,150.0,,,,,,,,,PALM,design_software_and_forcing,更新方案-PALM热强迫

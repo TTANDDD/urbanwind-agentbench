@@ -1,0 +1,27 @@
+{
+  "experimental_claim": false,
+  "full_sampling_archive_audit": "validation/openfoam-task089-full-sampling-audit-v2.json",
+  "full_sampling_archive_audit_sha256": "19cfce424acdd536d6b4c6cea90b64f8724e8b2b6460466e3f84035be7d42916",
+  "host": "5070-server",
+  "independent_archive_audit": "validation/openfoam-task089-coordinate-join-audit-v1.json",
+  "independent_archive_audit_sha256": "d60209556996871d0069844c25b5bb2e603cb7ab3f997acdb9b7907861533927",
+  "local_synthetic_reference": "task-089/init_file/local_assets/reference_observations.csv",
+  "local_synthetic_reference_sha256": "3f149cd2ec1984186c1cf562789d09290bae92a605547de1e7c16dd4a4d3937e",
+  "openfoam_version": "v2412",
+  "raw_U_probe_sha256": "10c64b07daad46c7fc0dc21e20e60b033e92ac31ac21cff084de03d326689146",
+  "raw_p_probe_sha256": "7681a7485de12aca15eaabc8054dc3c5fe023d844761b13676e898cc9ac22769",
+  "runtime_environment": "/home/abc/urbanwind-agentbench-runtime-v0.1/envs/openfoam-2412",
+  "schema_version": "1.0",
+  "source_runs": [
+    {
+      "case_id": "task-089-case-001",
+      "source_archive": "validation/openfoam-batch-20260915-v20-late-window/results/task089-local-comparison-late/reference_candidate.tar.gz",
+      "source_archive_sha256": "4d1a1d9a9d6e8438931832213f1cbc133244ec707e02186695d879924bbac984",
+      "source_batch": "openfoam-batch-20260915-v20-late-window",
+      "source_job": "task089-local-comparison-late",
+      "source_status_sha256": "60af2d7bf177487179b9373a398cfedf363b63d57b37815c0d0eef78642abe12",
+      "variant": "单体建筑本地数值参考对照"
+    }
+  ],
+  "task_id": "urbanwind-task-089"
+}

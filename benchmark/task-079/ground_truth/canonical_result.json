@@ -1,0 +1,16 @@
+{
+  "case_ids": [
+    "task-079-case-001"
+  ],
+  "cell_count": 365488,
+  "claim_boundary": "Local incompressible OpenFOAM numerical mass-flux closure reference; not experimental or compressible mass-flow truth.",
+  "inlet_face_count": 3224,
+  "outlet_face_count": 3224,
+  "primary_metric": {
+    "id": "mass_flux_mismatch_percent",
+    "unit": "%",
+    "value": 1.096450883292308e-06
+  },
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-079"
+}

@@ -1,0 +1,20 @@
+{
+  "answer_free": true,
+  "case_ids": [
+    "task-095-case-001",
+    "task-095-case-002",
+    "task-095-case-003"
+  ],
+  "controlled_factor": "atmospheric_stability",
+  "frozen_defaults": {
+    "reference_speed_m_s": 1.2,
+    "seed": 202609039500,
+    "stability": "neutral unless atmospheric stability is the controlled factor",
+    "surface_heat_flux_w_m2": "-50/0/+50 W/m2 only as the declared implementation of stable/neutral/unstable atmospheric stability",
+    "wind_direction_deg": "0.0 unless wind direction is the controlled factor"
+  },
+  "policy": "Freeze every non-target physical and numerical condition; vary only the factor named by the task variant.",
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-095",
+  "variant_mapping_file": "local_assets/stability_les_contract.json"
+}

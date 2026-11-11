@@ -1,0 +1,25 @@
+{
+  "experimental_claim": false,
+  "host": "5070-server",
+  "independent_audit": "validation/openfoam-task078-v44b-independent-audit-v1.json",
+  "independent_audit_sha256": "e65c36085daec44282b4f68a864815852110476def5078c20a73e4141e741ad0",
+  "schema_version": "1.0",
+  "software": {
+    "name": "OpenFOAM",
+    "solver": "pimpleFoam",
+    "version": "OpenCFD-v2412"
+  },
+  "source_runs": [
+    {
+      "case_id": "task-078-case-001",
+      "source_archive": "validation/openfoam-batch-20261001-v44b-task078-precursor-statistics/runs/task078-precursor-statistics/reference_candidate.tar.gz",
+      "source_archive_sha256": "dc6476fb7de682c643bfdd52cb1dfc5e1b6e81a140ebb37587d7520812bf0edf",
+      "source_batch": "openfoam-batch-20261001-v44b-task078-precursor-statistics",
+      "source_job": "task078-precursor-statistics",
+      "source_status_sha256": "b1fc4fe064effbc1b0ab2ecea5e2f287bd2b991a358212f3e871a7efc54e3d2c",
+      "variant": "单体建筑尾流前驱源域420秒四统计量收敛",
+      "variant_key": "single_building_wake_source_420s"
+    }
+  ],
+  "task_id": "urbanwind-task-078"
+}

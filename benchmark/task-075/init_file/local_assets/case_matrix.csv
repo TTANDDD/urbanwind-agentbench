@@ -1,0 +1,2 @@
+case_id,variant,seed,wind_direction_deg,reference_speed_m_s,stability,surface_heat_flux_w_m2,sgs_model,time_step_s,convection_scheme,pressure_velocity_coupling,roughness_length_m,source_configuration,decomposition_method,restart_segments,software_variant,controlled_factor,controlled_level
+task-075-case-001,不规则缺测表面温度对齐与真实求解验证,202609037500,0.0,1.2,neutral,0.0,,,,,,surface_temperature_irregular_table_302.0_to_306.2_with_one_internal_gap,,,,irregular_missing_surface_temperature_alignment,linear_fill_then_openfoam_uniformFixedValue_table

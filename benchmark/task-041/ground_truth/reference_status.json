@@ -1,0 +1,58 @@
+{
+  "blockers": [
+    "frozen benchmark runtime image",
+    "packaged hidden-evaluator execution"
+  ],
+  "canonical_result": "canonical_result.json",
+  "claim_boundary": "Reference-ready OpenFOAM mesh task; benchmark release remains blocked.",
+  "evaluator_status": "task_specific_openfoam_reexecution_check",
+  "expected_ground_truth": {
+    "case_ids": [
+      "task-041-case-001"
+    ],
+    "hidden_tolerances_status": "exact_zero_connectivity_errors",
+    "input_roles": [
+      "随任务本地生成的几何与网格目标",
+      "冻结网格质量门槛",
+      "待实际工具执行的网格日志"
+    ],
+    "metric_contracts": [
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "count(block_connectivity_and_patch_errors)",
+        "id": "block_connectivity_error_count",
+        "name_zh": "block连接错误数量",
+        "unit": "errors"
+      },
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "hashed_source_linked_evidence / required_evidence",
+        "id": "evidence_provenance_fraction",
+        "name_zh": "证据溯源覆盖率",
+        "unit": "fraction"
+      },
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "passed_hard_gates / required_hard_gates",
+        "id": "hard_gate_pass_fraction",
+        "name_zh": "硬门禁通过率",
+        "unit": "fraction"
+      }
+    ],
+    "reference_values_status": "verified_openfoam_tool_reference_generated"
+  },
+  "experimental_claim": false,
+  "limitations": [
+    "The evaluator verifies mesh connectivity and required boundary patches by re-running OpenFOAM tools.",
+    "It does not validate a flow solution, PIV agreement, LES fidelity, or an engineering wind conclusion.",
+    "Final release still requires a frozen benchmark runtime image and packaged hidden-evaluator execution."
+  ],
+  "raw_reference_case": "task041_mesh_reference_v3.tar.gz",
+  "reference_metrics": "reference_metrics.json",
+  "reference_provenance": "reference_provenance.json",
+  "reference_status": "openfoam_tool_reference_generated",
+  "release_status": "reference_ready_not_release_valid",
+  "schema_version": "1.2",
+  "task_id": "urbanwind-task-041",
+  "truth_type": "verified_openfoam_tool_reference"
+}

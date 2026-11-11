@@ -1,0 +1,70 @@
+{
+  "current_evaluator_boundary": "Only structural precheck is implemented and capped at 60/100.",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision": "decision.md",
+  "decision_required_terms": [
+    "证据",
+    "限制",
+    "结论"
+  ],
+  "evidence_manifest": "evidence_manifest.json",
+  "expected_case_ids": [
+    "task-172-case-001"
+  ],
+  "expected_solver_case_ids": [],
+  "metric_contracts": [
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "sqrt(weighted_mean((UTCI_model-UTCI_reference)^2))",
+      "id": "utci_rmse_K",
+      "name_zh": "UTCI均方根误差",
+      "unit": "K"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "present_Ta_RH_wind_MRT_fields / required_fields",
+      "id": "thermal_input_completeness",
+      "name_zh": "热应激输入完整率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    }
+  ],
+  "metric_ids": [
+    "utci_rmse_K",
+    "thermal_input_completeness",
+    "evidence_provenance_fraction",
+    "hard_gate_pass_fraction"
+  ],
+  "metrics": "metrics.json",
+  "required_external_inputs": [],
+  "required_inputs": [
+    "气温、相对湿度、风速和平均辐射温度",
+    "冻结UTCI算法版本",
+    "行人位置与时段掩膜"
+  ],
+  "required_solver_runs": 0,
+  "run_manifest": "run_manifest.json",
+  "schema_version": "1.0",
+  "score_layers": {
+    "artifact_and_schema": 10,
+    "engineering_decision": 10,
+    "external_validation": 15,
+    "numerical_quality": 20,
+    "physical_fidelity": 25,
+    "real_tool_execution": 20
+  },
+  "task_id": "urbanwind-task-172"
+}

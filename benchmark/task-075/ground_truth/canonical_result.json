@@ -1,0 +1,17 @@
+{
+  "case_ids": [
+    "task-075-case-001"
+  ],
+  "claim_boundary": "Local synthetic surface-temperature/OpenFOAM numerical reference; not measured or experimental truth.",
+  "missing_elapsed_s": [
+    47.0
+  ],
+  "primary_metric": {
+    "id": "surface_temperature_alignment_rmse_K",
+    "unit": "K",
+    "value": 1.7740679350269778e-11
+  },
+  "schema_version": "1.0",
+  "source_rows": 6,
+  "task_id": "urbanwind-task-075"
+}

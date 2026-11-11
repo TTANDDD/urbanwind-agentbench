@@ -1,0 +1,15 @@
+{
+  "answer_included": false,
+  "expected_agent_action": "diagnose and repair without changing unrelated settings",
+  "fault_family": "missing_probe_and_plane",
+  "fault_seed": 202609030135,
+  "injected": true,
+  "observed_fault_parameters": {
+    "missing_objects": [
+      "wake_probe",
+      "pedestrian_plane"
+    ]
+  },
+  "target_file": "local_assets/task_input_values.json",
+  "task_id": "urbanwind-task-135"
+}

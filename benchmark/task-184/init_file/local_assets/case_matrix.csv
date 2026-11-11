@@ -1,0 +1,10 @@
+case_id,variant,seed,wind_direction_deg,reference_speed_m_s,stability,surface_heat_flux_w_m2,sgs_model,time_step_s,convection_scheme,pressure_velocity_coupling,roughness_length_m,source_configuration,decomposition_method,restart_segments,software_variant,controlled_factor,controlled_level
+task-184-case-001,孔隙率候选A-风向0度,202609048400,0.0,1.2,neutral,0.0,,,,,,,,,,porosity_and_wind_direction,孔隙率候选A-风向0度
+task-184-case-002,孔隙率候选A-风向22.5度,202609048400,22.5,1.2,neutral,0.0,,,,,,,,,,porosity_and_wind_direction,孔隙率候选A-风向22.5度
+task-184-case-003,孔隙率候选A-风向45度,202609048400,45.0,1.2,neutral,0.0,,,,,,,,,,porosity_and_wind_direction,孔隙率候选A-风向45度
+task-184-case-004,孔隙率候选B-风向0度,202609048400,0.0,1.2,neutral,0.0,,,,,,,,,,porosity_and_wind_direction,孔隙率候选B-风向0度
+task-184-case-005,孔隙率候选B-风向22.5度,202609048400,22.5,1.2,neutral,0.0,,,,,,,,,,porosity_and_wind_direction,孔隙率候选B-风向22.5度
+task-184-case-006,孔隙率候选B-风向45度,202609048400,45.0,1.2,neutral,0.0,,,,,,,,,,porosity_and_wind_direction,孔隙率候选B-风向45度
+task-184-case-007,孔隙率候选C-风向0度,202609048400,0.0,1.2,neutral,0.0,,,,,,,,,,porosity_and_wind_direction,孔隙率候选C-风向0度
+task-184-case-008,孔隙率候选C-风向22.5度,202609048400,22.5,1.2,neutral,0.0,,,,,,,,,,porosity_and_wind_direction,孔隙率候选C-风向22.5度
+task-184-case-009,孔隙率候选C-风向45度,202609048400,45.0,1.2,neutral,0.0,,,,,,,,,,porosity_and_wind_direction,孔隙率候选C-风向45度

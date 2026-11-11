@@ -1,0 +1,12 @@
+{
+  "answer_included": false,
+  "expected_agent_action": "diagnose and repair without changing unrelated settings",
+  "fault_family": "negative_cell_volume",
+  "fault_seed": 202609030123,
+  "injected": true,
+  "observed_fault_parameters": {
+    "negative_cell_count": 4
+  },
+  "target_file": "local_assets/mesh_levels.csv",
+  "task_id": "urbanwind-task-123"
+}

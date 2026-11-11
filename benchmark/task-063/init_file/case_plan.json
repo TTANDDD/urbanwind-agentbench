@@ -1,0 +1,117 @@
+{
+  "cases": [
+    {
+      "case_id": "task-063-case-001",
+      "execution_role": "provided_data_or_tool_execution",
+      "fault_role": "faulty_input_preflight_rejection",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "SB4_LOCAL",
+        "anchor_state": "local_generator_ready",
+        "controlled_factor": "roughness_consistency_state",
+        "data_origin": "deterministic_local_generation",
+        "focus": "检查入口z0、地面roughnessHeight和壁函数常数的物理一致性。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "故障输入",
+        "variant_key": "faulty"
+      },
+      "metrics": [
+        "roughness_consistency_residual",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "max(abs(R_faulty_reported-R_faulty_visible),R_repaired); R=max_pairwise_abs(z0_inlet,z0_wall,z0_map)/max(max(z0_inlet,z0_wall,z0_map),1e-6)",
+        "id": "roughness_consistency_residual",
+        "name_zh": "粗糙度一致性残差",
+        "unit": "fraction"
+      },
+      "purpose": "粗糙度一致性：从可见z0三元组重算故障残差并在求解前拒绝。",
+      "reference_status": "verified_openfoam_diagnostic_reference_generated",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-063",
+      "variant": "故障输入预检"
+    },
+    {
+      "case_id": "task-063-case-002",
+      "execution_role": "real_solver_run",
+      "fault_role": "verified_repair_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "SB4_LOCAL",
+        "anchor_state": "local_generator_ready",
+        "controlled_factor": "roughness_consistency_state",
+        "data_origin": "deterministic_local_generation",
+        "focus": "检查入口z0、地面roughnessHeight和壁函数常数的物理一致性。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "修复后验证",
+        "variant_key": "repaired"
+      },
+      "metrics": [
+        "roughness_consistency_residual",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "max(abs(R_faulty_reported-R_faulty_visible),R_repaired); R=max_pairwise_abs(z0_inlet,z0_wall,z0_map)/max(max(z0_inlet,z0_wall,z0_map),1e-6)",
+        "id": "roughness_consistency_residual",
+        "name_zh": "粗糙度一致性残差",
+        "unit": "fraction"
+      },
+      "purpose": "粗糙度一致性：验证修复后z0三元组一致且真实simpleFoam求解通过。",
+      "reference_status": "verified_openfoam_numerical_reference_generated",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-063",
+      "variant": "修复后真实验证"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "cfd",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 2,
+  "required_solver_runs": 1,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-063"
+}

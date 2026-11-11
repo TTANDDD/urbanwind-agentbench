@@ -1,0 +1,49 @@
+{
+  "case_ids": [
+    "task-072-case-001"
+  ],
+  "claim_boundary": "Local synthetic GIS-to-OpenFOAM roughness mapping numerical reference; not real-city, experimental, PIV, DNS, wind-tunnel or field truth.",
+  "mapped_area_m2": 333.8,
+  "primary_metric": {
+    "id": "roughness_zone_mapping_accuracy",
+    "unit": "fraction",
+    "value": 1.0
+  },
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-072",
+  "zone_results": [
+    {
+      "area_m2": 43.4,
+      "area_ok": true,
+      "correct": true,
+      "face_count": 1736,
+      "geometry_ok": true,
+      "mapped_z0_m": 0.005,
+      "patch_name": "roughnessWest",
+      "z0_ok": true,
+      "zone_id": "west_low"
+    },
+    {
+      "area_m2": 11.4,
+      "area_ok": true,
+      "correct": true,
+      "face_count": 432,
+      "geometry_ok": true,
+      "mapped_z0_m": 0.01,
+      "patch_name": "roughnessCenter",
+      "z0_ok": true,
+      "zone_id": "center_side"
+    },
+    {
+      "area_m2": 279.0,
+      "area_ok": true,
+      "correct": true,
+      "face_count": 4836,
+      "geometry_ok": true,
+      "mapped_z0_m": 0.02,
+      "patch_name": "roughnessEast",
+      "z0_ok": true,
+      "zone_id": "east_high"
+    }
+  ]
+}

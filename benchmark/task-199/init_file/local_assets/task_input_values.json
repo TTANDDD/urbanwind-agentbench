@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "两个候选乘网格/模型复核矩阵",
+      "role_id": "input-001",
+      "seed": 202609049901,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.79600276,
+        0.17924244,
+        0.17419791,
+        0.31082575,
+        0.05833031,
+        0.62393708,
+        0.21586388,
+        0.90789624,
+        0.11330788,
+        0.97704235,
+        0.66430622,
+        0.71205147,
+        0.14970973,
+        0.32084148,
+        0.69664119,
+        0.9428282
+      ]
+    },
+    {
+      "label": "验收阈值",
+      "role_id": "input-002",
+      "seed": 202609049902,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.19157244,
+        0.74050914,
+        0.73291889,
+        0.48270093,
+        0.15540647,
+        0.67074846,
+        0.292185,
+        0.61434897,
+        0.13833125,
+        0.36033883,
+        0.86933393,
+        0.29948434,
+        0.07736593,
+        0.94836602,
+        0.77425342,
+        0.58041642
+      ]
+    },
+    {
+      "label": "参考接受/拒绝标签",
+      "role_id": "input-003",
+      "seed": 202609049903,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.83527227,
+        0.66252207,
+        0.09337345,
+        0.42873496,
+        0.32078344,
+        0.43176843,
+        0.41635353,
+        0.42207612,
+        0.97953019,
+        0.16976285,
+        0.16131784,
+        0.70872484,
+        0.47895696,
+        0.82322084,
+        0.08004865,
+        0.19874228
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-199"
+}

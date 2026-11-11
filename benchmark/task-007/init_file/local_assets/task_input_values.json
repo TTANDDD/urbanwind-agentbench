@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "随任务本地生成的来源文档",
+      "role_id": "input-001",
+      "seed": 202609030701,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.12130355,
+        0.85377096,
+        0.29168299,
+        0.76585095,
+        0.22673447,
+        0.14817751,
+        0.56492909,
+        0.87262542,
+        0.33089551,
+        0.10947426,
+        0.56402646,
+        0.77379827,
+        0.44750703,
+        0.80407176,
+        0.71817548,
+        0.6544642
+      ]
+    },
+    {
+      "label": "本地字段Schema",
+      "role_id": "input-002",
+      "seed": 202609030702,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.75517376,
+        0.66407511,
+        0.17367118,
+        0.45187975,
+        0.70660081,
+        0.18326749,
+        0.7043953,
+        0.94401504,
+        0.73500931,
+        0.54431441,
+        0.50214682,
+        0.63013976,
+        0.11958676,
+        0.71944097,
+        0.41648875,
+        0.63965845
+      ]
+    },
+    {
+      "label": "本地核验模板",
+      "role_id": "input-003",
+      "seed": 202609030703,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.95911253,
+        0.30184994,
+        0.08881515,
+        0.38028297,
+        0.49275812,
+        0.55272617,
+        0.11549429,
+        0.1787951,
+        0.91475997,
+        0.7197791,
+        0.14126062,
+        0.87296484,
+        0.20621906,
+        0.80843168,
+        0.29988284,
+        0.14496038
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-007"
+}

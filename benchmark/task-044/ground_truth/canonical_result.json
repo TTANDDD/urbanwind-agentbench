@@ -1,0 +1,13 @@
+{
+  "case_ids": [
+    "task-044-case-001"
+  ],
+  "claim_boundary": "Local geometric mesh-tool reference only. No velocity solution, wake accuracy, yplus, experimental or atmospheric truth is claimed.",
+  "primary_metric": {
+    "id": "wake_refinement_coverage",
+    "unit": "fraction",
+    "value": 1.0
+  },
+  "result_role": "mesh_metrics.json",
+  "task_id": "urbanwind-task-044"
+}

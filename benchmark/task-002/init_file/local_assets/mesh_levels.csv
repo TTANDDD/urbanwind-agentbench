@@ -1,0 +1,4 @@
+level,nominal_cell_size_m,estimated_cells,refinement_ratio,role
+coarse,1.0,75000,2.0,locally_generated_mesh_target
+medium,0.5,600000,2.0,locally_generated_mesh_target
+fine,0.25,4800000,2.0,locally_generated_mesh_target

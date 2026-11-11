@@ -1,0 +1,63 @@
+{
+  "cases": [
+    {
+      "case_id": "task-002-case-001",
+      "execution_role": "provided_data_or_tool_execution",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "SB4_LOCAL",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "把D、H和绝对米制坐标统一到可机器读取的右手坐标系，同时保留无量纲表示。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "单体建筑坐标系与尺度统一-目标案例"
+      },
+      "metrics": [
+        "coordinate_roundtrip_rmse_m",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "sqrt(mean(||inverse(transform(p))-p||^2))",
+        "id": "coordinate_roundtrip_rmse_m",
+        "name_zh": "坐标往返转换RMSE",
+        "unit": "m"
+      },
+      "purpose": "单体建筑坐标系与尺度统一：执行变体 单体建筑坐标系与尺度统一-目标案例，围绕把D、H和绝对米制坐标统一到可机器读取的右手坐标系，同时保留无量纲表示。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "document_reader"
+      ],
+      "task_id": "urbanwind-task-002",
+      "variant": "单体建筑坐标系与尺度统一-目标案例"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "lite",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 1,
+  "required_solver_runs": 0,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-002"
+}

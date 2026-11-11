@@ -1,0 +1,1497 @@
+[
+  {
+    "task": "task-001",
+    "path": "task-001/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-001",
+    "path": "task-001/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-001",
+    "path": "task-001/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-002",
+    "path": "task-002/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-002",
+    "path": "task-002/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-002",
+    "path": "task-002/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-003",
+    "path": "task-003/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-003",
+    "path": "task-003/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-003",
+    "path": "task-003/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-004",
+    "path": "task-004/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-004",
+    "path": "task-004/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-004",
+    "path": "task-004/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-005",
+    "path": "task-005/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-005",
+    "path": "task-005/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-005",
+    "path": "task-005/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-006",
+    "path": "task-006/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-006",
+    "path": "task-006/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-006",
+    "path": "task-006/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-007",
+    "path": "task-007/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-007",
+    "path": "task-007/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-007",
+    "path": "task-007/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-008",
+    "path": "task-008/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-008",
+    "path": "task-008/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-008",
+    "path": "task-008/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-009",
+    "path": "task-009/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-009",
+    "path": "task-009/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-009",
+    "path": "task-009/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-010",
+    "path": "task-010/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-010",
+    "path": "task-010/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-010",
+    "path": "task-010/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-011",
+    "path": "task-011/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-011",
+    "path": "task-011/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-011",
+    "path": "task-011/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-012",
+    "path": "task-012/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-012",
+    "path": "task-012/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-012",
+    "path": "task-012/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-013",
+    "path": "task-013/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-013",
+    "path": "task-013/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-013",
+    "path": "task-013/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-014",
+    "path": "task-014/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-014",
+    "path": "task-014/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-014",
+    "path": "task-014/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-015",
+    "path": "task-015/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-015",
+    "path": "task-015/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-015",
+    "path": "task-015/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-016",
+    "path": "task-016/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-016",
+    "path": "task-016/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-016",
+    "path": "task-016/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-017",
+    "path": "task-017/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-017",
+    "path": "task-017/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-017",
+    "path": "task-017/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-018",
+    "path": "task-018/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-018",
+    "path": "task-018/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-018",
+    "path": "task-018/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-019",
+    "path": "task-019/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-019",
+    "path": "task-019/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-019",
+    "path": "task-019/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-020",
+    "path": "task-020/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-020",
+    "path": "task-020/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-020",
+    "path": "task-020/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-021",
+    "path": "task-021/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-021",
+    "path": "task-021/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-021",
+    "path": "task-021/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-022",
+    "path": "task-022/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-022",
+    "path": "task-022/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-022",
+    "path": "task-022/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-023",
+    "path": "task-023/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-023",
+    "path": "task-023/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-023",
+    "path": "task-023/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-024",
+    "path": "task-024/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-024",
+    "path": "task-024/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-024",
+    "path": "task-024/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-025",
+    "path": "task-025/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-025",
+    "path": "task-025/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-025",
+    "path": "task-025/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-026",
+    "path": "task-026/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-026",
+    "path": "task-026/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-026",
+    "path": "task-026/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-027",
+    "path": "task-027/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-027",
+    "path": "task-027/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-027",
+    "path": "task-027/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-028",
+    "path": "task-028/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-028",
+    "path": "task-028/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-028",
+    "path": "task-028/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-029",
+    "path": "task-029/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-029",
+    "path": "task-029/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-029",
+    "path": "task-029/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-030",
+    "path": "task-030/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-030",
+    "path": "task-030/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-030",
+    "path": "task-030/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-031",
+    "path": "task-031/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-031",
+    "path": "task-031/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-031",
+    "path": "task-031/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-032",
+    "path": "task-032/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-032",
+    "path": "task-032/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-032",
+    "path": "task-032/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-033",
+    "path": "task-033/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-033",
+    "path": "task-033/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-033",
+    "path": "task-033/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-034",
+    "path": "task-034/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-034",
+    "path": "task-034/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-034",
+    "path": "task-034/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-035",
+    "path": "task-035/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-035",
+    "path": "task-035/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-035",
+    "path": "task-035/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-036",
+    "path": "task-036/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-036",
+    "path": "task-036/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-036",
+    "path": "task-036/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-037",
+    "path": "task-037/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-037",
+    "path": "task-037/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-037",
+    "path": "task-037/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-038",
+    "path": "task-038/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-038",
+    "path": "task-038/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-038",
+    "path": "task-038/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-040",
+    "path": "task-040/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-040",
+    "path": "task-040/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-040",
+    "path": "task-040/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-041",
+    "path": "task-041/ground_truth/blockMesh.log",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-041",
+    "path": "task-041/ground_truth/checkMesh.log",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-041",
+    "path": "task-041/ground_truth/task041_mesh_reference_v1.tar.gz",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-041",
+    "path": "task-041/ground_truth/task041_mesh_reference_v2.tar.gz",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-041",
+    "path": "task-041/ground_truth/task041_mesh_reference_v3.tar.gz",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-044",
+    "path": "task-044/ground_truth/blockMesh.log",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-044",
+    "path": "task-044/ground_truth/checkMesh.log",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-044",
+    "path": "task-044/ground_truth/deployment_tests.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-044",
+    "path": "task-044/ground_truth/evaluator_tests.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-044",
+    "path": "task-044/ground_truth/independent_audit.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-044",
+    "path": "task-044/ground_truth/reference_provenance_pre_deployment_v1.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-044",
+    "path": "task-044/ground_truth/task044-v47-raw.tar.gz",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-045",
+    "path": "task-045/ground_truth/blockMesh.log",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-045",
+    "path": "task-045/ground_truth/checkMesh.log",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-045",
+    "path": "task-045/ground_truth/evaluator_tests.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-045",
+    "path": "task-045/ground_truth/independent_audit.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-045",
+    "path": "task-045/ground_truth/task045-v49-raw.tar.gz",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-054",
+    "path": "task-054/ground_truth/blockMesh.log",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-054",
+    "path": "task-054/ground_truth/checkMesh.log",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-054",
+    "path": "task-054/ground_truth/evaluator_tests.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-054",
+    "path": "task-054/ground_truth/independent_audit.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-054",
+    "path": "task-054/ground_truth/original_raw_audit.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-054",
+    "path": "task-054/ground_truth/raw_evaluator_tests.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-054",
+    "path": "task-054/ground_truth/task054-original-city-partition.tar.gz",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-054",
+    "path": "task-054/ground_truth/task054-v51b-passed-supplement.tar.gz",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-055",
+    "path": "task-055/ground_truth/after_complete.log",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-055",
+    "path": "task-055/ground_truth/before_full.log",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-055",
+    "path": "task-055/ground_truth/canonical_repaired_case",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-055",
+    "path": "task-055/ground_truth/checkMesh.log",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-055",
+    "path": "task-055/ground_truth/evaluator_tests.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-055",
+    "path": "task-055/ground_truth/private_judge_v53",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-055",
+    "path": "task-055/ground_truth/task055-v53-evaluator-raw.tar.gz",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-055",
+    "path": "task-055/ground_truth/task055-v53-formal-runtime-raw.tar.gz",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-055",
+    "path": "task-055/ground_truth/task055-v53-original-native.tar.gz",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-056",
+    "path": "task-056/ground_truth/blockMesh.log",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-056",
+    "path": "task-056/ground_truth/checkMesh.log",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-056",
+    "path": "task-056/ground_truth/evaluator_tests.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-056",
+    "path": "task-056/ground_truth/faulty-blockMesh.log",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-056",
+    "path": "task-056/ground_truth/faulty-full.log",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-056",
+    "path": "task-056/ground_truth/faulty-quality.log",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-056",
+    "path": "task-056/ground_truth/final_acceptance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-056",
+    "path": "task-056/ground_truth/pimpleFoam.log",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-056",
+    "path": "task-056/ground_truth/repaired-full.log",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-056",
+    "path": "task-056/ground_truth/task056-v54-owned-runtime-raw.tar.gz",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-080",
+    "path": "task-080/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-080",
+    "path": "task-080/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-080",
+    "path": "task-080/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-113",
+    "path": "task-113/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-113",
+    "path": "task-113/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-113",
+    "path": "task-113/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-115",
+    "path": "task-115/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-115",
+    "path": "task-115/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-115",
+    "path": "task-115/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-119",
+    "path": "task-119/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-119",
+    "path": "task-119/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-119",
+    "path": "task-119/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-141",
+    "path": "task-141/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-141",
+    "path": "task-141/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-141",
+    "path": "task-141/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-142",
+    "path": "task-142/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-142",
+    "path": "task-142/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-142",
+    "path": "task-142/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-143",
+    "path": "task-143/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-143",
+    "path": "task-143/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-143",
+    "path": "task-143/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-144",
+    "path": "task-144/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-144",
+    "path": "task-144/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-144",
+    "path": "task-144/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-145",
+    "path": "task-145/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-145",
+    "path": "task-145/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-145",
+    "path": "task-145/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-146",
+    "path": "task-146/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-146",
+    "path": "task-146/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-146",
+    "path": "task-146/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-147",
+    "path": "task-147/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-147",
+    "path": "task-147/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-147",
+    "path": "task-147/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-148",
+    "path": "task-148/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-148",
+    "path": "task-148/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-148",
+    "path": "task-148/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-149",
+    "path": "task-149/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-149",
+    "path": "task-149/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-149",
+    "path": "task-149/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-150",
+    "path": "task-150/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-150",
+    "path": "task-150/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-150",
+    "path": "task-150/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-151",
+    "path": "task-151/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-151",
+    "path": "task-151/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-151",
+    "path": "task-151/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-152",
+    "path": "task-152/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-152",
+    "path": "task-152/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-152",
+    "path": "task-152/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-153",
+    "path": "task-153/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-153",
+    "path": "task-153/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-153",
+    "path": "task-153/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-154",
+    "path": "task-154/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-154",
+    "path": "task-154/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-154",
+    "path": "task-154/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-155",
+    "path": "task-155/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-155",
+    "path": "task-155/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-155",
+    "path": "task-155/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-156",
+    "path": "task-156/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-156",
+    "path": "task-156/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-156",
+    "path": "task-156/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-157",
+    "path": "task-157/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-157",
+    "path": "task-157/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-157",
+    "path": "task-157/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-158",
+    "path": "task-158/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-158",
+    "path": "task-158/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-158",
+    "path": "task-158/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-159",
+    "path": "task-159/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-159",
+    "path": "task-159/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-159",
+    "path": "task-159/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-160",
+    "path": "task-160/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-160",
+    "path": "task-160/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-160",
+    "path": "task-160/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-161",
+    "path": "task-161/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-161",
+    "path": "task-161/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-161",
+    "path": "task-161/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-162",
+    "path": "task-162/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-162",
+    "path": "task-162/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-162",
+    "path": "task-162/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-163",
+    "path": "task-163/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-163",
+    "path": "task-163/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-163",
+    "path": "task-163/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-164",
+    "path": "task-164/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-164",
+    "path": "task-164/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-164",
+    "path": "task-164/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-165",
+    "path": "task-165/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-165",
+    "path": "task-165/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-165",
+    "path": "task-165/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-166",
+    "path": "task-166/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-166",
+    "path": "task-166/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-166",
+    "path": "task-166/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-167",
+    "path": "task-167/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-167",
+    "path": "task-167/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-167",
+    "path": "task-167/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-168",
+    "path": "task-168/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-168",
+    "path": "task-168/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-168",
+    "path": "task-168/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-169",
+    "path": "task-169/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-169",
+    "path": "task-169/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-169",
+    "path": "task-169/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-170",
+    "path": "task-170/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-170",
+    "path": "task-170/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-170",
+    "path": "task-170/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-171",
+    "path": "task-171/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-171",
+    "path": "task-171/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-171",
+    "path": "task-171/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-172",
+    "path": "task-172/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-172",
+    "path": "task-172/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-172",
+    "path": "task-172/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-173",
+    "path": "task-173/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-173",
+    "path": "task-173/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-173",
+    "path": "task-173/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-174",
+    "path": "task-174/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-174",
+    "path": "task-174/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-174",
+    "path": "task-174/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-175",
+    "path": "task-175/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-175",
+    "path": "task-175/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-175",
+    "path": "task-175/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-176",
+    "path": "task-176/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-176",
+    "path": "task-176/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-176",
+    "path": "task-176/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-177",
+    "path": "task-177/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-177",
+    "path": "task-177/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-177",
+    "path": "task-177/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-178",
+    "path": "task-178/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-178",
+    "path": "task-178/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-178",
+    "path": "task-178/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-179",
+    "path": "task-179/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-179",
+    "path": "task-179/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-179",
+    "path": "task-179/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-180",
+    "path": "task-180/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-180",
+    "path": "task-180/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-180",
+    "path": "task-180/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-195",
+    "path": "task-195/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-195",
+    "path": "task-195/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-195",
+    "path": "task-195/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-198",
+    "path": "task-198/ground_truth/canonical_result.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-198",
+    "path": "task-198/ground_truth/reference_metrics.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  },
+  {
+    "task": "task-198",
+    "path": "task-198/ground_truth/reference_provenance.json",
+    "reason": "Unvalidated scaffold target or runtime/raw archive outside this public research snapshot"
+  }
+]

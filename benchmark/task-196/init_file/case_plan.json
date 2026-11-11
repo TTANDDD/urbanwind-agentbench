@@ -1,0 +1,303 @@
+{
+  "cases": [
+    {
+      "case_id": "task-196-case-001",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "LOCAL_MULTI",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "用RANS筛选候选并用LES复核，量化保真迁移偏差。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "RANS候选1"
+      },
+      "metrics": [
+        "multifidelity_selection_precision",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "true_high_value_upgrades / selected_upgrades",
+        "id": "multifidelity_selection_precision",
+        "name_zh": "多保真升级选择精确率",
+        "unit": "fraction"
+      },
+      "purpose": "RANS到LES多保真筛选：执行变体 RANS候选1，围绕用RANS筛选候选并用LES复核，量化保真迁移偏差。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-196",
+      "variant": "RANS候选1"
+    },
+    {
+      "case_id": "task-196-case-002",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "LOCAL_MULTI",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "用RANS筛选候选并用LES复核，量化保真迁移偏差。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "RANS候选2"
+      },
+      "metrics": [
+        "multifidelity_selection_precision",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "true_high_value_upgrades / selected_upgrades",
+        "id": "multifidelity_selection_precision",
+        "name_zh": "多保真升级选择精确率",
+        "unit": "fraction"
+      },
+      "purpose": "RANS到LES多保真筛选：执行变体 RANS候选2，围绕用RANS筛选候选并用LES复核，量化保真迁移偏差。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-196",
+      "variant": "RANS候选2"
+    },
+    {
+      "case_id": "task-196-case-003",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "LOCAL_MULTI",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "用RANS筛选候选并用LES复核，量化保真迁移偏差。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "RANS候选3"
+      },
+      "metrics": [
+        "multifidelity_selection_precision",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "true_high_value_upgrades / selected_upgrades",
+        "id": "multifidelity_selection_precision",
+        "name_zh": "多保真升级选择精确率",
+        "unit": "fraction"
+      },
+      "purpose": "RANS到LES多保真筛选：执行变体 RANS候选3，围绕用RANS筛选候选并用LES复核，量化保真迁移偏差。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-196",
+      "variant": "RANS候选3"
+    },
+    {
+      "case_id": "task-196-case-004",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "LOCAL_MULTI",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "用RANS筛选候选并用LES复核，量化保真迁移偏差。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "RANS候选4"
+      },
+      "metrics": [
+        "multifidelity_selection_precision",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "true_high_value_upgrades / selected_upgrades",
+        "id": "multifidelity_selection_precision",
+        "name_zh": "多保真升级选择精确率",
+        "unit": "fraction"
+      },
+      "purpose": "RANS到LES多保真筛选：执行变体 RANS候选4，围绕用RANS筛选候选并用LES复核，量化保真迁移偏差。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-196",
+      "variant": "RANS候选4"
+    },
+    {
+      "case_id": "task-196-case-005",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "LOCAL_MULTI",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "用RANS筛选候选并用LES复核，量化保真迁移偏差。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "LES复核1"
+      },
+      "metrics": [
+        "multifidelity_selection_precision",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "true_high_value_upgrades / selected_upgrades",
+        "id": "multifidelity_selection_precision",
+        "name_zh": "多保真升级选择精确率",
+        "unit": "fraction"
+      },
+      "purpose": "RANS到LES多保真筛选：执行变体 LES复核1，围绕用RANS筛选候选并用LES复核，量化保真迁移偏差。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-196",
+      "variant": "LES复核1"
+    },
+    {
+      "case_id": "task-196-case-006",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "LOCAL_MULTI",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "用RANS筛选候选并用LES复核，量化保真迁移偏差。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "LES复核2"
+      },
+      "metrics": [
+        "multifidelity_selection_precision",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "true_high_value_upgrades / selected_upgrades",
+        "id": "multifidelity_selection_precision",
+        "name_zh": "多保真升级选择精确率",
+        "unit": "fraction"
+      },
+      "purpose": "RANS到LES多保真筛选：执行变体 LES复核2，围绕用RANS筛选候选并用LES复核，量化保真迁移偏差。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-196",
+      "variant": "LES复核2"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "heavy",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 6,
+  "required_solver_runs": 6,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-196"
+}

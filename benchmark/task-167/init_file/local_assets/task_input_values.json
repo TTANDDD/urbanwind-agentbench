@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "屋顶附近高分辨率速度/通量场",
+      "role_id": "input-001",
+      "seed": 202609046701,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.24090568,
+        0.10243619,
+        0.57265177,
+        0.84480528,
+        0.7159572,
+        0.11156768,
+        0.61570548,
+        0.76034332,
+        0.0566483,
+        0.97238676,
+        0.3686255,
+        0.6769939,
+        0.7611962,
+        0.48813358,
+        0.55275297,
+        0.15526353
+      ]
+    },
+    {
+      "label": "冻结剪切层厚度定义",
+      "role_id": "input-002",
+      "seed": 202609046702,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.63145265,
+        0.82802128,
+        0.52367803,
+        0.78684971,
+        0.57753896,
+        0.73971886,
+        0.28918952,
+        0.63954618,
+        0.94929593,
+        0.58316325,
+        0.99621844,
+        0.28964948,
+        0.0802834,
+        0.3522718,
+        0.62631692,
+        0.45305289
+      ]
+    },
+    {
+      "label": "参考剪切层指标",
+      "role_id": "input-003",
+      "seed": 202609046703,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.47129128,
+        0.08648751,
+        0.39842752,
+        0.68428926,
+        0.52398033,
+        0.32508516,
+        0.17204535,
+        0.882366,
+        0.51149969,
+        0.73481573,
+        0.84568957,
+        0.27201552,
+        0.9956953,
+        0.71526375,
+        0.85787012,
+        0.99827405
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-167"
+}

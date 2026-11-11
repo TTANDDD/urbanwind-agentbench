@@ -1,0 +1,64 @@
+{
+  "cases": [
+    {
+      "case_id": "task-047-case-001",
+      "execution_role": "provided_data_or_tool_execution",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "CUBE_LOCAL",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "在街谷、屋顶剪切层和交叉口布置可解释的加密区。",
+        "mesh_contract": "local_assets/openfoam_base/street_mesh_contract.json",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "错列阵列街谷局部加密-目标案例"
+      },
+      "metrics": [
+        "street_canyon_resolution_coverage",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "sum_i volume(raw_axis_aligned_cell_i intersect union(public canyon, roof and intersection boxes)) * I(dx_i,dy_i,dz_i <= stage directional limits) / 51.0 m3; the union is counted once; raw topology must tile the complete 457.6 m3 fluid domain exactly once with all 16 solids excluded; no centre-count approximation",
+        "id": "street_canyon_resolution_coverage",
+        "name_zh": "街谷目标分辨率覆盖率",
+        "unit": "fraction"
+      },
+      "purpose": "错列阵列街谷局部加密：执行变体 错列阵列街谷局部加密-目标案例，围绕在街谷、屋顶剪切层和交叉口布置可解释的加密区。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-047",
+      "variant": "错列阵列街谷局部加密-目标案例"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "lite",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 1,
+  "required_solver_runs": 0,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-047"
+}

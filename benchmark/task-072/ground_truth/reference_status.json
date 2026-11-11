@@ -1,0 +1,67 @@
+{
+  "blockers": [
+    "frozen distributable runtime",
+    "packaged hidden-evaluator execution"
+  ],
+  "canonical_result": "canonical_result.json",
+  "claim_boundary": "Reference-ready local GIS-to-OpenFOAM numerical mapping task; benchmark release remains blocked.",
+  "data_acquisition_blockers": [],
+  "evaluator_status": "task_specific_roughness_mapping_raw_evidence_check",
+  "expected_ground_truth": {
+    "case_ids": [
+      "task-072-case-001"
+    ],
+    "hidden_tolerances_status": "frozen_roughness_mapping_raw_evidence_tolerance",
+    "input_roles": [
+      "随任务本地生成的入口/边界参数",
+      "本地目标剖面或守恒参考",
+      "本地程序化计算域"
+    ],
+    "metric_contracts": [
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "sum_j(A_j*I(patch_geometry_j matches source_zone_j and abs(z0_OpenFOAM_j-z0_source_j)<=1e-12))/sum_j(A_j)",
+        "id": "roughness_zone_mapping_accuracy",
+        "name_zh": "粗糙度分区映射准确率",
+        "unit": "fraction"
+      },
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "hashed_source_linked_evidence / required_evidence",
+        "id": "evidence_provenance_fraction",
+        "name_zh": "证据溯源覆盖率",
+        "unit": "fraction"
+      },
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "passed_hard_gates / required_hard_gates",
+        "id": "hard_gate_pass_fraction",
+        "name_zh": "硬门禁通过率",
+        "unit": "fraction"
+      }
+    ],
+    "reference_values_status": "verified_openfoam_numerical_reference_generated"
+  },
+  "experimental_claim": false,
+  "limitations": [
+    "The GIS zones are deterministic local synthetic inputs, not real-city GIS data.",
+    "The hidden reference is one OpenFOAM v2412 numerical run, not experimental/PIV/DNS truth.",
+    "The evaluator checks raw files but does not rerun GDAL or OpenFOAM.",
+    "Frozen distributable runtime remains pending."
+  ],
+  "reference_case_arrays": "reference_case_arrays.json",
+  "reference_metrics": "reference_metrics.json",
+  "reference_provenance": "reference_provenance.json",
+  "reference_status": "openfoam_numerical_reference_generated",
+  "release_status": "reference_ready_not_release_valid",
+  "required_reference_artifacts": [
+    "locally generated source inputs with generation manifest: 随任务本地生成的入口/边界参数; 本地目标剖面或守恒参考; 本地程序化计算域",
+    "real tool and solver run manifests",
+    "raw fields, logs and post-processing arrays",
+    "recomputed task metrics: roughness_zone_mapping_accuracy; evidence_provenance_fraction; hard_gate_pass_fraction",
+    "positive and adversarial evaluator tests"
+  ],
+  "schema_version": "1.2",
+  "task_id": "urbanwind-task-072",
+  "truth_type": "verified_openfoam_numerical_reference"
+}

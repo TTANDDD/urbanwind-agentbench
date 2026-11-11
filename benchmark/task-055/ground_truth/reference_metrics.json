@@ -1,0 +1,122 @@
+{
+  "task_id": "urbanwind-task-055",
+  "truth_type": "verified_openfoam_tool_reference",
+  "experimental_claim": false,
+  "values": {
+    "remaining_internal_face_orientation_defect_count": 0,
+    "evidence_provenance_fraction": 1,
+    "hard_gate_pass_fraction": 1
+  },
+  "units": {
+    "remaining_internal_face_orientation_defect_count": "faces",
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction"
+  },
+  "diagnostics": {
+    "exact_installed_entry": {
+      "decision": "PASS_INDEPENDENT_STREAMING_GEOMETRY_AND_NATIVE_SET_BINDINGS",
+      "evaluation_sha256": "c8b81ece44cd7a62f318896d16f4eeb47ba8563d1a432fbfaad00e1ca716697f",
+      "phase_receipts_sha256": {
+        "J9613f447906843830": "ac1938775b39ca182de531cd418105ce3bf3b42472ab3b2f0b70c082365e22a9",
+        "J9613f447906843831": "d4a8797499207f19222854429744a8d3513549534f9fa94f9695c8f67f87f1fc",
+        "J9613f447906843832": "b9c317e58371a4659ba9d872d22d41b81e7786a0e9382decc3e8d63c2523054a"
+      },
+      "damaged": {
+        "cell_count": 141952,
+        "face_count": 435712,
+        "point_count": 151893,
+        "internal_face_count": 416000,
+        "geometric_volume_m3": 2218.0,
+        "incorrect_internal_faces": [
+          108841
+        ],
+        "incorrect_boundary_faces": [],
+        "orientation_products_m3": {
+          "108841": -0.015625
+        },
+        "nonclosed_cells": [
+          {
+            "cell": 36851,
+            "R_m2": [
+              -0.125,
+              0.0,
+              0.0
+            ],
+            "closure_L2": 0.3333333333333333,
+            "native_component_openness": 1.0,
+            "unit_x_flux_m3_s": -0.125,
+            "unit_x_divergence_s_inverse": -8.0
+          },
+          {
+            "cell": 36852,
+            "R_m2": [
+              0.125,
+              0.0,
+              0.0
+            ],
+            "closure_L2": 0.3333333333333333,
+            "native_component_openness": 1.0,
+            "unit_x_flux_m3_s": 0.125,
+            "unit_x_divergence_s_inverse": 8.0
+          }
+        ],
+        "boundary_residual_m2": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "coordinate_tolerance_m": 1e-12,
+        "input_coordinates_snapped": false,
+        "method": "translated raw decimal polygon/incident-cell arithmetic; ideal lattice prediction evaluated within prespecified tolerances; no native result or authority"
+      },
+      "repair": {
+        "decision": "PASS_OFFLINE_REPAIR_ONLY",
+        "reversed_faces": [
+          108841
+        ],
+        "compared_faces": 435712,
+        "raw": {
+          "cell_count": 141952,
+          "face_count": 435712,
+          "point_count": 151893,
+          "internal_face_count": 416000,
+          "geometric_volume_m3": 2218.0,
+          "incorrect_internal_faces": [],
+          "incorrect_boundary_faces": [],
+          "orientation_products_m3": {},
+          "nonclosed_cells": [],
+          "boundary_residual_m2": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "coordinate_tolerance_m": 1e-12,
+          "input_coordinates_snapped": false,
+          "method": "translated raw decimal polygon/incident-cell arithmetic; ideal lattice prediction evaluated within prespecified tolerances; no native result or authority"
+        },
+        "native_acceptance": false
+      },
+      "native_unique_entity_sets": {
+        "nonOrthoFaces": [
+          108841
+        ],
+        "wrongOrientedFaces": [
+          108841
+        ],
+        "lowQualityTetFaces": [
+          108841
+        ],
+        "nonClosedCells": [
+          36851,
+          36852
+        ],
+        "concaveCells": [
+          36851,
+          36852
+        ]
+      },
+      "scope": "Geometric IDs and residuals recomputed independently of NumPy causal predictor; native5 failure-branch increments remain separately source-derived evidence, not reimplemented here."
+    }
+  },
+  "claim_boundary": "Imported synthetic city internal-face winding diagnosis and minimal repair only; geometric conservation diagnostic U=(1,0,0), not solved flow, LES, real-city or experimental truth."
+}

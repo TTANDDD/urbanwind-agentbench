@@ -1,0 +1,162 @@
+{
+  "acceptance_contract": {
+    "primary_metric_id": "remaining_internal_face_orientation_defect_count",
+    "primary_metric_formula": "count of internal faces with S_f dot (geometric_neighbour_centre-geometric_owner_centre) <= 0, recomputed from raw submitted instance; target 0; preservation, cell closure, report and complete native gates are mandatory conjunctive checks",
+    "target": 0,
+    "hard_gate_precedence": true,
+    "required_case_ids": [
+      "task-055-case-001"
+    ],
+    "required_solver_runs": 0,
+    "subinputs": [
+      "supplied_damaged",
+      "submitted_repaired"
+    ]
+  },
+  "answer_free": true,
+  "case_anchor": {
+    "id": "PROCEDURAL_CITY",
+    "known": {
+      "geographic_claim": false,
+      "geometry": "deterministic_parameterized_city",
+      "truth_type": "synthetic_or_numerical_reference"
+    },
+    "missing": [],
+    "name": "程序化本地城市子域",
+    "references": [
+      "LOCAL_GENERATOR"
+    ],
+    "status": "local_generator_ready"
+  },
+  "category": "mesh_generation",
+  "compute_track": "lite",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision_rule": "Damaged input REJECT, minimally repaired output ACCEPT; all raw preservation, orientation, cell closure, typed sets, evidence, full and complete-quality gates conjunctive. Timeout/FatalError/missing/truncated proof means STOP, not zero.",
+  "difficulty": "intermediate",
+  "engineering_focus": "从原始面朝向和单元守恒证据定位并最小修复导入网格故障；不重新生成网格。",
+  "evaluator_status": "task_specific_openfoam_reexecution_check",
+  "evidence_requirements": [
+    "exact commands and working directories",
+    "software names, versions, executable paths and SHA256 when available",
+    "timezone-aware start/end times and exit codes",
+    "SHA256-addressed input, log and raw-output files",
+    "coordinate system, units, masks, statistical windows and aggregation order"
+  ],
+  "init_type": "incomplete_template",
+  "limitations": [
+    "Synthetic imported city mesh diagnosis/repair only; no CFD, LES, physical flow, experimental or real-city truth.",
+    "reference-ready means qualified tool/raw/evaluator evidence, not release-valid or agent performance. Frozen portable runtime and hidden harness remain pending."
+  ],
+  "local_generator_version": "urbanwind-local-assets-v3",
+  "materialization_status": "local_inputs_generated",
+  "mesh_gate_contract": "repair_contract.json",
+  "metrics": [
+    {
+      "id": "remaining_internal_face_orientation_defect_count",
+      "name_zh": "修复后内部面朝向错误数量",
+      "unit": "faces",
+      "formula": "count of internal faces with S_f dot (geometric_neighbour_centre-geometric_owner_centre) <= 0, recomputed from raw submitted instance; target 0; preservation, cell closure, report and complete native gates are mandatory conjunctive checks",
+      "aggregation": "per_case_then_task"
+    },
+    {
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "aggregation": "per_case_then_task"
+    },
+    {
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "aggregation": "per_case_then_task"
+    }
+  ],
+  "physical_checks": [
+    {
+      "id": "raw_orientation_and_closure",
+      "requirement": "Use raw polygon area vectors, geometric cell centres and all signed incident faces; global boundary cancellation cannot replace local cell closure."
+    },
+    {
+      "id": "minimal_preserving_repair",
+      "requirement": "Only face winding/cycle starts may change. Preserve coordinates, membership, adjacency, owner/neighbour, patches and geometry."
+    },
+    {
+      "id": "three_native_gates",
+      "requirement": "Original full check must REJECT; repaired full and complete public quality must ACCEPT. Retain original command/log/set ownership; exit0 alone is insufficient."
+    },
+    {
+      "id": "native_provenance_and_units",
+      "requirement": "Original typed native sets and complete logs bind commands, executable/runtime/inputs and positive-length EOF/consuming wait. Finite measurements declare original instance IDs and S/R/Q/D units."
+    }
+  ],
+  "professional_difficulty": "D3",
+  "reference_status": "openfoam_tool_reference_generated",
+  "release_status": "reference_ready_not_release_valid",
+  "required_artifacts": [
+    {
+      "path": "repair_report.json",
+      "format": "json",
+      "role": "raw diagnostic/repair report"
+    },
+    {
+      "path": "decision.md",
+      "format": "markdown",
+      "role": "bounded engineering conclusion"
+    },
+    {
+      "path": "repaired/constant/polyMesh/faces",
+      "format": "raw",
+      "role": "minimal winding repair"
+    },
+    {
+      "path": "evidence/before_full/command.json",
+      "format": "json",
+      "role": "damaged actual provenance"
+    },
+    {
+      "path": "evidence/before_full/log.checkMesh",
+      "format": "raw",
+      "role": "complete damaged log"
+    },
+    {
+      "path": "evidence/after_full/log.checkMesh",
+      "format": "raw",
+      "role": "complete repaired log"
+    },
+    {
+      "path": "evidence/after_complete/log.checkMesh",
+      "format": "raw",
+      "role": "all public quality checks"
+    }
+  ],
+  "required_cases": 1,
+  "required_inputs": [
+    "冻结的带单内部面朝向故障原始城市polyMesh",
+    "公开最小修复与几何守恒合同",
+    "完整原生质量阈值和数据型提交格式"
+  ],
+  "required_solver_runs": 0,
+  "schema_version": "1.0",
+  "scientific_question": "智能体能否在不伪造证据的前提下完成“checkMesh自动门禁”，并把工具执行、数值质量、物理依据和工程结论连成可复算闭环？",
+  "software_chain": [
+    "python",
+    "openfoam"
+  ],
+  "task_id": "urbanwind-task-055",
+  "task_mode": "configure_and_verify",
+  "task_number": 55,
+  "title": "checkMesh自动门禁",
+  "track": "mesh_and_numerics",
+  "track_name": "网格与数值离散",
+  "workflow": {
+    "configure": "围绕程序化本地城市子域生成案例计划和软件配置，并保持单位、坐标和版本可追踪。",
+    "decide": "给出带适用边界的工程结论；关键证据缺失时明确停止或降级声明。",
+    "evidence": "读取任务输入与来源登记，显式列出已知、假设、缺失和许可边界。",
+    "execute": "One diagnostic/repair case, three checkMesh evidence groups, zero CFD; submit data only.",
+    "postprocess": "Compute raw S,R,Q,D and minimal repair report in instance IDs.",
+    "preprocess": "Read imported damaged raw mesh and public repair/quality contracts; do not use a clean constructor.",
+    "validate": "依次通过文件、执行、数值、物理、外部证据和工程约束门禁。"
+  }
+}

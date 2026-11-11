@@ -1,0 +1,7 @@
+elapsed_s,aligned_temperature_k,alignment_method
+0,302,observed
+19,303.4,observed
+47,304.625,linear_between_nearest_valid_neighbors
+83,306.2,observed
+131,304.7,observed
+180,303,observed

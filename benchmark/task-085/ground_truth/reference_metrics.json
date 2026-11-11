@@ -1,0 +1,18 @@
+{
+  "diagnostics": {},
+  "experimental_claim": false,
+  "metric_definition": "Equal weighting over 59 valid probes; solid-surface indices 6-10 are excluded; U scale=1.2 m/s; resolved-TKE scale=1.44 m2/s2.",
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-085",
+  "truth_type": "verified_openfoam_numerical_reference",
+  "units": {
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction",
+    "scheme_observable_spread": "fraction"
+  },
+  "values": {
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0,
+    "scheme_observable_spread": 0.10217270172043819
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "experimental_claim": false,
+  "mapped_area_m2": 333.8,
+  "metric_formula": "sum_j(A_j*I(patch_geometry_j matches source_zone_j and abs(z0_OpenFOAM_j-z0_source_j)<=1e-12))/sum_j(A_j)",
+  "response_group_mean_Ux_m_s": {
+    "center_side": 0.90568430929425,
+    "east_high": 0.783877175353,
+    "west_low": 0.79710243946575
+  },
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-072",
+  "truth_type": "verified_openfoam_numerical_reference",
+  "units": {
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction",
+    "roughness_zone_mapping_accuracy": "fraction"
+  },
+  "values": {
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0,
+    "roughness_zone_mapping_accuracy": 1.0
+  },
+  "zone_results": [
+    {
+      "area_m2": 43.4,
+      "area_ok": true,
+      "correct": true,
+      "face_count": 1736,
+      "geometry_ok": true,
+      "mapped_z0_m": 0.005,
+      "patch_name": "roughnessWest",
+      "z0_ok": true,
+      "zone_id": "west_low"
+    },
+    {
+      "area_m2": 11.4,
+      "area_ok": true,
+      "correct": true,
+      "face_count": 432,
+      "geometry_ok": true,
+      "mapped_z0_m": 0.01,
+      "patch_name": "roughnessCenter",
+      "z0_ok": true,
+      "zone_id": "center_side"
+    },
+    {
+      "area_m2": 279.0,
+      "area_ok": true,
+      "correct": true,
+      "face_count": 4836,
+      "geometry_ok": true,
+      "mapped_z0_m": 0.02,
+      "patch_name": "roughnessEast",
+      "z0_ok": true,
+      "zone_id": "east_high"
+    }
+  ]
+}

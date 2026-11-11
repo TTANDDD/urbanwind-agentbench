@@ -1,0 +1,10 @@
+{
+  "actual_injection_verified": true,
+  "design_id": "task056-v54-city-scale-repair",
+  "fault": "metre vertices converted a second time by0.001",
+  "file": "openfoam_base/system/blockMeshDict",
+  "injected_value": 0.001,
+  "raw_native_mesh_generated": false,
+  "repair_scope": "Only this scalar; public geometry/U/nu/turbulence/numerics fixed. No submitted code.",
+  "unique_entry": "convertToMeters"
+}

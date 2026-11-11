@@ -1,0 +1,37 @@
+{
+  "acceptance_limit": 0.05,
+  "continuous_to_restart_comparisons": [
+    {
+      "baseline_case_id": "task-099-case-001",
+      "mean_U_vector_nmae": 0.043024698711686196,
+      "mean_kinematic_pressure_nmae": 0.014728887250011842,
+      "resolved_tke_nmae": 0.006563952076818559,
+      "restart_case_id": "task-099-case-002",
+      "restart_continuity_error": 0.043024698711686196
+    },
+    {
+      "baseline_case_id": "task-099-case-001",
+      "mean_U_vector_nmae": 0.0473883414921072,
+      "mean_kinematic_pressure_nmae": 0.014249360664924203,
+      "resolved_tke_nmae": 0.0077412487564759895,
+      "restart_case_id": "task-099-case-003",
+      "restart_continuity_error": 0.0473883414921072
+    }
+  ],
+  "experimental_claim": false,
+  "metric_formula": "max_restart(max(NMAE(mean_U_vector_360_420)/1.2,NMAE(resolved_TKE_360_420)/1.44,NMAE(mean_p_360_420)/1.44)) versus continuous run",
+  "metric_freeze_boundary": "The explicit restart_continuity_error implementation and 0.05 numerical-consistency limit were frozen after source runs but before any benchmark-agent evaluation. They support a numerical-reference task, not a prospective physical-validation claim.",
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-099",
+  "truth_type": "verified_openfoam_numerical_reference",
+  "units": {
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction",
+    "restart_continuity_error": "fraction"
+  },
+  "values": {
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0,
+    "restart_continuity_error": 0.0473883414921072
+  }
+}

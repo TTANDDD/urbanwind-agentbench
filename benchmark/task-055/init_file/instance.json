@@ -1,0 +1,14 @@
+{
+  "schema": "task055-v53-instance-v1",
+  "task_id": "urbanwind-task-055-v53",
+  "instance_id": "v53-original-v1",
+  "face_count": 435712,
+  "raw_sha256": {
+    "points": "eb4d39696754eeb6f457ade9836f2080bb4418953f1050fa1fa2e0a0b3d40003",
+    "faces": "740f9947b1d910149f3f6c66032ca012022eb963ed7fe2e68ba701dd6c6cab27",
+    "owner": "bb8082d1f00abcd521cf3533751a5a34284b992be9cd2711930fbda22882b0f9",
+    "neighbour": "a12601833cbe72d648db02833e55c943aa93f1779f3d6d65e60b059d0ac2194a",
+    "boundary": "a23ba1e5957da1ae707638d997ef32a18921372672eec64afe75620442a5e4e5"
+  },
+  "truth_boundary": "Controlled winding fault; no target ID, corrected mesh or selector in public instance."
+}

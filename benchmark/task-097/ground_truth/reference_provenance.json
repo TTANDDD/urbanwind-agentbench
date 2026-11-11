@@ -1,0 +1,19 @@
+{
+  "experimental_claim": false,
+  "host": "5070-server (reported hostname abc)",
+  "independent_archive_audit": "validation/openfoam-task097-archive-independent-audit-v1.json",
+  "independent_archive_audit_sha256": "d510c45901cde6a71b5d0c0dd4d7a842c0fbd81f74360ae07c52a9394a54915d",
+  "openfoam_version": "v2412",
+  "runtime_environment": "/home/abc/urbanwind-agentbench-runtime-v0.1/envs/openfoam-2412",
+  "schema_version": "1.0",
+  "source_run": {
+    "case_id": "task-097-case-001",
+    "source_archive": "validation/openfoam-batch-20260914-v16/results/task097-procedural-city-les/reference_candidate.tar.gz",
+    "source_archive_sha256": "e5652f777238a37fb85740366a1974ab88780366601cd6d68f4a6234bee2b9ff",
+    "source_job": "task097-procedural-city-les",
+    "source_status": "validation/openfoam-batch-20260914-v16/results/task097-procedural-city-les/status.json",
+    "source_status_sha256": "7b228d84d6a8dcc42362a6d8c235b11dcef0901b9cb82b461e076b097b947386",
+    "variant": "冻结程序化城市子域"
+  },
+  "task_id": "urbanwind-task-097"
+}

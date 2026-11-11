@@ -1,0 +1,28 @@
+{
+  "aligned_47s_k": 304.625,
+  "diagnostic_metrics": {
+    "max_abs_cumulative_continuity": 2.99297147953e-05,
+    "max_courant": 0.893921206647,
+    "temperature_drift_k": 0.0008614798763346698,
+    "vertical_exchange_drift_m_s": 0.00018048312159916167
+  },
+  "experimental_claim": false,
+  "metric_formula": "sqrt(mean_t((areaMean(T_building_patch,t)-linear_interp(impute_linear(T_source),t))^2))",
+  "missing_elapsed_s": [
+    47.0
+  ],
+  "schema_version": "1.0",
+  "source_rows": 6,
+  "task_id": "urbanwind-task-075",
+  "truth_type": "verified_openfoam_numerical_reference",
+  "units": {
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction",
+    "surface_temperature_alignment_rmse_K": "K"
+  },
+  "values": {
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0,
+    "surface_temperature_alignment_rmse_K": 1.7740679350269778e-11
+  }
+}

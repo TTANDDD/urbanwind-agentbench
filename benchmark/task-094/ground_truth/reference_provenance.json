@@ -1,0 +1,46 @@
+{
+  "experimental_claim": false,
+  "host": "5070-server",
+  "independent_audit": "validation/openfoam-task094-v29f-independent-audit-v1.json",
+  "independent_audit_sha256": "8a6b50088fe7cb46d411f8c0e3ea1f47d69e608533a792e34023c1b9cca889d0",
+  "openfoam_version": "OpenCFD-v2412",
+  "runtime_environment": "/home/abc/urbanwind-agentbench-runtime-v0.1/envs/openfoam-2412",
+  "schema_version": "1.0",
+  "source_initialization": {
+    "task": "urbanwind-task-092",
+    "truth_boundary": "audited numerical U/nut initialization only"
+  },
+  "source_runs": [
+    {
+      "case_id": "task-094-case-001",
+      "ground_heat_flux_w_m2": 0.0,
+      "source_archive": "validation/openfoam-batch-20260921-v29f-task094-thermal/results/task094-neutral/reference_candidate.tar.gz",
+      "source_archive_sha256": "9b939f27fb85da73165bed8bc2f15ebbf6d46f8677c602c35a7492f94a86a405",
+      "source_batch": "openfoam-batch-20260921-v29f-task094-thermal",
+      "source_job": "task094-neutral",
+      "source_status_sha256": "bff483bd6533962e4869bc49aa0770bb627cd0953e0167eb5019f7c6be406b0f",
+      "variant": "无热强迫"
+    },
+    {
+      "case_id": "task-094-case-002",
+      "ground_heat_flux_w_m2": 50.0,
+      "source_archive": "validation/openfoam-batch-20260921-v29f-task094-thermal/results/task094-low/reference_candidate.tar.gz",
+      "source_archive_sha256": "1cc2a055ec2426d9482548b8872c11213bb6cfbe962276dffcffe40cbfc56f39",
+      "source_batch": "openfoam-batch-20260921-v29f-task094-thermal",
+      "source_job": "task094-low",
+      "source_status_sha256": "65a6595f63e7ff1b57491a604528e56144aa504f9bc5fc5dc37ece9d2f39511e",
+      "variant": "低热通量"
+    },
+    {
+      "case_id": "task-094-case-003",
+      "ground_heat_flux_w_m2": 150.0,
+      "source_archive": "validation/openfoam-batch-20260921-v29f-task094-thermal/results/task094-high/reference_candidate.tar.gz",
+      "source_archive_sha256": "7c1d2215a392508fdc8750bde0f544f0803ae3d9e3f2ca54e19fea86427b2a95",
+      "source_batch": "openfoam-batch-20260921-v29f-task094-thermal",
+      "source_job": "task094-high",
+      "source_status_sha256": "fb3084b32945acef1107d47895bfe7687b406d5ffc5ede28fcdb51b1b0647c63",
+      "variant": "高热通量"
+    }
+  ],
+  "task_id": "urbanwind-task-094"
+}

@@ -1,0 +1,212 @@
+{
+  "acceptance_contract": {
+    "expected_solver_case_ids": [
+      "task-056-case-002"
+    ],
+    "hard_gate_precedence": true,
+    "primary_metric_formula": "max_d(abs((max(raw_points[d])-min(raw_points[d]))-target_span[d])/target_span[d]); target_span=(20,16,7)m",
+    "primary_metric_id": "geometry_scale_relative_error",
+    "required_case_ids": [
+      "task-056-case-001",
+      "task-056-case-002"
+    ],
+    "required_solver_runs": 1
+  },
+  "answer_free": true,
+  "case_anchor": {
+    "id": "PROCEDURAL_CITY",
+    "known": {
+      "geographic_claim": false,
+      "geometry": "deterministic_parameterized_city",
+      "truth_type": "synthetic_or_numerical_reference"
+    },
+    "missing": [],
+    "name": "程序化本地城市子域",
+    "references": [
+      "LOCAL_GENERATOR"
+    ],
+    "status": "local_generator_ready"
+  },
+  "category": "mesh_generation",
+  "compute_track": "cfd",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision_rule": "All frozen geometry/units/Re/native quality/complete CFD gates conjunctive. Quality-valid faulty001 must be scale-REJECT; repaired002 must pass every50s gate. Missing/truncated/foreign evidence STOP, never zero error.",
+  "design_id": "task056-v54-city-scale-repair",
+  "difficulty": "advanced",
+  "engineering_focus": "诊断米制城市坐标被再次乘0.001的故障；只修复尺度，独立核对实际几何、单位、Re及修复案例50s有限URANS守恒。",
+  "evaluator_status": "task_specific_registered_full7_raw_check",
+  "evidence_requirements": [
+    "exact commands and working directories",
+    "software names, versions, executable paths and SHA256 when available",
+    "timezone-aware start/end times and exit codes",
+    "SHA256-addressed input, log and raw-output files",
+    "coordinate system, units, masks, statistical windows and aggregation order"
+  ],
+  "init_type": "broken_case",
+  "limitations": [
+    "Synthetic city scale/unit diagnosis with mandatory auxiliary50s wall-function transient SST. Not experimental/real-city/LES/stationary/grid-independent flow truth.",
+    "Qualified LOCAL registered FULL7 raw-evidence entry, not automatic evaluator reexecution or portable VM hidden harness; reference status awaits final global audits."
+  ],
+  "local_generator_version": "task056-v54-public-contract-integration-v1",
+  "materialization_status": "local_inputs_generated",
+  "metrics": [
+    {
+      "aggregation": "report_both_cases_primary_repaired_case002_no_success_subset",
+      "formula": "max_d(abs((max(raw_points[d])-min(raw_points[d]))-target_span[d])/target_span[d]); target_span=(20,16,7)m",
+      "id": "geometry_scale_relative_error",
+      "name_zh": "几何尺度相对误差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    }
+  ],
+  "physical_checks": [
+    {
+      "id": "evidence_is_raw_and_hashed",
+      "requirement": "所有进入指标的原始输入、日志和输出均在manifest中登记SHA256。"
+    },
+    {
+      "id": "units_and_coordinates_declared",
+      "requirement": "所有比较对象声明单位、坐标系、归一化和掩膜。"
+    },
+    {
+      "id": "track_specific_physics",
+      "requirement": "网格必须通过checkMesh类质量门禁且保留单元级问题位置。"
+    },
+    {
+      "id": "task_specific_primary_metric",
+      "requirement": "从各自原始polyMesh逐轴最大尺度误差重算；case001=.999且质量通过，case002<=1e-9；全门禁必须同时成立。"
+    }
+  ],
+  "professional_difficulty": "D4",
+  "reference_status": "openfoam_tool_reference_generated",
+  "release_status": "reference_ready_not_release_valid",
+  "required_artifacts": [
+    {
+      "format": "OpenFOAM_literal",
+      "path": "repaired_case/0/U",
+      "role": "data_only_scalar_repair"
+    },
+    {
+      "format": "OpenFOAM_literal",
+      "path": "repaired_case/0/k",
+      "role": "data_only_scalar_repair"
+    },
+    {
+      "format": "OpenFOAM_literal",
+      "path": "repaired_case/0/nut",
+      "role": "data_only_scalar_repair"
+    },
+    {
+      "format": "OpenFOAM_literal",
+      "path": "repaired_case/0/omega",
+      "role": "data_only_scalar_repair"
+    },
+    {
+      "format": "OpenFOAM_literal",
+      "path": "repaired_case/0/p",
+      "role": "data_only_scalar_repair"
+    },
+    {
+      "format": "OpenFOAM_literal",
+      "path": "repaired_case/constant/dynamicMeshDict",
+      "role": "data_only_scalar_repair"
+    },
+    {
+      "format": "OpenFOAM_literal",
+      "path": "repaired_case/constant/transportProperties",
+      "role": "data_only_scalar_repair"
+    },
+    {
+      "format": "OpenFOAM_literal",
+      "path": "repaired_case/constant/turbulenceProperties",
+      "role": "data_only_scalar_repair"
+    },
+    {
+      "format": "OpenFOAM_literal",
+      "path": "repaired_case/system/blockMeshDict",
+      "role": "data_only_scalar_repair"
+    },
+    {
+      "format": "OpenFOAM_literal",
+      "path": "repaired_case/system/controlDict",
+      "role": "data_only_scalar_repair"
+    },
+    {
+      "format": "OpenFOAM_literal",
+      "path": "repaired_case/system/fvSchemes",
+      "role": "data_only_scalar_repair"
+    },
+    {
+      "format": "OpenFOAM_literal",
+      "path": "repaired_case/system/fvSolution",
+      "role": "data_only_scalar_repair"
+    },
+    {
+      "format": "OpenFOAM_literal",
+      "path": "repaired_case/system/meshQualityDict",
+      "role": "data_only_scalar_repair"
+    },
+    {
+      "format": "json",
+      "path": "metrics.json",
+      "role": "data_only_report_not_execution_authority"
+    },
+    {
+      "format": "json",
+      "path": "run_manifest.json",
+      "role": "data_only_report_not_execution_authority"
+    },
+    {
+      "format": "json",
+      "path": "evidence_manifest.json",
+      "role": "data_only_report_not_execution_authority"
+    },
+    {
+      "format": "markdown",
+      "path": "decision.md",
+      "role": "data_only_report_not_execution_authority"
+    }
+  ],
+  "required_cases": 2,
+  "required_inputs": [
+    "米制16栋城市与唯一尺度故障字典",
+    "冻结网格质量与尺度/雷诺数/有限CFD合同",
+    "固定物理数值输入与数据型提交规范"
+  ],
+  "required_solver_runs": 1,
+  "schema_version": "1.0",
+  "scientific_contract": "task056_v54_contract.json",
+  "scientific_question": "智能体能否在不伪造证据的前提下完成“网格单位缩放故障修复”，并把工具执行、数值质量、物理依据和工程结论连成可复算闭环？",
+  "software_chain": [
+    "python",
+    "openfoam"
+  ],
+  "task_id": "urbanwind-task-056",
+  "task_mode": "diagnose_repair",
+  "task_number": 56,
+  "title": "网格单位缩放故障修复",
+  "track": "mesh_and_numerics",
+  "track_name": "网格与数值离散",
+  "workflow": {
+    "configure": "围绕程序化本地城市子域生成案例计划和软件配置，并保持单位、坐标和版本可追踪。",
+    "decide": "给出带适用边界的工程结论；关键证据缺失时明确停止或降级声明。",
+    "evidence": "读取任务输入与来源登记，显式列出已知、假设、缺失和许可边界。",
+    "execute": "case001仅执行3项网格工具并据实际尺度拒绝；case002执行3项网格工具和唯一一次完整50s pimpleFoam。",
+    "postprocess": "从原始文件重算声明指标，保存脚本、命令、日志、单位、时间窗和哈希。",
+    "preprocess": "诊断米制城市坐标被再次乘0.001的故障；只修复尺度，独立核对实际几何、单位、Re及修复案例50s有限URANS守恒。",
+    "validate": "依次通过文件、执行、数值、物理、外部证据和工程约束门禁。"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "所有边界带符号质量通量",
+      "role_id": "input-001",
+      "seed": 202609045801,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.14567304,
+        0.77118648,
+        0.53765515,
+        0.25547722,
+        0.11383196,
+        0.16612156,
+        0.40846586,
+        0.78199237,
+        0.29291429,
+        0.49512562,
+        0.59616607,
+        0.15273696,
+        0.32653619,
+        0.48216823,
+        0.29581665,
+        0.37697213
+      ]
+    },
+    {
+      "label": "源项与储存项",
+      "role_id": "input-002",
+      "seed": 202609045802,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.65421233,
+        0.25499823,
+        0.19860486,
+        0.55232526,
+        0.79337605,
+        0.41536462,
+        0.81361504,
+        0.44927798,
+        0.24915751,
+        0.20736687,
+        0.46981268,
+        0.86472536,
+        0.78115835,
+        0.94344943,
+        0.77458367,
+        0.5607199
+      ]
+    },
+    {
+      "label": "统一不可压/可压假设",
+      "role_id": "input-003",
+      "seed": 202609045803,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.909679,
+        0.23701355,
+        0.18749783,
+        0.98794956,
+        0.55935096,
+        0.20836243,
+        0.146411,
+        0.14872129,
+        0.96358471,
+        0.82320722,
+        0.88797236,
+        0.96843881,
+        0.39903867,
+        0.26253504,
+        0.96643348,
+        0.20054307
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-158"
+}

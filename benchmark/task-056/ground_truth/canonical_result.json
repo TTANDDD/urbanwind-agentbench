@@ -1,0 +1,45 @@
+{
+  "case_ids": [
+    "task-056-case-001",
+    "task-056-case-002"
+  ],
+  "claim_boundary": "Synthetic16-building city SI scale/unit repair tool reference with mandatory auxiliary50s conservative transient SST; not experimental/real-city/LES/stationary/grid-independent flow truth.",
+  "expected_solver_case_ids": [
+    "task-056-case-002"
+  ],
+  "hidden_ID_or_byte_match_required": false,
+  "per_case": {
+    "faulty": {
+      "H_mesh_m": 0.00175,
+      "Re_H": 20.999999999999996,
+      "actual_bbox_spans_m": [
+        0.02,
+        0.016,
+        0.007
+      ],
+      "actual_inlet_U_m_s": 1.2,
+      "actual_nu_m2_s": 0.0001,
+      "geometry_scale_relative_error": 0.999,
+      "source": "raw points/building+ground patch vertices and initial actual U/nu"
+    },
+    "repaired": {
+      "H_mesh_m": 1.75,
+      "Re_H": 21000.0,
+      "actual_bbox_spans_m": [
+        20.0,
+        16.0,
+        7.0
+      ],
+      "actual_inlet_U_m_s": 1.2,
+      "actual_nu_m2_s": 0.0001,
+      "geometry_scale_relative_error": 0.0,
+      "source": "raw points/building+ground patch vertices and initial actual U/nu"
+    }
+  },
+  "primary_metric": {
+    "id": "geometry_scale_relative_error",
+    "unit": "fraction",
+    "value": 0.0
+  },
+  "task_id": "urbanwind-task-056"
+}

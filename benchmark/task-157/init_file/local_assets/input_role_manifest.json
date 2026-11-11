@@ -1,0 +1,37 @@
+{
+  "all_required_roles_materialized": true,
+  "generator_version": "urbanwind-local-assets-v3",
+  "required_external_inputs": [],
+  "roles": [
+    {
+      "label": "控制体压力/速度/雷诺应力/壁面项",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/model_field.csv",
+        "local_assets/reference_field.csv",
+        "local_assets/reference_diagnostics.json"
+      ],
+      "role_id": "input-001"
+    },
+    {
+      "label": "统一法向和体积分权重",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/task_input_values.json"
+      ],
+      "role_id": "input-002"
+    },
+    {
+      "label": "参考动量收支",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/model_field.csv",
+        "local_assets/reference_field.csv",
+        "local_assets/reference_diagnostics.json"
+      ],
+      "role_id": "input-003"
+    }
+  ],
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-157"
+}

@@ -1,0 +1,2 @@
+case_id,variant,seed,wind_direction_deg,reference_speed_m_s,stability,surface_heat_flux_w_m2,sgs_model,time_step_s,convection_scheme,pressure_velocity_coupling,roughness_length_m,source_configuration,decomposition_method,restart_segments,software_variant,controlled_factor,controlled_level
+task-046-case-001,错列阵列周期网格-目标案例,202609034600,0.0,1.2,neutral,0.0,,,,,,,,,,task_variant,错列阵列周期网格-目标案例

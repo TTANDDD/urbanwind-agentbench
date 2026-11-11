@@ -1,0 +1,176 @@
+{
+  "anchor_name": "程序化本地城市子域",
+  "answer_free": true,
+  "data_origin": "deterministic_local_generation",
+  "experimental_claim": false,
+  "files": [
+    {
+      "bytes": 757,
+      "path": "local_assets/active_learning_data.csv",
+      "sha256": "35e24f0ec148cd759ecacb17f56d558f8cffe60ec58ffea6aec19e6a1e36e6bc"
+    },
+    {
+      "bytes": 278,
+      "path": "local_assets/boundary_profile.csv",
+      "sha256": "5cf8d9f6b0ee10aafb756c0aaabb18b97a8bf3dc5ff6b5c50da6048a79de72e4"
+    },
+    {
+      "bytes": 668,
+      "path": "local_assets/case_control_contract.json",
+      "sha256": "e07c639d7f70a366d43a94bd7415349aaf072f48975b3ccfb6ad69deef5470fb"
+    },
+    {
+      "bytes": 494,
+      "path": "local_assets/case_matrix.csv",
+      "sha256": "482a0e577995fb0e67c71c89a39f169caa425d1ef415b4a1135041c5c01a2ee8"
+    },
+    {
+      "bytes": 10650,
+      "path": "local_assets/city_geometry.geojson",
+      "sha256": "d24c082356cbb5860ac72a0e426909b8713d8e7200a163772b2c446ff1826797"
+    },
+    {
+      "bytes": 485,
+      "path": "local_assets/control_points.csv",
+      "sha256": "a9cb67b8417539338f3301aa2d9fc01eb89f073b04d1188a46773095326775bd"
+    },
+    {
+      "bytes": 403,
+      "path": "local_assets/fault_manifest.json",
+      "sha256": "23b4f877ac96e98c525bbbb3b46497db6e713fc4cd790e6ddff555152d3b30af"
+    },
+    {
+      "bytes": 932,
+      "path": "local_assets/input_role_manifest.json",
+      "sha256": "4a79c0a0e9a6eb3995121e29d655c429325e2093ad343478163a3dac8005ed57"
+    },
+    {
+      "bytes": 1611,
+      "path": "local_assets/mask_and_weights.csv",
+      "sha256": "79996ec74e326ed02de419544b96e96a5f51553a977de9d654ad7f5ee79ff2f8"
+    },
+    {
+      "bytes": 219,
+      "path": "local_assets/mesh_levels.csv",
+      "sha256": "4e1983e708650b1827e6ff4964e4b23c53a8f0778ed2bcb8c791458791a15925"
+    },
+    {
+      "bytes": 205,
+      "path": "local_assets/mesh_solution_series.csv",
+      "sha256": "99ca6612106330dd13a7d1f2ffb686129d74e06f9cc0a155a1ded2fa2b215f04"
+    },
+    {
+      "bytes": 12597,
+      "path": "local_assets/model_field.csv",
+      "sha256": "0b814570074a581683e62b37069076d528774c52f627afe6faac648d7b840ccf"
+    },
+    {
+      "bytes": 333,
+      "path": "local_assets/openfoam_base/0/p",
+      "sha256": "afa5f2e963a5fa63173510c8c4068fde945e15e05343b0891ec258c619141f84"
+    },
+    {
+      "bytes": 337,
+      "path": "local_assets/openfoam_base/0/U",
+      "sha256": "a3515337b9f9d3752b106092f8e05551ff881ebe91a7b3cd762b916c3acda803"
+    },
+    {
+      "bytes": 122,
+      "path": "local_assets/openfoam_base/constant/transportProperties",
+      "sha256": "1146aa084b034003b8b6ea2f5dee6fb8ff32f91663f42acbfdd758531f018f63"
+    },
+    {
+      "bytes": 1605,
+      "path": "local_assets/openfoam_base/constant/triSurface/building.stl",
+      "sha256": "f9f6e76291a97ebcdd1d662f6bd8bd8c03e8397aaba3736b39221bf85f79a155"
+    },
+    {
+      "bytes": 95,
+      "path": "local_assets/openfoam_base/constant/turbulenceProperties",
+      "sha256": "c8fcf3c7345953f60794dc70434a8bb3779ec66c66173849c9eddc2ea2789bcc"
+    },
+    {
+      "bytes": 3766,
+      "path": "local_assets/openfoam_base/system/blockMeshDict",
+      "sha256": "6b64fbb2777bc59736092912918bf9447741dc7e5131689262e1ff8235abd9a9"
+    },
+    {
+      "bytes": 2189,
+      "path": "local_assets/openfoam_base/system/controlDict",
+      "sha256": "c26ef66fc1e5597fc8167ea69496e2fbfa9802c8a8a5f50c0890845680a42b40"
+    },
+    {
+      "bytes": 430,
+      "path": "local_assets/openfoam_base/system/fvSchemes",
+      "sha256": "cbc15b3e3dc88bf9d34ce006f53eeef2fcf268baf3c5809ad35828f40cf07ce3"
+    },
+    {
+      "bytes": 454,
+      "path": "local_assets/openfoam_base/system/fvSolution",
+      "sha256": "ea97d7a37c1419db94ee462b8f827ee50cb8894615ace4596396553d02dbcce1"
+    },
+    {
+      "bytes": 1825,
+      "path": "local_assets/openfoam_base/system/sampleDict",
+      "sha256": "abcb54af4e28f0f6cd0025f90ac7ee2bd28aad0036838802b43985079b99045f"
+    },
+    {
+      "bytes": 318,
+      "path": "local_assets/optional_public_metadata.json",
+      "sha256": "ba2e422a3ac9c0e98c3ce1f41584d33c6e047bbe78f5885e9dd2390efbdfd01a"
+    },
+    {
+      "bytes": 751,
+      "path": "local_assets/reference_diagnostics.json",
+      "sha256": "763f7f417267ba84ec25d5a88428730c35a608fc69443eda62f9c7e996ccdf35"
+    },
+    {
+      "bytes": 11970,
+      "path": "local_assets/reference_field.csv",
+      "sha256": "a956a0ee94a812b10b1d769a2adc8bdb66ffc076d04e2634d5d41d8cf27dc0ff"
+    },
+    {
+      "bytes": 6273,
+      "path": "local_assets/reference_spectrum.csv",
+      "sha256": "99a8ba1e107740022af409b0f063bc459ae5c6741f8f66499682c93b2a97e34c"
+    },
+    {
+      "bytes": 553,
+      "path": "local_assets/runtime_contract.json",
+      "sha256": "e0ab37ea064bb090c40fb23696e3e42c02a80ba3f15f6a4cda99bc43e0ae153b"
+    },
+    {
+      "bytes": 716,
+      "path": "local_assets/source_inventory.json",
+      "sha256": "2646d72e649f120af0433942351702be4e7e0bdc89d09c732d191ae9681d2a60"
+    },
+    {
+      "bytes": 1890,
+      "path": "local_assets/task_input_values.json",
+      "sha256": "7fe6c772a29880425d862c1d265f440010c5233b67f52a3515d79d25c0fefdfb"
+    },
+    {
+      "bytes": 45815,
+      "path": "local_assets/velocity_timeseries.csv",
+      "sha256": "fd69ac6e11632694bab0f81531deee8d31b8008019c7dd5a2dc7a3185b894b31"
+    },
+    {
+      "bytes": 1052,
+      "path": "local_assets/wind_climate.csv",
+      "sha256": "dd1ce50c23312ac6f0bd2fd9614b17181de7b01385e995f1162f52205e4d83d0"
+    }
+  ],
+  "generator_version": "urbanwind-local-assets-v3",
+  "optional_public_data": [
+    {
+      "mode": "optional_one_click_download",
+      "name": "AIJ UWE Case A",
+      "record_url": "https://zenodo.org/records/15050148",
+      "required_for_task": false
+    }
+  ],
+  "schema_version": "1.0",
+  "seed": 202609030121,
+  "task_id": "urbanwind-task-121",
+  "task_number": 121
+}

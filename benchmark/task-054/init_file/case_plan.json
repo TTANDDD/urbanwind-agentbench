@@ -1,0 +1,86 @@
+{
+  "cases": [
+    {
+      "case_id": "task-054-case-001",
+      "execution_role": "provided_data_or_tool_execution",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "比较scotch与几何分解，记录核间单元和通信面不均衡。",
+        "geometry": "local_assets/city_geometry.geojson",
+        "method_config_root": "local_assets/openfoam_base/method_configs",
+        "partition_contract": "local_assets/openfoam_base/partition_contract.json",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "网格分区与负载均衡-目标案例"
+      },
+      "method_subruns": [
+        {
+          "directory": "partition_study/simple",
+          "execution_role": "provided_data_or_tool_execution",
+          "flow_solver_runs": 0,
+          "method": "simple",
+          "mpi_ranks": 4
+        },
+        {
+          "directory": "partition_study/scotch",
+          "execution_role": "provided_data_or_tool_execution",
+          "flow_solver_runs": 0,
+          "method": "scotch",
+          "mpi_ranks": 4
+        }
+      ],
+      "metrics": [
+        "cell_load_imbalance_ratio",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_method_mapping_within_one_comparison_case",
+        "formula": "(max(cells_per_rank)-mean(cells_per_rank))/mean(cells_per_rank)",
+        "id": "cell_load_imbalance_ratio",
+        "name_zh": "并行单元负载不均衡率",
+        "unit": "fraction",
+        "value_schema": {
+          "scotch": "finite number",
+          "simple": "finite number"
+        }
+      },
+      "purpose": "网格分区与负载均衡：执行变体 网格分区与负载均衡-目标案例，围绕比较scotch与几何分解，记录核间单元和通信面不均衡。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-054",
+      "variant": "网格分区与负载均衡-目标案例"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw addressing -> per-method cell/communication counts -> {simple,scotch} metric mapping -> bounded tradeoff decision; no selected-minimum task metric",
+    "compute_track": "lite",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 1,
+  "required_solver_runs": 0,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-054"
+}

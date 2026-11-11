@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "三个冻结孔隙率候选",
+      "role_id": "input-001",
+      "seed": 202609048401,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.7626952,
+        0.34283704,
+        0.27220659,
+        0.87068972,
+        0.51035287,
+        0.06881144,
+        0.75264274,
+        0.82566861,
+        0.55999761,
+        0.86830147,
+        0.9046311,
+        0.97339494,
+        0.32761293,
+        0.67205432,
+        0.70873858,
+        0.81689483
+      ]
+    },
+    {
+      "label": "相同容积率",
+      "role_id": "input-002",
+      "seed": 202609048402,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.5288644,
+        0.05236154,
+        0.20289094,
+        0.58801948,
+        0.34609504,
+        0.70938028,
+        0.54169445,
+        0.50204093,
+        0.67289554,
+        0.64034472,
+        0.83988743,
+        0.16546702,
+        0.24480967,
+        0.34984285,
+        0.87477138,
+        0.56817038
+      ]
+    },
+    {
+      "label": "多风向评价",
+      "role_id": "input-003",
+      "seed": 202609048403,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.4856933,
+        0.89012231,
+        0.79246397,
+        0.5409478,
+        0.52807731,
+        0.73577854,
+        0.86719397,
+        0.33205014,
+        0.90322381,
+        0.95876482,
+        0.19313751,
+        0.48496232,
+        0.77760459,
+        0.58919354,
+        0.43669738,
+        0.49194983
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-184"
+}

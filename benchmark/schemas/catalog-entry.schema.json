@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "compute_track": {
+      "enum": [
+        "lite",
+        "cfd",
+        "heavy"
+      ]
+    },
+    "difficulty": {
+      "enum": [
+        "basic",
+        "intermediate",
+        "advanced"
+      ]
+    },
+    "init_type": {
+      "enum": [
+        "runnable_baseline",
+        "incomplete_template",
+        "broken_case",
+        "engineering_data_and_model",
+        "from_scratch"
+      ]
+    },
+    "professional_difficulty": {
+      "enum": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    "release_status": {
+      "const": "scaffold_only"
+    },
+    "task_id": {
+      "pattern": "^urbanwind-task-[0-9]{3}$",
+      "type": "string"
+    },
+    "task_number": {
+      "maximum": 200,
+      "minimum": 1,
+      "type": "integer"
+    }
+  },
+  "required": [
+    "task_number",
+    "task_id",
+    "title",
+    "track",
+    "init_type",
+    "difficulty",
+    "professional_difficulty",
+    "compute_track",
+    "case_anchor",
+    "required_cases",
+    "software_chain",
+    "reference_status",
+    "release_status"
+  ],
+  "title": "UrbanWind-AgentBench catalog entry",
+  "type": "object"
+}

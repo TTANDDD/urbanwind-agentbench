@@ -1,0 +1,162 @@
+{
+  "cases": [
+    {
+      "case_id": "task-192-case-001",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "在冻结热源强度和时序下，对三个人为热源布局候选进行比较。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "热源布局候选A"
+      },
+      "metrics": [
+        "heat_source_screening_regret",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "utility_best_candidate-utility_selected_candidate",
+        "id": "heat_source_screening_regret",
+        "name_zh": "人为热源布局筛选后悔值",
+        "unit": "fraction"
+      },
+      "purpose": "人为热源布局候选筛选：执行变体 热源布局候选A，围绕在冻结热源强度和时序下，对三个人为热源布局候选进行比较。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-192",
+      "variant": "热源布局候选A"
+    },
+    {
+      "case_id": "task-192-case-002",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "在冻结热源强度和时序下，对三个人为热源布局候选进行比较。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "热源布局候选B"
+      },
+      "metrics": [
+        "heat_source_screening_regret",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "utility_best_candidate-utility_selected_candidate",
+        "id": "heat_source_screening_regret",
+        "name_zh": "人为热源布局筛选后悔值",
+        "unit": "fraction"
+      },
+      "purpose": "人为热源布局候选筛选：执行变体 热源布局候选B，围绕在冻结热源强度和时序下，对三个人为热源布局候选进行比较。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-192",
+      "variant": "热源布局候选B"
+    },
+    {
+      "case_id": "task-192-case-003",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "在冻结热源强度和时序下，对三个人为热源布局候选进行比较。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "热源布局候选C"
+      },
+      "metrics": [
+        "heat_source_screening_regret",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "utility_best_candidate-utility_selected_candidate",
+        "id": "heat_source_screening_regret",
+        "name_zh": "人为热源布局筛选后悔值",
+        "unit": "fraction"
+      },
+      "purpose": "人为热源布局候选筛选：执行变体 热源布局候选C，围绕在冻结热源强度和时序下，对三个人为热源布局候选进行比较。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-192",
+      "variant": "热源布局候选C"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "cfd",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 3,
+  "required_solver_runs": 3,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-192"
+}

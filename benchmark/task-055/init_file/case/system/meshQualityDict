@@ -1,0 +1,15 @@
+FoamFile{version 2.0; format ascii; class dictionary; object meshQualityDict;}
+maxNonOrtho 30;
+maxInternalSkewness 2;
+maxBoundarySkewness 2;
+maxConcave 80;
+minVol 1e-13;
+minTetQuality 1.0000000000000001e-15;
+minArea -1;
+minTwist 0.02;
+minDeterminant 0.001;
+minFaceWeight 0.050000000000000003;
+minVolRatio 0.01;
+minTriangleTwist -1;
+minFaceFlatness -1;
+minEdgeLength -1;

@@ -1,0 +1,7 @@
+case_id,variant,seed,wind_direction_deg,reference_speed_m_s,stability,surface_heat_flux_w_m2,sgs_model,time_step_s,convection_scheme,pressure_velocity_coupling,roughness_length_m,source_configuration,decomposition_method,restart_segments,software_variant,controlled_factor,controlled_level
+task-193-case-001,设计A-风向1,202609049300,0.0,1.2,neutral,0.0,,,,,,,,,,design_and_wind_direction,设计A-风向1
+task-193-case-002,设计A-风向2,202609049300,22.5,1.2,neutral,0.0,,,,,,,,,,design_and_wind_direction,设计A-风向2
+task-193-case-003,设计A-风向3,202609049300,45.0,1.2,neutral,0.0,,,,,,,,,,design_and_wind_direction,设计A-风向3
+task-193-case-004,设计B-风向1,202609049300,0.0,1.2,neutral,0.0,,,,,,,,,,design_and_wind_direction,设计B-风向1
+task-193-case-005,设计B-风向2,202609049300,22.5,1.2,neutral,0.0,,,,,,,,,,design_and_wind_direction,设计B-风向2
+task-193-case-006,设计B-风向3,202609049300,45.0,1.2,neutral,0.0,,,,,,,,,,design_and_wind_direction,设计B-风向3

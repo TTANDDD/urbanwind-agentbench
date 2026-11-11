@@ -1,0 +1,133 @@
+{
+  "current_evaluator_boundary": "Task-specific restart metric recomputation and hidden OpenFOAM numerical-array checks; not experimental truth or a frozen release runtime.",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision": "decision.md",
+  "decision_required_terms": [
+    "证据",
+    "限制",
+    "结论"
+  ],
+  "evidence_manifest": "evidence_manifest.json",
+  "expected_case_ids": [
+    "task-099-case-001",
+    "task-099-case-002",
+    "task-099-case-003"
+  ],
+  "expected_solver_case_ids": [
+    "task-099-case-001",
+    "task-099-case-002",
+    "task-099-case-003"
+  ],
+  "metric_contracts": [
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max_restart(max(NMAE(mean_U_vector_360_420)/1.2,NMAE(resolved_TKE_360_420)/1.44,NMAE(mean_p_360_420)/1.44)) versus continuous run",
+      "id": "restart_continuity_error",
+      "name_zh": "重启拼接连续性误差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    }
+  ],
+  "metric_ids": [
+    "restart_continuity_error",
+    "evidence_provenance_fraction",
+    "hard_gate_pass_fraction"
+  ],
+  "metrics": "metrics.json",
+  "required_external_inputs": [],
+  "required_inputs": [
+    "随任务本地生成的OpenFOAM起始案例",
+    "本地OpenFOAM运行版本记录合同",
+    "本地合成数值参考（仅作固定比较输入，不是PIV或实验真值）"
+  ],
+  "required_solver_runs": 3,
+  "run_manifest": "run_manifest.json",
+  "schema_version": "1.0",
+  "score_layers": {
+    "artifact_and_schema": 10,
+    "engineering_decision": 10,
+    "external_validation": 15,
+    "numerical_quality": 20,
+    "physical_fidelity": 25,
+    "real_tool_execution": 20
+  },
+  "simulation_result_contract": {
+    "case_results": {
+      "array_lengths": {
+        "mean_U_m_s": 192,
+        "mean_p_m2_s2": 64,
+        "resolved_tke_m2_s2": 64
+      },
+      "exact_case_ids": [
+        "task-099-case-001",
+        "task-099-case-002",
+        "task-099-case-003"
+      ],
+      "minimum_sample_count": 300,
+      "mpi_ranks": 16,
+      "probe_count": 64,
+      "required_fields": [
+        "case_id",
+        "variant",
+        "restart_mode",
+        "segments_s",
+        "mpi_ranks",
+        "window_s",
+        "sample_count",
+        "mean_U_m_s",
+        "resolved_tke_m2_s2",
+        "mean_p_m2_s2",
+        "continuation_checkpoint_count",
+        "continuation_state_hash_records",
+        "gate_diagnostics",
+        "all_run_gates_pass"
+      ],
+      "restart_modes": [
+        "continuous",
+        "single_restart",
+        "multi_restart"
+      ],
+      "segments_s": [
+        [
+          420.0
+        ],
+        [
+          210.0,
+          420.0
+        ],
+        [
+          150.0,
+          300.0,
+          420.0
+        ]
+      ],
+      "statistical_window_s": [
+        360.0,
+        420.0
+      ],
+      "units": {
+        "mean_U_m_s": "m/s",
+        "mean_p_m2_s2": "m2/s2",
+        "resolved_tke_m2_s2": "m2/s2"
+      }
+    },
+    "path": "simulation_metrics.json",
+    "task_id": "urbanwind-task-099",
+    "task_specific_metric_acceptance_limit": 0.05,
+    "task_specific_metric_formula": "max_restart(max(NMAE(mean_U_vector_360_420)/1.2,NMAE(resolved_TKE_360_420)/1.44,NMAE(mean_p_360_420)/1.44)) versus continuous run"
+  },
+  "task_id": "urbanwind-task-099"
+}

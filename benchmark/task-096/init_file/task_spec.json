@@ -1,0 +1,160 @@
+{
+  "acceptance_contract": {
+    "hard_gate_precedence": true,
+    "primary_metric_formula": "max_cases(100*abs(source-outflow-storage)/max(abs(source),eps))",
+    "primary_metric_id": "scalar_mass_balance_error_percent",
+    "required_case_ids": [
+      "task-096-case-001",
+      "task-096-case-002",
+      "task-096-case-003"
+    ],
+    "required_solver_runs": 3
+  },
+  "answer_free": true,
+  "case_anchor": {
+    "id": "LOCAL_DISPERSION",
+    "known": {
+      "experimental_claim": false,
+      "geometry": "4_by_4_parameterized_array",
+      "truth_type": "synthetic_or_numerical_reference"
+    },
+    "missing": [],
+    "name": "程序化城市阵列被动标量基准",
+    "references": [
+      "LOCAL_GENERATOR"
+    ],
+    "status": "local_generator_ready"
+  },
+  "category": "cfd_execution",
+  "compute_track": "cfd",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision_rule": "先拒绝任何执行、数值、单位、守恒或外部证据门禁失败的案例，再依据冻结指标比较；不得用文字报告替代原始证据。",
+  "difficulty": "advanced",
+  "engineering_focus": "在质量守恒的源项下计算街谷标量滞留和通量。",
+  "evaluator_status": "task_specific_passive_scalar_time_series_check",
+  "evidence_requirements": [
+    "exact commands and working directories",
+    "software names, versions, executable paths and SHA256 when available",
+    "timezone-aware start/end times and exit codes",
+    "SHA256-addressed input, log and raw-output files",
+    "coordinate system, units, masks, statistical windows and aggregation order"
+  ],
+  "init_type": "engineering_data_and_model",
+  "limitations": [
+    "Visible contract contains source geometry, probes, formula, shapes and thresholds, not hidden numerical answers.",
+    "Hidden reference is OpenFOAM numerical output, not experimental or DNS truth.",
+    "Bounded upwind scalar transport is intentionally conservative and diffusive.",
+    "A frozen distributable runtime remains required for release."
+  ],
+  "local_generator_version": "urbanwind-local-assets-v3",
+  "materialization_status": "local_inputs_generated",
+  "metrics": [
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max_cases(100*abs(source-outflow-storage)/max(abs(source),eps))",
+      "id": "scalar_mass_balance_error_percent",
+      "name_zh": "被动标量质量闭合误差",
+      "unit": "%"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    }
+  ],
+  "physical_checks": [
+    {
+      "id": "evidence_is_raw_and_hashed",
+      "requirement": "所有进入指标的原始输入、日志和输出均在manifest中登记SHA256。"
+    },
+    {
+      "id": "units_and_coordinates_declared",
+      "requirement": "所有比较对象声明单位、坐标系、归一化和掩膜。"
+    },
+    {
+      "id": "track_specific_physics",
+      "requirement": "每个要求工况必须有真实OpenFOAM日志与原始场，并达到声明终止时间。"
+    },
+    {
+      "id": "task_specific_primary_metric",
+      "requirement": "必须从三个case的原始源量、出口通量时间序列和终态存量按冻结公式重算“被动标量质量闭合误差（scalar_mass_balance_error_percent）”：max_cases(100*abs(source-outflow-storage)/max(abs(source),eps))。"
+    }
+  ],
+  "professional_difficulty": "D5",
+  "reference_status": "openfoam_numerical_reference_generated",
+  "release_status": "reference_ready_not_release_valid",
+  "required_artifacts": [
+    {
+      "format": "json",
+      "path": "design.json",
+      "role": "task design and assumptions"
+    },
+    {
+      "format": "json",
+      "path": "simulation_metrics.json",
+      "role": "track-specific result"
+    },
+    {
+      "format": "json",
+      "path": "run_manifest.json",
+      "role": "tool and solver provenance"
+    },
+    {
+      "format": "json",
+      "path": "metrics.json",
+      "role": "reported metrics with units"
+    },
+    {
+      "format": "json",
+      "path": "evidence_manifest.json",
+      "role": "SHA256-addressed raw evidence"
+    },
+    {
+      "format": "markdown",
+      "path": "decision.md",
+      "role": "bounded engineering conclusion"
+    },
+    {
+      "format": "json",
+      "path": "scalar_evidence_manifest.json",
+      "role": "三个真实标量输运case的存量、出口通量、探针和日志相对路径与SHA256登记"
+    }
+  ],
+  "required_cases": 3,
+  "required_inputs": [
+    "随任务本地生成的OpenFOAM起始案例",
+    "本地OpenFOAM运行版本记录合同",
+    "本地合成数值参考（仅作固定比较输入，不是PIV或实验真值）"
+  ],
+  "required_solver_runs": 3,
+  "schema_version": "1.0",
+  "scientific_question": "智能体能否在不伪造证据的前提下完成“被动标量扩散”，并把工具执行、数值质量、物理依据和工程结论连成可复算闭环？",
+  "software_chain": [
+    "python",
+    "openfoam"
+  ],
+  "task_id": "urbanwind-task-096",
+  "task_mode": "comparative_simulation",
+  "task_number": 96,
+  "title": "被动标量扩散",
+  "track": "openfoam_rans_les_execution",
+  "track_name": "OpenFOAM RANS与LES执行",
+  "workflow": {
+    "configure": "围绕程序化城市阵列被动标量基准生成案例计划和软件配置，并保持单位、坐标和版本可追踪。",
+    "decide": "给出带适用边界的工程结论；关键证据缺失时明确停止或降级声明。",
+    "evidence": "读取任务输入与来源登记，显式列出已知、假设、缺失和许可边界。",
+    "execute": "执行3个要求案例，其中3个案例必须产生真实CFD/LES求解器证据。",
+    "postprocess": "从原始文件重算声明指标，保存脚本、命令、日志、单位、时间窗和哈希。",
+    "preprocess": "在质量守恒的源项下计算街谷标量滞留和通量。",
+    "validate": "依次通过文件、执行、数值、物理、外部证据和工程约束门禁。"
+  }
+}

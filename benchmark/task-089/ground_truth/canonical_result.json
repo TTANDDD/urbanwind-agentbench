@@ -1,0 +1,13 @@
+{
+  "case_ids": [
+    "task-089-case-001"
+  ],
+  "claim_boundary": "OpenFOAM numerical result compared to local synthetic observations; not PIV/DNS or experimental truth.",
+  "primary_metric": {
+    "id": "local_reference_comparison_nmae",
+    "unit": "fraction",
+    "value": 0.4631980217216609
+  },
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-089"
+}

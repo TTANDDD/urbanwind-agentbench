@@ -1,0 +1,63 @@
+{
+  "cases": [
+    {
+      "case_id": "task-015-case-001",
+      "execution_role": "provided_data_or_tool_execution",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "LOCAL_MULTI",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "定义自旋时间、统计窗口、采样频率和有效样本数的可验证证据。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "稳态统计窗口证据审计-目标案例"
+      },
+      "metrics": [
+        "window_definition_coverage",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "cases_with_spinup_window_cadence / cases",
+        "id": "window_definition_coverage",
+        "name_zh": "统计窗口定义覆盖率",
+        "unit": "fraction"
+      },
+      "purpose": "稳态统计窗口证据审计：执行变体 稳态统计窗口证据审计-目标案例，围绕定义自旋时间、统计窗口、采样频率和有效样本数的可验证证据。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "document_reader"
+      ],
+      "task_id": "urbanwind-task-015",
+      "variant": "稳态统计窗口证据审计-目标案例"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "lite",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 1,
+  "required_solver_runs": 0,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-015"
+}

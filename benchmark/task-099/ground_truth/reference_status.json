@@ -1,0 +1,69 @@
+{
+  "blockers": [
+    "frozen distributable runtime",
+    "packaged hidden-evaluator execution"
+  ],
+  "canonical_result": "canonical_result.json",
+  "claim_boundary": "Reference-ready numerical task; benchmark release remains blocked.",
+  "data_acquisition_blockers": [],
+  "evaluator_status": "task_specific_restart_numeric_array_check",
+  "expected_ground_truth": {
+    "case_ids": [
+      "task-099-case-001",
+      "task-099-case-002",
+      "task-099-case-003"
+    ],
+    "hidden_tolerances_status": "frozen_numeric_array_tolerance",
+    "input_roles": [
+      "随任务本地生成的OpenFOAM起始案例",
+      "本地OpenFOAM运行版本记录合同",
+      "本地合成数值参考（仅作固定比较输入，不是PIV或实验真值）"
+    ],
+    "metric_contracts": [
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "max_restart(max(NMAE(mean_U_vector_360_420)/1.2,NMAE(resolved_TKE_360_420)/1.44,NMAE(mean_p_360_420)/1.44)) versus continuous run",
+        "id": "restart_continuity_error",
+        "name_zh": "重启拼接连续性误差",
+        "unit": "fraction"
+      },
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "hashed_source_linked_evidence / required_evidence",
+        "id": "evidence_provenance_fraction",
+        "name_zh": "证据溯源覆盖率",
+        "unit": "fraction"
+      },
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "passed_hard_gates / required_hard_gates",
+        "id": "hard_gate_pass_fraction",
+        "name_zh": "硬门禁通过率",
+        "unit": "fraction"
+      }
+    ],
+    "reference_values_status": "verified_openfoam_numerical_reference_generated"
+  },
+  "experimental_claim": false,
+  "limitations": [
+    "These are OpenFOAM v2412 numerical references on one frozen case, not wind-tunnel, PIV, DNS or field measurements.",
+    "The explicit cross-run metric and 0.05 limit were frozen after source execution but before benchmark-agent evaluation.",
+    "The evaluator checks reported arrays and restart evidence fields; it does not rerun OpenFOAM.",
+    "A frozen distributable runtime and packaged hidden evaluation remain pending."
+  ],
+  "reference_case_arrays": "reference_case_arrays.json",
+  "reference_metrics": "reference_metrics.json",
+  "reference_provenance": "reference_provenance.json",
+  "reference_status": "openfoam_numerical_reference_generated",
+  "release_status": "reference_ready_not_release_valid",
+  "required_reference_artifacts": [
+    "locally generated source inputs with generation manifest: 随任务本地生成的OpenFOAM起始案例; 本地OpenFOAM运行版本记录合同; 本地合成数值参考（仅作固定比较输入，不是PIV或实验真值）",
+    "real tool and solver run manifests",
+    "raw fields, logs and post-processing arrays",
+    "recomputed task metrics: restart_continuity_error; evidence_provenance_fraction; hard_gate_pass_fraction",
+    "positive and adversarial evaluator tests"
+  ],
+  "schema_version": "1.2",
+  "task_id": "urbanwind-task-099",
+  "truth_type": "verified_openfoam_numerical_reference"
+}

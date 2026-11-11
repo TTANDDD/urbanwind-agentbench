@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "冻结城市、修改方案和六步执行合同",
+      "role_id": "input-001",
+      "seed": 202609050001,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.4250616,
+        0.97212151,
+        0.95741526,
+        0.78043855,
+        0.92513097,
+        0.58443101,
+        0.45094333,
+        0.45463794,
+        0.83685008,
+        0.30792456,
+        0.420509,
+        0.45222983,
+        0.35848833,
+        0.71858358,
+        0.06516035,
+        0.50638636
+      ]
+    },
+    {
+      "label": "OpenFOAM/PALM输入",
+      "role_id": "input-002",
+      "seed": 202609050002,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.69506235,
+        0.18173493,
+        0.13459285,
+        0.3269625,
+        0.0625015,
+        0.66413263,
+        0.62554605,
+        0.39844037,
+        0.08818397,
+        0.85891823,
+        0.4987375,
+        0.9248572,
+        0.52354414,
+        0.35738735,
+        0.20409128,
+        0.60061469
+      ]
+    },
+    {
+      "label": "验证数据、风险门槛和最终验收规则",
+      "role_id": "input-003",
+      "seed": 202609050003,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.22447695,
+        0.20896622,
+        0.26631032,
+        0.79303462,
+        0.69005905,
+        0.19990351,
+        0.65056216,
+        0.58788964,
+        0.7821043,
+        0.34126852,
+        0.30384182,
+        0.37621931,
+        0.72968672,
+        0.74344268,
+        0.43116861,
+        0.91004963
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-200"
+}

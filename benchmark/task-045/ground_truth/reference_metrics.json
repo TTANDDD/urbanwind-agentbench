@@ -1,0 +1,38 @@
+{
+  "acceptance": "Use public constraints, not reference counts or cell IDs.",
+  "diagnostics": {
+    "different_valid_N": [
+      10112,
+      34128,
+      115182
+    ],
+    "flow_solver_runs": 0,
+    "reference_N": [
+      11392,
+      38448,
+      129762
+    ],
+    "reference_h_m": [
+      0.6416285679452421,
+      0.4277523786301614,
+      0.2851682524201076
+    ],
+    "refinement_ratios": [
+      1.5,
+      1.5
+    ]
+  },
+  "experimental_claim": false,
+  "task_id": "urbanwind-task-045",
+  "truth_type": "verified_openfoam_tool_reference",
+  "units": {
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction",
+    "refinement_ratio_consistency": "fraction"
+  },
+  "values": {
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0,
+    "refinement_ratio_consistency": 1.0
+  }
+}

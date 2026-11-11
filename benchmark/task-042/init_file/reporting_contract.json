@@ -1,0 +1,197 @@
+{
+  "current_evaluator_boundary": "Only structural precheck is implemented and capped at 60/100.",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision": "decision.md",
+  "decision_required_terms": [
+    "证据",
+    "限制",
+    "结论"
+  ],
+  "evidence_manifest": "evidence_manifest.json",
+  "expected_case_ids": [
+    "task-042-case-001"
+  ],
+  "expected_solver_case_ids": [],
+  "mesh_geometry_result_contract": {
+    "background": {
+      "building_subtracted_before_snappy": false,
+      "cell_counts": [
+        54,
+        25,
+        18
+      ]
+    },
+    "case_id": "task-042-case-001",
+    "frozen_gates": {
+      "cells_max": 800000,
+      "cells_min": 1000,
+      "exposed_face_area_relative_error_max": 0.05,
+      "fluid_volume_relative_error_max": 0.005,
+      "layer_added_cells_min": 1,
+      "layer_area_coverage_min": 0.25,
+      "max_boundary_skewness": 20,
+      "max_internal_building_cell_centres": 0,
+      "max_internal_skewness": 4,
+      "max_nonorthogonality_deg": 65,
+      "min_cell_volume_m3": 0,
+      "near_surface_cell_volume_max_m3": 0.02,
+      "normal_alignment_min": 0.98,
+      "surface_distance_max_m": 0.04,
+      "surface_p95_max_m": 0.01
+    },
+    "full": {
+      "feature_level": 2,
+      "near_box_level": 1,
+      "surface_layers": 2,
+      "surface_level": 2
+    },
+    "geometry": {
+      "building_bounds_m": [
+        [
+          -0.5,
+          0.5
+        ],
+        [
+          -0.5,
+          0.5
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "domain_bounds_m": [
+        [
+          -4,
+          23
+        ],
+        [
+          -6.2,
+          6.2
+        ],
+        [
+          0,
+          9
+        ]
+      ],
+      "exposed_face_areas_m2": {
+        "roof": 1,
+        "x_high": 4,
+        "x_low": 4,
+        "y_high": 4,
+        "y_low": 4
+      },
+      "fluid_volume_m3": 3009.2,
+      "source": "locally generated closed 12-triangle STL"
+    },
+    "geometry_audit_rules": {
+      "cell_volume_and_centre": "oriented polygon triangle tetrahedra; owner positive and neighbour negative; no bounding-box cell approximation",
+      "exposed_face_assignment": "nearest of x=-0.5, x=0.5, y=-0.5, y=0.5, z=4; ties use this order; all building faces included",
+      "face_centre": "arithmetic mean of all vertices of that raw polyMesh face",
+      "layer_coverage": "sum(building polygon areas with raw boundary nSurfaceLayers>=1)/sum(all building polygon areas)",
+      "near_surface_cells": "all fluid cell volume-centres with shortest distance to source STL <=0.25 m",
+      "patch_normal": "fluid outward normal points into the building: +x,-x,+y,-y,-z for the five faces",
+      "solid_interior_tolerance_m": 1e-07
+    },
+    "layer_evidence": "actual nSurfaceLayers building boundary area and internal positive cells, addedCells set, and raw snappy log; a request in the dictionary alone is not evidence",
+    "metric": {
+      "formula": "linear_percentile_95(unweighted Euclidean distance of each final building-patch face vertex-mean centre to the union of the 12 visible STL triangles); no face exclusion",
+      "id": "surface_conformance_p95_m",
+      "name_zh": "表面贴合距离P95",
+      "unit": "m"
+    },
+    "mpi_ranks": 16,
+    "percentile_rule": "sort n distances, h=0.95*(n-1), interpolate floor(h)/ceil(h); uniform face weighting",
+    "physical_cpus": "64-79",
+    "qualification": {
+      "feature_level": 1,
+      "near_box_level": 1,
+      "surface_layers": 1,
+      "surface_level": 1
+    },
+    "required_tool_sequence": [
+      "surfaceCheck",
+      "blockMesh",
+      "checkMesh.background",
+      "surfaceFeatureExtract",
+      "decomposePar",
+      "snappyHexMesh",
+      "reconstructParMesh",
+      "reconstructPar",
+      "checkMesh.final"
+    ],
+    "schema_version": "1.0",
+    "shared": {
+      "expansionRatio": 1.2,
+      "finalLayerThickness": 0.3,
+      "locationInMesh": [
+        -3,
+        1.3,
+        1.1
+      ],
+      "maxGlobalCells": 800000,
+      "maxNonOrtho": 65,
+      "minThickness": 0.05,
+      "nLayerIter": 50,
+      "relativeSizes": true
+    },
+    "software": "OpenCFD-v2412",
+    "task_id": "urbanwind-task-042",
+    "truth_boundary": "Local geometry and real OpenFOAM mesh tools only; zero flow-solver runs, no flow/yplus/experimental truth claimed."
+  },
+  "metric_contracts": [
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "linear_percentile_95(unweighted Euclidean distance of each final building-patch face vertex-mean centre to the union of the 12 visible STL triangles); no face exclusion",
+      "id": "surface_conformance_p95_m",
+      "name_zh": "表面贴合距离P95",
+      "unit": "m"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    }
+  ],
+  "metric_ids": [
+    "surface_conformance_p95_m",
+    "evidence_provenance_fraction",
+    "hard_gate_pass_fraction"
+  ],
+  "metrics": "metrics.json",
+  "raw_mesh_evidence": [
+    "constant/polyMesh/{points,faces,owner,neighbour,boundary,sets/addedCells}",
+    "0/nSurfaceLayers",
+    "0/thickness",
+    "logs for all declared mesh tools",
+    "input dictionaries and STL",
+    "command records"
+  ],
+  "required_external_inputs": [],
+  "required_inputs": [
+    "随任务本地生成的几何与网格目标",
+    "冻结网格质量门槛",
+    "待实际工具执行的网格日志"
+  ],
+  "required_solver_runs": 0,
+  "run_manifest": "run_manifest.json",
+  "schema_version": "1.0",
+  "score_layers": {
+    "artifact_and_schema": 10,
+    "engineering_decision": 10,
+    "external_validation": 15,
+    "numerical_quality": 20,
+    "physical_fidelity": 25,
+    "real_tool_execution": 20
+  },
+  "task_id": "urbanwind-task-042"
+}

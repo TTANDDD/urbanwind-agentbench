@@ -1,0 +1,8 @@
+{
+  "max_high_wind_risk": 0.3,
+  "min_spacing_H": 1.0,
+  "objective_directions": {
+    "heat_penalty": "minimize",
+    "ventilation_proxy": "maximize"
+  }
+}

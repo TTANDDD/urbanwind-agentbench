@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "三个冻结间距候选",
+      "role_id": "input-001",
+      "seed": 202609048201,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.29366082,
+        0.31496933,
+        0.84119121,
+        0.64219474,
+        0.56069144,
+        0.7381569,
+        0.84730014,
+        0.76484333,
+        0.37089286,
+        0.31587366,
+        0.3497305,
+        0.98351117,
+        0.80776023,
+        0.83486002,
+        0.40043182,
+        0.45009787
+      ]
+    },
+    {
+      "label": "开发强度约束",
+      "role_id": "input-002",
+      "seed": 202609048202,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.76404408,
+        0.3086463,
+        0.99142956,
+        0.39489149,
+        0.48522751,
+        0.09991151,
+        0.72717094,
+        0.42862974,
+        0.44863438,
+        0.12651341,
+        0.55154727,
+        0.26999996,
+        0.76498857,
+        0.4284596,
+        0.66642712,
+        0.0701825
+      ]
+    },
+    {
+      "label": "多风向目标",
+      "role_id": "input-003",
+      "seed": 202609048203,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.47887892,
+        0.44184604,
+        0.12961041,
+        0.18628023,
+        0.43957032,
+        0.49596495,
+        0.72449058,
+        0.56506858,
+        0.15225407,
+        0.58155305,
+        0.56758608,
+        0.0983845,
+        0.84251578,
+        0.46753993,
+        0.106957,
+        0.26203327
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-182"
+}

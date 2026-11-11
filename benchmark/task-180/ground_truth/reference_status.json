@@ -1,0 +1,60 @@
+{
+  "blockers": [
+    "independent raw-artifact recomputation",
+    "positive and adversarial evaluator tests",
+    "release policy freeze"
+  ],
+  "canonical_result": "canonical_result.json",
+  "claim_boundary": "Local reference generated; not release-valid ground truth.",
+  "evaluator_status": "task_specific_local_metric_check",
+  "expected_ground_truth": {
+    "case_ids": [
+      "task-180-case-001",
+      "task-180-case-002",
+      "task-180-case-003"
+    ],
+    "hidden_tolerances_status": "local_metric_tolerance_generated",
+    "input_roles": [
+      "冻结情景集合",
+      "指标权重和硬约束",
+      "并列规则与敏感性方案"
+    ],
+    "metric_contracts": [
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "kendall_tau(predicted_ranking,reference_ranking)",
+        "id": "ranking_kendall_tau",
+        "name_zh": "多情景排序Kendall相关",
+        "unit": "1"
+      },
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "hashed_source_linked_evidence / required_evidence",
+        "id": "evidence_provenance_fraction",
+        "name_zh": "证据溯源覆盖率",
+        "unit": "fraction"
+      },
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "passed_hard_gates / required_hard_gates",
+        "id": "hard_gate_pass_fraction",
+        "name_zh": "硬门禁通过率",
+        "unit": "fraction"
+      }
+    ],
+    "reference_values_status": "local_reference_generated"
+  },
+  "experimental_claim": false,
+  "limitations": [
+    "The evaluator compares the reported task metric and result-artifact metric to a frozen local reference.",
+    "It does not yet independently recompute every domain-specific metric from every raw submitted artifact.",
+    "It does not establish experimental or full physical validity."
+  ],
+  "reference_metrics": "reference_metrics.json",
+  "reference_provenance": "reference_provenance.json",
+  "reference_status": "local_reference_generated",
+  "release_status": "scaffold_only",
+  "schema_version": "1.1",
+  "task_id": "urbanwind-task-180",
+  "truth_type": "deterministic_local_numerical_reference"
+}

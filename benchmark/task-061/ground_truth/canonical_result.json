@@ -1,0 +1,16 @@
+{
+  "case_id": "task-061-case-001",
+  "claim_boundary": "One-case OpenFOAM neutral-ABL numerical reference; not experimental truth.",
+  "diagnostic_metrics": {
+    "inlet_k_rmse_m2_s2": 8.756884106730922e-15,
+    "inlet_omega_rmse_s_1": 1.0393524470871513e-12,
+    "inlet_profile_rmse_ms": 2.3289178146136844e-12
+  },
+  "primary_metric": {
+    "id": "inlet_profile_rmse_ms",
+    "unit": "m/s",
+    "value": 2.3289178146136844e-12
+  },
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-061"
+}

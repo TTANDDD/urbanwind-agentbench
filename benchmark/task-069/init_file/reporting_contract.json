@@ -1,0 +1,541 @@
+{
+  "current_evaluator_boundary": "Parses three raw simpleFoam evidence sets, validates exact top-boundary families and single-factor inputs, recomputes the frozen 48-probe metric, and compares hidden OpenFOAM numerical arrays; no experimental truth or frozen-runtime claim.",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision": "decision.md",
+  "decision_required_terms": [
+    "证据",
+    "限制",
+    "结论"
+  ],
+  "evidence_manifest": "evidence_manifest.json",
+  "expected_case_ids": [
+    "task-069-case-001",
+    "task-069-case-002",
+    "task-069-case-003"
+  ],
+  "expected_solver_case_ids": [
+    "task-069-case-001",
+    "task-069-case-002",
+    "task-069-case-003"
+  ],
+  "metric_contracts": [
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max(range_b(mean_{i in {340,360,380,400},p in pedestrian_layer} Ux[b,i,p]),range_b(mean_{i in {340,360,380,400},p in roof_layer} Ux[b,i,p]))/1.2; b in {slip,symmetryPlane,fixedShearStress}",
+      "id": "top_boundary_response_spread",
+      "name_zh": "顶部边界响应离散度",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    }
+  ],
+  "metric_ids": [
+    "top_boundary_response_spread",
+    "evidence_provenance_fraction",
+    "hard_gate_pass_fraction"
+  ],
+  "metrics": "metrics.json",
+  "required_external_inputs": [],
+  "required_inputs": [
+    "随任务本地生成的入口/边界参数",
+    "本地目标剖面或守恒参考",
+    "本地程序化计算域"
+  ],
+  "required_solver_runs": 3,
+  "run_manifest": "run_manifest.json",
+  "schema_version": "1.0",
+  "score_layers": {
+    "artifact_and_schema": 10,
+    "engineering_decision": 10,
+    "external_validation": 15,
+    "numerical_quality": 20,
+    "physical_fidelity": 25,
+    "real_tool_execution": 20
+  },
+  "task_id": "urbanwind-task-069",
+  "top_boundary_input_contract": "local_assets/top_boundary_contract.json",
+  "top_boundary_result_contract": {
+    "case_ids": [
+      "task-069-case-001",
+      "task-069-case-002",
+      "task-069-case-003"
+    ],
+    "cases": [
+      {
+        "case_id": "task-069-case-001",
+        "top_boundary_field_contract": {
+          "U": "slip",
+          "k": "zeroGradient",
+          "mesh_top": "patch",
+          "nut": "calculated",
+          "omega": "zeroGradient",
+          "p": "zeroGradient"
+        },
+        "variant": "滑移顶部",
+        "variant_key": "slip"
+      },
+      {
+        "case_id": "task-069-case-002",
+        "top_boundary_field_contract": {
+          "U": "symmetryPlane",
+          "k": "symmetryPlane",
+          "mesh_top": "symmetryPlane",
+          "nut": "symmetryPlane",
+          "omega": "symmetryPlane",
+          "p": "symmetryPlane"
+        },
+        "variant": "对称顶部",
+        "variant_key": "symmetryPlane"
+      },
+      {
+        "case_id": "task-069-case-003",
+        "top_boundary_field_contract": {
+          "U": "fixedShearStress(tau=(u_star^2,0,0))",
+          "k": "zeroGradient",
+          "mesh_top": "patch",
+          "nut": "calculated",
+          "omega": "zeroGradient",
+          "p": "zeroGradient"
+        },
+        "variant": "应力顶部",
+        "variant_key": "fixedShearStress"
+      }
+    ],
+    "controlled_factor": "top boundary family including the necessarily paired mesh and U/p/k/omega/nut top patch declarations",
+    "cpu_affinity": {
+      "task-069-case-001": "64-79",
+      "task-069-case-002": "80-95",
+      "task-069-case-003": "96-111"
+    },
+    "frozen_across_cases": [
+      "geometry and all mesh topology except the required top patch type declaration",
+      "neutral log-law inlet U/k/omega",
+      "ground, building, side and outlet boundaries",
+      "transport properties",
+      "kOmegaSST model",
+      "upwind convection",
+      "SIMPLE settings",
+      "400 iterations",
+      "48 response probes and frozen sample iterations"
+    ],
+    "frozen_gates": {
+      "exact_top_boundary_contract": true,
+      "finite_solver_log": true,
+      "max_abs_cumulative_continuity": 0.01,
+      "max_inlet_U_rmse_m_s": 1e-06,
+      "max_inlet_k_rmse_m2_s2": 1e-06,
+      "max_inlet_omega_rmse_s_1": 1e-05,
+      "max_last20_initial_residual_full": 0.0001,
+      "required_cell_count": 365488,
+      "required_final_iteration": 400,
+      "response_velocity_range_m_s": [
+        -5.0,
+        5.0
+      ]
+    },
+    "full_iterations": 400,
+    "geometry": "365488-cell conformal D x D x 4D single-building domain",
+    "hidden_boundary": "Visible cases, formula, profiles, probe coordinates, shapes and gates only; no hidden response arrays.",
+    "mpi_ranks_per_case": 16,
+    "neutral_profile_csv": "local_assets/top_boundary_neutral_profile.csv",
+    "path_policy": "relative paths under submission root, unique and SHA-256 matched",
+    "primary_metric": {
+      "aggregation": "per_case_then_task",
+      "formula": "max(range_b(mean_{i in {340,360,380,400},p in pedestrian_layer} Ux[b,i,p]),range_b(mean_{i in {340,360,380,400},p in roof_layer} Ux[b,i,p]))/1.2; b in {slip,symmetryPlane,fixedShearStress}",
+      "id": "top_boundary_response_spread",
+      "name_zh": "顶部边界响应离散度",
+      "unit": "fraction"
+    },
+    "profile_parameters": {
+      "Cmu": 0.09,
+      "Uref_m_s": 1.2,
+      "Zref_m": 4.0,
+      "kappa": 0.41,
+      "z0_m": 0.01
+    },
+    "required_manifest": "top_boundary_evidence_manifest.json",
+    "required_raw_evidence_per_case": [
+      "probe_U",
+      "probe_k",
+      "probe_omega",
+      "response_U",
+      "solver_log",
+      "checkMesh_log",
+      "field_U",
+      "field_p",
+      "field_k",
+      "field_omega",
+      "field_nut",
+      "blockMeshDict",
+      "controlDict"
+    ],
+    "response_iterations": [
+      340,
+      360,
+      380,
+      400
+    ],
+    "response_points_m": [
+      [
+        0.75,
+        -1.0,
+        1.4375
+      ],
+      [
+        0.75,
+        0.0,
+        1.4375
+      ],
+      [
+        0.75,
+        1.0,
+        1.4375
+      ],
+      [
+        1.25,
+        -1.0,
+        1.4375
+      ],
+      [
+        1.25,
+        0.0,
+        1.4375
+      ],
+      [
+        1.25,
+        1.0,
+        1.4375
+      ],
+      [
+        2.0,
+        -1.0,
+        1.4375
+      ],
+      [
+        2.0,
+        0.0,
+        1.4375
+      ],
+      [
+        2.0,
+        1.0,
+        1.4375
+      ],
+      [
+        3.0,
+        -1.0,
+        1.4375
+      ],
+      [
+        3.0,
+        0.0,
+        1.4375
+      ],
+      [
+        3.0,
+        1.0,
+        1.4375
+      ],
+      [
+        4.0,
+        -1.0,
+        1.4375
+      ],
+      [
+        4.0,
+        0.0,
+        1.4375
+      ],
+      [
+        4.0,
+        1.0,
+        1.4375
+      ],
+      [
+        6.0,
+        -1.0,
+        1.4375
+      ],
+      [
+        6.0,
+        0.0,
+        1.4375
+      ],
+      [
+        6.0,
+        1.0,
+        1.4375
+      ],
+      [
+        8.0,
+        -1.0,
+        1.4375
+      ],
+      [
+        8.0,
+        0.0,
+        1.4375
+      ],
+      [
+        8.0,
+        1.0,
+        1.4375
+      ],
+      [
+        12.0,
+        -1.0,
+        1.4375
+      ],
+      [
+        12.0,
+        0.0,
+        1.4375
+      ],
+      [
+        12.0,
+        1.0,
+        1.4375
+      ],
+      [
+        0.75,
+        -1.0,
+        4.375
+      ],
+      [
+        0.75,
+        0.0,
+        4.375
+      ],
+      [
+        0.75,
+        1.0,
+        4.375
+      ],
+      [
+        1.25,
+        -1.0,
+        4.375
+      ],
+      [
+        1.25,
+        0.0,
+        4.375
+      ],
+      [
+        1.25,
+        1.0,
+        4.375
+      ],
+      [
+        2.0,
+        -1.0,
+        4.375
+      ],
+      [
+        2.0,
+        0.0,
+        4.375
+      ],
+      [
+        2.0,
+        1.0,
+        4.375
+      ],
+      [
+        3.0,
+        -1.0,
+        4.375
+      ],
+      [
+        3.0,
+        0.0,
+        4.375
+      ],
+      [
+        3.0,
+        1.0,
+        4.375
+      ],
+      [
+        4.0,
+        -1.0,
+        4.375
+      ],
+      [
+        4.0,
+        0.0,
+        4.375
+      ],
+      [
+        4.0,
+        1.0,
+        4.375
+      ],
+      [
+        6.0,
+        -1.0,
+        4.375
+      ],
+      [
+        6.0,
+        0.0,
+        4.375
+      ],
+      [
+        6.0,
+        1.0,
+        4.375
+      ],
+      [
+        8.0,
+        -1.0,
+        4.375
+      ],
+      [
+        8.0,
+        0.0,
+        4.375
+      ],
+      [
+        8.0,
+        1.0,
+        4.375
+      ],
+      [
+        12.0,
+        -1.0,
+        4.375
+      ],
+      [
+        12.0,
+        0.0,
+        4.375
+      ],
+      [
+        12.0,
+        1.0,
+        4.375
+      ]
+    ],
+    "response_probe_csv": "local_assets/top_boundary_response_probes.csv",
+    "response_sample_count": 20,
+    "response_sample_iterations": [
+      20,
+      40,
+      60,
+      80,
+      100,
+      120,
+      140,
+      160,
+      180,
+      200,
+      220,
+      240,
+      260,
+      280,
+      300,
+      320,
+      340,
+      360,
+      380,
+      400
+    ],
+    "schema_version": "1.0",
+    "simulation_metrics": {
+      "array_shapes": {
+        "inlet_U_m_s": [
+          20,
+          52,
+          3
+        ],
+        "inlet_k_m2_s2": [
+          20,
+          52
+        ],
+        "inlet_omega_s_1": [
+          20,
+          52
+        ],
+        "iterations": [
+          20
+        ],
+        "response_U_m_s": [
+          20,
+          48,
+          3
+        ]
+      },
+      "path": "top_boundary_results.json",
+      "required_case_fields": [
+        "case_id",
+        "variant",
+        "variant_key",
+        "iterations",
+        "inlet_U_m_s",
+        "inlet_k_m2_s2",
+        "inlet_omega_s_1",
+        "response_U_m_s",
+        "profile_metrics",
+        "max_abs_cumulative_continuity",
+        "last20_max_initial_residuals",
+        "all_run_gates_pass"
+      ],
+      "root_key": "case_results"
+    },
+    "smoke_iterations": 20,
+    "solver": "OpenCFD-v2412 simpleFoam",
+    "task_gate": "All three cases must pass every frozen full-run gate; no successful-subset selection or post-hoc threshold relaxation.",
+    "task_id": "urbanwind-task-069",
+    "top_boundary_field_contracts": {
+      "fixedShearStress": {
+        "U": "fixedShearStress(tau=(u_star^2,0,0))",
+        "k": "zeroGradient",
+        "mesh_top": "patch",
+        "nut": "calculated",
+        "omega": "zeroGradient",
+        "p": "zeroGradient"
+      },
+      "slip": {
+        "U": "slip",
+        "k": "zeroGradient",
+        "mesh_top": "patch",
+        "nut": "calculated",
+        "omega": "zeroGradient",
+        "p": "zeroGradient"
+      },
+      "symmetryPlane": {
+        "U": "symmetryPlane",
+        "k": "symmetryPlane",
+        "mesh_top": "symmetryPlane",
+        "nut": "symmetryPlane",
+        "omega": "symmetryPlane",
+        "p": "symmetryPlane"
+      }
+    },
+    "truth_boundary": "Matched OpenFOAM single-building numerical sensitivity to three top-boundary families only; not a generally optimal top boundary and not PIV, DNS, wind-tunnel, field or experimental truth.",
+    "turbulence_model": "kOmegaSST",
+    "variant_keys": [
+      "slip",
+      "symmetryPlane",
+      "fixedShearStress"
+    ],
+    "variants_zh": [
+      "滑移顶部",
+      "对称顶部",
+      "应力顶部"
+    ]
+  }
+}

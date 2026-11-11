@@ -1,0 +1,309 @@
+{
+  "cases": [
+    {
+      "case_id": "task-193-case-001",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "LOCAL_MULTI",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "对两个冻结设计分别运行三个风向，依据冻结风向权重和最坏情景约束选择稳健方案。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "设计A-风向1"
+      },
+      "metrics": [
+        "robust_wind_direction_regret",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "robust_objective_best-robust_objective_selected",
+        "id": "robust_wind_direction_regret",
+        "name_zh": "多风向稳健设计后悔值",
+        "unit": "fraction"
+      },
+      "purpose": "多风向稳健方案选择：执行变体 设计A-风向1，围绕对两个冻结设计分别运行三个风向，依据冻结风向权重和最坏情景约束选择稳健方案。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-193",
+      "variant": "设计A-风向1"
+    },
+    {
+      "case_id": "task-193-case-002",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "LOCAL_MULTI",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "对两个冻结设计分别运行三个风向，依据冻结风向权重和最坏情景约束选择稳健方案。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "设计A-风向2"
+      },
+      "metrics": [
+        "robust_wind_direction_regret",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "robust_objective_best-robust_objective_selected",
+        "id": "robust_wind_direction_regret",
+        "name_zh": "多风向稳健设计后悔值",
+        "unit": "fraction"
+      },
+      "purpose": "多风向稳健方案选择：执行变体 设计A-风向2，围绕对两个冻结设计分别运行三个风向，依据冻结风向权重和最坏情景约束选择稳健方案。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-193",
+      "variant": "设计A-风向2"
+    },
+    {
+      "case_id": "task-193-case-003",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "LOCAL_MULTI",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "对两个冻结设计分别运行三个风向，依据冻结风向权重和最坏情景约束选择稳健方案。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "设计A-风向3"
+      },
+      "metrics": [
+        "robust_wind_direction_regret",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "robust_objective_best-robust_objective_selected",
+        "id": "robust_wind_direction_regret",
+        "name_zh": "多风向稳健设计后悔值",
+        "unit": "fraction"
+      },
+      "purpose": "多风向稳健方案选择：执行变体 设计A-风向3，围绕对两个冻结设计分别运行三个风向，依据冻结风向权重和最坏情景约束选择稳健方案。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-193",
+      "variant": "设计A-风向3"
+    },
+    {
+      "case_id": "task-193-case-004",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "LOCAL_MULTI",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "对两个冻结设计分别运行三个风向，依据冻结风向权重和最坏情景约束选择稳健方案。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "设计B-风向1"
+      },
+      "metrics": [
+        "robust_wind_direction_regret",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "robust_objective_best-robust_objective_selected",
+        "id": "robust_wind_direction_regret",
+        "name_zh": "多风向稳健设计后悔值",
+        "unit": "fraction"
+      },
+      "purpose": "多风向稳健方案选择：执行变体 设计B-风向1，围绕对两个冻结设计分别运行三个风向，依据冻结风向权重和最坏情景约束选择稳健方案。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-193",
+      "variant": "设计B-风向1"
+    },
+    {
+      "case_id": "task-193-case-005",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "LOCAL_MULTI",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "对两个冻结设计分别运行三个风向，依据冻结风向权重和最坏情景约束选择稳健方案。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "设计B-风向2"
+      },
+      "metrics": [
+        "robust_wind_direction_regret",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "robust_objective_best-robust_objective_selected",
+        "id": "robust_wind_direction_regret",
+        "name_zh": "多风向稳健设计后悔值",
+        "unit": "fraction"
+      },
+      "purpose": "多风向稳健方案选择：执行变体 设计B-风向2，围绕对两个冻结设计分别运行三个风向，依据冻结风向权重和最坏情景约束选择稳健方案。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-193",
+      "variant": "设计B-风向2"
+    },
+    {
+      "case_id": "task-193-case-006",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "LOCAL_MULTI",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "对两个冻结设计分别运行三个风向，依据冻结风向权重和最坏情景约束选择稳健方案。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "设计B-风向3"
+      },
+      "metrics": [
+        "robust_wind_direction_regret",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "robust_objective_best-robust_objective_selected",
+        "id": "robust_wind_direction_regret",
+        "name_zh": "多风向稳健设计后悔值",
+        "unit": "fraction"
+      },
+      "purpose": "多风向稳健方案选择：执行变体 设计B-风向3，围绕对两个冻结设计分别运行三个风向，依据冻结风向权重和最坏情景约束选择稳健方案。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-193",
+      "variant": "设计B-风向3"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "heavy",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 6,
+  "required_solver_runs": 6,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-193"
+}

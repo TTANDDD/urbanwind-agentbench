@@ -1,0 +1,65 @@
+{
+  "cases": [
+    {
+      "case_id": "task-029-case-001",
+      "execution_role": "provided_data_or_tool_execution",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "从道路和开敞空间提取候选通风路径并保留宽度与连通性属性。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "道路与通风廊道候选提取-目标案例"
+      },
+      "metrics": [
+        "corridor_graph_connectivity_f1",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "F1(predicted_corridor_edges,reference_edges)",
+        "id": "corridor_graph_connectivity_f1",
+        "name_zh": "候选廊道连通性F1",
+        "unit": "fraction"
+      },
+      "purpose": "道路与通风廊道候选提取：执行变体 道路与通风廊道候选提取-目标案例，围绕从道路和开敞空间提取候选通风路径并保留宽度与连通性属性。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "qgis",
+        "gdal",
+        "geopandas"
+      ],
+      "task_id": "urbanwind-task-029",
+      "variant": "道路与通风廊道候选提取-目标案例"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "lite",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 1,
+  "required_solver_runs": 0,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-029"
+}

@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "基准与两个高度梯度候选",
+      "role_id": "input-001",
+      "seed": 202609048301,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.71659493,
+        0.12343677,
+        0.34478816,
+        0.11091135,
+        0.47050448,
+        0.53118524,
+        0.54252169,
+        0.72962088,
+        0.31308667,
+        0.26180538,
+        0.81480025,
+        0.77841315,
+        0.32031159,
+        0.59949922,
+        0.63968969,
+        0.97956191
+      ]
+    },
+    {
+      "label": "容积率约束",
+      "role_id": "input-002",
+      "seed": 202609048302,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.27721974,
+        0.19380971,
+        0.6860783,
+        0.58617883,
+        0.5145222,
+        0.98709073,
+        0.75316341,
+        0.28162535,
+        0.12709818,
+        0.05538906,
+        0.79330861,
+        0.8619295,
+        0.32438205,
+        0.12663927,
+        0.18862982,
+        0.68133528
+      ]
+    },
+    {
+      "label": "屋顶交换和行人风目标",
+      "role_id": "input-003",
+      "seed": 202609048303,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.06303136,
+        0.51235918,
+        0.45356038,
+        0.26333633,
+        0.40720727,
+        0.47837534,
+        0.59222578,
+        0.25737492,
+        0.72253719,
+        0.69499459,
+        0.12189255,
+        0.7389629,
+        0.1413116,
+        0.54287628,
+        0.10616434,
+        0.43295533
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-183"
+}

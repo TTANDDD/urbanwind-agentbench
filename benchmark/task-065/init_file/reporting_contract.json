@@ -1,0 +1,122 @@
+{
+  "current_evaluator_boundary": "Independently reads original boundaryData, both raw U probe planes, solver/mesh logs, numerical configuration and final mean fields; recomputes target and realized spectra/statistics and compares matched hidden numerical arrays.",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision": "decision.md",
+  "decision_required_terms": [
+    "证据",
+    "限制",
+    "结论"
+  ],
+  "evidence_manifest": "evidence_manifest.json",
+  "expected_case_ids": [
+    "task-065-case-001"
+  ],
+  "expected_solver_case_ids": [
+    "task-065-case-001"
+  ],
+  "metric_contracts": [
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "mean_{p in 16 inlet probes,c in Ux Uy Uz,b in 5 bands} abs(F_realized[p,c,b]-F_target[p,c,b]); F is normalized one-sided PSD energy over 30<t<=90 s at dt=0.2 s",
+      "id": "inflow_spectral_band_error",
+      "name_zh": "入口谱频带误差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    }
+  ],
+  "metric_ids": [
+    "inflow_spectral_band_error",
+    "evidence_provenance_fraction",
+    "hard_gate_pass_fraction"
+  ],
+  "metrics": "metrics.json",
+  "required_external_inputs": [],
+  "required_inputs": [
+    "随任务本地生成的入口/边界参数",
+    "本地目标剖面或守恒参考",
+    "本地程序化计算域"
+  ],
+  "required_solver_runs": 1,
+  "run_manifest": "run_manifest.json",
+  "schema_version": "1.0",
+  "score_layers": {
+    "artifact_and_schema": 10,
+    "engineering_decision": 10,
+    "external_validation": 15,
+    "numerical_quality": 20,
+    "physical_fidelity": 25,
+    "real_tool_execution": 20
+  },
+  "simulation_result_contract": {
+    "case_id": "task-065-case-001",
+    "frozen_analysis_window_s": [
+      30.0,
+      90.0
+    ],
+    "required_raw_evidence": [
+      "synthetic_inflow_contract.json",
+      "synthetic_inflow_generation_manifest.json",
+      "synthetic_inflow_target_probe_series.csv",
+      "synthetic_inflow_target_statistics.json",
+      "postProcessing/inletProbes/0/U",
+      "postProcessing/downstreamProbes/0/U",
+      "log.pimpleFoam",
+      "log.checkMesh",
+      "resolved_config.json",
+      "run_analysis.json",
+      "final UMean and UPrime2Mean"
+    ],
+    "sampling_interval_s": 0.2,
+    "target_band_count": 5,
+    "target_component_count": 3,
+    "target_probe_count_per_plane": 16
+  },
+  "synthetic_inflow_result_contract": {
+    "archive_key": "raw_case_archive",
+    "case_id": "task-065-case-001",
+    "numeric_recomputation_tolerance": {
+      "absolute": 1e-08,
+      "relative": 1e-08
+    },
+    "path_policy": "unique SHA256-matched relative archive path under submission root; no links or path escapes",
+    "raw_members": [
+      "constant/boundaryData/inlet/points",
+      "451 boundaryData U slices from 0 to 90 s",
+      "synthetic_inflow_contract.json",
+      "synthetic_inflow_probe_points.csv",
+      "synthetic_inflow_target_probe_series.csv",
+      "synthetic_inflow_target_statistics.json",
+      "synthetic_inflow_generation_manifest.json",
+      "postProcessing/inletProbes/0/U",
+      "postProcessing/downstreamProbes/0/U",
+      "0/U",
+      "system/controlDict",
+      "resolved_config.json",
+      "log.pimpleFoam",
+      "log.checkMesh",
+      "run_commands.json",
+      "command.*.json",
+      "run_analysis.json",
+      "final 90 s UMean and UPrime2Mean"
+    ],
+    "required_manifest": "synthetic_inflow_evidence_manifest.json",
+    "required_result": "synthetic_inflow_results.json",
+    "task_id": "urbanwind-task-065",
+    "truth_boundary": "Local fixed-seed synthetic inlet plus matched OpenFOAM numerical response, not experimental or measured turbulence truth.",
+    "visible_scientific_contract": "local_assets/synthetic_inflow_contract.json"
+  },
+  "task_id": "urbanwind-task-065"
+}

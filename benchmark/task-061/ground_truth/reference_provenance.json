@@ -1,0 +1,17 @@
+{
+  "experimental_claim": false,
+  "host": "5070-server",
+  "independent_audit": "validation/openfoam-task061-v31d-independent-audit-v1.json",
+  "independent_audit_sha256": "25e78377905c1ff1627a8c1e618e2e58f977df1aa774a362997a66af4682f538",
+  "openfoam_version": "OpenCFD-v2412",
+  "runtime_environment": "/home/abc/urbanwind-agentbench-runtime-v0.1/envs/openfoam-2412",
+  "schema_version": "1.0",
+  "source_run": {
+    "case_id": "task-061-case-001",
+    "source_archive": "validation/openfoam-batch-20260922-v31d-task061-neutral-abl/results/task061-neutral-log-inlet/reference_candidate.tar.gz",
+    "source_archive_sha256": "768da2a1e6904b25fddea7c5b1e6c20766ba22745658a8e84cfc13335487302d",
+    "source_batch": "openfoam-batch-20260922-v31d-task061-neutral-abl",
+    "source_status_sha256": "9c6923088d1630aebecb44fed256d7f11801454556634ae8540562f0e04cb449"
+  },
+  "task_id": "urbanwind-task-061"
+}

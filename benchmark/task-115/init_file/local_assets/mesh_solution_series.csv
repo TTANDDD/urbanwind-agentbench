@@ -1,0 +1,4 @@
+level,cell_size_m,observable,source_type
+coarse,1.0,0.86,deterministic_local_numerical_solution
+medium,0.5,0.94,deterministic_local_numerical_solution
+fine,0.25,0.98,deterministic_local_numerical_solution

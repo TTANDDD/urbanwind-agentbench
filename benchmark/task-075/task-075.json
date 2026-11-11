@@ -1,0 +1,91 @@
+{
+  "benchmark_metadata": {
+    "case_anchor": "PROCEDURAL_CITY",
+    "category": "boundary_condition_design",
+    "compute_track": "cfd",
+    "data_origin_policy": "local_generation_or_optional_one_click_public",
+    "difficulty": "advanced",
+    "init_type": "incomplete_template",
+    "materialization_status": "local_inputs_generated",
+    "professional_difficulty": "D4",
+    "reference_status": "openfoam_numerical_reference_generated",
+    "release_status": "reference_ready_not_release_valid",
+    "required_cases": 1,
+    "required_solver_runs": 1,
+    "simulation_status": "reference_run_completed",
+    "task_id": "urbanwind-task-075",
+    "task_mode": "configure_and_verify",
+    "track": "abl_and_boundary_conditions"
+  },
+  "config": [
+    {
+      "parameters": {
+        "files": [
+          {
+            "local_path": "task-075/init_file/init_file.tar.gz",
+            "path": "/home/user/Desktop/init_file.tar.gz"
+          }
+        ]
+      },
+      "type": "upload_file"
+    },
+    {
+      "parameters": {
+        "command": "bash -c \"set -e; tar -xzf '/home/user/Desktop/init_file.tar.gz' -C '/home/user/Desktop'; rm -f '/home/user/Desktop/init_file.tar.gz'\"",
+        "shell": true
+      },
+      "type": "launch"
+    }
+  ],
+  "evaluator": {
+    "expected": {},
+    "func": "openfoam_surface_temperature_reference_score",
+    "metric": {
+      "direction": "maximize",
+      "name": "UrbanWind task-075 raw surface-temperature OpenFOAM check",
+      "not_for_leaderboard": true,
+      "scale": "0-100"
+    },
+    "postconfig": [
+      {
+        "parameters": {
+          "files": [
+            {
+              "local_path": "task-075/eval.py",
+              "path": "/home/user/Desktop/eval.py"
+            }
+          ]
+        },
+        "type": "upload_file"
+      },
+      {
+        "parameters": {
+          "files": [
+            {
+              "local_path": "task-075/ground_truth/reference_case_arrays.json",
+              "path": "/tmp/urbanwind-task-075-reference.json"
+            }
+          ]
+        },
+        "type": "upload_file"
+      }
+    ],
+    "result": {
+      "command": "python3 /home/user/Desktop/eval.py",
+      "shell": true,
+      "type": "vm_command_line"
+    }
+  },
+  "fixed_ip": false,
+  "id": "c-urbanwind-task-075-ubuntu",
+  "instruction": "你正在完成 UrbanWind-AgentBench task-075：建筑表面温度边界。\n\n科学问题：智能体能否在不伪造证据的前提下完成“建筑表面温度边界”，并把工具执行、数值质量、物理依据和工程结论连成可复算闭环？\n\n必须完成全流程：\n1. 证据与设计：读取任务输入与来源登记，显式列出已知、假设、缺失和许可边界。 从观测或情景输入建筑表面温度并处理缺测和时间对齐。\n2. 配置与执行：围绕程序化本地城市子域生成案例计划和软件配置，并保持单位、坐标和版本可追踪。 执行1个要求案例，其中1个案例必须产生真实CFD/LES求解器证据。 不得伪造工具或求解器输出。\n3. 后处理与验证：从原始文件重算声明指标，保存脚本、命令、日志、单位、时间窗和哈希。 依次通过文件、执行、数值、物理、外部证据和工程约束门禁。\n4. 工程决策：给出带适用边界的工程结论；关键证据缺失时明确停止或降级声明。\n5. 严格执行 `/home/user/Desktop/case_plan.json` 和 `/home/user/Desktop/reporting_contract.json`，保留每个案例的原始输入、日志和输出。\n6. 生成任务合同要求的全部产物到 `/home/user/Desktop`。最小软件链：python, openfoam；计算赛道：cfd。\n7. 初始化输入已由项目生成器在本地物化；不得把合成或数值输入表述为实验测量。已安装隐藏OpenFOAM表面温度边界数值参考和task-075专用评价器；该参考不是实验、PIV或DNS真值。\n8. task-075专用冻结合同：读取local_assets/surface_temperature_source.csv、surface_temperature_aligned.csv、surface_temperature_boundary_contract.json与thermal_response_probes.csv。按可见时区和时间原点处理不规则时间戳，仅对47 s内部缺测点使用相邻有效点线性插值；把对齐表写入building patch的uniformFixedValue时变T边界，执行一次真实buoyantPimpleFoam，并从求解器surfaceFieldValue原始输出独立重算表面温度时间对齐RMSE。\n9. task-075专用交付：按可见时区、时间原点和冻结线性插值规则处理唯一47 s内部缺测，将对齐温度表写入building的uniformFixedValue Function1并真实执行180 s buoyantPimpleFoam。提交surface_temperature_evidence_manifest.json登记的源表、对齐表、0/T、building surfaceFieldValue、U/T探针、求解/网格日志、controlDict、湍流配置、平均场及SHA256，并提交900个原始building温度样本和24点U/T响应数组。\n",
+  "possibility_of_env_change": "medium",
+  "proxy": false,
+  "related_apps": [
+    "python",
+    "openfoam"
+  ],
+  "snapshot": "urbanwind-multisoftware-v1",
+  "source": "UrbanWind-AgentBench local scaffold with source registry",
+  "trajectory": "trajectories/"
+}

@@ -1,0 +1,65 @@
+{
+  "cases": [
+    {
+      "case_id": "task-074-case-001",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "controlled_factor": "spatial_and_temporal_surface_sensible_heat_flux",
+        "data_origin": "deterministic_local_generation",
+        "focus": "设置分区显热通量及时间变化并检查能量单位和符号。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "地表热通量边界-参考工况",
+        "variant_key": "three_zone_time_varying_heat_flux"
+      },
+      "metrics": [
+        "heat_flux_boundary_error",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "sum_z(A_z*mean_{t in {0,60,120,180}s}(abs(q_OpenFOAM(z,t)-q_contract(z,t))))/sum_z(A_z); z in {heatWest,heatCenter,heatEast}",
+        "id": "heat_flux_boundary_error",
+        "name_zh": "地表热通量边界误差",
+        "unit": "W/m2"
+      },
+      "purpose": "将程序化城市ground划分为三个热通量patch，配置十二个可见时序结点，执行一次真实buoyantPimpleFoam，并从原始0/T和polyMesh重算边界误差。",
+      "reference_status": "verified_openfoam_numerical_reference_generated",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-074",
+      "variant": "三分区时变显热通量与真实求解验证"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "cfd",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 1,
+  "required_solver_runs": 1,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-074"
+}

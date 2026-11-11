@@ -1,0 +1,159 @@
+{
+  "cases": [
+    {
+      "case_id": "task-095-case-001",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "比较稳定、中性和不稳定边界层下的街谷交换。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "稳定"
+      },
+      "metrics": [
+        "les_stability_exchange_response",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "mean(abs(exchange_stable-exchange_neutral),abs(exchange_unstable-exchange_neutral))/max(abs(exchange_neutral),0.01)",
+        "id": "les_stability_exchange_response",
+        "name_zh": "城市LES稳定度交换响应",
+        "unit": "fraction"
+      },
+      "purpose": "稳定度城市LES：执行变体 稳定，围绕比较稳定、中性和不稳定边界层下的街谷交换。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-095",
+      "variant": "稳定"
+    },
+    {
+      "case_id": "task-095-case-002",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "比较稳定、中性和不稳定边界层下的街谷交换。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "中性"
+      },
+      "metrics": [
+        "les_stability_exchange_response",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "mean(abs(exchange_stable-exchange_neutral),abs(exchange_unstable-exchange_neutral))/max(abs(exchange_neutral),0.01)",
+        "id": "les_stability_exchange_response",
+        "name_zh": "城市LES稳定度交换响应",
+        "unit": "fraction"
+      },
+      "purpose": "稳定度城市LES：执行变体 中性，围绕比较稳定、中性和不稳定边界层下的街谷交换。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-095",
+      "variant": "中性"
+    },
+    {
+      "case_id": "task-095-case-003",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "比较稳定、中性和不稳定边界层下的街谷交换。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "不稳定"
+      },
+      "metrics": [
+        "les_stability_exchange_response",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "mean(abs(exchange_stable-exchange_neutral),abs(exchange_unstable-exchange_neutral))/max(abs(exchange_neutral),0.01)",
+        "id": "les_stability_exchange_response",
+        "name_zh": "城市LES稳定度交换响应",
+        "unit": "fraction"
+      },
+      "purpose": "稳定度城市LES：执行变体 不稳定，围绕比较稳定、中性和不稳定边界层下的街谷交换。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-095",
+      "variant": "不稳定"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "cfd",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 3,
+  "required_solver_runs": 3,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-095"
+}

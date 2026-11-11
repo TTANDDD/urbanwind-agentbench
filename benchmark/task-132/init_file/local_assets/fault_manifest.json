@@ -1,0 +1,12 @@
+{
+  "answer_included": false,
+  "expected_agent_action": "diagnose and repair without changing unrelated settings",
+  "fault_family": "outlet_reverse_flow",
+  "fault_seed": 202609030132,
+  "injected": true,
+  "observed_fault_parameters": {
+    "reverse_area_fraction": 0.25
+  },
+  "target_file": "local_assets/openfoam_base/0/U",
+  "task_id": "urbanwind-task-132"
+}

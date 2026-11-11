@@ -1,0 +1,33 @@
+{
+  "case_ids": [
+    "task-069-case-001",
+    "task-069-case-002",
+    "task-069-case-003"
+  ],
+  "claim_boundary": "Matched three-case OpenFOAM top-boundary numerical sensitivity reference; not a universal boundary recommendation or experimental truth.",
+  "layer_case_mean_Ux_m_s": {
+    "fixedShearStress": {
+      "pedestrian_layer": 0.5867096121809875,
+      "roof_layer": 1.1942270410950522
+    },
+    "slip": {
+      "pedestrian_layer": 0.5936756684067823,
+      "roof_layer": 1.2027247357599062
+    },
+    "symmetryPlane": {
+      "pedestrian_layer": 0.5936753995620855,
+      "roof_layer": 1.202718690968448
+    }
+  },
+  "layer_range_Ux_m_s": {
+    "pedestrian_layer": 0.0069660562257948255,
+    "roof_layer": 0.00849769466485406
+  },
+  "primary_metric": {
+    "id": "top_boundary_response_spread",
+    "unit": "fraction",
+    "value": 0.007081412220711718
+  },
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-069"
+}

@@ -1,0 +1,14 @@
+{
+  "task_id": "urbanwind-task-055",
+  "case_ids": [
+    "task-055-case-001"
+  ],
+  "primary_metric": {
+    "id": "remaining_internal_face_orientation_defect_count",
+    "unit": "faces",
+    "value": 0
+  },
+  "claim_boundary": "Imported synthetic city internal-face winding diagnosis and minimal repair only; geometric conservation diagnostic U=(1,0,0), not solved flow, LES, real-city or experimental truth.",
+  "corrected_geometry": "canonical_repaired_case/constant/polyMesh",
+  "hidden_ID_or_byte_match_required": false
+}

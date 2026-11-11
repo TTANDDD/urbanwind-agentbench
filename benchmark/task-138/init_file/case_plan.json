@@ -1,0 +1,115 @@
+{
+  "cases": [
+    {
+      "case_id": "task-138-case-001",
+      "execution_role": "real_solver_run",
+      "fault_role": "faulty_input",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "从输入、边界、时间步和能量闭合定位NaN起点。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "故障输入"
+      },
+      "metrics": [
+        "nonfinite_value_count_after",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "count(NaN_or_Inf_in_required_outputs)",
+        "id": "nonfinite_value_count_after",
+        "name_zh": "修复后非有限值数量",
+        "unit": "values"
+      },
+      "purpose": "PALM输出NaN诊断：执行变体 故障输入，围绕从输入、边界、时间步和能量闭合定位NaN起点。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-138",
+      "variant": "故障输入"
+    },
+    {
+      "case_id": "task-138-case-002",
+      "execution_role": "provided_data_or_tool_execution",
+      "fault_role": "verified_repair",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "从输入、边界、时间步和能量闭合定位NaN起点。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "修复后验证"
+      },
+      "metrics": [
+        "nonfinite_value_count_after",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "count(NaN_or_Inf_in_required_outputs)",
+        "id": "nonfinite_value_count_after",
+        "name_zh": "修复后非有限值数量",
+        "unit": "values"
+      },
+      "purpose": "PALM输出NaN诊断：执行变体 修复后验证，围绕从输入、边界、时间步和能量闭合定位NaN起点。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-138",
+      "variant": "修复后验证"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "cfd",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 2,
+  "required_solver_runs": 1,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-138"
+}

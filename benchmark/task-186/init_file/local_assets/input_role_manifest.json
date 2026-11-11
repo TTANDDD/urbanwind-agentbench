@@ -1,0 +1,37 @@
+{
+  "all_required_roles_materialized": true,
+  "generator_version": "urbanwind-local-assets-v3",
+  "required_external_inputs": [],
+  "roles": [
+    {
+      "label": "三个冻结退界候选",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/candidate_library.csv",
+        "local_assets/constraints.json",
+        "local_assets/active_learning_data.csv"
+      ],
+      "role_id": "input-001"
+    },
+    {
+      "label": "开发强度约束",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/candidate_library.csv",
+        "local_assets/constraints.json",
+        "local_assets/active_learning_data.csv"
+      ],
+      "role_id": "input-002"
+    },
+    {
+      "label": "角部高风与通风目标",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/task_input_values.json"
+      ],
+      "role_id": "input-003"
+    }
+  ],
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-186"
+}

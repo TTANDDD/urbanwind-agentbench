@@ -1,0 +1,65 @@
+{
+  "cases": [
+    {
+      "case_id": "task-032-case-001",
+      "execution_role": "provided_data_or_tool_execution",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "把树冠转化为可追踪的多孔区而非封闭实体，并保留季节参数。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "树木与多孔冠层几何-目标案例"
+      },
+      "metrics": [
+        "canopy_volume_relative_error",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "abs(volume_model-volume_reference)/volume_reference",
+        "id": "canopy_volume_relative_error",
+        "name_zh": "树冠体积相对误差",
+        "unit": "fraction"
+      },
+      "purpose": "树木与多孔冠层几何：执行变体 树木与多孔冠层几何-目标案例，围绕把树冠转化为可追踪的多孔区而非封闭实体，并保留季节参数。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "qgis",
+        "gdal",
+        "geopandas"
+      ],
+      "task_id": "urbanwind-task-032",
+      "variant": "树木与多孔冠层几何-目标案例"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "lite",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 1,
+  "required_solver_runs": 0,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-032"
+}

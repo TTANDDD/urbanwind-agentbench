@@ -1,0 +1,41 @@
+{
+  "experimental_claim": false,
+  "host": "5070-server",
+  "independent_audit": "validation/openfoam-task069-v36-independent-audit-v1.json",
+  "independent_audit_sha256": "c0d77b77bdcb71f978ad2a2bb5c58950d171735c5dcd645fb15e50bca3b7697e",
+  "openfoam_version": "OpenCFD-v2412",
+  "schema_version": "1.0",
+  "source_runs": [
+    {
+      "case_id": "task-069-case-001",
+      "source_archive": "validation/openfoam-batch-20260926-v36-task069-top-boundary/results/task069-top-slip/reference_candidate.tar.gz",
+      "source_archive_sha256": "9ee1b55fef811f5106acf27decf5ecfc4b84d445dd2e7d5480ad6efc3915389b",
+      "source_batch": "openfoam-batch-20260926-v36-task069-top-boundary",
+      "source_job": "task069-top-slip",
+      "source_status_sha256": "f103bd8700d7f5de2f9c4eb78d7ce9a3b083b96d49bb91836b78b713f1723e04",
+      "variant": "滑移顶部",
+      "variant_key": "slip"
+    },
+    {
+      "case_id": "task-069-case-002",
+      "source_archive": "validation/openfoam-batch-20260926-v36-task069-top-boundary/results/task069-top-symmetryplane/reference_candidate.tar.gz",
+      "source_archive_sha256": "1ee54e2f3d40fbb6d354dde09b4e7b38cacbf59a0685249184d446e8145ef5ea",
+      "source_batch": "openfoam-batch-20260926-v36-task069-top-boundary",
+      "source_job": "task069-top-symmetryplane",
+      "source_status_sha256": "b1185e0a35f0442b821a4646a709c5743ed7ee191a949eae210244a4384de3cf",
+      "variant": "对称顶部",
+      "variant_key": "symmetryPlane"
+    },
+    {
+      "case_id": "task-069-case-003",
+      "source_archive": "validation/openfoam-batch-20260926-v36-task069-top-boundary/results/task069-top-fixedshearstress/reference_candidate.tar.gz",
+      "source_archive_sha256": "a8f3329b7f6807fc43c2ffee17870bf95763e78f30e8d206551986c0c1813f88",
+      "source_batch": "openfoam-batch-20260926-v36-task069-top-boundary",
+      "source_job": "task069-top-fixedshearstress",
+      "source_status_sha256": "bbdf1a56e684f93252a2f0f1fefeecbaef4d8a9e8c6a9c3ea7e9b0d19c27bde5",
+      "variant": "应力顶部",
+      "variant_key": "fixedShearStress"
+    }
+  ],
+  "task_id": "urbanwind-task-069"
+}

@@ -1,0 +1,13 @@
+{
+  "answer_included": false,
+  "expected_agent_action": "diagnose and repair without changing unrelated settings",
+  "fault_family": "cross_software_axis_flip",
+  "fault_seed": 202609030140,
+  "injected": true,
+  "observed_fault_parameters": {
+    "axis": "y",
+    "operation": "sign_flip"
+  },
+  "target_file": "local_assets/city_geometry.geojson",
+  "task_id": "urbanwind-task-140"
+}

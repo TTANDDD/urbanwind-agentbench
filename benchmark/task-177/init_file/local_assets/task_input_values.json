@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "只改变单一因素的配对工况",
+      "role_id": "input-001",
+      "seed": 202609047701,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.80375126,
+        0.12431961,
+        0.43072996,
+        0.28914008,
+        0.46404082,
+        0.20200566,
+        0.47504659,
+        0.6341889,
+        0.45155747,
+        0.84856966,
+        0.74942325,
+        0.37211661,
+        0.76766573,
+        0.63476606,
+        0.43913436,
+        0.14743027
+      ]
+    },
+    {
+      "label": "热点掩膜",
+      "role_id": "input-002",
+      "seed": 202609047702,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.55996341,
+        0.96592164,
+        0.23389201,
+        0.93234256,
+        0.16980206,
+        0.95370429,
+        0.61568507,
+        0.48674863,
+        0.76600535,
+        0.12887945,
+        0.05693727,
+        0.98016227,
+        0.61063747,
+        0.21615783,
+        0.73903541,
+        0.29950778
+      ]
+    },
+    {
+      "label": "参考因素效应",
+      "role_id": "input-003",
+      "seed": 202609047703,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.80218916,
+        0.88902203,
+        0.81095293,
+        0.76952398,
+        0.2561324,
+        0.33909892,
+        0.12523296,
+        0.46118788,
+        0.98848685,
+        0.16520379,
+        0.84236278,
+        0.39709988,
+        0.22375911,
+        0.11901178,
+        0.26763455,
+        0.93292156
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-177"
+}

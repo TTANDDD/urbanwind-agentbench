@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "气温、相对湿度、风速和平均辐射温度",
+      "role_id": "input-001",
+      "seed": 202609047201,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.71942501,
+        0.4901649,
+        0.14578795,
+        0.77253128,
+        0.52617803,
+        0.80905797,
+        0.81175457,
+        0.12403781,
+        0.74754514,
+        0.70528356,
+        0.49849321,
+        0.58584998,
+        0.78377917,
+        0.83110227,
+        0.98179471,
+        0.84728522
+      ]
+    },
+    {
+      "label": "冻结UTCI算法版本",
+      "role_id": "input-002",
+      "seed": 202609047202,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.66090377,
+        0.88219855,
+        0.82897194,
+        0.75223816,
+        0.4459319,
+        0.32404141,
+        0.76649272,
+        0.15383063,
+        0.08944895,
+        0.27787239,
+        0.10353578,
+        0.59394735,
+        0.1490389,
+        0.26804486,
+        0.36561477,
+        0.48336022
+      ]
+    },
+    {
+      "label": "行人位置与时段掩膜",
+      "role_id": "input-003",
+      "seed": 202609047203,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.80203995,
+        0.90547015,
+        0.19733039,
+        0.43629441,
+        0.26847103,
+        0.62119951,
+        0.47059082,
+        0.71449008,
+        0.17839123,
+        0.63692582,
+        0.64485566,
+        0.44485769,
+        0.99397931,
+        0.88860284,
+        0.22497008,
+        0.47888203
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-172"
+}

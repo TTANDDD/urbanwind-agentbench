@@ -1,0 +1,442 @@
+{
+  "current_evaluator_boundary": "59-row U-vector/kinematic-pressure CSV, coordinate-joined synthetic-observation metric and hidden OpenFOAM numerical probes are checked; no experimental truth or frozen release runtime is claimed.",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision": "decision.md",
+  "decision_required_terms": [
+    "证据",
+    "限制",
+    "结论"
+  ],
+  "evidence_manifest": "evidence_manifest.json",
+  "expected_case_ids": [
+    "task-089-case-001"
+  ],
+  "expected_solver_case_ids": [
+    "task-089-case-001"
+  ],
+  "metric_contracts": [
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "mean_59(abs(Ux_CFD(coord)-Ux_synthetic(coord)))/1.2; exact (x,y,z) join of 59 fluid observations, t=300-420 s",
+      "id": "local_reference_comparison_nmae",
+      "name_zh": "单体建筑本地合成参考流向速度NMAE",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    }
+  ],
+  "metric_ids": [
+    "local_reference_comparison_nmae",
+    "evidence_provenance_fraction",
+    "hard_gate_pass_fraction"
+  ],
+  "metrics": "metrics.json",
+  "required_external_inputs": [],
+  "required_inputs": [
+    "随任务本地生成的OpenFOAM起始案例",
+    "本地OpenFOAM运行版本记录合同",
+    "本地合成数值参考（仅作固定比较输入，不是PIV或实验真值）"
+  ],
+  "required_solver_runs": 1,
+  "run_manifest": "run_manifest.json",
+  "schema_version": "1.0",
+  "score_layers": {
+    "artifact_and_schema": 10,
+    "engineering_decision": 10,
+    "external_validation": 15,
+    "numerical_quality": 20,
+    "physical_fidelity": 25,
+    "real_tool_execution": 20
+  },
+  "simulation_result_contract": {
+    "case_results": {
+      "allow_additional_fluid_probe_points": true,
+      "coordinate_join": "exact (x_m,y_m,z_m) match, never array-index join",
+      "exact_case_ids": [
+        "task-089-case-001"
+      ],
+      "local_reference_file": "local_assets/reference_observations.csv",
+      "local_reference_sha256": "3f149cd2ec1984186c1cf562789d09290bae92a605547de1e7c16dd4a4d3937e",
+      "minimum_sample_count": 600,
+      "required_fields": [
+        "case_id",
+        "variant",
+        "window_s",
+        "sample_count",
+        "probe_points_m",
+        "mean_Ux_m_s",
+        "resolved_tke_m2_s2",
+        "gate_diagnostics",
+        "all_run_gates_pass"
+      ],
+      "required_fluid_probe_points_m": [
+        [
+          -2.0,
+          0.5,
+          1.0
+        ],
+        [
+          -1.75,
+          0.5,
+          1.0
+        ],
+        [
+          -1.5,
+          0.5,
+          1.0
+        ],
+        [
+          -1.25,
+          0.5,
+          1.0
+        ],
+        [
+          -1.0,
+          0.5,
+          1.0
+        ],
+        [
+          -0.75,
+          0.5,
+          1.0
+        ],
+        [
+          0.75,
+          0.5,
+          1.0
+        ],
+        [
+          1.0,
+          0.5,
+          1.0
+        ],
+        [
+          1.25,
+          0.5,
+          1.0
+        ],
+        [
+          1.5,
+          0.5,
+          1.0
+        ],
+        [
+          1.75,
+          0.5,
+          1.0
+        ],
+        [
+          2.0,
+          0.5,
+          1.0
+        ],
+        [
+          2.25,
+          0.5,
+          1.0
+        ],
+        [
+          2.5,
+          0.5,
+          1.0
+        ],
+        [
+          2.75,
+          0.5,
+          1.0
+        ],
+        [
+          3.0,
+          0.5,
+          1.0
+        ],
+        [
+          3.25,
+          0.5,
+          1.0
+        ],
+        [
+          3.5,
+          0.5,
+          1.0
+        ],
+        [
+          3.75,
+          0.5,
+          1.0
+        ],
+        [
+          4.0,
+          0.5,
+          1.0
+        ],
+        [
+          4.25,
+          0.5,
+          1.0
+        ],
+        [
+          4.5,
+          0.5,
+          1.0
+        ],
+        [
+          4.75,
+          0.5,
+          1.0
+        ],
+        [
+          5.0,
+          0.5,
+          1.0
+        ],
+        [
+          5.25,
+          0.5,
+          1.0
+        ],
+        [
+          5.5,
+          0.5,
+          1.0
+        ],
+        [
+          5.75,
+          0.5,
+          1.0
+        ],
+        [
+          6.0,
+          0.5,
+          1.0
+        ],
+        [
+          6.25,
+          0.5,
+          1.0
+        ],
+        [
+          6.5,
+          0.5,
+          1.0
+        ],
+        [
+          6.75,
+          0.5,
+          1.0
+        ],
+        [
+          7.0,
+          0.5,
+          1.0
+        ],
+        [
+          7.25,
+          0.5,
+          1.0
+        ],
+        [
+          7.5,
+          0.5,
+          1.0
+        ],
+        [
+          7.75,
+          0.5,
+          1.0
+        ],
+        [
+          8.0,
+          0.5,
+          1.0
+        ],
+        [
+          8.25,
+          0.5,
+          1.0
+        ],
+        [
+          8.5,
+          0.5,
+          1.0
+        ],
+        [
+          8.75,
+          0.5,
+          1.0
+        ],
+        [
+          9.0,
+          0.5,
+          1.0
+        ],
+        [
+          9.25,
+          0.5,
+          1.0
+        ],
+        [
+          9.5,
+          0.5,
+          1.0
+        ],
+        [
+          9.75,
+          0.5,
+          1.0
+        ],
+        [
+          10.0,
+          0.5,
+          1.0
+        ],
+        [
+          10.25,
+          0.5,
+          1.0
+        ],
+        [
+          10.5,
+          0.5,
+          1.0
+        ],
+        [
+          10.75,
+          0.5,
+          1.0
+        ],
+        [
+          11.0,
+          0.5,
+          1.0
+        ],
+        [
+          11.25,
+          0.5,
+          1.0
+        ],
+        [
+          11.5,
+          0.5,
+          1.0
+        ],
+        [
+          11.75,
+          0.5,
+          1.0
+        ],
+        [
+          12.0,
+          0.5,
+          1.0
+        ],
+        [
+          12.25,
+          0.5,
+          1.0
+        ],
+        [
+          12.5,
+          0.5,
+          1.0
+        ],
+        [
+          12.75,
+          0.5,
+          1.0
+        ],
+        [
+          13.0,
+          0.5,
+          1.0
+        ],
+        [
+          13.25,
+          0.5,
+          1.0
+        ],
+        [
+          13.5,
+          0.5,
+          1.0
+        ],
+        [
+          13.75,
+          0.5,
+          1.0
+        ]
+      ],
+      "solid_reference_point_mask": [
+        [
+          -0.5,
+          0.5,
+          1.0
+        ],
+        [
+          -0.25,
+          0.5,
+          1.0
+        ],
+        [
+          0.0,
+          0.5,
+          1.0
+        ],
+        [
+          0.25,
+          0.5,
+          1.0
+        ],
+        [
+          0.5,
+          0.5,
+          1.0
+        ]
+      ],
+      "statistical_window_s": [
+        300.0,
+        420.0
+      ],
+      "units": {
+        "mean_Ux_m_s": "m/s",
+        "resolved_tke_m2_s2": "m2/s2"
+      }
+    },
+    "path": "simulation_metrics.json",
+    "required_sampling_csv": {
+      "coordinate_join": "exact 59 required fluid coordinates; additional probes may exist in simulation_metrics.json but not in this CSV",
+      "field_units": {
+        "Ux_m_s": "m/s",
+        "Uy_m_s": "m/s",
+        "Uz_m_s": "m/s",
+        "p_m2_s2": "m2/s2"
+      },
+      "header": [
+        "x_m",
+        "y_m",
+        "z_m",
+        "Ux_m_s",
+        "Uy_m_s",
+        "Uz_m_s",
+        "p_m2_s2"
+      ],
+      "path": "comparison_line_p_U.csv",
+      "row_count": 59
+    },
+    "task_id": "urbanwind-task-089",
+    "task_specific_metric_formula": "mean_59(abs(Ux_CFD(coord)-Ux_synthetic(coord)))/1.2; exact (x,y,z) join of 59 fluid observations, t=300-420 s"
+  },
+  "task_id": "urbanwind-task-089"
+}

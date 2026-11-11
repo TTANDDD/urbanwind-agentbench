@@ -1,0 +1,12 @@
+&initialization_parameters
+ nx = 79, ny = 79, nz = 47,
+ dx = 1.0, dy = 1.0, dz = 1.0,
+ origin_date_time = '2026-01-01 00:00:00 +00',
+ initializing_actions = 'set_constant_profiles',
+ ug_surface = 1.2, vg_surface = 0.0,
+ neutral = .TRUE.,
+/
+&runtime_parameters
+ end_time = 600.0,
+ dt_run_control = 60.0,
+/

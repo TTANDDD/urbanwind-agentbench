@@ -1,0 +1,58 @@
+{
+  "benchmark_cases": 1,
+  "directory_schema": {
+    "scotch": "partition_study/scotch",
+    "simple": "partition_study/simple"
+  },
+  "evaluation_isolated_replay_sequence": [
+    "blockMesh",
+    "checkMesh",
+    "decomposePar",
+    "checkMesh.parallel"
+  ],
+  "expected_raw_files": [
+    "constant/polyMesh/points",
+    "constant/polyMesh/faces",
+    "constant/polyMesh/owner",
+    "constant/polyMesh/neighbour",
+    "constant/polyMesh/boundary",
+    "processor{rank}/constant/polyMesh/points",
+    "processor{rank}/constant/polyMesh/faces",
+    "processor{rank}/constant/polyMesh/owner",
+    "processor{rank}/constant/polyMesh/neighbour",
+    "processor{rank}/constant/polyMesh/boundary",
+    "processor{rank}/constant/polyMesh/cellProcAddressing",
+    "processor{rank}/constant/polyMesh/faceProcAddressing",
+    "processor{rank}/constant/polyMesh/pointProcAddressing",
+    "processor{rank}/constant/polyMesh/boundaryProcAddressing",
+    "log.blockMesh",
+    "log.checkMesh",
+    "log.decomposePar",
+    "commands.json"
+  ],
+  "flow_solver_runs": 0,
+  "legacy_synthetic_CSV_policy": "No synthetic mesh_levels or mesh_solution_series file is an executed mesh, assignment, quality log or result.",
+  "method_configs": "local_assets/openfoam_base/method_configs/{method}/decomposeParDict",
+  "method_subruns": [
+    "simple",
+    "scotch"
+  ],
+  "primary_reporting": {
+    "aggregation": "per_method_mapping_within_one_comparison_case",
+    "formula": "(max(cells_per_rank)-mean(cells_per_rank))/mean(cells_per_rank)",
+    "id": "cell_load_imbalance_ratio",
+    "unit": "fraction",
+    "value_schema": {
+      "scotch": "finite number",
+      "simple": "finite number"
+    }
+  },
+  "ranks_per_method": 4,
+  "status": "outputs_must_be_created_by_real_tools",
+  "submitted_tool_sequence": [
+    "blockMesh",
+    "checkMesh",
+    "decomposePar"
+  ],
+  "task_id": "urbanwind-task-054"
+}

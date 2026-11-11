@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "随任务本地生成的GIS/几何输入",
+      "role_id": "input-001",
+      "seed": 202609033201,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.31602115,
+        0.74229163,
+        0.30081984,
+        0.32598618,
+        0.75791613,
+        0.84923813,
+        0.97877152,
+        0.89995309,
+        0.81415974,
+        0.87728795,
+        0.66884865,
+        0.56722211,
+        0.53205565,
+        0.95125229,
+        0.2915839,
+        0.93521964
+      ]
+    },
+    {
+      "label": "本地转换规则",
+      "role_id": "input-002",
+      "seed": 202609033202,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.06124805,
+        0.06634166,
+        0.94199041,
+        0.16219047,
+        0.98203285,
+        0.26729121,
+        0.25891318,
+        0.23630576,
+        0.43981943,
+        0.93644663,
+        0.99620212,
+        0.11634026,
+        0.7287743,
+        0.59772971,
+        0.14484249,
+        0.93608921
+      ]
+    },
+    {
+      "label": "本地标签控制样本",
+      "role_id": "input-003",
+      "seed": 202609033203,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.32626028,
+        0.9880775,
+        0.21747831,
+        0.99982175,
+        0.83311705,
+        0.0787497,
+        0.21005564,
+        0.40493344,
+        0.09236008,
+        0.19751085,
+        0.90214318,
+        0.1256257,
+        0.87515052,
+        0.59114828,
+        0.68693157,
+        0.06528498
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-032"
+}

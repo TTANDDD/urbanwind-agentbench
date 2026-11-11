@@ -1,0 +1,27 @@
+{
+  "assets": [
+    {
+      "availability": "bundled",
+      "experimental": false,
+      "id": "local-generated-inputs",
+      "origin": "urbanwind-local-assets-v3",
+      "role": "required_task_input"
+    },
+    {
+      "availability": "bundled",
+      "experimental": false,
+      "id": "local-numerical-reference",
+      "origin": "deterministic_formula",
+      "role": "visible_validation_input"
+    },
+    {
+      "availability": "one_click_public_optional",
+      "id": "aij-case-a",
+      "required": false,
+      "role": "optional_empirical_enhancement",
+      "url": "https://zenodo.org/records/15050148"
+    }
+  ],
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-045"
+}

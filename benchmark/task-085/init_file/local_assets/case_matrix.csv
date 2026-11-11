@@ -1,0 +1,3 @@
+case_id,variant,seed,wind_direction_deg,reference_speed_m_s,stability,surface_heat_flux_w_m2,sgs_model,time_step_s,convection_scheme,pressure_velocity_coupling,roughness_length_m,source_configuration,decomposition_method,restart_segments,software_variant,controlled_factor,controlled_level
+task-085-case-001,有界高阶格式（limitedLinearV 1）,202609038500,0.0,1.2,neutral,0.0,,,limitedLinearV_1,,,,,,,convection_scheme,有界高阶格式（limitedLinearV 1）
+task-085-case-002,一阶迎风耗散格式,202609038500,0.0,1.2,neutral,0.0,,,upwind_first_order,,,,,,,convection_scheme,一阶迎风耗散格式

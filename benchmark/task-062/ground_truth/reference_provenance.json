@@ -1,0 +1,31 @@
+{
+  "experimental_claim": false,
+  "host": "5070-server",
+  "independent_audit": "validation/openfoam-task062-v32-independent-audit-v1.json",
+  "independent_audit_sha256": "402f6023bf0a57f8590e09b79e375f2f98f8d7a18a679f181a1ae941ebc2be9e",
+  "openfoam_version": "OpenCFD-v2412",
+  "schema_version": "1.0",
+  "source_runs": [
+    {
+      "case_id": "task-062-case-001",
+      "source_archive": "validation/openfoam-batch-20260923-v32-task062-profile-law/results/task062-power-law/reference_candidate.tar.gz",
+      "source_archive_sha256": "e3b609940686f17838a37d8e074b535d662321cbca9710a94bf0b54cb68df72d",
+      "source_batch": "openfoam-batch-20260923-v32-task062-profile-law",
+      "source_job": "task062-power-law",
+      "source_status_sha256": "37667a0105a438ae754791d78a652de7ea9c26629a98aa2e8483370da3b047c1",
+      "variant": "幂律入口",
+      "variant_key": "power"
+    },
+    {
+      "case_id": "task-062-case-002",
+      "source_archive": "validation/openfoam-batch-20260923-v32-task062-profile-law/results/task062-log-law/reference_candidate.tar.gz",
+      "source_archive_sha256": "1d6260d763c1387e6d1c6c9c4ab14c400aadf8a55275b5907986ce3c6ab1e10c",
+      "source_batch": "openfoam-batch-20260923-v32-task062-profile-law",
+      "source_job": "task062-log-law",
+      "source_status_sha256": "770db7308501cd02ab48b73daab2d8ffc1a480a5d1fc3892a9dabaefdedf15b6",
+      "variant": "对数律入口",
+      "variant_key": "log"
+    }
+  ],
+  "task_id": "urbanwind-task-062"
+}

@@ -1,0 +1,25 @@
+{
+  "experimental_claim": false,
+  "host": "5070-server",
+  "independent_audit": "validation/openfoam-task076-v42-independent-audit-v1.json",
+  "independent_audit_sha256": "7a19902e8eb66b3bcc521c318f83d3f96389af9d509c94b970acbefe1d188f56",
+  "schema_version": "1.0",
+  "software": {
+    "name": "OpenFOAM",
+    "solver": "buoyantPimpleFoam",
+    "version": "OpenCFD-v2412"
+  },
+  "source_runs": [
+    {
+      "case_id": "task-076-case-001",
+      "source_archive": "validation/openfoam-batch-20260930-v42-task076-potential-temperature/results/task076-three-layer-theta-hydrostatic/reference_candidate.tar.gz",
+      "source_archive_sha256": "60c1d5736473bec175592505cb526f59c8174beb118a915d280f0bc36bedb2ec",
+      "source_batch": "openfoam-batch-20260930-v42-task076-potential-temperature",
+      "source_job": "task076-three-layer-theta-hydrostatic",
+      "source_status_sha256": "96c889a99f6aca5820b34a7c37e06d0b01f9df0479846d52c758f2208f40e956",
+      "variant": "三段式位温与静力一致初始场真实求解验证",
+      "variant_key": "three_layer_theta_hydrostatic_city_initialization"
+    }
+  ],
+  "task_id": "urbanwind-task-076"
+}

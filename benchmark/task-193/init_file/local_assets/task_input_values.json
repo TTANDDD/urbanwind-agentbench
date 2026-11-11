@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "两个设计乘三个风向",
+      "role_id": "input-001",
+      "seed": 202609049301,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.29244785,
+        0.45017562,
+        0.62713837,
+        0.58955993,
+        0.05183804,
+        0.53524989,
+        0.1782557,
+        0.22768017,
+        0.90696617,
+        0.14217666,
+        0.64815123,
+        0.05791461,
+        0.8004941,
+        0.16992798,
+        0.59071555,
+        0.51752964
+      ]
+    },
+    {
+      "label": "冻结风向权重",
+      "role_id": "input-002",
+      "seed": 202609049302,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.3276129,
+        0.21329565,
+        0.11958226,
+        0.75271874,
+        0.06308042,
+        0.68815534,
+        0.31604075,
+        0.12541954,
+        0.60900941,
+        0.40029862,
+        0.83283898,
+        0.32719176,
+        0.72140864,
+        0.89794794,
+        0.7157825,
+        0.17782381
+      ]
+    },
+    {
+      "label": "稳健目标与最坏情景约束",
+      "role_id": "input-003",
+      "seed": 202609049303,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.7807696,
+        0.74191013,
+        0.92551901,
+        0.08847131,
+        0.14368018,
+        0.15505323,
+        0.88685989,
+        0.32398407,
+        0.61472592,
+        0.27015647,
+        0.27440213,
+        0.11304301,
+        0.4724416,
+        0.53148098,
+        0.45743523,
+        0.76855696
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-193"
+}

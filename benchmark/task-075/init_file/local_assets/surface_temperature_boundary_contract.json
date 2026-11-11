@@ -1,0 +1,155 @@
+{
+  "case_id": "task-075-case-001",
+  "execution_role": "real_solver_run",
+  "frozen_gates": {
+    "max_abs_cumulative_continuity": 0.0001,
+    "max_alignment_rmse_k": 1e-08,
+    "max_courant": 1.0,
+    "mean_temperature_half_window_drift_k": 0.5,
+    "required_cell_count": 141952,
+    "required_final_time_s": 180.0,
+    "required_mean_fields": [
+      "UMean",
+      "UPrime2Mean",
+      "TMean",
+      "TPrime2Mean"
+    ],
+    "required_missing_count": 1,
+    "required_response_probe_count": 24,
+    "required_solver_runs": 1,
+    "temperature_range_k": [
+      250.0,
+      350.0
+    ],
+    "vertical_exchange_half_window_drift_m_s": 0.05
+  },
+  "hidden_boundary": "Visible source chronology, missing rule, aligned table, formulas, shapes and gates only; no hidden solver output arrays.",
+  "metric_reconstruction": {
+    "formula": "sqrt(mean_t((areaMean(T_building_patch,t)-linear_interp(impute_linear(T_source),t))^2))",
+    "sample_source": "raw surfaceFieldValue areaAverage(T) output emitted by the running solver",
+    "source_policy": "surface_temperature_source.csv plus the frozen internal-gap interpolation rule",
+    "target_source": "piecewise-linear interpolation of surface_temperature_aligned.csv at every emitted solver sample time"
+  },
+  "openfoam_boundary": {
+    "evidence_function_object": "surfaceFieldValue areaAverage(T) on patch building",
+    "evidence_path": "postProcessing/buildingTemperature/*/surfaceFieldValue.dat",
+    "field": "T",
+    "function_type": "table",
+    "interpolation": "linear",
+    "patch": "building",
+    "type": "uniformFixedValue"
+  },
+  "path_policy": "relative paths under submission root, unique and SHA-256 matched",
+  "primary_metric": {
+    "aggregation": "per_case_then_task",
+    "formula": "sqrt(mean_t((areaMean(T_building_patch,t)-linear_interp(impute_linear(T_source),t))^2))",
+    "id": "surface_temperature_alignment_rmse_K",
+    "name_zh": "表面温度时间对齐RMSE",
+    "unit": "K"
+  },
+  "required_manifest": "surface_temperature_evidence_manifest.json",
+  "required_raw_evidence_per_case": [
+    "source_csv",
+    "aligned_csv",
+    "field_T0",
+    "surface_T",
+    "probe_U",
+    "probe_T",
+    "solver_log",
+    "checkMesh_log",
+    "controlDict",
+    "turbulenceProperties",
+    "mean_UMean",
+    "mean_UPrime2Mean",
+    "mean_TMean",
+    "mean_TPrime2Mean",
+    "run_commands"
+  ],
+  "required_result": "surface_temperature_results.json",
+  "response_probes": "local_assets/thermal_response_probes.csv",
+  "result_contract": {
+    "building_temperature_shape": [
+      900
+    ],
+    "path": "surface_temperature_results.json",
+    "probe_T_shape": [
+      900,
+      24
+    ],
+    "probe_U_shape": [
+      900,
+      24,
+      3
+    ],
+    "time_shape": [
+      900
+    ]
+  },
+  "schema_version": "1.0",
+  "software_chain": [
+    "python",
+    "openfoam"
+  ],
+  "solver": {
+    "ambient_temperature_k": 300.0,
+    "application": "buoyantPimpleFoam",
+    "delta_t_s": 0.015,
+    "full_end_s": 180.0,
+    "mpi_ranks": 16,
+    "openfoam_version": "OpenCFD-v2412",
+    "smoke_end_s": 0.15,
+    "statistics_start_s": 60.0,
+    "turbulence_model": "WALE"
+  },
+  "source_initialization": {
+    "file_sha256": {
+      "0/U": "1a2f187e62672ab37d35c1f92f58094c1d2256a4ae9ef896375d86dc4c6fa12b",
+      "0/nut": "4974f18ec749a3711c1ffaee5d9e96c20bce5f8ad9516e5643e7cffe4c8a832e",
+      "constant/transportProperties": "1146aa084b034003b8b6ea2f5dee6fb8ff32f91663f42acbfdd758531f018f63",
+      "constant/turbulenceProperties": "fb6024412da49f02f674cb66d6e3ccb71f25ee0dc281585bccf09bfed1f354fa",
+      "system/blockMeshDict": "029a00106455fd021dfefa44291973a59380ad69049c240ca7c462c8a26abb2c"
+    },
+    "files": [
+      "system/blockMeshDict",
+      "0/U",
+      "0/nut",
+      "constant/transportProperties",
+      "constant/turbulenceProperties"
+    ],
+    "origin_task": "urbanwind-task-092",
+    "path": "local_assets/openfoam_city_base",
+    "source_archive_sha256": "fcc0f0b5b01e90c7cfe1b7d0d1e642cde41691833ab533c409698e6413bc707f",
+    "truth_type": "bundled_locally_rebuildable_mesh_and_analytic_zero_time_fields"
+  },
+  "source_temperature": {
+    "aligned_path": "local_assets/surface_temperature_aligned.csv",
+    "aligned_values_k": [
+      302.0,
+      303.4,
+      304.625,
+      306.2,
+      304.7,
+      303.0
+    ],
+    "irregular_elapsed_s": [
+      0.0,
+      19.0,
+      47.0,
+      83.0,
+      131.0,
+      180.0
+    ],
+    "missing_elapsed_s": [
+      47.0
+    ],
+    "missing_value_policy": "linear interpolation between nearest valid neighbors; no endpoint extrapolation",
+    "path": "local_assets/surface_temperature_source.csv",
+    "time_origin": "2026-07-15T12:00:00+08:00",
+    "timestamp_policy": "ISO-8601 offset timestamps converted to elapsed seconds from the visible time origin",
+    "timezone": "Asia/Shanghai",
+    "unit": "K"
+  },
+  "task_gate": "The visible source chronology, exactly one internal missing value, frozen linear fill, OpenFOAM table, solver-emitted building-patch temperature series and sole full run must all pass; no post-hoc rule or gate changes.",
+  "task_id": "urbanwind-task-075",
+  "truth_boundary": "Local synthetic surface-temperature scenario and OpenFOAM numerical execution reference only; not real-city, experimental, PIV, DNS, wind-tunnel or field truth, and not release-valid."
+}

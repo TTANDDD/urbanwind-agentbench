@@ -1,0 +1,63 @@
+{
+  "cases": [
+    {
+      "case_id": "task-061-case-001",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "SB4_LOCAL",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "依据摩阻速度、粗糙度和位移高度生成速度与湍流剖面。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "中性对数律入口构建-参考工况"
+      },
+      "metrics": [
+        "inlet_profile_rmse_ms",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "sqrt(sum_i(dz_i*(Ux_i-Ulog(z_i))^2)/sum_i(dz_i)); Ulog(z)=Uref*ln((z-d+z0)/z0)/ln((Zref-d+z0)/z0)",
+        "id": "inlet_profile_rmse_ms",
+        "name_zh": "入口剖面RMSE",
+        "unit": "m/s"
+      },
+      "purpose": "中性对数律入口构建：执行变体 中性对数律入口构建-参考工况，围绕依据摩阻速度、粗糙度和位移高度生成速度与湍流剖面。",
+      "reference_status": "verified_openfoam_numerical_reference_generated",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-061",
+      "variant": "中性对数律入口构建-参考工况"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "cfd",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 1,
+  "required_solver_runs": 1,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-061"
+}

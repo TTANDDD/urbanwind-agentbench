@@ -1,0 +1,21 @@
+{
+  "expected_output_files": [
+    "constant/polyMesh/points",
+    "constant/polyMesh/faces",
+    "constant/polyMesh/owner",
+    "constant/polyMesh/neighbour",
+    "constant/polyMesh/boundary",
+    "log.blockMesh",
+    "log.checkMesh",
+    "log.decomposePar",
+    "log.checkMesh.parallel"
+  ],
+  "solver_runs": 0,
+  "status": "outputs_must_be_created_by_real_tools",
+  "tool_sequence": [
+    "blockMesh",
+    "checkMesh",
+    "decomposePar",
+    "checkMesh.parallel"
+  ]
+}

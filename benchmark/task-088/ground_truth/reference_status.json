@@ -1,0 +1,67 @@
+{
+  "blockers": [
+    "frozen distributable runtime",
+    "packaged hidden-evaluator execution"
+  ],
+  "canonical_result": "canonical_result.json",
+  "claim_boundary": "Reference-ready numerical sampling task; benchmark release remains blocked.",
+  "data_acquisition_blockers": [],
+  "evaluator_status": "task_specific_numeric_array_check",
+  "expected_ground_truth": {
+    "case_ids": [
+      "task-088-case-001"
+    ],
+    "hidden_tolerances_status": "frozen_sampling_signature_tolerance",
+    "input_roles": [
+      "随任务本地生成的OpenFOAM起始案例",
+      "本地OpenFOAM运行版本记录合同",
+      "本地合成数值参考（仅作固定比较输入，不是PIV或实验真值）"
+    ],
+    "metric_contracts": [
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "verified_products/6 for probes_{U,p}, pedestrianPlane_{U,p}@z=1m, wakePlane_{U,p}@x=2m; probes t=60-420s and planes at 60s intervals",
+        "id": "sampling_location_coverage",
+        "name_zh": "探针切面位置覆盖率",
+        "unit": "fraction"
+      },
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "hashed_source_linked_evidence / required_evidence",
+        "id": "evidence_provenance_fraction",
+        "name_zh": "证据溯源覆盖率",
+        "unit": "fraction"
+      },
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "passed_hard_gates / required_hard_gates",
+        "id": "hard_gate_pass_fraction",
+        "name_zh": "硬门禁通过率",
+        "unit": "fraction"
+      }
+    ],
+    "reference_values_status": "verified_openfoam_numerical_reference_generated"
+  },
+  "experimental_claim": false,
+  "limitations": [
+    "The hidden signatures are one OpenFOAM v2412 numerical run, not wind-tunnel, PIV, DNS or field truth.",
+    "The evaluator parses submitted raw probe and plane files but does not rerun OpenFOAM.",
+    "Frozen distributable runtime and packaged hidden evaluation remain pending."
+  ],
+  "reference_case_arrays": "reference_case_arrays.json",
+  "reference_metrics": "reference_metrics.json",
+  "reference_provenance": "reference_provenance.json",
+  "reference_sampling_signatures": "reference_sampling_signatures.json",
+  "reference_status": "openfoam_numerical_reference_generated",
+  "release_status": "reference_ready_not_release_valid",
+  "required_reference_artifacts": [
+    "locally generated source inputs with generation manifest: 随任务本地生成的OpenFOAM起始案例; 本地OpenFOAM运行版本记录合同; 本地合成数值参考（仅作固定比较输入，不是PIV或实验真值）",
+    "real tool and solver run manifests",
+    "raw fields, logs and post-processing arrays",
+    "recomputed task metrics: sampling_location_coverage; evidence_provenance_fraction; hard_gate_pass_fraction",
+    "positive and adversarial evaluator tests"
+  ],
+  "schema_version": "1.2",
+  "task_id": "urbanwind-task-088",
+  "truth_type": "verified_openfoam_numerical_reference"
+}

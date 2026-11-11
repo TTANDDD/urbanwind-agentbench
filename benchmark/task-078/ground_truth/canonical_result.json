@@ -1,0 +1,25 @@
+{
+  "block_windows_s": [
+    [
+      300.0,
+      360.0
+    ],
+    [
+      360.0,
+      420.0
+    ]
+  ],
+  "case_ids": [
+    "task-078-case-001"
+  ],
+  "cell_count": 365488,
+  "claim_boundary": "Local single-building wake-source OpenFOAM numerical stationarity reference; not a classical periodic precursor or experimental truth.",
+  "primary_metric": {
+    "id": "precursor_block_mean_drift",
+    "unit": "fraction",
+    "value": 0.0440408230504378
+  },
+  "probe_count": 64,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-078"
+}

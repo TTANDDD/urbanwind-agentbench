@@ -1,0 +1,22 @@
+{
+  "diagnostic_metrics": {
+    "inlet_U_rmse_m_s": 2.3289178146136844e-12,
+    "inlet_k_rmse_m2_s2": 8.756884106730922e-15,
+    "inlet_omega_rmse_s_1": 1.0393524470871513e-12
+  },
+  "experimental_claim": false,
+  "metric_formula": "max(abs(R_faulty_reported-R_faulty_visible),R_repaired); R=max_pairwise_abs(z0_inlet,z0_wall,z0_map)/max(max(z0_inlet,z0_wall,z0_map),1e-6)",
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-063",
+  "truth_type": "verified_openfoam_numerical_reference",
+  "units": {
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction",
+    "roughness_consistency_residual": "fraction"
+  },
+  "values": {
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0,
+    "roughness_consistency_residual": 0.0
+  }
+}

@@ -1,0 +1,341 @@
+{
+  "current_evaluator_boundary": "Parses raw GeoJSON/GeoPackage, mesh, z0 wall-function patches, inlet and response probes and solver logs; recomputes mapping and compares hidden OpenFOAM numerical arrays. It does not establish real-city or experimental truth.",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision": "decision.md",
+  "decision_required_terms": [
+    "证据",
+    "限制",
+    "结论"
+  ],
+  "evidence_manifest": "evidence_manifest.json",
+  "expected_case_ids": [
+    "task-072-case-001"
+  ],
+  "expected_solver_case_ids": [
+    "task-072-case-001"
+  ],
+  "metric_contracts": [
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "sum_j(A_j*I(patch_geometry_j matches source_zone_j and abs(z0_OpenFOAM_j-z0_source_j)<=1e-12))/sum_j(A_j)",
+      "id": "roughness_zone_mapping_accuracy",
+      "name_zh": "粗糙度分区映射准确率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    }
+  ],
+  "metric_ids": [
+    "roughness_zone_mapping_accuracy",
+    "evidence_provenance_fraction",
+    "hard_gate_pass_fraction"
+  ],
+  "metrics": "metrics.json",
+  "required_external_inputs": [],
+  "required_inputs": [
+    "本地合成GeoJSON粗糙度分区与z0类别表",
+    "本地OpenFOAM单体建筑基准域",
+    "中性ABL入口与粗糙度空间映射合同"
+  ],
+  "required_solver_runs": 1,
+  "roughness_mapping_result_contract": {
+    "case_id": "task-072-case-001",
+    "cpu_affinity": "64-79",
+    "execution_role": "real_solver_run",
+    "frozen_gates": {
+      "area_abs_tolerance_m2": 1e-08,
+      "centroid_tolerance_m": 1e-09,
+      "expected_total_ground_area_m2": 333.8,
+      "max_abs_cumulative_continuity": 0.01,
+      "max_inlet_U_rmse_m_s": 1e-06,
+      "max_inlet_k_rmse_m2_s2": 1e-06,
+      "max_inlet_omega_rmse_s_1": 1e-05,
+      "max_last20_initial_residual_full": 0.0001,
+      "min_mapping_accuracy": 1.0,
+      "required_cell_count": 365488,
+      "required_final_iteration": 400,
+      "required_gis_feature_count": 3,
+      "required_ground_patch_count": 3,
+      "required_response_probe_count": 12,
+      "required_solver_runs": 1,
+      "response_velocity_range_m_s": [
+        -5.0,
+        5.0
+      ],
+      "z0_abs_tolerance_m": 1e-12
+    },
+    "full_iterations": 400,
+    "geometry": {
+      "D_m": 1.0,
+      "building_footprint_m2": 1.0,
+      "description": "365488-cell conformal D x D x 4D single-building domain with the ground split into three GIS-derived roughness patches",
+      "domain_m": [
+        [
+          -4.0,
+          23.0
+        ],
+        [
+          -6.2,
+          6.2
+        ],
+        [
+          0.0,
+          9.0
+        ]
+      ],
+      "expected_total_ground_area_m2": 333.8
+    },
+    "gis_stage": {
+      "external_download_required": false,
+      "feature_count": 3,
+      "geometry_types": [
+        "Polygon",
+        "MultiPolygon"
+      ],
+      "output": "roughness_zones.gpkg",
+      "required_tools": [
+        "ogr2ogr",
+        "ogrinfo"
+      ],
+      "source": "roughness_zones.geojson",
+      "source_crs": "EPSG:3857"
+    },
+    "hidden_boundary": "Visible source zones, z0 table, formula, probe coordinates, shapes and gates only; no hidden response arrays.",
+    "mapping_rule": "Assign each original blockMesh ground face to the unique source polygon containing its horizontal centroid; preserve polygon zone_id, patch_name and z0_m in the OpenFOAM boundary patches.",
+    "metric_reconstruction": {
+      "aggregation": "area-weighted correct-zone area divided by total mapped ground area",
+      "mesh_files": [
+        "constant/polyMesh/points",
+        "constant/polyMesh/faces",
+        "constant/polyMesh/boundary"
+      ],
+      "roughness_field": "0/nut",
+      "source_files": [
+        "roughness_zones.geojson",
+        "roughness_zone_table.csv"
+      ],
+      "zone_correct": "all patch face centroids lie inside the source zone, reconstructed patch area matches the source-zone area, and OpenFOAM z0 matches source z0 within 1e-12 m"
+    },
+    "mpi_ranks": 16,
+    "path_policy": "relative paths under submission root, unique and SHA-256 matched",
+    "primary_metric": {
+      "aggregation": "per_case_then_task",
+      "formula": "sum_j(A_j*I(patch_geometry_j matches source_zone_j and abs(z0_OpenFOAM_j-z0_source_j)<=1e-12))/sum_j(A_j)",
+      "id": "roughness_zone_mapping_accuracy",
+      "name_zh": "粗糙度分区映射准确率",
+      "unit": "fraction"
+    },
+    "profile_parameters": {
+      "Cmu": 0.09,
+      "Uref_m_s": 1.2,
+      "Zref_m": 4.0,
+      "displacement_height_m": 0.0,
+      "inlet_z0_m": 0.01,
+      "kappa": 0.41,
+      "u_star_m_s": 0.0820826103015287
+    },
+    "profile_target_csv": "local_assets/roughness_profile_targets.csv",
+    "required_manifest": "roughness_mapping_evidence_manifest.json",
+    "required_raw_evidence_per_case": [
+      "source_zones",
+      "source_zone_table",
+      "gis_output",
+      "ogrinfo_log",
+      "mesh_points",
+      "mesh_faces",
+      "mesh_boundary",
+      "field_nut",
+      "probe_U",
+      "probe_k",
+      "probe_omega",
+      "response_U",
+      "solver_log",
+      "checkMesh_log",
+      "controlDict"
+    ],
+    "response_points_m": [
+      [
+        -2.0,
+        -4.0,
+        0.5
+      ],
+      [
+        -2.0,
+        -2.0,
+        0.5
+      ],
+      [
+        -2.0,
+        2.0,
+        0.5
+      ],
+      [
+        -2.0,
+        4.0,
+        0.5
+      ],
+      [
+        0.0,
+        -4.0,
+        0.5
+      ],
+      [
+        0.0,
+        -2.0,
+        0.5
+      ],
+      [
+        0.0,
+        2.0,
+        0.5
+      ],
+      [
+        0.0,
+        4.0,
+        0.5
+      ],
+      [
+        10.0,
+        -4.0,
+        0.5
+      ],
+      [
+        10.0,
+        -2.0,
+        0.5
+      ],
+      [
+        10.0,
+        2.0,
+        0.5
+      ],
+      [
+        10.0,
+        4.0,
+        0.5
+      ]
+    ],
+    "response_probe_csv": "local_assets/roughness_response_probes.csv",
+    "response_sample_count": 20,
+    "response_sample_iterations": [
+      20,
+      40,
+      60,
+      80,
+      100,
+      120,
+      140,
+      160,
+      180,
+      200,
+      220,
+      240,
+      260,
+      280,
+      300,
+      320,
+      340,
+      360,
+      380,
+      400
+    ],
+    "result_contract": {
+      "inlet_U_shape": [
+        20,
+        52,
+        3
+      ],
+      "inlet_k_shape": [
+        20,
+        52
+      ],
+      "inlet_omega_shape": [
+        20,
+        52
+      ],
+      "iterations_shape": [
+        20
+      ],
+      "path": "roughness_mapping_results.json",
+      "response_U_shape": [
+        20,
+        12,
+        3
+      ]
+    },
+    "schema_version": "1.0",
+    "smoke_iterations": 20,
+    "software_chain": [
+      "python",
+      "gdal",
+      "openfoam"
+    ],
+    "solver": "OpenCFD-v2412 simpleFoam",
+    "task_gate": "The local GDAL conversion, all three source-to-patch mappings and the sole OpenFOAM run must pass; no zone or evidence subset may be selected.",
+    "task_id": "urbanwind-task-072",
+    "truth_boundary": "Local synthetic GIS-to-OpenFOAM mapping and one numerical execution reference only; not a real-city land-use product, experimental/PIV/DNS/wind-tunnel/field truth, or a universal z0 recommendation.",
+    "turbulence_model": "kOmegaSST",
+    "zones": [
+      {
+        "block_face_count": 3,
+        "expected_area_m2": 43.4,
+        "geometry_type": "Polygon",
+        "patch_name": "roughnessWest",
+        "x_max_m": -0.5,
+        "x_min_m": -4.0,
+        "y_max_m": 6.2,
+        "y_min_m": -6.2,
+        "z0_m": 0.005,
+        "zone_id": "west_low"
+      },
+      {
+        "block_face_count": 2,
+        "expected_area_m2": 11.4,
+        "geometry_type": "MultiPolygon",
+        "patch_name": "roughnessCenter",
+        "x_max_m": 0.5,
+        "x_min_m": -0.5,
+        "y_max_m": 6.2,
+        "y_min_m": -6.2,
+        "z0_m": 0.01,
+        "zone_id": "center_side"
+      },
+      {
+        "block_face_count": 3,
+        "expected_area_m2": 279.0,
+        "geometry_type": "Polygon",
+        "patch_name": "roughnessEast",
+        "x_max_m": 23.0,
+        "x_min_m": 0.5,
+        "y_max_m": 6.2,
+        "y_min_m": -6.2,
+        "z0_m": 0.02,
+        "zone_id": "east_high"
+      }
+    ]
+  },
+  "roughness_zone_mapping_contract": "local_assets/roughness_zone_mapping_contract.json",
+  "run_manifest": "run_manifest.json",
+  "schema_version": "1.0",
+  "score_layers": {
+    "artifact_and_schema": 10,
+    "engineering_decision": 10,
+    "external_validation": 15,
+    "numerical_quality": 20,
+    "physical_fidelity": 25,
+    "real_tool_execution": 20
+  },
+  "task_id": "urbanwind-task-072"
+}

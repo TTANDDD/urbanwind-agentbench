@@ -1,0 +1,181 @@
+{
+  "acceptance_contract": {
+    "hard_gate_precedence": true,
+    "primary_metric_formula": "max(mean_abs(Ux_mean_B-Ux_mean_C)/1.2,mean_abs(Ux_variance_B-Ux_variance_C)/1.44,0.5*sum(abs(normalized_PSD_band_B-normalized_PSD_band_C)),abs(Tint_B-Tint_C)/max(abs(Tint_C),0.2)) over frozen 300-360 s and 360-420 s blocks",
+    "primary_metric_id": "precursor_block_mean_drift",
+    "required_case_ids": [
+      "task-078-case-001"
+    ],
+    "required_solver_runs": 1
+  },
+  "answer_free": true,
+  "case_anchor": {
+    "id": "SB4_LOCAL",
+    "known": {
+      "D_m": 1.0,
+      "H_over_D": 4.0,
+      "Re_D": 12000.0,
+      "Re_H": 48000.0,
+      "U_ref_m_s": 1.2,
+      "domain_D": {
+        "x": [
+          -4.0,
+          23.0
+        ],
+        "y": [
+          -6.2,
+          6.2
+        ],
+        "z": [
+          0.0,
+          9.0
+        ]
+      },
+      "nu_m2_s": 0.0001,
+      "truth_type": "synthetic_or_numerical_reference"
+    },
+    "missing": [],
+    "name": "D x D x 4D单体建筑本地数值基准",
+    "references": [
+      "USER_SB4_SPEC",
+      "LOCAL_GENERATOR"
+    ],
+    "status": "local_generator_ready"
+  },
+  "category": "boundary_condition_design",
+  "compute_track": "cfd",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision_rule": "先拒绝任何执行、数值、单位、守恒或外部证据门禁失败的案例，再依据冻结指标比较；不得用文字报告替代原始证据。",
+  "difficulty": "advanced",
+  "engineering_focus": "在一个真实OpenFOAM尾流源域长时LES中，从原始64点U探针独立判断均值、方差、频带能量和积分时间尺度在相邻60秒块上的统计稳定性。",
+  "evaluator_status": "task_specific_precursor_raw_probe_check",
+  "evidence_requirements": [
+    "exact commands and working directories",
+    "software names, versions, executable paths and SHA256 when available",
+    "timezone-aware start/end times and exit codes",
+    "SHA256-addressed input, log and raw-output files",
+    "coordinate system, units, masks, statistical windows and aggregation order"
+  ],
+  "init_type": "engineering_data_and_model",
+  "limitations": [
+    "Visible formula, probe coordinates, windows, bands, shapes and gates are supplied; hidden accepted raw statistics are not.",
+    "Reference is one local OpenFOAM numerical wake-source run, not a classical periodic precursor or experimental truth.",
+    "A frozen distributable runtime remains required for release."
+  ],
+  "local_generator_version": "urbanwind-local-assets-v3",
+  "materialization_status": "local_inputs_generated",
+  "metrics": [
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max(mean_abs(Ux_mean_B-Ux_mean_C)/1.2,mean_abs(Ux_variance_B-Ux_variance_C)/1.44,0.5*sum(abs(normalized_PSD_band_B-normalized_PSD_band_C)),abs(Tint_B-Tint_C)/max(abs(Tint_C),0.2)) over frozen 300-360 s and 360-420 s blocks",
+      "id": "precursor_block_mean_drift",
+      "name_zh": "前驱场统计块漂移",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    }
+  ],
+  "physical_checks": [
+    {
+      "id": "evidence_is_raw_and_hashed",
+      "requirement": "所有进入指标的原始输入、日志和输出均在manifest中登记SHA256。"
+    },
+    {
+      "id": "units_and_coordinates_declared",
+      "requirement": "所有比较对象声明单位、坐标系、归一化和掩膜。"
+    },
+    {
+      "id": "track_specific_physics",
+      "requirement": "入口、地面、顶部、侧面和出口必须满足质量、粗糙度与稳定度一致性。"
+    },
+    {
+      "id": "task_specific_primary_metric",
+      "requirement": "必须从原始64点Ux探针按冻结时间窗和公式重算四个统计漂移分量；不得用报告中的汇总值代替时间序列。"
+    }
+  ],
+  "professional_difficulty": "D4",
+  "reference_status": "openfoam_numerical_reference_generated",
+  "release_status": "reference_ready_not_release_valid",
+  "required_artifacts": [
+    {
+      "format": "json",
+      "path": "design.json",
+      "role": "task design and assumptions"
+    },
+    {
+      "format": "json",
+      "path": "boundary_contract.json",
+      "role": "track-specific result"
+    },
+    {
+      "format": "json",
+      "path": "run_manifest.json",
+      "role": "tool and solver provenance"
+    },
+    {
+      "format": "json",
+      "path": "metrics.json",
+      "role": "reported metrics with units"
+    },
+    {
+      "format": "json",
+      "path": "evidence_manifest.json",
+      "role": "SHA256-addressed raw evidence"
+    },
+    {
+      "format": "markdown",
+      "path": "decision.md",
+      "role": "bounded engineering conclusion"
+    },
+    {
+      "format": "json",
+      "path": "precursor_evidence_manifest.json",
+      "role": "SHA256-linked raw OpenFOAM probe and run evidence"
+    },
+    {
+      "format": "json",
+      "path": "precursor_results.json",
+      "role": "raw-probe-derived block statistics and drift components"
+    }
+  ],
+  "required_cases": 1,
+  "required_inputs": [
+    "本地可重建365488单元单体建筑尾流前驱源域",
+    "可见64点探针、0.2秒采样和300-360/360-420秒冻结统计窗",
+    "均值、方差、归一化频带能量和积分时间尺度的直接复算合同"
+  ],
+  "required_solver_runs": 1,
+  "schema_version": "1.0",
+  "scientific_question": "智能体能否在不伪造证据的前提下完成“前驱场统计收敛”，并把工具执行、数值质量、物理依据和工程结论连成可复算闭环？",
+  "software_chain": [
+    "python",
+    "openfoam"
+  ],
+  "task_id": "urbanwind-task-078",
+  "task_mode": "configure_and_verify",
+  "task_number": 78,
+  "title": "前驱场统计收敛",
+  "track": "abl_and_boundary_conditions",
+  "track_name": "大气边界层与边界条件",
+  "workflow": {
+    "configure": "围绕D x D x 4D单体建筑本地数值基准生成案例计划和软件配置，并保持单位、坐标和版本可追踪。",
+    "decide": "给出带适用边界的工程结论；关键证据缺失时明确停止或降级声明。",
+    "evidence": "读取任务输入与来源登记，显式列出已知、假设、缺失和许可边界。",
+    "execute": "真实执行一次365488单元、16-rank、420秒OpenFOAM v2412 pimpleFoam WALE LES。",
+    "postprocess": "仅从原始postProcessing/probes/0/U复算均值、方差、归一化频带能量、积分时间尺度及其最大块漂移。",
+    "preprocess": "冻结64点探针、0.2秒采样、300-360/360-420秒统计块和四类统计量的直接复算公式。",
+    "validate": "依次通过文件、执行、数值、物理、外部证据和工程约束门禁。"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "acceptance": "Use public constraints, not these cell counts or GT mesh IDs.",
+  "diagnostics": {
+    "alternative_valid_cell_count": 113152,
+    "coverage": 1.0,
+    "flow_solver_runs": 0,
+    "reference_cell_count": 97792,
+    "wake_volume_m3": 144.0
+  },
+  "experimental_claim": false,
+  "task_id": "urbanwind-task-044",
+  "truth_type": "verified_openfoam_tool_reference",
+  "units": {
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction",
+    "wake_refinement_coverage": "fraction"
+  },
+  "values": {
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0,
+    "wake_refinement_coverage": 1.0
+  }
+}

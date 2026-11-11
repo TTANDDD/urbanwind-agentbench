@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "本地生成的三套SGS候选配置",
+      "role_id": "input-001",
+      "seed": 202609038301,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.55235488,
+        0.85082383,
+        0.8193456,
+        0.69627028,
+        0.4188356,
+        0.58210545,
+        0.17338479,
+        0.52006918,
+        0.97229208,
+        0.32293501,
+        0.49203653,
+        0.89632854,
+        0.6519988,
+        0.11550198,
+        0.79790359,
+        0.65286263
+      ]
+    },
+    {
+      "label": "共同网格、时间步、入口和统计窗口",
+      "role_id": "input-002",
+      "seed": 202609038302,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.2614789,
+        0.93313605,
+        0.7244568,
+        0.3032983,
+        0.27704063,
+        0.15500156,
+        0.91525989,
+        0.14580532,
+        0.7081993,
+        0.47754029,
+        0.49061062,
+        0.14593763,
+        0.65396085,
+        0.12916398,
+        0.84464117,
+        0.22760876
+      ]
+    },
+    {
+      "label": "本地高分辨率参考观测量、权重和参考尺度",
+      "role_id": "input-003",
+      "seed": 202609038303,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.22025886,
+        0.38340679,
+        0.36182381,
+        0.41272916,
+        0.1579014,
+        0.80058021,
+        0.11253061,
+        0.60617294,
+        0.77566308,
+        0.90658518,
+        0.97426414,
+        0.86470318,
+        0.33332833,
+        0.30984098,
+        0.19948885,
+        0.56265742
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-083"
+}

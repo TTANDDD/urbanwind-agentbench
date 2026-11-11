@@ -1,0 +1,25 @@
+{
+  "experimental_claim": false,
+  "host": "5070-server",
+  "independent_audit": "validation/openfoam-task071-v38b-independent-audit-v1.json",
+  "independent_audit_sha256": "9252df9272237bd81e2f6c2fdde36195c911c195a02a2d8d6be5ec0d63d03194",
+  "openfoam_version": "OpenCFD-v2412",
+  "schema_version": "1.0",
+  "source_runs": {
+    "faulty": {
+      "case_id": "task-071-case-001",
+      "execution_role": "provided_data_or_tool_execution",
+      "source_archive": "validation/openfoam-batch-20260927-v38b-task071-outlet-backflow/results/task071-faulty/diagnostic_candidate.tar.gz",
+      "source_archive_sha256": "54a06c8e9a26606d1bf5ab96618098759a460d57bbe15977565136b8577fd651",
+      "source_status_sha256": "7ab050806971edf26d04dd2259152acad6cab173c1d0c54c06fb5b88a176ff89"
+    },
+    "repaired": {
+      "case_id": "task-071-case-002",
+      "execution_role": "real_solver_run",
+      "source_archive": "validation/openfoam-batch-20260927-v38b-task071-outlet-backflow/results/task071-repaired/reference_candidate.tar.gz",
+      "source_archive_sha256": "31c9112d7743bf8db6ad73662bbb2910f052602be0f06c3b9c8d1192e7a9f985",
+      "source_status_sha256": "7bf31d4b929f2e34f36b79fe876acc7dca0d376095e054aa4bfe3509029816eb"
+    }
+  },
+  "task_id": "urbanwind-task-071"
+}

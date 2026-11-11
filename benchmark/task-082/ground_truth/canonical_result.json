@@ -1,0 +1,14 @@
+{
+  "case_ids": [
+    "task-082-case-001"
+  ],
+  "claim_boundary": "Frozen OpenFOAM numerical reference; not experimental truth.",
+  "primary_metric": {
+    "id": "les_local_reference_velocity_nmae",
+    "unit": "fraction",
+    "value": 0.43649848342921027
+  },
+  "schema_version": "1.0",
+  "selected_case_id": null,
+  "task_id": "urbanwind-task-082"
+}

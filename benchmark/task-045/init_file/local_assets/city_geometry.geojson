@@ -1,0 +1,44 @@
+{
+  "crs_contract": {
+    "axis": "x-east,y-north,z-up",
+    "type": "local_cartesian",
+    "unit": "m"
+  },
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -0.5,
+              -0.5
+            ],
+            [
+              0.5,
+              -0.5
+            ],
+            [
+              0.5,
+              0.5
+            ],
+            [
+              -0.5,
+              0.5
+            ],
+            [
+              -0.5,
+              -0.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "height_m": 4,
+        "id": "single-building"
+      },
+      "type": "Feature"
+    }
+  ],
+  "type": "FeatureCollection"
+}

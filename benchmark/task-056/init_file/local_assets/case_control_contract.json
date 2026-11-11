@@ -1,0 +1,28 @@
+{
+  "answer_free": true,
+  "case_ids": [
+    "task-056-case-001",
+    "task-056-case-002"
+  ],
+  "controlled_factor": "geometry_scale_only",
+  "dt_s": 0.01,
+  "expected_solver_case_ids": [
+    "task-056-case-002"
+  ],
+  "frozen_defaults": {
+    "reference_speed_m_s": 1.2,
+    "seed": 202609035600,
+    "stability": "neutral unless atmospheric stability is the controlled factor",
+    "surface_heat_flux_w_m2": "0.0 unless thermal forcing is the controlled factor",
+    "wind_direction_deg": "0.0 unless wind direction is the controlled factor"
+  },
+  "policy": "Freeze every non-target physical and numerical condition; vary only the factor named by the task variant.",
+  "required_solver_runs": 1,
+  "scale_values": [
+    0.001,
+    1.0
+  ],
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-056",
+  "time_end_s": 50
+}

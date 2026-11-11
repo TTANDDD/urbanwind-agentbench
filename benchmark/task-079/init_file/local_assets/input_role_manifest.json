@@ -1,0 +1,35 @@
+{
+  "all_required_roles_materialized": true,
+  "generator_version": "urbanwind-local-assets-v3",
+  "required_external_inputs": [],
+  "roles": [
+    {
+      "label": "本地可重建365488单元单体建筑OpenFOAM算例",
+      "origin": "bundled_locally_rebuildable_template",
+      "paths": [
+        "local_assets/openfoam_base/system/blockMeshDict",
+        "local_assets/openfoam_base/constant/triSurface/building.stl"
+      ],
+      "role_id": "input-001"
+    },
+    {
+      "label": "可见中性对数律U/k/omega入口剖面与入口出口patch合同",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/mass_flux_profile_targets.csv",
+        "local_assets/mass_flux_closure_contract.json"
+      ],
+      "role_id": "input-002"
+    },
+    {
+      "label": "冻结400/phi原始面通量复算、求解收敛和质量闭合门禁",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/mass_flux_closure_contract.json"
+      ],
+      "role_id": "input-003"
+    }
+  ],
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-079"
+}

@@ -1,0 +1,8 @@
+{
+  "bundled": false,
+  "fallback": "Use bundled deterministic local inputs when offline or when the optional record is not selected.",
+  "mode": "optional_one_click_download",
+  "name": "AIJ Urban Wind Environment Case A",
+  "record_url": "https://zenodo.org/records/15050148",
+  "required_for_task": false
+}

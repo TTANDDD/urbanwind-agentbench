@@ -1,0 +1,57 @@
+{
+  "blockers": [
+    "pinned runtime image",
+    "real local reference executions or frozen numerical arrays",
+    "task-specific hidden evaluator"
+  ],
+  "claim_boundary": "This directory is not release-valid benchmark ground truth.",
+  "data_acquisition_blockers": [],
+  "evaluator_status": "contract_precheck_only",
+  "expected_ground_truth": {
+    "case_ids": [
+      "task-122-case-001",
+      "task-122-case-002"
+    ],
+    "hidden_tolerances_status": "pending_task_specific_evaluator",
+    "input_roles": [
+      "本地确定性注入的故障输入",
+      "本地非目标设置清单",
+      "冻结修复验收门槛"
+    ],
+    "metric_contracts": [
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "max_nonortho_before-max_nonortho_after",
+        "id": "nonorthogonality_reduction_deg",
+        "name_zh": "最大非正交角降低量",
+        "unit": "deg"
+      },
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "hashed_source_linked_evidence / required_evidence",
+        "id": "evidence_provenance_fraction",
+        "name_zh": "证据溯源覆盖率",
+        "unit": "fraction"
+      },
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "passed_hard_gates / required_hard_gates",
+        "id": "hard_gate_pass_fraction",
+        "name_zh": "硬门禁通过率",
+        "unit": "fraction"
+      }
+    ],
+    "reference_values_status": "pending_real_local_execution"
+  },
+  "reference_status": "not_generated",
+  "release_status": "scaffold_only",
+  "required_reference_artifacts": [
+    "locally generated source inputs with generation manifest: 本地确定性注入的故障输入; 本地非目标设置清单; 冻结修复验收门槛",
+    "real tool and solver run manifests",
+    "raw fields, logs and post-processing arrays",
+    "recomputed task metrics: nonorthogonality_reduction_deg; evidence_provenance_fraction; hard_gate_pass_fraction",
+    "positive and adversarial evaluator tests"
+  ],
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-122"
+}

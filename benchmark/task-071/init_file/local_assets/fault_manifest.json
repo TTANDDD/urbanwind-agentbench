@@ -1,0 +1,16 @@
+{
+  "answer_included": false,
+  "expected_agent_action": "reject the visible faulty configuration before solver launch, then run only the frozen repaired outlet configuration",
+  "fault_family": "outlet_reverse_flow_instability",
+  "fault_seed": 202609030071,
+  "injected": true,
+  "observed_fault_parameters": {
+    "minimum_allowed_outlet_x_D": 15.0,
+    "outlet_U_type": "zeroGradient",
+    "outlet_x_D": 2.0,
+    "required_outlet_U_type": "inletOutlet",
+    "symptom": "negative_outlet_normal_velocity_risk"
+  },
+  "target_file": "local_assets/openfoam_base/0/U",
+  "task_id": "urbanwind-task-071"
+}

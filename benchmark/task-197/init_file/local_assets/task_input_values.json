@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "两个设计的OpenFOAM/PALM配对结果",
+      "role_id": "input-001",
+      "seed": 202609049701,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.49754901,
+        0.53147229,
+        0.19947647,
+        0.68731942,
+        0.42925877,
+        0.60513562,
+        0.31621347,
+        0.25835644,
+        0.23519902,
+        0.91554293,
+        0.1641964,
+        0.37225513,
+        0.54272616,
+        0.29766538,
+        0.88006705,
+        0.59772862
+      ]
+    },
+    {
+      "label": "信息交换变量",
+      "role_id": "input-002",
+      "seed": 202609049702,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.84665585,
+        0.41540874,
+        0.49585542,
+        0.86777147,
+        0.91271372,
+        0.97239094,
+        0.58786701,
+        0.44971568,
+        0.55520586,
+        0.28965003,
+        0.45057077,
+        0.99076229,
+        0.90357211,
+        0.13539742,
+        0.07541448,
+        0.62412109
+      ]
+    },
+    {
+      "label": "跨求解器校准合同",
+      "role_id": "input-003",
+      "seed": 202609049703,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.123646,
+        0.9249105,
+        0.63424473,
+        0.21246046,
+        0.54599285,
+        0.09221091,
+        0.42764868,
+        0.74803814,
+        0.80255703,
+        0.46008863,
+        0.68435485,
+        0.36692301,
+        0.5361777,
+        0.86538799,
+        0.44657774,
+        0.98540253
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-197"
+}

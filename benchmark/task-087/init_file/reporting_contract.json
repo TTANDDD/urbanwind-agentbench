@@ -1,0 +1,119 @@
+{
+  "current_evaluator_boundary": "Submitted six-block onset is recomputed; hidden OpenFOAM numerical onset and arrays are scored privately. No experimental truth or frozen release runtime is claimed.",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision": "decision.md",
+  "decision_required_terms": [
+    "证据",
+    "限制",
+    "结论"
+  ],
+  "evidence_manifest": "evidence_manifest.json",
+  "expected_case_ids": [
+    "task-087-case-001"
+  ],
+  "expected_solver_case_ids": [
+    "task-087-case-001"
+  ],
+  "metric_contracts": [
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "earliest 60s-block start with all subsequent adjacent 60s drifts U<=0.05 and k<=0.02 over 64 probes; blocks 60-420 s",
+      "id": "stationarity_onset_detected_s",
+      "name_zh": "检测出的统计起始时刻",
+      "unit": "s"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    }
+  ],
+  "metric_ids": [
+    "stationarity_onset_detected_s",
+    "evidence_provenance_fraction",
+    "hard_gate_pass_fraction"
+  ],
+  "metrics": "metrics.json",
+  "required_external_inputs": [],
+  "required_inputs": [
+    "随任务本地生成的OpenFOAM起始案例",
+    "本地OpenFOAM运行版本记录合同",
+    "本地合成数值参考（仅作固定比较输入，不是PIV或实验真值）"
+  ],
+  "required_solver_runs": 1,
+  "run_manifest": "run_manifest.json",
+  "schema_version": "1.0",
+  "score_layers": {
+    "artifact_and_schema": 10,
+    "engineering_decision": 10,
+    "external_validation": 15,
+    "numerical_quality": 20,
+    "physical_fidelity": 25,
+    "real_tool_execution": 20
+  },
+  "simulation_result_contract": {
+    "case_results": {
+      "block_count": 6,
+      "block_windows_s": [
+        [
+          60.0,
+          120.0
+        ],
+        [
+          120.0,
+          180.0
+        ],
+        [
+          180.0,
+          240.0
+        ],
+        [
+          240.0,
+          300.0
+        ],
+        [
+          300.0,
+          360.0
+        ],
+        [
+          360.0,
+          420.0
+        ]
+      ],
+      "exact_case_ids": [
+        "task-087-case-001"
+      ],
+      "minimum_samples_per_block": 300,
+      "mpi_ranks": 16,
+      "probe_array_length": 64,
+      "required_fields": [
+        "case_id",
+        "variant",
+        "mpi_ranks",
+        "blocks",
+        "onset_s",
+        "gate_diagnostics",
+        "all_run_gates_pass"
+      ],
+      "units": {
+        "mean_Ux_m_s": "m/s",
+        "onset_s": "s",
+        "resolved_tke_m2_s2": "m2/s2"
+      }
+    },
+    "hidden_evaluator_metric": "abs(onset_detected_s-onset_reference_s)",
+    "path": "simulation_metrics.json",
+    "task_id": "urbanwind-task-087",
+    "task_specific_metric_formula": "earliest 60s-block start with all subsequent adjacent 60s drifts U<=0.05 and k<=0.02 over 64 probes; blocks 60-420 s"
+  },
+  "task_id": "urbanwind-task-087"
+}

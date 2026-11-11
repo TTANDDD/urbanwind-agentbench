@@ -1,0 +1,41 @@
+{
+  "experimental_claim": false,
+  "host": "5070-server",
+  "independent_audit": "validation/openfoam-task064-v33-independent-audit-v1.json",
+  "independent_audit_sha256": "eacb0896dc9feeedb5afd413a7ae2487ced2b3e313414a60b4820bf93dd66aaa",
+  "openfoam_version": "OpenCFD-v2412",
+  "schema_version": "1.0",
+  "source_runs": [
+    {
+      "case_id": "task-064-case-001",
+      "source_archive": "validation/openfoam-batch-20260924-v33-task064-monin-obukhov/results/task064-stable/reference_candidate.tar.gz",
+      "source_archive_sha256": "28129b261b4eb47dc82f32f8256e81d7df7c28e31cf3d82b9074bd27cdbc1c2a",
+      "source_batch": "openfoam-batch-20260924-v33-task064-monin-obukhov",
+      "source_job": "task064-stable",
+      "source_status_sha256": "c430a37387ad68b331c3c60cba6482fc8fac4d9fa0ab9bf756daa5078614b6ea",
+      "variant": "稳定",
+      "variant_key": "stable"
+    },
+    {
+      "case_id": "task-064-case-002",
+      "source_archive": "validation/openfoam-batch-20260924-v33-task064-monin-obukhov/results/task064-neutral/reference_candidate.tar.gz",
+      "source_archive_sha256": "aa749e6f44821ce9dbb876521efe9c210d211157de5a11f7f8eec8277b3dcfba",
+      "source_batch": "openfoam-batch-20260924-v33-task064-monin-obukhov",
+      "source_job": "task064-neutral",
+      "source_status_sha256": "53adff6f431e9eefd13463aee153df9302df8e3830e6ba25364a6346b550c83c",
+      "variant": "中性",
+      "variant_key": "neutral"
+    },
+    {
+      "case_id": "task-064-case-003",
+      "source_archive": "validation/openfoam-batch-20260924-v33-task064-monin-obukhov/results/task064-unstable/reference_candidate.tar.gz",
+      "source_archive_sha256": "502f6167927d41fd3dda54e0941303a1c71c084ad1af25a7a972b1d31bc547b7",
+      "source_batch": "openfoam-batch-20260924-v33-task064-monin-obukhov",
+      "source_job": "task064-unstable",
+      "source_status_sha256": "3844fac6f3e52b6813822fef1b2d7d8a3d6a94dfde66db7de11e9cfdbdca7763",
+      "variant": "不稳定",
+      "variant_key": "unstable"
+    }
+  ],
+  "task_id": "urbanwind-task-064"
+}

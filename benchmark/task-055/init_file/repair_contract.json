@@ -1,0 +1,47 @@
+{
+  "schema": "task055-v53-public-repair-contract-v1",
+  "task": "Locate and minimally repair one internal-face winding error in an imported urban polyMesh",
+  "public_geometry": {
+    "cells": 141952,
+    "points": 151893,
+    "faces": 435712,
+    "internal_faces": 416000,
+    "fluid_volume_m3": 2218,
+    "spacing_m": 0.25,
+    "source": "Same synthetic 16-building city; no CFD or real-city truth"
+  },
+  "editable_answer": {
+    "files": [
+      "constant/polyMesh/faces"
+    ],
+    "allowed": "Same face records, vertex membership and cyclic adjacency; reverse the incorrect cycle, and optionally rotate any cycle's starting vertex. Faces/points/cells may have different numbering in separately frozen equivalent fixtures, but IDs within each supplied instance remain stable.",
+    "forbidden": "Moving points, changing owner/neighbour or boundary, deleting faces/cells, changing thresholds, replacing the mesh with a hidden baseline or executing submitted scripts/dictionaries.",
+    "must_report": [
+      "localized face and adjacent cells in submitted-instance IDs",
+      "raw before/after S,R,Q,D with units",
+      "before REJECT and after ACCEPT/REJECT/STOP",
+      "minimal edit explanation",
+      "original native logs, sets and command provenance"
+    ],
+    "equivalence": "No hidden bytewise faces match; cycle-start rotations are equivalent. Other four files must equal the supplied input because this task authorizes only face-winding repair."
+  },
+  "measurements": {
+    "geometry_reference": "Undirected .25m cube vertices give V=1/64 m3. Do not divide by corrupted OpenFOAM cell-volume output when checking the analytic flux prediction.",
+    "area_vector": "S_f=0.5 sum_i (p_i cross p_(i+1)) [m2] for this planar Cartesian mesh",
+    "cell_residual": "R_c=sum_f sign(c,f) S_f [m2], sign owner +1 / neighbour -1",
+    "closure": "||R_c||_2 / sum_f ||S_f||_2 [dimensionless], fatal if >1e-6; native component normalization is separately reported",
+    "orientation": "S_f dot (geometric_neighbour_centre-geometric_owner_centre) [m3] must be positive for every internal face; damaged selected face is -1/64 m3, correct is +1/64 m3",
+    "flux": "Test vector U=(1,0,0) m/s, Q_c=U dot R_c [m3/s], D_c=Q_c/V_geometric [s^-1]. This is a geometric conservation diagnostic, not a solved flow.",
+    "floating_tolerance": {
+      "area_m2": 1e-12,
+      "volume_m3": 1e-12,
+      "dimensionless": 1e-10,
+      "flux_m3_s": 1e-12,
+      "divergence_s_inverse": 1e-10
+    },
+    "primary_repair_metric": "remaining_internal_face_orientation_defect_count [faces], target 0; all preservation, closure and native gates are conjunctive, not weighted away"
+  },
+  "public_contract_scope": "No private selector, correct mesh, constructor or target IDs",
+  "primary_target": 0,
+  "all_acceptance_gates_conjunctive": true
+}

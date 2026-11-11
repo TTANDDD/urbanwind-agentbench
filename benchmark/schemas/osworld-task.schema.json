@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "benchmark_metadata": {
+      "required": [
+        "task_id",
+        "track",
+        "init_type",
+        "difficulty",
+        "professional_difficulty",
+        "compute_track",
+        "reference_status",
+        "simulation_status",
+        "materialization_status",
+        "release_status"
+      ],
+      "type": "object"
+    },
+    "id": {
+      "pattern": "^c-urbanwind-task-[0-9]{3}-ubuntu$",
+      "type": "string"
+    },
+    "proxy": {
+      "const": false
+    }
+  },
+  "required": [
+    "id",
+    "snapshot",
+    "instruction",
+    "config",
+    "related_apps",
+    "evaluator",
+    "benchmark_metadata"
+  ],
+  "title": "UrbanWind-AgentBench OSWorld-style task",
+  "type": "object"
+}

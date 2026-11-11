@@ -1,0 +1,66 @@
+{
+  "cases": [
+    {
+      "case_id": "task-101-case-001",
+      "execution_role": "provided_data_or_tool_execution",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "把地形、建筑和地表分类转换为带维度与属性检查的静态驱动。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "palm_csd静态驱动构建"
+      },
+      "metrics": [
+        "static_driver_schema_pass_fraction",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "passed_required_dimensions_variables_attributes / required_checks",
+        "id": "static_driver_schema_pass_fraction",
+        "name_zh": "PALM静态驱动Schema通过率",
+        "unit": "fraction"
+      },
+      "purpose": "PALM静态驱动文件构建：执行变体 palm_csd静态驱动构建，围绕把地形、建筑和地表分类转换为带维度与属性检查的静态驱动。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm_csd",
+        "netcdf",
+        "gdal",
+        "qgis"
+      ],
+      "task_id": "urbanwind-task-101",
+      "variant": "palm_csd静态驱动构建"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "lite",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 1,
+  "required_solver_runs": 0,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-101"
+}

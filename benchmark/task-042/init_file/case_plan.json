@@ -1,0 +1,64 @@
+{
+  "cases": [
+    {
+      "case_id": "task-042-case-001",
+      "execution_role": "provided_data_or_tool_execution",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "SB4_LOCAL",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "设置表面捕捉、局部加密和层网格并验证几何特征保持。",
+        "mesh_protocol": "local_assets/openfoam_base/snappy_mesh_contract.json",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "单体建筑snappyHexMesh贴体-目标案例"
+      },
+      "metrics": [
+        "surface_conformance_p95_m",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "linear_percentile_95(unweighted Euclidean distance of each final building-patch face vertex-mean centre to the union of the 12 visible STL triangles); no face exclusion",
+        "id": "surface_conformance_p95_m",
+        "name_zh": "表面贴合距离P95",
+        "unit": "m"
+      },
+      "purpose": "从未扣除建筑的全域背景网格，经特征提取、snappy表面捕捉/加密及实际层挤出，验证五个暴露面的贴合和公开质量条件；只运行网格工具，不运行流场求解器。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-042",
+      "variant": "单体建筑snappyHexMesh贴体-目标案例"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "lite",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 1,
+  "required_solver_runs": 0,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-042"
+}

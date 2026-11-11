@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "本地生成的流场或多物理场",
+      "role_id": "input-001",
+      "seed": 202609047801,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.05210927,
+        0.54558393,
+        0.16736735,
+        0.32182078,
+        0.60901492,
+        0.46519278,
+        0.6566083,
+        0.63784589,
+        0.94108228,
+        0.68172199,
+        0.60198271,
+        0.89280223,
+        0.57744236,
+        0.73370829,
+        0.66423993,
+        0.38191184
+      ]
+    },
+    {
+      "label": "本地空间掩膜与权重",
+      "role_id": "input-002",
+      "seed": 202609047802,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.96397694,
+        0.47173902,
+        0.92838289,
+        0.22556823,
+        0.78171421,
+        0.57694055,
+        0.40675847,
+        0.49348795,
+        0.50497872,
+        0.53674371,
+        0.09080304,
+        0.08177836,
+        0.18676391,
+        0.79346447,
+        0.11752293,
+        0.67643228
+      ]
+    },
+    {
+      "label": "冻结参考诊断结果",
+      "role_id": "input-003",
+      "seed": 202609047803,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.31847588,
+        0.459393,
+        0.60218789,
+        0.10795139,
+        0.9203838,
+        0.29919646,
+        0.16858988,
+        0.70873643,
+        0.24522673,
+        0.94758018,
+        0.21033665,
+        0.85580154,
+        0.99835505,
+        0.50486887,
+        0.51212639,
+        0.86388463
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-178"
+}

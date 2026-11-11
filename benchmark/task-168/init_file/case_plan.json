@@ -1,0 +1,64 @@
+{
+  "cases": [
+    {
+      "case_id": "task-168-case-001",
+      "execution_role": "provided_data_or_tool_execution",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "AIJ_DIRECT",
+        "anchor_state": "optional_one_click_public",
+        "data_origin": "deterministic_local_generation",
+        "focus": "在给定风气候权重时计算超限概率；无气候数据时仅报告条件性结果。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "风舒适阈值超限-目标案例"
+      },
+      "metrics": [
+        "comfort_exceedance_probability_error",
+        "comfort_standard_case_coverage",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "abs(P_exceed_model-P_exceed_reference)",
+        "id": "comfort_exceedance_probability_error",
+        "name_zh": "风舒适超限概率误差",
+        "unit": "fraction"
+      },
+      "purpose": "风舒适阈值超限：执行变体 风舒适阈值超限-目标案例，围绕在给定风气候权重时计算超限概率；无气候数据时仅报告条件性结果。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "pyvista"
+      ],
+      "task_id": "urbanwind-task-168",
+      "variant": "风舒适阈值超限-目标案例"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "lite",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 1,
+  "required_solver_runs": 0,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-168"
+}

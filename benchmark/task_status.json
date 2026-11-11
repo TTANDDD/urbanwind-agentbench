@@ -1,0 +1,2384 @@
+{
+  "snapshot_date": "2026-11-11",
+  "counts": {
+    "local_reference_generated": 85,
+    "not_generated": 79,
+    "openfoam_tool_reference_generated": 6,
+    "openfoam_numerical_reference_generated": 30
+  },
+  "task_count": 200,
+  "case_count": 367,
+  "paper_evaluation_tasks": [
+    "task-041",
+    "task-061",
+    "task-062",
+    "task-063",
+    "task-064",
+    "task-068",
+    "task-069",
+    "task-071",
+    "task-072",
+    "task-074",
+    "task-075",
+    "task-076",
+    "task-078",
+    "task-079",
+    "task-082",
+    "task-083",
+    "task-084",
+    "task-085",
+    "task-087",
+    "task-088",
+    "task-089",
+    "task-091",
+    "task-092",
+    "task-093",
+    "task-094",
+    "task-095",
+    "task-096",
+    "task-097",
+    "task-098",
+    "task-099"
+  ],
+  "tasks": [
+    {
+      "task": "task-001",
+      "track": "evidence_and_case_definition",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-002",
+      "track": "evidence_and_case_definition",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-003",
+      "track": "evidence_and_case_definition",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-004",
+      "track": "evidence_and_case_definition",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-005",
+      "track": "evidence_and_case_definition",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-006",
+      "track": "evidence_and_case_definition",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-007",
+      "track": "evidence_and_case_definition",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-008",
+      "track": "evidence_and_case_definition",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-009",
+      "track": "evidence_and_case_definition",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-010",
+      "track": "evidence_and_case_definition",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-011",
+      "track": "evidence_and_case_definition",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-012",
+      "track": "evidence_and_case_definition",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-013",
+      "track": "evidence_and_case_definition",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-014",
+      "track": "evidence_and_case_definition",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-015",
+      "track": "evidence_and_case_definition",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-016",
+      "track": "evidence_and_case_definition",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-017",
+      "track": "evidence_and_case_definition",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-018",
+      "track": "evidence_and_case_definition",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-019",
+      "track": "evidence_and_case_definition",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-020",
+      "track": "evidence_and_case_definition",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-021",
+      "track": "gis_and_geometry",
+      "cases": 2,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-022",
+      "track": "gis_and_geometry",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-023",
+      "track": "gis_and_geometry",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-024",
+      "track": "gis_and_geometry",
+      "cases": 2,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-025",
+      "track": "gis_and_geometry",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-026",
+      "track": "gis_and_geometry",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-027",
+      "track": "gis_and_geometry",
+      "cases": 2,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-028",
+      "track": "gis_and_geometry",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-029",
+      "track": "gis_and_geometry",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-030",
+      "track": "gis_and_geometry",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-031",
+      "track": "gis_and_geometry",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-032",
+      "track": "gis_and_geometry",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-033",
+      "track": "gis_and_geometry",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-034",
+      "track": "gis_and_geometry",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-035",
+      "track": "gis_and_geometry",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-036",
+      "track": "gis_and_geometry",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-037",
+      "track": "gis_and_geometry",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-038",
+      "track": "gis_and_geometry",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-039",
+      "track": "gis_and_geometry",
+      "cases": 3,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-040",
+      "track": "gis_and_geometry",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-041",
+      "track": "mesh_and_numerics",
+      "cases": 1,
+      "reference_status": "openfoam_tool_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": true,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-042",
+      "track": "mesh_and_numerics",
+      "cases": 1,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-043",
+      "track": "mesh_and_numerics",
+      "cases": 2,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-044",
+      "track": "mesh_and_numerics",
+      "cases": 1,
+      "reference_status": "openfoam_tool_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-045",
+      "track": "mesh_and_numerics",
+      "cases": 3,
+      "reference_status": "openfoam_tool_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-046",
+      "track": "mesh_and_numerics",
+      "cases": 1,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-047",
+      "track": "mesh_and_numerics",
+      "cases": 1,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-048",
+      "track": "mesh_and_numerics",
+      "cases": 1,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-049",
+      "track": "mesh_and_numerics",
+      "cases": 1,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-050",
+      "track": "mesh_and_numerics",
+      "cases": 1,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-051",
+      "track": "mesh_and_numerics",
+      "cases": 1,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-052",
+      "track": "mesh_and_numerics",
+      "cases": 1,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-053",
+      "track": "mesh_and_numerics",
+      "cases": 1,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-054",
+      "track": "mesh_and_numerics",
+      "cases": 1,
+      "reference_status": "openfoam_tool_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-055",
+      "track": "mesh_and_numerics",
+      "cases": 1,
+      "reference_status": "openfoam_tool_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-056",
+      "track": "mesh_and_numerics",
+      "cases": 2,
+      "reference_status": "openfoam_tool_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-057",
+      "track": "mesh_and_numerics",
+      "cases": 2,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-058",
+      "track": "mesh_and_numerics",
+      "cases": 1,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-059",
+      "track": "mesh_and_numerics",
+      "cases": 1,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-060",
+      "track": "mesh_and_numerics",
+      "cases": 3,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-061",
+      "track": "abl_and_boundary_conditions",
+      "cases": 1,
+      "reference_status": "openfoam_numerical_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": true,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_case_arrays.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-062",
+      "track": "abl_and_boundary_conditions",
+      "cases": 2,
+      "reference_status": "openfoam_numerical_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": true,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_case_arrays.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-063",
+      "track": "abl_and_boundary_conditions",
+      "cases": 2,
+      "reference_status": "openfoam_numerical_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": true,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_case_arrays.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-064",
+      "track": "abl_and_boundary_conditions",
+      "cases": 3,
+      "reference_status": "openfoam_numerical_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": true,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_case_arrays.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-065",
+      "track": "abl_and_boundary_conditions",
+      "cases": 1,
+      "reference_status": "openfoam_numerical_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_case_arrays.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-066",
+      "track": "abl_and_boundary_conditions",
+      "cases": 1,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-067",
+      "track": "abl_and_boundary_conditions",
+      "cases": 1,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-068",
+      "track": "abl_and_boundary_conditions",
+      "cases": 1,
+      "reference_status": "openfoam_numerical_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": true,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_case_arrays.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-069",
+      "track": "abl_and_boundary_conditions",
+      "cases": 3,
+      "reference_status": "openfoam_numerical_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": true,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_case_arrays.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-070",
+      "track": "abl_and_boundary_conditions",
+      "cases": 3,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-071",
+      "track": "abl_and_boundary_conditions",
+      "cases": 2,
+      "reference_status": "openfoam_numerical_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": true,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_case_arrays.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-072",
+      "track": "abl_and_boundary_conditions",
+      "cases": 1,
+      "reference_status": "openfoam_numerical_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": true,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_case_arrays.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-073",
+      "track": "abl_and_boundary_conditions",
+      "cases": 3,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-074",
+      "track": "abl_and_boundary_conditions",
+      "cases": 1,
+      "reference_status": "openfoam_numerical_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": true,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_case_arrays.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-075",
+      "track": "abl_and_boundary_conditions",
+      "cases": 1,
+      "reference_status": "openfoam_numerical_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": true,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_case_arrays.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-076",
+      "track": "abl_and_boundary_conditions",
+      "cases": 1,
+      "reference_status": "openfoam_numerical_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": true,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_case_arrays.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-077",
+      "track": "abl_and_boundary_conditions",
+      "cases": 2,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-078",
+      "track": "abl_and_boundary_conditions",
+      "cases": 1,
+      "reference_status": "openfoam_numerical_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": true,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_case_arrays.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-079",
+      "track": "abl_and_boundary_conditions",
+      "cases": 1,
+      "reference_status": "openfoam_numerical_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": true,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_case_arrays.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-080",
+      "track": "abl_and_boundary_conditions",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-081",
+      "track": "openfoam_rans_les_execution",
+      "cases": 1,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-082",
+      "track": "openfoam_rans_les_execution",
+      "cases": 1,
+      "reference_status": "openfoam_numerical_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": true,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_case_arrays.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-083",
+      "track": "openfoam_rans_les_execution",
+      "cases": 3,
+      "reference_status": "openfoam_numerical_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": true,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_case_arrays.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-084",
+      "track": "openfoam_rans_les_execution",
+      "cases": 3,
+      "reference_status": "openfoam_numerical_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": true,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_case_arrays.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-085",
+      "track": "openfoam_rans_les_execution",
+      "cases": 2,
+      "reference_status": "openfoam_numerical_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": true,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_case_arrays.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-086",
+      "track": "openfoam_rans_les_execution",
+      "cases": 3,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-087",
+      "track": "openfoam_rans_les_execution",
+      "cases": 1,
+      "reference_status": "openfoam_numerical_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": true,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_case_arrays.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-088",
+      "track": "openfoam_rans_les_execution",
+      "cases": 1,
+      "reference_status": "openfoam_numerical_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": true,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_case_arrays.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_sampling_signatures.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-089",
+      "track": "openfoam_rans_les_execution",
+      "cases": 1,
+      "reference_status": "openfoam_numerical_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": true,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_case_arrays.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-090",
+      "track": "openfoam_rans_les_execution",
+      "cases": 1,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-091",
+      "track": "openfoam_rans_les_execution",
+      "cases": 1,
+      "reference_status": "openfoam_numerical_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": true,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_case_arrays.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-092",
+      "track": "openfoam_rans_les_execution",
+      "cases": 3,
+      "reference_status": "openfoam_numerical_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": true,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_case_arrays.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-093",
+      "track": "openfoam_rans_les_execution",
+      "cases": 3,
+      "reference_status": "openfoam_numerical_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": true,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_case_arrays.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-094",
+      "track": "openfoam_rans_les_execution",
+      "cases": 3,
+      "reference_status": "openfoam_numerical_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": true,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_case_arrays.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-095",
+      "track": "openfoam_rans_les_execution",
+      "cases": 3,
+      "reference_status": "openfoam_numerical_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": true,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_case_arrays.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-096",
+      "track": "openfoam_rans_les_execution",
+      "cases": 3,
+      "reference_status": "openfoam_numerical_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": true,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_case_arrays.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-097",
+      "track": "openfoam_rans_les_execution",
+      "cases": 1,
+      "reference_status": "openfoam_numerical_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": true,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_case_arrays.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-098",
+      "track": "openfoam_rans_les_execution",
+      "cases": 3,
+      "reference_status": "openfoam_numerical_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": true,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_case_arrays.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-099",
+      "track": "openfoam_rans_les_execution",
+      "cases": 3,
+      "reference_status": "openfoam_numerical_reference_generated",
+      "release_status": "reference_ready_not_release_valid",
+      "evaluated_in_paper": true,
+      "included_reference_files": [
+        "canonical_result.json",
+        "reference_case_arrays.json",
+        "reference_metrics.json",
+        "reference_provenance.json",
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-100",
+      "track": "openfoam_rans_les_execution",
+      "cases": 2,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-101",
+      "track": "palm_urban_microclimate",
+      "cases": 1,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-102",
+      "track": "palm_urban_microclimate",
+      "cases": 1,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-103",
+      "track": "palm_urban_microclimate",
+      "cases": 1,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-104",
+      "track": "palm_urban_microclimate",
+      "cases": 1,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-105",
+      "track": "palm_urban_microclimate",
+      "cases": 1,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-106",
+      "track": "palm_urban_microclimate",
+      "cases": 2,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-107",
+      "track": "palm_urban_microclimate",
+      "cases": 1,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-108",
+      "track": "palm_urban_microclimate",
+      "cases": 3,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-109",
+      "track": "palm_urban_microclimate",
+      "cases": 3,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-110",
+      "track": "palm_urban_microclimate",
+      "cases": 3,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-111",
+      "track": "palm_urban_microclimate",
+      "cases": 3,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-112",
+      "track": "palm_urban_microclimate",
+      "cases": 1,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-113",
+      "track": "palm_urban_microclimate",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-114",
+      "track": "palm_urban_microclimate",
+      "cases": 2,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-115",
+      "track": "palm_urban_microclimate",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-116",
+      "track": "palm_urban_microclimate",
+      "cases": 3,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-117",
+      "track": "palm_urban_microclimate",
+      "cases": 3,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-118",
+      "track": "palm_urban_microclimate",
+      "cases": 2,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-119",
+      "track": "palm_urban_microclimate",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-120",
+      "track": "palm_urban_microclimate",
+      "cases": 3,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-121",
+      "track": "diagnosis_and_repair",
+      "cases": 2,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-122",
+      "track": "diagnosis_and_repair",
+      "cases": 2,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-123",
+      "track": "diagnosis_and_repair",
+      "cases": 2,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-124",
+      "track": "diagnosis_and_repair",
+      "cases": 2,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-125",
+      "track": "diagnosis_and_repair",
+      "cases": 2,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-126",
+      "track": "diagnosis_and_repair",
+      "cases": 2,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-127",
+      "track": "diagnosis_and_repair",
+      "cases": 2,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-128",
+      "track": "diagnosis_and_repair",
+      "cases": 2,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-129",
+      "track": "diagnosis_and_repair",
+      "cases": 2,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-130",
+      "track": "diagnosis_and_repair",
+      "cases": 2,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-131",
+      "track": "diagnosis_and_repair",
+      "cases": 2,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-132",
+      "track": "diagnosis_and_repair",
+      "cases": 2,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-133",
+      "track": "diagnosis_and_repair",
+      "cases": 2,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-134",
+      "track": "diagnosis_and_repair",
+      "cases": 2,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-135",
+      "track": "diagnosis_and_repair",
+      "cases": 2,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-136",
+      "track": "diagnosis_and_repair",
+      "cases": 2,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-137",
+      "track": "diagnosis_and_repair",
+      "cases": 2,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-138",
+      "track": "diagnosis_and_repair",
+      "cases": 2,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-139",
+      "track": "diagnosis_and_repair",
+      "cases": 2,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-140",
+      "track": "diagnosis_and_repair",
+      "cases": 2,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-141",
+      "track": "validation_and_uncertainty",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-142",
+      "track": "validation_and_uncertainty",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-143",
+      "track": "validation_and_uncertainty",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-144",
+      "track": "validation_and_uncertainty",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-145",
+      "track": "validation_and_uncertainty",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-146",
+      "track": "validation_and_uncertainty",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-147",
+      "track": "validation_and_uncertainty",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-148",
+      "track": "validation_and_uncertainty",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-149",
+      "track": "validation_and_uncertainty",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-150",
+      "track": "validation_and_uncertainty",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-151",
+      "track": "validation_and_uncertainty",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-152",
+      "track": "validation_and_uncertainty",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-153",
+      "track": "validation_and_uncertainty",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-154",
+      "track": "validation_and_uncertainty",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-155",
+      "track": "validation_and_uncertainty",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-156",
+      "track": "validation_and_uncertainty",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-157",
+      "track": "validation_and_uncertainty",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-158",
+      "track": "validation_and_uncertainty",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-159",
+      "track": "validation_and_uncertainty",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-160",
+      "track": "validation_and_uncertainty",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-161",
+      "track": "flow_diagnostics_and_risk",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-162",
+      "track": "flow_diagnostics_and_risk",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-163",
+      "track": "flow_diagnostics_and_risk",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-164",
+      "track": "flow_diagnostics_and_risk",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-165",
+      "track": "flow_diagnostics_and_risk",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-166",
+      "track": "flow_diagnostics_and_risk",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-167",
+      "track": "flow_diagnostics_and_risk",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-168",
+      "track": "flow_diagnostics_and_risk",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-169",
+      "track": "flow_diagnostics_and_risk",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-170",
+      "track": "flow_diagnostics_and_risk",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-171",
+      "track": "flow_diagnostics_and_risk",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-172",
+      "track": "flow_diagnostics_and_risk",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-173",
+      "track": "flow_diagnostics_and_risk",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-174",
+      "track": "flow_diagnostics_and_risk",
+      "cases": 3,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-175",
+      "track": "flow_diagnostics_and_risk",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-176",
+      "track": "flow_diagnostics_and_risk",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-177",
+      "track": "flow_diagnostics_and_risk",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-178",
+      "track": "flow_diagnostics_and_risk",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-179",
+      "track": "flow_diagnostics_and_risk",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-180",
+      "track": "flow_diagnostics_and_risk",
+      "cases": 3,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-181",
+      "track": "optimization_and_decision",
+      "cases": 9,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-182",
+      "track": "optimization_and_decision",
+      "cases": 9,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-183",
+      "track": "optimization_and_decision",
+      "cases": 3,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-184",
+      "track": "optimization_and_decision",
+      "cases": 9,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-185",
+      "track": "optimization_and_decision",
+      "cases": 9,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-186",
+      "track": "optimization_and_decision",
+      "cases": 3,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-187",
+      "track": "optimization_and_decision",
+      "cases": 3,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-188",
+      "track": "optimization_and_decision",
+      "cases": 3,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-189",
+      "track": "optimization_and_decision",
+      "cases": 3,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-190",
+      "track": "optimization_and_decision",
+      "cases": 3,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-191",
+      "track": "optimization_and_decision",
+      "cases": 3,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-192",
+      "track": "optimization_and_decision",
+      "cases": 3,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-193",
+      "track": "optimization_and_decision",
+      "cases": 6,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-194",
+      "track": "optimization_and_decision",
+      "cases": 6,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-195",
+      "track": "optimization_and_decision",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-196",
+      "track": "optimization_and_decision",
+      "cases": 6,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-197",
+      "track": "optimization_and_decision",
+      "cases": 4,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-198",
+      "track": "optimization_and_decision",
+      "cases": 1,
+      "reference_status": "local_reference_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-199",
+      "track": "optimization_and_decision",
+      "cases": 4,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    },
+    {
+      "task": "task-200",
+      "track": "optimization_and_decision",
+      "cases": 12,
+      "reference_status": "not_generated",
+      "release_status": "scaffold_only",
+      "evaluated_in_paper": false,
+      "included_reference_files": [
+        "reference_status.json"
+      ]
+    }
+  ]
+}

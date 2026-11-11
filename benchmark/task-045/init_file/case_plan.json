@@ -1,0 +1,165 @@
+{
+  "cases": [
+    {
+      "case_id": "task-045-case-001",
+      "execution_role": "provided_data_or_tool_execution",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "SB4_LOCAL",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "定义粗中细网格及共同统计位置，为GCI和物理差异比较准备。",
+        "mesh_contract": "local_assets/openfoam_base/three_level_mesh_contract.json",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "粗网格设计"
+      },
+      "mesh_stage": "coarse",
+      "metrics": [
+        "refinement_ratio_consistency",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "h_j=(3009.2/N_j)^(1/3), r_cm=h_coarse/h_medium, r_mf=h_medium/h_fine; refinement_ratio_consistency=1-abs(r_cm-r_mf)/max(r_cm,r_mf), with N_j counted from independently validated raw polyMesh; identical grids and nonuniform directional refinement fail separate hard gates",
+        "id": "refinement_ratio_consistency",
+        "name_zh": "三层网格加密比一致性",
+        "unit": "fraction"
+      },
+      "purpose": "单体建筑网格无关性三层设计：执行变体 粗网格设计，围绕定义粗中细网格及共同统计位置，为GCI和物理差异比较准备。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-045",
+      "variant": "粗网格设计"
+    },
+    {
+      "case_id": "task-045-case-002",
+      "execution_role": "provided_data_or_tool_execution",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "SB4_LOCAL",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "定义粗中细网格及共同统计位置，为GCI和物理差异比较准备。",
+        "mesh_contract": "local_assets/openfoam_base/three_level_mesh_contract.json",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "中网格设计"
+      },
+      "mesh_stage": "medium",
+      "metrics": [
+        "refinement_ratio_consistency",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "h_j=(3009.2/N_j)^(1/3), r_cm=h_coarse/h_medium, r_mf=h_medium/h_fine; refinement_ratio_consistency=1-abs(r_cm-r_mf)/max(r_cm,r_mf), with N_j counted from independently validated raw polyMesh; identical grids and nonuniform directional refinement fail separate hard gates",
+        "id": "refinement_ratio_consistency",
+        "name_zh": "三层网格加密比一致性",
+        "unit": "fraction"
+      },
+      "purpose": "单体建筑网格无关性三层设计：执行变体 中网格设计，围绕定义粗中细网格及共同统计位置，为GCI和物理差异比较准备。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-045",
+      "variant": "中网格设计"
+    },
+    {
+      "case_id": "task-045-case-003",
+      "execution_role": "provided_data_or_tool_execution",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "SB4_LOCAL",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "定义粗中细网格及共同统计位置，为GCI和物理差异比较准备。",
+        "mesh_contract": "local_assets/openfoam_base/three_level_mesh_contract.json",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "细网格设计"
+      },
+      "mesh_stage": "fine",
+      "metrics": [
+        "refinement_ratio_consistency",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "h_j=(3009.2/N_j)^(1/3), r_cm=h_coarse/h_medium, r_mf=h_medium/h_fine; refinement_ratio_consistency=1-abs(r_cm-r_mf)/max(r_cm,r_mf), with N_j counted from independently validated raw polyMesh; identical grids and nonuniform directional refinement fail separate hard gates",
+        "id": "refinement_ratio_consistency",
+        "name_zh": "三层网格加密比一致性",
+        "unit": "fraction"
+      },
+      "purpose": "单体建筑网格无关性三层设计：执行变体 细网格设计，围绕定义粗中细网格及共同统计位置，为GCI和物理差异比较准备。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-045",
+      "variant": "细网格设计"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "lite",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 3,
+  "required_solver_runs": 0,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-045"
+}

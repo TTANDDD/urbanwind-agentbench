@@ -1,0 +1,18 @@
+{
+  "experimental_claim": false,
+  "metric_formula": "mean_59(abs(Ux_CFD(coord)-Ux_synthetic(coord)))/1.2; exact (x,y,z) join of 59 fluid observations, t=300-420 s",
+  "metric_freeze_boundary": "59-point coordinate mask frozen after numerical candidate but before agent evaluation; original index-wise 64-point contract was incorrect.",
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-089",
+  "truth_type": "verified_openfoam_numerical_reference",
+  "units": {
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction",
+    "local_reference_comparison_nmae": "fraction"
+  },
+  "values": {
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0,
+    "local_reference_comparison_nmae": 0.4631980217216609
+  }
+}

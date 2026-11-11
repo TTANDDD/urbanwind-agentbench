@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "平屋顶、斜屋顶和导流构件三个候选",
+      "role_id": "input-001",
+      "seed": 202609048801,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.12632013,
+        0.24369325,
+        0.6073965,
+        0.12046471,
+        0.94154639,
+        0.78070534,
+        0.99299531,
+        0.91673825,
+        0.68570623,
+        0.98279907,
+        0.15953644,
+        0.44649346,
+        0.35998764,
+        0.77603561,
+        0.09497341,
+        0.80093798
+      ]
+    },
+    {
+      "label": "相同主体建筑",
+      "role_id": "input-002",
+      "seed": 202609048802,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.92131772,
+        0.78080498,
+        0.48487154,
+        0.25225773,
+        0.86358395,
+        0.81229729,
+        0.44684233,
+        0.13201333,
+        0.78126153,
+        0.52208334,
+        0.34287464,
+        0.11226988,
+        0.26283093,
+        0.11626198,
+        0.96977924,
+        0.86368504
+      ]
+    },
+    {
+      "label": "尾流和垂直交换指标",
+      "role_id": "input-003",
+      "seed": 202609048803,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.5205947,
+        0.6395625,
+        0.9497863,
+        0.76510714,
+        0.15559484,
+        0.87995002,
+        0.31790449,
+        0.21298613,
+        0.49309034,
+        0.59400806,
+        0.77055358,
+        0.63114687,
+        0.31708308,
+        0.92540498,
+        0.05428921,
+        0.23557374
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-188"
+}

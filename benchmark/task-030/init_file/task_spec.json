@@ -1,0 +1,155 @@
+{
+  "acceptance_contract": {
+    "hard_gate_precedence": true,
+    "primary_metric_formula": "correct_z0_class_mappings / audited_zones",
+    "primary_metric_id": "roughness_mapping_accuracy",
+    "required_case_ids": [
+      "task-030-case-001"
+    ],
+    "required_solver_runs": 0
+  },
+  "answer_free": true,
+  "case_anchor": {
+    "id": "PROCEDURAL_CITY",
+    "known": {
+      "geographic_claim": false,
+      "geometry": "deterministic_parameterized_city",
+      "truth_type": "synthetic_or_numerical_reference"
+    },
+    "missing": [],
+    "name": "程序化本地城市子域",
+    "references": [
+      "LOCAL_GENERATOR"
+    ],
+    "status": "local_generator_ready"
+  },
+  "category": "geospatial_preprocessing",
+  "compute_track": "lite",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision_rule": "先拒绝任何执行、数值、单位、守恒或外部证据门禁失败的案例，再依据冻结指标比较；不得用文字报告替代原始证据。",
+  "difficulty": "intermediate",
+  "engineering_focus": "把土地覆盖映射为粗糙度类别并记录映射表与未知类别。",
+  "evaluator_status": "task_specific_local_metric_check",
+  "evidence_requirements": [
+    "exact commands and working directories",
+    "software names, versions, executable paths and SHA256 when available",
+    "timezone-aware start/end times and exit codes",
+    "SHA256-addressed input, log and raw-output files",
+    "coordinate system, units, masks, statistical windows and aggregation order"
+  ],
+  "init_type": "engineering_data_and_model",
+  "limitations": [
+    "Deterministic local init assets are included, but they are not experimental measurements or hidden answers.",
+    "No real OpenFOAM or PALM reference run is included yet.",
+    "No task-specific hidden numerical ground truth or physical tolerance is installed.",
+    "Optional one-click public data may enhance validation but is never required for task execution."
+  ],
+  "local_generator_version": "urbanwind-local-assets-v3",
+  "materialization_status": "local_inputs_generated",
+  "metrics": [
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "correct_z0_class_mappings / audited_zones",
+      "id": "roughness_mapping_accuracy",
+      "name_zh": "粗糙度类别映射准确率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    }
+  ],
+  "physical_checks": [
+    {
+      "id": "evidence_is_raw_and_hashed",
+      "requirement": "所有进入指标的原始输入、日志和输出均在manifest中登记SHA256。"
+    },
+    {
+      "id": "units_and_coordinates_declared",
+      "requirement": "所有比较对象声明单位、坐标系、归一化和掩膜。"
+    },
+    {
+      "id": "track_specific_physics",
+      "requirement": "几何必须通过拓扑、尺度、CRS、包围盒和要素计数复核。"
+    },
+    {
+      "id": "task_specific_primary_metric",
+      "requirement": "必须从原始证据按冻结公式重算主指标“粗糙度类别映射准确率（roughness_mapping_accuracy）”：correct_z0_class_mappings / audited_zones。"
+    }
+  ],
+  "professional_difficulty": "D2",
+  "reference_status": "local_reference_generated",
+  "release_status": "scaffold_only",
+  "required_artifacts": [
+    {
+      "format": "json",
+      "path": "design.json",
+      "role": "task design and assumptions"
+    },
+    {
+      "format": "json",
+      "path": "geometry_manifest.json",
+      "role": "track-specific result"
+    },
+    {
+      "format": "json",
+      "path": "run_manifest.json",
+      "role": "tool and solver provenance"
+    },
+    {
+      "format": "json",
+      "path": "metrics.json",
+      "role": "reported metrics with units"
+    },
+    {
+      "format": "json",
+      "path": "evidence_manifest.json",
+      "role": "SHA256-addressed raw evidence"
+    },
+    {
+      "format": "markdown",
+      "path": "decision.md",
+      "role": "bounded engineering conclusion"
+    }
+  ],
+  "required_cases": 1,
+  "required_inputs": [
+    "随任务本地生成的GIS/几何输入",
+    "本地转换规则",
+    "本地标签控制样本"
+  ],
+  "required_solver_runs": 0,
+  "schema_version": "1.0",
+  "scientific_question": "智能体能否在不伪造证据的前提下完成“地表粗糙度分区”，并把工具执行、数值质量、物理依据和工程结论连成可复算闭环？",
+  "software_chain": [
+    "python",
+    "qgis",
+    "gdal",
+    "geopandas"
+  ],
+  "task_id": "urbanwind-task-030",
+  "task_mode": "configure_and_verify",
+  "task_number": 30,
+  "title": "地表粗糙度分区",
+  "track": "gis_and_geometry",
+  "track_name": "GIS数据与城市几何",
+  "workflow": {
+    "configure": "围绕程序化本地城市子域生成案例计划和软件配置，并保持单位、坐标和版本可追踪。",
+    "decide": "给出带适用边界的工程结论；关键证据缺失时明确停止或降级声明。",
+    "evidence": "读取任务输入与来源登记，显式列出已知、假设、缺失和许可边界。",
+    "execute": "执行1个数据或工具案例；本任务不要求新跑CFD/LES，但所有数据处理工具必须真实执行并留痕。",
+    "postprocess": "从原始文件重算声明指标，保存脚本、命令、日志、单位、时间窗和哈希。",
+    "preprocess": "把土地覆盖映射为粗糙度类别并记录映射表与未知类别。",
+    "validate": "依次通过文件、执行、数值、物理、外部证据和工程约束门禁。"
+  }
+}

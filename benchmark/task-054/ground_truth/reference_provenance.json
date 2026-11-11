@@ -1,0 +1,53 @@
+{
+  "artifacts": [
+    {
+      "bytes": 20465253,
+      "path": "task054-original-city-partition.tar.gz",
+      "sha256": "12228734395bd9ebcbb2ca84bc33178cb10d87bd2295c56feefd6ef0313d24a8"
+    },
+    {
+      "bytes": 92109403,
+      "path": "task054-v51b-passed-supplement.tar.gz",
+      "sha256": "4c37fe73ce59112bfd998222e4cdd47059dddf7e41d1545ce47c4f76eb601e6e"
+    },
+    {
+      "bytes": 72662,
+      "path": "blockMesh.log",
+      "sha256": "539661caae875faf29cc36f24b2157358468820d363b8dd4974b393992849029"
+    },
+    {
+      "bytes": 4679,
+      "path": "checkMesh.log",
+      "sha256": "9b146f59a8dedc16db2667270eeace41a6625cbac4b4653ce6fd9d54a513bf6a"
+    }
+  ],
+  "claim_boundary": "Local synthetic city and genuine OpenFOAM mesh partition tool reference only; no CFD/LES, communication timing, runtime speedup, experimental or real-city validation.",
+  "evaluator_sha256": "e316a31d4e8b29c7b83c7fc08b5330cedad214d11503f147719b157f5d3593b0",
+  "evaluator_tests": {
+    "path": "evaluator_tests.json",
+    "sha256": "4138674c5a15199af9b5491cedd7cf2cd1f604f86b1c69d3018cb28d1f4963d7"
+  },
+  "experimental_claim": false,
+  "flow_solver_runs": 0,
+  "freeze_disclosure": "Primary formula, two methods and four ranks were frozen before September04 tools. Expanded addressing, reporting, safe replay and deployment gates are added after viewing that candidate, before agent evaluation.",
+  "fresh_parallel_check_is_supplemental": true,
+  "host": "5070-server",
+  "independent_audit": {
+    "path": "independent_audit.json",
+    "sha256": "9ffd07e2c35aea37265183b9cca4bcab5acf793056aa787e0ba495427bdf59e8"
+  },
+  "openfoam_version": "v2412",
+  "original_parallel_check_claim": false,
+  "original_protocol": "validation/task054-city-partition-20260904-v1/protocol.json",
+  "original_protocol_sha256": "3db77af9c8bb0d8fd3c2f2f54529ee708ff85bbc16fc0087f9f5ff5c1568fce2",
+  "post_run_pre_agent_supplement": true,
+  "scientific_contract_sha256": "efb5aeae9c2cb058d170ca7b1be5f3b557ac79ae5e00993ce3bbfe440026debd",
+  "task_id": "urbanwind-task-054",
+  "tested_helper_hashes": {
+    "contract_evaluator.py": "c92d50c4a72c9dec322459d8151dec89e7a79000214ad82f2a2438ce716167df",
+    "task042_raw_mesh.py": "403eea866ef10495a5c89cb7b97400cee9e2955e9cda0fceebed76c977a3891a",
+    "task054_partition_inputs.py": "fa187815f9a53387f1d3dfbcf458f269979004f74a25e621091f77571fca21ad",
+    "task054_raw_partition.py": "abf510eb5e3bf6c63e3675ff18476dfc6edaa513db46cfb91707881ee8cf839a"
+  },
+  "truth_type": "verified_openfoam_tool_reference"
+}

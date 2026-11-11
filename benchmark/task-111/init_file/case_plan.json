@@ -1,0 +1,162 @@
+{
+  "cases": [
+    {
+      "case_id": "task-111-case-001",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "对多个地理风向生成一致的驱动、运行和回投影结果。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "风向0度"
+      },
+      "metrics": [
+        "palm_wind_direction_field_nmae",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "weighted_mean_directions(abs(field_model-field_reference))/reference_scale",
+        "id": "palm_wind_direction_field_nmae",
+        "name_zh": "PALM多风向场NMAE",
+        "unit": "fraction"
+      },
+      "purpose": "PALM多风向运行：执行变体 风向0度，围绕对多个地理风向生成一致的驱动、运行和回投影结果。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-111",
+      "variant": "风向0度"
+    },
+    {
+      "case_id": "task-111-case-002",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "对多个地理风向生成一致的驱动、运行和回投影结果。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "风向22.5度"
+      },
+      "metrics": [
+        "palm_wind_direction_field_nmae",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "weighted_mean_directions(abs(field_model-field_reference))/reference_scale",
+        "id": "palm_wind_direction_field_nmae",
+        "name_zh": "PALM多风向场NMAE",
+        "unit": "fraction"
+      },
+      "purpose": "PALM多风向运行：执行变体 风向22.5度，围绕对多个地理风向生成一致的驱动、运行和回投影结果。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-111",
+      "variant": "风向22.5度"
+    },
+    {
+      "case_id": "task-111-case-003",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "对多个地理风向生成一致的驱动、运行和回投影结果。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "风向45度"
+      },
+      "metrics": [
+        "palm_wind_direction_field_nmae",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "weighted_mean_directions(abs(field_model-field_reference))/reference_scale",
+        "id": "palm_wind_direction_field_nmae",
+        "name_zh": "PALM多风向场NMAE",
+        "unit": "fraction"
+      },
+      "purpose": "PALM多风向运行：执行变体 风向45度，围绕对多个地理风向生成一致的驱动、运行和回投影结果。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-111",
+      "variant": "风向45度"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "cfd",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 3,
+  "required_solver_runs": 3,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-111"
+}

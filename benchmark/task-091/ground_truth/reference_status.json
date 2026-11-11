@@ -1,0 +1,58 @@
+{
+  "blockers": [
+    "frozen distributable runtime image",
+    "packaged hidden-evaluator execution"
+  ],
+  "canonical_result": "canonical_result.json",
+  "claim_boundary": "Reference-ready numerical task; benchmark release remains blocked.",
+  "evaluator_status": "task_specific_numeric_array_check",
+  "expected_ground_truth": {
+    "case_ids": [
+      "task-091-case-001"
+    ],
+    "hidden_tolerances_status": "frozen_numeric_array_tolerance",
+    "input_roles": [
+      "随任务本地生成的OpenFOAM起始案例",
+      "本地OpenFOAM运行版本记录合同",
+      "本地合成数值参考（仅作固定比较输入，不是PIV或实验真值）"
+    ],
+    "metric_contracts": [
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "0.5*(mean_i(abs(Ux_i-Ux_local_i))/1.2 + mean_i(abs(kres_i-kres_local_i))/1.44) over 96 frozen probes",
+        "id": "array_les_turbulence_nmae",
+        "name_zh": "阵列LES本地合成参考统计NMAE",
+        "unit": "fraction"
+      },
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "hashed_source_linked_evidence / required_evidence",
+        "id": "evidence_provenance_fraction",
+        "name_zh": "证据溯源覆盖率",
+        "unit": "fraction"
+      },
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "passed_hard_gates / required_hard_gates",
+        "id": "hard_gate_pass_fraction",
+        "name_zh": "硬门禁通过率",
+        "unit": "fraction"
+      }
+    ],
+    "reference_values_status": "verified_openfoam_numerical_reference_generated"
+  },
+  "experimental_claim": false,
+  "limitations": [
+    "The references are produced by OpenFOAM v2412 and are not wind-tunnel, PIV, DNS, or field-measurement truth.",
+    "The evaluator recomputes the visible task metric and checks hidden probe statistics; it does not independently re-run OpenFOAM.",
+    "A frozen distributable runtime image and packaged hidden-evaluator execution are still pending."
+  ],
+  "reference_case_arrays": "reference_case_arrays.json",
+  "reference_metrics": "reference_metrics.json",
+  "reference_provenance": "reference_provenance.json",
+  "reference_status": "openfoam_numerical_reference_generated",
+  "release_status": "reference_ready_not_release_valid",
+  "schema_version": "1.2",
+  "task_id": "urbanwind-task-091",
+  "truth_type": "verified_openfoam_numerical_reference"
+}

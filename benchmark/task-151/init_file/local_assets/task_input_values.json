@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "本地生成的CFD与高分辨率参考数组",
+      "role_id": "input-001",
+      "seed": 202609045101,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.79026799,
+        0.77112113,
+        0.09537901,
+        0.57597147,
+        0.87572018,
+        0.86373038,
+        0.12039142,
+        0.7278894,
+        0.63724057,
+        0.4048286,
+        0.68677906,
+        0.89663189,
+        0.45962384,
+        0.26791824,
+        0.64565316,
+        0.39699393
+      ]
+    },
+    {
+      "label": "本地坐标/单位/掩膜",
+      "role_id": "input-002",
+      "seed": 202609045102,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.92138998,
+        0.93755209,
+        0.97077507,
+        0.98867899,
+        0.77835808,
+        0.15058254,
+        0.71696936,
+        0.78123846,
+        0.98402399,
+        0.20385399,
+        0.46144471,
+        0.98569508,
+        0.23923858,
+        0.59795543,
+        0.05027968,
+        0.67806853
+      ]
+    },
+    {
+      "label": "冻结参考统计量",
+      "role_id": "input-003",
+      "seed": 202609045103,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.54049507,
+        0.87892393,
+        0.31339967,
+        0.18092238,
+        0.22446267,
+        0.05438108,
+        0.52454859,
+        0.57171162,
+        0.44964644,
+        0.63530241,
+        0.83686908,
+        0.88246674,
+        0.3140324,
+        0.88126501,
+        0.65854939,
+        0.94760225
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-151"
+}

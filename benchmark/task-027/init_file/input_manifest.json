@@ -1,0 +1,60 @@
+{
+  "anchor_id": "PROCEDURAL_CITY",
+  "anchor_state": "local_generator_ready",
+  "answer_free": true,
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "excluded": [
+    "ground truth",
+    "reference outputs",
+    "reference metrics",
+    "hidden thresholds",
+    "solver executables"
+  ],
+  "included_files": [
+    "task_spec.json",
+    "case_plan.json",
+    "reporting_contract.json",
+    "input_manifest.json",
+    "contract_evaluator.py",
+    "README_INPUT.md",
+    "local_assets/active_learning_data.csv",
+    "local_assets/case_control_contract.json",
+    "local_assets/case_matrix.csv",
+    "local_assets/city_geometry.geojson",
+    "local_assets/control_points.csv",
+    "local_assets/fault_manifest.json",
+    "local_assets/generation_manifest.json",
+    "local_assets/input_role_manifest.json",
+    "local_assets/mask_and_weights.csv",
+    "local_assets/mesh_levels.csv",
+    "local_assets/mesh_solution_series.csv",
+    "local_assets/model_field.csv",
+    "local_assets/optional_public_metadata.json",
+    "local_assets/reference_diagnostics.json",
+    "local_assets/reference_field.csv",
+    "local_assets/reference_spectrum.csv",
+    "local_assets/runtime_contract.json",
+    "local_assets/source_inventory.json",
+    "local_assets/task_input_values.json",
+    "local_assets/terrain_and_surface.csv",
+    "local_assets/velocity_timeseries.csv",
+    "local_assets/wind_climate.csv"
+  ],
+  "local_generator_version": "urbanwind-local-assets-v3",
+  "materialization_status": "local_inputs_generated",
+  "optional_public_sources": [
+    {
+      "name": "AIJ UWE Case A",
+      "required": false,
+      "url": "https://zenodo.org/records/15050148"
+    }
+  ],
+  "required_external_inputs": [],
+  "required_local_inputs": [
+    "随任务本地生成的GIS/几何输入",
+    "本地转换规则",
+    "本地标签控制样本"
+  ],
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-027"
+}

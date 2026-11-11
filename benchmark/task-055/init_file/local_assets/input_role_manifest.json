@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-055",
+  "generator_version": "urbanwind-local-assets-v3",
+  "required_external_inputs": [],
+  "all_required_roles_materialized": true,
+  "roles": [
+    {
+      "role_id": "input-001",
+      "label": "冻结的带单内部面朝向故障原始城市polyMesh",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "case/constant/polyMesh/points",
+        "case/constant/polyMesh/faces",
+        "case/constant/polyMesh/owner",
+        "case/constant/polyMesh/neighbour",
+        "case/constant/polyMesh/boundary"
+      ]
+    },
+    {
+      "role_id": "input-002",
+      "label": "公开最小修复与几何守恒合同",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "repair_contract.json"
+      ]
+    },
+    {
+      "role_id": "input-003",
+      "label": "完整原生质量阈值和数据型提交格式",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "quality_thresholds.json",
+        "submission_schema.json"
+      ]
+    }
+  ]
+}

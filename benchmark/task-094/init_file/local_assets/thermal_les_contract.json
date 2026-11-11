@@ -1,0 +1,204 @@
+{
+  "ambient_temperature_k": 300.0,
+  "cases": [
+    {
+      "case_id": "task-094-case-001",
+      "ground_heat_flux_w_m2": 0.0,
+      "variant": "无热强迫"
+    },
+    {
+      "case_id": "task-094-case-002",
+      "ground_heat_flux_w_m2": 50.0,
+      "variant": "低热通量"
+    },
+    {
+      "case_id": "task-094-case-003",
+      "ground_heat_flux_w_m2": 150.0,
+      "variant": "高热通量"
+    }
+  ],
+  "delta_t_s": 0.015,
+  "end_time_s": 60.0,
+  "frozen_gates": {
+    "max_abs_cumulative_continuity": 0.0001,
+    "max_courant": 1.0,
+    "mean_temperature_half_window_drift_k": 0.5,
+    "temperature_range_k": [
+      250.0,
+      350.0
+    ],
+    "vertical_exchange_half_window_drift_m_s": 0.05
+  },
+  "geometry": "16-building procedural city, 141952 cells, common for all cases",
+  "gravity_m_s2": [
+    0.0,
+    0.0,
+    -9.81
+  ],
+  "hidden_boundary": "Visible physics, cases, probes, formula, shapes and gates only; no hidden probe arrays.",
+  "mpi_ranks": 16,
+  "openfoam_version": "OpenCFD-v2412",
+  "path_policy": "relative paths under submission root, unique and SHA-256 matched",
+  "primary_metric": {
+    "aggregation": "per_case_then_task",
+    "formula": "max_forced_cases(abs((vertical_exchange_forced-vertical_exchange_neutral)/max(abs(vertical_exchange_neutral),0.01)))",
+    "id": "thermal_exchange_response",
+    "name_zh": "热力强迫交换响应",
+    "unit": "fraction"
+  },
+  "primary_metric_denominator_floor_m_s": 0.01,
+  "probe_count": 24,
+  "probe_points_m": [
+    [
+      -2.0,
+      0.0,
+      4.0
+    ],
+    [
+      -2.0,
+      2.0,
+      4.0
+    ],
+    [
+      -2.0,
+      4.0,
+      4.0
+    ],
+    [
+      -2.0,
+      6.0,
+      4.0
+    ],
+    [
+      0.0,
+      0.0,
+      4.0
+    ],
+    [
+      0.0,
+      2.0,
+      4.0
+    ],
+    [
+      0.0,
+      4.0,
+      4.0
+    ],
+    [
+      0.0,
+      6.0,
+      4.0
+    ],
+    [
+      2.0,
+      0.0,
+      4.0
+    ],
+    [
+      2.0,
+      2.0,
+      4.0
+    ],
+    [
+      2.0,
+      4.0,
+      4.0
+    ],
+    [
+      2.0,
+      6.0,
+      4.0
+    ],
+    [
+      4.0,
+      0.0,
+      4.0
+    ],
+    [
+      4.0,
+      2.0,
+      4.0
+    ],
+    [
+      4.0,
+      4.0,
+      4.0
+    ],
+    [
+      4.0,
+      6.0,
+      4.0
+    ],
+    [
+      6.0,
+      0.0,
+      4.0
+    ],
+    [
+      6.0,
+      2.0,
+      4.0
+    ],
+    [
+      6.0,
+      4.0,
+      4.0
+    ],
+    [
+      6.0,
+      6.0,
+      4.0
+    ],
+    [
+      8.0,
+      0.0,
+      4.0
+    ],
+    [
+      8.0,
+      2.0,
+      4.0
+    ],
+    [
+      8.0,
+      4.0,
+      4.0
+    ],
+    [
+      8.0,
+      6.0,
+      4.0
+    ]
+  ],
+  "required_manifest": "thermal_les_evidence_manifest.json",
+  "required_raw_evidence_per_case": [
+    "probe_U",
+    "probe_T",
+    "solver_log",
+    "checkMesh_log",
+    "controlDict",
+    "initial_T"
+  ],
+  "sample_count": 300,
+  "schema_version": "1.0",
+  "solver": "buoyantPimpleFoam",
+  "source_initialization": "audited task-092 180 s WALE LES U/nut numerical field",
+  "stationarity_windows_s": [
+    [
+      20.0,
+      40.0
+    ],
+    [
+      40.0,
+      60.0
+    ]
+  ],
+  "statistics_window_s": [
+    20.0,
+    60.0
+  ],
+  "task_id": "urbanwind-task-094",
+  "truth_boundary": "OpenFOAM numerical reference only; not PIV, DNS, wind-tunnel, field or experimental truth",
+  "turbulence": "WALE wall-modelled LES",
+  "vertical_exchange_definition": "mean(max(Uz,0)) over the common z=4m probes and selected time window"
+}

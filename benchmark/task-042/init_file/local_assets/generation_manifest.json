@@ -1,0 +1,201 @@
+{
+  "anchor_name": "D x D x 4D单体建筑本地数值基准",
+  "answer_free": true,
+  "data_origin": "deterministic_local_generation",
+  "experimental_claim": false,
+  "files": [
+    {
+      "bytes": 757,
+      "path": "local_assets/active_learning_data.csv",
+      "sha256": "35e24f0ec148cd759ecacb17f56d558f8cffe60ec58ffea6aec19e6a1e36e6bc"
+    },
+    {
+      "bytes": 642,
+      "path": "local_assets/case_control_contract.json",
+      "sha256": "347486ffe69e72b2def1fb67eead8330b7b25449071b797164d94b12439fd219"
+    },
+    {
+      "bytes": 453,
+      "path": "local_assets/case_matrix.csv",
+      "sha256": "e65181544f66b3d284dc17a2b31704a70d660bd060b20b7e02ef4d6a355d9e4d"
+    },
+    {
+      "bytes": 10650,
+      "path": "local_assets/city_geometry.geojson",
+      "sha256": "d5034806ca36151fa089fdab7a60fea478e420cf2c82569aeb05104fa2eaadb2"
+    },
+    {
+      "bytes": 485,
+      "path": "local_assets/control_points.csv",
+      "sha256": "a9cb67b8417539338f3301aa2d9fc01eb89f073b04d1188a46773095326775bd"
+    },
+    {
+      "bytes": 9129,
+      "path": "local_assets/generate_snappy_mesh_inputs.py",
+      "sha256": "cc48ed734aa3b4ea9fc4cba9cb89afc1be0709dc95376d0536c816bbd3e13b3e"
+    },
+    {
+      "bytes": 1020,
+      "path": "local_assets/input_role_manifest.json",
+      "sha256": "0fee9e1bc4d8da285d7ea61abcf953028e2187c69f34ba217d4e7741f7271ce6"
+    },
+    {
+      "bytes": 1611,
+      "path": "local_assets/mask_and_weights.csv",
+      "sha256": "79996ec74e326ed02de419544b96e96a5f51553a977de9d654ad7f5ee79ff2f8"
+    },
+    {
+      "bytes": 219,
+      "path": "local_assets/mesh_levels.csv",
+      "sha256": "4e1983e708650b1827e6ff4964e4b23c53a8f0778ed2bcb8c791458791a15925"
+    },
+    {
+      "bytes": 205,
+      "path": "local_assets/mesh_solution_series.csv",
+      "sha256": "99ca6612106330dd13a7d1f2ffb686129d74e06f9cc0a155a1ded2fa2b215f04"
+    },
+    {
+      "bytes": 12597,
+      "path": "local_assets/model_field.csv",
+      "sha256": "0b814570074a581683e62b37069076d528774c52f627afe6faac648d7b840ccf"
+    },
+    {
+      "bytes": 333,
+      "path": "local_assets/openfoam_base/0/p",
+      "sha256": "afa5f2e963a5fa63173510c8c4068fde945e15e05343b0891ec258c619141f84"
+    },
+    {
+      "bytes": 337,
+      "path": "local_assets/openfoam_base/0/U",
+      "sha256": "a3515337b9f9d3752b106092f8e05551ff881ebe91a7b3cd762b916c3acda803"
+    },
+    {
+      "bytes": 122,
+      "path": "local_assets/openfoam_base/constant/transportProperties",
+      "sha256": "1146aa084b034003b8b6ea2f5dee6fb8ff32f91663f42acbfdd758531f018f63"
+    },
+    {
+      "bytes": 1612,
+      "path": "local_assets/openfoam_base/constant/triSurface/building.stl",
+      "sha256": "3af589b33eefd173a4b322889d7d67f95381147be18a5b319c0adccc58c444e1"
+    },
+    {
+      "bytes": 95,
+      "path": "local_assets/openfoam_base/constant/turbulenceProperties",
+      "sha256": "c8fcf3c7345953f60794dc70434a8bb3779ec66c66173849c9eddc2ea2789bcc"
+    },
+    {
+      "bytes": 3767,
+      "path": "local_assets/openfoam_base/snappy_mesh_contract.json",
+      "sha256": "dd4efd0413dcb0186513984f518d5ce729e4d5ec22e166fb03e01f0c1ee2a144"
+    },
+    {
+      "bytes": 546,
+      "path": "local_assets/openfoam_base/system/blockMeshDict",
+      "sha256": "b2d576950ac8c5f5e61b315f6fca023742b5618f0e172392de116a749473a190"
+    },
+    {
+      "bytes": 336,
+      "path": "local_assets/openfoam_base/system/controlDict",
+      "sha256": "53cc763db0b1bbeb9e51aa74f47b8622220bb5124cce7a821e32c75b32dce39a"
+    },
+    {
+      "bytes": 118,
+      "path": "local_assets/openfoam_base/system/decomposeParDict",
+      "sha256": "a530fa166efe20ca453c03553cbd620b775904c4e75c6199386fc91a28e14b3a"
+    },
+    {
+      "bytes": 289,
+      "path": "local_assets/openfoam_base/system/fvSchemes",
+      "sha256": "f6ceed8a1af3735da8ed56a291d6b70fdf6f7caafada7ba2b9a4b1455069d0c5"
+    },
+    {
+      "bytes": 85,
+      "path": "local_assets/openfoam_base/system/fvSolution",
+      "sha256": "98c9a4c0a73fde9e4b9de3764a1b23db6553cdf48c03450bb04dd5948c4e2e25"
+    },
+    {
+      "bytes": 369,
+      "path": "local_assets/openfoam_base/system/meshQualityDict",
+      "sha256": "6a0bd66c44b2c2fe63de4404c8ea382cec12bde5f59ea4cd0e59ed9beb6427c5"
+    },
+    {
+      "bytes": 1825,
+      "path": "local_assets/openfoam_base/system/sampleDict",
+      "sha256": "abcb54af4e28f0f6cd0025f90ac7ee2bd28aad0036838802b43985079b99045f"
+    },
+    {
+      "bytes": 1658,
+      "path": "local_assets/openfoam_base/system/snappyHexMeshDict",
+      "sha256": "d3fad5168c93aae110fd4eae0d3551d5f0a8e764cebe34a301b98fa672e95e58"
+    },
+    {
+      "bytes": 206,
+      "path": "local_assets/openfoam_base/system/surfaceFeatureExtractDict",
+      "sha256": "c284b4e43530eaa4c342509ff18d01c40cc218060e5542ce927e8ae45b3d25b8"
+    },
+    {
+      "bytes": 318,
+      "path": "local_assets/optional_public_metadata.json",
+      "sha256": "ba2e422a3ac9c0e98c3ce1f41584d33c6e047bbe78f5885e9dd2390efbdfd01a"
+    },
+    {
+      "bytes": 751,
+      "path": "local_assets/reference_diagnostics.json",
+      "sha256": "fa3dea22aa6e8d412edd500e84749459aab326d2002a10434b62d6930b4682b5"
+    },
+    {
+      "bytes": 11970,
+      "path": "local_assets/reference_field.csv",
+      "sha256": "a956a0ee94a812b10b1d769a2adc8bdb66ffc076d04e2634d5d41d8cf27dc0ff"
+    },
+    {
+      "bytes": 6273,
+      "path": "local_assets/reference_spectrum.csv",
+      "sha256": "99a8ba1e107740022af409b0f063bc459ae5c6741f8f66499682c93b2a97e34c"
+    },
+    {
+      "bytes": 553,
+      "path": "local_assets/runtime_contract.json",
+      "sha256": "98babe9382bb484d55528556dda20fee9a567f3aa2bf29f407438186fab36724"
+    },
+    {
+      "bytes": 716,
+      "path": "local_assets/source_inventory.json",
+      "sha256": "89286def488f0a5dba43fe620be0b92ac6052a0dcf475b6d2c5fda3d4133a396"
+    },
+    {
+      "bytes": 1908,
+      "path": "local_assets/task_input_values.json",
+      "sha256": "cae2328973c178ca31a1e5e747b7fccd7f03ca24275415396574c0dda3d47fbe"
+    },
+    {
+      "bytes": 45815,
+      "path": "local_assets/velocity_timeseries.csv",
+      "sha256": "fd69ac6e11632694bab0f81531deee8d31b8008019c7dd5a2dc7a3185b894b31"
+    },
+    {
+      "bytes": 1052,
+      "path": "local_assets/wind_climate.csv",
+      "sha256": "dd1ce50c23312ac6f0bd2fd9614b17181de7b01385e995f1162f52205e4d83d0"
+    }
+  ],
+  "generator_version": "urbanwind-local-assets-v3",
+  "optional_public_data": [
+    {
+      "mode": "optional_one_click_download",
+      "name": "AIJ UWE Case A",
+      "record_url": "https://zenodo.org/records/15050148",
+      "required_for_task": false
+    }
+  ],
+  "schema_version": "1.0",
+  "seed": 202609030042,
+  "task042_specialized_contract": {
+    "contract": "local_assets/openfoam_base/snappy_mesh_contract.json",
+    "generator": "local_assets/generate_snappy_mesh_inputs.py",
+    "version": "task042-snappy-v1"
+  },
+  "task_id": "urbanwind-task-042",
+  "task_number": 42
+}

@@ -1,0 +1,69 @@
+{
+  "current_evaluator_boundary": "Only structural precheck is implemented and capped at 60/100.",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision": "decision.md",
+  "decision_required_terms": [
+    "证据",
+    "限制",
+    "结论"
+  ],
+  "evidence_manifest": "evidence_manifest.json",
+  "expected_case_ids": [
+    "task-070-case-001",
+    "task-070-case-002",
+    "task-070-case-003"
+  ],
+  "expected_solver_case_ids": [
+    "task-070-case-001",
+    "task-070-case-002",
+    "task-070-case-003"
+  ],
+  "metric_contracts": [
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max(range_b(mean_{i in {340,360,380,400},p in center_wake} Ux[b,i,p]),range_b(mean_{i in {340,360,380,400},p in side_corridor} Ux[b,i,p]))/1.2; b in {symmetryPlane,cyclic,freestream}",
+      "id": "side_boundary_response_spread",
+      "name_zh": "侧边界响应离散度",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    }
+  ],
+  "metric_ids": [
+    "side_boundary_response_spread",
+    "evidence_provenance_fraction",
+    "hard_gate_pass_fraction"
+  ],
+  "metrics": "metrics.json",
+  "required_external_inputs": [],
+  "required_inputs": [
+    "随任务本地生成的入口/边界参数",
+    "本地目标剖面或守恒参考",
+    "本地程序化计算域"
+  ],
+  "required_solver_runs": 3,
+  "run_manifest": "run_manifest.json",
+  "schema_version": "1.0",
+  "score_layers": {
+    "artifact_and_schema": 10,
+    "engineering_decision": 10,
+    "external_validation": 15,
+    "numerical_quality": 20,
+    "physical_fidelity": 25,
+    "real_tool_execution": 20
+  },
+  "side_boundary_input_contract": "local_assets/side_boundary_contract.json",
+  "task_id": "urbanwind-task-070"
+}

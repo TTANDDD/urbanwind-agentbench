@@ -1,0 +1,4 @@
+case_id,variant,seed,wind_direction_deg,reference_speed_m_s,stability,surface_heat_flux_w_m2,sgs_model,time_step_s,convection_scheme,pressure_velocity_coupling,roughness_length_m,source_configuration,decomposition_method,restart_segments,software_variant,controlled_factor,controlled_level
+task-094-case-001,无热强迫,202609039400,0.0,1.2,neutral,0.0,,,,,,,,,,surface_heat_flux,无热强迫
+task-094-case-002,低热通量,202609039400,0.0,1.2,neutral,50.0,,,,,,,,,,surface_heat_flux,低热通量
+task-094-case-003,高热通量,202609039400,0.0,1.2,neutral,150.0,,,,,,,,,,surface_heat_flux,高热通量

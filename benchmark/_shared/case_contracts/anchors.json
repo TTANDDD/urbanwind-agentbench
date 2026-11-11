@@ -1,0 +1,127 @@
+{
+  "anchors": {
+    "AIJ_DIRECT": {
+      "known": {
+        "optional_data_role": "empirical_validation_enhancement",
+        "optional_public_record": "https://zenodo.org/records/15050148",
+        "required_source": "local_generator"
+      },
+      "missing": [],
+      "name": "本地基准加AIJ小型公开直链可选验证",
+      "references": [
+        "LOCAL_GENERATOR",
+        "AIJ_ZENODO_CASE_A"
+      ],
+      "status": "optional_one_click_public"
+    },
+    "CUBE_LOCAL": {
+      "known": {
+        "H_m": 1.0,
+        "building_width_m": 1.0,
+        "domain_H": {
+          "x": 8.0,
+          "y": 8.0,
+          "z": 7.4
+        },
+        "gap_m": 1.0,
+        "layout": "4_by_4_staggered",
+        "row_offset_H": 0.5,
+        "truth_type": "synthetic_or_numerical_reference"
+      },
+      "missing": [],
+      "name": "4 x 4程序化错列立方体阵列",
+      "references": [
+        "LOCAL_GENERATOR"
+      ],
+      "status": "local_generator_ready"
+    },
+    "LOCAL_3D_WIND": {
+      "known": {
+        "experimental_claim": false,
+        "geometry": "deterministic_parameterized_city",
+        "truth_type": "synthetic_or_numerical_reference"
+      },
+      "missing": [],
+      "name": "本地小型三维低空风场",
+      "references": [
+        "LOCAL_GENERATOR"
+      ],
+      "status": "local_generator_ready"
+    },
+    "LOCAL_DISPERSION": {
+      "known": {
+        "experimental_claim": false,
+        "geometry": "4_by_4_parameterized_array",
+        "truth_type": "synthetic_or_numerical_reference"
+      },
+      "missing": [],
+      "name": "程序化城市阵列被动标量基准",
+      "references": [
+        "LOCAL_GENERATOR"
+      ],
+      "status": "local_generator_ready"
+    },
+    "LOCAL_MULTI": {
+      "known": {
+        "inputs": "deterministic_local_generation",
+        "purpose": "cross_geometry_and_cross_software_transfer",
+        "truth_type": "synthetic_or_numerical_reference"
+      },
+      "missing": [],
+      "name": "本地多几何多软件评测集",
+      "references": [
+        "LOCAL_GENERATOR",
+        "CFDLLMBENCH",
+        "FOAM_AGENT",
+        "CHATCFD"
+      ],
+      "status": "local_generator_ready"
+    },
+    "PROCEDURAL_CITY": {
+      "known": {
+        "geographic_claim": false,
+        "geometry": "deterministic_parameterized_city",
+        "truth_type": "synthetic_or_numerical_reference"
+      },
+      "missing": [],
+      "name": "程序化本地城市子域",
+      "references": [
+        "LOCAL_GENERATOR"
+      ],
+      "status": "local_generator_ready"
+    },
+    "SB4_LOCAL": {
+      "known": {
+        "D_m": 1.0,
+        "H_over_D": 4.0,
+        "Re_D": 12000.0,
+        "Re_H": 48000.0,
+        "U_ref_m_s": 1.2,
+        "domain_D": {
+          "x": [
+            -4.0,
+            23.0
+          ],
+          "y": [
+            -6.2,
+            6.2
+          ],
+          "z": [
+            0.0,
+            9.0
+          ]
+        },
+        "nu_m2_s": 0.0001,
+        "truth_type": "synthetic_or_numerical_reference"
+      },
+      "missing": [],
+      "name": "D x D x 4D单体建筑本地数值基准",
+      "references": [
+        "USER_SB4_SPEC",
+        "LOCAL_GENERATOR"
+      ],
+      "status": "local_generator_ready"
+    }
+  },
+  "schema_version": "1.0"
+}

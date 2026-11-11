@@ -1,0 +1,105 @@
+{
+  "case_ids": [
+    "task-070-case-001",
+    "task-070-case-002",
+    "task-070-case-003"
+  ],
+  "controlled_factor": "lateral boundary family including necessarily paired mesh and U/p/k/omega/nut side-patch declarations",
+  "cpu_affinity": {
+    "task-070-case-001": "64-79",
+    "task-070-case-002": "80-95",
+    "task-070-case-003": "96-111"
+  },
+  "frozen_across_cases": [
+    "geometry and all mesh topology except the required side patch family declarations",
+    "neutral log-law inlet U/k/omega",
+    "ground, building, top and outlet boundaries",
+    "transport properties and kOmegaSST model",
+    "upwind convection and SIMPLE settings",
+    "400 iterations, 48 response probes and frozen sample iterations"
+  ],
+  "frozen_gates": {
+    "exact_side_boundary_contract": true,
+    "finite_solver_log": true,
+    "max_abs_cumulative_continuity": 0.01,
+    "max_inlet_U_rmse_m_s": 1e-06,
+    "max_inlet_k_rmse_m2_s2": 1e-06,
+    "max_inlet_omega_rmse_s_1": 1e-05,
+    "max_last20_initial_residual_full": 0.0001,
+    "required_cell_count": 365488,
+    "required_final_iteration": 400,
+    "response_velocity_range_m_s": [
+      -5.0,
+      5.0
+    ]
+  },
+  "full_iterations": 400,
+  "geometry": "365488-cell conformal D x D x 4D single-building domain",
+  "interpretation_note": "The cyclic case represents a laterally repeating 12.4D unit; symmetry and freestream represent isolated-domain side treatments. The task measures sensitivity under these declared mathematical boundary families and does not claim that they encode identical external urban physics.",
+  "mpi_ranks_per_case": 16,
+  "neutral_profile_csv": "local_assets/side_boundary_neutral_profile.csv",
+  "primary_metric": {
+    "aggregation": "per_case_then_task",
+    "formula": "max(range_b(mean_{i in {340,360,380,400},p in center_wake} Ux[b,i,p]),range_b(mean_{i in {340,360,380,400},p in side_corridor} Ux[b,i,p]))/1.2; b in {symmetryPlane,cyclic,freestream}",
+    "id": "side_boundary_response_spread",
+    "name_zh": "侧边界响应离散度",
+    "unit": "fraction"
+  },
+  "profile_parameters": {
+    "Cmu": 0.09,
+    "Uref_m_s": 1.2,
+    "Zref_m": 4.0,
+    "kappa": 0.41,
+    "z0_m": 0.01
+  },
+  "response_iterations": [
+    340,
+    360,
+    380,
+    400
+  ],
+  "response_probe_csv": "local_assets/side_boundary_response_probes.csv",
+  "schema_version": "1.0",
+  "side_boundary_field_contracts": {
+    "cyclic": {
+      "U": "cyclic",
+      "k": "cyclic",
+      "mesh_sides": "cyclic paired sideLow<->sideHigh",
+      "nut": "cyclic",
+      "omega": "cyclic",
+      "p": "cyclic"
+    },
+    "freestream": {
+      "U": "freestreamVelocity(Uinf=(1.2,0,0))",
+      "k": "freestream(k_background)",
+      "mesh_sides": "patch",
+      "nut": "freestream(nut_background=0)",
+      "omega": "freestream(omega_background)",
+      "p": "freestreamPressure(pinf=0)"
+    },
+    "symmetryPlane": {
+      "U": "symmetryPlane",
+      "k": "symmetryPlane",
+      "mesh_sides": "symmetryPlane",
+      "nut": "symmetryPlane",
+      "omega": "symmetryPlane",
+      "p": "symmetryPlane"
+    }
+  },
+  "smoke_iterations": 20,
+  "solver": "OpenCFD-v2412 simpleFoam",
+  "task_gate": "All three cases must pass every frozen full-run gate; no successful-subset selection or post-hoc threshold relaxation.",
+  "task_id": "urbanwind-task-070",
+  "truth_boundary": "Matched OpenFOAM single-building numerical sensitivity to symmetry, cyclic and freestream lateral boundary families only; not a universal side-boundary recommendation and not PIV, DNS, wind-tunnel, field or experimental truth.",
+  "turbulence_model": "kOmegaSST",
+  "variant_keys": [
+    "symmetryPlane",
+    "cyclic",
+    "freestream"
+  ],
+  "variants_zh": [
+    "对称侧边界",
+    "周期侧边界",
+    "远场侧边界"
+  ]
+}

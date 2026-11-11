@@ -1,0 +1,12 @@
+{
+  "answer_included": false,
+  "expected_agent_action": "diagnose and repair without changing unrelated settings",
+  "fault_family": "millimetre_metre_scale_error",
+  "fault_seed": 202609030125,
+  "injected": true,
+  "observed_fault_parameters": {
+    "declared_scale": 0.001
+  },
+  "target_file": "local_assets/openfoam_base/system/blockMeshDict",
+  "task_id": "urbanwind-task-125"
+}

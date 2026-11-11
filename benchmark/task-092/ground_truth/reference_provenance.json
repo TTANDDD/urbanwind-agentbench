@@ -1,0 +1,42 @@
+{
+  "experimental_claim": false,
+  "host": "5070-server",
+  "independent_audit": "validation/openfoam-task092-three-direction-audit-v1.json",
+  "independent_audit_sha256": "23f80888c0ba335323309d17eb5a75d80a9f696b3e41cc67c149f3a0e170b955",
+  "openfoam_version": "v2412",
+  "runtime_environment": "/home/abc/urbanwind-agentbench-runtime-v0.1/envs/openfoam-2412",
+  "schema_version": "1.0",
+  "source_runs": [
+    {
+      "case_id": "task-092-case-001",
+      "source_archive": "validation/openfoam-batch-20260916-v21-wind-directions/results/task092-wind-0/reference_candidate.tar.gz",
+      "source_archive_sha256": "fcc0f0b5b01e90c7cfe1b7d0d1e642cde41691833ab533c409698e6413bc707f",
+      "source_batch": "openfoam-batch-20260916-v21-wind-directions",
+      "source_job": "task092-wind-0",
+      "source_status_sha256": "0f0c19b60fc95685ef0e066dd827a2d3402f7dd701ef213df03041cff9c314f2",
+      "variant": "风向0度",
+      "wind_direction_degrees": 0.0
+    },
+    {
+      "case_id": "task-092-case-002",
+      "source_archive": "validation/openfoam-batch-20260916-v21-wind-directions/results/task092-wind-22p5/reference_candidate.tar.gz",
+      "source_archive_sha256": "c9bc6ec509de59bbd0e4473b129011be4f61ca99068a30da7201ed7ba1bd1be2",
+      "source_batch": "openfoam-batch-20260916-v21-wind-directions",
+      "source_job": "task092-wind-22p5",
+      "source_status_sha256": "25fd33ddd1466090a984cb0922016cf1b94d49533d613b8882ccca07b1f823c4",
+      "variant": "风向22.5度",
+      "wind_direction_degrees": 22.5
+    },
+    {
+      "case_id": "task-092-case-003",
+      "source_archive": "validation/openfoam-batch-20260916-v21-wind-directions/results/task092-wind-45/reference_candidate.tar.gz",
+      "source_archive_sha256": "6887e64a9bcf4723ffbb40816cfd741845ff2aea5e19541efa089a17e33438fc",
+      "source_batch": "openfoam-batch-20260916-v21-wind-directions",
+      "source_job": "task092-wind-45",
+      "source_status_sha256": "16cf47a7317535b43f260e9b1edf979334baca774d19752a0221f86a027f16eb",
+      "variant": "风向45度",
+      "wind_direction_degrees": 45.0
+    }
+  ],
+  "task_id": "urbanwind-task-092"
+}

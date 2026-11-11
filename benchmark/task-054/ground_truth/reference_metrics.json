@@ -1,0 +1,331 @@
+{
+  "accepted_assignment_identity_required": false,
+  "claim_boundary": "Local synthetic city and genuine OpenFOAM mesh partition tool reference only; no CFD/LES, communication timing, runtime speedup, experimental or real-city validation.",
+  "diagnostics": {
+    "scotch": {
+      "all_serial_face_incidence_verified": true,
+      "cell_load_imbalance_ratio": 0.009721596032461676,
+      "cells_per_rank": [
+        35336,
+        35460,
+        35323,
+        35833
+      ],
+      "communication_face_imbalance": 0.033783783783783786,
+      "communication_faces_per_rank": [
+        2092,
+        2012,
+        2042,
+        2142
+      ],
+      "flow_solver_runs": 0,
+      "geometry": {
+        "building_exposed_areas_m2": [
+          [
+            1.5,
+            1.5,
+            1.5,
+            1.5,
+            1.0
+          ],
+          [
+            1.75,
+            1.75,
+            1.75,
+            1.75,
+            1.0
+          ],
+          [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            1.25,
+            1.25,
+            1.25,
+            1.25,
+            1.0
+          ],
+          [
+            1.75,
+            1.75,
+            1.75,
+            1.75,
+            1.0
+          ],
+          [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            1.25,
+            1.25,
+            1.25,
+            1.25,
+            1.0
+          ],
+          [
+            1.5,
+            1.5,
+            1.5,
+            1.5,
+            1.0
+          ],
+          [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            1.25,
+            1.25,
+            1.25,
+            1.25,
+            1.0
+          ],
+          [
+            1.5,
+            1.5,
+            1.5,
+            1.5,
+            1.0
+          ],
+          [
+            1.75,
+            1.75,
+            1.75,
+            1.75,
+            1.0
+          ],
+          [
+            1.25,
+            1.25,
+            1.25,
+            1.25,
+            1.0
+          ],
+          [
+            1.5,
+            1.5,
+            1.5,
+            1.5,
+            1.0
+          ],
+          [
+            1.75,
+            1.75,
+            1.75,
+            1.75,
+            1.0
+          ],
+          [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        ],
+        "cell_count": 141952,
+        "exact_full_domain_occupancy": true,
+        "fluid_volume_m3": 2218.0,
+        "patch_areas_m2": {
+          "building": 104.0,
+          "ground": 304.0,
+          "inlet": 112.0,
+          "outlet": 112.0,
+          "sideHigh": 140.0,
+          "sideLow": 140.0,
+          "top": 320.0
+        },
+        "raw_serial_topology_sha256": "42a4827ef1c7977bdb0be86ca1e2e6d5816c8d79e4c2e57f958e9309056513f0"
+      },
+      "method": "scotch",
+      "point_face_cell_boundary_addressing_verified": true,
+      "processor_interfaces_reciprocal": true,
+      "serial_faces": 435712,
+      "status": "PASS",
+      "unique_processor_faces": 4144
+    },
+    "simple": {
+      "all_serial_face_incidence_verified": true,
+      "cell_load_imbalance_ratio": 0.004959422903516681,
+      "cells_per_rank": [
+        35664,
+        35312,
+        35312,
+        35664
+      ],
+      "communication_face_imbalance": 0.015354135710747894,
+      "communication_faces_per_rank": [
+        2050,
+        2050,
+        1988,
+        1988
+      ],
+      "flow_solver_runs": 0,
+      "geometry": {
+        "building_exposed_areas_m2": [
+          [
+            1.5,
+            1.5,
+            1.5,
+            1.5,
+            1.0
+          ],
+          [
+            1.75,
+            1.75,
+            1.75,
+            1.75,
+            1.0
+          ],
+          [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            1.25,
+            1.25,
+            1.25,
+            1.25,
+            1.0
+          ],
+          [
+            1.75,
+            1.75,
+            1.75,
+            1.75,
+            1.0
+          ],
+          [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            1.25,
+            1.25,
+            1.25,
+            1.25,
+            1.0
+          ],
+          [
+            1.5,
+            1.5,
+            1.5,
+            1.5,
+            1.0
+          ],
+          [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          [
+            1.25,
+            1.25,
+            1.25,
+            1.25,
+            1.0
+          ],
+          [
+            1.5,
+            1.5,
+            1.5,
+            1.5,
+            1.0
+          ],
+          [
+            1.75,
+            1.75,
+            1.75,
+            1.75,
+            1.0
+          ],
+          [
+            1.25,
+            1.25,
+            1.25,
+            1.25,
+            1.0
+          ],
+          [
+            1.5,
+            1.5,
+            1.5,
+            1.5,
+            1.0
+          ],
+          [
+            1.75,
+            1.75,
+            1.75,
+            1.75,
+            1.0
+          ],
+          [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        ],
+        "cell_count": 141952,
+        "exact_full_domain_occupancy": true,
+        "fluid_volume_m3": 2218.0,
+        "patch_areas_m2": {
+          "building": 104.0,
+          "ground": 304.0,
+          "inlet": 112.0,
+          "outlet": 112.0,
+          "sideHigh": 140.0,
+          "sideLow": 140.0,
+          "top": 320.0
+        },
+        "raw_serial_topology_sha256": "42a4827ef1c7977bdb0be86ca1e2e6d5816c8d79e4c2e57f958e9309056513f0"
+      },
+      "method": "simple",
+      "point_face_cell_boundary_addressing_verified": true,
+      "processor_interfaces_reciprocal": true,
+      "serial_faces": 435712,
+      "status": "PASS",
+      "unique_processor_faces": 4038
+    }
+  },
+  "experimental_claim": false,
+  "flow_solver_runs": 0,
+  "load_imbalance_threshold": null,
+  "required_winner": null,
+  "task_id": "urbanwind-task-054",
+  "truth_type": "verified_openfoam_tool_reference",
+  "units": {
+    "cell_load_imbalance_ratio": "fraction",
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction"
+  },
+  "values": {
+    "cell_load_imbalance_ratio": {
+      "scotch": 0.009721596032461676,
+      "simple": 0.004959422903516681
+    },
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0
+  }
+}

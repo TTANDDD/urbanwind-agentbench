@@ -1,0 +1,13 @@
+{
+  "answer_included": false,
+  "expected_agent_action": "diagnose and repair without changing unrelated settings",
+  "fault_family": "courant_number_explosion",
+  "fault_seed": 202609030129,
+  "injected": true,
+  "observed_fault_parameters": {
+    "deltaT_s": 2.0,
+    "target_Co_max": 0.8
+  },
+  "target_file": "local_assets/openfoam_base/system/controlDict",
+  "task_id": "urbanwind-task-129"
+}

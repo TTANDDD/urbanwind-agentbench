@@ -1,0 +1,64 @@
+{
+  "cases": [
+    {
+      "case_id": "task-147-case-001",
+      "execution_role": "provided_data_or_tool_execution",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "SB4_LOCAL",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "比较不同下游位置的速度亏损与湍动恢复。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "尾流恢复曲线-目标案例"
+      },
+      "metrics": [
+        "wake_recovery_curve_nmae",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "weighted_mean(abs(deficit_model-deficit_reference))/reference_scale",
+        "id": "wake_recovery_curve_nmae",
+        "name_zh": "尾流恢复曲线NMAE",
+        "unit": "fraction"
+      },
+      "purpose": "尾流恢复曲线：执行变体 尾流恢复曲线-目标案例，围绕比较不同下游位置的速度亏损与湍动恢复。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "scipy",
+        "pandas"
+      ],
+      "task_id": "urbanwind-task-147",
+      "variant": "尾流恢复曲线-目标案例"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "lite",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 1,
+  "required_solver_runs": 0,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-147"
+}

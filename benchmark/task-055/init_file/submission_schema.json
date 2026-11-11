@@ -1,0 +1,118 @@
+{
+  "schema": "task055-v53-public-report-shape-v1",
+  "report_file": "repair_report.json",
+  "report_schema": "task055-v53-repair-report-v1",
+  "task_id": "urbanwind-task-055-v53",
+  "instance_id": "v53-original-v1",
+  "top_level_fields": [
+    "schema",
+    "task_id",
+    "instance_id",
+    "units",
+    "localized_face",
+    "cells",
+    "edited_winding_face_ids",
+    "remaining_internal_face_orientation_defect_count",
+    "nonclosed_cells_after",
+    "geometric_volume_m3",
+    "before_decision",
+    "after_decision",
+    "CFD_runs",
+    "input_sha256",
+    "output_sha256"
+  ],
+  "units": {
+    "S": "m2",
+    "R": "m2",
+    "orientation_product": "m3",
+    "closure": "1",
+    "Q": "m3/s",
+    "D": "s^-1",
+    "V": "m3"
+  },
+  "localized_face_shape": {
+    "id": "instance face integer ID",
+    "adjacent_cells": "two instance cell integer IDs",
+    "before": {
+      "S": "three finite numbers",
+      "orientation_product": "finite number"
+    },
+    "after": {
+      "S": "three finite numbers",
+      "orientation_product": "finite number"
+    }
+  },
+  "cell_record_shape": {
+    "id": "instance cell integer ID",
+    "V": "undirected geometric volume",
+    "before": {
+      "R": "three numbers",
+      "closure": "dimensionless number",
+      "Q": "finite number",
+      "D": "finite number"
+    },
+    "after": {
+      "R": "three numbers",
+      "closure": "dimensionless number",
+      "Q": "finite number",
+      "D": "finite number"
+    }
+  },
+  "evidence_groups": [
+    "before_full",
+    "after_full",
+    "after_complete"
+  ],
+  "evidence_files_per_group": [
+    "command.json",
+    "log.checkMesh"
+  ],
+  "full_check_set_directory": "evidence/{group}/sets/ (only genuinely written native sets)",
+  "repaired_files": [
+    "repaired/constant/polyMesh/points",
+    "repaired/constant/polyMesh/faces",
+    "repaired/constant/polyMesh/owner",
+    "repaired/constant/polyMesh/neighbour",
+    "repaired/constant/polyMesh/boundary"
+  ],
+  "command_fields": [
+    "task_id",
+    "group",
+    "software",
+    "argv",
+    "tool_sha256",
+    "raw_input_sha256",
+    "quality_dictionary_sha256",
+    "exit_code",
+    "timed_out",
+    "started_at",
+    "ended_at",
+    "evidence_sha256"
+  ],
+  "fixed_tool_identity": {
+    "software": "OpenCFD-v2412",
+    "checkMesh_sha256": "bce0922fb3d1d9178c710df108f4c62646572ca02f2bb76e18a658dfbdbfd712",
+    "quality_dictionary_sha256": "6c8f8f1e3da10939126c7b68d398f2c7f184927d8e8d35aa5288111e9e786032",
+    "full_argv": [
+      "/home/abc/urbanwind-agentbench-runtime-v0.1/envs/openfoam-2412/bin/checkMesh",
+      "-case",
+      "/work",
+      "-constant",
+      "-allGeometry",
+      "-allTopology",
+      "-writeSets",
+      "vtk"
+    ],
+    "complete_argv": [
+      "/home/abc/urbanwind-agentbench-runtime-v0.1/envs/openfoam-2412/bin/checkMesh",
+      "-case",
+      "/work",
+      "-constant",
+      "-meshQuality",
+      "-writeSets",
+      "vtk"
+    ]
+  },
+  "JSON_policy": "Exact listed report keys, finite nonboolean numbers; compute all values from your own raw input/output. No supplied numeric answers or target IDs.",
+  "unexpected_files_policy": "Submit only repair_report.json, decision.md, five repaired raw files, group command/logs and actually produced typed full-check sets; no scripts/dictionaries/links."
+}

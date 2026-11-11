@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "单因素受控配对/消融工况",
+      "role_id": "input-001",
+      "seed": 202609046001,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.25364016,
+        0.92679357,
+        0.50929784,
+        0.47352473,
+        0.11491447,
+        0.76230853,
+        0.24792748,
+        0.20991472,
+        0.25840085,
+        0.57559801,
+        0.23126286,
+        0.74516215,
+        0.53006721,
+        0.89775452,
+        0.60623254,
+        0.74038524
+      ]
+    },
+    {
+      "label": "因素变化清单",
+      "role_id": "input-002",
+      "seed": 202609046002,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.78156781,
+        0.20116117,
+        0.50336343,
+        0.81236317,
+        0.4317502,
+        0.10845729,
+        0.4300156,
+        0.20048461,
+        0.15175139,
+        0.84608979,
+        0.92411226,
+        0.93533151,
+        0.05524307,
+        0.91209695,
+        0.47284442,
+        0.44795545
+      ]
+    },
+    {
+      "label": "参考因素效应",
+      "role_id": "input-003",
+      "seed": 202609046003,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.53921675,
+        0.90560612,
+        0.55683159,
+        0.99821459,
+        0.62097516,
+        0.49731963,
+        0.44647817,
+        0.5100538,
+        0.96186717,
+        0.84630095,
+        0.78830919,
+        0.54691104,
+        0.85824591,
+        0.7243056,
+        0.52531606,
+        0.15816665
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-160"
+}

@@ -1,0 +1,32 @@
+{
+  "evaluator_tests": "validation/openfoam-task065-evaluator-tests-post-install-v2.json",
+  "evaluator_tests_sha256": "9e18cf7d3cd5582f80fc75bc3e953e8dff63abcff04f537561bb22c2ac272bfd",
+  "experimental_claim": false,
+  "host": "5070-server",
+  "independent_audit": "validation/openfoam-task065-v45c-independent-audit-v1.json",
+  "independent_audit_sha256": "0446ed67bc7f4399fc5178ce7cb4bbea6d66aa58c3fb53a43b04abb5e3e9c4d5",
+  "schema_version": "1.0",
+  "software": {
+    "name": "OpenFOAM",
+    "solver": "pimpleFoam",
+    "version": "OpenCFD-v2412"
+  },
+  "source_runs": [
+    {
+      "case_id": "task-065-case-001",
+      "source_archive": "validation/openfoam-batch-20261004-v45c-task065-synthetic-inflow/runs/task065-synthetic-inflow/reference_candidate.tar.gz",
+      "source_archive_sha256": "899d3bfbe559685e65664d4247d72092b47bc3f99954607560dcc4b36ae0cbcb",
+      "source_batch": "openfoam-batch-20261004-v45c-task065-synthetic-inflow",
+      "source_job": "task065-synthetic-inflow",
+      "source_status_sha256": "89ba84a5d8ee3742b86e67ef19d1cf0691148e51e5034ca64ac040d74c85800e",
+      "variant": "确定性221点五频带合成湍流入口",
+      "variant_key": "deterministic_221point_five_band_inflow"
+    }
+  ],
+  "task_id": "urbanwind-task-065",
+  "test_report_refresh": {
+    "observed_v1_hash": "ac46935a5991e3df1b0b78109b8aaf01e5462e316caf172adabd119d4dc5f5a3",
+    "previous_recorded_hash": "cc1e7d470f629bf40debd34e5a494e1590f6972a56a8b190dbeee124fbd3860e",
+    "reason": "The first v1 test report was overwritten by the first post-install rerun; its pre-install hash was retained in materialization metadata but its original bytes are not available. The differing missing-file exception contained a random temporary path. The replacement immutable post-install v2 report reruns the actual installed evaluator, normalizes only that display path, and passes all 13 tests. No CFD input, numerical value, gate, evaluator scoring or original solver archive changed."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "acceptance_limit_percent": 2.0,
+  "case_ids": [
+    "task-096-case-001",
+    "task-096-case-002",
+    "task-096-case-003"
+  ],
+  "claim_boundary": "Three-source OpenFOAM passive-scalar numerical reference; not experimental truth.",
+  "primary_metric": {
+    "id": "scalar_mass_balance_error_percent",
+    "unit": "%",
+    "value": 0.019881175504596338
+  },
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-096"
+}

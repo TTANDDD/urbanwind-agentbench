@@ -1,0 +1,96 @@
+{
+  "current_evaluator_boundary": "Task-specific metric recomputation and hidden OpenFOAM numerical-array checks installed; experimental truth and a frozen release runtime are not claimed.",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision": "decision.md",
+  "decision_required_terms": [
+    "证据",
+    "限制",
+    "结论"
+  ],
+  "evidence_manifest": "evidence_manifest.json",
+  "expected_case_ids": [
+    "task-093-case-001",
+    "task-093-case-002",
+    "task-093-case-003"
+  ],
+  "expected_solver_case_ids": [
+    "task-093-case-001",
+    "task-093-case-002",
+    "task-093-case-003"
+  ],
+  "metric_contracts": [
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "OLS_slope(mean_i(Ux_i/1.2) versus ln(z0/1m)) across z0={0.002,0.02,0.2}m with 96 equal-weight probes",
+      "id": "roughness_sensitivity_slope",
+      "name_zh": "粗糙度敏感性斜率",
+      "unit": "1"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    }
+  ],
+  "metric_ids": [
+    "roughness_sensitivity_slope",
+    "evidence_provenance_fraction",
+    "hard_gate_pass_fraction"
+  ],
+  "metrics": "metrics.json",
+  "required_external_inputs": [],
+  "required_inputs": [
+    "随任务本地生成的OpenFOAM起始案例",
+    "本地OpenFOAM运行版本记录合同",
+    "本地合成数值参考（仅作固定比较输入，不是PIV或实验真值）"
+  ],
+  "required_solver_runs": 3,
+  "run_manifest": "run_manifest.json",
+  "schema_version": "1.0",
+  "score_layers": {
+    "artifact_and_schema": 10,
+    "engineering_decision": 10,
+    "external_validation": 15,
+    "numerical_quality": 20,
+    "physical_fidelity": 25,
+    "real_tool_execution": 20
+  },
+  "simulation_result_contract": {
+    "case_results": {
+      "exact_case_ids": [
+        "task-093-case-001",
+        "task-093-case-002",
+        "task-093-case-003"
+      ],
+      "minimum_sample_count": 600,
+      "probe_array_length": 96,
+      "required_fields": [
+        "case_id",
+        "variant",
+        "window_s",
+        "sample_count",
+        "mean_Ux_m_s",
+        "resolved_tke_m2_s2",
+        "all_run_gates_pass",
+        "roughness_z0_m"
+      ],
+      "units": {
+        "mean_Ux_m_s": "m/s",
+        "resolved_tke_m2_s2": "m2/s2"
+      }
+    },
+    "path": "simulation_metrics.json",
+    "task_id": "urbanwind-task-093",
+    "task_specific_metric_formula": "OLS_slope(mean_i(Ux_i/1.2) versus ln(z0/1m)) across z0={0.002,0.02,0.2}m with 96 equal-weight probes"
+  },
+  "task_id": "urbanwind-task-093"
+}

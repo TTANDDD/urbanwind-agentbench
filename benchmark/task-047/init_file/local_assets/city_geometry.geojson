@@ -1,0 +1,567 @@
+{
+  "coordinate_system": "local Cartesian metres; not latitude/longitude",
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              0.25,
+              0.5
+            ],
+            [
+              1.25,
+              0.5
+            ],
+            [
+              1.25,
+              1.5
+            ],
+            [
+              0.25,
+              1.5
+            ],
+            [
+              0.25,
+              0.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "height_m": 1.0,
+        "id": "cube-01",
+        "source": "deterministic_local_geometry"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              2.25,
+              0.5
+            ],
+            [
+              3.25,
+              0.5
+            ],
+            [
+              3.25,
+              1.5
+            ],
+            [
+              2.25,
+              1.5
+            ],
+            [
+              2.25,
+              0.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "height_m": 1.0,
+        "id": "cube-02",
+        "source": "deterministic_local_geometry"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.25,
+              0.5
+            ],
+            [
+              5.25,
+              0.5
+            ],
+            [
+              5.25,
+              1.5
+            ],
+            [
+              4.25,
+              1.5
+            ],
+            [
+              4.25,
+              0.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "height_m": 1.0,
+        "id": "cube-03",
+        "source": "deterministic_local_geometry"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              6.25,
+              0.5
+            ],
+            [
+              7.25,
+              0.5
+            ],
+            [
+              7.25,
+              1.5
+            ],
+            [
+              6.25,
+              1.5
+            ],
+            [
+              6.25,
+              0.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "height_m": 1.0,
+        "id": "cube-04",
+        "source": "deterministic_local_geometry"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              0.75,
+              2.5
+            ],
+            [
+              1.75,
+              2.5
+            ],
+            [
+              1.75,
+              3.5
+            ],
+            [
+              0.75,
+              3.5
+            ],
+            [
+              0.75,
+              2.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "height_m": 1.0,
+        "id": "cube-05",
+        "source": "deterministic_local_geometry"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              2.75,
+              2.5
+            ],
+            [
+              3.75,
+              2.5
+            ],
+            [
+              3.75,
+              3.5
+            ],
+            [
+              2.75,
+              3.5
+            ],
+            [
+              2.75,
+              2.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "height_m": 1.0,
+        "id": "cube-06",
+        "source": "deterministic_local_geometry"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.75,
+              2.5
+            ],
+            [
+              5.75,
+              2.5
+            ],
+            [
+              5.75,
+              3.5
+            ],
+            [
+              4.75,
+              3.5
+            ],
+            [
+              4.75,
+              2.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "height_m": 1.0,
+        "id": "cube-07",
+        "source": "deterministic_local_geometry"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              6.75,
+              2.5
+            ],
+            [
+              7.75,
+              2.5
+            ],
+            [
+              7.75,
+              3.5
+            ],
+            [
+              6.75,
+              3.5
+            ],
+            [
+              6.75,
+              2.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "height_m": 1.0,
+        "id": "cube-08",
+        "source": "deterministic_local_geometry"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              0.25,
+              4.5
+            ],
+            [
+              1.25,
+              4.5
+            ],
+            [
+              1.25,
+              5.5
+            ],
+            [
+              0.25,
+              5.5
+            ],
+            [
+              0.25,
+              4.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "height_m": 1.0,
+        "id": "cube-09",
+        "source": "deterministic_local_geometry"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              2.25,
+              4.5
+            ],
+            [
+              3.25,
+              4.5
+            ],
+            [
+              3.25,
+              5.5
+            ],
+            [
+              2.25,
+              5.5
+            ],
+            [
+              2.25,
+              4.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "height_m": 1.0,
+        "id": "cube-10",
+        "source": "deterministic_local_geometry"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.25,
+              4.5
+            ],
+            [
+              5.25,
+              4.5
+            ],
+            [
+              5.25,
+              5.5
+            ],
+            [
+              4.25,
+              5.5
+            ],
+            [
+              4.25,
+              4.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "height_m": 1.0,
+        "id": "cube-11",
+        "source": "deterministic_local_geometry"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              6.25,
+              4.5
+            ],
+            [
+              7.25,
+              4.5
+            ],
+            [
+              7.25,
+              5.5
+            ],
+            [
+              6.25,
+              5.5
+            ],
+            [
+              6.25,
+              4.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "height_m": 1.0,
+        "id": "cube-12",
+        "source": "deterministic_local_geometry"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              0.75,
+              6.5
+            ],
+            [
+              1.75,
+              6.5
+            ],
+            [
+              1.75,
+              7.5
+            ],
+            [
+              0.75,
+              7.5
+            ],
+            [
+              0.75,
+              6.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "height_m": 1.0,
+        "id": "cube-13",
+        "source": "deterministic_local_geometry"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              2.75,
+              6.5
+            ],
+            [
+              3.75,
+              6.5
+            ],
+            [
+              3.75,
+              7.5
+            ],
+            [
+              2.75,
+              7.5
+            ],
+            [
+              2.75,
+              6.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "height_m": 1.0,
+        "id": "cube-14",
+        "source": "deterministic_local_geometry"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.75,
+              6.5
+            ],
+            [
+              5.75,
+              6.5
+            ],
+            [
+              5.75,
+              7.5
+            ],
+            [
+              4.75,
+              7.5
+            ],
+            [
+              4.75,
+              6.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "height_m": 1.0,
+        "id": "cube-15",
+        "source": "deterministic_local_geometry"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              6.75,
+              6.5
+            ],
+            [
+              7.75,
+              6.5
+            ],
+            [
+              7.75,
+              7.5
+            ],
+            [
+              6.75,
+              7.5
+            ],
+            [
+              6.75,
+              6.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "height_m": 1.0,
+        "id": "cube-16",
+        "source": "deterministic_local_geometry"
+      },
+      "type": "Feature"
+    }
+  ],
+  "name": "local-16-equal-staggered-cubes",
+  "type": "FeatureCollection"
+}

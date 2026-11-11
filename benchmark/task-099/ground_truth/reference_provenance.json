@@ -1,0 +1,59 @@
+{
+  "experimental_claim": false,
+  "host": "5070-server",
+  "independent_archive_audit": "validation/openfoam-task099-v24-independent-audit-v1.json",
+  "independent_archive_audit_sha256": "8c7c6a597374f6baa14c7b99cc71b5124a7bae55315cbfe1be145f959db70d05",
+  "openfoam_version": "v2412",
+  "protocol_errata": "validation/openfoam-batch-20260916-v24-restart-evidence/protocol-errata-20260917.json",
+  "protocol_errata_sha256": "b808f97003fc66756b422f205a0180f0d9f93395218d461103abfaa80fa06cc7",
+  "runtime_environment": "/home/abc/urbanwind-agentbench-runtime-v0.1/envs/openfoam-2412",
+  "schema_version": "1.0",
+  "source_runs": [
+    {
+      "case_id": "task-099-case-001",
+      "mpi_ranks": 16,
+      "restart_mode": "continuous",
+      "segments_s": [
+        420.0
+      ],
+      "source_archive": "validation/openfoam-batch-20260916-v24-restart-evidence/transferred/task099-continuous-evidence/reference_candidate.tar.gz",
+      "source_archive_sha256": "6a77f183cc2d04aa18e9f99a91212ec2005e2682303a74165e46540799371837",
+      "source_batch": "openfoam-batch-20260916-v24-restart-evidence",
+      "source_job": "task099-continuous-evidence",
+      "source_status_sha256": "e332031bc470b4e3c7004f9fbaa0745ec51c03bdaa14ce5a9dcfcd6817460ed7",
+      "variant": "连续运行"
+    },
+    {
+      "case_id": "task-099-case-002",
+      "mpi_ranks": 16,
+      "restart_mode": "single_restart",
+      "segments_s": [
+        210.0,
+        420.0
+      ],
+      "source_archive": "validation/openfoam-batch-20260916-v24-restart-evidence/transferred/task099-single-restart-evidence/reference_candidate.tar.gz",
+      "source_archive_sha256": "31b3f1219236c306e56981dd0e3388b8d9e98ba7c017a40ba91b6bac7bb383d3",
+      "source_batch": "openfoam-batch-20260916-v24-restart-evidence",
+      "source_job": "task099-single-restart-evidence",
+      "source_status_sha256": "0f5309970a3cfb21d62216244921a03345b983e7164558db829041ac81c79ce1",
+      "variant": "单次重启"
+    },
+    {
+      "case_id": "task-099-case-003",
+      "mpi_ranks": 16,
+      "restart_mode": "multi_restart",
+      "segments_s": [
+        150.0,
+        300.0,
+        420.0
+      ],
+      "source_archive": "validation/openfoam-batch-20260916-v24-restart-evidence/transferred/task099-multi-restart-evidence/reference_candidate.tar.gz",
+      "source_archive_sha256": "7e59cbab2164079e8e9b5954fc7679ce33da1b01fcbe3d3620ece1d1d0f9dbc0",
+      "source_batch": "openfoam-batch-20260916-v24-restart-evidence",
+      "source_job": "task099-multi-restart-evidence",
+      "source_status_sha256": "5ff2d991d270cf2b215824b367074f9dbe07eaa4d9d73ab366a0eba2e6a18213",
+      "variant": "多段重启"
+    }
+  ],
+  "task_id": "urbanwind-task-099"
+}

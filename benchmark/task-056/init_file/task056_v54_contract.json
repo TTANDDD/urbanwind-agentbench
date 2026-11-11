@@ -1,0 +1,612 @@
+{
+  "acceptance_and_reporting": {
+    "current_reference_ready": 35,
+    "current_release_valid": 0,
+    "external_evidence": "No experimental dataset is required. External-validation field must explicitly state unavailable/not claimed; documentation establishes software/units semantics, not numerical field truth. Do not award experimental-validation points.",
+    "future_acceptance": "Both actual tool cases; expected scale-negative case001; accepted repaired case002; its one complete CFD meeting every frozen gate; independent raw recomputation; archive dual SHA/member verification; positive/negative evaluator evidence; exact installed entry and final contract integrity. Only then consider task056 reference-ready.",
+    "launch_authorized": false,
+    "reference_classification": "Primary capability is mesh/unit diagnosis with mandatory auxiliary finite CFD. Treat eventual task056 as a tool/diagnostic reference with CFD support, not a validated flow-response reference; if accepted counts become30 numerical+6 tools=36 total. This is prospective only and requires catalog semantics to agree before acceptance.",
+    "release_valid": "Remains0 until portable runtime/hidden evaluator/release contract qualifies; local owner run or trusted-host entry alone is insufficient.",
+    "statistical_inference": "The paired cases are deterministic interventions on one synthetic geometry, not two independent experimental replicates. No randomization, significance tests or confidence claims; no uncontrolled run-order factor is being used to infer a physical effect.",
+    "task056_reference_ready": false
+  },
+  "design_id": "task056-v54-city-scale-repair",
+  "reference_ready": false,
+  "release_valid": false,
+  "resolved_decisions": {
+    "CFD_case_role_and_acceptance_scope": {
+      "CFD_acceptance": {
+        "all_gates_conjunctive": true,
+        "completed_run": "Exactly one owner-bound case002 solver starts once from its own fresh0 files, reaches50s within1e-9s, has5000 monotone0.01s advances and normal end, no fatal/error/nonfinite/truncation/timeout or missing state. Never restart/reuse another task solution.",
+        "diagnostics_not_acceptance_tuning": [
+          "volume-weighted U/p/k/omega extrema and means at all times",
+          "field change from t0 and integer-time evolution",
+          "wall yPlus from an offline version-pinned formula if implemented, otherwise explicitly unavailable",
+          "outlet reverse-flow fraction",
+          "native turbulence bounding messages with raw evidence; no silent clipping in postprocessor"
+        ],
+        "finite_fields": "All U,p,k,omega,nut at t0..50 and native phi at t1..50 finite with expected dimensions; k>=-1e-12 m2/s2, nut>=-1e-12 m2/s, omega>0. Wall noSlip and inlet constraints must hold in actual fields. t0 is frozen initial-input evidence, not a native solver output.",
+        "linear_final_residual_max": 1e-07,
+        "linear_residual_scope": "All recorded p/U/k/omega linear solves at every pressure/coupling correction; iteration cap or no-convergence report is failure. This is linear-algebra convergence, not a claim of time/grid independence or stationary flow.",
+        "max_Courant_over_all_steps": 0.5,
+        "max_absolute_logged_cumulative_continuity": 0.0001,
+        "no_velocity_truth_target": "No claimed expected wake speed/pressure/drop or experimental score. The geometry/Re tolerances and finite-volume checks are public contract gates; the three-pass horizon is not a mixing-time or stationarity proof.",
+        "raw_flux_checks": {
+          "Q_in_target_m3_s": 134.4,
+          "boundary_net_definition": "abs(sum(outward boundary phi))/abs(sum(inlet phi))",
+          "boundary_net_max": 1e-06,
+          "cell_L1_divergence_definition": "sum_cells abs(sum_signed_cell_faces(phi))/abs(sum(inlet phi))",
+          "cell_L1_divergence_max": 0.0001,
+          "impermeable_patch_max_absolute_flux_relative_to_Qin": 1e-09,
+          "inlet_relative_tolerance": 1e-09,
+          "no_flux_reconstruction_substitute": "Use written native surfaceScalarField phi and actual owner/neighbour/boundary addressing; do not substitute U dot S or sum signed residuals that cancel.",
+          "phi_dimensions": [
+            0,
+            3,
+            -1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "times": "t1..50 inclusive, no selected success window"
+        }
+      },
+      "CFD_model": {
+        "boundaries": {
+          "ground_and_buildings": {
+            "U": "noSlip",
+            "k": "kqRWallFunction",
+            "nut": "nutUSpaldingWallFunction",
+            "omega": "omegaWallFunction",
+            "p": "zeroGradient"
+          },
+          "inlet": {
+            "U": "fixedValue(1.2 0 0)",
+            "k": "fixedValue0.0054",
+            "nut": "calculated",
+            "omega": "fixedValue from frozen formula",
+            "p": "zeroGradient"
+          },
+          "outlet": {
+            "U": "inletOutlet with inletValue(1.2 0 0)",
+            "k": "inletOutlet using frozen inlet k",
+            "nut": "calculated",
+            "omega": "inletOutlet using frozen inlet omega",
+            "p": "fixedValue0 (kinematic)"
+          },
+          "sideLow_sideHigh_top": "symmetryPlane for U/p/k/omega/nut"
+        },
+        "coupling": {
+          "early_residual_termination": false,
+          "momentumPredictor": true,
+          "nCorrectors": 3,
+          "nNonOrthogonalCorrectors": 0,
+          "nOuterCorrectors": 3,
+          "turbOnFinalIterOnly": false
+        },
+        "discretization": {
+          "ddt": "Euler",
+          "div_phi_U_k_omega": "Gauss upwind",
+          "grad": "Gauss linear",
+          "interpolation": "linear",
+          "laplacian": "Gauss linear corrected",
+          "reason": "Deliberately bounded first-order spatial/temporal finite-volume reference; no discretization-error or LES-accuracy claim.",
+          "snGrad": "corrected",
+          "viscous_divergence": "Gauss linear"
+        },
+        "initial": {
+          "U_m_s": [
+            1.2,
+            0,
+            0
+          ],
+          "k_m2_s2": 0.0054,
+          "nut_m2_s": "Initialize consistently from k/omega; boundary wall values evaluated by the pinned wall function.",
+          "omega_s_inv": 0.7666518779999281,
+          "p_kinematic_m2_s2": 0
+        },
+        "linear_solvers": {
+          "U_k_omega": {
+            "maxIter": 200,
+            "relTol": 0,
+            "smoother": "symGaussSeidel",
+            "solver": "smoothSolver",
+            "tolerance": 1e-08
+          },
+          "p": {
+            "maxIter": 1000,
+            "preconditioner": "DIC",
+            "relTol": 0,
+            "solver": "PCG",
+            "tolerance": 1e-08
+          }
+        },
+        "physical_model": "Incompressible isothermal Newtonian, no buoyancy/thermal/scalar/wind-farm source; transient RAS kOmegaSST with wall functions. This is a coarse synthetic numerical integration, not resolved urban turbulence.",
+        "raw_outputs": [
+          "constant/polyMesh five files for both cases",
+          "all literal system/constant/0 files",
+          "every full/quality native log and every native error set",
+          "case002 initial U,p,k,omega,nut at t0 and native U,p,k,omega,nut,phi at t1..50, with correct dimensions/boundary entries",
+          "untruncated solver stdout with exact Time/Co/residual/continuity sequence",
+          "owner-bound argv/cwd/executable/runtime/start/exit/timeout/EOF/consuming wait/reap evidence"
+        ],
+        "runtime": "OpenCFD OpenFOAM v2412, serial double precision, fixed static mesh. Sol must pin executable, actual linked runtime, known model defaults, source cache and private capture implementation before execution.",
+        "solver": "pimpleFoam",
+        "time": {
+          "adjustTimeStep": false,
+          "deltaT_s": 0.01,
+          "end_s": 50,
+          "no_early_success": "Do not use residualControl to truncate the required horizon or accept a short smoke run; any budget stop remains incomplete.",
+          "raw_required_times": "Preserve the initial U/p/k/omega/nut inputs at t0, and native U/p/k/omega/nut/phi outputs at every integer t1..50. No native phi at t0 is required or falsely attributed to the solver; preserve full chronological log for5000 advances.",
+          "reason": "T_adv=Lx/U=50/3s. T_end=3*T_adv=50s. This declares finite startup evolution across three domain advective lengths, not a steady/converged statistics window.",
+          "start_s": 0,
+          "steps": 5000,
+          "write_every_s": 1,
+          "write_precision": 12
+        },
+        "trusted_postprocessing": "Offline read of raw fields by frozen controller code. functions{} in submitted controlDict must be empty; no submitted scripts/libs/function objects. If installed solver does not write phi by default, Sol must freeze a trusted host-side serialization adapter before results; no undeclared extra native calls.",
+        "turbulence_definition": {
+          "betaStar": 0.09,
+          "intensity": 0.05,
+          "k_formula": "1.5*(0.05*1.2)^2 =0.0054",
+          "length_m": 0.175,
+          "model_defaults": "Use installed v2412 standard SST coefficients with no tuning. Record their resolved values in the prelaunch manifest; a different closure needs a prospective scientific revision.",
+          "omega_formula": "sqrt(k)/(0.09^(1/4)*0.175)"
+        }
+      },
+      "case001": {
+        "CFD_runs": 0,
+        "case_id": "task-056-case-001",
+        "commands": [
+          "blockMesh",
+          "checkMesh full geometry/topology",
+          "checkMesh complete public quality"
+        ],
+        "execution_role": "provided_data_or_tool_execution",
+        "expected_native_quality": "PASS",
+        "expected_unit_decision": "REJECT_SCALE",
+        "fault_role": "faulty_input",
+        "reason": "Demonstrate that a topologically/shape-quality-valid mesh can be wrong in SI dimensions; reject before solving wrong physical geometry."
+      },
+      "case002": {
+        "CFD_runs": 1,
+        "case_id": "task-056-case-002",
+        "commands": [
+          "blockMesh",
+          "checkMesh full geometry/topology",
+          "checkMesh complete public quality",
+          "pimpleFoam"
+        ],
+        "execution_role": "real_solver_run",
+        "expected_native_quality": "PASS",
+        "expected_unit_decision": "ACCEPT_SCALE",
+        "fault_role": "verified_repair",
+        "reason": "The single mandatory finite CFD calculation verifies that repaired physical dimensions and forcing reach an actual conservative numerical calculation. Completion and all gates are required; no causal before/after flow comparison is claimed."
+      },
+      "counts_after": {
+        "global_cases": 367,
+        "global_planned_solver_runs": 227,
+        "global_tasks": 200,
+        "task_cases": 2,
+        "task_solver_runs": 1
+      },
+      "counts_before": {
+        "global_cases": 367,
+        "global_planned_solver_runs": 227,
+        "global_tasks": 200,
+        "task_cases": 2,
+        "task_solver_runs": 1
+      },
+      "explicit_role_swap": true,
+      "failure_policy": {
+        "CFD_gate_failure": "The current reference attempt is not accepted. Preserve full run; no after-results change to geometry/model/time-step/tolerance/horizon to rescue it. Any scientific redesign is separately versioned and approved before another solve.",
+        "capture_or_budget_failure": "STOP_INCOMPLETE; missing data is not zero error. No same-turn native retry/CPU hopping. Engineering-only correction must retain original attempt and new pre-result manifest/unique claim.",
+        "unexpected_native_mesh_failure": "STOP_NONISOLATED_INPUT_OR_IMPLEMENTATION; preserve complete raw files and reason. Do not accept a bad-quality input as the intended unit-only negative.",
+        "unknown_failure": "STOP; no selective metrics or success-subset reporting.",
+        "wrong_scale_rejection": "Expected controlled negative, not an infrastructure failure; require case001 quality pass plus metric/reason evidence."
+      },
+      "native_quality": {
+        "both_cases_require": "Complete checkMesh -allTopology -allGeometry plus a separate clean checkMesh -meshQuality -allTopology -allGeometry with public meshQualityDict. Require complete terminal classification, zero failed checks and no unexplained warning/error sets. Exit0 alone is insufficient.",
+        "meshQualityDict": {
+          "errorReduction": 0.75,
+          "maxBoundarySkewness": 20,
+          "maxConcave": 80,
+          "maxInternalSkewness": 4,
+          "maxNonOrtho": 65,
+          "minArea": 1e-13,
+          "minDeterminant": 0.001,
+          "minFaceWeight": 0.05,
+          "minTetQuality": 1e-15,
+          "minTriangleTwist": -1,
+          "minTwist": 0.02,
+          "minVol": 1e-13,
+          "minVolRatio": 0.01,
+          "nSmoothScale": 4
+        },
+        "semantics": "These are explicit prospective diagnostic-grid gates, not universal accuracy criteria. minVol is the installed check's signed face-pyramid criterion, not the cell-volume target. Actual positive cell volumes are independently checked. No relaxed subdictionary. Same quality numbers in both cases; document dimensional thresholds. At the planned faulty scale,0.00025m cubes and their positive face pyramids remain above minVol1e-13, so the intended failure is SI size, not quality.",
+        "source_interface": "Sol verifies exact v2412 keyword/argument/set ownership compatibility from the pinned code before freezing command bytes; unsupported/interface errors STOP and may only receive versioned engineering corrections preserving this scientific meaning."
+      },
+      "synchronization_required": [
+        "task_spec",
+        "case_plan case001/case002 execution roles",
+        "reporting_contract expected_solver_case_ids=[task-056-case-002]",
+        "outer instruction/metadata",
+        "task profiles and role registry",
+        "case matrix/control contract",
+        "catalog task/case/index counts",
+        "metric/physical gates",
+        "public input README/manifest",
+        "new answer-free init and eventual evaluator"
+      ]
+    },
+    "normative_geometry_and_fault_direction": {
+      "buildings": [
+        {
+          "bounds_m": [
+            0.5,
+            1.5,
+            0.5,
+            1.5,
+            0,
+            1
+          ],
+          "id": "b-00-00"
+        },
+        {
+          "bounds_m": [
+            2.5,
+            3.5,
+            0.5,
+            1.5,
+            0,
+            1.25
+          ],
+          "id": "b-00-01"
+        },
+        {
+          "bounds_m": [
+            4.5,
+            5.5,
+            0.5,
+            1.5,
+            0,
+            1.5
+          ],
+          "id": "b-00-02"
+        },
+        {
+          "bounds_m": [
+            6.5,
+            7.5,
+            0.5,
+            1.5,
+            0,
+            1.75
+          ],
+          "id": "b-00-03"
+        },
+        {
+          "bounds_m": [
+            1,
+            2,
+            2.5,
+            3.5,
+            0,
+            1.25
+          ],
+          "id": "b-01-00"
+        },
+        {
+          "bounds_m": [
+            3,
+            4,
+            2.5,
+            3.5,
+            0,
+            1.5
+          ],
+          "id": "b-01-01"
+        },
+        {
+          "bounds_m": [
+            5,
+            6,
+            2.5,
+            3.5,
+            0,
+            1.75
+          ],
+          "id": "b-01-02"
+        },
+        {
+          "bounds_m": [
+            7,
+            8,
+            2.5,
+            3.5,
+            0,
+            1
+          ],
+          "id": "b-01-03"
+        },
+        {
+          "bounds_m": [
+            0.5,
+            1.5,
+            4.5,
+            5.5,
+            0,
+            1.5
+          ],
+          "id": "b-02-00"
+        },
+        {
+          "bounds_m": [
+            2.5,
+            3.5,
+            4.5,
+            5.5,
+            0,
+            1.75
+          ],
+          "id": "b-02-01"
+        },
+        {
+          "bounds_m": [
+            4.5,
+            5.5,
+            4.5,
+            5.5,
+            0,
+            1
+          ],
+          "id": "b-02-02"
+        },
+        {
+          "bounds_m": [
+            6.5,
+            7.5,
+            4.5,
+            5.5,
+            0,
+            1.25
+          ],
+          "id": "b-02-03"
+        },
+        {
+          "bounds_m": [
+            1,
+            2,
+            6.5,
+            7.5,
+            0,
+            1.75
+          ],
+          "id": "b-03-00"
+        },
+        {
+          "bounds_m": [
+            3,
+            4,
+            6.5,
+            7.5,
+            0,
+            1
+          ],
+          "id": "b-03-01"
+        },
+        {
+          "bounds_m": [
+            5,
+            6,
+            6.5,
+            7.5,
+            0,
+            1.25
+          ],
+          "id": "b-03-02"
+        },
+        {
+          "bounds_m": [
+            7,
+            8,
+            6.5,
+            7.5,
+            0,
+            1.5
+          ],
+          "id": "b-03-03"
+        }
+      ],
+      "coordinates": "local Cartesian, x-east/y-north/z-up, metres; all solid bases z0; no rotation/translation/height change",
+      "decision": "Use the original task05616-building GeoJSON in metres as normative solid geometry. Construct a new literal Cartesian city block mesh. Reject the old17-block single-building template as a source for the new active cases.",
+      "domain_bounds_m": {
+        "x": [
+          -4,
+          16
+        ],
+        "y": [
+          -4,
+          12
+        ],
+        "z": [
+          0,
+          7
+        ]
+      },
+      "domain_choice": "New declared contract domain with quarter-metre alignment; not attributed to the old one-building dictionary. Boundary-distance and grid-independence studies are outside this unit-repair test.",
+      "mesh": {
+        "building_exposed_area_m2": 104,
+        "cell_volume_m3": 0.015625,
+        "expected_fluid_cells": 141952,
+        "fluid_volume_m3": 2218,
+        "ground_area_m2": 304,
+        "origin_m": [
+          -4,
+          -4,
+          0
+        ],
+        "other_patch_areas_m2": {
+          "inlet": 112,
+          "outlet": 112,
+          "sideHigh": 140,
+          "sideLow": 140,
+          "top": 320
+        },
+        "outer_lattice_cells": [
+          80,
+          64,
+          28
+        ],
+        "outer_volume_m3": 2240,
+        "scope": "Exact design arithmetic, not a native result. Require fresh raw topology/occupancy/areas/normal/closure verification. Do not import accepted task054/055 mesh outputs.",
+        "solid_exposed_planar_rectangles": 80,
+        "solid_volume_m3": 22,
+        "spacing_m": [
+          0.25,
+          0.25,
+          0.25
+        ]
+      },
+      "scale_fault": {
+        "allowed_equivalence": "Allow harmless whitespace/comments, reordered valid macroblocks, consistent point/cell/face renumbering and cyclic face-start vertices where geometric orientation is preserved. Judge the public quarter-metre physical occupancy and declared scalar repair, not hidden IDs or canonical bytes. Do not permit geometry or U/nu compensation disguised as unit repair.",
+        "controlled_change": "Between new faulty and repaired inputs only the single permitted scalar scale entry changes. Solid source, vertices, blocks, grading, patches, U, nu, turbulence and all numerical settings remain fixed.",
+        "definition": "Coordinates already denote metres; erroneous second mm-to-m conversion shrinks all coordinates by1000. This is an over-conversion, not a missing conversion on genuine millimetre coordinates.",
+        "faulty_convertToMeters": 0.001,
+        "literal_vertex_unit": "m",
+        "original_discrepancy": "Original manifest declared0.001 but actual original dictionary was1. Sol must first materialize the new city fault; never relabel the original dictionary as faulty.",
+        "repaired_convertToMeters": 1,
+        "safe_dictionaries": "Exactly one version-verified scale entry; no simultaneous scale/prescale/convertToMeters, transform, include, substitution, executable code or submission-provided libraries/functions."
+      },
+      "source": "init_file/local_assets/city_geometry.geojson",
+      "source_sha256": "ab4447221d016e6d003f2823e56a5cb0c699c4a489b6428eaf7edee599286070"
+    },
+    "operational_bbox_and_Re_definition": {
+      "geometry_conjunctive_gates": {
+        "bounds": "Match every min/max to design bounds for case002 and0.001 times bounds for case001; per-coordinate absolute tolerance=1e-9m*case_scale.",
+        "finite_positive_raw_cells": true,
+        "occupancy": "After normalization by declared case scale, exactly tile the public0.25m Cartesian lattice outside all16 solid boxes, with no holes, overlaps or solid-interior cells. Verify each boundary lies on its correct exposed plane and outward normal; no bbox-only acceptance.",
+        "raw_building_area_expected_m2": {
+          "faulty": 0.000104,
+          "repaired": 104
+        },
+        "raw_volume_expected_m3": {
+          "faulty": 2.218e-06,
+          "repaired": 2218
+        },
+        "topology": "Owner/neighbour validity, closed cells, paired internal faces, outward physical boundary, correct wall and symmetry patch roles; no reliance on hidden ID order.",
+        "volume_area_relative_tolerance": 1e-09
+      },
+      "primary": {
+        "case_formula": "E_case = max over d in{x,y,z} of abs((max(points_d)-min(points_d))-Lstar_d)/Lstar_d",
+        "data_source": "All vertices in actual constant/polyMesh/points in SI after native blockMesh, including unused points if any; unused/extra/duplicate-invalid topology is a separate rejection.",
+        "faulty_expected": 0.999,
+        "faulty_expected_abs_tolerance": 1e-09,
+        "formula_change_disclosure": "The old scalar formula was undefined. This prospective version applies its relative-error expression per direction and takes the maximum, preventing one correct direction or a cancelling norm from passing.",
+        "id": "geometry_scale_relative_error",
+        "repaired_pass_max": 1e-09,
+        "target_spans_m": [
+          20,
+          16,
+          7
+        ],
+        "task_aggregation": "Compute and retain both case metrics. Task primary is E_case002 after repair; case001 must independently match the frozen fault and be rejected. Do not average the intentional negative into the repaired metric or select a successful subset.",
+        "unit": "fraction"
+      },
+      "reynolds": {
+        "H_target_m": 1.75,
+        "U_ref_m_s": 1.2,
+        "U_vector_m_s": [
+          1.2,
+          0,
+          0
+        ],
+        "definition": "Re_H=U_ref*H_mesh/nu; H_mesh=max height of actual exposed building-patch points above the ground plane, with geometry gate ensuring correct16 solids.",
+        "faulty_H_m": 0.00175,
+        "faulty_expected": 21,
+        "forbidden_compensation": "Do not change U, viscosity, units, pressure dimension, the chosen length or target Reynolds number to compensate for wrong geometry.",
+        "nu_dimensions": [
+          0,
+          2,
+          -1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "nu_m2_s": 0.0001,
+        "relative_tolerance": 1e-09,
+        "repaired_expected": 21000,
+        "scope": "Algebraic scale/unit consistency check using the same geometry as bbox, not independent physical validation and not a measured flow-response comparison. Case001 has no solver-derived Reynolds number. Re based on inlet applied flux in case002 is an implementation consistency check only.",
+        "velocity_source": "Norm of inlet fixedValue vector, not local recirculating U, domain-averaged U or solver peak. For case002 also independently recompute U_applied=abs(sum(inlet phi))/A_inlet at each saved physical time."
+      }
+    }
+  },
+  "resource_and_execution_budget": {
+    "MPI_ranks": 1,
+    "OMP_BLAS_threads": 1,
+    "additional_verification": "Pure raw-evidence and parser/evaluator fixtures do not start software. Any genuinely necessary additional native evaluator qualification needs a separate explicit pre-result budget and unique stage receipt under standing engineering authority, must not silently multiply the two task cases or their one required solver, and must not change science. No extra CFD is authorized by this seven-call plan.",
+    "all_work_raw_archive_headroom_GiB": 12,
+    "anti_repeat": "Calls become consumed on actual spawn; a completed actual output is adopted, never rerun to refill the same claim. No implicit smoke solver, qualification solver, continuation solve or evaluator solver beyond the one planned CFD.",
+    "bounded_cleanup_grace_s": 10,
+    "controller_plus_tool_target_memory_GiB": 8,
+    "enforcement_boundary": "RLIMIT_AS is per process, not cgroup-wide RAM. Sol must ensure one serial tool process, capture ownership, hard wall/output/storage enforcement and bounded owned cleanup; inability to enforce STOP, never claim a global cgroup cap or modify system/cgroups.",
+    "initial_native_stage_plan": [
+      {
+        "case": "001",
+        "id": "F_BM",
+        "tool": "blockMesh"
+      },
+      {
+        "case": "001",
+        "id": "F_FULL",
+        "tool": "checkMesh full"
+      },
+      {
+        "case": "001",
+        "id": "F_QUALITY",
+        "tool": "checkMesh quality"
+      },
+      {
+        "case": "002",
+        "id": "R_BM",
+        "tool": "blockMesh"
+      },
+      {
+        "case": "002",
+        "id": "R_FULL",
+        "tool": "checkMesh full"
+      },
+      {
+        "case": "002",
+        "id": "R_QUALITY",
+        "tool": "checkMesh quality"
+      },
+      {
+        "case": "002",
+        "id": "R_CFD",
+        "tool": "pimpleFoam"
+      }
+    ],
+    "launch": "Exactly one fresh related CPU/RAM/disk and own-lock admission before each ready stage; use single CPU policy, not all32 idle. One-second idle>=70% on the chosen CPU is a scheduling preference/admission value, not a scientific threshold or permission to displace anyone. A denial means quiet exit without alternate-CPU retry this turn.",
+    "local_archive_admission": "Before actual transfer, refresh C/D capacity and archive size; require destination free >= archive size +1GiB, and verify remote/local SHA plus every decoded archive member before acceptance. Preserve originals.",
+    "logical_CPUs": 1,
+    "mesh_command_wall_s": 600,
+    "nice": 15,
+    "owner_concurrency": 1,
+    "per_process_address_space_limit_GiB": 6,
+    "phase_directory_bytes_cap_GiB": 6,
+    "required_MemAvailable_GiB": 12,
+    "scope": "Prospective budget to be enforced and bound in the new task056 manifest; this scientific decision does not consume or grant any native call.",
+    "shared_disk_free_min_GiB": 100,
+    "solver_wall_s": 14400,
+    "stdout_per_command_MiB": 64,
+    "total_controller_log_MiB": 512,
+    "total_initial_CFD_calls": 1,
+    "total_initial_native_tool_calls": 7
+  },
+  "schema": "task056-v54-public-scientific-contract-v1",
+  "scientific_decision_sha256": "393c5b0b8d1d78567e7233503fc24dad12dc60a5fa52fc0be53a9d6f5877617d",
+  "state": "PREPARED_INPUT_ONLY_NO_NATIVE_NO_REFERENCE"
+}

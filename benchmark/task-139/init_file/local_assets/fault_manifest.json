@@ -1,0 +1,13 @@
+{
+  "answer_included": false,
+  "expected_agent_action": "diagnose and repair without changing unrelated settings",
+  "fault_family": "restart_time_axis_gap",
+  "fault_seed": 202609030139,
+  "injected": true,
+  "observed_fault_parameters": {
+    "gap_duration_s": 1.0,
+    "gap_start_s": 25.5
+  },
+  "target_file": "local_assets/velocity_timeseries.csv",
+  "task_id": "urbanwind-task-139"
+}

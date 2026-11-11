@@ -1,0 +1,63 @@
+{
+  "cases": [
+    {
+      "case_id": "task-018-case-001",
+      "execution_role": "provided_data_or_tool_execution",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "LOCAL_MULTI",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "冻结OpenFOAM、PALM、Gmsh、GDAL、ParaView和Python环境及可执行文件哈希要求。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "多软件版本与容器契约-目标案例"
+      },
+      "metrics": [
+        "runtime_hash_coverage",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "pinned_executables_and_images / required_runtime_assets",
+        "id": "runtime_hash_coverage",
+        "name_zh": "运行时版本与哈希覆盖率",
+        "unit": "fraction"
+      },
+      "purpose": "多软件版本与容器契约：执行变体 多软件版本与容器契约-目标案例，围绕冻结OpenFOAM、PALM、Gmsh、GDAL、ParaView和Python环境及可执行文件哈希要求。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "container_runtime"
+      ],
+      "task_id": "urbanwind-task-018",
+      "variant": "多软件版本与容器契约-目标案例"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "lite",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 1,
+  "required_solver_runs": 0,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-018"
+}

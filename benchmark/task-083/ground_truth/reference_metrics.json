@@ -1,0 +1,41 @@
+{
+  "diagnostics": {
+    "per_case": {
+      "task-083-case-001": {
+        "combined_nmae": 0.23246633445542675,
+        "turbulence_nmae": 0.028434185481643198,
+        "velocity_nmae": 0.43649848342921027
+      },
+      "task-083-case-002": {
+        "combined_nmae": 0.23444489203384508,
+        "turbulence_nmae": 0.03032166939408223,
+        "velocity_nmae": 0.43856811467360796
+      },
+      "task-083-case-003": {
+        "combined_nmae": 0.23731873788051155,
+        "turbulence_nmae": 0.029008083913097043,
+        "velocity_nmae": 0.44562939184792605
+      }
+    },
+    "reference_selected_case_id": "task-083-case-001"
+  },
+  "experimental_claim": false,
+  "metric_definition": "Equal weighting over 59 valid probes; solid-surface indices 6-10 are excluded; U scale=1.2 m/s; resolved-TKE scale=1.44 m2/s2.",
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-083",
+  "truth_type": "verified_openfoam_numerical_reference",
+  "units": {
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction",
+    "sgs_reference_observable_nmae": "fraction",
+    "sgs_selected_model_regret": "fraction",
+    "sgs_target_observable_spread": "fraction"
+  },
+  "values": {
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0,
+    "sgs_reference_observable_nmae": 0.23474332145659446,
+    "sgs_selected_model_regret": 0.0,
+    "sgs_target_observable_spread": 0.017239279287461495
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "maxBoundarySkewness": 2.0,
+  "maxConcave": 80.0,
+  "maxInternalSkewness": 2.0,
+  "maxNonOrtho": 30.0,
+  "minArea": -1.0,
+  "minDeterminant": 0.001,
+  "minEdgeLength": -1.0,
+  "minFaceFlatness": -1.0,
+  "minFaceWeight": 0.05,
+  "minTetQuality": 1e-15,
+  "minTriangleTwist": -1.0,
+  "minTwist": 0.02,
+  "minVol": 1e-13,
+  "minVolRatio": 0.01
+}

@@ -1,0 +1,91 @@
+{
+  "benchmark_metadata": {
+    "case_anchor": "LOCAL_DISPERSION",
+    "category": "cfd_execution",
+    "compute_track": "cfd",
+    "data_origin_policy": "local_generation_or_optional_one_click_public",
+    "difficulty": "advanced",
+    "init_type": "engineering_data_and_model",
+    "materialization_status": "local_inputs_generated",
+    "professional_difficulty": "D5",
+    "reference_status": "openfoam_numerical_reference_generated",
+    "release_status": "reference_ready_not_release_valid",
+    "required_cases": 3,
+    "required_solver_runs": 3,
+    "simulation_status": "reference_runs_completed",
+    "task_id": "urbanwind-task-096",
+    "task_mode": "comparative_simulation",
+    "track": "openfoam_rans_les_execution"
+  },
+  "config": [
+    {
+      "parameters": {
+        "files": [
+          {
+            "local_path": "task-096/init_file/init_file.tar.gz",
+            "path": "/home/user/Desktop/init_file.tar.gz"
+          }
+        ]
+      },
+      "type": "upload_file"
+    },
+    {
+      "parameters": {
+        "command": "bash -c \"set -e; tar -xzf '/home/user/Desktop/init_file.tar.gz' -C '/home/user/Desktop'; rm -f '/home/user/Desktop/init_file.tar.gz'\"",
+        "shell": true
+      },
+      "type": "launch"
+    }
+  ],
+  "evaluator": {
+    "expected": {},
+    "func": "openfoam_passive_scalar_reference_score",
+    "metric": {
+      "direction": "maximize",
+      "name": "UrbanWind task-096 raw passive-scalar numerical time-series check",
+      "not_for_leaderboard": true,
+      "scale": "0-100"
+    },
+    "postconfig": [
+      {
+        "parameters": {
+          "files": [
+            {
+              "local_path": "task-096/eval.py",
+              "path": "/home/user/Desktop/eval.py"
+            }
+          ]
+        },
+        "type": "upload_file"
+      },
+      {
+        "parameters": {
+          "files": [
+            {
+              "local_path": "task-096/ground_truth/reference_case_arrays.json",
+              "path": "/tmp/urbanwind-task-096-reference.json"
+            }
+          ]
+        },
+        "type": "upload_file"
+      }
+    ],
+    "result": {
+      "command": "python3 /home/user/Desktop/eval.py",
+      "shell": true,
+      "type": "vm_command_line"
+    }
+  },
+  "fixed_ip": false,
+  "id": "c-urbanwind-task-096-ubuntu",
+  "instruction": "你正在完成 UrbanWind-AgentBench task-096：被动标量扩散。\n\n科学问题：智能体能否在不伪造证据的前提下完成“被动标量扩散”，并把工具执行、数值质量、物理依据和工程结论连成可复算闭环？\n\n必须完成全流程：\n1. 证据与设计：读取任务输入与来源登记，显式列出已知、假设、缺失和许可边界。 在质量守恒的源项下计算街谷标量滞留和通量。\n2. 配置与执行：围绕程序化城市阵列被动标量基准生成案例计划和软件配置，并保持单位、坐标和版本可追踪。 执行3个要求案例，其中3个案例必须产生真实CFD/LES求解器证据。 不得伪造工具或求解器输出。\n3. 后处理与验证：从原始文件重算声明指标，保存脚本、命令、日志、单位、时间窗和哈希。 依次通过文件、执行、数值、物理、外部证据和工程约束门禁。\n4. 工程决策：给出带适用边界的工程结论；关键证据缺失时明确停止或降级声明。\n5. 严格执行 `/home/user/Desktop/case_plan.json` 和 `/home/user/Desktop/reporting_contract.json`，保留每个案例的原始输入、日志和输出。\n6. 生成任务合同要求的全部产物到 `/home/user/Desktop`。最小软件链：python, openfoam；计算赛道：cfd。\n7. 初始化输入已由项目生成器在本地物化；不得把合成或数值输入表述为实验测量。已安装隐藏OpenFOAM被动标量数值参考和task-096专用评价器；该参考不是实验、PIV或DNS真值。\n8. task-096专用交付：读取local_assets/passive_scalar_contract.json，在同一冻结城市流场上分别真实执行源项A/B/C。每个case提交scalar_evidence_manifest.json所登记的存量、出口标量通量、8点浓度探针、scalarTransportFoam、topoSet和checkMesh原始文件及SHA256；按0.1–20 s共200个样本重算源量、出口累计量、终态存量和质量闭合误差。三case任务主指标取各case闭合误差最大值，必须不超过2%。\n",
+  "possibility_of_env_change": "medium",
+  "proxy": false,
+  "related_apps": [
+    "python",
+    "openfoam"
+  ],
+  "snapshot": "urbanwind-multisoftware-v1",
+  "source": "UrbanWind-AgentBench local scaffold with source registry",
+  "trajectory": "trajectories/"
+}

@@ -1,0 +1,66 @@
+{
+  "blockers": [
+    "frozen distributable runtime image",
+    "packaged hidden-evaluator execution"
+  ],
+  "canonical_result": "canonical_result.json",
+  "claim_boundary": "Reference-ready numerical task; benchmark release remains blocked.",
+  "evaluator_status": "task_specific_numeric_array_check",
+  "expected_ground_truth": {
+    "case_ids": [
+      "task-082-case-001"
+    ],
+    "hidden_tolerances_status": "frozen_numeric_array_tolerance",
+    "input_roles": [
+      "本地生成的OpenFOAM LES起始案例",
+      "本地入口剖面和湍流输入",
+      "本地数值参考的平均速度与脉动统计",
+      "冻结坐标、掩膜、采样频率和统计窗口"
+    ],
+    "metric_contracts": [
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "weighted_mean(abs(U_LES-U_local_reference))/U_reference",
+        "id": "les_local_reference_velocity_nmae",
+        "name_zh": "LES-本地数值参考速度NMAE",
+        "unit": "fraction"
+      },
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "weighted_mean(abs(turbulence_LES-turbulence_local_reference))/turbulence_reference_scale",
+        "id": "les_local_reference_turbulence_nmae",
+        "name_zh": "LES-本地数值参考脉动统计NMAE",
+        "unit": "fraction"
+      },
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "hashed_source_linked_evidence / required_evidence",
+        "id": "evidence_provenance_fraction",
+        "name_zh": "证据溯源覆盖率",
+        "unit": "fraction"
+      },
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "passed_hard_gates / required_hard_gates",
+        "id": "hard_gate_pass_fraction",
+        "name_zh": "硬门禁通过率",
+        "unit": "fraction"
+      }
+    ],
+    "reference_values_status": "verified_openfoam_numerical_reference_generated"
+  },
+  "experimental_claim": false,
+  "limitations": [
+    "The reference is produced by OpenFOAM v2412 and is not wind-tunnel, PIV, DNS, or field-measurement truth.",
+    "The evaluator checks frozen probe statistics and reported metric recomputation; it does not independently re-run OpenFOAM.",
+    "A frozen distributable runtime image and end-to-end packaged evaluator execution are still pending."
+  ],
+  "reference_case_arrays": "reference_case_arrays.json",
+  "reference_metrics": "reference_metrics.json",
+  "reference_provenance": "reference_provenance.json",
+  "reference_status": "openfoam_numerical_reference_generated",
+  "release_status": "reference_ready_not_release_valid",
+  "schema_version": "1.2",
+  "task_id": "urbanwind-task-082",
+  "truth_type": "verified_openfoam_numerical_reference"
+}

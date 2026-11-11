@@ -1,0 +1,67 @@
+{
+  "cases": [
+    {
+      "case_id": "task-068-case-001",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "SB4_LOCAL",
+        "anchor_state": "local_generator_ready",
+        "angle_deg": 30.0,
+        "controlled_factor": "fixed_30_degree_geographic_to_solver_rotation",
+        "data_origin": "deterministic_local_generation",
+        "focus": "在地理风向和求解器坐标之间转换速度、应力和热通量。",
+        "required_external_inputs": [],
+        "solver_frame": "xyz",
+        "source_frame": "ENU",
+        "unresolved_inputs": [],
+        "variant": "风向旋转与矢量变换-参考工况"
+      },
+      "metrics": [
+        "vector_tensor_roundtrip_error",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "max(E_roundtrip_visible,E_solver_inlet,E_inverse_projected_inlet); E_roundtrip_visible=max(relative_error(R^T(Ru),u),relative_error(R^T(Rq),q),relative_error(R^T(RTR^T)R,T)); E_solver_inlet=weighted_RMSE(U_probe_solver-U_target_solver)/1.2; E_inverse_projected_inlet=weighted_RMSE(R^T U_probe_solver-U_target_geo)/1.2",
+        "id": "vector_tensor_roundtrip_error",
+        "name_zh": "风向矢量张量与求解器入口联合误差",
+        "unit": "fraction"
+      },
+      "purpose": "把可见ENU速度、热通量和雷诺应力按冻结30度正交矩阵变换；真实OpenFOAM运行验证变换后的速度入口在52层被正确实现。",
+      "reference_status": "verified_openfoam_numerical_reference_generated",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-068",
+      "variant": "风向旋转与矢量变换-参考工况"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "cfd",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 1,
+  "required_solver_runs": 1,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-068"
+}

@@ -1,0 +1,19 @@
+{
+  "experimental_claim": false,
+  "hidden_evaluator_metric": "abs(onset_detected_s-onset_reference_s)",
+  "metric_formula": "earliest 60s-block start with all subsequent adjacent 60s drifts U<=0.05 and k<=0.02 over 64 probes; blocks 60-420 s",
+  "metric_freeze_boundary": "Six-block onset rule frozen after numerical candidate, before any agent evaluation; earlier needs-review runs remain negative evidence.",
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-087",
+  "truth_type": "verified_openfoam_numerical_reference",
+  "units": {
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction",
+    "stationarity_onset_detected_s": "s"
+  },
+  "values": {
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0,
+    "stationarity_onset_detected_s": 180.0
+  }
+}

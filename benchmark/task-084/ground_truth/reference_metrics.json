@@ -1,0 +1,22 @@
+{
+  "experimental_claim": false,
+  "metric_diagnostics": {
+    "Ux_component": 0.04764871558058628,
+    "resolved_tke_component": 0.008228356684272178
+  },
+  "metric_formula": "0.5*(mean_j(range_dt(Ux_j))/1.2 + mean_j(range_dt(k_resolved_j))/1.44); 64 frozen fluid probes; t=180-300 s",
+  "metric_freeze_boundary": "exact formula is a benchmark-contract amendment after numerical candidates, before agent evaluation",
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-084",
+  "truth_type": "verified_openfoam_numerical_reference",
+  "units": {
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction",
+    "timestep_observable_spread": "fraction"
+  },
+  "values": {
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0,
+    "timestep_observable_spread": 0.02793853613242923
+  }
+}

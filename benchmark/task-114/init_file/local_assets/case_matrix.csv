@@ -1,0 +1,3 @@
+case_id,variant,seed,wind_direction_deg,reference_speed_m_s,stability,surface_heat_flux_w_m2,sgs_model,time_step_s,convection_scheme,pressure_velocity_coupling,roughness_length_m,source_configuration,decomposition_method,restart_segments,software_variant,controlled_factor,controlled_level
+task-114-case-001,连续运行,202609041400,0.0,1.2,neutral,0.0,,,,,,,,1,,restart_mode,连续运行
+task-114-case-002,重启运行,202609041400,0.0,1.2,neutral,0.0,,,,,,,,2,,restart_mode,重启运行

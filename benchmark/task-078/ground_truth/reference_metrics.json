@@ -1,0 +1,25 @@
+{
+  "diagnostic_metrics": {
+    "integral_scale_drift": 0.02399855206628999,
+    "max_abs_cumulative_continuity": 1.166282684e-07,
+    "max_courant": 0.4599480649,
+    "mean_drift": 0.025487962398794466,
+    "spectrum_drift": 0.0440408230504378,
+    "variance_drift": 0.00962179369681298
+  },
+  "experimental_claim": false,
+  "metric_formula": "max(mean_abs(Ux_mean_B-Ux_mean_C)/1.2,mean_abs(Ux_variance_B-Ux_variance_C)/1.44,0.5*sum(abs(normalized_PSD_band_B-normalized_PSD_band_C)),abs(Tint_B-Tint_C)/max(abs(Tint_C),0.2)) over frozen 300-360 s and 360-420 s blocks",
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-078",
+  "truth_type": "verified_openfoam_numerical_reference",
+  "units": {
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction",
+    "precursor_block_mean_drift": "fraction"
+  },
+  "values": {
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0,
+    "precursor_block_mean_drift": 0.0440408230504378
+  }
+}

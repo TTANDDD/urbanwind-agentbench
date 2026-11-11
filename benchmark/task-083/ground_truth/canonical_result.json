@@ -1,0 +1,16 @@
+{
+  "case_ids": [
+    "task-083-case-001",
+    "task-083-case-002",
+    "task-083-case-003"
+  ],
+  "claim_boundary": "Frozen OpenFOAM numerical reference; not experimental truth.",
+  "primary_metric": {
+    "id": "sgs_reference_observable_nmae",
+    "unit": "fraction",
+    "value": 0.23474332145659446
+  },
+  "schema_version": "1.0",
+  "selected_case_id": "task-083-case-001",
+  "task_id": "urbanwind-task-083"
+}

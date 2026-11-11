@@ -1,0 +1,165 @@
+{
+  "acceptance_contract": {
+    "hard_gate_precedence": true,
+    "primary_metric_formula": "max(RMSE(theta_input-theta_target)/1K,RMSE(p_input-p_hydrostatic_target)/100Pa,RMSE(p_rgh_input-(p_input-rho_input*g_dot_x))/100Pa); theta_input=T_input*(100000Pa/p_input)^(R/Cp), rho_input=p_input/(R*T_input)",
+    "primary_metric_id": "hydrostatic_initialization_residual",
+    "required_case_ids": [
+      "task-076-case-001"
+    ],
+    "required_solver_case_ids": [
+      "task-076-case-001"
+    ],
+    "required_solver_runs": 1
+  },
+  "answer_free": true,
+  "case_anchor": {
+    "id": "PROCEDURAL_CITY",
+    "known": {
+      "geographic_claim": false,
+      "geometry": "deterministic_parameterized_city",
+      "truth_type": "synthetic_or_numerical_reference"
+    },
+    "missing": [],
+    "name": "程序化本地城市子域",
+    "references": [
+      "LOCAL_GENERATOR"
+    ],
+    "status": "local_generator_ready"
+  },
+  "category": "boundary_condition_design",
+  "compute_track": "cfd",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision_rule": "先拒绝任何执行、数值、单位、守恒或外部证据门禁失败的案例，再依据冻结指标比较；不得用文字报告替代原始证据。",
+  "difficulty": "advanced",
+  "engineering_focus": "构建可见三段式位温剖面，由静力方程解析生成p、T和p_rgh初始场，并通过真实buoyantPimpleFoam运行验证初始化可执行且数值稳定。",
+  "evaluator_status": "task_specific_potential_temperature_raw_evidence_check",
+  "evidence_requirements": [
+    "exact commands and working directories",
+    "software names, versions, executable paths and SHA256 when available",
+    "timezone-aware start/end times and exit codes",
+    "SHA256-addressed input, log and raw-output files",
+    "coordinate system, units, masks, statistical windows and aggregation order"
+  ],
+  "init_type": "engineering_data_and_model",
+  "limitations": [
+    "Visible analytic profile, hydrostatic formulas, probes, shapes and gates are supplied; hidden solver response arrays are not.",
+    "Reference is a local analytic initialization plus OpenFOAM numerical output, not atmospheric sounding or experimental truth.",
+    "A frozen distributable runtime remains required for release."
+  ],
+  "local_generator_version": "urbanwind-local-assets-v3",
+  "materialization_status": "local_inputs_generated",
+  "metrics": [
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max(RMSE(theta_input-theta_target)/1K,RMSE(p_input-p_hydrostatic_target)/100Pa,RMSE(p_rgh_input-(p_input-rho_input*g_dot_x))/100Pa); theta_input=T_input*(100000Pa/p_input)^(R/Cp), rho_input=p_input/(R*T_input)",
+      "id": "hydrostatic_initialization_residual",
+      "name_zh": "位温静力初始化残差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    }
+  ],
+  "physical_checks": [
+    {
+      "id": "evidence_is_raw_and_hashed",
+      "requirement": "所有进入指标的原始输入、日志和输出均在manifest中登记SHA256。"
+    },
+    {
+      "id": "units_and_coordinates_declared",
+      "requirement": "所有比较对象声明单位、坐标系、归一化和掩膜。"
+    },
+    {
+      "id": "track_specific_physics",
+      "requirement": "入口、地面、顶部、侧面和出口必须满足质量、粗糙度与稳定度一致性。"
+    },
+    {
+      "id": "task_specific_primary_metric",
+      "requirement": "必须从可见剖面公式、网格cell centres和原始0/T、0/p、0/p_rgh全场数组独立重算主指标。"
+    }
+  ],
+  "professional_difficulty": "D4",
+  "reference_status": "openfoam_numerical_reference_generated",
+  "release_status": "reference_ready_not_release_valid",
+  "required_artifacts": [
+    {
+      "format": "json",
+      "path": "design.json",
+      "role": "task design and assumptions"
+    },
+    {
+      "format": "json",
+      "path": "boundary_contract.json",
+      "role": "track-specific result"
+    },
+    {
+      "format": "json",
+      "path": "run_manifest.json",
+      "role": "tool and solver provenance"
+    },
+    {
+      "format": "json",
+      "path": "metrics.json",
+      "role": "reported metrics with units"
+    },
+    {
+      "format": "json",
+      "path": "evidence_manifest.json",
+      "role": "SHA256-addressed raw evidence"
+    },
+    {
+      "format": "markdown",
+      "path": "decision.md",
+      "role": "bounded engineering conclusion"
+    },
+    {
+      "format": "json",
+      "path": "potential_temperature_evidence_manifest.json",
+      "role": "SHA256-linked raw potential-temperature OpenFOAM evidence"
+    },
+    {
+      "format": "json",
+      "path": "potential_temperature_results.json",
+      "role": "raw-evidence-derived initialization and probe arrays"
+    }
+  ],
+  "required_cases": 1,
+  "required_inputs": [
+    "本地程序化141952单元城市网格与解析速度初始化",
+    "可见三段式位温目标剖面及静力积分常数",
+    "冻结初始场生成、原始场复算和真实求解门禁"
+  ],
+  "required_solver_runs": 1,
+  "schema_version": "1.0",
+  "scientific_question": "智能体能否在不伪造证据的前提下完成“位温初始剖面”，并把工具执行、数值质量、物理依据和工程结论连成可复算闭环？",
+  "software_chain": [
+    "python",
+    "openfoam"
+  ],
+  "task_id": "urbanwind-task-076",
+  "task_mode": "configure_and_verify",
+  "task_number": 76,
+  "title": "位温初始剖面",
+  "track": "abl_and_boundary_conditions",
+  "track_name": "大气边界层与边界条件",
+  "workflow": {
+    "configure": "围绕程序化本地城市子域生成案例计划和软件配置，并保持单位、坐标和版本可追踪。",
+    "decide": "给出带适用边界的工程结论；关键证据缺失时明确停止或降级声明。",
+    "evidence": "读取任务输入与来源登记，显式列出已知、假设、缺失和许可边界。",
+    "execute": "真实执行一次30 s、16-rank OpenFOAM v2412 buoyantPimpleFoam；求解器必须读取生成的三段式热力初始场。",
+    "postprocess": "从原始0/C、0/T、0/p和0/p_rgh全场数组独立重算位温、静力压力和p_rgh闭合三项RMSE及其最大归一化残差。",
+    "preprocess": "按冻结位温定义、三段式剖面和解析Exner积分，在每个网格单元与边界面中心生成T、p和p_rgh。",
+    "validate": "依次通过文件、执行、数值、物理、外部证据和工程约束门禁。"
+  }
+}

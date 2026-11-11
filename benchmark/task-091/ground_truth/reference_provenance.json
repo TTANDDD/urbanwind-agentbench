@@ -1,0 +1,21 @@
+{
+  "experimental_claim": false,
+  "host": "5070-server (reported hostname abc)",
+  "independent_archive_audit": "validation/openfoam-tasks091-093-archive-independent-audit-v1.json",
+  "independent_archive_audit_sha256": "fa591fda8f73e1824219bdd38f5530f40d10f885b9667ba1b17e879ef45411f6",
+  "openfoam_version": "v2412",
+  "runtime_environment": "/home/abc/urbanwind-agentbench-runtime-v0.1/envs/openfoam-2412",
+  "schema_version": "1.0",
+  "source_runs": [
+    {
+      "case_id": "task-091-case-001",
+      "source_archive": "validation/openfoam-batch-20260914-v16/results/task091-array-les/reference_candidate.tar.gz",
+      "source_archive_sha256": "4f187f800e37eccbe1d08d95348da46c4c833c628f05b98d1d7336d4ac1e5dcf",
+      "source_job": "task091-array-les",
+      "source_status": "validation/openfoam-batch-20260914-v16/results/task091-array-les/status.json",
+      "source_status_sha256": "794d53d1ce966a2c3474b1fb48c9f1e3b01431cd9620974d265f8b3369cb616c",
+      "variant": "阵列LES基线"
+    }
+  ],
+  "task_id": "urbanwind-task-091"
+}

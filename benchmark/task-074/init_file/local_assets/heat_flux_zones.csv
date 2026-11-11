@@ -1,0 +1,4 @@
+zone_id,patch_name,x_min_m,x_max_m,upper_inclusive,expected_area_m2
+west,heatWest,-4.0,2.0,False,92.0
+center,heatCenter,2.0,6.0,False,56.0
+east,heatEast,6.0,16.0,True,156.0

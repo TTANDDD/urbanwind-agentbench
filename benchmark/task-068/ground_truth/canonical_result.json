@@ -1,0 +1,19 @@
+{
+  "case_id": "task-068-case-001",
+  "claim_boundary": "One-case coordinate-transform and OpenFOAM velocity-inlet numerical reference; not experimental truth.",
+  "diagnostic_metrics": {
+    "E_inverse_projected_inlet": 1.9407703263035674e-12,
+    "E_roundtrip_visible": 1.8420808481262962e-16,
+    "E_solver_inlet": 1.9407613532185802e-12,
+    "inlet_k_rmse_m2_s2": 8.756884106730922e-15,
+    "inlet_omega_rmse_s_1": 1.0393524470871513e-12,
+    "vector_tensor_roundtrip_error": 1.9407703263035674e-12
+  },
+  "primary_metric": {
+    "id": "vector_tensor_roundtrip_error",
+    "unit": "fraction",
+    "value": 1.9407703263035674e-12
+  },
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-068"
+}

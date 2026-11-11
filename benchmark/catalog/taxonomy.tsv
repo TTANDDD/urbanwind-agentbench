@@ -1,0 +1,201 @@
+task_number	task_id	track	track_name	category	task_mode	init_type	difficulty	professional_difficulty	compute_track	case_anchor	required_cases	required_solver_runs	software_chain
+1	urbanwind-task-001	evidence_and_case_definition	证据审计与算例定义	benchmark_contract	evidence_audit	engineering_data_and_model	basic	D1	lite	SB4_LOCAL	1	0	python,document_reader
+2	urbanwind-task-002	evidence_and_case_definition	证据审计与算例定义	benchmark_contract	evidence_audit	incomplete_template	basic	D1	lite	SB4_LOCAL	1	0	python,document_reader
+3	urbanwind-task-003	evidence_and_case_definition	证据审计与算例定义	benchmark_contract	evidence_audit	incomplete_template	basic	D1	lite	SB4_LOCAL	1	0	python,document_reader
+4	urbanwind-task-004	evidence_and_case_definition	证据审计与算例定义	benchmark_contract	evidence_audit	incomplete_template	basic	D1	lite	SB4_LOCAL	1	0	python,document_reader
+5	urbanwind-task-005	evidence_and_case_definition	证据审计与算例定义	benchmark_contract	evidence_audit	incomplete_template	basic	D1	lite	SB4_LOCAL	1	0	python,document_reader
+6	urbanwind-task-006	evidence_and_case_definition	证据审计与算例定义	benchmark_contract	evidence_audit	engineering_data_and_model	basic	D1	lite	CUBE_LOCAL	1	0	python,document_reader
+7	urbanwind-task-007	evidence_and_case_definition	证据审计与算例定义	benchmark_contract	evidence_audit	incomplete_template	basic	D1	lite	CUBE_LOCAL	1	0	python,document_reader
+8	urbanwind-task-008	evidence_and_case_definition	证据审计与算例定义	benchmark_contract	evidence_audit	incomplete_template	basic	D1	lite	CUBE_LOCAL	1	0	python,document_reader
+9	urbanwind-task-009	evidence_and_case_definition	证据审计与算例定义	benchmark_contract	evidence_audit	engineering_data_and_model	basic	D1	lite	AIJ_DIRECT	1	0	python,document_reader
+10	urbanwind-task-010	evidence_and_case_definition	证据审计与算例定义	benchmark_contract	evidence_audit	engineering_data_and_model	basic	D1	lite	LOCAL_DISPERSION	1	0	python,document_reader
+11	urbanwind-task-011	evidence_and_case_definition	证据审计与算例定义	benchmark_contract	evidence_audit	engineering_data_and_model	basic	D1	lite	LOCAL_3D_WIND	1	0	python,document_reader
+12	urbanwind-task-012	evidence_and_case_definition	证据审计与算例定义	benchmark_contract	evidence_audit	incomplete_template	basic	D1	lite	LOCAL_MULTI	1	0	python,qgis,gdal,geopandas
+13	urbanwind-task-013	evidence_and_case_definition	证据审计与算例定义	benchmark_contract	evidence_audit	engineering_data_and_model	basic	D1	lite	LOCAL_MULTI	1	0	python,document_reader
+14	urbanwind-task-014	evidence_and_case_definition	证据审计与算例定义	benchmark_contract	evidence_audit	incomplete_template	basic	D1	lite	LOCAL_MULTI	1	0	python,document_reader
+15	urbanwind-task-015	evidence_and_case_definition	证据审计与算例定义	benchmark_contract	evidence_audit	incomplete_template	basic	D1	lite	LOCAL_MULTI	1	0	python,document_reader
+16	urbanwind-task-016	evidence_and_case_definition	证据审计与算例定义	benchmark_contract	evidence_audit	incomplete_template	intermediate	D2	lite	LOCAL_MULTI	1	0	python,document_reader
+17	urbanwind-task-017	evidence_and_case_definition	证据审计与算例定义	benchmark_contract	evidence_audit	incomplete_template	intermediate	D2	lite	LOCAL_MULTI	1	0	python,document_reader
+18	urbanwind-task-018	evidence_and_case_definition	证据审计与算例定义	benchmark_contract	evidence_audit	engineering_data_and_model	intermediate	D2	lite	LOCAL_MULTI	1	0	python,container_runtime
+19	urbanwind-task-019	evidence_and_case_definition	证据审计与算例定义	benchmark_contract	evidence_audit	engineering_data_and_model	intermediate	D2	lite	LOCAL_MULTI	1	0	python,document_reader
+20	urbanwind-task-020	evidence_and_case_definition	证据审计与算例定义	benchmark_contract	evidence_audit	incomplete_template	intermediate	D2	lite	LOCAL_MULTI	1	0	python,document_reader
+21	urbanwind-task-021	gis_and_geometry	GIS数据与城市几何	geospatial_preprocessing	diagnose_repair	broken_case	intermediate	D2	lite	PROCEDURAL_CITY	2	0	python,qgis,gdal,geopandas
+22	urbanwind-task-022	gis_and_geometry	GIS数据与城市几何	geospatial_preprocessing	configure_and_verify	incomplete_template	intermediate	D2	lite	PROCEDURAL_CITY	1	0	python,qgis,gdal,geopandas
+23	urbanwind-task-023	gis_and_geometry	GIS数据与城市几何	geospatial_preprocessing	configure_and_verify	incomplete_template	intermediate	D2	lite	PROCEDURAL_CITY	1	0	python,qgis,gdal,geopandas
+24	urbanwind-task-024	gis_and_geometry	GIS数据与城市几何	geospatial_preprocessing	diagnose_repair	broken_case	intermediate	D2	lite	PROCEDURAL_CITY	2	0	python,qgis,gdal,geopandas
+25	urbanwind-task-025	gis_and_geometry	GIS数据与城市几何	geospatial_preprocessing	configure_and_verify	incomplete_template	intermediate	D2	lite	PROCEDURAL_CITY	1	0	python,qgis,gdal,geopandas
+26	urbanwind-task-026	gis_and_geometry	GIS数据与城市几何	geospatial_preprocessing	configure_and_verify	incomplete_template	intermediate	D2	lite	PROCEDURAL_CITY	1	0	python,qgis,gdal,geopandas
+27	urbanwind-task-027	gis_and_geometry	GIS数据与城市几何	geospatial_preprocessing	diagnose_repair	broken_case	intermediate	D2	lite	PROCEDURAL_CITY	2	0	python,qgis,gdal,geopandas
+28	urbanwind-task-028	gis_and_geometry	GIS数据与城市几何	geospatial_preprocessing	configure_and_verify	incomplete_template	intermediate	D2	lite	PROCEDURAL_CITY	1	0	python,qgis,gdal,geopandas
+29	urbanwind-task-029	gis_and_geometry	GIS数据与城市几何	geospatial_preprocessing	configure_and_verify	incomplete_template	intermediate	D2	lite	PROCEDURAL_CITY	1	0	python,qgis,gdal,geopandas
+30	urbanwind-task-030	gis_and_geometry	GIS数据与城市几何	geospatial_preprocessing	configure_and_verify	engineering_data_and_model	intermediate	D2	lite	PROCEDURAL_CITY	1	0	python,qgis,gdal,geopandas
+31	urbanwind-task-031	gis_and_geometry	GIS数据与城市几何	geospatial_preprocessing	configure_and_verify	incomplete_template	intermediate	D2	lite	PROCEDURAL_CITY	1	0	python,qgis,gdal,geopandas
+32	urbanwind-task-032	gis_and_geometry	GIS数据与城市几何	geospatial_preprocessing	configure_and_verify	incomplete_template	intermediate	D2	lite	PROCEDURAL_CITY	1	0	python,qgis,gdal,geopandas
+33	urbanwind-task-033	gis_and_geometry	GIS数据与城市几何	geospatial_preprocessing	configure_and_verify	engineering_data_and_model	intermediate	D2	lite	SB4_LOCAL	1	0	python,gmsh
+34	urbanwind-task-034	gis_and_geometry	GIS数据与城市几何	geospatial_preprocessing	configure_and_verify	incomplete_template	intermediate	D2	lite	CUBE_LOCAL	1	0	python,gmsh
+35	urbanwind-task-035	gis_and_geometry	GIS数据与城市几何	geospatial_preprocessing	configure_and_verify	incomplete_template	intermediate	D2	lite	AIJ_DIRECT	1	0	python,gmsh
+36	urbanwind-task-036	gis_and_geometry	GIS数据与城市几何	geospatial_preprocessing	configure_and_verify	engineering_data_and_model	intermediate	D2	lite	LOCAL_DISPERSION	1	0	python,gmsh
+37	urbanwind-task-037	gis_and_geometry	GIS数据与城市几何	geospatial_preprocessing	configure_and_verify	incomplete_template	intermediate	D2	lite	PROCEDURAL_CITY	1	0	python,qgis,gdal,geopandas
+38	urbanwind-task-038	gis_and_geometry	GIS数据与城市几何	geospatial_preprocessing	configure_and_verify	incomplete_template	intermediate	D2	lite	PROCEDURAL_CITY	1	0	python,qgis,gdal,geopandas
+39	urbanwind-task-039	gis_and_geometry	GIS数据与城市几何	geospatial_preprocessing	configure_and_verify	engineering_data_and_model	advanced	D4	cfd	PROCEDURAL_CITY	3	3	python,openfoam,pyvista
+40	urbanwind-task-040	gis_and_geometry	GIS数据与城市几何	geospatial_preprocessing	configure_and_verify	incomplete_template	intermediate	D2	lite	PROCEDURAL_CITY	1	0	python,qgis,gdal,geopandas
+41	urbanwind-task-041	mesh_and_numerics	网格与数值离散	mesh_generation	configure_and_verify	runnable_baseline	intermediate	D3	lite	SB4_LOCAL	1	0	python,openfoam
+42	urbanwind-task-042	mesh_and_numerics	网格与数值离散	mesh_generation	configure_and_verify	runnable_baseline	intermediate	D3	lite	SB4_LOCAL	1	0	python,openfoam
+43	urbanwind-task-043	mesh_and_numerics	网格与数值离散	mesh_generation	configure_and_verify	incomplete_template	intermediate	D3	cfd	SB4_LOCAL	2	1	python,openfoam
+44	urbanwind-task-044	mesh_and_numerics	网格与数值离散	mesh_generation	configure_and_verify	incomplete_template	intermediate	D3	lite	SB4_LOCAL	1	0	python,openfoam
+45	urbanwind-task-045	mesh_and_numerics	网格与数值离散	mesh_generation	configure_and_verify	engineering_data_and_model	intermediate	D3	lite	SB4_LOCAL	3	0	python,openfoam
+46	urbanwind-task-046	mesh_and_numerics	网格与数值离散	mesh_generation	configure_and_verify	incomplete_template	intermediate	D3	lite	CUBE_LOCAL	1	0	python,openfoam
+47	urbanwind-task-047	mesh_and_numerics	网格与数值离散	mesh_generation	configure_and_verify	incomplete_template	intermediate	D3	lite	CUBE_LOCAL	1	0	python,openfoam
+48	urbanwind-task-048	mesh_and_numerics	网格与数值离散	mesh_generation	configure_and_verify	engineering_data_and_model	intermediate	D3	lite	PROCEDURAL_CITY	1	0	python,openfoam
+49	urbanwind-task-049	mesh_and_numerics	网格与数值离散	mesh_generation	configure_and_verify	incomplete_template	intermediate	D3	lite	PROCEDURAL_CITY	1	0	python,openfoam
+50	urbanwind-task-050	mesh_and_numerics	网格与数值离散	mesh_generation	configure_and_verify	incomplete_template	intermediate	D3	lite	PROCEDURAL_CITY	1	0	python,openfoam
+51	urbanwind-task-051	mesh_and_numerics	网格与数值离散	mesh_generation	configure_and_verify	engineering_data_and_model	intermediate	D3	lite	PROCEDURAL_CITY	1	0	python,openfoam
+52	urbanwind-task-052	mesh_and_numerics	网格与数值离散	mesh_generation	configure_and_verify	incomplete_template	intermediate	D3	lite	PROCEDURAL_CITY	1	0	python,openfoam
+53	urbanwind-task-053	mesh_and_numerics	网格与数值离散	mesh_generation	configure_and_verify	incomplete_template	intermediate	D3	lite	PROCEDURAL_CITY	1	0	python,openfoam
+54	urbanwind-task-054	mesh_and_numerics	网格与数值离散	mesh_generation	configure_and_verify	engineering_data_and_model	intermediate	D3	lite	PROCEDURAL_CITY	1	0	python,openfoam
+55	urbanwind-task-055	mesh_and_numerics	网格与数值离散	mesh_generation	configure_and_verify	incomplete_template	intermediate	D3	lite	PROCEDURAL_CITY	1	0	python,openfoam
+56	urbanwind-task-056	mesh_and_numerics	网格与数值离散	mesh_generation	diagnose_repair	broken_case	advanced	D4	cfd	PROCEDURAL_CITY	2	1	python,openfoam
+57	urbanwind-task-057	mesh_and_numerics	网格与数值离散	mesh_generation	diagnose_repair	broken_case	advanced	D4	cfd	PROCEDURAL_CITY	2	1	python,gmsh,openfoam
+58	urbanwind-task-058	mesh_and_numerics	网格与数值离散	mesh_generation	configure_and_verify	incomplete_template	advanced	D4	lite	PROCEDURAL_CITY	1	0	python,palm_csd,netcdf
+59	urbanwind-task-059	mesh_and_numerics	网格与数值离散	mesh_generation	configure_and_verify	incomplete_template	advanced	D4	lite	PROCEDURAL_CITY	1	0	python,openfoam
+60	urbanwind-task-060	mesh_and_numerics	网格与数值离散	mesh_generation	configure_and_verify	engineering_data_and_model	advanced	D4	cfd	SB4_LOCAL	3	3	python,openfoam
+61	urbanwind-task-061	abl_and_boundary_conditions	大气边界层与边界条件	boundary_condition_design	configure_and_verify	incomplete_template	advanced	D4	cfd	SB4_LOCAL	1	1	python,openfoam
+62	urbanwind-task-062	abl_and_boundary_conditions	大气边界层与边界条件	boundary_condition_design	configure_and_verify	engineering_data_and_model	advanced	D4	cfd	SB4_LOCAL	2	2	python,openfoam
+63	urbanwind-task-063	abl_and_boundary_conditions	大气边界层与边界条件	boundary_condition_design	diagnose_repair	broken_case	advanced	D4	cfd	SB4_LOCAL	2	1	python,openfoam
+64	urbanwind-task-064	abl_and_boundary_conditions	大气边界层与边界条件	boundary_condition_design	configure_and_verify	engineering_data_and_model	advanced	D4	cfd	SB4_LOCAL	3	3	python,openfoam
+65	urbanwind-task-065	abl_and_boundary_conditions	大气边界层与边界条件	boundary_condition_design	configure_and_verify	incomplete_template	advanced	D4	cfd	SB4_LOCAL	1	1	python,openfoam
+66	urbanwind-task-066	abl_and_boundary_conditions	大气边界层与边界条件	boundary_condition_design	configure_and_verify	engineering_data_and_model	advanced	D4	cfd	SB4_LOCAL	1	1	python,openfoam
+67	urbanwind-task-067	abl_and_boundary_conditions	大气边界层与边界条件	boundary_condition_design	configure_and_verify	incomplete_template	advanced	D4	cfd	SB4_LOCAL	1	1	python,openfoam
+68	urbanwind-task-068	abl_and_boundary_conditions	大气边界层与边界条件	boundary_condition_design	configure_and_verify	engineering_data_and_model	advanced	D4	cfd	SB4_LOCAL	1	1	python,openfoam
+69	urbanwind-task-069	abl_and_boundary_conditions	大气边界层与边界条件	boundary_condition_design	configure_and_verify	incomplete_template	advanced	D4	cfd	SB4_LOCAL	3	3	python,openfoam
+70	urbanwind-task-070	abl_and_boundary_conditions	大气边界层与边界条件	boundary_condition_design	configure_and_verify	engineering_data_and_model	advanced	D4	cfd	SB4_LOCAL	3	3	python,openfoam
+71	urbanwind-task-071	abl_and_boundary_conditions	大气边界层与边界条件	boundary_condition_design	diagnose_repair	broken_case	advanced	D4	cfd	SB4_LOCAL	2	1	python,openfoam
+72	urbanwind-task-072	abl_and_boundary_conditions	大气边界层与边界条件	boundary_condition_design	configure_and_verify	engineering_data_and_model	advanced	D4	cfd	PROCEDURAL_CITY	1	1	python,qgis,openfoam
+73	urbanwind-task-073	abl_and_boundary_conditions	大气边界层与边界条件	boundary_condition_design	configure_and_verify	incomplete_template	advanced	D4	cfd	SB4_LOCAL	3	3	python,openfoam
+74	urbanwind-task-074	abl_and_boundary_conditions	大气边界层与边界条件	boundary_condition_design	configure_and_verify	engineering_data_and_model	advanced	D4	cfd	PROCEDURAL_CITY	1	1	python,openfoam
+75	urbanwind-task-075	abl_and_boundary_conditions	大气边界层与边界条件	boundary_condition_design	configure_and_verify	incomplete_template	advanced	D4	cfd	PROCEDURAL_CITY	1	1	python,openfoam
+76	urbanwind-task-076	abl_and_boundary_conditions	大气边界层与边界条件	boundary_condition_design	configure_and_verify	engineering_data_and_model	advanced	D4	cfd	PROCEDURAL_CITY	1	1	python,openfoam
+77	urbanwind-task-077	abl_and_boundary_conditions	大气边界层与边界条件	boundary_condition_design	configure_and_verify	incomplete_template	advanced	D4	cfd	LOCAL_MULTI	2	2	python,openfoam,palm,netcdf
+78	urbanwind-task-078	abl_and_boundary_conditions	大气边界层与边界条件	boundary_condition_design	configure_and_verify	engineering_data_and_model	advanced	D4	cfd	SB4_LOCAL	1	1	python,openfoam
+79	urbanwind-task-079	abl_and_boundary_conditions	大气边界层与边界条件	boundary_condition_design	configure_and_verify	incomplete_template	advanced	D4	cfd	SB4_LOCAL	1	1	python,openfoam
+80	urbanwind-task-080	abl_and_boundary_conditions	大气边界层与边界条件	boundary_condition_design	configure_and_verify	engineering_data_and_model	advanced	D4	lite	LOCAL_MULTI	1	0	python
+81	urbanwind-task-081	openfoam_rans_les_execution	OpenFOAM RANS与LES执行	cfd_execution	comparative_simulation	runnable_baseline	advanced	D5	cfd	SB4_LOCAL	1	1	python,openfoam
+82	urbanwind-task-082	openfoam_rans_les_execution	OpenFOAM RANS与LES执行	cfd_execution	comparative_simulation	runnable_baseline	advanced	D5	cfd	SB4_LOCAL	1	1	python,openfoam
+83	urbanwind-task-083	openfoam_rans_les_execution	OpenFOAM RANS与LES执行	cfd_execution	comparative_simulation	incomplete_template	advanced	D5	cfd	SB4_LOCAL	3	3	python,openfoam
+84	urbanwind-task-084	openfoam_rans_les_execution	OpenFOAM RANS与LES执行	cfd_execution	comparative_simulation	engineering_data_and_model	advanced	D5	cfd	SB4_LOCAL	3	3	python,openfoam
+85	urbanwind-task-085	openfoam_rans_les_execution	OpenFOAM RANS与LES执行	cfd_execution	comparative_simulation	incomplete_template	advanced	D5	cfd	SB4_LOCAL	2	2	python,openfoam
+86	urbanwind-task-086	openfoam_rans_les_execution	OpenFOAM RANS与LES执行	cfd_execution	comparative_simulation	engineering_data_and_model	advanced	D5	cfd	SB4_LOCAL	3	3	python,openfoam
+87	urbanwind-task-087	openfoam_rans_les_execution	OpenFOAM RANS与LES执行	cfd_execution	comparative_simulation	incomplete_template	advanced	D5	cfd	SB4_LOCAL	1	1	python,openfoam
+88	urbanwind-task-088	openfoam_rans_les_execution	OpenFOAM RANS与LES执行	cfd_execution	comparative_simulation	engineering_data_and_model	advanced	D5	cfd	SB4_LOCAL	1	1	python,openfoam,paraview
+89	urbanwind-task-089	openfoam_rans_les_execution	OpenFOAM RANS与LES执行	cfd_execution	comparative_simulation	incomplete_template	advanced	D5	cfd	SB4_LOCAL	1	1	python,openfoam,paraview
+90	urbanwind-task-090	openfoam_rans_les_execution	OpenFOAM RANS与LES执行	cfd_execution	comparative_simulation	runnable_baseline	advanced	D5	cfd	CUBE_LOCAL	1	1	python,openfoam
+91	urbanwind-task-091	openfoam_rans_les_execution	OpenFOAM RANS与LES执行	cfd_execution	comparative_simulation	runnable_baseline	advanced	D5	cfd	CUBE_LOCAL	1	1	python,openfoam
+92	urbanwind-task-092	openfoam_rans_les_execution	OpenFOAM RANS与LES执行	cfd_execution	comparative_simulation	engineering_data_and_model	advanced	D5	cfd	AIJ_DIRECT	3	3	python,openfoam
+93	urbanwind-task-093	openfoam_rans_les_execution	OpenFOAM RANS与LES执行	cfd_execution	comparative_simulation	incomplete_template	advanced	D5	cfd	AIJ_DIRECT	3	3	python,openfoam
+94	urbanwind-task-094	openfoam_rans_les_execution	OpenFOAM RANS与LES执行	cfd_execution	comparative_simulation	engineering_data_and_model	advanced	D5	cfd	PROCEDURAL_CITY	3	3	python,openfoam
+95	urbanwind-task-095	openfoam_rans_les_execution	OpenFOAM RANS与LES执行	cfd_execution	comparative_simulation	incomplete_template	advanced	D5	cfd	PROCEDURAL_CITY	3	3	python,openfoam
+96	urbanwind-task-096	openfoam_rans_les_execution	OpenFOAM RANS与LES执行	cfd_execution	comparative_simulation	engineering_data_and_model	advanced	D5	cfd	LOCAL_DISPERSION	3	3	python,openfoam
+97	urbanwind-task-097	openfoam_rans_les_execution	OpenFOAM RANS与LES执行	cfd_execution	comparative_simulation	runnable_baseline	advanced	D5	cfd	PROCEDURAL_CITY	1	1	python,openfoam,paraview
+98	urbanwind-task-098	openfoam_rans_les_execution	OpenFOAM RANS与LES执行	cfd_execution	comparative_simulation	engineering_data_and_model	advanced	D5	cfd	SB4_LOCAL	3	3	python,openfoam
+99	urbanwind-task-099	openfoam_rans_les_execution	OpenFOAM RANS与LES执行	cfd_execution	comparative_simulation	incomplete_template	advanced	D5	cfd	SB4_LOCAL	3	3	python,openfoam
+100	urbanwind-task-100	openfoam_rans_les_execution	OpenFOAM RANS与LES执行	cfd_execution	comparative_simulation	engineering_data_and_model	advanced	D5	cfd	SB4_LOCAL	2	2	python,openfoam
+101	urbanwind-task-101	palm_urban_microclimate	PALM城市边界层与微气候	urban_microclimate_execution	comparative_simulation	incomplete_template	advanced	D5	lite	PROCEDURAL_CITY	1	0	python,palm_csd,netcdf,gdal,qgis
+102	urbanwind-task-102	palm_urban_microclimate	PALM城市边界层与微气候	urban_microclimate_execution	comparative_simulation	engineering_data_and_model	advanced	D5	lite	PROCEDURAL_CITY	1	0	python,palm_csd,netcdf,gdal,qgis
+103	urbanwind-task-103	palm_urban_microclimate	PALM城市边界层与微气候	urban_microclimate_execution	comparative_simulation	incomplete_template	advanced	D5	lite	PROCEDURAL_CITY	1	0	python,palm_csd,netcdf,gdal,qgis
+104	urbanwind-task-104	palm_urban_microclimate	PALM城市边界层与微气候	urban_microclimate_execution	comparative_simulation	engineering_data_and_model	advanced	D5	lite	PROCEDURAL_CITY	1	0	python,palm_csd,netcdf,gdal,qgis
+105	urbanwind-task-105	palm_urban_microclimate	PALM城市边界层与微气候	urban_microclimate_execution	comparative_simulation	incomplete_template	advanced	D5	lite	PROCEDURAL_CITY	1	0	python,palm_csd,netcdf,gdal,qgis
+106	urbanwind-task-106	palm_urban_microclimate	PALM城市边界层与微气候	urban_microclimate_execution	comparative_simulation	engineering_data_and_model	advanced	D5	cfd	PROCEDURAL_CITY	2	2	python,palm,netcdf
+107	urbanwind-task-107	palm_urban_microclimate	PALM城市边界层与微气候	urban_microclimate_execution	comparative_simulation	runnable_baseline	advanced	D5	cfd	PROCEDURAL_CITY	1	1	python,palm,netcdf
+108	urbanwind-task-108	palm_urban_microclimate	PALM城市边界层与微气候	urban_microclimate_execution	comparative_simulation	engineering_data_and_model	advanced	D5	cfd	PROCEDURAL_CITY	3	3	python,palm,netcdf
+109	urbanwind-task-109	palm_urban_microclimate	PALM城市边界层与微气候	urban_microclimate_execution	comparative_simulation	incomplete_template	advanced	D5	cfd	PROCEDURAL_CITY	3	3	python,palm,netcdf
+110	urbanwind-task-110	palm_urban_microclimate	PALM城市边界层与微气候	urban_microclimate_execution	comparative_simulation	engineering_data_and_model	advanced	D5	cfd	PROCEDURAL_CITY	3	3	python,palm,netcdf
+111	urbanwind-task-111	palm_urban_microclimate	PALM城市边界层与微气候	urban_microclimate_execution	comparative_simulation	incomplete_template	advanced	D5	cfd	PROCEDURAL_CITY	3	3	python,palm,netcdf
+112	urbanwind-task-112	palm_urban_microclimate	PALM城市边界层与微气候	urban_microclimate_execution	comparative_simulation	engineering_data_and_model	advanced	D5	cfd	PROCEDURAL_CITY	1	1	python,palm,netcdf
+113	urbanwind-task-113	palm_urban_microclimate	PALM城市边界层与微气候	urban_microclimate_execution	comparative_simulation	incomplete_template	advanced	D5	lite	PROCEDURAL_CITY	1	0	python,palm,netcdf
+114	urbanwind-task-114	palm_urban_microclimate	PALM城市边界层与微气候	urban_microclimate_execution	comparative_simulation	engineering_data_and_model	advanced	D5	cfd	PROCEDURAL_CITY	2	2	python,palm,netcdf
+115	urbanwind-task-115	palm_urban_microclimate	PALM城市边界层与微气候	urban_microclimate_execution	comparative_simulation	incomplete_template	advanced	D5	lite	PROCEDURAL_CITY	1	0	python,palm,netcdf
+116	urbanwind-task-116	palm_urban_microclimate	PALM城市边界层与微气候	urban_microclimate_execution	comparative_simulation	engineering_data_and_model	advanced	D5	cfd	PROCEDURAL_CITY	3	3	python,palm,netcdf
+117	urbanwind-task-117	palm_urban_microclimate	PALM城市边界层与微气候	urban_microclimate_execution	comparative_simulation	incomplete_template	advanced	D5	cfd	PROCEDURAL_CITY	3	3	python,palm,netcdf
+118	urbanwind-task-118	palm_urban_microclimate	PALM城市边界层与微气候	urban_microclimate_execution	comparative_simulation	engineering_data_and_model	advanced	D5	cfd	LOCAL_MULTI	2	2	python,openfoam,palm,netcdf,pyvista
+119	urbanwind-task-119	palm_urban_microclimate	PALM城市边界层与微气候	urban_microclimate_execution	comparative_simulation	incomplete_template	advanced	D5	lite	PROCEDURAL_CITY	1	0	python,palm,netcdf,qgis,geopandas
+120	urbanwind-task-120	palm_urban_microclimate	PALM城市边界层与微气候	urban_microclimate_execution	comparative_simulation	runnable_baseline	advanced	D5	cfd	PROCEDURAL_CITY	3	3	python,palm,netcdf
+121	urbanwind-task-121	diagnosis_and_repair	故障诊断与修复	simulation_debugging	diagnose_repair	broken_case	advanced	D4	cfd	PROCEDURAL_CITY	2	1	python,openfoam
+122	urbanwind-task-122	diagnosis_and_repair	故障诊断与修复	simulation_debugging	diagnose_repair	broken_case	advanced	D4	cfd	PROCEDURAL_CITY	2	1	python,openfoam
+123	urbanwind-task-123	diagnosis_and_repair	故障诊断与修复	simulation_debugging	diagnose_repair	broken_case	advanced	D4	cfd	PROCEDURAL_CITY	2	1	python,openfoam
+124	urbanwind-task-124	diagnosis_and_repair	故障诊断与修复	simulation_debugging	diagnose_repair	broken_case	advanced	D4	cfd	PROCEDURAL_CITY	2	1	python,openfoam
+125	urbanwind-task-125	diagnosis_and_repair	故障诊断与修复	simulation_debugging	diagnose_repair	broken_case	advanced	D4	cfd	PROCEDURAL_CITY	2	1	python,openfoam
+126	urbanwind-task-126	diagnosis_and_repair	故障诊断与修复	simulation_debugging	diagnose_repair	broken_case	advanced	D4	cfd	PROCEDURAL_CITY	2	1	python,openfoam
+127	urbanwind-task-127	diagnosis_and_repair	故障诊断与修复	simulation_debugging	diagnose_repair	broken_case	advanced	D4	cfd	PROCEDURAL_CITY	2	1	python,openfoam
+128	urbanwind-task-128	diagnosis_and_repair	故障诊断与修复	simulation_debugging	diagnose_repair	broken_case	advanced	D4	cfd	PROCEDURAL_CITY	2	1	python,openfoam
+129	urbanwind-task-129	diagnosis_and_repair	故障诊断与修复	simulation_debugging	diagnose_repair	broken_case	advanced	D4	cfd	PROCEDURAL_CITY	2	1	python,openfoam
+130	urbanwind-task-130	diagnosis_and_repair	故障诊断与修复	simulation_debugging	diagnose_repair	broken_case	advanced	D4	cfd	PROCEDURAL_CITY	2	1	python,openfoam
+131	urbanwind-task-131	diagnosis_and_repair	故障诊断与修复	simulation_debugging	diagnose_repair	broken_case	advanced	D4	cfd	PROCEDURAL_CITY	2	1	python,openfoam
+132	urbanwind-task-132	diagnosis_and_repair	故障诊断与修复	simulation_debugging	diagnose_repair	broken_case	advanced	D4	cfd	PROCEDURAL_CITY	2	1	python,openfoam
+133	urbanwind-task-133	diagnosis_and_repair	故障诊断与修复	simulation_debugging	diagnose_repair	broken_case	advanced	D4	cfd	PROCEDURAL_CITY	2	1	python,openfoam
+134	urbanwind-task-134	diagnosis_and_repair	故障诊断与修复	simulation_debugging	diagnose_repair	broken_case	advanced	D4	cfd	PROCEDURAL_CITY	2	1	python,openfoam
+135	urbanwind-task-135	diagnosis_and_repair	故障诊断与修复	simulation_debugging	diagnose_repair	broken_case	advanced	D4	cfd	PROCEDURAL_CITY	2	1	python,openfoam
+136	urbanwind-task-136	diagnosis_and_repair	故障诊断与修复	simulation_debugging	diagnose_repair	broken_case	advanced	D4	cfd	PROCEDURAL_CITY	2	1	python,openfoam
+137	urbanwind-task-137	diagnosis_and_repair	故障诊断与修复	simulation_debugging	diagnose_repair	broken_case	advanced	D4	cfd	PROCEDURAL_CITY	2	1	python,palm,netcdf
+138	urbanwind-task-138	diagnosis_and_repair	故障诊断与修复	simulation_debugging	diagnose_repair	broken_case	advanced	D4	cfd	PROCEDURAL_CITY	2	1	python,palm,netcdf
+139	urbanwind-task-139	diagnosis_and_repair	故障诊断与修复	simulation_debugging	diagnose_repair	broken_case	advanced	D4	cfd	PROCEDURAL_CITY	2	1	python,palm,netcdf
+140	urbanwind-task-140	diagnosis_and_repair	故障诊断与修复	simulation_debugging	diagnose_repair	broken_case	advanced	D4	cfd	LOCAL_MULTI	2	1	python,qgis,openfoam,palm,netcdf
+141	urbanwind-task-141	validation_and_uncertainty	数值参考验证与不确定性	physical_validation	physical_validation	engineering_data_and_model	advanced	D4	lite	SB4_LOCAL	1	0	python,scipy,pandas
+142	urbanwind-task-142	validation_and_uncertainty	数值参考验证与不确定性	physical_validation	physical_validation	engineering_data_and_model	advanced	D4	lite	SB4_LOCAL	1	0	python,scipy,pandas,pyvista
+143	urbanwind-task-143	validation_and_uncertainty	数值参考验证与不确定性	physical_validation	physical_validation	engineering_data_and_model	advanced	D4	lite	SB4_LOCAL	1	0	python,scipy,pandas
+144	urbanwind-task-144	validation_and_uncertainty	数值参考验证与不确定性	physical_validation	physical_validation	engineering_data_and_model	advanced	D4	lite	SB4_LOCAL	1	0	python,scipy,pandas
+145	urbanwind-task-145	validation_and_uncertainty	数值参考验证与不确定性	physical_validation	physical_validation	engineering_data_and_model	advanced	D4	lite	SB4_LOCAL	1	0	python,scipy,pandas
+146	urbanwind-task-146	validation_and_uncertainty	数值参考验证与不确定性	physical_validation	physical_validation	engineering_data_and_model	advanced	D4	lite	SB4_LOCAL	1	0	python,scipy,pandas
+147	urbanwind-task-147	validation_and_uncertainty	数值参考验证与不确定性	physical_validation	physical_validation	engineering_data_and_model	advanced	D4	lite	SB4_LOCAL	1	0	python,scipy,pandas
+148	urbanwind-task-148	validation_and_uncertainty	数值参考验证与不确定性	physical_validation	physical_validation	engineering_data_and_model	advanced	D4	lite	CUBE_LOCAL	1	0	python,scipy,pandas
+149	urbanwind-task-149	validation_and_uncertainty	数值参考验证与不确定性	physical_validation	physical_validation	engineering_data_and_model	advanced	D4	lite	CUBE_LOCAL	1	0	python,scipy,pandas
+150	urbanwind-task-150	validation_and_uncertainty	数值参考验证与不确定性	physical_validation	physical_validation	engineering_data_and_model	advanced	D4	lite	CUBE_LOCAL	1	0	python,scipy,pandas
+151	urbanwind-task-151	validation_and_uncertainty	数值参考验证与不确定性	physical_validation	physical_validation	engineering_data_and_model	advanced	D4	lite	SB4_LOCAL	1	0	python,scipy,pandas
+152	urbanwind-task-152	validation_and_uncertainty	数值参考验证与不确定性	physical_validation	physical_validation	engineering_data_and_model	advanced	D4	lite	LOCAL_MULTI	1	0	python,scipy,pandas
+153	urbanwind-task-153	validation_and_uncertainty	数值参考验证与不确定性	physical_validation	physical_validation	engineering_data_and_model	advanced	D4	lite	SB4_LOCAL	1	0	python,scipy,pandas
+154	urbanwind-task-154	validation_and_uncertainty	数值参考验证与不确定性	physical_validation	physical_validation	engineering_data_and_model	advanced	D4	lite	SB4_LOCAL	1	0	python,scipy,pandas
+155	urbanwind-task-155	validation_and_uncertainty	数值参考验证与不确定性	physical_validation	physical_validation	engineering_data_and_model	advanced	D4	lite	SB4_LOCAL	1	0	python,scipy,pandas
+156	urbanwind-task-156	validation_and_uncertainty	数值参考验证与不确定性	physical_validation	physical_validation	engineering_data_and_model	advanced	D4	lite	CUBE_LOCAL	1	0	python,scipy,pandas
+157	urbanwind-task-157	validation_and_uncertainty	数值参考验证与不确定性	physical_validation	physical_validation	engineering_data_and_model	advanced	D4	lite	CUBE_LOCAL	1	0	python,scipy,pandas,pyvista
+158	urbanwind-task-158	validation_and_uncertainty	数值参考验证与不确定性	physical_validation	physical_validation	engineering_data_and_model	advanced	D4	lite	CUBE_LOCAL	1	0	python,scipy,pandas,pyvista
+159	urbanwind-task-159	validation_and_uncertainty	数值参考验证与不确定性	physical_validation	physical_validation	engineering_data_and_model	advanced	D4	lite	LOCAL_MULTI	1	0	python,openfoam,palm,netcdf,pyvista
+160	urbanwind-task-160	validation_and_uncertainty	数值参考验证与不确定性	physical_validation	physical_validation	engineering_data_and_model	advanced	D4	lite	LOCAL_MULTI	1	0	python,scipy,pandas
+161	urbanwind-task-161	flow_diagnostics_and_risk	流场诊断与风险制图	engineering_postprocessing	postprocess_and_decide	engineering_data_and_model	intermediate	D3	lite	AIJ_DIRECT	1	0	python,pyvista
+162	urbanwind-task-162	flow_diagnostics_and_risk	流场诊断与风险制图	engineering_postprocessing	postprocess_and_decide	engineering_data_and_model	intermediate	D3	lite	AIJ_DIRECT	1	0	python,pyvista
+163	urbanwind-task-163	flow_diagnostics_and_risk	流场诊断与风险制图	engineering_postprocessing	postprocess_and_decide	engineering_data_and_model	advanced	D4	lite	AIJ_DIRECT	1	0	python,pyvista
+164	urbanwind-task-164	flow_diagnostics_and_risk	流场诊断与风险制图	engineering_postprocessing	postprocess_and_decide	engineering_data_and_model	advanced	D4	lite	AIJ_DIRECT	1	0	python,pyvista
+165	urbanwind-task-165	flow_diagnostics_and_risk	流场诊断与风险制图	engineering_postprocessing	postprocess_and_decide	engineering_data_and_model	intermediate	D3	lite	AIJ_DIRECT	1	0	python,pyvista
+166	urbanwind-task-166	flow_diagnostics_and_risk	流场诊断与风险制图	engineering_postprocessing	postprocess_and_decide	engineering_data_and_model	advanced	D4	lite	AIJ_DIRECT	1	0	python,pyvista
+167	urbanwind-task-167	flow_diagnostics_and_risk	流场诊断与风险制图	engineering_postprocessing	postprocess_and_decide	engineering_data_and_model	advanced	D4	lite	AIJ_DIRECT	1	0	python,pyvista
+168	urbanwind-task-168	flow_diagnostics_and_risk	流场诊断与风险制图	engineering_postprocessing	postprocess_and_decide	engineering_data_and_model	advanced	D4	lite	AIJ_DIRECT	1	0	python,pyvista
+169	urbanwind-task-169	flow_diagnostics_and_risk	流场诊断与风险制图	engineering_postprocessing	postprocess_and_decide	engineering_data_and_model	advanced	D4	lite	AIJ_DIRECT	1	0	python,pyvista
+170	urbanwind-task-170	flow_diagnostics_and_risk	流场诊断与风险制图	engineering_postprocessing	postprocess_and_decide	engineering_data_and_model	advanced	D4	lite	LOCAL_DISPERSION	1	0	python,pyvista
+171	urbanwind-task-171	flow_diagnostics_and_risk	流场诊断与风险制图	engineering_postprocessing	postprocess_and_decide	engineering_data_and_model	advanced	D4	lite	PROCEDURAL_CITY	1	0	python,pyvista
+172	urbanwind-task-172	flow_diagnostics_and_risk	流场诊断与风险制图	engineering_postprocessing	postprocess_and_decide	engineering_data_and_model	advanced	D4	lite	PROCEDURAL_CITY	1	0	python,pyvista
+173	urbanwind-task-173	flow_diagnostics_and_risk	流场诊断与风险制图	engineering_postprocessing	postprocess_and_decide	engineering_data_and_model	advanced	D4	lite	PROCEDURAL_CITY	1	0	python,networkx,pyvista
+174	urbanwind-task-174	flow_diagnostics_and_risk	流场诊断与风险制图	engineering_postprocessing	postprocess_and_decide	engineering_data_and_model	advanced	D4	lite	PROCEDURAL_CITY	3	0	python,pyvista
+175	urbanwind-task-175	flow_diagnostics_and_risk	流场诊断与风险制图	engineering_postprocessing	postprocess_and_decide	engineering_data_and_model	advanced	D4	lite	PROCEDURAL_CITY	1	0	python,pyvista
+176	urbanwind-task-176	flow_diagnostics_and_risk	流场诊断与风险制图	engineering_postprocessing	postprocess_and_decide	engineering_data_and_model	advanced	D4	lite	PROCEDURAL_CITY	1	0	python,pyvista
+177	urbanwind-task-177	flow_diagnostics_and_risk	流场诊断与风险制图	engineering_postprocessing	postprocess_and_decide	engineering_data_and_model	advanced	D4	lite	PROCEDURAL_CITY	1	0	python,pyvista
+178	urbanwind-task-178	flow_diagnostics_and_risk	流场诊断与风险制图	engineering_postprocessing	postprocess_and_decide	engineering_data_and_model	intermediate	D3	lite	PROCEDURAL_CITY	1	0	python,pyvista
+179	urbanwind-task-179	flow_diagnostics_and_risk	流场诊断与风险制图	engineering_postprocessing	postprocess_and_decide	engineering_data_and_model	intermediate	D3	lite	PROCEDURAL_CITY	1	0	python,qgis,geopandas
+180	urbanwind-task-180	flow_diagnostics_and_risk	流场诊断与风险制图	engineering_postprocessing	postprocess_and_decide	engineering_data_and_model	advanced	D4	lite	PROCEDURAL_CITY	3	0	python,pyvista
+181	urbanwind-task-181	optimization_and_decision	通风热环境优化与决策	engineering_optimization	candidate_screening_and_decide	from_scratch	advanced	D5	heavy	PROCEDURAL_CITY	9	9	python,openfoam,pyvista
+182	urbanwind-task-182	optimization_and_decision	通风热环境优化与决策	engineering_optimization	candidate_screening_and_decide	from_scratch	advanced	D5	heavy	PROCEDURAL_CITY	9	9	python,openfoam,pyvista
+183	urbanwind-task-183	optimization_and_decision	通风热环境优化与决策	engineering_optimization	candidate_screening_and_decide	from_scratch	advanced	D5	cfd	PROCEDURAL_CITY	3	3	python,openfoam,pyvista
+184	urbanwind-task-184	optimization_and_decision	通风热环境优化与决策	engineering_optimization	candidate_screening_and_decide	from_scratch	advanced	D5	heavy	PROCEDURAL_CITY	9	9	python,openfoam,pyvista
+185	urbanwind-task-185	optimization_and_decision	通风热环境优化与决策	engineering_optimization	candidate_screening_and_decide	from_scratch	advanced	D5	heavy	PROCEDURAL_CITY	9	9	python,openfoam,pyvista
+186	urbanwind-task-186	optimization_and_decision	通风热环境优化与决策	engineering_optimization	candidate_screening_and_decide	from_scratch	advanced	D5	cfd	PROCEDURAL_CITY	3	3	python,openfoam,pyvista
+187	urbanwind-task-187	optimization_and_decision	通风热环境优化与决策	engineering_optimization	candidate_screening_and_decide	from_scratch	advanced	D5	cfd	PROCEDURAL_CITY	3	3	python,openfoam,pyvista
+188	urbanwind-task-188	optimization_and_decision	通风热环境优化与决策	engineering_optimization	candidate_screening_and_decide	from_scratch	advanced	D5	cfd	PROCEDURAL_CITY	3	3	python,openfoam,pyvista
+189	urbanwind-task-189	optimization_and_decision	通风热环境优化与决策	engineering_optimization	candidate_screening_and_decide	from_scratch	advanced	D5	cfd	PROCEDURAL_CITY	3	3	python,openfoam,pyvista
+190	urbanwind-task-190	optimization_and_decision	通风热环境优化与决策	engineering_optimization	candidate_screening_and_decide	from_scratch	advanced	D5	cfd	PROCEDURAL_CITY	3	3	python,palm,netcdf,qgis
+191	urbanwind-task-191	optimization_and_decision	通风热环境优化与决策	engineering_optimization	candidate_screening_and_decide	from_scratch	advanced	D5	cfd	PROCEDURAL_CITY	3	3	python,palm,netcdf
+192	urbanwind-task-192	optimization_and_decision	通风热环境优化与决策	engineering_optimization	candidate_screening_and_decide	from_scratch	advanced	D5	cfd	PROCEDURAL_CITY	3	3	python,palm,netcdf
+193	urbanwind-task-193	optimization_and_decision	通风热环境优化与决策	engineering_optimization	optimization_and_decide	from_scratch	advanced	D5	heavy	LOCAL_MULTI	6	6	python,palm,netcdf
+194	urbanwind-task-194	optimization_and_decision	通风热环境优化与决策	engineering_optimization	optimization_and_decide	from_scratch	advanced	D5	heavy	LOCAL_MULTI	6	6	python,palm,netcdf
+195	urbanwind-task-195	optimization_and_decision	通风热环境优化与决策	engineering_optimization	pareto_selection_from_frozen_library	engineering_data_and_model	advanced	D5	lite	PROCEDURAL_CITY	1	0	python,pandas,pymoo
+196	urbanwind-task-196	optimization_and_decision	通风热环境优化与决策	engineering_optimization	optimization_and_decide	engineering_data_and_model	advanced	D5	heavy	LOCAL_MULTI	6	6	python,openfoam
+197	urbanwind-task-197	optimization_and_decision	通风热环境优化与决策	engineering_optimization	optimization_and_decide	from_scratch	advanced	D5	heavy	LOCAL_MULTI	4	4	python,openfoam,palm,netcdf
+198	urbanwind-task-198	optimization_and_decision	通风热环境优化与决策	engineering_optimization	active_learning_batch_selection	engineering_data_and_model	advanced	D5	lite	LOCAL_MULTI	1	0	python,scikit-learn
+199	urbanwind-task-199	optimization_and_decision	通风热环境优化与决策	engineering_optimization	optimization_and_decide	from_scratch	advanced	D5	heavy	PROCEDURAL_CITY	4	4	python,openfoam,palm,netcdf
+200	urbanwind-task-200	optimization_and_decision	通风热环境优化与决策	engineering_optimization	optimization_and_decide	from_scratch	advanced	D5	heavy	PROCEDURAL_CITY	12	12	python,qgis,openfoam,palm,netcdf,pyvista

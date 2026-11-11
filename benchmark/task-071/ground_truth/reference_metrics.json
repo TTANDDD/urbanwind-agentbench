@@ -1,0 +1,26 @@
+{
+  "diagnostic_metrics": {
+    "inlet_U_rmse_m_s": 2.3289178146136844e-12,
+    "inlet_k_rmse_m2_s2": 8.756884106730922e-15,
+    "inlet_omega_rmse_s_1": 1.0393524470871513e-12,
+    "max_normal_velocity_m_s": 1.39060485037,
+    "min_normal_velocity_m_s": 0.268212272226,
+    "outlet_area_m2": 111.60000000000001,
+    "outlet_face_count": 3224
+  },
+  "experimental_claim": false,
+  "metric_formula": "sum_f(A_f*I((U_f dot n_f)<0))/sum_f(A_f) on the repaired case at iteration 400; outlet faces, outward normals n_f and areas A_f are reconstructed from constant/polyMesh, and U_f is read from the raw 400/U outlet boundary values",
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-071",
+  "truth_type": "verified_openfoam_numerical_reference",
+  "units": {
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction",
+    "outlet_reverse_flow_fraction": "fraction"
+  },
+  "values": {
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0,
+    "outlet_reverse_flow_fraction": 0.0
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "cases": [
+    {
+      "case_id": "task-055-case-001",
+      "execution_role": "provided_data_or_tool_execution",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "raw_mesh": "case/constant/polyMesh",
+        "repair_contract": "repair_contract.json",
+        "quality_thresholds": "quality_thresholds.json",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "checkMesh自动门禁-目标案例"
+      },
+      "metrics": [
+        "remaining_internal_face_orientation_defect_count",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "id": "remaining_internal_face_orientation_defect_count",
+        "name_zh": "修复后内部面朝向错误数量",
+        "unit": "faces",
+        "formula": "count of internal faces with S_f dot (geometric_neighbour_centre-geometric_owner_centre) <= 0, recomputed from raw submitted instance; target 0; preservation, cell closure, report and complete native gates are mandatory conjunctive checks",
+        "aggregation": "per_case_then_task"
+      },
+      "purpose": "Locate and minimally repair one internal face winding error in an imported city mesh.",
+      "reference_status": "verified_openfoam_tool_reference_generated",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-055",
+      "variant": "checkMesh自动门禁-目标案例",
+      "subinputs": [
+        "supplied_damaged",
+        "submitted_repaired"
+      ]
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw instance -> local orientation/cell closure -> minimal repair -> all three native/evidence gates",
+    "compute_track": "lite",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 1,
+  "required_solver_runs": 0,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-055"
+}

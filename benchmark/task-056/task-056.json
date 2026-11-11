@@ -1,0 +1,75 @@
+{
+  "benchmark_metadata": {
+    "case_anchor": "PROCEDURAL_CITY",
+    "category": "mesh_generation",
+    "compute_track": "cfd",
+    "data_origin_policy": "local_generation_or_optional_one_click_public",
+    "difficulty": "advanced",
+    "init_type": "broken_case",
+    "materialization_status": "local_inputs_generated",
+    "professional_difficulty": "D4",
+    "reference_status": "openfoam_tool_reference_generated",
+    "release_status": "reference_ready_not_release_valid",
+    "required_cases": 2,
+    "required_solver_runs": 1,
+    "simulation_status": "real_tool_scale_diagnosis_with_auxiliary_finite_CFD",
+    "task_id": "urbanwind-task-056",
+    "task_mode": "diagnose_repair",
+    "track": "mesh_and_numerics"
+  },
+  "config": [
+    {
+      "parameters": {
+        "files": [
+          {
+            "local_path": "task-056/init_file/init_file.tar.gz",
+            "path": "/home/user/Desktop/init_file.tar.gz"
+          }
+        ]
+      },
+      "type": "upload_file"
+    },
+    {
+      "parameters": {
+        "command": "bash -c \"set -e; tar -xzf '/home/user/Desktop/init_file.tar.gz' -C '/home/user/Desktop'; rm -f '/home/user/Desktop/init_file.tar.gz'\"",
+        "shell": true
+      },
+      "type": "launch"
+    }
+  ],
+  "evaluator": {
+    "expected": {},
+    "func": "task_specific_registered_full7_raw_check",
+    "metric": {
+      "acceptance_target": 1e-09,
+      "conjunctive_hard_gates": true,
+      "direction": "minimize",
+      "name": "geometry_scale_relative_error",
+      "score_scale": "0-100",
+      "unit": "fraction"
+    },
+    "postconfig": [],
+    "release_boundary": "Local protected host qualification only; every future snapshot needs its own prospective7execution. No automatic VM hidden harness or universal owner-evidence scoring.",
+    "result": {
+      "binding": "compiled protected current registered job slot, never supplied by submission",
+      "entry": "task-056/eval.py",
+      "isolated_python_required": "-I -B -S",
+      "new_commands_during_grading": 0,
+      "shell": false,
+      "submission": "retrieved_data_only_submission",
+      "type": "trusted_host_registered_full7_evidence_entry"
+    }
+  },
+  "fixed_ip": false,
+  "id": "c-urbanwind-task-056-ubuntu",
+  "instruction": "你正在完成UrbanWind task-056 v54：网格单位缩放故障修复。读取/home/user/Desktop内task_spec.json、case_plan.json、reporting_contract.json、task056_v54_contract.json和submission_schema.json。城市坐标已为米制，诊断再次乘0.001的故障；只修复唯一尺度项，保持16栋建筑、物理/数值/质量门禁及所有非尺度输入不变。case001只运行3项网格工具，质量必须PASS而尺度必须REJECT；case002修复后运行3项网格工具及唯一一次完整50s串行SST pimpleFoam。保留完整输入、日志和原生场/phi；exit0不等于通过，缺失/截断/超时/未知原因STOP，禁止成功子集或从U重建phi。按数据型格式交付repaired_case的13个字面量输入和metrics/run_manifest/evidence_manifest/decision四文件，不提交脚本/libs/function objects或私有证据路径。独立可信host须事前冻结和登记当前提交、真实执行7阶段并持有私有证据，再从原始拓扑、全部51体场/50原生phi复算；operator_job_id只作标签，不能借用旧owner输出。允许等价编号/宏块排序/循环起点，不匹配隐藏GT字节。本地合成工具诊断参考含有限CFD支持，不是实验/现实城市/LES/稳态或网格无关真值；本地入口非可分发VM隐藏评价，release-valid仍未具备。",
+  "possibility_of_env_change": "medium",
+  "proxy": false,
+  "related_apps": [
+    "python",
+    "openfoam"
+  ],
+  "snapshot": "urbanwind-multisoftware-v1",
+  "source": "UrbanWind-AgentBench v54 qualified local tool diagnostic reference with auxiliary finite CFD; registered trusted-host raw entry, not portable release",
+  "trajectory": "trajectories/"
+}

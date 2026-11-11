@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "表面温度、热通量和辐射场",
+      "role_id": "input-001",
+      "seed": 202609047101,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.75795316,
+        0.72410014,
+        0.44246443,
+        0.55268216,
+        0.88949666,
+        0.66027617,
+        0.97607101,
+        0.47502743,
+        0.20345877,
+        0.61897949,
+        0.18752082,
+        0.48988053,
+        0.82031012,
+        0.61312685,
+        0.84337499,
+        0.87565134
+      ]
+    },
+    {
+      "label": "表面分类与面积权重",
+      "role_id": "input-002",
+      "seed": 202609047102,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.90213179,
+        0.06190398,
+        0.4526759,
+        0.93022485,
+        0.55189538,
+        0.15067502,
+        0.86860157,
+        0.23769682,
+        0.50638667,
+        0.2618738,
+        0.10906469,
+        0.46315728,
+        0.18707063,
+        0.77052036,
+        0.14676468,
+        0.12860921
+      ]
+    },
+    {
+      "label": "参考热负荷",
+      "role_id": "input-003",
+      "seed": 202609047103,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.39983825,
+        0.55684068,
+        0.48177939,
+        0.72019848,
+        0.67139209,
+        0.73679212,
+        0.46575429,
+        0.85961441,
+        0.86198611,
+        0.9771743,
+        0.12565006,
+        0.9954952,
+        0.21689272,
+        0.65829927,
+        0.58932915,
+        0.24686909
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-171"
+}

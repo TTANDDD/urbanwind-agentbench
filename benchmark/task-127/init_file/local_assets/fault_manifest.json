@@ -1,0 +1,13 @@
+{
+  "answer_included": false,
+  "expected_agent_action": "diagnose and repair without changing unrelated settings",
+  "fault_family": "roughness_inconsistency",
+  "fault_seed": 202609030127,
+  "injected": true,
+  "observed_fault_parameters": {
+    "ground_z0_m": 0.03,
+    "inlet_z0_m": 0.1
+  },
+  "target_file": "local_assets/boundary_profile.csv",
+  "task_id": "urbanwind-task-127"
+}

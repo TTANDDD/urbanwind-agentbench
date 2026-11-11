@@ -1,0 +1,193 @@
+{
+  "case_id": "task-074-case-001",
+  "execution_role": "real_solver_run",
+  "frozen_gates": {
+    "exact_schedule_required": true,
+    "max_abs_cumulative_continuity": 0.0001,
+    "max_courant": 1.0,
+    "max_heat_flux_boundary_error_w_m2": 1e-10,
+    "mean_temperature_half_window_drift_k": 0.5,
+    "required_cell_count": 141952,
+    "required_final_time_s": 180.0,
+    "required_ground_patch_count": 3,
+    "required_mean_fields": [
+      "UMean",
+      "UPrime2Mean",
+      "TMean",
+      "TPrime2Mean"
+    ],
+    "required_response_probe_count": 24,
+    "required_solver_runs": 1,
+    "required_total_ground_area_m2": 304.0,
+    "temperature_range_k": [
+      250.0,
+      350.0
+    ],
+    "vertical_exchange_half_window_drift_m_s": 0.05,
+    "zone_area_abs_tolerance_m2": 1e-08,
+    "zone_centroid_tolerance_m": 1e-09
+  },
+  "geometry": {
+    "description": "141952-cell, 16-building local procedural-city mesh",
+    "domain_x_m": [
+      -4.0,
+      16.0
+    ],
+    "domain_y_m": [
+      -4.0,
+      12.0
+    ],
+    "expected_total_ground_area_m2": 304.0,
+    "partition_rule": "select original ground faces by horizontal face-centroid x coordinate and create heatWest/heatCenter/heatEast wall patches",
+    "zones": [
+      {
+        "expected_area_m2": 92.0,
+        "patch_name": "heatWest",
+        "upper_inclusive": false,
+        "x_max_m": 2.0,
+        "x_min_m": -4.0,
+        "zone_id": "west"
+      },
+      {
+        "expected_area_m2": 56.0,
+        "patch_name": "heatCenter",
+        "upper_inclusive": false,
+        "x_max_m": 6.0,
+        "x_min_m": 2.0,
+        "zone_id": "center"
+      },
+      {
+        "expected_area_m2": 156.0,
+        "patch_name": "heatEast",
+        "upper_inclusive": true,
+        "x_max_m": 16.0,
+        "x_min_m": 6.0,
+        "zone_id": "east"
+      }
+    ]
+  },
+  "heat_flux": {
+    "boundary_condition": "externalWallHeatFluxTemperature",
+    "function_type": "table",
+    "interpolation": "linear",
+    "knots_s": [
+      0.0,
+      60.0,
+      120.0,
+      180.0
+    ],
+    "mode": "flux",
+    "q_w_m2": {
+      "heatCenter": [
+        40.0,
+        75.0,
+        150.0,
+        75.0
+      ],
+      "heatEast": [
+        10.0,
+        25.0,
+        50.0,
+        25.0
+      ],
+      "heatWest": [
+        20.0,
+        40.0,
+        80.0,
+        40.0
+      ]
+    },
+    "schedule_csv": "local_assets/heat_flux_schedule.csv",
+    "sign_convention": "positive q is prescribed into the fluid",
+    "unit": "W/m2"
+  },
+  "hidden_boundary": "Visible zones, q schedules, geometry rule, probes, formulas, shapes and gates only; no hidden numerical probe arrays.",
+  "metric_reconstruction": {
+    "area_source": "constant/polyMesh points, faces and boundary",
+    "formula": "sum_z(A_z*mean_{t in {0,60,120,180}s}(abs(q_OpenFOAM(z,t)-q_contract(z,t))))/sum_z(A_z); z in {heatWest,heatCenter,heatEast}",
+    "reference_source": "visible heat_flux_schedule.csv and heat_flux_zones.csv",
+    "schedule_source": "raw 0/T q table on each heat patch"
+  },
+  "path_policy": "relative paths under submission root, unique and SHA-256 matched",
+  "primary_metric": {
+    "aggregation": "per_case_then_task",
+    "formula": "sum_z(A_z*mean_{t in {0,60,120,180}s}(abs(q_OpenFOAM(z,t)-q_contract(z,t))))/sum_z(A_z); z in {heatWest,heatCenter,heatEast}",
+    "id": "heat_flux_boundary_error",
+    "name_zh": "地表热通量边界误差",
+    "unit": "W/m2"
+  },
+  "required_manifest": "heat_flux_evidence_manifest.json",
+  "required_raw_evidence_per_case": [
+    "field_T0",
+    "mesh_points",
+    "mesh_faces",
+    "mesh_boundary",
+    "probe_U",
+    "probe_T",
+    "solver_log",
+    "checkMesh_log",
+    "controlDict",
+    "turbulenceProperties",
+    "mean_UMean",
+    "mean_UPrime2Mean",
+    "mean_TMean",
+    "mean_TPrime2Mean",
+    "run_commands"
+  ],
+  "required_result": "heat_flux_results.json",
+  "response_probes": "local_assets/thermal_response_probes.csv",
+  "result_contract": {
+    "path": "heat_flux_results.json",
+    "probe_T_shape": [
+      900,
+      24
+    ],
+    "probe_U_shape": [
+      900,
+      24,
+      3
+    ],
+    "time_shape": [
+      900
+    ]
+  },
+  "schema_version": "1.0",
+  "software_chain": [
+    "python",
+    "openfoam"
+  ],
+  "solver": {
+    "ambient_temperature_k": 300.0,
+    "application": "buoyantPimpleFoam",
+    "delta_t_s": 0.015,
+    "full_end_s": 180.0,
+    "mpi_ranks": 16,
+    "openfoam_version": "OpenCFD-v2412",
+    "smoke_end_s": 0.15,
+    "statistics_start_s": 60.0,
+    "turbulence_model": "WALE"
+  },
+  "source_initialization": {
+    "file_sha256": {
+      "0/U": "1a2f187e62672ab37d35c1f92f58094c1d2256a4ae9ef896375d86dc4c6fa12b",
+      "0/nut": "4974f18ec749a3711c1ffaee5d9e96c20bce5f8ad9516e5643e7cffe4c8a832e",
+      "constant/transportProperties": "1146aa084b034003b8b6ea2f5dee6fb8ff32f91663f42acbfdd758531f018f63",
+      "constant/turbulenceProperties": "fb6024412da49f02f674cb66d6e3ccb71f25ee0dc281585bccf09bfed1f354fa",
+      "system/blockMeshDict": "029a00106455fd021dfefa44291973a59380ad69049c240ca7c462c8a26abb2c"
+    },
+    "files": [
+      "system/blockMeshDict",
+      "0/U",
+      "0/nut",
+      "constant/transportProperties",
+      "constant/turbulenceProperties"
+    ],
+    "origin_task": "urbanwind-task-092",
+    "path": "local_assets/openfoam_city_base",
+    "source_archive_sha256": "fcc0f0b5b01e90c7cfe1b7d0d1e642cde41691833ab533c409698e6413bc707f",
+    "truth_type": "bundled_locally_rebuildable_mesh_and_analytic_zero_time_fields"
+  },
+  "task_gate": "All three zone mappings, all twelve visible heat-flux knots and the sole full run must pass; no subset selection or post-hoc gate relaxation.",
+  "task_id": "urbanwind-task-074",
+  "truth_boundary": "Local synthetic zoned heat-flux configuration and OpenFOAM numerical reference only; not real-city, experimental, PIV, DNS, wind-tunnel or field truth, and not release-valid."
+}

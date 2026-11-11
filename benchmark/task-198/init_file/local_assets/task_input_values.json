@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "冻结候选池、初始训练集和代理模型",
+      "role_id": "input-001",
+      "seed": 202609049801,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.50460148,
+        0.97312741,
+        0.18812021,
+        0.62579682,
+        0.10690479,
+        0.71100577,
+        0.79031545,
+        0.28054294,
+        0.97337334,
+        0.87282926,
+        0.76753404,
+        0.27786603,
+        0.42442804,
+        0.40405489,
+        0.97822831,
+        0.48825604
+      ]
+    },
+    {
+      "label": "采集函数与批次预算",
+      "role_id": "input-002",
+      "seed": 202609049802,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.89201294,
+        0.36768907,
+        0.33824729,
+        0.70999818,
+        0.22094282,
+        0.75841938,
+        0.67878976,
+        0.42183414,
+        0.832069,
+        0.84797859,
+        0.15862048,
+        0.99050247,
+        0.66337708,
+        0.83942275,
+        0.8695272,
+        0.16417477
+      ]
+    },
+    {
+      "label": "参考最优批次效用",
+      "role_id": "input-003",
+      "seed": 202609049803,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.78448276,
+        0.63844919,
+        0.91953075,
+        0.83462843,
+        0.94880141,
+        0.97015155,
+        0.832416,
+        0.37042708,
+        0.14194977,
+        0.21348173,
+        0.51119086,
+        0.78558161,
+        0.8817533,
+        0.44355459,
+        0.67361584,
+        0.05370504
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-198"
+}

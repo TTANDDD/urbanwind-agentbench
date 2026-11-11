@@ -1,0 +1,59 @@
+{
+  "distributions": {
+    "anchors": {
+      "AIJ_DIRECT": 13,
+      "CUBE_LOCAL": 14,
+      "LOCAL_3D_WIND": 1,
+      "LOCAL_DISPERSION": 4,
+      "LOCAL_MULTI": 21,
+      "PROCEDURAL_CITY": 98,
+      "SB4_LOCAL": 49
+    },
+    "compute_tracks": {
+      "cfd": 84,
+      "heavy": 10,
+      "lite": 106
+    },
+    "difficulty": {
+      "advanced": 141,
+      "basic": 15,
+      "intermediate": 44
+    },
+    "init_types": {
+      "broken_case": 27,
+      "engineering_data_and_model": 87,
+      "from_scratch": 17,
+      "incomplete_template": 60,
+      "runnable_baseline": 9
+    },
+    "professional_difficulty": {
+      "D1": 15,
+      "D2": 24,
+      "D3": 20,
+      "D4": 81,
+      "D5": 60
+    },
+    "tracks": {
+      "abl_and_boundary_conditions": 20,
+      "diagnosis_and_repair": 20,
+      "evidence_and_case_definition": 20,
+      "flow_diagnostics_and_risk": 20,
+      "gis_and_geometry": 20,
+      "mesh_and_numerics": 20,
+      "openfoam_rans_les_execution": 20,
+      "optimization_and_decision": 20,
+      "palm_urban_microclimate": 20,
+      "validation_and_uncertainty": 20
+    }
+  },
+  "evaluator_sha256": "c92d50c4a72c9dec322459d8151dec89e7a79000214ad82f2a2438ce716167df",
+  "local_reference_generated_tasks": 85,
+  "openfoam_numerical_reference_generated_tasks": 30,
+  "openfoam_tool_reference_generated_tasks": 6,
+  "planned_case_count": 367,
+  "planned_solver_run_count": 227,
+  "reference_ready_tasks": 36,
+  "release_valid_tasks": 0,
+  "schema_version": "1.0",
+  "task_count": 200
+}

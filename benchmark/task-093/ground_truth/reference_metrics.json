@@ -1,0 +1,38 @@
+{
+  "diagnostics": {
+    "observations": [
+      {
+        "case_id": "task-093-case-001",
+        "roughness_z0_m": 0.002,
+        "target_observable": 0.9398747989514993
+      },
+      {
+        "case_id": "task-093-case-002",
+        "roughness_z0_m": 0.02,
+        "target_observable": 0.9424453358196461
+      },
+      {
+        "case_id": "task-093-case-003",
+        "roughness_z0_m": 0.2,
+        "target_observable": 0.9324965469242318
+      }
+    ],
+    "regression": "ordinary least squares with intercept versus ln(z0/1m)",
+    "target_observable_definition": "equal-weight mean(Ux/1.2) over 96 frozen probes"
+  },
+  "experimental_claim": false,
+  "metric_formula": "OLS_slope(mean_i(Ux_i/1.2) versus ln(z0/1m)) across z0={0.002,0.02,0.2}m with 96 equal-weight probes",
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-093",
+  "truth_type": "verified_openfoam_numerical_reference",
+  "units": {
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction",
+    "roughness_sensitivity_slope": "1"
+  },
+  "values": {
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0,
+    "roughness_sensitivity_slope": -0.0016021670707668774
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "diagnostics": {
+    "per_case": {
+      "task-082-case-001": {
+        "combined_nmae": 0.23246633445542675,
+        "turbulence_nmae": 0.028434185481643198,
+        "velocity_nmae": 0.43649848342921027
+      }
+    }
+  },
+  "experimental_claim": false,
+  "metric_definition": "Equal weighting over 59 valid probes; solid-surface indices 6-10 are excluded; U scale=1.2 m/s; resolved-TKE scale=1.44 m2/s2.",
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-082",
+  "truth_type": "verified_openfoam_numerical_reference",
+  "units": {
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction",
+    "les_local_reference_turbulence_nmae": "fraction",
+    "les_local_reference_velocity_nmae": "fraction"
+  },
+  "values": {
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0,
+    "les_local_reference_turbulence_nmae": 0.028434185481643198,
+    "les_local_reference_velocity_nmae": 0.43649848342921027
+  }
+}

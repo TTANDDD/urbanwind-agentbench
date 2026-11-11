@@ -1,0 +1,35 @@
+{
+  "all_required_roles_materialized": true,
+  "generator_version": "urbanwind-local-assets-v3",
+  "required_external_inputs": [],
+  "roles": [
+    {
+      "label": "随任务本地生成的PALM驱动输入",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/palm_base/urbanwind_p3d",
+        "local_assets/palm_base/static_driver_table.csv"
+      ],
+      "role_id": "input-001"
+    },
+    {
+      "label": "本地PALM运行版本记录合同",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/runtime_contract.json"
+      ],
+      "role_id": "input-002"
+    },
+    {
+      "label": "本地NetCDF变量合同",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/palm_base/urbanwind_p3d",
+        "local_assets/palm_base/static_driver_table.csv"
+      ],
+      "role_id": "input-003"
+    }
+  ],
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-109"
+}

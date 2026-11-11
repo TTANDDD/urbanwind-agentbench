@@ -1,0 +1,109 @@
+{
+  "allowed_input_change": "One scalar convertToMeters0.001->1 only; harmless macroblock order/consistent IDs/cyclic starts allowed. No U/nu/geometry/quality/numerics compensation.",
+  "artifact_hash_scope": "Every other submitted file, exclude evidence_manifest itself",
+  "cases": [
+    {
+      "CFD_runs": 0,
+      "case_id": "task-056-case-001",
+      "native_stage_ids": [
+        "F_BM",
+        "F_FULL",
+        "F_QUALITY"
+      ],
+      "role": "faulty_tool_only"
+    },
+    {
+      "CFD_runs": 1,
+      "case_id": "task-056-case-002",
+      "native_stage_ids": [
+        "R_BM",
+        "R_FULL",
+        "R_QUALITY",
+        "R_CFD"
+      ],
+      "role": "repaired_sole_CFD"
+    }
+  ],
+  "decision_required_terms": [
+    "证据",
+    "限制",
+    "结论"
+  ],
+  "design_id": "task056-v54-city-scale-repair",
+  "empirical_validation_claimed": false,
+  "evidence_fields": [
+    "schema",
+    "operator_job_id",
+    "artifact_sha256"
+  ],
+  "evidence_schema": "task056-submission-evidence-v1",
+  "files": [
+    "repaired_case/0/U",
+    "repaired_case/0/k",
+    "repaired_case/0/nut",
+    "repaired_case/0/omega",
+    "repaired_case/0/p",
+    "repaired_case/constant/dynamicMeshDict",
+    "repaired_case/constant/transportProperties",
+    "repaired_case/constant/turbulenceProperties",
+    "repaired_case/system/blockMeshDict",
+    "repaired_case/system/controlDict",
+    "repaired_case/system/fvSchemes",
+    "repaired_case/system/fvSolution",
+    "repaired_case/system/meshQualityDict",
+    "metrics.json",
+    "run_manifest.json",
+    "evidence_manifest.json",
+    "decision.md"
+  ],
+  "forbidden": [
+    "scripts",
+    "libs",
+    "include",
+    "functions",
+    "symlinks",
+    "hardlinks",
+    "raw operator evidence/binding paths",
+    "completion flags",
+    "NaN",
+    "boolean numeric metrics"
+  ],
+  "maximum_submission_bytes": 8388608,
+  "metric_case_fields": [
+    "case_id",
+    "geometry_scale_relative_error",
+    "Re_H",
+    "unit_decision"
+  ],
+  "metrics_fields": [
+    "schema",
+    "task_id",
+    "primary_metric",
+    "cases"
+  ],
+  "metrics_schema": "task056-submission-metrics-v1",
+  "native_evidence": "Host-controlled private7 chronological registrations and raw geometry/quality/all51volume/all50nativephi; not agent-provided raw-claim paths.",
+  "operator_job_id": "Host-assigned current prospective registered snapshot label, never a path/grant/completion claim.",
+  "primary_case": "task-056-case-002",
+  "primary_metric_fields": [
+    "id",
+    "value",
+    "case_id"
+  ],
+  "primary_metric_id": "geometry_scale_relative_error",
+  "run_manifest_fields": [
+    "schema",
+    "task_id",
+    "design_id",
+    "operator_job_id",
+    "cases",
+    "empirical_validation_claimed"
+  ],
+  "run_manifest_schema": "task056-submission-run-v1",
+  "schema": "task056-v54-public-submission-shape-v1",
+  "task_id": "urbanwind-task-056",
+  "unit_decisions": [
+    "REJECT_SCALE",
+    "ACCEPT_SCALE"
+  ]
+}

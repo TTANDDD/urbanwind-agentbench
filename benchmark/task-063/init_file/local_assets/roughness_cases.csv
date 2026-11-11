@@ -1,0 +1,3 @@
+case_id,variant_key,execution_role,z0_inlet_m,z0_wall_m,z0_map_m,visible_residual
+task-063-case-001,faulty,provided_data_or_tool_execution,0.01,0.05,0.01,0.7999999999999999
+task-063-case-002,repaired,real_solver_run,0.01,0.01,0.01,0.0

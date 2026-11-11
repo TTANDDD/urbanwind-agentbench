@@ -1,0 +1,12 @@
+FoamFile { version 2.0; format ascii; class volScalarField; location "0"; object nut; }
+dimensions [0 2 -1 0 0 0 0];
+internalField uniform 0.0070436141291243363;
+boundaryField {
+inlet { type calculated; value uniform 0.0070436141291243363; }
+outlet { type calculated; value uniform 0.0070436141291243363; }
+sideLow { type symmetryPlane; }
+sideHigh { type symmetryPlane; }
+ground { type nutUSpaldingWallFunction; value uniform 0.0070436141291243363; }
+top { type symmetryPlane; }
+building { type nutUSpaldingWallFunction; value uniform 0.0070436141291243363; }
+}

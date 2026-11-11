@@ -1,0 +1,13 @@
+FoamFile { version 2.0; format ascii; class dictionary; object fvSolution; }
+solvers {
+p { solver PCG; preconditioner DIC; tolerance 1e-8; relTol 0; maxIter 1000; }
+pFinal { solver PCG; preconditioner DIC; tolerance 1e-8; relTol 0; maxIter 1000; }
+U { solver smoothSolver; smoother symGaussSeidel; tolerance 1e-8; relTol 0; maxIter 200; }
+UFinal { solver smoothSolver; smoother symGaussSeidel; tolerance 1e-8; relTol 0; maxIter 200; }
+k { solver smoothSolver; smoother symGaussSeidel; tolerance 1e-8; relTol 0; maxIter 200; }
+kFinal { solver smoothSolver; smoother symGaussSeidel; tolerance 1e-8; relTol 0; maxIter 200; }
+omega { solver smoothSolver; smoother symGaussSeidel; tolerance 1e-8; relTol 0; maxIter 200; }
+omegaFinal { solver smoothSolver; smoother symGaussSeidel; tolerance 1e-8; relTol 0; maxIter 200; }
+}
+PIMPLE { nOuterCorrectors 3; nCorrectors 3; nNonOrthogonalCorrectors 0;
+momentumPredictor true; turbOnFinalIterOnly false; }

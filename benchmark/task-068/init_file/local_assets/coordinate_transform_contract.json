@@ -1,0 +1,397 @@
+{
+  "case_id": "task-068-case-001",
+  "coordinate_convention": {
+    "R_geo_to_solver": [
+      [
+        0.8660254037844387,
+        0.49999999999999994,
+        0.0
+      ],
+      [
+        -0.49999999999999994,
+        0.8660254037844387,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "R_solver_to_geo": "transpose(R_geo_to_solver)",
+    "angle_deg": 30.0,
+    "geographic_frame": "right-handed ENU: [east,north,up]",
+    "solver_frame": "right-handed [x,y,z], with solver x pointing 30 degrees counter-clockwise from east",
+    "tensor_rule": "T_solver=R*T_geo*R^T; T_geo=R^T*T_solver*R",
+    "vector_rule": "v_solver=R*v_geo; v_geo=R^T*v_solver"
+  },
+  "cpu_affinity": "64-79",
+  "frozen_gates": {
+    "finite_profiles": true,
+    "finite_solver_log": true,
+    "max_abs_cumulative_continuity": 0.01,
+    "max_inlet_k_rmse_m2_s2": 1e-06,
+    "max_inlet_omega_rmse_s_1": 1e-05,
+    "max_inverse_projected_inlet_normalized_rmse": 1e-06,
+    "max_last20_initial_residual_full": 0.0001,
+    "max_solver_inlet_normalized_rmse": 1e-06,
+    "max_visible_roundtrip_error": 1e-12,
+    "required_cell_count": 365488,
+    "required_final_iteration": 400
+  },
+  "full_iterations": 400,
+  "geometry": "365488-cell conformal D x D x 4D single-building domain",
+  "hidden_boundary": "Visible source fields, rotation, formulas, shapes and gates only; no hidden numerical probe arrays.",
+  "implementation": "transform the visible ENU velocity profile with R and apply the resulting solver-frame profile through fixedProfile; probe all 52 inlet levels",
+  "metric_components": {
+    "E_inverse_projected_inlet": "layer-thickness-weighted vector RMSE between R^T times raw solver inlet probes and source ENU velocity target, divided by 1.2 m/s",
+    "E_roundtrip_visible": "maximum relative L2/Frobenius round-trip error over source velocity samples, heat-flux vector and Reynolds-stress tensor",
+    "E_solver_inlet": "layer-thickness-weighted vector RMSE between raw solver inlet probes and transformed solver-frame target, divided by 1.2 m/s"
+  },
+  "mpi_ranks": 16,
+  "path_policy": "relative paths under submission root, unique and SHA-256 matched",
+  "primary_metric": {
+    "aggregation": "per_case_then_task",
+    "formula": "max(E_roundtrip_visible,E_solver_inlet,E_inverse_projected_inlet); E_roundtrip_visible=max(relative_error(R^T(Ru),u),relative_error(R^T(Rq),q),relative_error(R^T(RTR^T)R,T)); E_solver_inlet=weighted_RMSE(U_probe_solver-U_target_solver)/1.2; E_inverse_projected_inlet=weighted_RMSE(R^T U_probe_solver-U_target_geo)/1.2",
+    "id": "vector_tensor_roundtrip_error",
+    "name_zh": "风向矢量张量与求解器入口联合误差",
+    "unit": "fraction"
+  },
+  "profile_iteration_count": 20,
+  "profile_iterations": [
+    20,
+    40,
+    60,
+    80,
+    100,
+    120,
+    140,
+    160,
+    180,
+    200,
+    220,
+    240,
+    260,
+    280,
+    300,
+    320,
+    340,
+    360,
+    380,
+    400
+  ],
+  "profile_parameters": {
+    "Cmu": 0.09,
+    "Uref_m_s": 1.2,
+    "Zref_m": 4.0,
+    "kappa": 0.41,
+    "z0_m": 0.01
+  },
+  "profile_points_m": [
+    [
+      -4.0,
+      0.0625,
+      0.0625
+    ],
+    [
+      -4.0,
+      0.0625,
+      0.1875
+    ],
+    [
+      -4.0,
+      0.0625,
+      0.3125
+    ],
+    [
+      -4.0,
+      0.0625,
+      0.4375
+    ],
+    [
+      -4.0,
+      0.0625,
+      0.5625
+    ],
+    [
+      -4.0,
+      0.0625,
+      0.6875
+    ],
+    [
+      -4.0,
+      0.0625,
+      0.8125
+    ],
+    [
+      -4.0,
+      0.0625,
+      0.9375
+    ],
+    [
+      -4.0,
+      0.0625,
+      1.0625
+    ],
+    [
+      -4.0,
+      0.0625,
+      1.1875
+    ],
+    [
+      -4.0,
+      0.0625,
+      1.3125
+    ],
+    [
+      -4.0,
+      0.0625,
+      1.4375
+    ],
+    [
+      -4.0,
+      0.0625,
+      1.5625
+    ],
+    [
+      -4.0,
+      0.0625,
+      1.6875
+    ],
+    [
+      -4.0,
+      0.0625,
+      1.8125
+    ],
+    [
+      -4.0,
+      0.0625,
+      1.9375
+    ],
+    [
+      -4.0,
+      0.0625,
+      2.0625
+    ],
+    [
+      -4.0,
+      0.0625,
+      2.1875
+    ],
+    [
+      -4.0,
+      0.0625,
+      2.3125
+    ],
+    [
+      -4.0,
+      0.0625,
+      2.4375
+    ],
+    [
+      -4.0,
+      0.0625,
+      2.5625
+    ],
+    [
+      -4.0,
+      0.0625,
+      2.6875
+    ],
+    [
+      -4.0,
+      0.0625,
+      2.8125
+    ],
+    [
+      -4.0,
+      0.0625,
+      2.9375
+    ],
+    [
+      -4.0,
+      0.0625,
+      3.0625
+    ],
+    [
+      -4.0,
+      0.0625,
+      3.1875
+    ],
+    [
+      -4.0,
+      0.0625,
+      3.3125
+    ],
+    [
+      -4.0,
+      0.0625,
+      3.4375
+    ],
+    [
+      -4.0,
+      0.0625,
+      3.5625
+    ],
+    [
+      -4.0,
+      0.0625,
+      3.6875
+    ],
+    [
+      -4.0,
+      0.0625,
+      3.8125
+    ],
+    [
+      -4.0,
+      0.0625,
+      3.9375
+    ],
+    [
+      -4.0,
+      0.0625,
+      4.125
+    ],
+    [
+      -4.0,
+      0.0625,
+      4.375
+    ],
+    [
+      -4.0,
+      0.0625,
+      4.625
+    ],
+    [
+      -4.0,
+      0.0625,
+      4.875
+    ],
+    [
+      -4.0,
+      0.0625,
+      5.125
+    ],
+    [
+      -4.0,
+      0.0625,
+      5.375
+    ],
+    [
+      -4.0,
+      0.0625,
+      5.625
+    ],
+    [
+      -4.0,
+      0.0625,
+      5.875
+    ],
+    [
+      -4.0,
+      0.0625,
+      6.125
+    ],
+    [
+      -4.0,
+      0.0625,
+      6.375
+    ],
+    [
+      -4.0,
+      0.0625,
+      6.625
+    ],
+    [
+      -4.0,
+      0.0625,
+      6.875
+    ],
+    [
+      -4.0,
+      0.0625,
+      7.125
+    ],
+    [
+      -4.0,
+      0.0625,
+      7.375
+    ],
+    [
+      -4.0,
+      0.0625,
+      7.625
+    ],
+    [
+      -4.0,
+      0.0625,
+      7.875
+    ],
+    [
+      -4.0,
+      0.0625,
+      8.125
+    ],
+    [
+      -4.0,
+      0.0625,
+      8.375
+    ],
+    [
+      -4.0,
+      0.0625,
+      8.625
+    ],
+    [
+      -4.0,
+      0.0625,
+      8.875
+    ]
+  ],
+  "profile_sample_count": 52,
+  "required_manifest": "coordinate_transform_evidence_manifest.json",
+  "required_raw_evidence": [
+    "probe_U",
+    "probe_k",
+    "probe_omega",
+    "solver_log",
+    "checkMesh_log",
+    "field_U",
+    "profile_csv",
+    "controlDict"
+  ],
+  "required_result": "coordinate_transform_results.json",
+  "schema_version": "1.0",
+  "smoke_iterations": 20,
+  "solver": "OpenCFD-v2412 simpleFoam",
+  "task_gate": "The one fresh solver case must pass every frozen gate; no post-hoc threshold relaxation.",
+  "task_id": "urbanwind-task-068",
+  "truth_boundary": "Validates visible vector/tensor coordinate algebra and the realized transformed velocity inlet in OpenFOAM. Heat flux and Reynolds stress are preprocessing round-trip objects, not transported or solved fields. This is not PIV, DNS, wind-tunnel, field or experimental truth.",
+  "turbulence_model": "kOmegaSST",
+  "visible_source_fields": {
+    "heat_flux_geo_W_m2": [
+      18.0,
+      -7.0,
+      32.0
+    ],
+    "reynolds_stress_geo_m2_s2": [
+      [
+        0.16,
+        -0.025,
+        0.012
+      ],
+      [
+        -0.025,
+        0.11,
+        -0.008
+      ],
+      [
+        0.012,
+        -0.008,
+        0.075
+      ]
+    ],
+    "velocity_profile": "local_assets/coordinate_transform_source_profile.csv"
+  }
+}

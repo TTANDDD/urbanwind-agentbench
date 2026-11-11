@@ -1,0 +1,44 @@
+{
+  "artifacts": [
+    {
+      "bytes": 787070,
+      "path": "task041_mesh_reference_v3.tar.gz",
+      "sha256": "ec375e2c9d49c435871e12914b8e01874a5124828b3aea19ae5bded2401367b0"
+    },
+    {
+      "bytes": 4215,
+      "path": "blockMesh.log",
+      "sha256": "b9861d02d4a9930335ca26eafdcff8bac7e648b9fe0ca717e7d73f4b81c0d7f6"
+    },
+    {
+      "bytes": 3525,
+      "path": "checkMesh.log",
+      "sha256": "69a6eb9ffd2fa91913d1558eddd55e9f7939c2fb0116f3b948fd15f7ef5faf77"
+    }
+  ],
+  "environment_path": "/home/abc/urbanwind-agentbench-runtime-v0.1/envs/openfoam-2412",
+  "executables": [
+    {
+      "name": "blockMesh",
+      "sha256": "61929db77c637f0b394b7aef85b0f5ab42af8185a72c234270e4a03e2a13257b"
+    },
+    {
+      "name": "checkMesh",
+      "sha256": "bce0922fb3d1d9178c710df108f4c62646572ca02f2bb76e18a658dfbdbfd712"
+    },
+    {
+      "name": "pimpleFoam",
+      "sha256": "5fbf21c50cf2da1e47cae813c4fcd7bd0624ab1adeb6da14a5cf46a3ab3a7a8a"
+    },
+    {
+      "name": "postProcess",
+      "sha256": "dc282d5385c89133e1b1ff4e1696f070fad868087cfbcdff861d084000fd2109"
+    }
+  ],
+  "experimental_claim": false,
+  "host": "5070-server (reported host abc)",
+  "openfoam_version": "v2412",
+  "schema_version": "1.0",
+  "source_qualification": "validation/remote-openfoam-qualification-v1/qualification.json",
+  "task_id": "urbanwind-task-041"
+}

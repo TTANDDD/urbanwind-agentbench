@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying manuscript when using these research materials."
+type: software
+title: "UrbanWind-AgentBench and WindPilot"
+version: "paper-snapshot-2026-11-11"
+date-released: "2026-11-11"
+url: "https://ttanddd.github.io/urbanwind-agentbench/"
+repository-code: "https://github.com/TTANDDD/urbanwind-agentbench"
+license:
+  - MIT
+  - CC-BY-4.0
+authors:
+  - family-names: Qu
+    given-names: Zhongke
+  - family-names: Zhang
+    given-names: Yunwei
+  - family-names: Su
+    given-names: Junwei
+  - family-names: Zhang
+    given-names: Yabin
+  - family-names: Li
+    given-names: Chengwei
+  - family-names: Shui
+    given-names: Qingxiang
+  - family-names: Qu
+    given-names: Hailong
+  - family-names: Gu
+    given-names: Zhaolin

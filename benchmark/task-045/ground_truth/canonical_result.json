@@ -1,0 +1,15 @@
+{
+  "case_ids": [
+    "task-045-case-001",
+    "task-045-case-002",
+    "task-045-case-003"
+  ],
+  "claim_boundary": "Local mesh-design/tool reference only; no CFD/LES solution, observed GCI, flow grid-independence, yplus or experimental truth is claimed.",
+  "primary_metric": {
+    "id": "refinement_ratio_consistency",
+    "unit": "fraction",
+    "value": 1.0
+  },
+  "result_role": "mesh_metrics.json",
+  "task_id": "urbanwind-task-045"
+}

@@ -1,0 +1,221 @@
+{
+  "current_evaluator_boundary": "Parses deterministic faulty preflight evidence and one repaired raw simpleFoam evidence set; no experimental truth claim.",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision": "decision.md",
+  "decision_required_terms": [
+    "证据",
+    "限制",
+    "结论"
+  ],
+  "evidence_manifest": "evidence_manifest.json",
+  "expected_case_ids": [
+    "task-063-case-001",
+    "task-063-case-002"
+  ],
+  "expected_solver_case_ids": [
+    "task-063-case-002"
+  ],
+  "metric_contracts": [
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "max(abs(R_faulty_reported-R_faulty_visible),R_repaired); R=max_pairwise_abs(z0_inlet,z0_wall,z0_map)/max(max(z0_inlet,z0_wall,z0_map),1e-6)",
+      "id": "roughness_consistency_residual",
+      "name_zh": "粗糙度一致性残差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    }
+  ],
+  "metric_ids": [
+    "roughness_consistency_residual",
+    "evidence_provenance_fraction",
+    "hard_gate_pass_fraction"
+  ],
+  "metrics": "metrics.json",
+  "required_external_inputs": [],
+  "required_inputs": [
+    "随任务本地生成的入口/边界参数",
+    "本地目标剖面或守恒参考",
+    "本地程序化计算域"
+  ],
+  "required_solver_runs": 1,
+  "roughness_consistency_input_contract": "local_assets/roughness_consistency_contract.json",
+  "roughness_result_contract": {
+    "case_ids": [
+      "task-063-case-001",
+      "task-063-case-002"
+    ],
+    "cases": [
+      {
+        "case_id": "task-063-case-001",
+        "execution_role": "provided_data_or_tool_execution",
+        "variant_key": "faulty",
+        "visible_residual": 0.7999999999999999,
+        "z0_inlet_m": 0.01,
+        "z0_map_m": 0.01,
+        "z0_wall_m": 0.05
+      },
+      {
+        "case_id": "task-063-case-002",
+        "execution_role": "real_solver_run",
+        "variant_key": "repaired",
+        "visible_residual": 0.0,
+        "z0_inlet_m": 0.01,
+        "z0_map_m": 0.01,
+        "z0_wall_m": 0.01
+      }
+    ],
+    "controlled_factor": "roughness-consistency state only: faulty z0 triplet versus repaired matched z0 triplet",
+    "cpu_affinity": "64-79",
+    "execution_policy": "The faulty case is deterministically rejected by preflight and must not run a solver; only the repaired case performs one real solver run.",
+    "frozen_across_solver_run": [
+      "geometry and mesh",
+      "neutral log-law inlet",
+      "Uref and Zref",
+      "z0=0.01 m after repair",
+      "k and omega inlet profiles",
+      "top/side/outlet boundaries",
+      "kOmegaSST",
+      "upwind convection",
+      "SIMPLE settings",
+      "400 iterations",
+      "52 inlet probe levels and weighting"
+    ],
+    "frozen_gates": {
+      "faulty_residual_exact": 0.7999999999999999,
+      "faulty_solver_runs_required": 0,
+      "max_abs_cumulative_continuity": 0.01,
+      "max_inlet_U_rmse_m_s": 1e-06,
+      "max_inlet_k_rmse_m2_s2": 1e-06,
+      "max_inlet_omega_rmse_s_1": 1e-05,
+      "max_last20_initial_residual_full": 0.0001,
+      "max_repaired_residual": 1e-12,
+      "required_cell_count": 365488,
+      "required_final_iteration": 400,
+      "required_solver_runs": 1
+    },
+    "full_iterations": 400,
+    "geometry": "365488-cell conformal D x D x 4D single-building domain",
+    "hidden_boundary": "Visible z0 triplets, formula, target profiles, shapes and gates only; no hidden repaired numerical time series.",
+    "mpi_ranks": 16,
+    "path_policy": "relative paths under submission root, unique and SHA-256 matched",
+    "primary_metric": {
+      "aggregation": "per_case_then_task",
+      "formula": "max(abs(R_faulty_reported-R_faulty_visible),R_repaired); R=max_pairwise_abs(z0_inlet,z0_wall,z0_map)/max(max(z0_inlet,z0_wall,z0_map),1e-6)",
+      "id": "roughness_consistency_residual",
+      "name_zh": "粗糙度一致性残差",
+      "unit": "fraction"
+    },
+    "profile_parameters": {
+      "Cmu": 0.09,
+      "Uref_m_s": 1.2,
+      "Zref_m": 4.0,
+      "kappa": 0.41,
+      "u_star_m_s": 0.0820826103015287,
+      "z0_m": 0.01
+    },
+    "profile_sample_count": 52,
+    "profile_sample_iterations": [
+      20,
+      40,
+      60,
+      80,
+      100,
+      120,
+      140,
+      160,
+      180,
+      200,
+      220,
+      240,
+      260,
+      280,
+      300,
+      320,
+      340,
+      360,
+      380,
+      400
+    ],
+    "profile_target_csv": "local_assets/roughness_profile_targets.csv",
+    "repaired_array_shapes": {
+      "inlet_U_m_s": [
+        20,
+        52,
+        3
+      ],
+      "inlet_k_m2_s2": [
+        20,
+        52
+      ],
+      "inlet_omega_s_1": [
+        20,
+        52
+      ],
+      "iterations": [
+        20
+      ]
+    },
+    "required_manifest": "roughness_evidence_manifest.json",
+    "required_raw_evidence": {
+      "task-063-case-001": [
+        "roughness_inputs",
+        "preflight_diagnosis"
+      ],
+      "task-063-case-002": [
+        "roughness_inputs",
+        "probe_U",
+        "probe_k",
+        "probe_omega",
+        "solver_log",
+        "checkMesh_log",
+        "field_U",
+        "field_nut",
+        "controlDict"
+      ]
+    },
+    "required_result": "roughness_results.json",
+    "result_path": "roughness_results.json",
+    "roughness_case_csv": "local_assets/roughness_cases.csv",
+    "roughness_definition": {
+      "R_formula": "max_pairwise_abs(z0_inlet,z0_wall,z0_map)/max(max(z0_inlet,z0_wall,z0_map),1e-6)",
+      "faulty_visible_residual": 0.7999999999999999,
+      "official_openfoam_docs": [
+        "https://doc.openfoam.com/2606/tools/processing/conditions/rtm/derived/atmospheric/atmBoundaryLayerInletVelocity/",
+        "https://doc.openfoam.com/2606/tools/processing/boundary-conditions/rtm/derived/atmospheric/atmNutkWallFunction/"
+      ],
+      "repaired_visible_residual": 0.0,
+      "z0_semantics": "direct aerodynamic roughness length in atmBoundaryLayerInletVelocity and atmNutkWallFunction; local map also stores aerodynamic z0"
+    },
+    "schema_version": "1.0",
+    "smoke_iterations": 20,
+    "solver": "OpenCFD-v2412 simpleFoam",
+    "task_gate": "Faulty input must be rejected before solver launch, repaired input must have R<=1e-12, and the sole repaired solver run must pass every frozen gate.",
+    "task_id": "urbanwind-task-063",
+    "truth_boundary": "OpenFOAM atmospheric z0 consistency diagnosis and repaired numerical inlet reference only; not experimental/PIV/DNS/wind-tunnel/field truth and not a universal roughness conversion study.",
+    "turbulence_model": "kOmegaSST"
+  },
+  "run_manifest": "run_manifest.json",
+  "schema_version": "1.0",
+  "score_layers": {
+    "artifact_and_schema": 10,
+    "engineering_decision": 10,
+    "external_validation": 15,
+    "numerical_quality": 20,
+    "physical_fidelity": 25,
+    "real_tool_execution": 20
+  },
+  "task_id": "urbanwind-task-063"
+}

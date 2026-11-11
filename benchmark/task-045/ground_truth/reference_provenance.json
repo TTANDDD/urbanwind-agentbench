@@ -1,0 +1,59 @@
+{
+  "accepted_counts_are_not_required_answers": true,
+  "artifacts": [
+    {
+      "bytes": 13900951,
+      "path": "task045-v49-raw.tar.gz",
+      "sha256": "83fd42615d6dcda6c72ee91b8a342b4efc2895787eac042716b5598b1286bf54"
+    },
+    {
+      "bytes": 5711,
+      "path": "blockMesh.log",
+      "sha256": "83dd5e46d917b93242813256b85b9ecce0f366954c4801cdcd4d314cbe79b3c7"
+    },
+    {
+      "bytes": 5005,
+      "path": "checkMesh.log",
+      "sha256": "04bab57da165fcca7b4030981af29dab11379d55a97846b09c1edebda11bc96d"
+    }
+  ],
+  "claim_boundary": "Local mesh-design/tool reference only; no CFD/LES solution, observed GCI, flow grid-independence, yplus or experimental truth is claimed.",
+  "evaluator_sha256": "f7f59a57cb0f5717b69bb954c5761f000a574d4ea530ec481ab48d6dc4e257db",
+  "evaluator_tests": {
+    "path": "evaluator_tests.json",
+    "sha256": "4da19391815383586753817ad955234e51ca648fd1c9cc098000187075514d16"
+  },
+  "experimental_claim": false,
+  "flow_solver_runs": 0,
+  "frozen_protocol": "validation/openfoam-task045-v49-prelaunch-protocol.json",
+  "host": "5070-server",
+  "independent_audit": {
+    "path": "independent_audit.json",
+    "sha256": "0375ccf5653db075028f1f077fe4de6173bf6f6b776b0c2fcf483f7453703564"
+  },
+  "openfoam_version": "v2412",
+  "scientific_contract_sha256": "c863c1ce51f3bb3ef4f82182e8b14cb7d816387ae91e74b40d0d2903b9e9b1bb",
+  "software": {
+    "paths": {
+      "blockMesh": {
+        "path": "/home/abc/urbanwind-agentbench-runtime-v0.1/envs/openfoam-2412/bin/blockMesh",
+        "sha256": "61929db77c637f0b394b7aef85b0f5ab42af8185a72c234270e4a03e2a13257b"
+      },
+      "checkMesh": {
+        "path": "/home/abc/urbanwind-agentbench-runtime-v0.1/envs/openfoam-2412/bin/checkMesh",
+        "sha256": "bce0922fb3d1d9178c710df108f4c62646572ca02f2bb76e18a658dfbdbfd712"
+      },
+      "decomposePar": {
+        "path": "/home/abc/urbanwind-agentbench-runtime-v0.1/envs/openfoam-2412/bin/decomposePar",
+        "sha256": "f512a7d2e236dbc0d537896d5d63da53b88ea7fb1f6355a89ab60444d9c7b9bf"
+      },
+      "mpiexec": {
+        "path": "/home/abc/urbanwind-agentbench-runtime-v0.1/envs/openfoam-2412/bin/mpiexec",
+        "sha256": "67737881b1bfbc001b2503a4a1d16e9174b5916326ef1d6fd97cb196292cfccf"
+      }
+    },
+    "version": "v2412"
+  },
+  "task_id": "urbanwind-task-045",
+  "truth_type": "verified_openfoam_tool_reference"
+}

@@ -37,12 +37,12 @@
     <p class="kicker reveal">UrbanWind-AgentBench · WindPilot</p>
     <h1 class="reveal">Does a completed simulation run mean a <em>usable</em> urban wind result for AI agents?</h1>
     <p class="lede reveal">A benchmark of 200 urban wind CFD tasks with recomputable two-layer scoring, and an execution framework that ties every reported metric back to raw solver evidence.</p>
-    <p class="authors reveal"><!-- TODO: author names and affiliations -->Authors and affiliations · Manuscript under review</p>
+    <p class="authors reveal">Zhongke Qu · Yunwei Zhang · Junwei Su · Yabin Zhang · Chengwei Li · Qingxiang Shui · Hailong Qu · Zhaolin Gu<br>Research manuscript · arXiv link forthcoming</p>
     <div class="cta reveal">
       <a class="btn primary" href="#video"><span class="pl" aria-hidden="true"></span>Watch the 84 s video</a>
       <a class="btn" href="#results">See the results <span aria-hidden="true">→</span></a>
-      <a class="btn" href="#" aria-disabled="true" data-soon>Paper <small>soon</small></a>
-      <a class="btn" href="#" aria-disabled="true" data-soon>Code &amp; tasks <small>soon</small></a>
+      <a class="btn" id="arxiv-link" href="#" aria-disabled="true" tabindex="-1" data-soon title="The arXiv link will be added after submission">arXiv <small>coming soon</small></a>
+      <a class="btn" href="https://github.com/TTANDDD/urbanwind-agentbench" target="_blank" rel="noopener noreferrer">GitHub · Code &amp; tasks <span aria-hidden="true">↗</span></a>
     </div>
   </div>
   <p class="hero-note mono">Live field · task-061 · OpenFOAM v2412 · iteration 400 · z = 0.44 m</p>
@@ -212,15 +212,32 @@
   </div>
 </section>
 
+<section class="sec" id="resources">
+  <div class="wrap">
+    <p class="eyebrow">Research materials</p>
+    <h2 class="reveal">Explore the tasks, scoring code and WindPilot.</h2>
+    <p class="sub reveal">The public repository includes all 200 task definitions and generated inputs, task scorers, WindPilot and base-agent source, plus the per-task results and figure data used in the paper.</p>
+    <div class="cta reveal">
+      <a class="btn primary" href="https://github.com/TTANDDD/urbanwind-agentbench/tree/main/benchmark" target="_blank" rel="noopener noreferrer">Tasks &amp; inputs ↗</a>
+      <a class="btn" href="https://github.com/TTANDDD/urbanwind-agentbench/tree/main/harness/windpilot" target="_blank" rel="noopener noreferrer">WindPilot harness ↗</a>
+      <a class="btn" href="https://github.com/TTANDDD/urbanwind-agentbench/tree/main/paper/data" target="_blank" rel="noopener noreferrer">Paper data ↗</a>
+      <a class="btn" href="https://github.com/TTANDDD/urbanwind-agentbench/blob/main/docs/REPRODUCIBILITY.md" target="_blank" rel="noopener noreferrer">Reproduce the results ↗</a>
+    </div>
+    <p class="note">Research snapshot · 11 November 2026. The paper evaluates 30 development tasks. Reference coverage and per-task release status are documented in the repository; the 200-task catalog is not a fully validated leaderboard. Historical runtime images and large raw archives are not bundled.</p>
+    <p class="note">Original code: MIT · Original data: CC BY 4.0. <a href="https://github.com/TTANDDD/urbanwind-agentbench/blob/main/RIGHTS.md" target="_blank" rel="noopener noreferrer">License scope and attribution ↗</a></p>
+  </div>
+</section>
+
 <section class="sec alt" id="cite">
   <div class="wrap">
     <p class="eyebrow">07 · Citation</p>
     <h2 class="reveal">Cite this work</h2>
     <div class="bib card reveal"><button class="btn sm copy" id="copy-bib">Copy</button><pre class="mono" id="bib">@article{urbanwind_agentbench_2026,
   title   = {Does a completed simulation run mean a usable urban wind result for AI agents?},
-  author  = {TODO},
-  journal = {Under review},
-  year    = {2026}
+  author  = {Qu, Zhongke and Zhang, Yunwei and Su, Junwei and Zhang, Yabin and Li, Chengwei and Shui, Qingxiang and Qu, Hailong and Gu, Zhaolin},
+  note    = {Research manuscript; arXiv identifier forthcoming},
+  year    = {2026},
+  url     = {https://ttanddd.github.io/urbanwind-agentbench/}
 }</pre></div>
   </div>
 </section>

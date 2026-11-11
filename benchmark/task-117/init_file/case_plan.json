@@ -1,0 +1,162 @@
+{
+  "cases": [
+    {
+      "case_id": "task-117-case-001",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "构建夜间蓄热释放与弱风条件并限定工程结论范围。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "弱热岛"
+      },
+      "metrics": [
+        "nocturnal_heat_balance_residual",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "abs(storage_release+sensible+latent+radiative_terms)",
+        "id": "nocturnal_heat_balance_residual",
+        "name_zh": "夜间热平衡残差",
+        "unit": "W/m2"
+      },
+      "purpose": "城市热岛夜间情景：执行变体 弱热岛，围绕构建夜间蓄热释放与弱风条件并限定工程结论范围。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-117",
+      "variant": "弱热岛"
+    },
+    {
+      "case_id": "task-117-case-002",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "构建夜间蓄热释放与弱风条件并限定工程结论范围。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "参考热岛"
+      },
+      "metrics": [
+        "nocturnal_heat_balance_residual",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "abs(storage_release+sensible+latent+radiative_terms)",
+        "id": "nocturnal_heat_balance_residual",
+        "name_zh": "夜间热平衡残差",
+        "unit": "W/m2"
+      },
+      "purpose": "城市热岛夜间情景：执行变体 参考热岛，围绕构建夜间蓄热释放与弱风条件并限定工程结论范围。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-117",
+      "variant": "参考热岛"
+    },
+    {
+      "case_id": "task-117-case-003",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "构建夜间蓄热释放与弱风条件并限定工程结论范围。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "强热岛"
+      },
+      "metrics": [
+        "nocturnal_heat_balance_residual",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "abs(storage_release+sensible+latent+radiative_terms)",
+        "id": "nocturnal_heat_balance_residual",
+        "name_zh": "夜间热平衡残差",
+        "unit": "W/m2"
+      },
+      "purpose": "城市热岛夜间情景：执行变体 强热岛，围绕构建夜间蓄热释放与弱风条件并限定工程结论范围。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-117",
+      "variant": "强热岛"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "cfd",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 3,
+  "required_solver_runs": 3,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-117"
+}

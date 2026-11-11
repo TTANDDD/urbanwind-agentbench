@@ -1,0 +1,15 @@
+{
+  "case_ids": [
+    "task-092-case-001",
+    "task-092-case-002",
+    "task-092-case-003"
+  ],
+  "claim_boundary": "Three-direction OpenFOAM numerical reference; not experimental truth.",
+  "primary_metric": {
+    "id": "wind_direction_weighted_probe_speed_ratio",
+    "unit": "fraction",
+    "value": 0.8490570177440098
+  },
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-092"
+}

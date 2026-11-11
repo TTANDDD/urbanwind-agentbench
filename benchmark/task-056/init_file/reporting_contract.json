@@ -1,0 +1,80 @@
+{
+  "current_evaluator_boundary": "Qualified trusted-host registered FULL7 raw-evidence entry. All7 phases are actually executed per prospectively registered snapshot; evaluator recomputes raw geometry/quality/all51volume/all50nativephi without rerunning commands. No agent-selected binding, experiments, agent-performance or portable VM claim.",
+  "data_origin_policy": "local_generation_or_optional_one_click_public",
+  "decision": "decision.md",
+  "decision_required_terms": [
+    "证据",
+    "限制",
+    "结论"
+  ],
+  "evidence_manifest": "evidence_manifest.json",
+  "expected_case_ids": [
+    "task-056-case-001",
+    "task-056-case-002"
+  ],
+  "expected_solver_case_ids": [
+    "task-056-case-002"
+  ],
+  "metric_contracts": [
+    {
+      "aggregation": "report_both_cases_primary_repaired_case002_no_success_subset",
+      "formula": "max_d(abs((max(raw_points[d])-min(raw_points[d]))-target_span[d])/target_span[d]); target_span=(20,16,7)m",
+      "id": "geometry_scale_relative_error",
+      "name_zh": "几何尺度相对误差",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "hashed_source_linked_evidence / required_evidence",
+      "id": "evidence_provenance_fraction",
+      "name_zh": "证据溯源覆盖率",
+      "unit": "fraction"
+    },
+    {
+      "aggregation": "per_case_then_task",
+      "formula": "passed_hard_gates / required_hard_gates",
+      "id": "hard_gate_pass_fraction",
+      "name_zh": "硬门禁通过率",
+      "unit": "fraction"
+    }
+  ],
+  "metric_ids": [
+    "geometry_scale_relative_error",
+    "evidence_provenance_fraction",
+    "hard_gate_pass_fraction"
+  ],
+  "metrics": "metrics.json",
+  "required_artifacts": [
+    "repaired_case/0/U",
+    "repaired_case/0/k",
+    "repaired_case/0/nut",
+    "repaired_case/0/omega",
+    "repaired_case/0/p",
+    "repaired_case/constant/dynamicMeshDict",
+    "repaired_case/constant/transportProperties",
+    "repaired_case/constant/turbulenceProperties",
+    "repaired_case/system/blockMeshDict",
+    "repaired_case/system/controlDict",
+    "repaired_case/system/fvSchemes",
+    "repaired_case/system/fvSolution",
+    "repaired_case/system/meshQualityDict",
+    "metrics.json",
+    "run_manifest.json",
+    "evidence_manifest.json",
+    "decision.md"
+  ],
+  "required_external_inputs": [],
+  "required_inputs": [
+    "米制16栋城市与唯一尺度故障字典",
+    "冻结网格质量与尺度/雷诺数/有限CFD合同",
+    "固定物理数值输入与数据型提交规范"
+  ],
+  "required_solver_runs": 1,
+  "run_manifest": "run_manifest.json",
+  "schema_version": "1.0",
+  "scientific_contract": "task056_v54_contract.json",
+  "score_layers": {
+    "all_conjunctive_task_specific_gates": 100
+  },
+  "task_id": "urbanwind-task-056"
+}

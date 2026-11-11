@@ -1,0 +1,132 @@
+{
+  "cases": [
+    {
+      "CFD_runs": 0,
+      "case_id": "task-056-case-001",
+      "execution_role": "provided_data_or_tool_execution",
+      "expected_unit_decision": "REJECT_SCALE",
+      "fault_role": "faulty_input",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "诊断米制城市坐标被再次乘0.001的故障；只修复尺度，独立核对实际几何、单位、Re及修复案例50s有限URANS守恒。",
+        "required_external_inputs": [],
+        "required_inputs": [
+          "米制16栋城市与唯一尺度故障字典",
+          "冻结网格质量与尺度/雷诺数/有限CFD合同",
+          "固定物理数值输入与数据型提交规范"
+        ],
+        "unresolved_inputs": [],
+        "variant": "故障输入"
+      },
+      "metrics": [
+        "geometry_scale_relative_error",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "native_quality_required": "PASS",
+      "primary_metric": {
+        "aggregation": "report_both_cases_primary_repaired_case002_no_success_subset",
+        "formula": "max_d(abs((max(raw_points[d])-min(raw_points[d]))-target_span[d])/target_span[d]); target_span=(20,16,7)m",
+        "id": "geometry_scale_relative_error",
+        "name_zh": "几何尺度相对误差",
+        "unit": "fraction"
+      },
+      "purpose": "Demonstrate that a topologically/shape-quality-valid mesh can be wrong in SI dimensions; reject before solving wrong physical geometry.",
+      "reference_status": "verified_openfoam_tool_reference_generated",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "required_native_stage_count": 3,
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-056",
+      "variant": "故障输入"
+    },
+    {
+      "CFD_runs": 1,
+      "case_id": "task-056-case-002",
+      "execution_role": "real_solver_run",
+      "expected_unit_decision": "ACCEPT_SCALE",
+      "fault_role": "verified_repair",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "诊断米制城市坐标被再次乘0.001的故障；只修复尺度，独立核对实际几何、单位、Re及修复案例50s有限URANS守恒。",
+        "required_external_inputs": [],
+        "required_inputs": [
+          "米制16栋城市与唯一尺度故障字典",
+          "冻结网格质量与尺度/雷诺数/有限CFD合同",
+          "固定物理数值输入与数据型提交规范"
+        ],
+        "unresolved_inputs": [],
+        "variant": "修复后验证"
+      },
+      "metrics": [
+        "geometry_scale_relative_error",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "native_quality_required": "PASS",
+      "primary_metric": {
+        "aggregation": "report_both_cases_primary_repaired_case002_no_success_subset",
+        "formula": "max_d(abs((max(raw_points[d])-min(raw_points[d]))-target_span[d])/target_span[d]); target_span=(20,16,7)m",
+        "id": "geometry_scale_relative_error",
+        "name_zh": "几何尺度相对误差",
+        "unit": "fraction"
+      },
+      "purpose": "The single mandatory finite CFD calculation verifies that repaired physical dimensions and forcing reach an actual conservative numerical calculation. Completion and all gates are required; no causal before/after flow comparison is claimed.",
+      "reference_status": "verified_openfoam_tool_reference_generated",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "required_native_stage_count": 4,
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-056",
+      "variant": "修复后验证"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw per-case geometry and all native evidence -> both controlled outcomes -> repaired002 primary",
+    "causal_flow_comparison_claim": false,
+    "compute_track": "cfd",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 2,
+  "required_solver_runs": 1,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-056"
+}

@@ -1,0 +1,23 @@
+{
+  "experimental_claim": false,
+  "host": "5070-server",
+  "independent_archive_audit": "validation/openfoam-task087-stationarity-onset-audit-v1.json",
+  "independent_archive_audit_sha256": "35b56be9e7a75db2875e3aef736fc03294d2d581379d269eca54cabd1aac7bb3",
+  "openfoam_version": "v2412",
+  "raw_probe_sha256": "10c64b07daad46c7fc0dc21e20e60b033e92ac31ac21cff084de03d326689146",
+  "runtime_environment": "/home/abc/urbanwind-agentbench-runtime-v0.1/envs/openfoam-2412",
+  "schema_version": "1.0",
+  "source_runs": [
+    {
+      "case_id": "task-087-case-001",
+      "mpi_ranks": 16,
+      "source_archive": "validation/openfoam-batch-20260915-v20-late-window/results/task087-long-window-late/reference_candidate.tar.gz",
+      "source_archive_sha256": "47092ebee44a9b46a6fc031888e051bcab5173357ffa58d51f3f002fc4f81757",
+      "source_batch": "openfoam-batch-20260915-v20-late-window",
+      "source_job": "task087-long-window-late",
+      "source_status_sha256": "44f3ba04767181132c73e02976c3f1574ec1e9c8e2028f8c29ad4824e0d0e821",
+      "variant": "长时序自旋与统计"
+    }
+  ],
+  "task_id": "urbanwind-task-087"
+}

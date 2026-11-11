@@ -1,0 +1,64 @@
+{
+  "blockers": [
+    "pinned runtime image",
+    "real local reference executions or frozen numerical arrays",
+    "task-specific hidden evaluator"
+  ],
+  "claim_boundary": "This directory is not release-valid benchmark ground truth.",
+  "data_acquisition_blockers": [],
+  "evaluator_status": "contract_precheck_only",
+  "expected_ground_truth": {
+    "case_ids": [
+      "task-185-case-001",
+      "task-185-case-002",
+      "task-185-case-003",
+      "task-185-case-004",
+      "task-185-case-005",
+      "task-185-case-006",
+      "task-185-case-007",
+      "task-185-case-008",
+      "task-185-case-009"
+    ],
+    "hidden_tolerances_status": "pending_task_specific_evaluator",
+    "input_roles": [
+      "三个冻结廊道宽度候选",
+      "相同开发量",
+      "风向权重与连通约束"
+    ],
+    "metric_contracts": [
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "objective_best_candidate-objective_selected_candidate",
+        "id": "corridor_width_screening_regret",
+        "name_zh": "廊道宽度候选筛选后悔值",
+        "unit": "fraction"
+      },
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "hashed_source_linked_evidence / required_evidence",
+        "id": "evidence_provenance_fraction",
+        "name_zh": "证据溯源覆盖率",
+        "unit": "fraction"
+      },
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "passed_hard_gates / required_hard_gates",
+        "id": "hard_gate_pass_fraction",
+        "name_zh": "硬门禁通过率",
+        "unit": "fraction"
+      }
+    ],
+    "reference_values_status": "pending_real_local_execution"
+  },
+  "reference_status": "not_generated",
+  "release_status": "scaffold_only",
+  "required_reference_artifacts": [
+    "locally generated source inputs with generation manifest: 三个冻结廊道宽度候选; 相同开发量; 风向权重与连通约束",
+    "real tool and solver run manifests",
+    "raw fields, logs and post-processing arrays",
+    "recomputed task metrics: corridor_width_screening_regret; evidence_provenance_fraction; hard_gate_pass_fraction",
+    "positive and adversarial evaluator tests"
+  ],
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-185"
+}

@@ -1,0 +1,63 @@
+{
+  "cases": [
+    {
+      "case_id": "task-048-case-001",
+      "execution_role": "provided_data_or_tool_execution",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "在程序化城市几何上按建筑距离、地面高度和行人层目标分辨率组合自适应加密。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "程序化城市八叉树加密-目标案例"
+      },
+      "metrics": [
+        "urban_core_resolution_coverage",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "core_volume_at_target_resolution / core_volume",
+        "id": "urban_core_resolution_coverage",
+        "name_zh": "城市核心区分辨率覆盖率",
+        "unit": "fraction"
+      },
+      "purpose": "程序化城市八叉树加密：执行变体 程序化城市八叉树加密-目标案例，围绕在程序化城市几何上按建筑距离、地面高度和行人层目标分辨率组合自适应加密。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-048",
+      "variant": "程序化城市八叉树加密-目标案例"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "lite",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 1,
+  "required_solver_runs": 0,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-048"
+}

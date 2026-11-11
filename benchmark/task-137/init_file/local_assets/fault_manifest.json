@@ -1,0 +1,13 @@
+{
+  "answer_included": false,
+  "expected_agent_action": "diagnose and repair without changing unrelated settings",
+  "fault_family": "palm_static_driver_dimension_mismatch",
+  "fault_seed": 202609030137,
+  "injected": true,
+  "observed_fault_parameters": {
+    "x": 8,
+    "y": 7
+  },
+  "target_file": "local_assets/palm_base/static_driver_table.csv",
+  "task_id": "urbanwind-task-137"
+}

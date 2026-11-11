@@ -1,0 +1,16 @@
+{
+  "acceptance_limit": 0.05,
+  "case_ids": [
+    "task-099-case-001",
+    "task-099-case-002",
+    "task-099-case-003"
+  ],
+  "claim_boundary": "Frozen OpenFOAM numerical restart reference; not PIV, DNS or experimental truth.",
+  "primary_metric": {
+    "id": "restart_continuity_error",
+    "unit": "fraction",
+    "value": 0.0473883414921072
+  },
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-099"
+}

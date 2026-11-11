@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "三个反照率候选",
+      "role_id": "input-001",
+      "seed": 202609049101,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.32303492,
+        0.64277203,
+        0.91336496,
+        0.09513708,
+        0.5186936,
+        0.64766422,
+        0.33682202,
+        0.18292404,
+        0.09179672,
+        0.43818932,
+        0.73015531,
+        0.7140163,
+        0.89430989,
+        0.64280202,
+        0.75763687,
+        0.76820572
+      ]
+    },
+    {
+      "label": "辐射与热边界输入",
+      "role_id": "input-002",
+      "seed": 202609049102,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.91162502,
+        0.85008486,
+        0.1906176,
+        0.28860263,
+        0.50768219,
+        0.16082089,
+        0.81398014,
+        0.90145049,
+        0.20915612,
+        0.92187607,
+        0.86858213,
+        0.1791482,
+        0.62120888,
+        0.31574928,
+        0.59548211,
+        0.91383555
+      ]
+    },
+    {
+      "label": "热收益和通风目标",
+      "role_id": "input-003",
+      "seed": 202609049103,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.07870829,
+        0.44272337,
+        0.97388839,
+        0.3381182,
+        0.80700395,
+        0.98662924,
+        0.45359062,
+        0.57767813,
+        0.53668303,
+        0.55967819,
+        0.11832318,
+        0.5800359,
+        0.9999755,
+        0.608126,
+        0.54960116,
+        0.10381525
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-191"
+}

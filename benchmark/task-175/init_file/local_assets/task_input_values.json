@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "逐像元预测分布或多情景样本",
+      "role_id": "input-001",
+      "seed": 202609047501,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.47425499,
+        0.91180714,
+        0.08157299,
+        0.99093372,
+        0.34171678,
+        0.17748178,
+        0.65473483,
+        0.25350369,
+        0.94761954,
+        0.38805655,
+        0.58158595,
+        0.19113692,
+        0.2110664,
+        0.99617184,
+        0.72937741,
+        0.66887635
+      ]
+    },
+    {
+      "label": "独立参考场",
+      "role_id": "input-002",
+      "seed": 202609047502,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.30312813,
+        0.93129372,
+        0.32003253,
+        0.65207805,
+        0.37606085,
+        0.9047849,
+        0.94760181,
+        0.82000441,
+        0.83988282,
+        0.1137113,
+        0.78493148,
+        0.7995757,
+        0.18630211,
+        0.66742303,
+        0.78406622,
+        0.8504024
+      ]
+    },
+    {
+      "label": "空间权重与不确定度来源",
+      "role_id": "input-003",
+      "seed": 202609047503,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.64439762,
+        0.22637736,
+        0.80478302,
+        0.65647436,
+        0.25620729,
+        0.3787975,
+        0.3645191,
+        0.75601962,
+        0.58029437,
+        0.76490279,
+        0.46141649,
+        0.87681177,
+        0.36277591,
+        0.91748111,
+        0.70190272,
+        0.05313133
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-175"
+}

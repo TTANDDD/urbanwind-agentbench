@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "随任务本地生成的几何与网格目标",
+      "role_id": "input-001",
+      "seed": 202609034601,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.83251577,
+        0.85930652,
+        0.7033878,
+        0.62895989,
+        0.73234467,
+        0.50297281,
+        0.92011933,
+        0.92018839,
+        0.50668751,
+        0.84068229,
+        0.16327501,
+        0.70183474,
+        0.65651475,
+        0.21327332,
+        0.3244295,
+        0.47894616
+      ]
+    },
+    {
+      "label": "冻结网格质量门槛",
+      "role_id": "input-002",
+      "seed": 202609034602,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.65085571,
+        0.41795436,
+        0.76173708,
+        0.06466497,
+        0.80479856,
+        0.08561232,
+        0.45293914,
+        0.13970882,
+        0.7368945,
+        0.24726386,
+        0.61991674,
+        0.90190529,
+        0.7574683,
+        0.52779194,
+        0.30576064,
+        0.19645906
+      ]
+    },
+    {
+      "label": "待实际工具执行的网格日志",
+      "role_id": "input-003",
+      "seed": 202609034603,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.79603518,
+        0.7890739,
+        0.30564186,
+        0.79333339,
+        0.50108454,
+        0.23041709,
+        0.69853968,
+        0.63004932,
+        0.65590458,
+        0.28132398,
+        0.71009366,
+        0.84588674,
+        0.33147571,
+        0.99319732,
+        0.08050611,
+        0.53745993
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-046"
+}

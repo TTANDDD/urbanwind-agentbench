@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "同域OpenFOAM和PALM原始场",
+      "role_id": "input-001",
+      "seed": 202609045901,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.25757061,
+        0.77046365,
+        0.10885193,
+        0.61026951,
+        0.39328867,
+        0.3732157,
+        0.51403965,
+        0.41994145,
+        0.93196014,
+        0.2917578,
+        0.09440736,
+        0.96788543,
+        0.36036034,
+        0.92721359,
+        0.05961044,
+        0.42896716
+      ]
+    },
+    {
+      "label": "空间时间坐标映射",
+      "role_id": "input-002",
+      "seed": 202609045902,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.95145069,
+        0.48084486,
+        0.74182499,
+        0.4445214,
+        0.928006,
+        0.17963599,
+        0.28402953,
+        0.33524664,
+        0.98919549,
+        0.49610931,
+        0.24579282,
+        0.56751668,
+        0.44231558,
+        0.18520179,
+        0.80072125,
+        0.5950557
+      ]
+    },
+    {
+      "label": "共同变量、掩膜和统计窗口",
+      "role_id": "input-003",
+      "seed": 202609045903,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.80958105,
+        0.88209131,
+        0.39279242,
+        0.45717935,
+        0.80477219,
+        0.09630476,
+        0.25014213,
+        0.42632466,
+        0.21572254,
+        0.15852858,
+        0.73102503,
+        0.86986535,
+        0.38968762,
+        0.42437518,
+        0.13024928,
+        0.53052227
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-159"
+}

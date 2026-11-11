@@ -1,0 +1,65 @@
+{
+  "blockers": [
+    "frozen benchmark runtime image",
+    "packaged hidden-evaluator execution"
+  ],
+  "canonical_result": "canonical_result.json",
+  "claim_boundary": "Local geometric mesh-tool reference only. No velocity solution, wake accuracy, yplus, experimental or atmospheric truth is claimed.",
+  "data_acquisition_blockers": [],
+  "evaluator_status": "task_specific_openfoam_reexecution_check",
+  "expected_ground_truth": {
+    "case_ids": [
+      "task-044-case-001"
+    ],
+    "hidden_tolerances_status": "public_constraint_gates_not_exact_GT_geometry",
+    "input_roles": [
+      "随任务本地生成的几何与网格目标",
+      "冻结网格质量门槛",
+      "待实际工具执行的网格日志"
+    ],
+    "metric_contracts": [
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "sum(exact cell-box intersection volume with visible wake ROI for cells satisfying all visible dx/dy/dz and anisotropy limits)/analytic wake ROI volume; raw Cartesian topology must tile fluid domain without gaps or overlaps",
+        "id": "wake_refinement_coverage",
+        "name_zh": "尾流加密区覆盖率",
+        "unit": "fraction"
+      },
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "hashed_source_linked_evidence / required_evidence",
+        "id": "evidence_provenance_fraction",
+        "name_zh": "证据溯源覆盖率",
+        "unit": "fraction"
+      },
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "passed_hard_gates / required_hard_gates",
+        "id": "hard_gate_pass_fraction",
+        "name_zh": "硬门禁通过率",
+        "unit": "fraction"
+      }
+    ],
+    "reference_values_status": "verified_openfoam_tool_reference_generated"
+  },
+  "experimental_claim": false,
+  "limitations": [
+    "Local geometric mesh-tool reference only. No velocity solution, wake accuracy, yplus, experimental or atmospheric truth is claimed.",
+    "Runtime packaging is not frozen; not release-valid."
+  ],
+  "raw_reference_case": "task044-v47-raw.tar.gz",
+  "reference_metrics": "reference_metrics.json",
+  "reference_provenance": "reference_provenance.json",
+  "reference_status": "openfoam_tool_reference_generated",
+  "release_status": "reference_ready_not_release_valid",
+  "required_reference_artifacts": [
+    "locally generated source inputs with generation manifest: 随任务本地生成的几何与网格目标; 冻结网格质量门槛; 待实际工具执行的网格日志",
+    "real tool and solver run manifests",
+    "raw fields, logs and post-processing arrays",
+    "recomputed task metrics: wake_refinement_coverage; evidence_provenance_fraction; hard_gate_pass_fraction",
+    "positive and adversarial evaluator tests"
+  ],
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-044",
+  "truth_type": "verified_openfoam_tool_reference"
+}

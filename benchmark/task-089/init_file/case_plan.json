@@ -1,0 +1,64 @@
+{
+  "cases": [
+    {
+      "case_id": "task-089-case-001",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "SB4_LOCAL",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "完成匹配本地D乘D乘4D算例的运行，并与随任务生成的数值参考观测比较；不得称为实验PIV真值。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "单体建筑本地数值参考对照"
+      },
+      "metrics": [
+        "local_reference_comparison_nmae",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "mean_59(abs(Ux_CFD(coord)-Ux_synthetic(coord)))/1.2; exact (x,y,z) join of 59 fluid observations, t=300-420 s",
+        "id": "local_reference_comparison_nmae",
+        "name_zh": "单体建筑本地合成参考流向速度NMAE",
+        "unit": "fraction"
+      },
+      "purpose": "单体建筑本地参考对照运行：执行变体 单体建筑本地数值参考对照，围绕完成匹配本地D乘D乘4D算例的运行，并与随任务生成的数值参考观测比较；不得称为实验PIV真值。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam",
+        "paraview"
+      ],
+      "task_id": "urbanwind-task-089",
+      "variant": "单体建筑本地数值参考对照"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "cfd",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 1,
+  "required_solver_runs": 1,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-089"
+}

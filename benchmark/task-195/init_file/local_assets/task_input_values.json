@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "不少于20个冻结候选及全部目标值",
+      "role_id": "input-001",
+      "seed": 202609049501,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.83029789,
+        0.60209843,
+        0.39977108,
+        0.85204511,
+        0.48474514,
+        0.93222533,
+        0.10768103,
+        0.36179467,
+        0.54298881,
+        0.99648016,
+        0.44320368,
+        0.44970241,
+        0.94044017,
+        0.7591239,
+        0.86595159,
+        0.95526389
+      ]
+    },
+    {
+      "label": "目标方向与归一化",
+      "role_id": "input-002",
+      "seed": 202609049502,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.74729878,
+        0.91958104,
+        0.96360447,
+        0.24867011,
+        0.478368,
+        0.16629421,
+        0.25523863,
+        0.94049889,
+        0.65267954,
+        0.76356478,
+        0.4943088,
+        0.80799906,
+        0.15893594,
+        0.26767699,
+        0.29283132,
+        0.56599313
+      ]
+    },
+    {
+      "label": "参考非支配集",
+      "role_id": "input-003",
+      "seed": 202609049503,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.32919025,
+        0.3278354,
+        0.94738354,
+        0.74539973,
+        0.16960679,
+        0.73367632,
+        0.20824896,
+        0.54872115,
+        0.16987495,
+        0.18016405,
+        0.91741926,
+        0.12451336,
+        0.52797537,
+        0.5632996,
+        0.33648951,
+        0.48446242
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-195"
+}

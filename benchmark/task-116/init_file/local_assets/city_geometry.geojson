@@ -1,0 +1,571 @@
+{
+  "crs_contract": {
+    "axis": "x-east,y-north,z-up",
+    "type": "local_cartesian",
+    "unit": "m"
+  },
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              0.5,
+              0.5
+            ],
+            [
+              1.5,
+              0.5
+            ],
+            [
+              1.5,
+              1.5
+            ],
+            [
+              0.5,
+              1.5
+            ],
+            [
+              0.5,
+              0.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "building_id": "b-00-00",
+        "height_m": 1.0,
+        "source": "urbanwind-local-assets-v3"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              2.5,
+              0.5
+            ],
+            [
+              3.5,
+              0.5
+            ],
+            [
+              3.5,
+              1.5
+            ],
+            [
+              2.5,
+              1.5
+            ],
+            [
+              2.5,
+              0.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "building_id": "b-00-01",
+        "height_m": 1.25,
+        "source": "urbanwind-local-assets-v3"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.5,
+              0.5
+            ],
+            [
+              5.5,
+              0.5
+            ],
+            [
+              5.5,
+              1.5
+            ],
+            [
+              4.5,
+              1.5
+            ],
+            [
+              4.5,
+              0.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "building_id": "b-00-02",
+        "height_m": 1.5,
+        "source": "urbanwind-local-assets-v3"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              6.5,
+              0.5
+            ],
+            [
+              7.5,
+              0.5
+            ],
+            [
+              7.5,
+              1.5
+            ],
+            [
+              6.5,
+              1.5
+            ],
+            [
+              6.5,
+              0.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "building_id": "b-00-03",
+        "height_m": 1.75,
+        "source": "urbanwind-local-assets-v3"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              1.0,
+              2.5
+            ],
+            [
+              2.0,
+              2.5
+            ],
+            [
+              2.0,
+              3.5
+            ],
+            [
+              1.0,
+              3.5
+            ],
+            [
+              1.0,
+              2.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "building_id": "b-01-00",
+        "height_m": 1.25,
+        "source": "urbanwind-local-assets-v3"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              3.0,
+              2.5
+            ],
+            [
+              4.0,
+              2.5
+            ],
+            [
+              4.0,
+              3.5
+            ],
+            [
+              3.0,
+              3.5
+            ],
+            [
+              3.0,
+              2.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "building_id": "b-01-01",
+        "height_m": 1.5,
+        "source": "urbanwind-local-assets-v3"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              5.0,
+              2.5
+            ],
+            [
+              6.0,
+              2.5
+            ],
+            [
+              6.0,
+              3.5
+            ],
+            [
+              5.0,
+              3.5
+            ],
+            [
+              5.0,
+              2.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "building_id": "b-01-02",
+        "height_m": 1.75,
+        "source": "urbanwind-local-assets-v3"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              7.0,
+              2.5
+            ],
+            [
+              8.0,
+              2.5
+            ],
+            [
+              8.0,
+              3.5
+            ],
+            [
+              7.0,
+              3.5
+            ],
+            [
+              7.0,
+              2.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "building_id": "b-01-03",
+        "height_m": 1.0,
+        "source": "urbanwind-local-assets-v3"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              0.5,
+              4.5
+            ],
+            [
+              1.5,
+              4.5
+            ],
+            [
+              1.5,
+              5.5
+            ],
+            [
+              0.5,
+              5.5
+            ],
+            [
+              0.5,
+              4.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "building_id": "b-02-00",
+        "height_m": 1.5,
+        "source": "urbanwind-local-assets-v3"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              2.5,
+              4.5
+            ],
+            [
+              3.5,
+              4.5
+            ],
+            [
+              3.5,
+              5.5
+            ],
+            [
+              2.5,
+              5.5
+            ],
+            [
+              2.5,
+              4.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "building_id": "b-02-01",
+        "height_m": 1.75,
+        "source": "urbanwind-local-assets-v3"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.5,
+              4.5
+            ],
+            [
+              5.5,
+              4.5
+            ],
+            [
+              5.5,
+              5.5
+            ],
+            [
+              4.5,
+              5.5
+            ],
+            [
+              4.5,
+              4.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "building_id": "b-02-02",
+        "height_m": 1.0,
+        "source": "urbanwind-local-assets-v3"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              6.5,
+              4.5
+            ],
+            [
+              7.5,
+              4.5
+            ],
+            [
+              7.5,
+              5.5
+            ],
+            [
+              6.5,
+              5.5
+            ],
+            [
+              6.5,
+              4.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "building_id": "b-02-03",
+        "height_m": 1.25,
+        "source": "urbanwind-local-assets-v3"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              1.0,
+              6.5
+            ],
+            [
+              2.0,
+              6.5
+            ],
+            [
+              2.0,
+              7.5
+            ],
+            [
+              1.0,
+              7.5
+            ],
+            [
+              1.0,
+              6.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "building_id": "b-03-00",
+        "height_m": 1.75,
+        "source": "urbanwind-local-assets-v3"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              3.0,
+              6.5
+            ],
+            [
+              4.0,
+              6.5
+            ],
+            [
+              4.0,
+              7.5
+            ],
+            [
+              3.0,
+              7.5
+            ],
+            [
+              3.0,
+              6.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "building_id": "b-03-01",
+        "height_m": 1.0,
+        "source": "urbanwind-local-assets-v3"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              5.0,
+              6.5
+            ],
+            [
+              6.0,
+              6.5
+            ],
+            [
+              6.0,
+              7.5
+            ],
+            [
+              5.0,
+              7.5
+            ],
+            [
+              5.0,
+              6.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "building_id": "b-03-02",
+        "height_m": 1.25,
+        "source": "urbanwind-local-assets-v3"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              7.0,
+              6.5
+            ],
+            [
+              8.0,
+              6.5
+            ],
+            [
+              8.0,
+              7.5
+            ],
+            [
+              7.0,
+              7.5
+            ],
+            [
+              7.0,
+              6.5
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "building_id": "b-03-03",
+        "height_m": 1.5,
+        "source": "urbanwind-local-assets-v3"
+      },
+      "type": "Feature"
+    }
+  ],
+  "name": "procedural-city-task-116",
+  "type": "FeatureCollection"
+}

@@ -1,0 +1,13 @@
+{
+  "answer_included": false,
+  "expected_agent_action": "diagnose and repair without changing unrelated settings",
+  "fault_family": "mass_flux_imbalance",
+  "fault_seed": 202609030133,
+  "injected": true,
+  "observed_fault_parameters": {
+    "inlet_flux": 1.0,
+    "outlet_flux": 0.82
+  },
+  "target_file": "local_assets/reference_diagnostics.json",
+  "task_id": "urbanwind-task-133"
+}

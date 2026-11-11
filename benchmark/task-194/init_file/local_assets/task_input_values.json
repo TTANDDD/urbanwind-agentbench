@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "两个设计乘稳定/中性/不稳定",
+      "role_id": "input-001",
+      "seed": 202609049401,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.18592868,
+        0.24209814,
+        0.37009247,
+        0.48888408,
+        0.15505812,
+        0.76892159,
+        0.99511775,
+        0.51372659,
+        0.58013382,
+        0.24547879,
+        0.36750769,
+        0.90544698,
+        0.22403544,
+        0.52558407,
+        0.45423048,
+        0.96760102
+      ]
+    },
+    {
+      "label": "冻结稳定度定义",
+      "role_id": "input-002",
+      "seed": 202609049402,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.6303262,
+        0.69401314,
+        0.58734188,
+        0.15533009,
+        0.68354782,
+        0.9764934,
+        0.23190639,
+        0.93561354,
+        0.05362355,
+        0.23792806,
+        0.81029403,
+        0.98933305,
+        0.93907144,
+        0.65088813,
+        0.64180349,
+        0.27419625
+      ]
+    },
+    {
+      "label": "稳健目标",
+      "role_id": "input-003",
+      "seed": 202609049403,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.88990511,
+        0.17695217,
+        0.16768313,
+        0.22529222,
+        0.69491276,
+        0.30770656,
+        0.661945,
+        0.13698068,
+        0.71903198,
+        0.72926251,
+        0.09163257,
+        0.53053221,
+        0.74444366,
+        0.19831535,
+        0.50289719,
+        0.06084701
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-194"
+}

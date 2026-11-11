@@ -1,0 +1,176 @@
+{
+  "case_ids": [
+    "task-045-case-001",
+    "task-045-case-002",
+    "task-045-case-003"
+  ],
+  "directional_refinement": "For every x/y/z macro interval the actual integer count ratio medium/coarse and fine/medium must agree with the corresponding volume-derived r within 1% relative. Geometry and sample positions remain common.",
+  "flow_solver_runs": 0,
+  "gates": {
+    "area_relative_error_max": 1e-08,
+    "aspect_ratio_max": 10,
+    "atomic_grid_voxels_max": 2000000,
+    "axis_cartesian_relative_error_max": 1e-09,
+    "consistency_min": 0.99,
+    "coordinate_tolerance_m": 1e-08,
+    "directional_ratio_relative_error_max": 0.01,
+    "max_nonorthogonality_deg": 1,
+    "max_skewness": 1,
+    "refinement_ratio_max": 2.0,
+    "refinement_ratio_min": 1.3,
+    "total_study_cells_max": 300000,
+    "volume_relative_error_max": 1e-08
+  },
+  "geometry": {
+    "building_bounds_m": [
+      [
+        -0.5,
+        0.5
+      ],
+      [
+        -0.5,
+        0.5
+      ],
+      [
+        0,
+        4
+      ]
+    ],
+    "building_exposed_areas_m2": {
+      "roof": 1,
+      "x_high": 4,
+      "x_low": 4,
+      "y_high": 4,
+      "y_low": 4
+    },
+    "domain_bounds_m": [
+      [
+        -4,
+        23
+      ],
+      [
+        -6.2,
+        6.2
+      ],
+      [
+        0,
+        9
+      ]
+    ],
+    "fluid_volume_m3": 3009.2,
+    "macro_cuts_m": [
+      [
+        -4,
+        -0.5,
+        0.5,
+        23
+      ],
+      [
+        -6.2,
+        -0.5,
+        0.5,
+        6.2
+      ],
+      [
+        0,
+        4,
+        9
+      ]
+    ],
+    "outer_patch_areas_m2": {
+      "ground": 333.8,
+      "inlet": 111.6,
+      "outlet": 111.6,
+      "sideHigh": 243,
+      "sideLow": 243,
+      "top": 334.8
+    }
+  },
+  "legal_alternatives": "Different positive integer count arrays and actual cell numbers satisfying all public constraints are valid. No GT cell identities or file equality is required.",
+  "metric": {
+    "formula": "h_j=(3009.2/N_j)^(1/3), r_cm=h_coarse/h_medium, r_mf=h_medium/h_fine; refinement_ratio_consistency=1-abs(r_cm-r_mf)/max(r_cm,r_mf), with N_j counted from independently validated raw polyMesh; identical grids and nonuniform directional refinement fail separate hard gates",
+    "id": "refinement_ratio_consistency",
+    "name_zh": "三层网格加密比一致性",
+    "unit": "fraction"
+  },
+  "mpi_ranks": 16,
+  "physical_cpus": "80-95",
+  "qualification_scope": "One fresh coarse-parent pilot precedes the three actual study grids; it is tool qualification, not a fourth benchmark case and is not used in the primary metric.",
+  "sampling_points_m": [
+    [
+      -2,
+      0.15,
+      1.15
+    ],
+    [
+      0,
+      1.5,
+      1.15
+    ],
+    [
+      2,
+      0.15,
+      1.15
+    ],
+    [
+      8,
+      0.15,
+      1.15
+    ],
+    [
+      1,
+      0.15,
+      4.5
+    ]
+  ],
+  "sampling_scope": "Common geometric fluid locations, not CFD measurements. No required cell IDs.",
+  "schema_version": "1.0",
+  "software": "OpenCFD-v2412",
+  "stages": {
+    "coarse": {
+      "cells_max": 20000,
+      "cells_min": 1000,
+      "resolution_max_m": [
+        1,
+        1,
+        1
+      ]
+    },
+    "fine": {
+      "cells_max": 200000,
+      "cells_min": 20000,
+      "resolution_max_m": [
+        0.4444444444444444,
+        0.4444444444444444,
+        0.4444444444444444
+      ]
+    },
+    "medium": {
+      "cells_max": 80000,
+      "cells_min": 5000,
+      "resolution_max_m": [
+        0.6666666666666666,
+        0.6666666666666666,
+        0.6666666666666666
+      ]
+    },
+    "qualification": {
+      "cells_max": 20000,
+      "cells_min": 1000,
+      "resolution_max_m": [
+        2,
+        2,
+        2
+      ]
+    }
+  },
+  "task_id": "urbanwind-task-045",
+  "tool_sequence": [
+    "blockMesh",
+    "checkMesh",
+    "decomposePar",
+    "checkMesh.parallel"
+  ],
+  "topology": "Conformal axis-aligned six-quadrilateral-face hexahedra; mandatory visible macro cuts, uniform spacing within each macro interval. Exact raw box partition must cover the whole fluid domain once and solid interior zero times.",
+  "truth_boundary": "Local mesh-design/tool reference only; no CFD/LES solution, observed GCI, flow grid-independence, yplus or experimental truth is claimed."
+}

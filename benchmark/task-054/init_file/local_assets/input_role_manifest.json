@@ -1,0 +1,36 @@
+{
+  "all_required_roles_materialized": true,
+  "generator_version": "urbanwind-local-assets-v3",
+  "required_external_inputs": [],
+  "roles": [
+    {
+      "label": "可见16栋城市几何与固定串行网格输入",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/city_geometry.geojson",
+        "local_assets/openfoam_base/system/blockMeshDict"
+      ],
+      "role_id": "input-001"
+    },
+    {
+      "label": "公开四核两方法分区验收合同",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/openfoam_base/partition_contract.json",
+        "local_assets/openfoam_base/method_configs/simple/decomposeParDict",
+        "local_assets/openfoam_base/method_configs/scotch/decomposeParDict"
+      ],
+      "role_id": "input-002"
+    },
+    {
+      "label": "真实工具执行及原始映射文件产物计划",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/partition_execution_plan.json"
+      ],
+      "role_id": "input-003"
+    }
+  ],
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-054"
+}

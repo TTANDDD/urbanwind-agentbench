@@ -1,0 +1,37 @@
+{
+  "all_required_roles_materialized": true,
+  "generator_version": "urbanwind-local-assets-v3",
+  "required_external_inputs": [],
+  "roles": [
+    {
+      "label": "本地程序化城市网格与已审计速度初始化",
+      "origin": "bundled_locally_rebuildable_template",
+      "paths": [
+        "local_assets/openfoam_city_base/system/blockMeshDict",
+        "local_assets/openfoam_city_base/0/U",
+        "local_assets/openfoam_city_base/0/nut"
+      ],
+      "role_id": "input-001"
+    },
+    {
+      "label": "带不规则时间戳和显式缺测掩膜的本地建筑表面温度情景",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/surface_temperature_source.csv",
+        "local_assets/surface_temperature_aligned.csv"
+      ],
+      "role_id": "input-002"
+    },
+    {
+      "label": "冻结缺测插值、时间对齐、建筑patch响应和数值门禁",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/surface_temperature_boundary_contract.json",
+        "local_assets/thermal_response_probes.csv"
+      ],
+      "role_id": "input-003"
+    }
+  ],
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-075"
+}

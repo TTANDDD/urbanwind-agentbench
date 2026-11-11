@@ -1,0 +1,13 @@
+zone_id,patch_name,time_s,q_w_m2,expected_area_m2,x_min_m,x_max_m
+west,heatWest,0.0,20.0,92.0,-4.0,2.0
+west,heatWest,60.0,40.0,92.0,-4.0,2.0
+west,heatWest,120.0,80.0,92.0,-4.0,2.0
+west,heatWest,180.0,40.0,92.0,-4.0,2.0
+center,heatCenter,0.0,40.0,56.0,2.0,6.0
+center,heatCenter,60.0,75.0,56.0,2.0,6.0
+center,heatCenter,120.0,150.0,56.0,2.0,6.0
+center,heatCenter,180.0,75.0,56.0,2.0,6.0
+east,heatEast,0.0,10.0,156.0,6.0,16.0
+east,heatEast,60.0,25.0,156.0,6.0,16.0
+east,heatEast,120.0,50.0,156.0,6.0,16.0
+east,heatEast,180.0,25.0,156.0,6.0,16.0

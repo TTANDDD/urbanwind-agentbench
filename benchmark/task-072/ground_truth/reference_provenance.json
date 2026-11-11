@@ -1,0 +1,30 @@
+{
+  "experimental_claim": false,
+  "host": "5070-server",
+  "independent_audit": "validation/openfoam-task072-v39c-independent-audit-v1.json",
+  "independent_audit_sha256": "9c7c777f12c6450e9eaba262e9e0535672ef185f90091762f4f44d09af301bad",
+  "schema_version": "1.0",
+  "software": [
+    {
+      "name": "GDAL/OGR",
+      "role": "local GeoJSON to GeoPackage conversion"
+    },
+    {
+      "name": "OpenFOAM",
+      "version": "OpenCFD-v2412"
+    }
+  ],
+  "source_runs": [
+    {
+      "case_id": "task-072-case-001",
+      "source_archive": "validation/openfoam-batch-20260928-v39c-task072-roughness-mapping/results/task072-three-zone-mapping/reference_candidate.tar.gz",
+      "source_archive_sha256": "485486c60b1d7098e7c0d55101ee2cee0fba68627cc6daa981f26b05a3d47c72",
+      "source_batch": "openfoam-batch-20260928-v39c-task072-roughness-mapping",
+      "source_job": "task072-three-zone-mapping",
+      "source_status_sha256": "a2224a833563649768325c7aa0a5054009d44bd30815b33a63b26e523d22ed2a",
+      "variant": "本地三分区粗糙度映射与真实求解验证",
+      "variant_key": "three_zone_local_gis_mapping"
+    }
+  ],
+  "task_id": "urbanwind-task-072"
+}

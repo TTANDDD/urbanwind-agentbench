@@ -1,0 +1,7 @@
+# UrbanWind task056 v54：网格单位缩放故障修复
+
+读取task_spec.json、case_plan.json、reporting_contract.json、task056_v54_contract.json和submission_schema.json。城市坐标是米制；先诊断给定故障，保持非尺度输入不变。case001质量必须通过而尺寸拒绝；只在case002修复后进行唯一50s有限URANS求解。
+
+提交repaired_case的13个字面量输入及四个报告文件，禁止可执行代码或私有证据路径。可信host必须事前登记当前提交快照和唯一7阶段，真实捕获/回收与全部场门禁通过后才评分；提交的operator_job_id只是标签。旧owner结果不证明未来作业完成。
+
+这是本地合成诊断任务，不是实验/现实城市风场、LES或流场精度真值。包内没有修复字典/网格/流场/原生日志或私有评价器；本地参考整合已完成，reference-ready仍以最终全局审计为准；release-valid尚未具备。

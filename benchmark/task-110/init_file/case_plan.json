@@ -1,0 +1,162 @@
+{
+  "cases": [
+    {
+      "case_id": "task-110-case-001",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "配置辐射与城市表面并检查时间、坐标和能量闭合。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "辐射方案A"
+      },
+      "metrics": [
+        "palm_energy_closure_percent",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "100*abs(inputs-outputs-storage)/max(abs(inputs),eps)",
+        "id": "palm_energy_closure_percent",
+        "name_zh": "PALM能量闭合误差",
+        "unit": "%"
+      },
+      "purpose": "PALM辐射耦合配置：执行变体 辐射方案A，围绕配置辐射与城市表面并检查时间、坐标和能量闭合。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-110",
+      "variant": "辐射方案A"
+    },
+    {
+      "case_id": "task-110-case-002",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "配置辐射与城市表面并检查时间、坐标和能量闭合。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "辐射方案B"
+      },
+      "metrics": [
+        "palm_energy_closure_percent",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "100*abs(inputs-outputs-storage)/max(abs(inputs),eps)",
+        "id": "palm_energy_closure_percent",
+        "name_zh": "PALM能量闭合误差",
+        "unit": "%"
+      },
+      "purpose": "PALM辐射耦合配置：执行变体 辐射方案B，围绕配置辐射与城市表面并检查时间、坐标和能量闭合。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-110",
+      "variant": "辐射方案B"
+    },
+    {
+      "case_id": "task-110-case-003",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "配置辐射与城市表面并检查时间、坐标和能量闭合。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "辐射方案C"
+      },
+      "metrics": [
+        "palm_energy_closure_percent",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "100*abs(inputs-outputs-storage)/max(abs(inputs),eps)",
+        "id": "palm_energy_closure_percent",
+        "name_zh": "PALM能量闭合误差",
+        "unit": "%"
+      },
+      "purpose": "PALM辐射耦合配置：执行变体 辐射方案C，围绕配置辐射与城市表面并检查时间、坐标和能量闭合。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-110",
+      "variant": "辐射方案C"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "cfd",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 3,
+  "required_solver_runs": 3,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-110"
+}

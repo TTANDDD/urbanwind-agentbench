@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-055",
+  "reference_status": "openfoam_tool_reference_generated",
+  "evaluator_status": "task_specific_openfoam_reexecution_check",
+  "release_status": "reference_ready_not_release_valid",
+  "raw_reference_case": "task055-v53-formal-runtime-raw.tar.gz",
+  "reference_metrics": "reference_metrics.json",
+  "reference_provenance": "reference_provenance.json",
+  "canonical_result": "canonical_result.json",
+  "experimental_claim": false,
+  "truth_type": "verified_openfoam_tool_reference",
+  "expected_ground_truth": {
+    "case_ids": [
+      "task-055-case-001"
+    ],
+    "metric_contracts": [
+      {
+        "id": "remaining_internal_face_orientation_defect_count",
+        "name_zh": "修复后内部面朝向错误数量",
+        "unit": "faces",
+        "formula": "count of internal faces with S_f dot (geometric_neighbour_centre-geometric_owner_centre) <= 0, recomputed from raw submitted instance; target 0; preservation, cell closure, report and complete native gates are mandatory conjunctive checks",
+        "aggregation": "per_case_then_task"
+      },
+      {
+        "id": "evidence_provenance_fraction",
+        "name_zh": "证据溯源覆盖率",
+        "unit": "fraction",
+        "formula": "hashed_source_linked_evidence / required_evidence",
+        "aggregation": "per_case_then_task"
+      },
+      {
+        "id": "hard_gate_pass_fraction",
+        "name_zh": "硬门禁通过率",
+        "unit": "fraction",
+        "formula": "passed_hard_gates / required_hard_gates",
+        "aggregation": "per_case_then_task"
+      }
+    ],
+    "input_roles": [
+      "冻结的带单内部面朝向故障原始城市polyMesh",
+      "公开最小修复与几何守恒合同",
+      "完整原生质量阈值和数据型提交格式"
+    ],
+    "hidden_tolerances_status": "public_constraints_raw_instance_no_hidden_ID_matching"
+  },
+  "data_acquisition_blockers": [],
+  "blockers": [
+    "frozen_distributable_runtime_and_portable_hidden_harness_pending"
+  ],
+  "limitations": [
+    "Imported synthetic city internal-face winding diagnosis and minimal repair only; geometric conservation diagnostic U=(1,0,0), not solved flow, LES, real-city or experimental truth.",
+    "reference-ready is not release-valid; owner fixture score100 is not agent performance."
+  ],
+  "claim_boundary": "Imported synthetic city internal-face winding diagnosis and minimal repair only; geometric conservation diagnostic U=(1,0,0), not solved flow, LES, real-city or experimental truth."
+}

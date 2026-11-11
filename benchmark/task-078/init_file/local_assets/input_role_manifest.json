@@ -1,0 +1,35 @@
+{
+  "all_required_roles_materialized": true,
+  "generator_version": "urbanwind-local-assets-v3",
+  "required_external_inputs": [],
+  "roles": [
+    {
+      "label": "本地可重建365488单元单体建筑尾流前驱源域",
+      "origin": "bundled_locally_rebuildable_template",
+      "paths": [
+        "local_assets/openfoam_base/system/blockMeshDict",
+        "local_assets/openfoam_base/constant/triSurface/building.stl"
+      ],
+      "role_id": "input-001"
+    },
+    {
+      "label": "可见64点探针、0.2秒采样和300-360/360-420秒冻结统计窗",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/precursor_probe_points.csv",
+        "local_assets/precursor_statistics_contract.json"
+      ],
+      "role_id": "input-002"
+    },
+    {
+      "label": "均值、方差、归一化频带能量和积分时间尺度的直接复算合同",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/precursor_statistics_contract.json"
+      ],
+      "role_id": "input-003"
+    }
+  ],
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-078"
+}

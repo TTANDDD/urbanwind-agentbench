@@ -1,0 +1,12 @@
+{
+  "answer_included": false,
+  "expected_agent_action": "diagnose and repair without changing unrelated settings",
+  "fault_family": "surface_normal_and_closure_error",
+  "fault_seed": 202609030057,
+  "injected": true,
+  "observed_fault_parameters": {
+    "symptom": "open_or_reversed_faces"
+  },
+  "target_file": "local_assets/openfoam_base/constant/triSurface/building.stl",
+  "task_id": "urbanwind-task-057"
+}

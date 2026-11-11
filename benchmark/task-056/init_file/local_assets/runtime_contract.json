@@ -1,0 +1,11 @@
+{
+  "note": "Static public identity only; no executable/runtime grant or proof of any submitted job. Actual bound source/runtime/evidence belongs to the operator.",
+  "reference_runtime_label": "OpenCFD-v2412-serial-SST-C9-private-capture",
+  "required_software": [
+    "python",
+    "openfoam"
+  ],
+  "runtime_image_status": "qualified_local_protected_host_not_portable_release",
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-056"
+}

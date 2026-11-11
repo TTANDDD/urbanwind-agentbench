@@ -1,0 +1,22 @@
+{
+  "experimental_claim": false,
+  "metric_formula": "max_forced_cases(abs((vertical_exchange_forced-vertical_exchange_neutral)/max(abs(vertical_exchange_neutral),0.01)))",
+  "neutral_vertical_exchange_m_s": 0.001751722644059122,
+  "per_forced_case_responses": {
+    "task-094-case-002": 0.0027997998016289494,
+    "task-094-case-003": -0.005721614261899248
+  },
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-094",
+  "truth_type": "verified_openfoam_numerical_reference",
+  "units": {
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction",
+    "thermal_exchange_response": "fraction"
+  },
+  "values": {
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0,
+    "thermal_exchange_response": 0.005721614261899248
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "experimental_claim": false,
+  "metric_formula": "mean(abs(exchange_stable-exchange_neutral),abs(exchange_unstable-exchange_neutral))/max(abs(exchange_neutral),0.01)",
+  "neutral_vertical_exchange_m_s": 0.001751722644059122,
+  "schema_version": "1.0",
+  "signed_regime_responses": {
+    "stable": 0.003200678146327582,
+    "unstable": 0.0027997998016289494
+  },
+  "task_id": "urbanwind-task-095",
+  "truth_type": "verified_openfoam_numerical_reference",
+  "units": {
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction",
+    "les_stability_exchange_response": "fraction"
+  },
+  "values": {
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0,
+    "les_stability_exchange_response": 0.003000238973978266
+  }
+}

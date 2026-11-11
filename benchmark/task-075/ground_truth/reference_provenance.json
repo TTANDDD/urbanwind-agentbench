@@ -1,0 +1,25 @@
+{
+  "experimental_claim": false,
+  "host": "5070-server",
+  "independent_audit": "validation/openfoam-task075-v41-independent-audit-v1.json",
+  "independent_audit_sha256": "3de9a815da0532eadfb507e44a120b5d7efdc134889f2cfbe594da4fe18cc089",
+  "schema_version": "1.0",
+  "software": {
+    "name": "OpenFOAM",
+    "solver": "buoyantPimpleFoam",
+    "version": "OpenCFD-v2412"
+  },
+  "source_runs": [
+    {
+      "case_id": "task-075-case-001",
+      "source_archive": "validation/openfoam-batch-20260930-v41-task075-surface-temperature/results/task075-irregular-missing-surface-temperature/reference_candidate.tar.gz",
+      "source_archive_sha256": "b7dbfb1ec3cc78bf30a0c3acb14cf56a8bc457e8ae05f1367073361de09fc2e5",
+      "source_batch": "openfoam-batch-20260930-v41-task075-surface-temperature",
+      "source_job": "task075-irregular-missing-surface-temperature",
+      "source_status_sha256": "0770182c771a5a9398a3ada132730abd3c3dac9b68a2c1dacdc0eda3b304adad",
+      "variant": "不规则缺测表面温度对齐与真实求解验证",
+      "variant_key": "irregular_missing_linear_fill_time_varying_building_temperature"
+    }
+  ],
+  "task_id": "urbanwind-task-075"
+}

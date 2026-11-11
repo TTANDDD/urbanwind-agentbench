@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "本地生成的两套对流格式候选配置",
+      "role_id": "input-001",
+      "seed": 202609038501,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.24907664,
+        0.80541465,
+        0.20617674,
+        0.65299424,
+        0.09179706,
+        0.35723198,
+        0.180879,
+        0.64445276,
+        0.38679236,
+        0.61992129,
+        0.64419335,
+        0.95200565,
+        0.52380088,
+        0.37915828,
+        0.49992417,
+        0.79999687
+      ]
+    },
+    {
+      "label": "共同网格、时间步、SGS模型、入口、容差和统计窗口",
+      "role_id": "input-002",
+      "seed": 202609038502,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.3672194,
+        0.71835865,
+        0.44410971,
+        0.95788436,
+        0.32925224,
+        0.05862899,
+        0.39689183,
+        0.19013826,
+        0.40964653,
+        0.79466556,
+        0.52543561,
+        0.47572257,
+        0.56953666,
+        0.8661961,
+        0.77747819,
+        0.08808922
+      ]
+    },
+    {
+      "label": "本地参考尾流与脉动观测量及参考尺度",
+      "role_id": "input-003",
+      "seed": 202609038503,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.94950494,
+        0.90021768,
+        0.49949305,
+        0.84744667,
+        0.57715123,
+        0.32486599,
+        0.56588535,
+        0.3300116,
+        0.77451877,
+        0.600116,
+        0.6276662,
+        0.7224722,
+        0.78524848,
+        0.70115124,
+        0.80312817,
+        0.5335828
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-085"
+}

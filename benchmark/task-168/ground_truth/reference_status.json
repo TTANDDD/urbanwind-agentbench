@@ -1,0 +1,65 @@
+{
+  "blockers": [
+    "independent raw-artifact recomputation",
+    "positive and adversarial evaluator tests",
+    "release policy freeze"
+  ],
+  "canonical_result": "canonical_result.json",
+  "claim_boundary": "Local reference generated; not release-valid ground truth.",
+  "evaluator_status": "task_specific_local_metric_check",
+  "expected_ground_truth": {
+    "case_ids": [
+      "task-168-case-001"
+    ],
+    "hidden_tolerances_status": "local_metric_tolerance_generated",
+    "input_roles": [
+      "冻结的风舒适/安全标准版本",
+      "风气候联合分布与方向权重",
+      "行人高度、平均时窗和超限规则"
+    ],
+    "metric_contracts": [
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "abs(P_exceed_model-P_exceed_reference)",
+        "id": "comfort_exceedance_probability_error",
+        "name_zh": "风舒适超限概率误差",
+        "unit": "fraction"
+      },
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "evaluated_required_climate_bins / required_climate_bins",
+        "id": "comfort_standard_case_coverage",
+        "name_zh": "舒适标准工况覆盖率",
+        "unit": "fraction"
+      },
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "hashed_source_linked_evidence / required_evidence",
+        "id": "evidence_provenance_fraction",
+        "name_zh": "证据溯源覆盖率",
+        "unit": "fraction"
+      },
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "passed_hard_gates / required_hard_gates",
+        "id": "hard_gate_pass_fraction",
+        "name_zh": "硬门禁通过率",
+        "unit": "fraction"
+      }
+    ],
+    "reference_values_status": "local_reference_generated"
+  },
+  "experimental_claim": false,
+  "limitations": [
+    "The evaluator compares the reported task metric and result-artifact metric to a frozen local reference.",
+    "It does not yet independently recompute every domain-specific metric from every raw submitted artifact.",
+    "It does not establish experimental or full physical validity."
+  ],
+  "reference_metrics": "reference_metrics.json",
+  "reference_provenance": "reference_provenance.json",
+  "reference_status": "local_reference_generated",
+  "release_status": "scaffold_only",
+  "schema_version": "1.1",
+  "task_id": "urbanwind-task-168",
+  "truth_type": "deterministic_local_numerical_reference"
+}

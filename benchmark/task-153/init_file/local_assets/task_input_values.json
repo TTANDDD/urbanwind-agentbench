@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "粗中细三层匹配解",
+      "role_id": "input-001",
+      "seed": 202609045301,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.29869166,
+        0.13073322,
+        0.88508779,
+        0.11750863,
+        0.14930749,
+        0.52737317,
+        0.43695407,
+        0.70119182,
+        0.12009669,
+        0.34804957,
+        0.51337841,
+        0.92649048,
+        0.96299764,
+        0.83694813,
+        0.61087128,
+        0.32648237
+      ]
+    },
+    {
+      "label": "共同目标物理量",
+      "role_id": "input-002",
+      "seed": 202609045302,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.55232764,
+        0.4828369,
+        0.62797309,
+        0.36779825,
+        0.80108023,
+        0.78598396,
+        0.54066415,
+        0.51955069,
+        0.99474906,
+        0.88479116,
+        0.08429821,
+        0.95810371,
+        0.92420011,
+        0.56380696,
+        0.98214633,
+        0.32619955
+      ]
+    },
+    {
+      "label": "加密比与安全系数",
+      "role_id": "input-003",
+      "seed": 202609045303,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.05290281,
+        0.70486166,
+        0.35038007,
+        0.06117392,
+        0.28632944,
+        0.89781234,
+        0.13937152,
+        0.19372268,
+        0.46728437,
+        0.15826815,
+        0.11214341,
+        0.22835461,
+        0.81567896,
+        0.74275321,
+        0.75791731,
+        0.92136512
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-153"
+}

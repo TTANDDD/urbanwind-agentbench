@@ -1,0 +1,20 @@
+{
+  "case_ids": [
+    "task-054-case-001"
+  ],
+  "claim_boundary": "Local synthetic city and genuine OpenFOAM mesh partition tool reference only; no CFD/LES, communication timing, runtime speedup, experimental or real-city validation.",
+  "method_subruns": [
+    "simple",
+    "scotch"
+  ],
+  "primary_metric": {
+    "id": "cell_load_imbalance_ratio",
+    "unit": "fraction",
+    "value": {
+      "scotch": 0.009721596032461676,
+      "simple": 0.004959422903516681
+    }
+  },
+  "result_role": "mesh_metrics.json",
+  "task_id": "urbanwind-task-054"
+}

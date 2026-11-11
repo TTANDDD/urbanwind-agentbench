@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "被动标量/浓度场",
+      "role_id": "input-001",
+      "seed": 202609047001,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.5979486,
+        0.75415143,
+        0.11718713,
+        0.96621708,
+        0.34368171,
+        0.95568611,
+        0.78591093,
+        0.56019172,
+        0.28053322,
+        0.37257468,
+        0.07825786,
+        0.08535278,
+        0.44190027,
+        0.48623196,
+        0.63286294,
+        0.12492089
+      ]
+    },
+    {
+      "label": "源项合同",
+      "role_id": "input-002",
+      "seed": 202609047002,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.78685127,
+        0.7390335,
+        0.12580004,
+        0.35069957,
+        0.19369245,
+        0.93244231,
+        0.79300392,
+        0.14398368,
+        0.21740938,
+        0.63273693,
+        0.70229711,
+        0.38870323,
+        0.63738045,
+        0.68026476,
+        0.62238862,
+        0.87020865
+      ]
+    },
+    {
+      "label": "人口或道路暴露权重掩膜",
+      "role_id": "input-003",
+      "seed": 202609047003,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.27093084,
+        0.73037489,
+        0.2351511,
+        0.34655894,
+        0.55052,
+        0.54748422,
+        0.07308718,
+        0.84241153,
+        0.06402285,
+        0.64753378,
+        0.35242953,
+        0.91348987,
+        0.09449745,
+        0.06739241,
+        0.48529041,
+        0.88309425
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-170"
+}

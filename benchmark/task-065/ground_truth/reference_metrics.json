@@ -1,0 +1,31 @@
+{
+  "diagnostic_metrics": {
+    "downstream": {
+      "diagonal_reynolds_stress_relative_error": 0.3120814234089608,
+      "integral_time_scale_relative_error": 0.46746279220797193,
+      "mean_velocity_rmse_m_s": 0.033485306913288077,
+      "spectral_band_mae": 0.08374688692034811
+    },
+    "inlet": {
+      "diagonal_reynolds_stress_relative_error": 0.12610051230708624,
+      "integral_time_scale_relative_error": 0.04063338555910305,
+      "mean_velocity_rmse_m_s": 0.000864591749224178,
+      "spectral_band_mae": 0.011679746554594974
+    }
+  },
+  "experimental_claim": false,
+  "metric_formula": "mean_{p in 16 inlet probes,c in Ux Uy Uz,b in 5 bands} abs(F_realized[p,c,b]-F_target[p,c,b]); F is normalized one-sided PSD energy over 30<t<=90 s at dt=0.2 s",
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-065",
+  "truth_type": "verified_openfoam_numerical_reference",
+  "units": {
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction",
+    "inflow_spectral_band_error": "fraction"
+  },
+  "values": {
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0,
+    "inflow_spectral_band_error": 0.011679746554594974
+  }
+}

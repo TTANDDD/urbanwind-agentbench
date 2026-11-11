@@ -1,0 +1,162 @@
+{
+  "cases": [
+    {
+      "case_id": "task-108-case-001",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "执行稳定、中性和不稳定大气边界层情景。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "稳定"
+      },
+      "metrics": [
+        "palm_stability_response_nmae",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "weighted_mean_regimes(abs(response_model-response_reference))/reference_scale",
+        "id": "palm_stability_response_nmae",
+        "name_zh": "PALM稳定度响应NMAE",
+        "unit": "fraction"
+      },
+      "purpose": "PALM稳定度工况：执行变体 稳定，围绕执行稳定、中性和不稳定大气边界层情景。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-108",
+      "variant": "稳定"
+    },
+    {
+      "case_id": "task-108-case-002",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "执行稳定、中性和不稳定大气边界层情景。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "中性"
+      },
+      "metrics": [
+        "palm_stability_response_nmae",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "weighted_mean_regimes(abs(response_model-response_reference))/reference_scale",
+        "id": "palm_stability_response_nmae",
+        "name_zh": "PALM稳定度响应NMAE",
+        "unit": "fraction"
+      },
+      "purpose": "PALM稳定度工况：执行变体 中性，围绕执行稳定、中性和不稳定大气边界层情景。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-108",
+      "variant": "中性"
+    },
+    {
+      "case_id": "task-108-case-003",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "执行稳定、中性和不稳定大气边界层情景。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "不稳定"
+      },
+      "metrics": [
+        "palm_stability_response_nmae",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "weighted_mean_regimes(abs(response_model-response_reference))/reference_scale",
+        "id": "palm_stability_response_nmae",
+        "name_zh": "PALM稳定度响应NMAE",
+        "unit": "fraction"
+      },
+      "purpose": "PALM稳定度工况：执行变体 不稳定，围绕执行稳定、中性和不稳定大气边界层情景。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-108",
+      "variant": "不稳定"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "cfd",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 3,
+  "required_solver_runs": 3,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-108"
+}

@@ -1,0 +1,4 @@
+FoamFile{format ascii; class volScalarField; object p;}
+dimensions [0 2 -2 0 0 0 0];
+internalField uniform 0;
+boundaryField{inlet{type zeroGradient;} outlet{type fixedValue; value uniform 0;} sideLow{type symmetryPlane;} sideHigh{type symmetryPlane;} ground{type zeroGradient;} top{type symmetryPlane;} building{type zeroGradient;}}

@@ -1,0 +1,34 @@
+{
+  "all_required_roles_materialized": true,
+  "generator_version": "urbanwind-local-assets-v3",
+  "required_external_inputs": [],
+  "roles": [
+    {
+      "label": "本地确定性注入的故障输入",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/task_input_values.json"
+      ],
+      "role_id": "input-001"
+    },
+    {
+      "label": "本地非目标设置清单",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/task_input_values.json"
+      ],
+      "role_id": "input-002"
+    },
+    {
+      "label": "冻结修复验收门槛",
+      "origin": "deterministic_local_generation",
+      "paths": [
+        "local_assets/reference_diagnostics.json",
+        "local_assets/task_input_values.json"
+      ],
+      "role_id": "input-003"
+    }
+  ],
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-129"
+}

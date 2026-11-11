@@ -1,0 +1,41 @@
+{
+  "experimental_claim": false,
+  "layer_case_mean_Ux_m_s": {
+    "fixedShearStress": {
+      "pedestrian_layer": 0.5867096121809875,
+      "roof_layer": 1.1942270410950522
+    },
+    "slip": {
+      "pedestrian_layer": 0.5936756684067823,
+      "roof_layer": 1.2027247357599062
+    },
+    "symmetryPlane": {
+      "pedestrian_layer": 0.5936753995620855,
+      "roof_layer": 1.202718690968448
+    }
+  },
+  "layer_range_Ux_m_s": {
+    "pedestrian_layer": 0.0069660562257948255,
+    "roof_layer": 0.00849769466485406
+  },
+  "metric_formula": "max(range_b(mean_{i in {340,360,380,400},p in pedestrian_layer} Ux[b,i,p]),range_b(mean_{i in {340,360,380,400},p in roof_layer} Ux[b,i,p]))/1.2; b in {slip,symmetryPlane,fixedShearStress}",
+  "response_iterations": [
+    340,
+    360,
+    380,
+    400
+  ],
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-069",
+  "truth_type": "verified_openfoam_numerical_reference",
+  "units": {
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction",
+    "top_boundary_response_spread": "fraction"
+  },
+  "values": {
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0,
+    "top_boundary_response_spread": 0.007081412220711718
+  }
+}

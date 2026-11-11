@@ -1,0 +1,57 @@
+{
+  "blockers": [
+    "frozen_distributable_runtime_and_portable_hidden_harness_pending"
+  ],
+  "canonical_result": "canonical_result.json",
+  "claim_boundary": "Synthetic16-building city SI scale/unit repair tool reference with mandatory auxiliary50s conservative transient SST; not experimental/real-city/LES/stationary/grid-independent flow truth.",
+  "data_acquisition_blockers": [],
+  "evaluator_status": "task_specific_registered_full7_raw_check",
+  "expected_ground_truth": {
+    "case_ids": [
+      "task-056-case-001",
+      "task-056-case-002"
+    ],
+    "hidden_tolerances_status": "public_conjunctive_constraints_no_hidden_ID_or_dictionary_bytes",
+    "input_roles": [
+      "米制16栋城市与唯一尺度故障字典",
+      "冻结网格质量与尺度/雷诺数/有限CFD合同",
+      "固定物理数值输入与数据型提交规范"
+    ],
+    "metric_contracts": [
+      {
+        "aggregation": "report_both_cases_primary_repaired_case002_no_success_subset",
+        "formula": "max_d(abs((max(raw_points[d])-min(raw_points[d]))-target_span[d])/target_span[d]); target_span=(20,16,7)m",
+        "id": "geometry_scale_relative_error",
+        "name_zh": "几何尺度相对误差",
+        "unit": "fraction"
+      },
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "hashed_source_linked_evidence / required_evidence",
+        "id": "evidence_provenance_fraction",
+        "name_zh": "证据溯源覆盖率",
+        "unit": "fraction"
+      },
+      {
+        "aggregation": "per_case_then_task",
+        "formula": "passed_hard_gates / required_hard_gates",
+        "id": "hard_gate_pass_fraction",
+        "name_zh": "硬门禁通过率",
+        "unit": "fraction"
+      }
+    ]
+  },
+  "experimental_claim": false,
+  "limitations": [
+    "Synthetic16-building city SI scale/unit repair tool reference with mandatory auxiliary50s conservative transient SST; not experimental/real-city/LES/stationary/grid-independent flow truth.",
+    "Local reference-ready is not portable release-valid or agent performance."
+  ],
+  "raw_reference_case": "task056-v54-owned-runtime-raw.tar.gz",
+  "reference_metrics": "reference_metrics.json",
+  "reference_provenance": "reference_provenance.json",
+  "reference_status": "openfoam_tool_reference_generated",
+  "release_status": "reference_ready_not_release_valid",
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-056",
+  "truth_type": "verified_openfoam_tool_reference"
+}

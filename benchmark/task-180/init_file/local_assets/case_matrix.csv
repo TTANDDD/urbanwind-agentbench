@@ -1,0 +1,4 @@
+case_id,variant,seed,wind_direction_deg,reference_speed_m_s,stability,surface_heat_flux_w_m2,sgs_model,time_step_s,convection_scheme,pressure_velocity_coupling,roughness_length_m,source_configuration,decomposition_method,restart_segments,software_variant,controlled_factor,controlled_level
+task-180-case-001,情景A,202609048000,0.0,1.2,neutral,0.0,,,,,,,,,,scenario,情景A
+task-180-case-002,情景B,202609048000,0.0,1.2,neutral,0.0,,,,,,,,,,scenario,情景B
+task-180-case-003,情景C,202609048000,0.0,1.2,neutral,0.0,,,,,,,,,,scenario,情景C

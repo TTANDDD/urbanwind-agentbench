@@ -1,0 +1,63 @@
+{
+  "claim_boundary": "Synthetic16-building city SI scale/unit repair tool reference with mandatory auxiliary50s conservative transient SST; not experimental/real-city/LES/stationary/grid-independent flow truth.",
+  "experimental_claim": false,
+  "per_case": {
+    "faulty": {
+      "H_mesh_m": 0.00175,
+      "Re_H": 20.999999999999996,
+      "actual_bbox_spans_m": [
+        0.02,
+        0.016,
+        0.007
+      ],
+      "actual_inlet_U_m_s": 1.2,
+      "actual_nu_m2_s": 0.0001,
+      "geometry_scale_relative_error": 0.999,
+      "source": "raw points/building+ground patch vertices and initial actual U/nu"
+    },
+    "repaired": {
+      "H_mesh_m": 1.75,
+      "Re_H": 21000.0,
+      "actual_bbox_spans_m": [
+        20.0,
+        16.0,
+        7.0
+      ],
+      "actual_inlet_U_m_s": 1.2,
+      "actual_nu_m2_s": 0.0001,
+      "geometry_scale_relative_error": 0.0,
+      "source": "raw points/building+ground patch vertices and initial actual U/nu"
+    }
+  },
+  "solver_log": {
+    "bounding_messages_diagnostic": 0,
+    "end_s": 49.99999999999862,
+    "initial_Co_observations": 2,
+    "linear_solve_counts": {
+      "Ux": 15000,
+      "Uy": 15000,
+      "Uz": 15000,
+      "k": 15000,
+      "omega": 15000,
+      "p": 45000
+    },
+    "maxCo": 0.0924184647034,
+    "max_absolute_cumulative_continuity": 6.51683748851e-11,
+    "max_linear_final_residual": 9.9999991179e-09,
+    "physical_validation_claim": false,
+    "steps": 5000,
+    "total_Co_observations": 5002
+  },
+  "task_id": "urbanwind-task-056",
+  "truth_type": "verified_openfoam_tool_reference",
+  "units": {
+    "evidence_provenance_fraction": "fraction",
+    "geometry_scale_relative_error": "fraction",
+    "hard_gate_pass_fraction": "fraction"
+  },
+  "values": {
+    "evidence_provenance_fraction": 1.0,
+    "geometry_scale_relative_error": 0.0,
+    "hard_gate_pass_fraction": 1.0
+  }
+}

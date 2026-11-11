@@ -1,0 +1,162 @@
+{
+  "cases": [
+    {
+      "case_id": "task-191-case-001",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "在完整辐射和热边界输入下，对三个反照率候选的热收益与通风代价进行比较。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "反照率候选A"
+      },
+      "metrics": [
+        "albedo_ventilation_tradeoff_regret",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "utility_best_candidate-utility_selected_candidate",
+        "id": "albedo_ventilation_tradeoff_regret",
+        "name_zh": "反照率-通风权衡后悔值",
+        "unit": "fraction"
+      },
+      "purpose": "地表反照率与通风候选筛选：执行变体 反照率候选A，围绕在完整辐射和热边界输入下，对三个反照率候选的热收益与通风代价进行比较。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-191",
+      "variant": "反照率候选A"
+    },
+    {
+      "case_id": "task-191-case-002",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "在完整辐射和热边界输入下，对三个反照率候选的热收益与通风代价进行比较。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "反照率候选B"
+      },
+      "metrics": [
+        "albedo_ventilation_tradeoff_regret",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "utility_best_candidate-utility_selected_candidate",
+        "id": "albedo_ventilation_tradeoff_regret",
+        "name_zh": "反照率-通风权衡后悔值",
+        "unit": "fraction"
+      },
+      "purpose": "地表反照率与通风候选筛选：执行变体 反照率候选B，围绕在完整辐射和热边界输入下，对三个反照率候选的热收益与通风代价进行比较。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-191",
+      "variant": "反照率候选B"
+    },
+    {
+      "case_id": "task-191-case-003",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "PROCEDURAL_CITY",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "在完整辐射和热边界输入下，对三个反照率候选的热收益与通风代价进行比较。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "反照率候选C"
+      },
+      "metrics": [
+        "albedo_ventilation_tradeoff_regret",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "utility_best_candidate-utility_selected_candidate",
+        "id": "albedo_ventilation_tradeoff_regret",
+        "name_zh": "反照率-通风权衡后悔值",
+        "unit": "fraction"
+      },
+      "purpose": "地表反照率与通风候选筛选：执行变体 反照率候选C，围绕在完整辐射和热边界输入下，对三个反照率候选的热收益与通风代价进行比较。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "palm",
+        "netcdf"
+      ],
+      "task_id": "urbanwind-task-191",
+      "variant": "反照率候选C"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "cfd",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 3,
+  "required_solver_runs": 3,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-191"
+}

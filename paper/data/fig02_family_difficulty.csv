@@ -1,0 +1,11 @@
+family,D1,D2,D3,D4,D5
+Evidence & case definition,15,5,0,0,0
+GIS & geometry,0,19,0,1,0
+Mesh & numerics,0,0,15,5,0
+ABL & boundary conditions,0,0,0,20,0
+OpenFOAM RANS/LES,0,0,0,0,20
+PALM urban microclimate,0,0,0,0,20
+Diagnosis & repair,0,0,0,20,0
+Validation & uncertainty,0,0,0,20,0
+Flow diagnostics & risk,0,0,5,15,0
+Optimization & decision,0,0,0,0,20

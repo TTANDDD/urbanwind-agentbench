@@ -1,0 +1,159 @@
+{
+  "cases": [
+    {
+      "case_id": "task-086-case-001",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "SB4_LOCAL",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "审计PIMPLE循环、松弛和线性求解器对稳定性与成本的影响。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "参考设置"
+      },
+      "metrics": [
+        "solver_setting_cost_convergence_score",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "convergence_quality / normalized_runtime_cost",
+        "id": "solver_setting_cost_convergence_score",
+        "name_zh": "求解器设置收敛成本得分",
+        "unit": "1"
+      },
+      "purpose": "压力速度耦合设置：执行变体 参考设置，围绕审计PIMPLE循环、松弛和线性求解器对稳定性与成本的影响。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-086",
+      "variant": "参考设置"
+    },
+    {
+      "case_id": "task-086-case-002",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "SB4_LOCAL",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "审计PIMPLE循环、松弛和线性求解器对稳定性与成本的影响。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "耦合设置A"
+      },
+      "metrics": [
+        "solver_setting_cost_convergence_score",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "convergence_quality / normalized_runtime_cost",
+        "id": "solver_setting_cost_convergence_score",
+        "name_zh": "求解器设置收敛成本得分",
+        "unit": "1"
+      },
+      "purpose": "压力速度耦合设置：执行变体 耦合设置A，围绕审计PIMPLE循环、松弛和线性求解器对稳定性与成本的影响。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-086",
+      "variant": "耦合设置A"
+    },
+    {
+      "case_id": "task-086-case-003",
+      "execution_role": "real_solver_run",
+      "gates": [
+        "artifact",
+        "execution",
+        "numerical",
+        "physical",
+        "external_validation",
+        "engineering_decision"
+      ],
+      "input_contract": {
+        "anchor_id": "SB4_LOCAL",
+        "anchor_state": "local_generator_ready",
+        "data_origin": "deterministic_local_generation",
+        "focus": "审计PIMPLE循环、松弛和线性求解器对稳定性与成本的影响。",
+        "required_external_inputs": [],
+        "unresolved_inputs": [],
+        "variant": "耦合设置B"
+      },
+      "metrics": [
+        "solver_setting_cost_convergence_score",
+        "evidence_provenance_fraction",
+        "hard_gate_pass_fraction"
+      ],
+      "primary_metric": {
+        "aggregation": "per_case_then_task",
+        "formula": "convergence_quality / normalized_runtime_cost",
+        "id": "solver_setting_cost_convergence_score",
+        "name_zh": "求解器设置收敛成本得分",
+        "unit": "1"
+      },
+      "purpose": "压力速度耦合设置：执行变体 耦合设置B，围绕审计PIMPLE循环、松弛和线性求解器对稳定性与成本的影响。",
+      "reference_status": "pending_real_execution_and_validation",
+      "required_evidence": [
+        "exact commands and working directories",
+        "software names, versions, executable paths and SHA256 when available",
+        "timezone-aware start/end times and exit codes",
+        "SHA256-addressed input, log and raw-output files",
+        "coordinate system, units, masks, statistical windows and aggregation order"
+      ],
+      "software_chain": [
+        "python",
+        "openfoam"
+      ],
+      "task_id": "urbanwind-task-086",
+      "variant": "耦合设置B"
+    }
+  ],
+  "comparison_contract": {
+    "aggregation_order": "raw_samples -> case metric -> task comparison",
+    "compute_track": "cfd",
+    "hard_gate_precedence": true,
+    "independent_unit": "case_anchor_geometry_and_forcing",
+    "test_selection_forbidden": true
+  },
+  "required_cases": 3,
+  "required_solver_runs": 3,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-086"
+}

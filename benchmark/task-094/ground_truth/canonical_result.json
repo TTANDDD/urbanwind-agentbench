@@ -1,0 +1,19 @@
+{
+  "case_ids": [
+    "task-094-case-001",
+    "task-094-case-002",
+    "task-094-case-003"
+  ],
+  "claim_boundary": "Three-case OpenFOAM thermal-city-LES numerical reference; not experimental truth.",
+  "per_forced_case_responses": {
+    "task-094-case-002": 0.0027997998016289494,
+    "task-094-case-003": -0.005721614261899248
+  },
+  "primary_metric": {
+    "id": "thermal_exchange_response",
+    "unit": "fraction",
+    "value": 0.005721614261899248
+  },
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-094"
+}

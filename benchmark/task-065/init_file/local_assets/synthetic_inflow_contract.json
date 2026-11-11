@@ -1,0 +1,51 @@
+{
+  "analysis_window_s": [30.0, 90.0],
+  "case_id": "task-065-case-001",
+  "claim_scope": "Deterministic local synthetic inflow plus one OpenFOAM numerical execution.",
+  "frozen_gates": {
+    "downstream_mean_velocity_rmse_max_m_s": 0.1,
+    "downstream_reynolds_stress_relative_error_max": 0.6,
+    "downstream_spectral_band_mae_max": 0.12,
+    "inlet_integral_time_scale_relative_error_max": 0.35,
+    "inlet_mean_velocity_rmse_max_m_s": 0.05,
+    "inlet_reynolds_stress_relative_error_max": 0.35,
+    "max_abs_cumulative_continuity": 0.01,
+    "max_courant": 1.0,
+    "max_primary_metric": 0.08,
+    "minimum_sample_count": 300
+  },
+  "full_end_time_s": 90.0,
+  "input_interval_s": 0.2,
+  "mean_velocity_m_s": [1.2, 0.0, 0.0],
+  "primary_metric": {
+    "formula": "mean_{p in 16 inlet probes,c in Ux Uy Uz,b in 5 bands} abs(F_realized[p,c,b]-F_target[p,c,b]); F is normalized one-sided PSD energy over 30<t<=90 s at dt=0.2 s",
+    "id": "inflow_spectral_band_error",
+    "name_zh": "入口谱频带误差",
+    "unit": "fraction"
+  },
+  "seed": 2026100365,
+  "solver_contract": {
+    "cells": 365488,
+    "dt_s": 0.02,
+    "mpi_ranks": 16,
+    "openfoam_version": "OpenCFD-v2412",
+    "solver": "pimpleFoam",
+    "turbulence_model": "WALE"
+  },
+  "spatial_grid": {
+    "x_m": -4.0,
+    "y_count": 17,
+    "y_range_m": [-6.2, 6.2],
+    "z_count": 13,
+    "z_range_m": [0.0, 9.0]
+  },
+  "spectral_target": {
+    "bands_hz": [[0.016666666666666666, 0.1], [0.1, 0.25], [0.25, 0.5], [0.5, 1.0], [1.0, 2.500000001]],
+    "normalized_band_fractions": [0.34, 0.3, 0.2, 0.11, 0.05],
+    "period_s": 60.0
+  },
+  "task_gate": "All inlet, downstream, solver, mesh, finite-value, mean-field and provenance gates must pass; no successful subset may be selected.",
+  "task_id": "urbanwind-task-065",
+  "target_rms_m_s": [0.144, 0.096, 0.072],
+  "truth_boundary": "Local deterministic synthetic inlet and matching OpenFOAM numerical reference only; not measured atmospheric turbulence, experiment, PIV, DNS, wind-tunnel or field truth, and not release-valid."
+}

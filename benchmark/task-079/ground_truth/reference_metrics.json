@@ -1,0 +1,25 @@
+{
+  "diagnostic_metrics": {
+    "inlet_U_rmse_m_s": 2.3289178146136844e-12,
+    "inlet_k_rmse_m2_s2": 8.756884106730922e-15,
+    "inlet_omega_rmse_s_1": 1.0393524470871513e-12,
+    "inlet_signed_flux_m3_s": -129.90701002903438,
+    "max_abs_cumulative_continuity": 0.000528338746265,
+    "outlet_signed_flux_m3_s": 129.90700860466782
+  },
+  "experimental_claim": false,
+  "metric_formula": "100*abs(sum(phi_inlet)+sum(phi_outlet))/max(abs(sum(phi_inlet)),1e-12); phi is the raw oriented volumetric face flux from 400/phi and all other boundaries are frozen impermeable with zero sources",
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-079",
+  "truth_type": "verified_openfoam_numerical_reference",
+  "units": {
+    "evidence_provenance_fraction": "fraction",
+    "hard_gate_pass_fraction": "fraction",
+    "mass_flux_mismatch_percent": "%"
+  },
+  "values": {
+    "evidence_provenance_fraction": 1.0,
+    "hard_gate_pass_fraction": 1.0,
+    "mass_flux_mismatch_percent": 1.096450883292308e-06
+  }
+}

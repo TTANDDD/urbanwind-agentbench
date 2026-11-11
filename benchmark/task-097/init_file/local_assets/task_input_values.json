@@ -1,0 +1,80 @@
+{
+  "experimental_claim": false,
+  "roles": [
+    {
+      "label": "随任务本地生成的OpenFOAM起始案例",
+      "role_id": "input-001",
+      "seed": 202609039701,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.34453284,
+        0.93005818,
+        0.16443239,
+        0.83605395,
+        0.21905365,
+        0.14372427,
+        0.93777062,
+        0.84444259,
+        0.83858943,
+        0.70111542,
+        0.78955301,
+        0.99754071,
+        0.91664098,
+        0.18143081,
+        0.1874598,
+        0.42790886
+      ]
+    },
+    {
+      "label": "本地OpenFOAM运行版本记录合同",
+      "role_id": "input-002",
+      "seed": 202609039702,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.4793651,
+        0.1122612,
+        0.38660661,
+        0.84923088,
+        0.14239824,
+        0.1522748,
+        0.09370104,
+        0.46334985,
+        0.08566695,
+        0.37087361,
+        0.43211359,
+        0.76485084,
+        0.89189408,
+        0.72130105,
+        0.05227215,
+        0.77745685
+      ]
+    },
+    {
+      "label": "本地合成数值参考（仅作固定比较输入，不是PIV或实验真值）",
+      "role_id": "input-003",
+      "seed": 202609039703,
+      "value_semantics": "local_contract_parameter_or_synthetic_reference_component",
+      "values": [
+        0.97527003,
+        0.94942352,
+        0.97960073,
+        0.36396864,
+        0.78143494,
+        0.45348793,
+        0.43566854,
+        0.68045261,
+        0.65161196,
+        0.51270061,
+        0.77867784,
+        0.31651523,
+        0.41992599,
+        0.57922239,
+        0.34748228,
+        0.89501306
+      ]
+    }
+  ],
+  "schema_version": "1.0",
+  "source_type": "deterministic_local_generation",
+  "task_id": "urbanwind-task-097"
+}

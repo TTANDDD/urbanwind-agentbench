@@ -1,0 +1,17 @@
+point_id,source_x_m,source_y_m,reference_x_m,reference_y_m,group
+cp-01,0,0,0.2,-0.1,group-1
+cp-02,0,1,0.2,0.9,group-2
+cp-03,0,2,0.2,1.9,group-3
+cp-04,0,3,0.2,2.9,group-0
+cp-05,1,0,1.2,-0.1,group-1
+cp-06,1,1,1.2,0.9,group-2
+cp-07,1,2,1.2,1.9,group-3
+cp-08,1,3,1.2,2.9,group-0
+cp-09,2,0,2.2,-0.1,group-1
+cp-10,2,1,2.2,0.9,group-2
+cp-11,2,2,2.2,1.9,group-3
+cp-12,2,3,2.2,2.9,group-0
+cp-13,3,0,3.2,-0.1,group-1
+cp-14,3,1,3.2,0.9,group-2
+cp-15,3,2,3.2,1.9,group-3
+cp-16,3,3,3.2,2.9,group-0

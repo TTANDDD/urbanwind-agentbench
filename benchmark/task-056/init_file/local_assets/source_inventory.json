@@ -1,0 +1,22 @@
+{
+  "assets": [
+    {
+      "availability": "bundled",
+      "experimental": false,
+      "id": "normative-city",
+      "origin": "original task056 deterministic GeoJSON",
+      "role": "public_geometry"
+    },
+    {
+      "availability": "bundled",
+      "experimental": false,
+      "id": "faulty13",
+      "origin": "prospectively frozen task056v54 scientific redesign",
+      "role": "public_literal_fault_input"
+    }
+  ],
+  "no_external_empirical_truth": true,
+  "no_visible_reference_arrays": true,
+  "schema_version": "1.0",
+  "task_id": "urbanwind-task-056"
+}
